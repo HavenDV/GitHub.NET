@@ -40,8 +40,8 @@ namespace GitHub
         /// Due to the complexity of searching code, there are a few restrictions on how searches are performed:<br/>
         /// *   Only the _default branch_ is considered. In most cases, this will be the `master` branch.<br/>
         /// *   Only files smaller than 384 KB are searchable.<br/>
-        /// *   You must always include at least one search term when searching source code. For example, searching for [`language:go`](https://github.com/search?utf8=%E2%9C%93&q=language%3Ago&type=Code) is not valid, while [`amazing<br/>
-        /// language:go`](https://github.com/search?utf8=%E2%9C%93&q=amazing+language%3Ago&type=Code) is.<br/>
+        /// *   You must always include at least one search term when searching source code. For example, searching for [`language:go`](https://github.com/search?utf8=%E2%9C%93&amp;q=language%3Ago&amp;type=Code) is not valid, while [`amazing<br/>
+        /// language:go`](https://github.com/search?utf8=%E2%9C%93&amp;q=amazing+language%3Ago&amp;type=Code) is.<br/>
         /// This endpoint requires you to authenticate and limits you to 10 requests per minute.
         /// </summary>
         /// <param name="q"></param>
