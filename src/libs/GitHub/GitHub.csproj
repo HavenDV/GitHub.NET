@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net4.6.2;net6.0;net8.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <PackageId>GitHub.NET</PackageId>
+    <Description>Generated C# SDK based on official GitHub OpenAPI specification.</Description>
+    <PackageTags>api;client;sdk;dotnet;swagger;openapi;specification;openai;generated;nswag;github;octokit</PackageTags>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="PolySharp" Version="1.14.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net4.6.2'">
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+  </ItemGroup>
+
+</Project>

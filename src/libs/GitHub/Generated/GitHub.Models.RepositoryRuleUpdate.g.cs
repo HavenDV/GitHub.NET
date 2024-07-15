@@ -1,0 +1,31 @@
+
+#nullable enable
+
+namespace GitHub
+{
+    /// <summary>
+    /// Only allow users with bypass permission to update matching refs.
+    /// </summary>
+    public sealed partial class RepositoryRuleUpdate
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.RepositoryRuleUpdateTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::GitHub.RepositoryRuleUpdateType Type { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("parameters")]
+        public global::GitHub.RepositoryRuleUpdateParameters? Parameters { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+    }
+}

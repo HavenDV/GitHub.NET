@@ -1,0 +1,601 @@
+#nullable enable
+#pragma warning disable CS0618 // Type or member is obsolete
+
+namespace OpenApiGenerator.JsonConverters
+{
+    /// <inheritdoc />
+    public class RepositoryRuleJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.RepositoryRule>
+    {
+        /// <inheritdoc />
+        public override global::GitHub.RepositoryRule Read(
+            ref global::System.Text.Json.Utf8JsonReader reader,
+            global::System.Type typeToConvert,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+
+            var
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleCreation? value1 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCreation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCreation> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCreation).Name}");
+                value1 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleUpdate? value2 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleUpdate), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleUpdate> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleUpdate).Name}");
+                value2 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleDeletion? value3 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleDeletion), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleDeletion> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleDeletion).Name}");
+                value3 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleRequiredLinearHistory? value4 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredLinearHistory), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredLinearHistory> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredLinearHistory).Name}");
+                value4 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleRequiredDeployments? value5 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredDeployments), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredDeployments> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredDeployments).Name}");
+                value5 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleRequiredSignatures? value6 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredSignatures), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredSignatures> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredSignatures).Name}");
+                value6 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRulePullRequest? value7 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRulePullRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRulePullRequest> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRulePullRequest).Name}");
+                value7 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleRequiredStatusChecks? value8 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredStatusChecks), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredStatusChecks> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredStatusChecks).Name}");
+                value8 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleNonFastForward? value9 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleNonFastForward), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleNonFastForward> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleNonFastForward).Name}");
+                value9 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleCommitMessagePattern? value10 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCommitMessagePattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCommitMessagePattern> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCommitMessagePattern).Name}");
+                value10 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleCommitAuthorEmailPattern? value11 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCommitAuthorEmailPattern> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern).Name}");
+                value11 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleCommitterEmailPattern? value12 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCommitterEmailPattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCommitterEmailPattern> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCommitterEmailPattern).Name}");
+                value12 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleBranchNamePattern? value13 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleBranchNamePattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleBranchNamePattern> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleBranchNamePattern).Name}");
+                value13 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleTagNamePattern? value14 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleTagNamePattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleTagNamePattern> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleTagNamePattern).Name}");
+                value14 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleVariant15? value15 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant15), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant15> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant15).Name}");
+                value15 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleVariant16? value16 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant16), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant16> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant16).Name}");
+                value16 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleVariant17? value17 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant17), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant17> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant17).Name}");
+                value17 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleVariant18? value18 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant18), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant18> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant18).Name}");
+                value18 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleWorkflows? value19 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleWorkflows), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleWorkflows> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleWorkflows).Name}");
+                value19 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleCodeScanning? value20 = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCodeScanning), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCodeScanning> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCodeScanning).Name}");
+                value20 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+            var result = new global::GitHub.RepositoryRule(
+                value1,
+
+                value2,
+
+                value3,
+
+                value4,
+
+                value5,
+
+                value6,
+
+                value7,
+
+                value8,
+
+                value9,
+
+                value10,
+
+                value11,
+
+                value12,
+
+                value13,
+
+                value14,
+
+                value15,
+
+                value16,
+
+                value17,
+
+                value18,
+
+                value19,
+
+                value20
+                );
+            if (!result.Validate())
+            {
+                throw new global::System.Text.Json.JsonException($"Invalid JSON format for OneOf<{typeof(global::GitHub.RepositoryRuleCreation).Name}, {typeof(global::GitHub.RepositoryRuleUpdate).Name}, {typeof(global::GitHub.RepositoryRuleDeletion).Name}, {typeof(global::GitHub.RepositoryRuleRequiredLinearHistory).Name}, {typeof(global::GitHub.RepositoryRuleRequiredDeployments).Name}, {typeof(global::GitHub.RepositoryRuleRequiredSignatures).Name}, {typeof(global::GitHub.RepositoryRulePullRequest).Name}, {typeof(global::GitHub.RepositoryRuleRequiredStatusChecks).Name}, {typeof(global::GitHub.RepositoryRuleNonFastForward).Name}, {typeof(global::GitHub.RepositoryRuleCommitMessagePattern).Name}, {typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern).Name}, {typeof(global::GitHub.RepositoryRuleCommitterEmailPattern).Name}, {typeof(global::GitHub.RepositoryRuleBranchNamePattern).Name}, {typeof(global::GitHub.RepositoryRuleTagNamePattern).Name}, {typeof(global::GitHub.RepositoryRuleVariant15).Name}, {typeof(global::GitHub.RepositoryRuleVariant16).Name}, {typeof(global::GitHub.RepositoryRuleVariant17).Name}, {typeof(global::GitHub.RepositoryRuleVariant18).Name}, {typeof(global::GitHub.RepositoryRuleWorkflows).Name}, {typeof(global::GitHub.RepositoryRuleCodeScanning).Name}>");
+            }
+
+            if (value1 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCreation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCreation> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCreation).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value2 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleUpdate), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleUpdate> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleUpdate).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value3 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleDeletion), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleDeletion> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleDeletion).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value4 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredLinearHistory), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredLinearHistory> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredLinearHistory).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value5 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredDeployments), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredDeployments> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredDeployments).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value6 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredSignatures), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredSignatures> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredSignatures).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value7 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRulePullRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRulePullRequest> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRulePullRequest).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value8 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredStatusChecks), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredStatusChecks> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredStatusChecks).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value9 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleNonFastForward), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleNonFastForward> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleNonFastForward).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value10 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCommitMessagePattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCommitMessagePattern> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCommitMessagePattern).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value11 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCommitAuthorEmailPattern> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value12 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCommitterEmailPattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCommitterEmailPattern> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCommitterEmailPattern).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value13 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleBranchNamePattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleBranchNamePattern> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleBranchNamePattern).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value14 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleTagNamePattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleTagNamePattern> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleTagNamePattern).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value15 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant15), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant15> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant15).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value16 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant16), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant16> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant16).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value17 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant17), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant17> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant17).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value18 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant18), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant18> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant18).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value19 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleWorkflows), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleWorkflows> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleWorkflows).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+
+            else if (value20 != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCodeScanning), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCodeScanning> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCodeScanning).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+            return result;
+        }
+
+        /// <inheritdoc />
+        public override void Write(
+            global::System.Text.Json.Utf8JsonWriter writer,
+            global::GitHub.RepositoryRule value,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
+            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+
+            if (!value.Validate())
+            {
+                throw new global::System.Text.Json.JsonException($"Invalid OneOf<{typeof(global::GitHub.RepositoryRuleCreation).Name}, {typeof(global::GitHub.RepositoryRuleUpdate).Name}, {typeof(global::GitHub.RepositoryRuleDeletion).Name}, {typeof(global::GitHub.RepositoryRuleRequiredLinearHistory).Name}, {typeof(global::GitHub.RepositoryRuleRequiredDeployments).Name}, {typeof(global::GitHub.RepositoryRuleRequiredSignatures).Name}, {typeof(global::GitHub.RepositoryRulePullRequest).Name}, {typeof(global::GitHub.RepositoryRuleRequiredStatusChecks).Name}, {typeof(global::GitHub.RepositoryRuleNonFastForward).Name}, {typeof(global::GitHub.RepositoryRuleCommitMessagePattern).Name}, {typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern).Name}, {typeof(global::GitHub.RepositoryRuleCommitterEmailPattern).Name}, {typeof(global::GitHub.RepositoryRuleBranchNamePattern).Name}, {typeof(global::GitHub.RepositoryRuleTagNamePattern).Name}, {typeof(global::GitHub.RepositoryRuleVariant15).Name}, {typeof(global::GitHub.RepositoryRuleVariant16).Name}, {typeof(global::GitHub.RepositoryRuleVariant17).Name}, {typeof(global::GitHub.RepositoryRuleVariant18).Name}, {typeof(global::GitHub.RepositoryRuleWorkflows).Name}, {typeof(global::GitHub.RepositoryRuleCodeScanning).Name}> object.");
+            }
+
+            if (value.IsValue1)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCreation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCreation?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCreation).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1, typeInfo);
+            }
+
+            else if (value.IsValue2)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleUpdate), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleUpdate?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleUpdate).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value2, typeInfo);
+            }
+
+            else if (value.IsValue3)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleDeletion), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleDeletion?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleDeletion).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value3, typeInfo);
+            }
+
+            else if (value.IsValue4)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredLinearHistory), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredLinearHistory?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredLinearHistory).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value4, typeInfo);
+            }
+
+            else if (value.IsValue5)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredDeployments), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredDeployments?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredDeployments).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value5, typeInfo);
+            }
+
+            else if (value.IsValue6)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredSignatures), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredSignatures?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredSignatures).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value6, typeInfo);
+            }
+
+            else if (value.IsValue7)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRulePullRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRulePullRequest?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRulePullRequest).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value7, typeInfo);
+            }
+
+            else if (value.IsValue8)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleRequiredStatusChecks), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleRequiredStatusChecks?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleRequiredStatusChecks).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value8, typeInfo);
+            }
+
+            else if (value.IsValue9)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleNonFastForward), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleNonFastForward?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleNonFastForward).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value9, typeInfo);
+            }
+
+            else if (value.IsValue10)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCommitMessagePattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCommitMessagePattern?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCommitMessagePattern).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value10, typeInfo);
+            }
+
+            else if (value.IsValue11)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value11, typeInfo);
+            }
+
+            else if (value.IsValue12)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCommitterEmailPattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCommitterEmailPattern?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCommitterEmailPattern).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value12, typeInfo);
+            }
+
+            else if (value.IsValue13)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleBranchNamePattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleBranchNamePattern?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleBranchNamePattern).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value13, typeInfo);
+            }
+
+            else if (value.IsValue14)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleTagNamePattern), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleTagNamePattern?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleTagNamePattern).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value14, typeInfo);
+            }
+
+            else if (value.IsValue15)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant15), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant15?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant15).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value15, typeInfo);
+            }
+
+            else if (value.IsValue16)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant16), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant16?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant16).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value16, typeInfo);
+            }
+
+            else if (value.IsValue17)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant17), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant17?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant17).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value17, typeInfo);
+            }
+
+            else if (value.IsValue18)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant18), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant18?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant18).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value18, typeInfo);
+            }
+
+            else if (value.IsValue19)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleWorkflows), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleWorkflows?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleWorkflows).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value19, typeInfo);
+            }
+
+            else if (value.IsValue20)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCodeScanning), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCodeScanning?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCodeScanning).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value20, typeInfo);
+            }
+        }
+    }
+}

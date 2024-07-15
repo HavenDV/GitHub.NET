@@ -1,0 +1,156 @@
+
+#nullable enable
+
+namespace GitHub
+{
+    public partial class ActionsClient
+    {
+        partial void PrepareActionsCreateEnvironmentVariableArguments(
+            global::System.Net.Http.HttpClient httpClient,
+            ref string owner,
+            ref string repo,
+            ref string environmentName,
+            global::GitHub.ActionsCreateEnvironmentVariableRequest request);
+        partial void PrepareActionsCreateEnvironmentVariableRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string owner,
+            string repo,
+            string environmentName,
+            global::GitHub.ActionsCreateEnvironmentVariableRequest request);
+        partial void ProcessActionsCreateEnvironmentVariableResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessActionsCreateEnvironmentVariableResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// Create an environment variable<br/>
+        /// Create an environment variable that you can reference in a GitHub Actions workflow.<br/>
+        /// Authenticated users must have collaborator access to a repository to create, update, or read variables.<br/>
+        /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="repo"></param>
+        /// <param name="environmentName"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::GitHub.EmptyObject> ActionsCreateEnvironmentVariableAsync(
+            string owner,
+            string repo,
+            string environmentName,
+            global::GitHub.ActionsCreateEnvironmentVariableRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
+            PrepareArguments(
+                client: _httpClient);
+            PrepareActionsCreateEnvironmentVariableArguments(
+                httpClient: _httpClient,
+                owner: ref owner,
+                repo: ref repo,
+                environmentName: ref environmentName,
+                request: request);
+
+            using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                method: global::System.Net.Http.HttpMethod.Post,
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/environments/{environmentName}/variables", global::System.UriKind.RelativeOrAbsolute));
+            var __json = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ActionsCreateEnvironmentVariableRequest);
+            httpRequest.Content = new global::System.Net.Http.StringContent(
+                content: __json,
+                encoding: global::System.Text.Encoding.UTF8,
+                mediaType: "application/json");
+
+            PrepareRequest(
+                client: _httpClient,
+                request: httpRequest);
+            PrepareActionsCreateEnvironmentVariableRequest(
+                httpClient: _httpClient,
+                httpRequestMessage: httpRequest,
+                owner: owner,
+                repo: repo,
+                environmentName: environmentName,
+                request: request);
+
+            using var response = await _httpClient.SendAsync(
+                request: httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+
+            ProcessResponse(
+                client: _httpClient,
+                response: response);
+            ProcessActionsCreateEnvironmentVariableResponse(
+                httpClient: _httpClient,
+                httpResponseMessage: response);
+
+            var __content = await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+
+            ProcessResponseContent(
+                client: _httpClient,
+                response: response,
+                content: ref __content);
+            ProcessActionsCreateEnvironmentVariableResponseContent(
+                httpClient: _httpClient,
+                httpResponseMessage: response,
+                content: ref __content);
+
+            try
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            catch (global::System.Net.Http.HttpRequestException ex)
+            {
+                throw new global::System.InvalidOperationException(__content, ex);
+            }
+
+            return
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.EmptyObject) ??
+                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+        }
+
+        /// <summary>
+        /// Create an environment variable<br/>
+        /// Create an environment variable that you can reference in a GitHub Actions workflow.<br/>
+        /// Authenticated users must have collaborator access to a repository to create, update, or read variables.<br/>
+        /// OAuth tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="repo"></param>
+        /// <param name="environmentName"></param>
+        /// <param name="name">
+        /// The name of the variable.
+        /// </param>
+        /// <param name="value">
+        /// The value of the variable.
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::GitHub.EmptyObject> ActionsCreateEnvironmentVariableAsync(
+            string owner,
+            string repo,
+            string environmentName,
+            string name,
+            string value,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var request = new global::GitHub.ActionsCreateEnvironmentVariableRequest
+            {
+                Name = name,
+                Value = value,
+            };
+
+            return await ActionsCreateEnvironmentVariableAsync(
+                owner: owner,
+                repo: repo,
+                environmentName: environmentName,
+                request: request,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+    }
+}

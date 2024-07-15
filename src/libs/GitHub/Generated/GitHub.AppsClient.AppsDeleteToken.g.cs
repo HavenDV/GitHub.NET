@@ -1,0 +1,129 @@
+
+#nullable enable
+
+namespace GitHub
+{
+    public partial class AppsClient
+    {
+        partial void PrepareAppsDeleteTokenArguments(
+            global::System.Net.Http.HttpClient httpClient,
+            ref string clientId,
+            global::GitHub.AppsDeleteTokenRequest request);
+        partial void PrepareAppsDeleteTokenRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string clientId,
+            global::GitHub.AppsDeleteTokenRequest request);
+        partial void ProcessAppsDeleteTokenResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessAppsDeleteTokenResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// Delete an app token<br/>
+        /// OAuth  or GitHub application owners can revoke a single token for an OAuth application or a GitHub application with an OAuth authorization.
+        /// </summary>
+        /// <param name="clientId"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::GitHub.ValidationError> AppsDeleteTokenAsync(
+            string clientId,
+            global::GitHub.AppsDeleteTokenRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
+            PrepareArguments(
+                client: _httpClient);
+            PrepareAppsDeleteTokenArguments(
+                httpClient: _httpClient,
+                clientId: ref clientId,
+                request: request);
+
+            using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                method: global::System.Net.Http.HttpMethod.Delete,
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/applications/{clientId}/token", global::System.UriKind.RelativeOrAbsolute));
+            var __json = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.AppsDeleteTokenRequest);
+            httpRequest.Content = new global::System.Net.Http.StringContent(
+                content: __json,
+                encoding: global::System.Text.Encoding.UTF8,
+                mediaType: "application/json");
+
+            PrepareRequest(
+                client: _httpClient,
+                request: httpRequest);
+            PrepareAppsDeleteTokenRequest(
+                httpClient: _httpClient,
+                httpRequestMessage: httpRequest,
+                clientId: clientId,
+                request: request);
+
+            using var response = await _httpClient.SendAsync(
+                request: httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+
+            ProcessResponse(
+                client: _httpClient,
+                response: response);
+            ProcessAppsDeleteTokenResponse(
+                httpClient: _httpClient,
+                httpResponseMessage: response);
+
+            var __content = await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+
+            ProcessResponseContent(
+                client: _httpClient,
+                response: response,
+                content: ref __content);
+            ProcessAppsDeleteTokenResponseContent(
+                httpClient: _httpClient,
+                httpResponseMessage: response,
+                content: ref __content);
+
+            try
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            catch (global::System.Net.Http.HttpRequestException ex)
+            {
+                throw new global::System.InvalidOperationException(__content, ex);
+            }
+
+            return
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.ValidationError) ??
+                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+        }
+
+        /// <summary>
+        /// Delete an app token<br/>
+        /// OAuth  or GitHub application owners can revoke a single token for an OAuth application or a GitHub application with an OAuth authorization.
+        /// </summary>
+        /// <param name="clientId"></param>
+        /// <param name="accessToken">
+        /// The OAuth access token used to authenticate to the GitHub API.
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::GitHub.ValidationError> AppsDeleteTokenAsync(
+            string clientId,
+            string accessToken,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var request = new global::GitHub.AppsDeleteTokenRequest
+            {
+                AccessToken = accessToken,
+            };
+
+            return await AppsDeleteTokenAsync(
+                clientId: clientId,
+                request: request,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+    }
+}

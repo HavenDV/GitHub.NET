@@ -1,0 +1,170 @@
+
+#nullable enable
+
+namespace GitHub
+{
+    public partial class ReposClient
+    {
+        partial void PrepareReposCreateOrUpdateEnvironmentArguments(
+            global::System.Net.Http.HttpClient httpClient,
+            ref string owner,
+            ref string repo,
+            ref string environmentName,
+            global::GitHub.ReposCreateOrUpdateEnvironmentRequest request);
+        partial void PrepareReposCreateOrUpdateEnvironmentRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string owner,
+            string repo,
+            string environmentName,
+            global::GitHub.ReposCreateOrUpdateEnvironmentRequest request);
+        partial void ProcessReposCreateOrUpdateEnvironmentResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessReposCreateOrUpdateEnvironmentResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// Create or update an environment<br/>
+        /// Create or update an environment with protection rules, such as required reviewers. For more information about environment protection rules, see "[Environments](/actions/reference/environments#environment-protection-rules)."<br/>
+        /// **Note:** To create or update name patterns that branches must match in order to deploy to this environment, see "[Deployment branch policies](/rest/deployments/branch-policies)."<br/>
+        /// **Note:** To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."<br/>
+        /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="repo"></param>
+        /// <param name="environmentName"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::GitHub.Environment> ReposCreateOrUpdateEnvironmentAsync(
+            string owner,
+            string repo,
+            string environmentName,
+            global::GitHub.ReposCreateOrUpdateEnvironmentRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
+            PrepareArguments(
+                client: _httpClient);
+            PrepareReposCreateOrUpdateEnvironmentArguments(
+                httpClient: _httpClient,
+                owner: ref owner,
+                repo: ref repo,
+                environmentName: ref environmentName,
+                request: request);
+
+            using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                method: global::System.Net.Http.HttpMethod.Put,
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/environments/{environmentName}", global::System.UriKind.RelativeOrAbsolute));
+            var __json = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ReposCreateOrUpdateEnvironmentRequest);
+            httpRequest.Content = new global::System.Net.Http.StringContent(
+                content: __json,
+                encoding: global::System.Text.Encoding.UTF8,
+                mediaType: "application/json");
+
+            PrepareRequest(
+                client: _httpClient,
+                request: httpRequest);
+            PrepareReposCreateOrUpdateEnvironmentRequest(
+                httpClient: _httpClient,
+                httpRequestMessage: httpRequest,
+                owner: owner,
+                repo: repo,
+                environmentName: environmentName,
+                request: request);
+
+            using var response = await _httpClient.SendAsync(
+                request: httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+
+            ProcessResponse(
+                client: _httpClient,
+                response: response);
+            ProcessReposCreateOrUpdateEnvironmentResponse(
+                httpClient: _httpClient,
+                httpResponseMessage: response);
+
+            var __content = await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+
+            ProcessResponseContent(
+                client: _httpClient,
+                response: response,
+                content: ref __content);
+            ProcessReposCreateOrUpdateEnvironmentResponseContent(
+                httpClient: _httpClient,
+                httpResponseMessage: response,
+                content: ref __content);
+
+            try
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            catch (global::System.Net.Http.HttpRequestException ex)
+            {
+                throw new global::System.InvalidOperationException(__content, ex);
+            }
+
+            return
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.Environment) ??
+                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+        }
+
+        /// <summary>
+        /// Create or update an environment<br/>
+        /// Create or update an environment with protection rules, such as required reviewers. For more information about environment protection rules, see "[Environments](/actions/reference/environments#environment-protection-rules)."<br/>
+        /// **Note:** To create or update name patterns that branches must match in order to deploy to this environment, see "[Deployment branch policies](/rest/deployments/branch-policies)."<br/>
+        /// **Note:** To create or update secrets for an environment, see "[GitHub Actions secrets](/rest/actions/secrets)."<br/>
+        /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint.
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="repo"></param>
+        /// <param name="environmentName"></param>
+        /// <param name="waitTimer">
+        /// The amount of time to delay a job after the job is initially triggered. The time (in minutes) must be an integer between 0 and 43,200 (30 days).<br/>
+        /// Example: 30
+        /// </param>
+        /// <param name="preventSelfReview">
+        /// Whether or not a user who created the job is prevented from approving their own job.<br/>
+        /// Example: false
+        /// </param>
+        /// <param name="reviewers">
+        /// The people or teams that may review jobs that reference the environment. You can list up to six users or teams as reviewers. The reviewers must have at least read access to the repository. Only one of the required reviewers needs to approve the job for it to proceed.
+        /// </param>
+        /// <param name="deploymentBranchPolicy">
+        /// The type of deployment branch policy for this environment. To allow all branches to deploy, set to `null`.
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::GitHub.Environment> ReposCreateOrUpdateEnvironmentAsync(
+            string owner,
+            string repo,
+            string environmentName,
+            int waitTimer = default,
+            bool preventSelfReview = default,
+            global::System.Collections.Generic.IList<global::GitHub.ReposCreateOrUpdateEnvironmentRequestReviewers?>? reviewers = default,
+            global::GitHub.DeploymentBranchPolicySettings? deploymentBranchPolicy = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var request = new global::GitHub.ReposCreateOrUpdateEnvironmentRequest
+            {
+                WaitTimer = waitTimer,
+                PreventSelfReview = preventSelfReview,
+                Reviewers = reviewers,
+                DeploymentBranchPolicy = deploymentBranchPolicy,
+            };
+
+            return await ReposCreateOrUpdateEnvironmentAsync(
+                owner: owner,
+                repo: repo,
+                environmentName: environmentName,
+                request: request,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+    }
+}

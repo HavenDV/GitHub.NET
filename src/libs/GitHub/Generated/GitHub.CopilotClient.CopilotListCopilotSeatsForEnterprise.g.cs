@@ -1,0 +1,111 @@
+
+#nullable enable
+
+namespace GitHub
+{
+    public partial class CopilotClient
+    {
+        partial void PrepareCopilotListCopilotSeatsForEnterpriseArguments(
+            global::System.Net.Http.HttpClient httpClient,
+            ref string enterprise,
+            ref int page,
+            ref int perPage);
+        partial void PrepareCopilotListCopilotSeatsForEnterpriseRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string enterprise,
+            int page,
+            int perPage);
+        partial void ProcessCopilotListCopilotSeatsForEnterpriseResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessCopilotListCopilotSeatsForEnterpriseResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// List all Copilot seat assignments for an enterprise<br/>
+        /// **Note**: This endpoint is in beta and is subject to change.<br/>
+        /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.<br/>
+        /// Users with access through multiple organizations or enterprise teams will only be counted toward `total_seats` once.<br/>
+        /// For each organization or enterprise team which grants Copilot access to a user, a seat detail object will appear in the `seats` array.<br/>
+        /// Only enterprise owners and billing managers can view assigned Copilot seats across their child organizations or enterprise teams.<br/>
+        /// Personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
+        /// </summary>
+        /// <param name="enterprise"></param>
+        /// <param name="page">
+        /// Default Value: 1
+        /// </param>
+        /// <param name="perPage">
+        /// Default Value: 50
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::GitHub.CopilotListCopilotSeatsForEnterpriseResponse> CopilotListCopilotSeatsForEnterpriseAsync(
+            string enterprise,
+            int page,
+            int perPage,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            PrepareArguments(
+                client: _httpClient);
+            PrepareCopilotListCopilotSeatsForEnterpriseArguments(
+                httpClient: _httpClient,
+                enterprise: ref enterprise,
+                page: ref page,
+                perPage: ref perPage);
+
+            using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                method: global::System.Net.Http.HttpMethod.Get,
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/enterprises/{enterprise}/copilot/billing/seats?page={page}&per_page={perPage}", global::System.UriKind.RelativeOrAbsolute));
+
+            PrepareRequest(
+                client: _httpClient,
+                request: httpRequest);
+            PrepareCopilotListCopilotSeatsForEnterpriseRequest(
+                httpClient: _httpClient,
+                httpRequestMessage: httpRequest,
+                enterprise: enterprise,
+                page: page,
+                perPage: perPage);
+
+            using var response = await _httpClient.SendAsync(
+                request: httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+
+            ProcessResponse(
+                client: _httpClient,
+                response: response);
+            ProcessCopilotListCopilotSeatsForEnterpriseResponse(
+                httpClient: _httpClient,
+                httpResponseMessage: response);
+
+            var __content = await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+
+            ProcessResponseContent(
+                client: _httpClient,
+                response: response,
+                content: ref __content);
+            ProcessCopilotListCopilotSeatsForEnterpriseResponseContent(
+                httpClient: _httpClient,
+                httpResponseMessage: response,
+                content: ref __content);
+
+            try
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            catch (global::System.Net.Http.HttpRequestException ex)
+            {
+                throw new global::System.InvalidOperationException(__content, ex);
+            }
+
+            return
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.CopilotListCopilotSeatsForEnterpriseResponse) ??
+                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+        }
+    }
+}

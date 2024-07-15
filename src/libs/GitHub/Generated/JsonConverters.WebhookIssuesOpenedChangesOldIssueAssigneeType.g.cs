@@ -1,0 +1,49 @@
+#nullable enable
+
+namespace OpenApiGenerator.JsonConverters
+{
+    /// <inheritdoc />
+    public sealed class WebhookIssuesOpenedChangesOldIssueAssigneeTypeJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.WebhookIssuesOpenedChangesOldIssueAssigneeType>
+    {
+        /// <inheritdoc />
+        public override global::GitHub.WebhookIssuesOpenedChangesOldIssueAssigneeType Read(
+            ref global::System.Text.Json.Utf8JsonReader reader,
+            global::System.Type typeToConvert,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            switch (reader.TokenType)
+            {
+                case global::System.Text.Json.JsonTokenType.String:
+                {
+                    var stringValue = reader.GetString();
+                    if (stringValue != null)
+                    {
+                        return global::GitHub.WebhookIssuesOpenedChangesOldIssueAssigneeTypeExtensions.ToEnum(stringValue) ?? default;
+                    }
+                    
+                    break;
+                }
+                case global::System.Text.Json.JsonTokenType.Number:
+                {
+                    var numValue = reader.GetInt32();
+                    return (global::GitHub.WebhookIssuesOpenedChangesOldIssueAssigneeType)numValue;
+                }
+                default:
+                    throw new global::System.ArgumentOutOfRangeException(nameof(reader));
+            }
+
+            return default;
+        }
+
+        /// <inheritdoc />
+        public override void Write(
+            global::System.Text.Json.Utf8JsonWriter writer,
+            global::GitHub.WebhookIssuesOpenedChangesOldIssueAssigneeType value,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
+
+            writer.WriteStringValue(global::GitHub.WebhookIssuesOpenedChangesOldIssueAssigneeTypeExtensions.ToValueString(value));
+        }
+    }
+}

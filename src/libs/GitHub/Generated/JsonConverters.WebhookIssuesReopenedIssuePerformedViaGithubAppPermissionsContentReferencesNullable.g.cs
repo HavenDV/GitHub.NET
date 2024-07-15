@@ -1,0 +1,56 @@
+#nullable enable
+
+namespace OpenApiGenerator.JsonConverters
+{
+    /// <inheritdoc />
+    public sealed class WebhookIssuesReopenedIssuePerformedViaGithubAppPermissionsContentReferencesNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.WebhookIssuesReopenedIssuePerformedViaGithubAppPermissionsContentReferences?>
+    {
+        /// <inheritdoc />
+        public override global::GitHub.WebhookIssuesReopenedIssuePerformedViaGithubAppPermissionsContentReferences? Read(
+            ref global::System.Text.Json.Utf8JsonReader reader,
+            global::System.Type typeToConvert,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            switch (reader.TokenType)
+            {
+                case global::System.Text.Json.JsonTokenType.String:
+                {
+                    var stringValue = reader.GetString();
+                    if (stringValue != null)
+                    {
+                        return global::GitHub.WebhookIssuesReopenedIssuePerformedViaGithubAppPermissionsContentReferencesExtensions.ToEnum(stringValue);
+                    }
+                    
+                    break;
+                }
+                case global::System.Text.Json.JsonTokenType.Number:
+                {
+                    var numValue = reader.GetInt32();
+                    return (global::GitHub.WebhookIssuesReopenedIssuePerformedViaGithubAppPermissionsContentReferences)numValue;
+                }
+                default:
+                    throw new global::System.ArgumentOutOfRangeException(nameof(reader));
+            }
+
+            return default;
+        }
+
+        /// <inheritdoc />
+        public override void Write(
+            global::System.Text.Json.Utf8JsonWriter writer,
+            global::GitHub.WebhookIssuesReopenedIssuePerformedViaGithubAppPermissionsContentReferences? value,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
+
+            if (value == null)
+            {
+                writer.WriteNullValue();
+            }
+            else
+            {
+                writer.WriteStringValue(global::GitHub.WebhookIssuesReopenedIssuePerformedViaGithubAppPermissionsContentReferencesExtensions.ToValueString(value.Value));
+            }
+        }
+    }
+}

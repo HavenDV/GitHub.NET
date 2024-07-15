@@ -1,0 +1,127 @@
+
+#nullable enable
+
+namespace GitHub
+{
+    public partial class InteractionsClient
+    {
+        partial void PrepareInteractionsSetRestrictionsForAuthenticatedUserArguments(
+            global::System.Net.Http.HttpClient httpClient,
+            global::GitHub.InteractionLimit request);
+        partial void PrepareInteractionsSetRestrictionsForAuthenticatedUserRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            global::GitHub.InteractionLimit request);
+        partial void ProcessInteractionsSetRestrictionsForAuthenticatedUserResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessInteractionsSetRestrictionsForAuthenticatedUserResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// Set interaction restrictions for your public repositories<br/>
+        /// Temporarily restricts which type of GitHub user can interact with your public repositories. Setting the interaction limit at the user level will overwrite any interaction limits that are set for individual repositories owned by the user.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::GitHub.InteractionLimitResponse> InteractionsSetRestrictionsForAuthenticatedUserAsync(
+            global::GitHub.InteractionLimit request,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
+            PrepareArguments(
+                client: _httpClient);
+            PrepareInteractionsSetRestrictionsForAuthenticatedUserArguments(
+                httpClient: _httpClient,
+                request: request);
+
+            using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                method: global::System.Net.Http.HttpMethod.Put,
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + "/user/interaction-limits", global::System.UriKind.RelativeOrAbsolute));
+            var __json = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.InteractionLimit);
+            httpRequest.Content = new global::System.Net.Http.StringContent(
+                content: __json,
+                encoding: global::System.Text.Encoding.UTF8,
+                mediaType: "application/json");
+
+            PrepareRequest(
+                client: _httpClient,
+                request: httpRequest);
+            PrepareInteractionsSetRestrictionsForAuthenticatedUserRequest(
+                httpClient: _httpClient,
+                httpRequestMessage: httpRequest,
+                request: request);
+
+            using var response = await _httpClient.SendAsync(
+                request: httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+
+            ProcessResponse(
+                client: _httpClient,
+                response: response);
+            ProcessInteractionsSetRestrictionsForAuthenticatedUserResponse(
+                httpClient: _httpClient,
+                httpResponseMessage: response);
+
+            var __content = await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+
+            ProcessResponseContent(
+                client: _httpClient,
+                response: response,
+                content: ref __content);
+            ProcessInteractionsSetRestrictionsForAuthenticatedUserResponseContent(
+                httpClient: _httpClient,
+                httpResponseMessage: response,
+                content: ref __content);
+
+            try
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            catch (global::System.Net.Http.HttpRequestException ex)
+            {
+                throw new global::System.InvalidOperationException(__content, ex);
+            }
+
+            return
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.InteractionLimitResponse) ??
+                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+        }
+
+        /// <summary>
+        /// Set interaction restrictions for your public repositories<br/>
+        /// Temporarily restricts which type of GitHub user can interact with your public repositories. Setting the interaction limit at the user level will overwrite any interaction limits that are set for individual repositories owned by the user.
+        /// </summary>
+        /// <param name="limit">
+        /// The type of GitHub user that can comment, open issues, or create pull requests while the interaction limit is in effect.<br/>
+        /// Example: collaborators_only
+        /// </param>
+        /// <param name="expiry">
+        /// The duration of the interaction restriction. Default: `one_day`.<br/>
+        /// Example: one_month
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::GitHub.InteractionLimitResponse> InteractionsSetRestrictionsForAuthenticatedUserAsync(
+            global::GitHub.InteractionGroup limit,
+            global::GitHub.InteractionExpiry? expiry = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var request = new global::GitHub.InteractionLimit
+            {
+                Limit = limit,
+                Expiry = expiry,
+            };
+
+            return await InteractionsSetRestrictionsForAuthenticatedUserAsync(
+                request: request,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+    }
+}
