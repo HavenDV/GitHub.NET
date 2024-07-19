@@ -11,23 +11,23 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        _100644,
+        x100644,
         /// <summary>
         /// 
         /// </summary>
-        _100755,
+        x100755,
         /// <summary>
         /// 
         /// </summary>
-        _040000,
+        x040000,
         /// <summary>
         /// 
         /// </summary>
-        _160000,
+        x160000,
         /// <summary>
         /// 
         /// </summary>
-        _120000,
+        x120000,
     }
 
     /// <summary>
@@ -42,11 +42,11 @@ namespace GitHub
         {
             return value switch
             {
-                GitCreateTreeRequestTreeMode._100644 => "100644",
-                GitCreateTreeRequestTreeMode._100755 => "100755",
-                GitCreateTreeRequestTreeMode._040000 => "040000",
-                GitCreateTreeRequestTreeMode._160000 => "160000",
-                GitCreateTreeRequestTreeMode._120000 => "120000",
+                GitCreateTreeRequestTreeMode.x100644 => "100644",
+                GitCreateTreeRequestTreeMode.x100755 => "100755",
+                GitCreateTreeRequestTreeMode.x040000 => "040000",
+                GitCreateTreeRequestTreeMode.x160000 => "160000",
+                GitCreateTreeRequestTreeMode.x120000 => "120000",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -57,11 +57,11 @@ namespace GitHub
         {
             return value switch
             {
-                "100644" => GitCreateTreeRequestTreeMode._100644,
-                "100755" => GitCreateTreeRequestTreeMode._100755,
-                "040000" => GitCreateTreeRequestTreeMode._040000,
-                "160000" => GitCreateTreeRequestTreeMode._160000,
-                "120000" => GitCreateTreeRequestTreeMode._120000,
+                "100644" => GitCreateTreeRequestTreeMode.x100644,
+                "100755" => GitCreateTreeRequestTreeMode.x100755,
+                "040000" => GitCreateTreeRequestTreeMode.x040000,
+                "160000" => GitCreateTreeRequestTreeMode.x160000,
+                "120000" => GitCreateTreeRequestTreeMode.x120000,
                 _ => null,
             };
         }
