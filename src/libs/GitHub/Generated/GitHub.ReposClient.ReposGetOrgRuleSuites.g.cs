@@ -8,6 +8,7 @@ namespace GitHub
         partial void PrepareReposGetOrgRuleSuitesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
+            ref string @ref,
             ref int repositoryName,
             ref global::GitHub.ReposGetOrgRuleSuitesTimePeriod timePeriod,
             ref string actorName,
@@ -18,6 +19,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
+            string @ref,
             int repositoryName,
             global::GitHub.ReposGetOrgRuleSuitesTimePeriod timePeriod,
             string actorName,
@@ -39,6 +41,7 @@ namespace GitHub
         /// For more information, see "[Managing rulesets for repositories in your organization](https://docs.github.com/organizations/managing-organization-settings/managing-rulesets-for-repositories-in-your-organization#viewing-insights-for-rulesets)."
         /// </summary>
         /// <param name="org"></param>
+        /// <param name="@ref"></param>
         /// <param name="repositoryName"></param>
         /// <param name="timePeriod">
         /// Default Value: day
@@ -57,6 +60,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RuleSuites>> ReposGetOrgRuleSuitesAsync(
             string org,
+            string @ref,
             int repositoryName,
             global::GitHub.ReposGetOrgRuleSuitesTimePeriod timePeriod,
             string actorName,
@@ -70,6 +74,7 @@ namespace GitHub
             PrepareReposGetOrgRuleSuitesArguments(
                 httpClient: _httpClient,
                 org: ref org,
+                @ref: ref @ref,
                 repositoryName: ref repositoryName,
                 timePeriod: ref timePeriod,
                 actorName: ref actorName,
@@ -79,7 +84,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/rulesets/rule-suites?repository_name={repositoryName}&time_period={timePeriod}&actor_name={actorName}&rule_suite_result={ruleSuiteResult}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/rulesets/rule-suites?ref={@ref}&repository_name={repositoryName}&time_period={timePeriod}&actor_name={actorName}&rule_suite_result={ruleSuiteResult}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -88,6 +93,7 @@ namespace GitHub
                 httpClient: _httpClient,
                 httpRequestMessage: httpRequest,
                 org: org,
+                @ref: @ref,
                 repositoryName: repositoryName,
                 timePeriod: timePeriod,
                 actorName: actorName,

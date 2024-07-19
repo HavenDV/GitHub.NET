@@ -29,7 +29,7 @@ namespace GitHub
 
         /// <summary>
         /// List users that are assigned to an organization role<br/>
-        /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Managing people's access to your organization with roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/about-custom-organization-roles)."<br/>
+        /// Lists organization members that are assigned to an organization role. For more information on organization roles, see "[Using organization roles](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/using-organization-roles)."<br/>
         /// To use this endpoint, you must be an administrator for the organization.<br/>
         /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
         /// </summary>

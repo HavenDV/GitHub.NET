@@ -16,7 +16,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required int Id { get; set; }
+        public required long Id { get; set; }
 
         /// <summary>
         /// Example: MDExOkVudmlyb25tZW50NTY3ODA0Mjg=
