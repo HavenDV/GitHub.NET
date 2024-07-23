@@ -27,8 +27,8 @@ namespace GitHub
 
         /// <summary>
         /// Deprecated - Create a tag protection state for a repository<br/>
-        /// **Note**: This operation is deprecated and will be removed after August 30th 2024<br/>
-        /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.<br/>
+        /// &gt; [!WARNING]<br/>
+        /// &gt; **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.<br/>
         /// This creates a tag protection state for a repository.<br/>
         /// This endpoint is only available to repository administrators.
         /// </summary>
@@ -112,8 +112,8 @@ namespace GitHub
 
         /// <summary>
         /// Deprecated - Create a tag protection state for a repository<br/>
-        /// **Note**: This operation is deprecated and will be removed after August 30th 2024<br/>
-        /// Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.<br/>
+        /// &gt; [!WARNING]<br/>
+        /// &gt; **Deprecation notice:** This operation is deprecated and will be removed after August 30, 2024. Use the "[Repository Rulesets](https://docs.github.com/rest/repos/rules#create-a-repository-ruleset)" endpoint instead.<br/>
         /// This creates a tag protection state for a repository.<br/>
         /// This endpoint is only available to repository administrators.
         /// </summary>

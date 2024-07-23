@@ -25,7 +25,8 @@ namespace GitHub
 
         /// <summary>
         /// Add users to the Copilot subscription for an organization<br/>
-        /// **Note**: This endpoint is in beta and is subject to change.<br/>
+        /// &gt; [!NOTE]<br/>
+        /// &gt; This endpoint is in beta and is subject to change.<br/>
         /// Purchases a GitHub Copilot seat for each user specified.<br/>
         /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".<br/>
         /// Only organization owners can add Copilot seats for their organization members.<br/>
@@ -110,7 +111,8 @@ namespace GitHub
 
         /// <summary>
         /// Add users to the Copilot subscription for an organization<br/>
-        /// **Note**: This endpoint is in beta and is subject to change.<br/>
+        /// &gt; [!NOTE]<br/>
+        /// &gt; This endpoint is in beta and is subject to change.<br/>
         /// Purchases a GitHub Copilot seat for each user specified.<br/>
         /// The organization will be billed accordingly. For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".<br/>
         /// Only organization owners can add Copilot seats for their organization members.<br/>
