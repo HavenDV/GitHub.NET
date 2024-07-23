@@ -50,8 +50,8 @@ namespace GitHub
         /// that were run in the analysis.<br/>
         /// For very old analyses this data is not available,<br/>
         /// and `0` is returned in this field.<br/>
-        /// **Deprecation notice**:<br/>
-        /// The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.<br/>
+        /// &gt; [!WARNING]<br/>
+        /// &gt; **Deprecation notice:** The `tool_name` field is deprecated and will, in future, not be included in the response for this endpoint. The example response reflects this change. The tool name can now be found inside the `tool` field.<br/>
         /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
         /// </summary>
         /// <param name="owner"></param>

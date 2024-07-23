@@ -16,7 +16,8 @@ namespace GitHub
 
         /// <summary>
         /// The target of the ruleset<br/>
-        /// **Note**: The `push` target is in beta and is subject to change.
+        /// &gt; [!NOTE]<br/>
+        /// &gt; The `push` target is in beta and is subject to change.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("target")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.ReposUpdateOrgRulesetRequestTargetJsonConverter))]

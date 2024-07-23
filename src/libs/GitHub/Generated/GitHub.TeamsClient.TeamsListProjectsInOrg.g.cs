@@ -30,7 +30,8 @@ namespace GitHub
         /// <summary>
         /// List team projects<br/>
         /// Lists the organization projects for a team.<br/>
-        /// **Note:** You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects`.
+        /// &gt; [!NOTE]<br/>
+        /// &gt; You can also specify a team by `org_id` and `team_id` using the route `GET /organizations/{org_id}/team/{team_id}/projects`.
         /// </summary>
         /// <param name="org"></param>
         /// <param name="teamSlug"></param>

@@ -23,6 +23,10 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        Removed,
+        /// <summary>
+        /// 
+        /// </summary>
         Enforced,
         /// <summary>
         /// 
@@ -32,6 +36,10 @@ namespace GitHub
         /// 
         /// </summary>
         Updating,
+        /// <summary>
+        /// 
+        /// </summary>
+        RemovedByEnterprise,
     }
 
     /// <summary>
@@ -49,9 +57,11 @@ namespace GitHub
                 CodeSecurityConfigurationRepositoriesStatus.Attached => "attached",
                 CodeSecurityConfigurationRepositoriesStatus.Attaching => "attaching",
                 CodeSecurityConfigurationRepositoriesStatus.Detached => "detached",
+                CodeSecurityConfigurationRepositoriesStatus.Removed => "removed",
                 CodeSecurityConfigurationRepositoriesStatus.Enforced => "enforced",
                 CodeSecurityConfigurationRepositoriesStatus.Failed => "failed",
                 CodeSecurityConfigurationRepositoriesStatus.Updating => "updating",
+                CodeSecurityConfigurationRepositoriesStatus.RemovedByEnterprise => "removed_by_enterprise",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -65,9 +75,11 @@ namespace GitHub
                 "attached" => CodeSecurityConfigurationRepositoriesStatus.Attached,
                 "attaching" => CodeSecurityConfigurationRepositoriesStatus.Attaching,
                 "detached" => CodeSecurityConfigurationRepositoriesStatus.Detached,
+                "removed" => CodeSecurityConfigurationRepositoriesStatus.Removed,
                 "enforced" => CodeSecurityConfigurationRepositoriesStatus.Enforced,
                 "failed" => CodeSecurityConfigurationRepositoriesStatus.Failed,
                 "updating" => CodeSecurityConfigurationRepositoriesStatus.Updating,
+                "removed_by_enterprise" => CodeSecurityConfigurationRepositoriesStatus.RemovedByEnterprise,
                 _ => null,
             };
         }
