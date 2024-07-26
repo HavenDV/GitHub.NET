@@ -84,7 +84,7 @@ namespace GitHub
         public global::GitHub.CodeSecurityUpdateConfigurationRequestPrivateVulnerabilityReporting? PrivateVulnerabilityReporting { get; set; }
 
         /// <summary>
-        /// The status of enforcement
+        /// The enforcement status for a security configuration
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enforcement")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityUpdateConfigurationRequestEnforcementJsonConverter))]

@@ -154,9 +154,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleRequiredDeployments? Value5 { get; init; }
+        public global::GitHub.RepositoryRuleMergeQueue? Value5 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleRequiredDeployments? Value5 { get; }
+        public global::GitHub.RepositoryRuleMergeQueue? Value5 { get; }
 #endif
 
         /// <summary>
@@ -170,17 +170,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleRequiredDeployments value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleMergeQueue value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleRequiredDeployments?(RepositoryRule @this) => @this.Value5;
+        public static implicit operator global::GitHub.RepositoryRuleMergeQueue?(RepositoryRule @this) => @this.Value5;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleRequiredDeployments? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleMergeQueue? value)
         {
             Value5 = value;
         }
@@ -189,9 +189,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleRequiredSignatures? Value6 { get; init; }
+        public global::GitHub.RepositoryRuleRequiredDeployments? Value6 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleRequiredSignatures? Value6 { get; }
+        public global::GitHub.RepositoryRuleRequiredDeployments? Value6 { get; }
 #endif
 
         /// <summary>
@@ -205,17 +205,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleRequiredSignatures value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleRequiredDeployments value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleRequiredSignatures?(RepositoryRule @this) => @this.Value6;
+        public static implicit operator global::GitHub.RepositoryRuleRequiredDeployments?(RepositoryRule @this) => @this.Value6;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleRequiredSignatures? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleRequiredDeployments? value)
         {
             Value6 = value;
         }
@@ -224,9 +224,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRulePullRequest? Value7 { get; init; }
+        public global::GitHub.RepositoryRuleRequiredSignatures? Value7 { get; init; }
 #else
-        public global::GitHub.RepositoryRulePullRequest? Value7 { get; }
+        public global::GitHub.RepositoryRuleRequiredSignatures? Value7 { get; }
 #endif
 
         /// <summary>
@@ -240,17 +240,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRulePullRequest value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleRequiredSignatures value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRulePullRequest?(RepositoryRule @this) => @this.Value7;
+        public static implicit operator global::GitHub.RepositoryRuleRequiredSignatures?(RepositoryRule @this) => @this.Value7;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRulePullRequest? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleRequiredSignatures? value)
         {
             Value7 = value;
         }
@@ -259,9 +259,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleRequiredStatusChecks? Value8 { get; init; }
+        public global::GitHub.RepositoryRulePullRequest? Value8 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleRequiredStatusChecks? Value8 { get; }
+        public global::GitHub.RepositoryRulePullRequest? Value8 { get; }
 #endif
 
         /// <summary>
@@ -275,17 +275,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleRequiredStatusChecks value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRulePullRequest value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleRequiredStatusChecks?(RepositoryRule @this) => @this.Value8;
+        public static implicit operator global::GitHub.RepositoryRulePullRequest?(RepositoryRule @this) => @this.Value8;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleRequiredStatusChecks? value)
+        public RepositoryRule(global::GitHub.RepositoryRulePullRequest? value)
         {
             Value8 = value;
         }
@@ -294,9 +294,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleNonFastForward? Value9 { get; init; }
+        public global::GitHub.RepositoryRuleRequiredStatusChecks? Value9 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleNonFastForward? Value9 { get; }
+        public global::GitHub.RepositoryRuleRequiredStatusChecks? Value9 { get; }
 #endif
 
         /// <summary>
@@ -310,17 +310,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleNonFastForward value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleRequiredStatusChecks value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleNonFastForward?(RepositoryRule @this) => @this.Value9;
+        public static implicit operator global::GitHub.RepositoryRuleRequiredStatusChecks?(RepositoryRule @this) => @this.Value9;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleNonFastForward? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleRequiredStatusChecks? value)
         {
             Value9 = value;
         }
@@ -329,9 +329,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleCommitMessagePattern? Value10 { get; init; }
+        public global::GitHub.RepositoryRuleNonFastForward? Value10 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleCommitMessagePattern? Value10 { get; }
+        public global::GitHub.RepositoryRuleNonFastForward? Value10 { get; }
 #endif
 
         /// <summary>
@@ -345,17 +345,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleCommitMessagePattern value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleNonFastForward value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleCommitMessagePattern?(RepositoryRule @this) => @this.Value10;
+        public static implicit operator global::GitHub.RepositoryRuleNonFastForward?(RepositoryRule @this) => @this.Value10;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleCommitMessagePattern? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleNonFastForward? value)
         {
             Value10 = value;
         }
@@ -364,9 +364,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleCommitAuthorEmailPattern? Value11 { get; init; }
+        public global::GitHub.RepositoryRuleCommitMessagePattern? Value11 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleCommitAuthorEmailPattern? Value11 { get; }
+        public global::GitHub.RepositoryRuleCommitMessagePattern? Value11 { get; }
 #endif
 
         /// <summary>
@@ -380,17 +380,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleCommitAuthorEmailPattern value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleCommitMessagePattern value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleCommitAuthorEmailPattern?(RepositoryRule @this) => @this.Value11;
+        public static implicit operator global::GitHub.RepositoryRuleCommitMessagePattern?(RepositoryRule @this) => @this.Value11;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleCommitAuthorEmailPattern? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleCommitMessagePattern? value)
         {
             Value11 = value;
         }
@@ -399,9 +399,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleCommitterEmailPattern? Value12 { get; init; }
+        public global::GitHub.RepositoryRuleCommitAuthorEmailPattern? Value12 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleCommitterEmailPattern? Value12 { get; }
+        public global::GitHub.RepositoryRuleCommitAuthorEmailPattern? Value12 { get; }
 #endif
 
         /// <summary>
@@ -415,17 +415,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleCommitterEmailPattern value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleCommitAuthorEmailPattern value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleCommitterEmailPattern?(RepositoryRule @this) => @this.Value12;
+        public static implicit operator global::GitHub.RepositoryRuleCommitAuthorEmailPattern?(RepositoryRule @this) => @this.Value12;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleCommitterEmailPattern? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleCommitAuthorEmailPattern? value)
         {
             Value12 = value;
         }
@@ -434,9 +434,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleBranchNamePattern? Value13 { get; init; }
+        public global::GitHub.RepositoryRuleCommitterEmailPattern? Value13 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleBranchNamePattern? Value13 { get; }
+        public global::GitHub.RepositoryRuleCommitterEmailPattern? Value13 { get; }
 #endif
 
         /// <summary>
@@ -450,17 +450,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleBranchNamePattern value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleCommitterEmailPattern value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleBranchNamePattern?(RepositoryRule @this) => @this.Value13;
+        public static implicit operator global::GitHub.RepositoryRuleCommitterEmailPattern?(RepositoryRule @this) => @this.Value13;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleBranchNamePattern? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleCommitterEmailPattern? value)
         {
             Value13 = value;
         }
@@ -469,9 +469,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleTagNamePattern? Value14 { get; init; }
+        public global::GitHub.RepositoryRuleBranchNamePattern? Value14 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleTagNamePattern? Value14 { get; }
+        public global::GitHub.RepositoryRuleBranchNamePattern? Value14 { get; }
 #endif
 
         /// <summary>
@@ -485,17 +485,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleTagNamePattern value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleBranchNamePattern value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleTagNamePattern?(RepositoryRule @this) => @this.Value14;
+        public static implicit operator global::GitHub.RepositoryRuleBranchNamePattern?(RepositoryRule @this) => @this.Value14;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleTagNamePattern? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleBranchNamePattern? value)
         {
             Value14 = value;
         }
@@ -504,9 +504,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleVariant15? Value15 { get; init; }
+        public global::GitHub.RepositoryRuleTagNamePattern? Value15 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleVariant15? Value15 { get; }
+        public global::GitHub.RepositoryRuleTagNamePattern? Value15 { get; }
 #endif
 
         /// <summary>
@@ -520,17 +520,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleVariant15 value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleTagNamePattern value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleVariant15?(RepositoryRule @this) => @this.Value15;
+        public static implicit operator global::GitHub.RepositoryRuleTagNamePattern?(RepositoryRule @this) => @this.Value15;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleVariant15? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleTagNamePattern? value)
         {
             Value15 = value;
         }
@@ -644,9 +644,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleWorkflows? Value19 { get; init; }
+        public global::GitHub.RepositoryRuleVariant19? Value19 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleWorkflows? Value19 { get; }
+        public global::GitHub.RepositoryRuleVariant19? Value19 { get; }
 #endif
 
         /// <summary>
@@ -660,17 +660,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleWorkflows value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleVariant19 value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleWorkflows?(RepositoryRule @this) => @this.Value19;
+        public static implicit operator global::GitHub.RepositoryRuleVariant19?(RepositoryRule @this) => @this.Value19;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleWorkflows? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleVariant19? value)
         {
             Value19 = value;
         }
@@ -679,9 +679,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleCodeScanning? Value20 { get; init; }
+        public global::GitHub.RepositoryRuleWorkflows? Value20 { get; init; }
 #else
-        public global::GitHub.RepositoryRuleCodeScanning? Value20 { get; }
+        public global::GitHub.RepositoryRuleWorkflows? Value20 { get; }
 #endif
 
         /// <summary>
@@ -695,19 +695,54 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleWorkflows value) => new RepositoryRule(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::GitHub.RepositoryRuleWorkflows?(RepositoryRule @this) => @this.Value20;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public RepositoryRule(global::GitHub.RepositoryRuleWorkflows? value)
+        {
+            Value20 = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::GitHub.RepositoryRuleCodeScanning? Value21 { get; init; }
+#else
+        public global::GitHub.RepositoryRuleCodeScanning? Value21 { get; }
+#endif
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value21))]
+#endif
+        public bool IsValue21 => Value21 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleCodeScanning value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleCodeScanning?(RepositoryRule @this) => @this.Value20;
+        public static implicit operator global::GitHub.RepositoryRuleCodeScanning?(RepositoryRule @this) => @this.Value21;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleCodeScanning? value)
         {
-            Value20 = value;
+            Value21 = value;
         }
 
         /// <summary>
@@ -718,22 +753,23 @@ namespace GitHub
             global::GitHub.RepositoryRuleUpdate? value2,
             global::GitHub.RepositoryRuleDeletion? value3,
             global::GitHub.RepositoryRuleRequiredLinearHistory? value4,
-            global::GitHub.RepositoryRuleRequiredDeployments? value5,
-            global::GitHub.RepositoryRuleRequiredSignatures? value6,
-            global::GitHub.RepositoryRulePullRequest? value7,
-            global::GitHub.RepositoryRuleRequiredStatusChecks? value8,
-            global::GitHub.RepositoryRuleNonFastForward? value9,
-            global::GitHub.RepositoryRuleCommitMessagePattern? value10,
-            global::GitHub.RepositoryRuleCommitAuthorEmailPattern? value11,
-            global::GitHub.RepositoryRuleCommitterEmailPattern? value12,
-            global::GitHub.RepositoryRuleBranchNamePattern? value13,
-            global::GitHub.RepositoryRuleTagNamePattern? value14,
-            global::GitHub.RepositoryRuleVariant15? value15,
+            global::GitHub.RepositoryRuleMergeQueue? value5,
+            global::GitHub.RepositoryRuleRequiredDeployments? value6,
+            global::GitHub.RepositoryRuleRequiredSignatures? value7,
+            global::GitHub.RepositoryRulePullRequest? value8,
+            global::GitHub.RepositoryRuleRequiredStatusChecks? value9,
+            global::GitHub.RepositoryRuleNonFastForward? value10,
+            global::GitHub.RepositoryRuleCommitMessagePattern? value11,
+            global::GitHub.RepositoryRuleCommitAuthorEmailPattern? value12,
+            global::GitHub.RepositoryRuleCommitterEmailPattern? value13,
+            global::GitHub.RepositoryRuleBranchNamePattern? value14,
+            global::GitHub.RepositoryRuleTagNamePattern? value15,
             global::GitHub.RepositoryRuleVariant16? value16,
             global::GitHub.RepositoryRuleVariant17? value17,
             global::GitHub.RepositoryRuleVariant18? value18,
-            global::GitHub.RepositoryRuleWorkflows? value19,
-            global::GitHub.RepositoryRuleCodeScanning? value20
+            global::GitHub.RepositoryRuleVariant19? value19,
+            global::GitHub.RepositoryRuleWorkflows? value20,
+            global::GitHub.RepositoryRuleCodeScanning? value21
             )
         {
             Value1 = value1;
@@ -756,12 +792,14 @@ namespace GitHub
             Value18 = value18;
             Value19 = value19;
             Value20 = value20;
+            Value21 = value21;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
+            Value21 as object ??
             Value20 as object ??
             Value19 as object ??
             Value18 as object ??
@@ -789,7 +827,7 @@ namespace GitHub
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && IsValue18 && !IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && IsValue19 && !IsValue20 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && IsValue20;
+            return IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && IsValue21;
         }
 
         /// <summary>
@@ -808,27 +846,27 @@ namespace GitHub
                 Value4,
                 typeof(global::GitHub.RepositoryRuleRequiredLinearHistory),
                 Value5,
-                typeof(global::GitHub.RepositoryRuleRequiredDeployments),
+                typeof(global::GitHub.RepositoryRuleMergeQueue),
                 Value6,
-                typeof(global::GitHub.RepositoryRuleRequiredSignatures),
+                typeof(global::GitHub.RepositoryRuleRequiredDeployments),
                 Value7,
-                typeof(global::GitHub.RepositoryRulePullRequest),
+                typeof(global::GitHub.RepositoryRuleRequiredSignatures),
                 Value8,
-                typeof(global::GitHub.RepositoryRuleRequiredStatusChecks),
+                typeof(global::GitHub.RepositoryRulePullRequest),
                 Value9,
-                typeof(global::GitHub.RepositoryRuleNonFastForward),
+                typeof(global::GitHub.RepositoryRuleRequiredStatusChecks),
                 Value10,
-                typeof(global::GitHub.RepositoryRuleCommitMessagePattern),
+                typeof(global::GitHub.RepositoryRuleNonFastForward),
                 Value11,
-                typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern),
+                typeof(global::GitHub.RepositoryRuleCommitMessagePattern),
                 Value12,
-                typeof(global::GitHub.RepositoryRuleCommitterEmailPattern),
+                typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern),
                 Value13,
-                typeof(global::GitHub.RepositoryRuleBranchNamePattern),
+                typeof(global::GitHub.RepositoryRuleCommitterEmailPattern),
                 Value14,
-                typeof(global::GitHub.RepositoryRuleTagNamePattern),
+                typeof(global::GitHub.RepositoryRuleBranchNamePattern),
                 Value15,
-                typeof(global::GitHub.RepositoryRuleVariant15),
+                typeof(global::GitHub.RepositoryRuleTagNamePattern),
                 Value16,
                 typeof(global::GitHub.RepositoryRuleVariant16),
                 Value17,
@@ -836,8 +874,10 @@ namespace GitHub
                 Value18,
                 typeof(global::GitHub.RepositoryRuleVariant18),
                 Value19,
-                typeof(global::GitHub.RepositoryRuleWorkflows),
+                typeof(global::GitHub.RepositoryRuleVariant19),
                 Value20,
+                typeof(global::GitHub.RepositoryRuleWorkflows),
+                Value21,
                 typeof(global::GitHub.RepositoryRuleCodeScanning),
             };
             const int offset = unchecked((int)2166136261);
@@ -858,22 +898,23 @@ namespace GitHub
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleUpdate?>.Default.Equals(Value2, other.Value2) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleDeletion?>.Default.Equals(Value3, other.Value3) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredLinearHistory?>.Default.Equals(Value4, other.Value4) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredDeployments?>.Default.Equals(Value5, other.Value5) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredSignatures?>.Default.Equals(Value6, other.Value6) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRulePullRequest?>.Default.Equals(Value7, other.Value7) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredStatusChecks?>.Default.Equals(Value8, other.Value8) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleNonFastForward?>.Default.Equals(Value9, other.Value9) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitMessagePattern?>.Default.Equals(Value10, other.Value10) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?>.Default.Equals(Value11, other.Value11) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitterEmailPattern?>.Default.Equals(Value12, other.Value12) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleBranchNamePattern?>.Default.Equals(Value13, other.Value13) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleTagNamePattern?>.Default.Equals(Value14, other.Value14) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant15?>.Default.Equals(Value15, other.Value15) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleMergeQueue?>.Default.Equals(Value5, other.Value5) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredDeployments?>.Default.Equals(Value6, other.Value6) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredSignatures?>.Default.Equals(Value7, other.Value7) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRulePullRequest?>.Default.Equals(Value8, other.Value8) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredStatusChecks?>.Default.Equals(Value9, other.Value9) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleNonFastForward?>.Default.Equals(Value10, other.Value10) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitMessagePattern?>.Default.Equals(Value11, other.Value11) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?>.Default.Equals(Value12, other.Value12) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitterEmailPattern?>.Default.Equals(Value13, other.Value13) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleBranchNamePattern?>.Default.Equals(Value14, other.Value14) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleTagNamePattern?>.Default.Equals(Value15, other.Value15) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant16?>.Default.Equals(Value16, other.Value16) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant17?>.Default.Equals(Value17, other.Value17) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant18?>.Default.Equals(Value18, other.Value18) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleWorkflows?>.Default.Equals(Value19, other.Value19) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCodeScanning?>.Default.Equals(Value20, other.Value20) 
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant19?>.Default.Equals(Value19, other.Value19) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleWorkflows?>.Default.Equals(Value20, other.Value20) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCodeScanning?>.Default.Equals(Value21, other.Value21) 
                 ;
         }
 

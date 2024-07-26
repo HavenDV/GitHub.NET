@@ -9,6 +9,7 @@ namespace GitHub
     public sealed partial class Label
     {
         /// <summary>
+        /// Unique identifier for the label.<br/>
         /// Example: 208045946
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
@@ -39,6 +40,7 @@ namespace GitHub
         public required string Name { get; set; }
 
         /// <summary>
+        /// Optional description of the label, such as its purpose.<br/>
         /// Example: Something isn't working
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
@@ -54,6 +56,7 @@ namespace GitHub
         public required string Color { get; set; }
 
         /// <summary>
+        /// Whether this label comes by default in a new repository.<br/>
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("default")]

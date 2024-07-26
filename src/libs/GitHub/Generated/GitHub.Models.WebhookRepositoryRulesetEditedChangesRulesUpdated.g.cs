@@ -12,7 +12,7 @@ namespace GitHub
         /// A repository rule.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rule")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory20))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory21))]
         public global::GitHub.RepositoryRule? Rule { get; set; }
 
         /// <summary>

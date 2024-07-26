@@ -150,7 +150,7 @@ namespace GitHub
         /// The enablement status of private vulnerability reporting
         /// </param>
         /// <param name="enforcement">
-        /// The status of enforcement
+        /// The enforcement status for a security configuration
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>

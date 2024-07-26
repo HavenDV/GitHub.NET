@@ -9,11 +9,11 @@ namespace GitHub
     public sealed partial class RepositoryRuleVariant18Parameters
     {
         /// <summary>
-        /// The maximum file size allowed in megabytes. This limit does not apply to Git Large File Storage (Git LFS).
+        /// The file extensions that are restricted from being pushed to the commit graph.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("max_file_size")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("restricted_file_extensions")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required int MaxFileSize { get; set; }
+        public required global::System.Collections.Generic.IList<string> RestrictedFileExtensions { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
