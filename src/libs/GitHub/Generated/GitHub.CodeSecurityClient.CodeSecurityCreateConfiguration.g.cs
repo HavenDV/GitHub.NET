@@ -152,7 +152,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </param>
         /// <param name="enforcement">
-        /// The status of enforcement<br/>
+        /// The enforcement status for a security configuration<br/>
         /// Default Value: enforced
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

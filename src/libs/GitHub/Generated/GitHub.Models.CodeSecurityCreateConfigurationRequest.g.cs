@@ -95,7 +95,7 @@ namespace GitHub
         public global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? PrivateVulnerabilityReporting { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting.Disabled;
 
         /// <summary>
-        /// The status of enforcement<br/>
+        /// The enforcement status for a security configuration<br/>
         /// Default Value: enforced
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enforcement")]

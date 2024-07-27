@@ -167,6 +167,12 @@ namespace GitHub
         public required global::GitHub.DiscussionUser? User { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("labels")]
+        public global::System.Collections.Generic.IList<global::GitHub.Label>? Labels { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]

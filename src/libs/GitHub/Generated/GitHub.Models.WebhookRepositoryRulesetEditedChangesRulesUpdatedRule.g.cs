@@ -4,7 +4,8 @@
 namespace GitHub
 {
     /// <summary>
-    /// Note: file_path_restriction is in beta and subject to change.<br/>
+    /// &gt; [!NOTE]<br/>
+    /// &gt; `file_path_restriction` is in beta and subject to change.<br/>
     /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
     /// </summary>
     public sealed partial class WebhookRepositoryRulesetEditedChangesRulesUpdatedRule

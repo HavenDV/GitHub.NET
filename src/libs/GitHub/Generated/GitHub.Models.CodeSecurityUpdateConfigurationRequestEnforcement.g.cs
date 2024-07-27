@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The status of enforcement
+    /// The enforcement status for a security configuration
     /// </summary>
     public enum CodeSecurityUpdateConfigurationRequestEnforcement
     {

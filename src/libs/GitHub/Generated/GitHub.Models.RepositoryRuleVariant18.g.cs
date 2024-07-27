@@ -4,8 +4,9 @@
 namespace GitHub
 {
     /// <summary>
-    /// Note: max_file_size is in beta and subject to change.<br/>
-    /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
+    /// &gt; [!NOTE]<br/>
+    /// &gt; `file_extension_restriction` is in beta and subject to change.<br/>
+    /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
     /// </summary>
     public sealed partial class RepositoryRuleVariant18
     {
