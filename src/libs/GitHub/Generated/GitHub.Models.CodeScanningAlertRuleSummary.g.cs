@@ -21,12 +21,6 @@ namespace GitHub
         public string? Name { get; set; }
 
         /// <summary>
-        /// A set of tags applicable for the rule.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
-        public global::System.Collections.Generic.IList<string?>? Tags { get; set; }
-
-        /// <summary>
         /// The severity of the alert.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("severity")]
@@ -45,6 +39,12 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
+
+        /// <summary>
+        /// A set of tags applicable for the rule.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.IList<string?>? Tags { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
