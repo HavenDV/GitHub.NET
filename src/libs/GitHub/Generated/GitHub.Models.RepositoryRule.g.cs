@@ -8,7 +8,7 @@ namespace GitHub
     /// <summary>
     /// A repository rule.
     /// </summary>
-    public readonly struct RepositoryRule : global::System.IEquatable<RepositoryRule>
+    public readonly partial struct RepositoryRule : global::System.IEquatable<RepositoryRule>
     {
         /// <summary>
         /// 

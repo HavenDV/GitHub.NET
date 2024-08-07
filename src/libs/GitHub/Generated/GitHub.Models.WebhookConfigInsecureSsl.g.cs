@@ -8,7 +8,7 @@ namespace GitHub
     /// <summary>
     /// 
     /// </summary>
-    public readonly struct WebhookConfigInsecureSsl : global::System.IEquatable<WebhookConfigInsecureSsl>
+    public readonly partial struct WebhookConfigInsecureSsl : global::System.IEquatable<WebhookConfigInsecureSsl>
     {
         /// <summary>
         /// 

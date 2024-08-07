@@ -8,7 +8,7 @@ namespace GitHub
     /// <summary>
     /// 
     /// </summary>
-    public readonly struct WebhookPullRequestReviewRequestRemoved : global::System.IEquatable<WebhookPullRequestReviewRequestRemoved>
+    public readonly partial struct WebhookPullRequestReviewRequestRemoved : global::System.IEquatable<WebhookPullRequestReviewRequestRemoved>
     {
         /// <summary>
         /// 

@@ -8,7 +8,7 @@ namespace GitHub
     /// <summary>
     /// Issue Event for Issue
     /// </summary>
-    public readonly struct IssueEventForIssue : global::System.IEquatable<IssueEventForIssue>
+    public readonly partial struct IssueEventForIssue : global::System.IEquatable<IssueEventForIssue>
     {
         /// <summary>
         /// 
