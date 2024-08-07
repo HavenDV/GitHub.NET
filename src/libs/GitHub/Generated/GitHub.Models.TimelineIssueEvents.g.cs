@@ -8,7 +8,7 @@ namespace GitHub
     /// <summary>
     /// Timeline Event
     /// </summary>
-    public readonly struct TimelineIssueEvents : global::System.IEquatable<TimelineIssueEvents>
+    public readonly partial struct TimelineIssueEvents : global::System.IEquatable<TimelineIssueEvents>
     {
         /// <summary>
         /// 

@@ -8,7 +8,7 @@ namespace GitHub
     /// <summary>
     /// Conditions for an organization ruleset. The conditions object should contain both `repository_name` and `ref_name` properties or both `repository_id` and `ref_name` properties.
     /// </summary>
-    public readonly struct OrgRulesetConditions : global::System.IEquatable<OrgRulesetConditions>
+    public readonly partial struct OrgRulesetConditions : global::System.IEquatable<OrgRulesetConditions>
     {
         /// <summary>
         /// 
