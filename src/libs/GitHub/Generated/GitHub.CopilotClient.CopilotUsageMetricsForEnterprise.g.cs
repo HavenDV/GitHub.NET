@@ -36,7 +36,7 @@ namespace GitHub
         /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE<br/>
         /// for all users across organizations with access to Copilot within your enterprise, with a further breakdown of suggestions, acceptances,<br/>
         /// and number of active users by editor and language for each day. See the response schema tab for detailed metrics definitions.<br/>
-        /// The response contains metrics for the prior 28 days. Usage metrics are processed once per day for the previous day,<br/>
+        /// The response contains metrics for up to 28 days prior. Usage metrics are processed once per day for the previous day,<br/>
         /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,<br/>
         /// they must have telemetry enabled in their IDE.<br/>
         /// Only owners and billing managers can view Copilot usage metrics for the enterprise.<br/>

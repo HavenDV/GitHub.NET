@@ -94,6 +94,12 @@ namespace GitHub
         public global::System.Collections.Generic.IList<string?>? Dependabot { get; set; }
 
         /// <summary>
+        /// Example: [192.0.2.1]
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("copilot")]
+        public global::System.Collections.Generic.IList<string?>? Copilot { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("domains")]
