@@ -25,7 +25,9 @@ namespace GitHub
 
         /// <summary>
         /// Get an organization repository ruleset<br/>
-        /// Get a repository ruleset for an organization.
+        /// Get a repository ruleset for an organization.<br/>
+        /// **Note:** To prevent leaking sensitive information, the `bypass_actors` property is only returned if the user<br/>
+        /// making the API request has write access to the ruleset.
         /// </summary>
         /// <param name="org"></param>
         /// <param name="rulesetId"></param>
