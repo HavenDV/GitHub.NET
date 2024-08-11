@@ -8,18 +8,18 @@ namespace GitHub
         partial void PrepareReposListForUserArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string username,
-            ref global::GitHub.ReposListForUserType type,
-            ref global::GitHub.ReposListForUserSort sort,
-            ref global::GitHub.ReposListForUserDirection direction,
+            ref global::GitHub.ReposListForUserType? type,
+            ref global::GitHub.ReposListForUserSort? sort,
+            ref global::GitHub.ReposListForUserDirection? direction,
             ref int perPage,
             ref int page);
         partial void PrepareReposListForUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string username,
-            global::GitHub.ReposListForUserType type,
-            global::GitHub.ReposListForUserSort sort,
-            global::GitHub.ReposListForUserDirection direction,
+            global::GitHub.ReposListForUserType? type,
+            global::GitHub.ReposListForUserSort? sort,
+            global::GitHub.ReposListForUserDirection? direction,
             int perPage,
             int page);
         partial void ProcessReposListForUserResponse(
@@ -53,9 +53,9 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.MinimalRepository>> ReposListForUserAsync(
             string username,
-            global::GitHub.ReposListForUserType type,
-            global::GitHub.ReposListForUserSort sort,
-            global::GitHub.ReposListForUserDirection direction,
+            global::GitHub.ReposListForUserType? type,
+            global::GitHub.ReposListForUserSort? sort,
+            global::GitHub.ReposListForUserDirection? direction,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

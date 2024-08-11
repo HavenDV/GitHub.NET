@@ -211,7 +211,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text_matches")]
-        public global::System.Collections.Generic.IList<global::GitHub.UserSearchResultItemTextMatches?>? TextMatches { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SearchResultTextMatche>? TextMatches { get; set; }
 
         /// <summary>
         /// 

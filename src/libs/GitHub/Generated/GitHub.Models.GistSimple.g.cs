@@ -13,7 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("forks")]
         [global::System.Obsolete("This property marked as deprecated.")]
-        public global::System.Collections.Generic.IList<global::GitHub.GistSimpleForks?>? Forks { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GistSimpleFork>? Forks { get; set; }
 
         /// <summary>
         /// 
@@ -80,7 +80,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("files")]
-        public object? Files { get; set; }
+        public global::GitHub.GistSimpleFiles? Files { get; set; }
 
         /// <summary>
         /// 

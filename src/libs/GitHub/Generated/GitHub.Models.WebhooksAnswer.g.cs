@@ -70,7 +70,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parent_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object? ParentId { get; set; }
+        public required global::GitHub.WebhooksAnswerParentId? ParentId { get; set; }
 
         /// <summary>
         /// 

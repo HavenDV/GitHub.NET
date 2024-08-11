@@ -42,7 +42,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("schemas")]
-        public global::System.Collections.Generic.IList<string?>? Schemas { get; set; }
+        public global::System.Collections.Generic.IList<string>? Schemas { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

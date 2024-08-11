@@ -151,7 +151,7 @@ namespace GitHub
             string environmentName,
             int waitTimer = default,
             bool preventSelfReview = default,
-            global::System.Collections.Generic.IList<global::GitHub.ReposCreateOrUpdateEnvironmentRequestReviewers?>? reviewers = default,
+            global::System.Collections.Generic.IList<global::GitHub.ReposCreateOrUpdateEnvironmentRequestReviewer>? reviewers = default,
             global::GitHub.DeploymentBranchPolicySettings? deploymentBranchPolicy = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

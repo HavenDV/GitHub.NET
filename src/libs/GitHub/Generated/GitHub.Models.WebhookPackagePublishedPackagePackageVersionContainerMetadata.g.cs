@@ -12,13 +12,13 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labels")]
-        public object? Labels { get; set; }
+        public global::GitHub.WebhookPackagePublishedPackagePackageVersionContainerMetadataLabels? Labels { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("manifest")]
-        public object? Manifest { get; set; }
+        public global::GitHub.WebhookPackagePublishedPackagePackageVersionContainerMetadataManifest? Manifest { get; set; }
 
         /// <summary>
         /// 

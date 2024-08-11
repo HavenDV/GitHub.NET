@@ -37,7 +37,7 @@ namespace GitHub
         /// <param name="ghsaId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<object> SecurityAdvisoriesCreateRepositoryAdvisoryCveRequestAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequestResponse> SecurityAdvisoriesCreateRepositoryAdvisoryCveRequestAsync(
             string owner,
             string repo,
             string ghsaId,
@@ -98,7 +98,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.Object) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequestResponse) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

@@ -11,7 +11,7 @@ namespace GitHub
             ref string repo,
             ref int releaseId,
             ref string name,
-            ref string label,
+            ref string? label,
             byte[] request);
         partial void PrepareReposUploadReleaseAssetRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -20,7 +20,7 @@ namespace GitHub
             string repo,
             int releaseId,
             string name,
-            string label,
+            string? label,
             byte[] request);
         partial void ProcessReposUploadReleaseAssetResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -60,7 +60,7 @@ namespace GitHub
             string repo,
             int releaseId,
             string name,
-            string label,
+            string? label,
             byte[] request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -164,7 +164,7 @@ namespace GitHub
             string repo,
             int releaseId,
             string name,
-            string label = default,
+            string? label = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new byte[]

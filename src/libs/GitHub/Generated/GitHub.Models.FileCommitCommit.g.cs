@@ -60,7 +60,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parents")]
-        public global::System.Collections.Generic.IList<global::GitHub.FileCommitCommitParents?>? Parents { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.FileCommitCommitParent>? Parents { get; set; }
 
         /// <summary>
         /// 

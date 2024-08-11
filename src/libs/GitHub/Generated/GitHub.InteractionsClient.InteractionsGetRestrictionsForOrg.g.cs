@@ -28,7 +28,7 @@ namespace GitHub
         /// <param name="org"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.AnyOf<global::GitHub.InteractionLimitResponse, object>> InteractionsGetRestrictionsForOrgAsync(
+        public async global::System.Threading.Tasks.Task<global::System.AnyOf<global::GitHub.InteractionLimitResponse?, global::GitHub.InteractionsGetRestrictionsForOrgResponse2?>> InteractionsGetRestrictionsForOrgAsync(
             string org,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -83,7 +83,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.NullableAnyOfInteractionLimitResponseObject) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.NullableAnyOfInteractionLimitResponseInteractionsGetRestrictionsForOrgResponse2) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

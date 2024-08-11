@@ -57,7 +57,7 @@ namespace GitHub
                 request: request);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Patch,
+                method: new global::System.Net.Http.HttpMethod("PATCH"),
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/hooks/{hookId}/config", global::System.UriKind.RelativeOrAbsolute));
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ReposUpdateWebhookConfigForRepoRequest),
@@ -143,7 +143,7 @@ namespace GitHub
             string? url = default,
             string? contentType = default,
             string? secret = default,
-            global::System.OneOf<string?, double>? insecureSsl = default,
+            global::GitHub.WebhookConfigInsecureSsl? insecureSsl = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.ReposUpdateWebhookConfigForRepoRequest

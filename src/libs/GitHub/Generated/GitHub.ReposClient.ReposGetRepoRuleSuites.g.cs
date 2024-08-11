@@ -9,10 +9,10 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref string @ref,
-            ref global::GitHub.ReposGetRepoRuleSuitesTimePeriod timePeriod,
-            ref string actorName,
-            ref global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult ruleSuiteResult,
+            ref string? @ref,
+            ref global::GitHub.ReposGetRepoRuleSuitesTimePeriod? timePeriod,
+            ref string? actorName,
+            ref global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult? ruleSuiteResult,
             ref int perPage,
             ref int page);
         partial void PrepareReposGetRepoRuleSuitesRequest(
@@ -20,10 +20,10 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            string @ref,
-            global::GitHub.ReposGetRepoRuleSuitesTimePeriod timePeriod,
-            string actorName,
-            global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult ruleSuiteResult,
+            string? @ref,
+            global::GitHub.ReposGetRepoRuleSuitesTimePeriod? timePeriod,
+            string? actorName,
+            global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult? ruleSuiteResult,
             int perPage,
             int page);
         partial void ProcessReposGetRepoRuleSuitesResponse(
@@ -58,13 +58,13 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RuleSuites>> ReposGetRepoRuleSuitesAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RuleSuite>> ReposGetRepoRuleSuitesAsync(
             string owner,
             string repo,
-            string @ref,
-            global::GitHub.ReposGetRepoRuleSuitesTimePeriod timePeriod,
-            string actorName,
-            global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult ruleSuiteResult,
+            string? @ref,
+            global::GitHub.ReposGetRepoRuleSuitesTimePeriod? timePeriod,
+            string? actorName,
+            global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult? ruleSuiteResult,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -134,7 +134,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListRuleSuites) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListRuleSuite) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

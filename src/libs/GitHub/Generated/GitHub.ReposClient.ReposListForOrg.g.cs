@@ -8,18 +8,18 @@ namespace GitHub
         partial void PrepareReposListForOrgArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref global::GitHub.ReposListForOrgType type,
-            ref global::GitHub.ReposListForOrgSort sort,
-            ref global::GitHub.ReposListForOrgDirection direction,
+            ref global::GitHub.ReposListForOrgType? type,
+            ref global::GitHub.ReposListForOrgSort? sort,
+            ref global::GitHub.ReposListForOrgDirection? direction,
             ref int perPage,
             ref int page);
         partial void PrepareReposListForOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            global::GitHub.ReposListForOrgType type,
-            global::GitHub.ReposListForOrgSort sort,
-            global::GitHub.ReposListForOrgDirection direction,
+            global::GitHub.ReposListForOrgType? type,
+            global::GitHub.ReposListForOrgSort? sort,
+            global::GitHub.ReposListForOrgDirection? direction,
             int perPage,
             int page);
         partial void ProcessReposListForOrgResponse(
@@ -55,9 +55,9 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.MinimalRepository>> ReposListForOrgAsync(
             string org,
-            global::GitHub.ReposListForOrgType type,
-            global::GitHub.ReposListForOrgSort sort,
-            global::GitHub.ReposListForOrgDirection direction,
+            global::GitHub.ReposListForOrgType? type,
+            global::GitHub.ReposListForOrgSort? sort,
+            global::GitHub.ReposListForOrgDirection? direction,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

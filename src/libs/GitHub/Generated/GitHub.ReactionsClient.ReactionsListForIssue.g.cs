@@ -10,7 +10,7 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int issueNumber,
-            ref global::GitHub.ReactionsListForIssueContent content,
+            ref global::GitHub.ReactionsListForIssueContent? content,
             ref int perPage,
             ref int page);
         partial void PrepareReactionsListForIssueRequest(
@@ -19,7 +19,7 @@ namespace GitHub
             string owner,
             string repo,
             int issueNumber,
-            global::GitHub.ReactionsListForIssueContent content,
+            global::GitHub.ReactionsListForIssueContent? content,
             int perPage,
             int page);
         partial void ProcessReactionsListForIssueResponse(
@@ -51,7 +51,7 @@ namespace GitHub
             string owner,
             string repo,
             int issueNumber,
-            global::GitHub.ReactionsListForIssueContent content,
+            global::GitHub.ReactionsListForIssueContent? content,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

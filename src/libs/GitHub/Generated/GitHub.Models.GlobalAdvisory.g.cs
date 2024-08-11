@@ -85,7 +85,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("identifiers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryIdentifiers>? Identifiers { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryIdentifier>? Identifiers { get; set; }
 
         /// <summary>
         /// 
@@ -149,14 +149,14 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cwes")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCwes>? Cwes { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCwe>? Cwes { get; set; }
 
         /// <summary>
         /// The users who contributed to the advisory.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("credits")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCredits>? Credits { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCredit>? Credits { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

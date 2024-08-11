@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::GitHub.ReposGetClonesPer per);
+            ref global::GitHub.ReposGetClonesPer? per);
         partial void PrepareReposGetClonesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::GitHub.ReposGetClonesPer per);
+            global::GitHub.ReposGetClonesPer? per);
         partial void ProcessReposGetClonesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -39,7 +39,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CloneTraffic> ReposGetClonesAsync(
             string owner,
             string repo,
-            global::GitHub.ReposGetClonesPer per,
+            global::GitHub.ReposGetClonesPer? per,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

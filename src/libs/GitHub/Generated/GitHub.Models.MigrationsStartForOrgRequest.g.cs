@@ -73,7 +73,7 @@ namespace GitHub
         /// Exclude related items from being returned in the response in order to improve performance of the request.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclude")]
-        public global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForOrgRequestExclude?>? Exclude { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForOrgRequestExcludeItem>? Exclude { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

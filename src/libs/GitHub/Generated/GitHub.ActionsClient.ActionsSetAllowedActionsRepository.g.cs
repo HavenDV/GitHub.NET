@@ -104,7 +104,7 @@ namespace GitHub
             string repo,
             bool githubOwnedAllowed = default,
             bool verifiedAllowed = default,
-            global::System.Collections.Generic.IList<string?>? patternsAllowed = default,
+            global::System.Collections.Generic.IList<string>? patternsAllowed = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.SelectedActions

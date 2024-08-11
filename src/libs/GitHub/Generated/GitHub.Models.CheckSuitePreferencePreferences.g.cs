@@ -12,7 +12,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("auto_trigger_checks")]
-        public global::System.Collections.Generic.IList<global::GitHub.CheckSuitePreferencePreferencesAutoTriggerChecks?>? AutoTriggerChecks { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CheckSuitePreferencePreferencesAutoTriggerCheck>? AutoTriggerChecks { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

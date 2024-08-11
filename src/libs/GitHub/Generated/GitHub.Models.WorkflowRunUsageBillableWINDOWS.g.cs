@@ -26,7 +26,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("job_runs")]
-        public global::System.Collections.Generic.IList<global::GitHub.WorkflowRunUsageBillableWINDOWSJobRuns?>? JobRuns { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WorkflowRunUsageBillableWINDOWSJobRun>? JobRuns { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

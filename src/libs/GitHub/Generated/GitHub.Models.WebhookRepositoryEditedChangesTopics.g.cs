@@ -12,7 +12,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("from")]
-        public global::System.Collections.Generic.IList<string?>? From { get; set; }
+        public global::System.Collections.Generic.IList<string>? From { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

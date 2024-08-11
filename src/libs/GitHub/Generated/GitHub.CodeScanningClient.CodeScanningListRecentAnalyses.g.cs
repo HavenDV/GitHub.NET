@@ -9,27 +9,27 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref string toolName,
+            ref string? toolName,
             ref string? toolGuid,
             ref int page,
             ref int perPage,
-            ref string @ref,
-            ref string sarifId,
-            ref global::GitHub.CodeScanningListRecentAnalysesDirection direction,
-            ref global::GitHub.CodeScanningListRecentAnalysesSort sort);
+            ref string? @ref,
+            ref string? sarifId,
+            ref global::GitHub.CodeScanningListRecentAnalysesDirection? direction,
+            ref global::GitHub.CodeScanningListRecentAnalysesSort? sort);
         partial void PrepareCodeScanningListRecentAnalysesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            string toolName,
+            string? toolName,
             string? toolGuid,
             int page,
             int perPage,
-            string @ref,
-            string sarifId,
-            global::GitHub.CodeScanningListRecentAnalysesDirection direction,
-            global::GitHub.CodeScanningListRecentAnalysesSort sort);
+            string? @ref,
+            string? sarifId,
+            global::GitHub.CodeScanningListRecentAnalysesDirection? direction,
+            global::GitHub.CodeScanningListRecentAnalysesSort? sort);
         partial void ProcessCodeScanningListRecentAnalysesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -87,14 +87,14 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeScanningAnalysis>> CodeScanningListRecentAnalysesAsync(
             string owner,
             string repo,
-            string toolName,
+            string? toolName,
             string? toolGuid,
             int page,
             int perPage,
-            string @ref,
-            string sarifId,
-            global::GitHub.CodeScanningListRecentAnalysesDirection direction,
-            global::GitHub.CodeScanningListRecentAnalysesSort sort,
+            string? @ref,
+            string? sarifId,
+            global::GitHub.CodeScanningListRecentAnalysesDirection? direction,
+            global::GitHub.CodeScanningListRecentAnalysesSort? sort,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

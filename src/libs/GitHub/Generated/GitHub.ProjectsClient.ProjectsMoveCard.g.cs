@@ -30,7 +30,7 @@ namespace GitHub
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<object> ProjectsMoveCardAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.ProjectsMoveCardResponse> ProjectsMoveCardAsync(
             int cardId,
             global::GitHub.ProjectsMoveCardRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -95,7 +95,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.Object) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.ProjectsMoveCardResponse) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
@@ -113,7 +113,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<object> ProjectsMoveCardAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.ProjectsMoveCardResponse> ProjectsMoveCardAsync(
             int cardId,
             string position,
             int columnId = default,

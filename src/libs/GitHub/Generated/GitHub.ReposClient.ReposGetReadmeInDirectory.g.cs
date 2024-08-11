@@ -10,14 +10,14 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref string dir,
-            ref string @ref);
+            ref string? @ref);
         partial void PrepareReposGetReadmeInDirectoryRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             string dir,
-            string @ref);
+            string? @ref);
         partial void ProcessReposGetReadmeInDirectoryResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -44,7 +44,7 @@ namespace GitHub
             string owner,
             string repo,
             string dir,
-            string @ref,
+            string? @ref,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

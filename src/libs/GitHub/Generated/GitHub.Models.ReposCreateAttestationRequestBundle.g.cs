@@ -19,13 +19,13 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("verificationMaterial")]
-        public object? VerificationMaterial { get; set; }
+        public global::GitHub.ReposCreateAttestationRequestBundleVerificationMaterial? VerificationMaterial { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dsseEnvelope")]
-        public object? DsseEnvelope { get; set; }
+        public global::GitHub.ReposCreateAttestationRequestBundleDsseEnvelope? DsseEnvelope { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

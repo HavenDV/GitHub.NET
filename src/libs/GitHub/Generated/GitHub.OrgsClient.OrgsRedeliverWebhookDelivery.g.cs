@@ -37,7 +37,7 @@ namespace GitHub
         /// <param name="deliveryId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<object> OrgsRedeliverWebhookDeliveryAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.OrgsRedeliverWebhookDeliveryResponse> OrgsRedeliverWebhookDeliveryAsync(
             string org,
             int hookId,
             int deliveryId,
@@ -98,7 +98,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.Object) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.OrgsRedeliverWebhookDeliveryResponse) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

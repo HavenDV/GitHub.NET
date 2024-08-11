@@ -78,7 +78,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
-        public object? Description { get; set; }
+        public global::GitHub.WebhookDeploymentCreatedWorkflowRunRepositoryDescription? Description { get; set; }
 
         /// <summary>
         /// 

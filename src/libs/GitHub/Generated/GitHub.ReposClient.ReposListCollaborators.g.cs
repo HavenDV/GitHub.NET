@@ -9,8 +9,8 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::GitHub.ReposListCollaboratorsAffiliation affiliation,
-            ref global::GitHub.ReposListCollaboratorsPermission permission,
+            ref global::GitHub.ReposListCollaboratorsAffiliation? affiliation,
+            ref global::GitHub.ReposListCollaboratorsPermission? permission,
             ref int perPage,
             ref int page);
         partial void PrepareReposListCollaboratorsRequest(
@@ -18,8 +18,8 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::GitHub.ReposListCollaboratorsAffiliation affiliation,
-            global::GitHub.ReposListCollaboratorsPermission permission,
+            global::GitHub.ReposListCollaboratorsAffiliation? affiliation,
+            global::GitHub.ReposListCollaboratorsPermission? permission,
             int perPage,
             int page);
         partial void ProcessReposListCollaboratorsResponse(
@@ -56,8 +56,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Collaborator>> ReposListCollaboratorsAsync(
             string owner,
             string repo,
-            global::GitHub.ReposListCollaboratorsAffiliation affiliation,
-            global::GitHub.ReposListCollaboratorsPermission permission,
+            global::GitHub.ReposListCollaboratorsAffiliation? affiliation,
+            global::GitHub.ReposListCollaboratorsPermission? permission,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

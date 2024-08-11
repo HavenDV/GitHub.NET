@@ -31,7 +31,7 @@ namespace GitHub
         /// Use the following table to specify the location, destination, and contents of the draft review comment.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("comments")]
-        public global::System.Collections.Generic.IList<global::GitHub.PullsCreateReviewRequestComments?>? Comments { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.PullsCreateReviewRequestComment>? Comments { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

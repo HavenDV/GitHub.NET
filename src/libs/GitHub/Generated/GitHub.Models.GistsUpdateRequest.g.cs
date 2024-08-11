@@ -22,7 +22,7 @@ namespace GitHub
         /// deleted if the specified object does not contain at least one of `content` or `filename`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("files")]
-        public object? Files { get; set; }
+        public global::GitHub.GistsUpdateRequestFiles? Files { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

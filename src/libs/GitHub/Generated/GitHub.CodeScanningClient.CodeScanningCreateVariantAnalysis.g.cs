@@ -44,8 +44,6 @@ namespace GitHub
             global::GitHub.CodeScanningCreateVariantAnalysisRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: _httpClient);
             PrepareCodeScanningCreateVariantAnalysisArguments(
@@ -120,15 +118,40 @@ namespace GitHub
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
+        /// <param name="language">
+        /// The language targeted by the CodeQL query
+        /// </param>
+        /// <param name="queryPack">
+        /// A Base64-encoded tarball containing a CodeQL query and all its dependencies
+        /// </param>
+        /// <param name="repositories">
+        /// List of repository names (in the form `owner/repo-name`) to run the query against. Precisely one property from `repositories`, `repository_lists` and `repository_owners` is required.
+        /// </param>
+        /// <param name="repositoryLists">
+        /// List of repository lists to run the query against. Precisely one property from `repositories`, `repository_lists` and `repository_owners` is required.
+        /// </param>
+        /// <param name="repositoryOwners">
+        /// List of organization or user names whose repositories the query should be run against. Precisely one property from `repositories`, `repository_lists` and `repository_owners` is required.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.CodeScanningVariantAnalysis> CodeScanningCreateVariantAnalysisAsync(
             string owner,
             string repo,
+            global::GitHub.CodeScanningVariantAnalysisLanguage language,
+            string queryPack,
+            global::System.Collections.Generic.IList<string>? repositories = default,
+            global::System.Collections.Generic.IList<string>? repositoryLists = default,
+            global::System.Collections.Generic.IList<string>? repositoryOwners = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.CodeScanningCreateVariantAnalysisRequest
             {
+                Language = language,
+                QueryPack = queryPack,
+                Repositories = repositories,
+                RepositoryLists = repositoryLists,
+                RepositoryOwners = repositoryOwners,
             };
 
             return await CodeScanningCreateVariantAnalysisAsync(

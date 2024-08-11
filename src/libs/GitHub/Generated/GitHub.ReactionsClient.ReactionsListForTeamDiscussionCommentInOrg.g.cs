@@ -11,7 +11,7 @@ namespace GitHub
             ref string teamSlug,
             ref int discussionNumber,
             ref int commentNumber,
-            ref global::GitHub.ReactionsListForTeamDiscussionCommentInOrgContent content,
+            ref global::GitHub.ReactionsListForTeamDiscussionCommentInOrgContent? content,
             ref int perPage,
             ref int page);
         partial void PrepareReactionsListForTeamDiscussionCommentInOrgRequest(
@@ -21,7 +21,7 @@ namespace GitHub
             string teamSlug,
             int discussionNumber,
             int commentNumber,
-            global::GitHub.ReactionsListForTeamDiscussionCommentInOrgContent content,
+            global::GitHub.ReactionsListForTeamDiscussionCommentInOrgContent? content,
             int perPage,
             int page);
         partial void ProcessReactionsListForTeamDiscussionCommentInOrgResponse(
@@ -58,7 +58,7 @@ namespace GitHub
             string teamSlug,
             int discussionNumber,
             int commentNumber,
-            global::GitHub.ReactionsListForTeamDiscussionCommentInOrgContent content,
+            global::GitHub.ReactionsListForTeamDiscussionCommentInOrgContent? content,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

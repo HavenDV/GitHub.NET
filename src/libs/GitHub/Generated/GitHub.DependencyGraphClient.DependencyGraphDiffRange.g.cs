@@ -10,14 +10,14 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref string basehead,
-            ref string name);
+            ref string? name);
         partial void PrepareDependencyGraphDiffRangeRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             string basehead,
-            string name);
+            string? name);
         partial void ProcessDependencyGraphDiffRangeResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -37,11 +37,11 @@ namespace GitHub
         /// <param name="name"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.DependencyGraphDiff>> DependencyGraphDiffRangeAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.DependencyGraphDiffItem>> DependencyGraphDiffRangeAsync(
             string owner,
             string repo,
             string basehead,
-            string name,
+            string? name,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -101,7 +101,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListDependencyGraphDiff) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListDependencyGraphDiffItem) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

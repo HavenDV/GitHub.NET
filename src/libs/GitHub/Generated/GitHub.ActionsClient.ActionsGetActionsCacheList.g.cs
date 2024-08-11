@@ -11,10 +11,10 @@ namespace GitHub
             ref string repo,
             ref int perPage,
             ref int page,
-            ref string @ref,
-            ref string key,
-            ref global::GitHub.ActionsGetActionsCacheListSort sort,
-            ref global::GitHub.ActionsGetActionsCacheListDirection direction);
+            ref string? @ref,
+            ref string? key,
+            ref global::GitHub.ActionsGetActionsCacheListSort? sort,
+            ref global::GitHub.ActionsGetActionsCacheListDirection? direction);
         partial void PrepareActionsGetActionsCacheListRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -22,10 +22,10 @@ namespace GitHub
             string repo,
             int perPage,
             int page,
-            string @ref,
-            string key,
-            global::GitHub.ActionsGetActionsCacheListSort sort,
-            global::GitHub.ActionsGetActionsCacheListDirection direction);
+            string? @ref,
+            string? key,
+            global::GitHub.ActionsGetActionsCacheListSort? sort,
+            global::GitHub.ActionsGetActionsCacheListDirection? direction);
         partial void ProcessActionsGetActionsCacheListResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -63,10 +63,10 @@ namespace GitHub
             string repo,
             int perPage,
             int page,
-            string @ref,
-            string key,
-            global::GitHub.ActionsGetActionsCacheListSort sort,
-            global::GitHub.ActionsGetActionsCacheListDirection direction,
+            string? @ref,
+            string? key,
+            global::GitHub.ActionsGetActionsCacheListSort? sort,
+            global::GitHub.ActionsGetActionsCacheListDirection? direction,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

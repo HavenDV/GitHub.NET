@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareSearchReposArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string q,
-            ref global::GitHub.SearchReposSort sort,
-            ref global::GitHub.SearchReposOrder order,
+            ref global::GitHub.SearchReposSort? sort,
+            ref global::GitHub.SearchReposOrder? order,
             ref int perPage,
             ref int page);
         partial void PrepareSearchReposRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string q,
-            global::GitHub.SearchReposSort sort,
-            global::GitHub.SearchReposOrder order,
+            global::GitHub.SearchReposSort? sort,
+            global::GitHub.SearchReposOrder? order,
             int perPage,
             int page);
         partial void ProcessSearchReposResponse(
@@ -52,8 +52,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchReposResponse> SearchReposAsync(
             string q,
-            global::GitHub.SearchReposSort sort,
-            global::GitHub.SearchReposOrder order,
+            global::GitHub.SearchReposSort? sort,
+            global::GitHub.SearchReposOrder? order,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

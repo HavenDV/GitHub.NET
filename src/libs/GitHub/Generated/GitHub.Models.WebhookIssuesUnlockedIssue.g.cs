@@ -27,7 +27,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignees")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesUnlockedIssueAssignees?> Assignees { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesUnlockedIssueAssignee2> Assignees { get; set; }
 
         /// <summary>
         /// How the author is associated with the repository.
@@ -103,7 +103,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labels")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesUnlockedIssueLabels?>? Labels { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesUnlockedIssueLabel>? Labels { get; set; }
 
         /// <summary>
         /// 

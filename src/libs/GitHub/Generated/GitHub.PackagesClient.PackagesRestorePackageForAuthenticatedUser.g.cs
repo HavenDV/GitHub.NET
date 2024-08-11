@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref global::GitHub.PackagesRestorePackageForAuthenticatedUserPackageType packageType,
             ref string packageName,
-            ref string token);
+            ref string? token);
         partial void PreparePackagesRestorePackageForAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::GitHub.PackagesRestorePackageForAuthenticatedUserPackageType packageType,
             string packageName,
-            string token);
+            string? token);
         partial void ProcessPackagesRestorePackageForAuthenticatedUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -41,7 +41,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> PackagesRestorePackageForAuthenticatedUserAsync(
             global::GitHub.PackagesRestorePackageForAuthenticatedUserPackageType packageType,
             string packageName,
-            string token,
+            string? token,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

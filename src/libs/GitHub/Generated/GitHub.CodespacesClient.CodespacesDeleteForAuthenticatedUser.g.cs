@@ -29,7 +29,7 @@ namespace GitHub
         /// <param name="codespaceName"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<object> CodespacesDeleteForAuthenticatedUserAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.CodespacesDeleteForAuthenticatedUserResponse> CodespacesDeleteForAuthenticatedUserAsync(
             string codespaceName,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -84,7 +84,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.Object) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.CodespacesDeleteForAuthenticatedUserResponse) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

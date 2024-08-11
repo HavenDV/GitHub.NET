@@ -13,7 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("environments")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.EnvironmentApprovalsEnvironments> Environments { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.EnvironmentApprovalsEnvironment> Environments { get; set; }
 
         /// <summary>
         /// Whether deployment to the environment(s) was approved or rejected or pending (with comments)<br/>

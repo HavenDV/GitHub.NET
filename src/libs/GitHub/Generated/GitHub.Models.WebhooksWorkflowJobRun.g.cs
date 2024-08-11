@@ -13,7 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conclusion")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object? Conclusion { get; set; }
+        public required global::GitHub.WebhooksWorkflowJobRunConclusion? Conclusion { get; set; }
 
         /// <summary>
         /// 
@@ -48,7 +48,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object? Name { get; set; }
+        public required global::GitHub.WebhooksWorkflowJobRunName? Name { get; set; }
 
         /// <summary>
         /// 

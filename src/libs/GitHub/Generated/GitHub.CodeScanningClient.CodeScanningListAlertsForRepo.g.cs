@@ -9,29 +9,29 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref string toolName,
+            ref string? toolName,
             ref string? toolGuid,
             ref int page,
             ref int perPage,
-            ref string @ref,
-            ref global::GitHub.CodeScanningListAlertsForRepoDirection direction,
-            ref global::GitHub.CodeScanningListAlertsForRepoSort sort,
-            ref global::GitHub.CodeScanningAlertStateQuery state,
-            ref global::GitHub.CodeScanningAlertSeverity severity);
+            ref string? @ref,
+            ref global::GitHub.CodeScanningListAlertsForRepoDirection? direction,
+            ref global::GitHub.CodeScanningListAlertsForRepoSort? sort,
+            ref global::GitHub.CodeScanningAlertStateQuery? state,
+            ref global::GitHub.CodeScanningAlertSeverity? severity);
         partial void PrepareCodeScanningListAlertsForRepoRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            string toolName,
+            string? toolName,
             string? toolGuid,
             int page,
             int perPage,
-            string @ref,
-            global::GitHub.CodeScanningListAlertsForRepoDirection direction,
-            global::GitHub.CodeScanningListAlertsForRepoSort sort,
-            global::GitHub.CodeScanningAlertStateQuery state,
-            global::GitHub.CodeScanningAlertSeverity severity);
+            string? @ref,
+            global::GitHub.CodeScanningListAlertsForRepoDirection? direction,
+            global::GitHub.CodeScanningListAlertsForRepoSort? sort,
+            global::GitHub.CodeScanningAlertStateQuery? state,
+            global::GitHub.CodeScanningAlertSeverity? severity);
         partial void ProcessCodeScanningListAlertsForRepoResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -84,15 +84,15 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeScanningAlertItems>> CodeScanningListAlertsForRepoAsync(
             string owner,
             string repo,
-            string toolName,
+            string? toolName,
             string? toolGuid,
             int page,
             int perPage,
-            string @ref,
-            global::GitHub.CodeScanningListAlertsForRepoDirection direction,
-            global::GitHub.CodeScanningListAlertsForRepoSort sort,
-            global::GitHub.CodeScanningAlertStateQuery state,
-            global::GitHub.CodeScanningAlertSeverity severity,
+            string? @ref,
+            global::GitHub.CodeScanningListAlertsForRepoDirection? direction,
+            global::GitHub.CodeScanningListAlertsForRepoSort? sort,
+            global::GitHub.CodeScanningAlertStateQuery? state,
+            global::GitHub.CodeScanningAlertSeverity? severity,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

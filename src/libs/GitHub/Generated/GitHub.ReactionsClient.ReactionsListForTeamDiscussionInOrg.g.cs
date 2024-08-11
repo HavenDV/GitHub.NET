@@ -10,7 +10,7 @@ namespace GitHub
             ref string org,
             ref string teamSlug,
             ref int discussionNumber,
-            ref global::GitHub.ReactionsListForTeamDiscussionInOrgContent content,
+            ref global::GitHub.ReactionsListForTeamDiscussionInOrgContent? content,
             ref int perPage,
             ref int page);
         partial void PrepareReactionsListForTeamDiscussionInOrgRequest(
@@ -19,7 +19,7 @@ namespace GitHub
             string org,
             string teamSlug,
             int discussionNumber,
-            global::GitHub.ReactionsListForTeamDiscussionInOrgContent content,
+            global::GitHub.ReactionsListForTeamDiscussionInOrgContent? content,
             int perPage,
             int page);
         partial void ProcessReactionsListForTeamDiscussionInOrgResponse(
@@ -54,7 +54,7 @@ namespace GitHub
             string org,
             string teamSlug,
             int discussionNumber,
-            global::GitHub.ReactionsListForTeamDiscussionInOrgContent content,
+            global::GitHub.ReactionsListForTeamDiscussionInOrgContent? content,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

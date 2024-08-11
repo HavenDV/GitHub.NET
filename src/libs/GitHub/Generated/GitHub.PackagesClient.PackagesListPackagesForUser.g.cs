@@ -8,7 +8,7 @@ namespace GitHub
         partial void PreparePackagesListPackagesForUserArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::GitHub.PackagesListPackagesForUserPackageType packageType,
-            ref global::GitHub.PackagesListPackagesForUserVisibility visibility,
+            ref global::GitHub.PackagesListPackagesForUserVisibility? visibility,
             ref string username,
             ref int page,
             ref int perPage);
@@ -16,7 +16,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::GitHub.PackagesListPackagesForUserPackageType packageType,
-            global::GitHub.PackagesListPackagesForUserVisibility visibility,
+            global::GitHub.PackagesListPackagesForUserVisibility? visibility,
             string username,
             int page,
             int perPage);
@@ -47,7 +47,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Package>> PackagesListPackagesForUserAsync(
             global::GitHub.PackagesListPackagesForUserPackageType packageType,
-            global::GitHub.PackagesListPackagesForUserVisibility visibility,
+            global::GitHub.PackagesListPackagesForUserVisibility? visibility,
             string username,
             int page,
             int perPage,

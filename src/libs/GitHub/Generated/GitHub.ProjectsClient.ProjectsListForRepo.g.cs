@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::GitHub.ProjectsListForRepoState state,
+            ref global::GitHub.ProjectsListForRepoState? state,
             ref int perPage,
             ref int page);
         partial void PrepareProjectsListForRepoRequest(
@@ -17,7 +17,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::GitHub.ProjectsListForRepoState state,
+            global::GitHub.ProjectsListForRepoState? state,
             int perPage,
             int page);
         partial void ProcessProjectsListForRepoResponse(
@@ -49,7 +49,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Project>> ProjectsListForRepoAsync(
             string owner,
             string repo,
-            global::GitHub.ProjectsListForRepoState state,
+            global::GitHub.ProjectsListForRepoState? state,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

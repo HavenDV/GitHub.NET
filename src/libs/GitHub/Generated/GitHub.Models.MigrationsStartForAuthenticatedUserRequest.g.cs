@@ -63,7 +63,7 @@ namespace GitHub
         /// Example: [repositories]
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclude")]
-        public global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForAuthenticatedUserRequestExclude?>? Exclude { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForAuthenticatedUserRequestExcludeItem>? Exclude { get; set; }
 
         /// <summary>
         /// 

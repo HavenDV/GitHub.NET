@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareSearchUsersArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string q,
-            ref global::GitHub.SearchUsersSort sort,
-            ref global::GitHub.SearchUsersOrder order,
+            ref global::GitHub.SearchUsersSort? sort,
+            ref global::GitHub.SearchUsersOrder? order,
             ref int perPage,
             ref int page);
         partial void PrepareSearchUsersRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string q,
-            global::GitHub.SearchUsersSort sort,
-            global::GitHub.SearchUsersOrder order,
+            global::GitHub.SearchUsersSort? sort,
+            global::GitHub.SearchUsersOrder? order,
             int perPage,
             int page);
         partial void ProcessSearchUsersResponse(
@@ -53,8 +53,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchUsersResponse> SearchUsersAsync(
             string q,
-            global::GitHub.SearchUsersSort sort,
-            global::GitHub.SearchUsersOrder order,
+            global::GitHub.SearchUsersSort? sort,
+            global::GitHub.SearchUsersOrder? order,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

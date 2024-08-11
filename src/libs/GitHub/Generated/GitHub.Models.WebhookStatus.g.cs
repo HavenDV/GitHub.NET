@@ -19,7 +19,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("branches")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookStatusBranches> Branches { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookStatusBranche> Branches { get; set; }
 
         /// <summary>
         /// 

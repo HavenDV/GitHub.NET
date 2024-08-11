@@ -43,14 +43,14 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repositories_added")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookInstallationRepositoriesAddedRepositoriesAdded> RepositoriesAdded { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksRepositoriesAddedItem> RepositoriesAdded { get; set; }
 
         /// <summary>
         /// An array of repository objects, which were removed from the installation.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repositories_removed")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookInstallationRepositoriesAddedRepositoriesRemoved> RepositoriesRemoved { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookInstallationRepositoriesAddedRepositoriesRemovedItem> RepositoriesRemoved { get; set; }
 
         /// <summary>
         /// The repository on GitHub where the event occurred. Webhook payloads contain the `repository` property<br/>

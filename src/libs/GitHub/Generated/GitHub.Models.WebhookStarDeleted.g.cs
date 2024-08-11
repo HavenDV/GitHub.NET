@@ -59,7 +59,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("starred_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object? StarredAt { get; set; }
+        public required global::GitHub.WebhookStarDeletedStarredAt? StarredAt { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

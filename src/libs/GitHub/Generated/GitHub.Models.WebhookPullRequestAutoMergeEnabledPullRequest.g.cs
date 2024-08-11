@@ -43,7 +43,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignees")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestAutoMergeEnabledPullRequestAssignees?> Assignees { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestAutoMergeEnabledPullRequestAssignee2> Assignees { get; set; }
 
         /// <summary>
         /// How the author is associated with the repository.
@@ -173,7 +173,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labels")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestAutoMergeEnabledPullRequestLabels> Labels { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestAutoMergeEnabledPullRequestLabel> Labels { get; set; }
 
         /// <summary>
         /// 
@@ -265,14 +265,14 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requested_reviewers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::System.OneOf<global::GitHub.WebhookPullRequestAutoMergeEnabledPullRequestRequestedReviewers?, global::GitHub.WebhookPullRequestAutoMergeEnabledPullRequestRequestedReviewers>> RequestedReviewers { get; set; }
+        public required global::System.Collections.Generic.IList<global::System.OneOf<global::GitHub.WebhookPullRequestAutoMergeEnabledPullRequestRequestedReviewerVariant1?, global::GitHub.WebhookPullRequestAutoMergeEnabledPullRequestRequestedReviewerVariant2?>> RequestedReviewers { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requested_teams")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestAutoMergeEnabledPullRequestRequestedTeams> RequestedTeams { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestAutoMergeEnabledPullRequestRequestedTeam> RequestedTeams { get; set; }
 
         /// <summary>
         /// 

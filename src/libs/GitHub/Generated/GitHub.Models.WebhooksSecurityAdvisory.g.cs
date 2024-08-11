@@ -20,7 +20,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cwes")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksSecurityAdvisoryCwes> Cwes { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksSecurityAdvisoryCwe> Cwes { get; set; }
 
         /// <summary>
         /// 
@@ -41,7 +41,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("identifiers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksSecurityAdvisoryIdentifiers> Identifiers { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksSecurityAdvisoryIdentifier> Identifiers { get; set; }
 
         /// <summary>
         /// 
@@ -55,7 +55,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("references")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksSecurityAdvisoryReferences> References { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksSecurityAdvisoryReference> References { get; set; }
 
         /// <summary>
         /// 
@@ -83,7 +83,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("vulnerabilities")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksSecurityAdvisoryVulnerabilities> Vulnerabilities { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksSecurityAdvisoryVulnerabilitie> Vulnerabilities { get; set; }
 
         /// <summary>
         /// 

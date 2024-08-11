@@ -7,11 +7,11 @@ namespace GitHub
     {
         partial void PrepareMetaGetOctocatArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string s);
+            ref string? s);
         partial void PrepareMetaGetOctocatRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string s);
+            string? s);
         partial void ProcessMetaGetOctocatResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -29,7 +29,7 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<string> MetaGetOctocatAsync(
-            string s,
+            string? s,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

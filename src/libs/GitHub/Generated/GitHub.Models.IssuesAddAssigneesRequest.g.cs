@@ -12,7 +12,7 @@ namespace GitHub
         /// Usernames of people to assign this issue to. _NOTE: Only users with push access can add assignees to an issue. Assignees are silently ignored otherwise._
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignees")]
-        public global::System.Collections.Generic.IList<string?>? Assignees { get; set; }
+        public global::System.Collections.Generic.IList<string>? Assignees { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

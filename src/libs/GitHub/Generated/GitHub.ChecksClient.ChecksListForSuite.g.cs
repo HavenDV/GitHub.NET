@@ -10,9 +10,9 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int checkSuiteId,
-            ref string checkName,
-            ref global::GitHub.ChecksListForSuiteStatus status,
-            ref global::GitHub.ChecksListForSuiteFilter filter,
+            ref string? checkName,
+            ref global::GitHub.ChecksListForSuiteStatus? status,
+            ref global::GitHub.ChecksListForSuiteFilter? filter,
             ref int perPage,
             ref int page);
         partial void PrepareChecksListForSuiteRequest(
@@ -21,9 +21,9 @@ namespace GitHub
             string owner,
             string repo,
             int checkSuiteId,
-            string checkName,
-            global::GitHub.ChecksListForSuiteStatus status,
-            global::GitHub.ChecksListForSuiteFilter filter,
+            string? checkName,
+            global::GitHub.ChecksListForSuiteStatus? status,
+            global::GitHub.ChecksListForSuiteFilter? filter,
             int perPage,
             int page);
         partial void ProcessChecksListForSuiteResponse(
@@ -62,9 +62,9 @@ namespace GitHub
             string owner,
             string repo,
             int checkSuiteId,
-            string checkName,
-            global::GitHub.ChecksListForSuiteStatus status,
-            global::GitHub.ChecksListForSuiteFilter filter,
+            string? checkName,
+            global::GitHub.ChecksListForSuiteStatus? status,
+            global::GitHub.ChecksListForSuiteFilter? filter,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

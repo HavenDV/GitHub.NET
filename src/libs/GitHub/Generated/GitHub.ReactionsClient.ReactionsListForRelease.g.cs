@@ -10,7 +10,7 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int releaseId,
-            ref global::GitHub.ReactionsListForReleaseContent content,
+            ref global::GitHub.ReactionsListForReleaseContent? content,
             ref int perPage,
             ref int page);
         partial void PrepareReactionsListForReleaseRequest(
@@ -19,7 +19,7 @@ namespace GitHub
             string owner,
             string repo,
             int releaseId,
-            global::GitHub.ReactionsListForReleaseContent content,
+            global::GitHub.ReactionsListForReleaseContent? content,
             int perPage,
             int page);
         partial void ProcessReactionsListForReleaseResponse(
@@ -51,7 +51,7 @@ namespace GitHub
             string owner,
             string repo,
             int releaseId,
-            global::GitHub.ReactionsListForReleaseContent content,
+            global::GitHub.ReactionsListForReleaseContent? content,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

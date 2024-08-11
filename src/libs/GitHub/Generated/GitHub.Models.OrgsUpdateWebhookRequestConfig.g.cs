@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace GitHub
@@ -36,8 +34,8 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("insecure_ssl")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, double>? InsecureSsl { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookConfigInsecureSslJsonConverter))]
+        public global::GitHub.WebhookConfigInsecureSsl? InsecureSsl { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

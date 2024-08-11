@@ -69,7 +69,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("files")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Files { get; set; }
+        public required global::GitHub.GistSimpleForkOfFiles Files { get; set; }
 
         /// <summary>
         /// 
@@ -136,13 +136,13 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("forks")]
-        public global::System.Collections.Generic.IList<object?>? Forks { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GistSimpleForkOfFork>? Forks { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("history")]
-        public global::System.Collections.Generic.IList<object?>? History { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GistSimpleForkOfHistoryItem>? History { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

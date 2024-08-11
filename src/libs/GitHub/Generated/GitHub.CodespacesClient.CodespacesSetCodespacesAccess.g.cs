@@ -120,7 +120,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> CodespacesSetCodespacesAccessAsync(
             string org,
             global::GitHub.CodespacesSetCodespacesAccessRequestVisibility visibility,
-            global::System.Collections.Generic.IList<string?>? selectedUsernames = default,
+            global::System.Collections.Generic.IList<string>? selectedUsernames = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.CodespacesSetCodespacesAccessRequest

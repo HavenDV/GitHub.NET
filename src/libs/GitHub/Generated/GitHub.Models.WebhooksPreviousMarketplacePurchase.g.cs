@@ -27,7 +27,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("free_trial_ends_on")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object? FreeTrialEndsOn { get; set; }
+        public required global::GitHub.WebhooksPreviousMarketplacePurchaseFreeTrialEndsOn? FreeTrialEndsOn { get; set; }
 
         /// <summary>
         /// 

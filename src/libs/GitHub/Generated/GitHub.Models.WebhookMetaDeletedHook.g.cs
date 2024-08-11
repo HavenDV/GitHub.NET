@@ -34,7 +34,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("events")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookMetaDeletedHookEvents> Events { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookMetaDeletedHookEvent> Events { get; set; }
 
         /// <summary>
         /// 

@@ -9,17 +9,17 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref string location,
-            ref string clientIp,
-            ref string @ref);
+            ref string? location,
+            ref string? clientIp,
+            ref string? @ref);
         partial void PrepareCodespacesRepoMachinesForAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            string location,
-            string clientIp,
-            string @ref);
+            string? location,
+            string? clientIp,
+            string? @ref);
         partial void ProcessCodespacesRepoMachinesForAuthenticatedUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -48,9 +48,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CodespacesRepoMachinesForAuthenticatedUserResponse> CodespacesRepoMachinesForAuthenticatedUserAsync(
             string owner,
             string repo,
-            string location,
-            string clientIp,
-            string @ref,
+            string? location,
+            string? clientIp,
+            string? @ref,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

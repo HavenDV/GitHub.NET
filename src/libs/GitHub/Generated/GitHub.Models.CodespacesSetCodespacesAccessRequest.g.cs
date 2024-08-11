@@ -20,7 +20,7 @@ namespace GitHub
         /// The usernames of the organization members who should have access to codespaces in the organization. Required when `visibility` is `selected_members`. The provided list of usernames will replace any existing value.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("selected_usernames")]
-        public global::System.Collections.Generic.IList<string?>? SelectedUsernames { get; set; }
+        public global::System.Collections.Generic.IList<string>? SelectedUsernames { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

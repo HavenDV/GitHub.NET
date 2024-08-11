@@ -11,14 +11,14 @@ namespace GitHub
             ref string org,
             ref int perPage,
             ref int page,
-            global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExclude> exclude);
+            global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExcludeItem>? exclude);
         partial void PrepareMigrationsListForOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             int perPage,
             int page,
-            global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExclude> exclude);
+            global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExcludeItem>? exclude);
         partial void ProcessMigrationsListForOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -47,7 +47,7 @@ namespace GitHub
             string org,
             int perPage,
             int page,
-            global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExclude> exclude,
+            global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExcludeItem>? exclude,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -61,7 +61,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/migrations?per_page={perPage}&page={page}&{string.Join("&", exclude.Select(static x => $"exclude={x}"))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/migrations?per_page={perPage}&page={page}&{string.Join("&", exclude?.Select(static x => $"exclude={x}") ?? global::System.Array.Empty<string>())}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

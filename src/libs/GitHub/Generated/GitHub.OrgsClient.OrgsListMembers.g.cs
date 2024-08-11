@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareOrgsListMembersArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref global::GitHub.OrgsListMembersFilter filter,
-            ref global::GitHub.OrgsListMembersRole role,
+            ref global::GitHub.OrgsListMembersFilter? filter,
+            ref global::GitHub.OrgsListMembersRole? role,
             ref int perPage,
             ref int page);
         partial void PrepareOrgsListMembersRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            global::GitHub.OrgsListMembersFilter filter,
-            global::GitHub.OrgsListMembersRole role,
+            global::GitHub.OrgsListMembersFilter? filter,
+            global::GitHub.OrgsListMembersRole? role,
             int perPage,
             int page);
         partial void ProcessOrgsListMembersResponse(
@@ -50,8 +50,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>> OrgsListMembersAsync(
             string org,
-            global::GitHub.OrgsListMembersFilter filter,
-            global::GitHub.OrgsListMembersRole role,
+            global::GitHub.OrgsListMembersFilter? filter,
+            global::GitHub.OrgsListMembersRole? role,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -136,7 +136,7 @@ namespace GitHub
             global::GitHub.DependabotCreateOrUpdateOrgSecretRequestVisibility visibility,
             string? encryptedValue = default,
             string? keyId = default,
-            global::System.Collections.Generic.IList<string?>? selectedRepositoryIds = default,
+            global::System.Collections.Generic.IList<string>? selectedRepositoryIds = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.DependabotCreateOrUpdateOrgSecretRequest

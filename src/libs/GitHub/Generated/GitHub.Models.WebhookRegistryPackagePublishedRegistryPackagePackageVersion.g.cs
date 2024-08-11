@@ -21,7 +21,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("body")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, object?>? Body { get; set; }
+        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionBody?>? Body { get; set; }
 
         /// <summary>
         /// 
@@ -52,7 +52,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("docker_metadata")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionDockerMetadata?>? DockerMetadata { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionDockerMetadataItem>? DockerMetadata { get; set; }
 
         /// <summary>
         /// 
@@ -92,7 +92,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<object> Metadata { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionMetadataItem> Metadata { get; set; }
 
         /// <summary>
         /// 
@@ -111,14 +111,14 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nuget_metadata")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNugetMetadata?>? NugetMetadata { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNugetMetadataItem>? NugetMetadata { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("package_files")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFiles> PackageFiles { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile> PackageFiles { get; set; }
 
         /// <summary>
         /// 

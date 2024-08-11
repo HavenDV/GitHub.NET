@@ -161,7 +161,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("steps")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookWorkflowJobQueuedWorkflowJobSteps> Steps { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookWorkflowJobQueuedWorkflowJobStep> Steps { get; set; }
 
         /// <summary>
         /// 

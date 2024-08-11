@@ -9,8 +9,8 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string enterprise,
             ref string teamSlug,
-            ref string since,
-            ref string until,
+            ref string? since,
+            ref string? until,
             ref int page,
             ref int perPage);
         partial void PrepareCopilotUsageMetricsForEnterpriseTeamRequest(
@@ -18,8 +18,8 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string enterprise,
             string teamSlug,
-            string since,
-            string until,
+            string? since,
+            string? until,
             int page,
             int perPage);
         partial void ProcessCopilotUsageMetricsForEnterpriseTeamResponse(
@@ -61,8 +61,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CopilotUsageMetrics>> CopilotUsageMetricsForEnterpriseTeamAsync(
             string enterprise,
             string teamSlug,
-            string since,
-            string until,
+            string? since,
+            string? until,
             int page,
             int perPage,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -140,7 +140,7 @@ namespace GitHub
             string accessToken,
             string? target = default,
             int targetId = default,
-            global::System.Collections.Generic.IList<string?>? repositories = default,
+            global::System.Collections.Generic.IList<string>? repositories = default,
             global::System.Collections.Generic.IList<int>? repositoryIds = default,
             global::GitHub.AppPermissions? permissions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

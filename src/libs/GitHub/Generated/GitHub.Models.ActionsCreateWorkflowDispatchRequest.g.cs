@@ -19,7 +19,7 @@ namespace GitHub
         /// Input keys and values configured in the workflow file. The maximum number of properties is 10. Any default properties configured in the workflow file will be used when `inputs` are omitted.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("inputs")]
-        public object? Inputs { get; set; }
+        public global::GitHub.ActionsCreateWorkflowDispatchRequestInputs? Inputs { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

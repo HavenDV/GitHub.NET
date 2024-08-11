@@ -189,7 +189,7 @@ namespace GitHub
         /// The custom properties for the new repository. The keys are the custom property names, and the values are the corresponding custom property values.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_properties")]
-        public object? CustomProperties { get; set; }
+        public global::GitHub.ReposCreateInOrgRequestCustomProperties? CustomProperties { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

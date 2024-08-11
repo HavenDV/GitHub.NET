@@ -98,7 +98,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pull_requests")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookCheckSuiteCompletedCheckSuitePullRequests> PullRequests { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookCheckSuiteCompletedCheckSuitePullRequest> PullRequests { get; set; }
 
         /// <summary>
         /// 

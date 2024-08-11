@@ -40,7 +40,7 @@ namespace GitHub
         /// Example: [config.yml, .github/issue_TEMPLATE.md]
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("single_file_paths")]
-        public global::System.Collections.Generic.IList<string?>? SingleFilePaths { get; set; }
+        public global::System.Collections.Generic.IList<string>? SingleFilePaths { get; set; }
 
         /// <summary>
         /// Example: https://api.github.com/users/octocat/repos

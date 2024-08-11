@@ -42,8 +42,6 @@ namespace GitHub
             global::GitHub.ReposCreatePagesSiteRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: _httpClient);
             PrepareReposCreatePagesSiteArguments(
@@ -116,15 +114,25 @@ namespace GitHub
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
+        /// <param name="buildType">
+        /// The process in which the Page will be built. Possible values are `"legacy"` and `"workflow"`.
+        /// </param>
+        /// <param name="source">
+        /// The source branch and directory used to publish your Pages site.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.Page> ReposCreatePagesSiteAsync(
             string owner,
             string repo,
+            global::GitHub.ReposCreatePagesSiteRequestBuildType? buildType = default,
+            global::GitHub.ReposCreatePagesSiteRequestSource? source = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.ReposCreatePagesSiteRequest
             {
+                BuildType = buildType,
+                Source = source,
             };
 
             return await ReposCreatePagesSiteAsync(

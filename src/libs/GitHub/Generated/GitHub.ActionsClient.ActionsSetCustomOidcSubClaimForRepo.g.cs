@@ -126,7 +126,7 @@ namespace GitHub
             string owner,
             string repo,
             bool useDefault,
-            global::System.Collections.Generic.IList<string?>? includeClaimKeys = default,
+            global::System.Collections.Generic.IList<string>? includeClaimKeys = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.ActionsSetCustomOidcSubClaimForRepoRequest

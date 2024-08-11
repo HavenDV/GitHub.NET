@@ -57,7 +57,7 @@ namespace GitHub
         /// Example: [config.yml, .github/issue_TEMPLATE.md]
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("single_file_paths")]
-        public global::System.Collections.Generic.IList<string?>? SingleFilePaths { get; set; }
+        public global::System.Collections.Generic.IList<string>? SingleFilePaths { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

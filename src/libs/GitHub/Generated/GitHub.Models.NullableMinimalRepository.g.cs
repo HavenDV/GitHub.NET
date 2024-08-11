@@ -418,7 +418,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("topics")]
-        public global::System.Collections.Generic.IList<string?>? Topics { get; set; }
+        public global::System.Collections.Generic.IList<string>? Topics { get; set; }
 
         /// <summary>
         /// 

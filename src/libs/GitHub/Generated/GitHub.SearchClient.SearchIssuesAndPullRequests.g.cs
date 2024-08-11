@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareSearchIssuesAndPullRequestsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string q,
-            ref global::GitHub.SearchIssuesAndPullRequestsSort sort,
-            ref global::GitHub.SearchIssuesAndPullRequestsOrder order,
+            ref global::GitHub.SearchIssuesAndPullRequestsSort? sort,
+            ref global::GitHub.SearchIssuesAndPullRequestsOrder? order,
             ref int perPage,
             ref int page);
         partial void PrepareSearchIssuesAndPullRequestsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string q,
-            global::GitHub.SearchIssuesAndPullRequestsSort sort,
-            global::GitHub.SearchIssuesAndPullRequestsOrder order,
+            global::GitHub.SearchIssuesAndPullRequestsSort? sort,
+            global::GitHub.SearchIssuesAndPullRequestsOrder? order,
             int perPage,
             int page);
         partial void ProcessSearchIssuesAndPullRequestsResponse(
@@ -55,8 +55,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchIssuesAndPullRequestsResponse> SearchIssuesAndPullRequestsAsync(
             string q,
-            global::GitHub.SearchIssuesAndPullRequestsSort sort,
-            global::GitHub.SearchIssuesAndPullRequestsOrder order,
+            global::GitHub.SearchIssuesAndPullRequestsSort? sort,
+            global::GitHub.SearchIssuesAndPullRequestsOrder? order,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

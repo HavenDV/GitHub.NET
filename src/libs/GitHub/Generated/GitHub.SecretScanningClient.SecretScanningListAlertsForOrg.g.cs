@@ -8,30 +8,30 @@ namespace GitHub
         partial void PrepareSecretScanningListAlertsForOrgArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref global::GitHub.SecretScanningListAlertsForOrgState state,
-            ref string secretType,
-            ref string resolution,
-            ref global::GitHub.SecretScanningListAlertsForOrgSort sort,
-            ref global::GitHub.SecretScanningListAlertsForOrgDirection direction,
+            ref global::GitHub.SecretScanningListAlertsForOrgState? state,
+            ref string? secretType,
+            ref string? resolution,
+            ref global::GitHub.SecretScanningListAlertsForOrgSort? sort,
+            ref global::GitHub.SecretScanningListAlertsForOrgDirection? direction,
             ref int page,
             ref int perPage,
-            ref string before,
-            ref string after,
-            ref string validity);
+            ref string? before,
+            ref string? after,
+            ref string? validity);
         partial void PrepareSecretScanningListAlertsForOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            global::GitHub.SecretScanningListAlertsForOrgState state,
-            string secretType,
-            string resolution,
-            global::GitHub.SecretScanningListAlertsForOrgSort sort,
-            global::GitHub.SecretScanningListAlertsForOrgDirection direction,
+            global::GitHub.SecretScanningListAlertsForOrgState? state,
+            string? secretType,
+            string? resolution,
+            global::GitHub.SecretScanningListAlertsForOrgSort? sort,
+            global::GitHub.SecretScanningListAlertsForOrgDirection? direction,
             int page,
             int perPage,
-            string before,
-            string after,
-            string validity);
+            string? before,
+            string? after,
+            string? validity);
         partial void ProcessSecretScanningListAlertsForOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -70,16 +70,16 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrganizationSecretScanningAlert>> SecretScanningListAlertsForOrgAsync(
             string org,
-            global::GitHub.SecretScanningListAlertsForOrgState state,
-            string secretType,
-            string resolution,
-            global::GitHub.SecretScanningListAlertsForOrgSort sort,
-            global::GitHub.SecretScanningListAlertsForOrgDirection direction,
+            global::GitHub.SecretScanningListAlertsForOrgState? state,
+            string? secretType,
+            string? resolution,
+            global::GitHub.SecretScanningListAlertsForOrgSort? sort,
+            global::GitHub.SecretScanningListAlertsForOrgDirection? direction,
             int page,
             int perPage,
-            string before,
-            string after,
-            string validity,
+            string? before,
+            string? after,
+            string? validity,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::GitHub.ReposGetViewsPer per);
+            ref global::GitHub.ReposGetViewsPer? per);
         partial void PrepareReposGetViewsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::GitHub.ReposGetViewsPer per);
+            global::GitHub.ReposGetViewsPer? per);
         partial void ProcessReposGetViewsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -39,7 +39,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.ViewTraffic> ReposGetViewsAsync(
             string owner,
             string repo,
-            global::GitHub.ReposGetViewsPer per,
+            global::GitHub.ReposGetViewsPer? per,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

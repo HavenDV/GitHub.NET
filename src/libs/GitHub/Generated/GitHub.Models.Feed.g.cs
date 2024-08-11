@@ -50,7 +50,7 @@ namespace GitHub
         /// Example: [https://github.com/organizations/github/octocat.private.atom?token=abc123]
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("current_user_organization_urls")]
-        public global::System.Collections.Generic.IList<string?>? CurrentUserOrganizationUrls { get; set; }
+        public global::System.Collections.Generic.IList<string>? CurrentUserOrganizationUrls { get; set; }
 
         /// <summary>
         /// Example: https://github.com/security-advisories

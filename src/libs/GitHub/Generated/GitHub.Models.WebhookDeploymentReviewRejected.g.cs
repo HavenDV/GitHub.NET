@@ -64,7 +64,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reviewers")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentReviewRejectedReviewers?>? Reviewers { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhooksReviewer>? Reviewers { get; set; }
 
         /// <summary>
         /// The GitHub user that triggered the event. This property is included in every webhook payload.
@@ -90,7 +90,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workflow_job_runs")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentReviewRejectedWorkflowJobRuns?>? WorkflowJobRuns { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentReviewRejectedWorkflowJobRun>? WorkflowJobRuns { get; set; }
 
         /// <summary>
         /// 

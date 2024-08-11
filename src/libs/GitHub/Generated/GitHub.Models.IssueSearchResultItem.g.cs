@@ -109,7 +109,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labels")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.IssueSearchResultItemLabels> Labels { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.IssueSearchResultItemLabel> Labels { get; set; }
 
         /// <summary>
         /// 
@@ -170,7 +170,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text_matches")]
-        public global::System.Collections.Generic.IList<global::GitHub.IssueSearchResultItemTextMatches?>? TextMatches { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SearchResultTextMatche>? TextMatches { get; set; }
 
         /// <summary>
         /// 

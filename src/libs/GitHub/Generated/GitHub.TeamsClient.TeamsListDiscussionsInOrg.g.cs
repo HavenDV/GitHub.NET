@@ -9,19 +9,19 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
             ref string teamSlug,
-            ref global::GitHub.TeamsListDiscussionsInOrgDirection direction,
+            ref global::GitHub.TeamsListDiscussionsInOrgDirection? direction,
             ref int perPage,
             ref int page,
-            ref string pinned);
+            ref string? pinned);
         partial void PrepareTeamsListDiscussionsInOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             string teamSlug,
-            global::GitHub.TeamsListDiscussionsInOrgDirection direction,
+            global::GitHub.TeamsListDiscussionsInOrgDirection? direction,
             int perPage,
             int page,
-            string pinned);
+            string? pinned);
         partial void ProcessTeamsListDiscussionsInOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -55,10 +55,10 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.TeamDiscussion>> TeamsListDiscussionsInOrgAsync(
             string org,
             string teamSlug,
-            global::GitHub.TeamsListDiscussionsInOrgDirection direction,
+            global::GitHub.TeamsListDiscussionsInOrgDirection? direction,
             int perPage,
             int page,
-            string pinned,
+            string? pinned,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

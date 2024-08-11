@@ -27,7 +27,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("weeks")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.ContributorActivityWeeks> Weeks { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.ContributorActivityWeek> Weeks { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

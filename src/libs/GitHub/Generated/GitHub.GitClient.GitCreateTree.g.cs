@@ -128,7 +128,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.GitTree> GitCreateTreeAsync(
             string owner,
             string repo,
-            global::System.Collections.Generic.IList<global::GitHub.GitCreateTreeRequestTree> tree,
+            global::System.Collections.Generic.IList<global::GitHub.GitCreateTreeRequestTreeItem> tree,
             string? baseTree = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

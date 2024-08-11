@@ -26,7 +26,7 @@ namespace GitHub
         /// </summary>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.Integration?> AppsGetAuthenticatedAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.Integration> AppsGetAuthenticatedAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

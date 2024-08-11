@@ -10,7 +10,7 @@ namespace GitHub
             ref int teamId,
             ref int discussionNumber,
             ref int commentNumber,
-            ref global::GitHub.ReactionsListForTeamDiscussionCommentLegacyContent content,
+            ref global::GitHub.ReactionsListForTeamDiscussionCommentLegacyContent? content,
             ref int perPage,
             ref int page);
         partial void PrepareReactionsListForTeamDiscussionCommentLegacyRequest(
@@ -19,7 +19,7 @@ namespace GitHub
             int teamId,
             int discussionNumber,
             int commentNumber,
-            global::GitHub.ReactionsListForTeamDiscussionCommentLegacyContent content,
+            global::GitHub.ReactionsListForTeamDiscussionCommentLegacyContent? content,
             int perPage,
             int page);
         partial void ProcessReactionsListForTeamDiscussionCommentLegacyResponse(
@@ -55,7 +55,7 @@ namespace GitHub
             int teamId,
             int discussionNumber,
             int commentNumber,
-            global::GitHub.ReactionsListForTeamDiscussionCommentLegacyContent content,
+            global::GitHub.ReactionsListForTeamDiscussionCommentLegacyContent? content,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

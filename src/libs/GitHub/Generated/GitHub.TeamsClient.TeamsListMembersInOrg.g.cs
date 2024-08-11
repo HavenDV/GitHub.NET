@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
             ref string teamSlug,
-            ref global::GitHub.TeamsListMembersInOrgRole role,
+            ref global::GitHub.TeamsListMembersInOrgRole? role,
             ref int perPage,
             ref int page);
         partial void PrepareTeamsListMembersInOrgRequest(
@@ -17,7 +17,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             string teamSlug,
-            global::GitHub.TeamsListMembersInOrgRole role,
+            global::GitHub.TeamsListMembersInOrgRole? role,
             int perPage,
             int page);
         partial void ProcessTeamsListMembersInOrgResponse(
@@ -50,7 +50,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>> TeamsListMembersInOrgAsync(
             string org,
             string teamSlug,
-            global::GitHub.TeamsListMembersInOrgRole role,
+            global::GitHub.TeamsListMembersInOrgRole? role,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

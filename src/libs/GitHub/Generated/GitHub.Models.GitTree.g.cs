@@ -35,7 +35,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tree")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.GitTreeTree> Tree { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.GitTreeTreeItem> Tree { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

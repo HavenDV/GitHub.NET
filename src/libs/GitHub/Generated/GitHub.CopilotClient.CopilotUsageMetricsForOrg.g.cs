@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareCopilotUsageMetricsForOrgArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref string since,
-            ref string until,
+            ref string? since,
+            ref string? until,
             ref int page,
             ref int perPage);
         partial void PrepareCopilotUsageMetricsForOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            string since,
-            string until,
+            string? since,
+            string? until,
             int page,
             int perPage);
         partial void ProcessCopilotUsageMetricsForOrgResponse(
@@ -55,8 +55,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CopilotUsageMetrics>> CopilotUsageMetricsForOrgAsync(
             string org,
-            string since,
-            string until,
+            string? since,
+            string? until,
             int page,
             int perPage,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -50,7 +50,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("commit")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.CommitCommit Commit1 { get; set; }
+        public required global::GitHub.CommitCommit1 Commit1 { get; set; }
 
         /// <summary>
         /// 
@@ -73,7 +73,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parents")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.CommitParents> Parents { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.CommitParent> Parents { get; set; }
 
         /// <summary>
         /// 

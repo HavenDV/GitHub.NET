@@ -55,7 +55,7 @@ namespace GitHub
         /// A collection of package manifests, which are a collection of related dependencies declared in a file or representing a logical group of dependencies.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("manifests")]
-        public object? Manifests { get; set; }
+        public global::GitHub.SnapshotManifests? Manifests { get; set; }
 
         /// <summary>
         /// The time at which the snapshot was scanned.

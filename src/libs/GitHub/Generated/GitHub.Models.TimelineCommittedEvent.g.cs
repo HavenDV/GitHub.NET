@@ -70,7 +70,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parents")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.TimelineCommittedEventParents> Parents { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.TimelineCommittedEventParent> Parents { get; set; }
 
         /// <summary>
         /// 

@@ -10,16 +10,16 @@ namespace GitHub
             ref string org,
             ref int perPage,
             ref int page,
-            ref global::GitHub.OrgsListPendingInvitationsRole role,
-            ref global::GitHub.OrgsListPendingInvitationsInvitationSource invitationSource);
+            ref global::GitHub.OrgsListPendingInvitationsRole? role,
+            ref global::GitHub.OrgsListPendingInvitationsInvitationSource? invitationSource);
         partial void PrepareOrgsListPendingInvitationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             int perPage,
             int page,
-            global::GitHub.OrgsListPendingInvitationsRole role,
-            global::GitHub.OrgsListPendingInvitationsInvitationSource invitationSource);
+            global::GitHub.OrgsListPendingInvitationsRole? role,
+            global::GitHub.OrgsListPendingInvitationsInvitationSource? invitationSource);
         partial void ProcessOrgsListPendingInvitationsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -55,8 +55,8 @@ namespace GitHub
             string org,
             int perPage,
             int page,
-            global::GitHub.OrgsListPendingInvitationsRole role,
-            global::GitHub.OrgsListPendingInvitationsInvitationSource invitationSource,
+            global::GitHub.OrgsListPendingInvitationsRole? role,
+            global::GitHub.OrgsListPendingInvitationsInvitationSource? invitationSource,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
