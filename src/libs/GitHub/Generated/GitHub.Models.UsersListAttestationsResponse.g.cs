@@ -12,7 +12,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attestations")]
-        public global::System.Collections.Generic.IList<global::GitHub.UsersListAttestationsResponseAttestations?>? Attestations { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.UsersListAttestationsResponseAttestation>? Attestations { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

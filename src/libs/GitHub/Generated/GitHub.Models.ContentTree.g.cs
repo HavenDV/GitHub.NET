@@ -75,7 +75,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entries")]
-        public global::System.Collections.Generic.IList<global::GitHub.ContentTreeEntries?>? Entries { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ContentTreeEntrie>? Entries { get; set; }
 
         /// <summary>
         /// 

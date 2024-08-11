@@ -13,7 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("comments")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestReviewThreadResolvedThreadComments> Comments { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestReviewThreadResolvedThreadComment> Comments { get; set; }
 
         /// <summary>
         /// 

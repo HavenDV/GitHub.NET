@@ -27,7 +27,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("permissions")]
-        public object? Permissions { get; set; }
+        public global::GitHub.AuthenticationTokenPermissions? Permissions { get; set; }
 
         /// <summary>
         /// The repositories this token has access to

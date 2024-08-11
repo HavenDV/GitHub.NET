@@ -161,13 +161,13 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pull_requests")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookWorkflowRunCompletedWorkflowRunPullRequests?> PullRequests { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookWorkflowRunCompletedWorkflowRunPullRequest> PullRequests { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("referenced_workflows")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookWorkflowRunCompletedWorkflowRunReferencedWorkflows?>? ReferencedWorkflows { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookWorkflowRunCompletedWorkflowRunReferencedWorkflow>? ReferencedWorkflows { get; set; }
 
         /// <summary>
         /// 

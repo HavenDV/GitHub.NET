@@ -7,22 +7,22 @@ namespace GitHub
     {
         partial void PrepareIssuesListForAuthenticatedUserArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::GitHub.IssuesListForAuthenticatedUserFilter filter,
-            ref global::GitHub.IssuesListForAuthenticatedUserState state,
-            ref string labels,
-            ref global::GitHub.IssuesListForAuthenticatedUserSort sort,
-            ref global::GitHub.IssuesListForAuthenticatedUserDirection direction,
+            ref global::GitHub.IssuesListForAuthenticatedUserFilter? filter,
+            ref global::GitHub.IssuesListForAuthenticatedUserState? state,
+            ref string? labels,
+            ref global::GitHub.IssuesListForAuthenticatedUserSort? sort,
+            ref global::GitHub.IssuesListForAuthenticatedUserDirection? direction,
             global::System.DateTime since,
             ref int perPage,
             ref int page);
         partial void PrepareIssuesListForAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::GitHub.IssuesListForAuthenticatedUserFilter filter,
-            global::GitHub.IssuesListForAuthenticatedUserState state,
-            string labels,
-            global::GitHub.IssuesListForAuthenticatedUserSort sort,
-            global::GitHub.IssuesListForAuthenticatedUserDirection direction,
+            global::GitHub.IssuesListForAuthenticatedUserFilter? filter,
+            global::GitHub.IssuesListForAuthenticatedUserState? state,
+            string? labels,
+            global::GitHub.IssuesListForAuthenticatedUserSort? sort,
+            global::GitHub.IssuesListForAuthenticatedUserDirection? direction,
             global::System.DateTime since,
             int perPage,
             int page);
@@ -69,11 +69,11 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Issue>> IssuesListForAuthenticatedUserAsync(
-            global::GitHub.IssuesListForAuthenticatedUserFilter filter,
-            global::GitHub.IssuesListForAuthenticatedUserState state,
-            string labels,
-            global::GitHub.IssuesListForAuthenticatedUserSort sort,
-            global::GitHub.IssuesListForAuthenticatedUserDirection direction,
+            global::GitHub.IssuesListForAuthenticatedUserFilter? filter,
+            global::GitHub.IssuesListForAuthenticatedUserState? state,
+            string? labels,
+            global::GitHub.IssuesListForAuthenticatedUserSort? sort,
+            global::GitHub.IssuesListForAuthenticatedUserDirection? direction,
             global::System.DateTime since,
             int perPage,
             int page,

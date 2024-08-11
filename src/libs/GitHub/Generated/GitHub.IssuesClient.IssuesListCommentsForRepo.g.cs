@@ -9,8 +9,8 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::GitHub.IssuesListCommentsForRepoSort sort,
-            ref global::GitHub.IssuesListCommentsForRepoDirection direction,
+            ref global::GitHub.IssuesListCommentsForRepoSort? sort,
+            ref global::GitHub.IssuesListCommentsForRepoDirection? direction,
             global::System.DateTime since,
             ref int perPage,
             ref int page);
@@ -19,8 +19,8 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::GitHub.IssuesListCommentsForRepoSort sort,
-            global::GitHub.IssuesListCommentsForRepoDirection direction,
+            global::GitHub.IssuesListCommentsForRepoSort? sort,
+            global::GitHub.IssuesListCommentsForRepoDirection? direction,
             global::System.DateTime since,
             int perPage,
             int page);
@@ -61,8 +61,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.IssueComment>> IssuesListCommentsForRepoAsync(
             string owner,
             string repo,
-            global::GitHub.IssuesListCommentsForRepoSort sort,
-            global::GitHub.IssuesListCommentsForRepoDirection direction,
+            global::GitHub.IssuesListCommentsForRepoSort? sort,
+            global::GitHub.IssuesListCommentsForRepoDirection? direction,
             global::System.DateTime since,
             int perPage,
             int page,

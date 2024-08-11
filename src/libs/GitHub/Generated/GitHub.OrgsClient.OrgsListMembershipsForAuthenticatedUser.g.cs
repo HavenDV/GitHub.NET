@@ -7,13 +7,13 @@ namespace GitHub
     {
         partial void PrepareOrgsListMembershipsForAuthenticatedUserArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::GitHub.OrgsListMembershipsForAuthenticatedUserState state,
+            ref global::GitHub.OrgsListMembershipsForAuthenticatedUserState? state,
             ref int perPage,
             ref int page);
         partial void PrepareOrgsListMembershipsForAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::GitHub.OrgsListMembershipsForAuthenticatedUserState state,
+            global::GitHub.OrgsListMembershipsForAuthenticatedUserState? state,
             int perPage,
             int page);
         partial void ProcessOrgsListMembershipsForAuthenticatedUserResponse(
@@ -39,7 +39,7 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrgMembership>> OrgsListMembershipsForAuthenticatedUserAsync(
-            global::GitHub.OrgsListMembershipsForAuthenticatedUserState state,
+            global::GitHub.OrgsListMembershipsForAuthenticatedUserState? state,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

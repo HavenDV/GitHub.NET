@@ -185,7 +185,7 @@ namespace GitHub
             string repo,
             string message,
             string tree,
-            global::System.Collections.Generic.IList<string?>? parents = default,
+            global::System.Collections.Generic.IList<string>? parents = default,
             global::GitHub.GitCreateCommitRequestAuthor? author = default,
             global::GitHub.GitCreateCommitRequestCommitter? committer = default,
             string? signature = default,

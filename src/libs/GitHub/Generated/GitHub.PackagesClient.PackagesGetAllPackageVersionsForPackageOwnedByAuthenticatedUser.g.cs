@@ -11,7 +11,7 @@ namespace GitHub
             ref string packageName,
             ref int page,
             ref int perPage,
-            ref global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState state);
+            ref global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState? state);
         partial void PreparePackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -19,7 +19,7 @@ namespace GitHub
             string packageName,
             int page,
             int perPage,
-            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState state);
+            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState? state);
         partial void ProcessPackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -52,7 +52,7 @@ namespace GitHub
             string packageName,
             int page,
             int perPage,
-            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState state,
+            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState? state,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

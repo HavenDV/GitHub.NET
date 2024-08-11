@@ -10,7 +10,7 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int commentId,
-            ref global::GitHub.ReactionsListForPullRequestReviewCommentContent content,
+            ref global::GitHub.ReactionsListForPullRequestReviewCommentContent? content,
             ref int perPage,
             ref int page);
         partial void PrepareReactionsListForPullRequestReviewCommentRequest(
@@ -19,7 +19,7 @@ namespace GitHub
             string owner,
             string repo,
             int commentId,
-            global::GitHub.ReactionsListForPullRequestReviewCommentContent content,
+            global::GitHub.ReactionsListForPullRequestReviewCommentContent? content,
             int perPage,
             int page);
         partial void ProcessReactionsListForPullRequestReviewCommentResponse(
@@ -51,7 +51,7 @@ namespace GitHub
             string owner,
             string repo,
             int commentId,
-            global::GitHub.ReactionsListForPullRequestReviewCommentContent content,
+            global::GitHub.ReactionsListForPullRequestReviewCommentContent? content,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

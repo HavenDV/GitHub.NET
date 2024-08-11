@@ -86,13 +86,13 @@ namespace GitHub
         /// Example: [73..77, 77..78]
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("line_numbers")]
-        public global::System.Collections.Generic.IList<string?>? LineNumbers { get; set; }
+        public global::System.Collections.Generic.IList<string>? LineNumbers { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text_matches")]
-        public global::System.Collections.Generic.IList<global::GitHub.CodeSearchResultItemTextMatches?>? TextMatches { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SearchResultTextMatche>? TextMatches { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

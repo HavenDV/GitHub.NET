@@ -9,27 +9,27 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::GitHub.ReposListActivitiesDirection direction,
+            ref global::GitHub.ReposListActivitiesDirection? direction,
             ref int perPage,
-            ref string before,
-            ref string after,
-            ref string @ref,
-            ref string actor,
-            ref global::GitHub.ReposListActivitiesTimePeriod timePeriod,
-            ref global::GitHub.ReposListActivitiesActivityType activityType);
+            ref string? before,
+            ref string? after,
+            ref string? @ref,
+            ref string? actor,
+            ref global::GitHub.ReposListActivitiesTimePeriod? timePeriod,
+            ref global::GitHub.ReposListActivitiesActivityType? activityType);
         partial void PrepareReposListActivitiesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::GitHub.ReposListActivitiesDirection direction,
+            global::GitHub.ReposListActivitiesDirection? direction,
             int perPage,
-            string before,
-            string after,
-            string @ref,
-            string actor,
-            global::GitHub.ReposListActivitiesTimePeriod timePeriod,
-            global::GitHub.ReposListActivitiesActivityType activityType);
+            string? before,
+            string? after,
+            string? @ref,
+            string? actor,
+            global::GitHub.ReposListActivitiesTimePeriod? timePeriod,
+            global::GitHub.ReposListActivitiesActivityType? activityType);
         partial void ProcessReposListActivitiesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -64,14 +64,14 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Activity>> ReposListActivitiesAsync(
             string owner,
             string repo,
-            global::GitHub.ReposListActivitiesDirection direction,
+            global::GitHub.ReposListActivitiesDirection? direction,
             int perPage,
-            string before,
-            string after,
-            string @ref,
-            string actor,
-            global::GitHub.ReposListActivitiesTimePeriod timePeriod,
-            global::GitHub.ReposListActivitiesActivityType activityType,
+            string? before,
+            string? after,
+            string? @ref,
+            string? actor,
+            global::GitHub.ReposListActivitiesTimePeriod? timePeriod,
+            global::GitHub.ReposListActivitiesActivityType? activityType,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareActivityListReposStarredByUserArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string username,
-            ref global::GitHub.ActivityListReposStarredByUserSort sort,
-            ref global::GitHub.ActivityListReposStarredByUserDirection direction,
+            ref global::GitHub.ActivityListReposStarredByUserSort? sort,
+            ref global::GitHub.ActivityListReposStarredByUserDirection? direction,
             ref int perPage,
             ref int page);
         partial void PrepareActivityListReposStarredByUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string username,
-            global::GitHub.ActivityListReposStarredByUserSort sort,
-            global::GitHub.ActivityListReposStarredByUserDirection direction,
+            global::GitHub.ActivityListReposStarredByUserSort? sort,
+            global::GitHub.ActivityListReposStarredByUserDirection? direction,
             int perPage,
             int page);
         partial void ProcessActivityListReposStarredByUserResponse(
@@ -50,10 +50,10 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.AnyOf<global::System.Collections.Generic.IList<global::GitHub.StarredRepository>, global::System.Collections.Generic.IList<global::GitHub.Repository>>> ActivityListReposStarredByUserAsync(
+        public async global::System.Threading.Tasks.Task<global::System.AnyOf<global::System.Collections.Generic.IList<global::GitHub.StarredRepository>?, global::System.Collections.Generic.IList<global::GitHub.Repository>?>> ActivityListReposStarredByUserAsync(
             string username,
-            global::GitHub.ActivityListReposStarredByUserSort sort,
-            global::GitHub.ActivityListReposStarredByUserDirection direction,
+            global::GitHub.ActivityListReposStarredByUserSort? sort,
+            global::GitHub.ActivityListReposStarredByUserDirection? direction,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

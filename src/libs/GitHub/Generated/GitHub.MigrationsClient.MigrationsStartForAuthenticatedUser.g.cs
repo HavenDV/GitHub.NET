@@ -143,7 +143,7 @@ namespace GitHub
             bool excludeReleases = default,
             bool excludeOwnerProjects = default,
             bool orgMetadataOnly = false,
-            global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForAuthenticatedUserRequestExclude?>? exclude = default,
+            global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForAuthenticatedUserRequestExcludeItem>? exclude = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.MigrationsStartForAuthenticatedUserRequest

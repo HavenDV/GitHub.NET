@@ -139,7 +139,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labels")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.PullRequestSimpleLabels> Labels { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.PullRequestSimpleLabel> Labels { get; set; }
 
         /// <summary>
         /// A collection of related issues and pull requests.

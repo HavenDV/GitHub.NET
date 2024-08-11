@@ -10,14 +10,14 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref string treeSha,
-            ref string recursive);
+            ref string? recursive);
         partial void PrepareGitGetTreeRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             string treeSha,
-            string recursive);
+            string? recursive);
         partial void ProcessGitGetTreeResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -44,7 +44,7 @@ namespace GitHub
             string owner,
             string repo,
             string treeSha,
-            string recursive,
+            string? recursive,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

@@ -8,12 +8,12 @@ namespace GitHub
         partial void PrepareProjectsCreateCardArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int columnId,
-            global::System.OneOf<global::GitHub.ProjectsCreateCardRequest, global::GitHub.ProjectsCreateCardRequest> request);
+            global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1?, global::GitHub.ProjectsCreateCardRequestVariant2?> request);
         partial void PrepareProjectsCreateCardRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int columnId,
-            global::System.OneOf<global::GitHub.ProjectsCreateCardRequest, global::GitHub.ProjectsCreateCardRequest> request);
+            global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1?, global::GitHub.ProjectsCreateCardRequestVariant2?> request);
         partial void ProcessProjectsCreateCardResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -32,11 +32,9 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ProjectCard> ProjectsCreateCardAsync(
             int columnId,
-            global::System.OneOf<global::GitHub.ProjectsCreateCardRequest, global::GitHub.ProjectsCreateCardRequest> request,
+            global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1?, global::GitHub.ProjectsCreateCardRequestVariant2?> request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: _httpClient);
             PrepareProjectsCreateCardArguments(
@@ -48,7 +46,7 @@ namespace GitHub
                 method: global::System.Net.Http.HttpMethod.Post,
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/projects/columns/{columnId}/cards", global::System.UriKind.RelativeOrAbsolute));
             var __httpRequestContent = new global::System.Net.Http.StringContent(
-                content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.NullableOneOfProjectsCreateCardRequestProjectsCreateCardRequest),
+                content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.NullableOneOfProjectsCreateCardRequestVariant1ProjectsCreateCardRequestVariant2),
                 encoding: global::System.Text.Encoding.UTF8,
                 mediaType: "application/json");
             httpRequest.Content = __httpRequestContent;
@@ -103,20 +101,14 @@ namespace GitHub
         /// Create a project card
         /// </summary>
         /// <param name="columnId"></param>
-        /// <param name="note">
-        /// The project card's note<br/>
-        /// Example: Update all gems
-        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ProjectCard> ProjectsCreateCardAsync(
             int columnId,
-            string? note,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::System.OneOf<global::GitHub.ProjectsCreateCardRequest, global::GitHub.ProjectsCreateCardRequest>
+            var request = new global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1?, global::GitHub.ProjectsCreateCardRequestVariant2?>
             {
-                Note = note,
             };
 
             return await ProjectsCreateCardAsync(

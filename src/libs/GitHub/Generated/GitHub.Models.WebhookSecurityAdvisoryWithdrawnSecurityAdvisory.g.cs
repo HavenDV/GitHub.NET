@@ -20,7 +20,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cwes")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookSecurityAdvisoryWithdrawnSecurityAdvisoryCwes> Cwes { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookSecurityAdvisoryWithdrawnSecurityAdvisoryCwe> Cwes { get; set; }
 
         /// <summary>
         /// 
@@ -41,7 +41,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("identifiers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookSecurityAdvisoryWithdrawnSecurityAdvisoryIdentifiers> Identifiers { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookSecurityAdvisoryWithdrawnSecurityAdvisoryIdentifier> Identifiers { get; set; }
 
         /// <summary>
         /// 
@@ -55,7 +55,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("references")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookSecurityAdvisoryWithdrawnSecurityAdvisoryReferences> References { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookSecurityAdvisoryWithdrawnSecurityAdvisoryReference> References { get; set; }
 
         /// <summary>
         /// 
@@ -83,7 +83,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("vulnerabilities")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookSecurityAdvisoryWithdrawnSecurityAdvisoryVulnerabilities> Vulnerabilities { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookSecurityAdvisoryWithdrawnSecurityAdvisoryVulnerabilitie> Vulnerabilities { get; set; }
 
         /// <summary>
         /// 

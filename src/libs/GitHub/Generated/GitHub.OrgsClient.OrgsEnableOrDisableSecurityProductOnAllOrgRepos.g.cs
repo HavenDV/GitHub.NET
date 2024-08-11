@@ -10,14 +10,14 @@ namespace GitHub
             ref string org,
             ref global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposSecurityProduct securityProduct,
             ref global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposEnablement enablement,
-            object request);
+            global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposRequest request);
         partial void PrepareOrgsEnableOrDisableSecurityProductOnAllOrgReposRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposSecurityProduct securityProduct,
             global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposEnablement enablement,
-            object request);
+            global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposRequest request);
         partial void ProcessOrgsEnableOrDisableSecurityProductOnAllOrgReposResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -41,7 +41,7 @@ namespace GitHub
             string org,
             global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposSecurityProduct securityProduct,
             global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposEnablement enablement,
-            object request,
+            global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -59,7 +59,7 @@ namespace GitHub
                 method: global::System.Net.Http.HttpMethod.Post,
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/{securityProduct}/{enablement}", global::System.UriKind.RelativeOrAbsolute));
             var __httpRequestContent = new global::System.Net.Http.StringContent(
-                content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.Object),
+                content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.OrgsEnableOrDisableSecurityProductOnAllOrgReposRequest),
                 encoding: global::System.Text.Encoding.UTF8,
                 mediaType: "application/json");
             httpRequest.Content = __httpRequestContent;
@@ -100,6 +100,10 @@ namespace GitHub
         /// <param name="org"></param>
         /// <param name="securityProduct"></param>
         /// <param name="enablement"></param>
+        /// <param name="querySuite">
+        /// CodeQL query suite to be used. If you specify the `query_suite` parameter, the default setup will be configured with this query suite only on all repositories that didn't have default setup already configured. It will not change the query suite on repositories that already have default setup configured.<br/>
+        /// If you don't specify any `query_suite` in your request, the preferred query suite of the organization will be applied.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         [global::System.Obsolete("This method marked as deprecated.")]
@@ -107,10 +111,12 @@ namespace GitHub
             string org,
             global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposSecurityProduct securityProduct,
             global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposEnablement enablement,
+            global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposRequestQuerySuite? querySuite = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new object
+            var request = new global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposRequest
             {
+                QuerySuite = querySuite,
             };
 
             await OrgsEnableOrDisableSecurityProductOnAllOrgReposAsync(

@@ -152,7 +152,7 @@ namespace GitHub
             global::GitHub.SnapshotDetector detector,
             global::System.DateTime scanned,
             global::GitHub.Metadata? metadata = default,
-            object? manifests = default,
+            global::GitHub.SnapshotManifests? manifests = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.Snapshot

@@ -47,7 +47,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("docker_metadata")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackageUpdatedRegistryPackagePackageVersionDockerMetadata?>? DockerMetadata { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackageUpdatedRegistryPackagePackageVersionDockerMetadataItem>? DockerMetadata { get; set; }
 
         /// <summary>
         /// 
@@ -87,7 +87,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<object> Metadata { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackageUpdatedRegistryPackagePackageVersionMetadataItem> Metadata { get; set; }
 
         /// <summary>
         /// 
@@ -101,7 +101,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("package_files")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackageUpdatedRegistryPackagePackageVersionPackageFiles> PackageFiles { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookRegistryPackageUpdatedRegistryPackagePackageVersionPackageFile> PackageFiles { get; set; }
 
         /// <summary>
         /// 

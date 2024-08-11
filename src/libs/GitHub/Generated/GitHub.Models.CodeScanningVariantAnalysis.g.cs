@@ -66,9 +66,9 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeScanningVariantAnalysisStatusJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeScanningVariantAnalysisStatus2JsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.CodeScanningVariantAnalysisStatus Status { get; set; }
+        public required global::GitHub.CodeScanningVariantAnalysisStatus2 Status { get; set; }
 
         /// <summary>
         /// The GitHub Actions workflow run used to execute this variant analysis. This is only available if the workflow run has started.
@@ -87,7 +87,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scanned_repositories")]
-        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningVariantAnalysisScannedRepositories?>? ScannedRepositories { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningVariantAnalysisScannedRepositorie>? ScannedRepositories { get; set; }
 
         /// <summary>
         /// Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.

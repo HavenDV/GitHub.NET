@@ -118,7 +118,7 @@ namespace GitHub
         /// Steps in this job.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("steps")]
-        public global::System.Collections.Generic.IList<global::GitHub.JobSteps?>? Steps { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.JobStep>? Steps { get; set; }
 
         /// <summary>
         /// Example: https://api.github.com/repos/github/hello-world/check-runs/4

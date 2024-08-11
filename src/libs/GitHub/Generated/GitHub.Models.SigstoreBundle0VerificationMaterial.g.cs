@@ -18,7 +18,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tlogEntries")]
-        public global::System.Collections.Generic.IList<global::GitHub.SigstoreBundle0VerificationMaterialTlogEntries?>? TlogEntries { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SigstoreBundle0VerificationMaterialTlogEntrie>? TlogEntries { get; set; }
 
         /// <summary>
         /// 

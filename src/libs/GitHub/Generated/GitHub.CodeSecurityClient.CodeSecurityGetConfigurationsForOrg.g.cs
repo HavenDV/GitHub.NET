@@ -8,18 +8,18 @@ namespace GitHub
         partial void PrepareCodeSecurityGetConfigurationsForOrgArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType targetType,
+            ref global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType? targetType,
             ref int perPage,
-            ref string before,
-            ref string after);
+            ref string? before,
+            ref string? after);
         partial void PrepareCodeSecurityGetConfigurationsForOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType targetType,
+            global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType? targetType,
             int perPage,
-            string before,
-            string after);
+            string? before,
+            string? after);
         partial void ProcessCodeSecurityGetConfigurationsForOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -48,10 +48,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfiguration>> CodeSecurityGetConfigurationsForOrgAsync(
             string org,
-            global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType targetType,
+            global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType? targetType,
             int perPage,
-            string before,
-            string after,
+            string? before,
+            string? after,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

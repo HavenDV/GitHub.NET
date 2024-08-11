@@ -63,21 +63,21 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cwes")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryCwes> Cwes { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryCwe> Cwes { get; set; }
 
         /// <summary>
         /// Values that identify this advisory among security information sources.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("identifiers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryIdentifiers> Identifiers { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryIdentifier> Identifiers { get; set; }
 
         /// <summary>
         /// Links to additional advisory information.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("references")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryReferences> References { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryReference> References { get; set; }
 
         /// <summary>
         /// The time that the advisory was published in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.

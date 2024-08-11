@@ -30,7 +30,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pages")]
-        public global::System.Collections.Generic.IList<global::GitHub.EventPayloadPages?>? Pages { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.EventPayloadPage>? Pages { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

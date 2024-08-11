@@ -62,7 +62,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parents")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.CommitSearchResultItemParents> Parents { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.CommitSearchResultItemParent> Parents { get; set; }
 
         /// <summary>
         /// Minimal Repository
@@ -89,7 +89,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text_matches")]
-        public global::System.Collections.Generic.IList<global::GitHub.CommitSearchResultItemTextMatches?>? TextMatches { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SearchResultTextMatche>? TextMatches { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

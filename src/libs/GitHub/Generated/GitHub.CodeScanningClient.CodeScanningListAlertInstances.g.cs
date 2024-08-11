@@ -12,7 +12,7 @@ namespace GitHub
             ref int alertNumber,
             ref int page,
             ref int perPage,
-            ref string @ref);
+            ref string? @ref);
         partial void PrepareCodeScanningListAlertInstancesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -21,7 +21,7 @@ namespace GitHub
             int alertNumber,
             int page,
             int perPage,
-            string @ref);
+            string? @ref);
         partial void ProcessCodeScanningListAlertInstancesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -59,7 +59,7 @@ namespace GitHub
             int alertNumber,
             int page,
             int perPage,
-            string @ref,
+            string? @ref,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

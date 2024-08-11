@@ -13,7 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assets")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksRelease1Assets?> Assets { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhooksRelease1Asset> Assets { get; set; }
 
         /// <summary>
         /// 

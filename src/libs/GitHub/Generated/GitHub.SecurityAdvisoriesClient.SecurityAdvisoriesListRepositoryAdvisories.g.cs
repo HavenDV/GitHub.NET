@@ -9,23 +9,23 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection direction,
-            ref global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort sort,
-            ref string before,
-            ref string after,
+            ref global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection? direction,
+            ref global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort? sort,
+            ref string? before,
+            ref string? after,
             ref int perPage,
-            ref global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesState state);
+            ref global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesState? state);
         partial void PrepareSecurityAdvisoriesListRepositoryAdvisoriesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection direction,
-            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort sort,
-            string before,
-            string after,
+            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection? direction,
+            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort? sort,
+            string? before,
+            string? after,
             int perPage,
-            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesState state);
+            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesState? state);
         partial void ProcessSecurityAdvisoriesListRepositoryAdvisoriesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -60,12 +60,12 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisory>> SecurityAdvisoriesListRepositoryAdvisoriesAsync(
             string owner,
             string repo,
-            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection direction,
-            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort sort,
-            string before,
-            string after,
+            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection? direction,
+            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort? sort,
+            string? before,
+            string? after,
             int perPage,
-            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesState state,
+            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesState? state,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

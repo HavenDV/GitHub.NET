@@ -8,30 +8,30 @@ namespace GitHub
         partial void PrepareCodeScanningListAlertsForOrgArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref string toolName,
+            ref string? toolName,
             ref string? toolGuid,
-            ref string before,
-            ref string after,
+            ref string? before,
+            ref string? after,
             ref int page,
             ref int perPage,
-            ref global::GitHub.CodeScanningListAlertsForOrgDirection direction,
-            ref global::GitHub.CodeScanningAlertStateQuery state,
-            ref global::GitHub.CodeScanningListAlertsForOrgSort sort,
-            ref global::GitHub.CodeScanningAlertSeverity severity);
+            ref global::GitHub.CodeScanningListAlertsForOrgDirection? direction,
+            ref global::GitHub.CodeScanningAlertStateQuery? state,
+            ref global::GitHub.CodeScanningListAlertsForOrgSort? sort,
+            ref global::GitHub.CodeScanningAlertSeverity? severity);
         partial void PrepareCodeScanningListAlertsForOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            string toolName,
+            string? toolName,
             string? toolGuid,
-            string before,
-            string after,
+            string? before,
+            string? after,
             int page,
             int perPage,
-            global::GitHub.CodeScanningListAlertsForOrgDirection direction,
-            global::GitHub.CodeScanningAlertStateQuery state,
-            global::GitHub.CodeScanningListAlertsForOrgSort sort,
-            global::GitHub.CodeScanningAlertSeverity severity);
+            global::GitHub.CodeScanningListAlertsForOrgDirection? direction,
+            global::GitHub.CodeScanningAlertStateQuery? state,
+            global::GitHub.CodeScanningListAlertsForOrgSort? sort,
+            global::GitHub.CodeScanningAlertSeverity? severity);
         partial void ProcessCodeScanningListAlertsForOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -78,16 +78,16 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeScanningOrganizationAlertItems>> CodeScanningListAlertsForOrgAsync(
             string org,
-            string toolName,
+            string? toolName,
             string? toolGuid,
-            string before,
-            string after,
+            string? before,
+            string? after,
             int page,
             int perPage,
-            global::GitHub.CodeScanningListAlertsForOrgDirection direction,
-            global::GitHub.CodeScanningAlertStateQuery state,
-            global::GitHub.CodeScanningListAlertsForOrgSort sort,
-            global::GitHub.CodeScanningAlertSeverity severity,
+            global::GitHub.CodeScanningListAlertsForOrgDirection? direction,
+            global::GitHub.CodeScanningAlertStateQuery? state,
+            global::GitHub.CodeScanningListAlertsForOrgSort? sort,
+            global::GitHub.CodeScanningAlertSeverity? severity,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

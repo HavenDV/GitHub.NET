@@ -31,7 +31,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
-        public object? Description { get; set; }
+        public global::GitHub.WebhookInstallationTargetRenamedAccountDescription? Description { get; set; }
 
         /// <summary>
         /// 
@@ -226,7 +226,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("website_url")]
-        public object? WebsiteUrl { get; set; }
+        public global::GitHub.WebhookInstallationTargetRenamedAccountWebsiteUrl? WebsiteUrl { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

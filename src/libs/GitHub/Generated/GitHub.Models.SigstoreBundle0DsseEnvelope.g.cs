@@ -24,7 +24,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("signatures")]
-        public global::System.Collections.Generic.IList<global::GitHub.SigstoreBundle0DsseEnvelopeSignatures?>? Signatures { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SigstoreBundle0DsseEnvelopeSignature>? Signatures { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

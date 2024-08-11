@@ -32,7 +32,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("checks")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.ProtectedBranchRequiredStatusCheckChecks> Checks { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.ProtectedBranchRequiredStatusCheckCheck> Checks { get; set; }
 
         /// <summary>
         /// 

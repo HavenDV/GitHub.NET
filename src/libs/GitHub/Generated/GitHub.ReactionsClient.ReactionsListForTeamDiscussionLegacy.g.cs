@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref int teamId,
             ref int discussionNumber,
-            ref global::GitHub.ReactionsListForTeamDiscussionLegacyContent content,
+            ref global::GitHub.ReactionsListForTeamDiscussionLegacyContent? content,
             ref int perPage,
             ref int page);
         partial void PrepareReactionsListForTeamDiscussionLegacyRequest(
@@ -17,7 +17,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int teamId,
             int discussionNumber,
-            global::GitHub.ReactionsListForTeamDiscussionLegacyContent content,
+            global::GitHub.ReactionsListForTeamDiscussionLegacyContent? content,
             int perPage,
             int page);
         partial void ProcessReactionsListForTeamDiscussionLegacyResponse(
@@ -51,7 +51,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Reaction>> ReactionsListForTeamDiscussionLegacyAsync(
             int teamId,
             int discussionNumber,
-            global::GitHub.ReactionsListForTeamDiscussionLegacyContent content,
+            global::GitHub.ReactionsListForTeamDiscussionLegacyContent? content,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

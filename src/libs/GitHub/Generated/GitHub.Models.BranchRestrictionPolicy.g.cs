@@ -41,21 +41,21 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("users")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.BranchRestrictionPolicyUsers> Users { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.BranchRestrictionPolicyUser> Users { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("teams")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.BranchRestrictionPolicyTeams> Teams { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.BranchRestrictionPolicyTeam> Teams { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("apps")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.BranchRestrictionPolicyApps> Apps { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.BranchRestrictionPolicyApp> Apps { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

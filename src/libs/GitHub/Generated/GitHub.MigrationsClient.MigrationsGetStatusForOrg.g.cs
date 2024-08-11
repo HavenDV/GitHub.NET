@@ -10,13 +10,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
             ref int migrationId,
-            global::System.Collections.Generic.IList<global::GitHub.MigrationsGetStatusForOrgExclude> exclude);
+            global::System.Collections.Generic.IList<global::GitHub.MigrationsGetStatusForOrgExcludeItem>? exclude);
         partial void PrepareMigrationsGetStatusForOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             int migrationId,
-            global::System.Collections.Generic.IList<global::GitHub.MigrationsGetStatusForOrgExclude> exclude);
+            global::System.Collections.Generic.IList<global::GitHub.MigrationsGetStatusForOrgExcludeItem>? exclude);
         partial void ProcessMigrationsGetStatusForOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -43,7 +43,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.Migration> MigrationsGetStatusForOrgAsync(
             string org,
             int migrationId,
-            global::System.Collections.Generic.IList<global::GitHub.MigrationsGetStatusForOrgExclude> exclude,
+            global::System.Collections.Generic.IList<global::GitHub.MigrationsGetStatusForOrgExcludeItem>? exclude,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -56,7 +56,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/migrations/{migrationId}?{string.Join("&", exclude.Select(static x => $"exclude={x}"))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/migrations/{migrationId}?{string.Join("&", exclude?.Select(static x => $"exclude={x}") ?? global::System.Array.Empty<string>())}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

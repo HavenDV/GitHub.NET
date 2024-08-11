@@ -25,7 +25,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("classifications")]
-        public global::System.Collections.Generic.IList<string?>? Classifications { get; set; }
+        public global::System.Collections.Generic.IList<string>? Classifications { get; set; }
 
         /// <summary>
         /// 

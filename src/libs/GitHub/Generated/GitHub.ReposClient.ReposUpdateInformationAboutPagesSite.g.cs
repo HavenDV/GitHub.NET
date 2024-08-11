@@ -42,8 +42,6 @@ namespace GitHub
             global::GitHub.ReposUpdateInformationAboutPagesSiteRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: _httpClient);
             PrepareReposUpdateInformationAboutPagesSiteArguments(
@@ -116,15 +114,33 @@ namespace GitHub
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
+        /// <param name="cname">
+        /// Specify a custom domain for the repository. Sending a `null` value will remove the custom domain. For more about custom domains, see "[Using a custom domain with GitHub Pages](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site)."
+        /// </param>
+        /// <param name="httpsEnforced">
+        /// Specify whether HTTPS should be enforced for the repository.
+        /// </param>
+        /// <param name="buildType">
+        /// The process by which the GitHub Pages site will be built. `workflow` means that the site is built by a custom GitHub Actions workflow. `legacy` means that the site is built by GitHub when changes are pushed to a specific branch.
+        /// </param>
+        /// <param name="source"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ValidationError> ReposUpdateInformationAboutPagesSiteAsync(
             string owner,
             string repo,
+            string? cname = default,
+            bool httpsEnforced = default,
+            global::GitHub.ReposUpdateInformationAboutPagesSiteRequestBuildType? buildType = default,
+            global::System.AnyOf<global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant1?, global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2?>? source = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.ReposUpdateInformationAboutPagesSiteRequest
             {
+                Cname = cname,
+                HttpsEnforced = httpsEnforced,
+                BuildType = buildType,
+                Source = source,
             };
 
             return await ReposUpdateInformationAboutPagesSiteAsync(

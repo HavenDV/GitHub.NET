@@ -58,7 +58,7 @@ namespace GitHub
                 request: request);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Patch,
+                method: new global::System.Net.Http.HttpMethod("PATCH"),
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/hooks/{hookId}", global::System.UriKind.RelativeOrAbsolute));
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.OrgsUpdateWebhookRequest),
@@ -146,7 +146,7 @@ namespace GitHub
             string org,
             int hookId,
             global::GitHub.OrgsUpdateWebhookRequestConfig? config = default,
-            global::System.Collections.Generic.IList<string?>? events = default,
+            global::System.Collections.Generic.IList<string>? events = default,
             bool active = true,
             string? name = default,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -16,14 +16,14 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("assignee")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory1))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Assignee { get; set; }
+        public required global::System.OneOf<global::GitHub.SimpleUser?> Assignee { get; set; }
 
         /// <summary>
         /// The organization to which this seat belongs.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organization")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory1))]
-        public object? Organization { get; set; }
+        public global::System.OneOf<global::GitHub.OrganizationSimple?>? Organization { get; set; }
 
         /// <summary>
         /// The team through which the assignee is granted access to GitHub Copilot, if applicable.

@@ -9,9 +9,9 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::GitHub.IssuesListMilestonesState state,
-            ref global::GitHub.IssuesListMilestonesSort sort,
-            ref global::GitHub.IssuesListMilestonesDirection direction,
+            ref global::GitHub.IssuesListMilestonesState? state,
+            ref global::GitHub.IssuesListMilestonesSort? sort,
+            ref global::GitHub.IssuesListMilestonesDirection? direction,
             ref int perPage,
             ref int page);
         partial void PrepareIssuesListMilestonesRequest(
@@ -19,9 +19,9 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::GitHub.IssuesListMilestonesState state,
-            global::GitHub.IssuesListMilestonesSort sort,
-            global::GitHub.IssuesListMilestonesDirection direction,
+            global::GitHub.IssuesListMilestonesState? state,
+            global::GitHub.IssuesListMilestonesSort? sort,
+            global::GitHub.IssuesListMilestonesDirection? direction,
             int perPage,
             int page);
         partial void ProcessIssuesListMilestonesResponse(
@@ -59,9 +59,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Milestone>> IssuesListMilestonesAsync(
             string owner,
             string repo,
-            global::GitHub.IssuesListMilestonesState state,
-            global::GitHub.IssuesListMilestonesSort sort,
-            global::GitHub.IssuesListMilestonesDirection direction,
+            global::GitHub.IssuesListMilestonesState? state,
+            global::GitHub.IssuesListMilestonesSort? sort,
+            global::GitHub.IssuesListMilestonesDirection? direction,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

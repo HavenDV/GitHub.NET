@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareOrgsListAttestationsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int perPage,
-            ref string before,
-            ref string after,
+            ref string? before,
+            ref string? after,
             ref string org,
             ref string subjectDigest);
         partial void PrepareOrgsListAttestationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int perPage,
-            string before,
-            string after,
+            string? before,
+            string? after,
             string org,
             string subjectDigest);
         partial void ProcessOrgsListAttestationsResponse(
@@ -46,8 +46,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.OrgsListAttestationsResponse> OrgsListAttestationsAsync(
             int perPage,
-            string before,
-            string after,
+            string? before,
+            string? after,
             string org,
             string subjectDigest,
             global::System.Threading.CancellationToken cancellationToken = default)

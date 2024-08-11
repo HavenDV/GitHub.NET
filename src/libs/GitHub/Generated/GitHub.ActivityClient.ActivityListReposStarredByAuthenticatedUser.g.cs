@@ -7,15 +7,15 @@ namespace GitHub
     {
         partial void PrepareActivityListReposStarredByAuthenticatedUserArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::GitHub.ActivityListReposStarredByAuthenticatedUserSort sort,
-            ref global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection direction,
+            ref global::GitHub.ActivityListReposStarredByAuthenticatedUserSort? sort,
+            ref global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection? direction,
             ref int perPage,
             ref int page);
         partial void PrepareActivityListReposStarredByAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::GitHub.ActivityListReposStarredByAuthenticatedUserSort sort,
-            global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection direction,
+            global::GitHub.ActivityListReposStarredByAuthenticatedUserSort? sort,
+            global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection? direction,
             int perPage,
             int page);
         partial void ProcessActivityListReposStarredByAuthenticatedUserResponse(
@@ -48,8 +48,8 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Repository>> ActivityListReposStarredByAuthenticatedUserAsync(
-            global::GitHub.ActivityListReposStarredByAuthenticatedUserSort sort,
-            global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection direction,
+            global::GitHub.ActivityListReposStarredByAuthenticatedUserSort? sort,
+            global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection? direction,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -67,7 +67,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reviewers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentReviewRequestedReviewers> Reviewers { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentReviewRequestedReviewer> Reviewers { get; set; }
 
         /// <summary>
         /// The GitHub user that triggered the event. This property is included in every webhook payload.

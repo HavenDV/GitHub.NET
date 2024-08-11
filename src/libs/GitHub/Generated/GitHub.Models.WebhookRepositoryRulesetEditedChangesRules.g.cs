@@ -24,7 +24,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookRepositoryRulesetEditedChangesRulesUpdated?>? Updated { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookRepositoryRulesetEditedChangesRulesUpdatedItem>? Updated { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

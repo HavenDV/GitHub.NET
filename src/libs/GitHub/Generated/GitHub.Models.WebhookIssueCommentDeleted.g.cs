@@ -47,7 +47,7 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("issue")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.AllOfJsonConverterFactory2))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.AllOf<global::GitHub.WebhookIssueCommentDeletedIssue, global::GitHub.WebhookIssueCommentDeletedIssue> Issue { get; set; }
+        public required global::System.AllOf<global::GitHub.WebhookIssueCommentDeletedIssueVariant1?, global::GitHub.WebhookIssueCommentDeletedIssueVariant2?> Issue { get; set; }
 
         /// <summary>
         /// A GitHub organization. Webhook payloads contain the `organization` property when the webhook is configured for an<br/>

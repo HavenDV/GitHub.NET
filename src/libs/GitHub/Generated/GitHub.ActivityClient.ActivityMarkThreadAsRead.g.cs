@@ -39,7 +39,7 @@ namespace GitHub
                 threadId: ref threadId);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Patch,
+                method: new global::System.Net.Http.HttpMethod("PATCH"),
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/notifications/threads/{threadId}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(

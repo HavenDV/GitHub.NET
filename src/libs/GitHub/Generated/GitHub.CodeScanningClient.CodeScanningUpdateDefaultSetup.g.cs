@@ -52,7 +52,7 @@ namespace GitHub
                 request: request);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Patch,
+                method: new global::System.Net.Http.HttpMethod("PATCH"),
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/default-setup", global::System.UriKind.RelativeOrAbsolute));
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.CodeScanningDefaultSetupUpdate),
@@ -130,7 +130,7 @@ namespace GitHub
             string repo,
             global::GitHub.CodeScanningDefaultSetupUpdateState? state = default,
             global::GitHub.CodeScanningDefaultSetupUpdateQuerySuite? querySuite = default,
-            global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupUpdateLanguages?>? languages = default,
+            global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupUpdateLanguage>? languages = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.CodeScanningDefaultSetupUpdate

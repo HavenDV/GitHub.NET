@@ -67,7 +67,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("packages")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.DependencyGraphSpdxSbomSbomPackages> Packages { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.DependencyGraphSpdxSbomSbomPackage> Packages { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

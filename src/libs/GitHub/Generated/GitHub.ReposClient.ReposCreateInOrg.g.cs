@@ -231,7 +231,7 @@ namespace GitHub
             global::GitHub.ReposCreateInOrgRequestSquashMergeCommitMessage? squashMergeCommitMessage = default,
             global::GitHub.ReposCreateInOrgRequestMergeCommitTitle? mergeCommitTitle = default,
             global::GitHub.ReposCreateInOrgRequestMergeCommitMessage? mergeCommitMessage = default,
-            object? customProperties = default,
+            global::GitHub.ReposCreateInOrgRequestCustomProperties? customProperties = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.ReposCreateInOrgRequest

@@ -130,7 +130,7 @@ namespace GitHub
             string owner,
             string repo,
             string eventType,
-            object? clientPayload = default,
+            global::GitHub.ReposCreateDispatchEventRequestClientPayload? clientPayload = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.ReposCreateDispatchEventRequest

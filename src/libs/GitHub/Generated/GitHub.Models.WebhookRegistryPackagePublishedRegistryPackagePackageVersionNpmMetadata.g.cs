@@ -33,38 +33,38 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, object?>? Author { get; set; }
+        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataAuthor?>? Author { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bugs")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, object?>? Bugs { get; set; }
+        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataBugs?>? Bugs { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependencies")]
-        public object? Dependencies { get; set; }
+        public global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDependencies? Dependencies { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dev_dependencies")]
-        public object? DevDependencies { get; set; }
+        public global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDevDependencies? DevDependencies { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("peer_dependencies")]
-        public object? PeerDependencies { get; set; }
+        public global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataPeerDependencies? PeerDependencies { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("optional_dependencies")]
-        public object? OptionalDependencies { get; set; }
+        public global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataOptionalDependencies? OptionalDependencies { get; set; }
 
         /// <summary>
         /// 
@@ -77,7 +77,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dist")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, object?>? Dist { get; set; }
+        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDist?>? Dist { get; set; }
 
         /// <summary>
         /// 
@@ -108,13 +108,13 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, object?>? Repository { get; set; }
+        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataRepository?>? Repository { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scripts")]
-        public object? Scripts { get; set; }
+        public global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataScripts? Scripts { get; set; }
 
         /// <summary>
         /// 
@@ -144,62 +144,62 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maintainers")]
-        public global::System.Collections.Generic.IList<string?>? Maintainers { get; set; }
+        public global::System.Collections.Generic.IList<string>? Maintainers { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("contributors")]
-        public global::System.Collections.Generic.IList<string?>? Contributors { get; set; }
+        public global::System.Collections.Generic.IList<string>? Contributors { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("engines")]
-        public object? Engines { get; set; }
+        public global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataEngines? Engines { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("keywords")]
-        public global::System.Collections.Generic.IList<string?>? Keywords { get; set; }
+        public global::System.Collections.Generic.IList<string>? Keywords { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("files")]
-        public global::System.Collections.Generic.IList<string?>? Files { get; set; }
+        public global::System.Collections.Generic.IList<string>? Files { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bin")]
-        public object? Bin { get; set; }
+        public global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataBin? Bin { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("man")]
-        public object? Man { get; set; }
+        public global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataMan? Man { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("directories")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, object?>? Directories { get; set; }
+        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDirectories?>? Directories { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("os")]
-        public global::System.Collections.Generic.IList<string?>? Os { get; set; }
+        public global::System.Collections.Generic.IList<string>? Os { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cpu")]
-        public global::System.Collections.Generic.IList<string?>? Cpu { get; set; }
+        public global::System.Collections.Generic.IList<string>? Cpu { get; set; }
 
         /// <summary>
         /// 

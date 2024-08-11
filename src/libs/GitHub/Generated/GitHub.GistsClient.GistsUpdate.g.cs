@@ -52,7 +52,7 @@ namespace GitHub
                 request: request);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Patch,
+                method: new global::System.Net.Http.HttpMethod("PATCH"),
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/gists/{gistId}", global::System.UriKind.RelativeOrAbsolute));
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.GistsUpdateRequest),
@@ -132,7 +132,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.GistSimple> GistsUpdateAsync(
             string gistId,
             string? description = default,
-            object? files = default,
+            global::GitHub.GistsUpdateRequestFiles? files = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.GistsUpdateRequest

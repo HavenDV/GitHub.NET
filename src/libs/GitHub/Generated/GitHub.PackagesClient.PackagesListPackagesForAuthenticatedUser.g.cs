@@ -8,14 +8,14 @@ namespace GitHub
         partial void PreparePackagesListPackagesForAuthenticatedUserArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::GitHub.PackagesListPackagesForAuthenticatedUserPackageType packageType,
-            ref global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility visibility,
+            ref global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? visibility,
             ref int page,
             ref int perPage);
         partial void PreparePackagesListPackagesForAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::GitHub.PackagesListPackagesForAuthenticatedUserPackageType packageType,
-            global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility visibility,
+            global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? visibility,
             int page,
             int perPage);
         partial void ProcessPackagesListPackagesForAuthenticatedUserResponse(
@@ -44,7 +44,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Package>> PackagesListPackagesForAuthenticatedUserAsync(
             global::GitHub.PackagesListPackagesForAuthenticatedUserPackageType packageType,
-            global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility visibility,
+            global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? visibility,
             int page,
             int perPage,
             global::System.Threading.CancellationToken cancellationToken = default)

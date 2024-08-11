@@ -10,7 +10,7 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int runId,
-            ref global::GitHub.ActionsListJobsForWorkflowRunFilter filter,
+            ref global::GitHub.ActionsListJobsForWorkflowRunFilter? filter,
             ref int perPage,
             ref int page);
         partial void PrepareActionsListJobsForWorkflowRunRequest(
@@ -19,7 +19,7 @@ namespace GitHub
             string owner,
             string repo,
             int runId,
-            global::GitHub.ActionsListJobsForWorkflowRunFilter filter,
+            global::GitHub.ActionsListJobsForWorkflowRunFilter? filter,
             int perPage,
             int page);
         partial void ProcessActionsListJobsForWorkflowRunResponse(
@@ -56,7 +56,7 @@ namespace GitHub
             string owner,
             string repo,
             int runId,
-            global::GitHub.ActionsListJobsForWorkflowRunFilter filter,
+            global::GitHub.ActionsListJobsForWorkflowRunFilter? filter,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

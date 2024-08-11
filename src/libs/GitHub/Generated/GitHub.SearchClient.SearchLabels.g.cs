@@ -9,8 +9,8 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref int repositoryId,
             ref string q,
-            ref global::GitHub.SearchLabelsSort sort,
-            ref global::GitHub.SearchLabelsOrder order,
+            ref global::GitHub.SearchLabelsSort? sort,
+            ref global::GitHub.SearchLabelsOrder? order,
             ref int perPage,
             ref int page);
         partial void PrepareSearchLabelsRequest(
@@ -18,8 +18,8 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int repositoryId,
             string q,
-            global::GitHub.SearchLabelsSort sort,
-            global::GitHub.SearchLabelsOrder order,
+            global::GitHub.SearchLabelsSort? sort,
+            global::GitHub.SearchLabelsOrder? order,
             int perPage,
             int page);
         partial void ProcessSearchLabelsResponse(
@@ -56,8 +56,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchLabelsResponse> SearchLabelsAsync(
             int repositoryId,
             string q,
-            global::GitHub.SearchLabelsSort sort,
-            global::GitHub.SearchLabelsOrder order,
+            global::GitHub.SearchLabelsSort? sort,
+            global::GitHub.SearchLabelsOrder? order,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

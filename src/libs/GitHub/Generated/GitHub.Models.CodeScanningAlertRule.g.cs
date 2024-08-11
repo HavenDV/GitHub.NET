@@ -50,7 +50,7 @@ namespace GitHub
         /// A set of tags applicable for the rule.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
-        public global::System.Collections.Generic.IList<string?>? Tags { get; set; }
+        public global::System.Collections.Generic.IList<string>? Tags { get; set; }
 
         /// <summary>
         /// Detailed documentation for the rule as GitHub Flavored Markdown.

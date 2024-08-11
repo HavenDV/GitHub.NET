@@ -32,7 +32,7 @@ namespace GitHub
         /// <param name="ruleSuiteId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.RuleSuite> ReposGetOrgRuleSuiteAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.RuleSuite2> ReposGetOrgRuleSuiteAsync(
             string org,
             int ruleSuiteId,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -90,7 +90,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.RuleSuite) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.RuleSuite2) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

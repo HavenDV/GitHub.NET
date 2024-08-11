@@ -1,0 +1,49 @@
+#nullable enable
+
+namespace OpenApiGenerator.JsonConverters
+{
+    /// <inheritdoc />
+    public sealed class WebhookPullRequestUnlabeledPullRequestRequestedTeamPrivacyJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.WebhookPullRequestUnlabeledPullRequestRequestedTeamPrivacy>
+    {
+        /// <inheritdoc />
+        public override global::GitHub.WebhookPullRequestUnlabeledPullRequestRequestedTeamPrivacy Read(
+            ref global::System.Text.Json.Utf8JsonReader reader,
+            global::System.Type typeToConvert,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            switch (reader.TokenType)
+            {
+                case global::System.Text.Json.JsonTokenType.String:
+                {
+                    var stringValue = reader.GetString();
+                    if (stringValue != null)
+                    {
+                        return global::GitHub.WebhookPullRequestUnlabeledPullRequestRequestedTeamPrivacyExtensions.ToEnum(stringValue) ?? default;
+                    }
+                    
+                    break;
+                }
+                case global::System.Text.Json.JsonTokenType.Number:
+                {
+                    var numValue = reader.GetInt32();
+                    return (global::GitHub.WebhookPullRequestUnlabeledPullRequestRequestedTeamPrivacy)numValue;
+                }
+                default:
+                    throw new global::System.ArgumentOutOfRangeException(nameof(reader));
+            }
+
+            return default;
+        }
+
+        /// <inheritdoc />
+        public override void Write(
+            global::System.Text.Json.Utf8JsonWriter writer,
+            global::GitHub.WebhookPullRequestUnlabeledPullRequestRequestedTeamPrivacy value,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
+
+            writer.WriteStringValue(global::GitHub.WebhookPullRequestUnlabeledPullRequestRequestedTeamPrivacyExtensions.ToValueString(value));
+        }
+    }
+}

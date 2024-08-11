@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareSearchCodeArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string q,
-            ref global::GitHub.SearchCodeSort sort,
-            ref global::GitHub.SearchCodeOrder order,
+            ref global::GitHub.SearchCodeSort? sort,
+            ref global::GitHub.SearchCodeOrder? order,
             ref int perPage,
             ref int page);
         partial void PrepareSearchCodeRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string q,
-            global::GitHub.SearchCodeSort sort,
-            global::GitHub.SearchCodeOrder order,
+            global::GitHub.SearchCodeSort? sort,
+            global::GitHub.SearchCodeOrder? order,
             int perPage,
             int page);
         partial void ProcessSearchCodeResponse(
@@ -59,8 +59,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchCodeResponse> SearchCodeAsync(
             string q,
-            global::GitHub.SearchCodeSort sort,
-            global::GitHub.SearchCodeOrder order,
+            global::GitHub.SearchCodeSort? sort,
+            global::GitHub.SearchCodeOrder? order,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

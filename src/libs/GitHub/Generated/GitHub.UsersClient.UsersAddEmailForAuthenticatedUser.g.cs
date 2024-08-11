@@ -7,11 +7,11 @@ namespace GitHub
     {
         partial void PrepareUsersAddEmailForAuthenticatedUserArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::System.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest, global::System.Collections.Generic.IList<string>, string> request);
+            global::System.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest2?, global::System.Collections.Generic.IList<string>?, string?> request);
         partial void PrepareUsersAddEmailForAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest, global::System.Collections.Generic.IList<string>, string> request);
+            global::System.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest2?, global::System.Collections.Generic.IList<string>?, string?> request);
         partial void ProcessUsersAddEmailForAuthenticatedUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -29,11 +29,9 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Email>> UsersAddEmailForAuthenticatedUserAsync(
-            global::System.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest, global::System.Collections.Generic.IList<string>, string> request,
+            global::System.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest2?, global::System.Collections.Generic.IList<string>?, string?> request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: _httpClient);
             PrepareUsersAddEmailForAuthenticatedUserArguments(
@@ -44,7 +42,7 @@ namespace GitHub
                 method: global::System.Net.Http.HttpMethod.Post,
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + "/user/emails", global::System.UriKind.RelativeOrAbsolute));
             var __httpRequestContent = new global::System.Net.Http.StringContent(
-                content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.NullableOneOfUsersAddEmailForAuthenticatedUserRequestIListStringString),
+                content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.NullableOneOfUsersAddEmailForAuthenticatedUserRequest2IListStringString),
                 encoding: global::System.Text.Encoding.UTF8,
                 mediaType: "application/json");
             httpRequest.Content = __httpRequestContent;
@@ -98,19 +96,13 @@ namespace GitHub
         /// Add an email address for the authenticated user<br/>
         /// OAuth app tokens and personal access tokens (classic) need the `user` scope to use this endpoint.
         /// </summary>
-        /// <param name="emails">
-        /// Adds one or more email addresses to your GitHub account. Must contain at least one email address. **Note:** Alternatively, you can pass a single email address or an `array` of emails addresses directly, but we recommend that you pass an object using the `emails` key.<br/>
-        /// Example: []
-        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Email>> UsersAddEmailForAuthenticatedUserAsync(
-            global::System.Collections.Generic.IList<string> emails,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::System.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest, global::System.Collections.Generic.IList<string>, string>
+            var request = new global::System.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest2?, global::System.Collections.Generic.IList<string>?, string?>
             {
-                Emails = emails,
             };
 
             return await UsersAddEmailForAuthenticatedUserAsync(

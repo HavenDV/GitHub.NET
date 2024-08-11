@@ -19,7 +19,7 @@ namespace GitHub
         /// JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_payload")]
-        public object? ClientPayload { get; set; }
+        public global::GitHub.ReposCreateDispatchEventRequestClientPayload? ClientPayload { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

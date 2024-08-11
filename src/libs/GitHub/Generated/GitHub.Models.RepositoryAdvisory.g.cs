@@ -81,7 +81,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("identifiers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryIdentifiers> Identifiers { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryIdentifier> Identifiers { get; set; }
 
         /// <summary>
         /// The state of the advisory.
@@ -152,7 +152,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cwes")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryCwes>? Cwes { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryCwe>? Cwes { get; set; }
 
         /// <summary>
         /// A list of only the CWE IDs.
@@ -166,7 +166,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("credits")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryCredits>? Credits { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryCredit2>? Credits { get; set; }
 
         /// <summary>
         /// 

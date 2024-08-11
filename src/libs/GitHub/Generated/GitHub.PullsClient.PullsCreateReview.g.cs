@@ -160,7 +160,7 @@ namespace GitHub
             string? commitId = default,
             string? body = default,
             global::GitHub.PullsCreateReviewRequestEvent? @event = default,
-            global::System.Collections.Generic.IList<global::GitHub.PullsCreateReviewRequestComments?>? comments = default,
+            global::System.Collections.Generic.IList<global::GitHub.PullsCreateReviewRequestComment>? comments = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.PullsCreateReviewRequest

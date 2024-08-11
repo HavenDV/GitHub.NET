@@ -93,23 +93,5 @@ namespace GitHub
                 global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.String) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
-
-        /// <summary>
-        /// Render a Markdown document in raw mode<br/>
-        /// You must send Markdown as plain text (using a `Content-Type` header of `text/plain` or `text/x-markdown`) to this endpoint, rather than using JSON format. In raw mode, [GitHub Flavored Markdown](https://github.github.com/gfm/) is not supported and Markdown will be rendered in plain format like a README.md file. Markdown content must be 400 KB or less.
-        /// </summary>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<string> MarkdownRenderRawAsync(
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var request = new string
-            {
-            };
-
-            return await MarkdownRenderRawAsync(
-                request: request,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
-        }
     }
 }

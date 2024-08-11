@@ -106,7 +106,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_choices")]
-        public global::System.Collections.Generic.IList<global::GitHub.ImportProjectChoices?>? ProjectChoices { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ImportProjectChoice>? ProjectChoices { get; set; }
 
         /// <summary>
         /// 

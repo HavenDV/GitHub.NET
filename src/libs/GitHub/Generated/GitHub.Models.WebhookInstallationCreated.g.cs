@@ -42,7 +42,7 @@ namespace GitHub
         /// An array of repository objects that the installation can access.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repositories")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookInstallationCreatedRepositories?>? Repositories { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhooksRepositorie>? Repositories { get; set; }
 
         /// <summary>
         /// The repository on GitHub where the event occurred. Webhook payloads contain the `repository` property<br/>

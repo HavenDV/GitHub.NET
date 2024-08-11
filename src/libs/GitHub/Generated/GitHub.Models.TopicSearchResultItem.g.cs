@@ -101,19 +101,19 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text_matches")]
-        public global::System.Collections.Generic.IList<global::GitHub.TopicSearchResultItemTextMatches?>? TextMatches { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SearchResultTextMatche>? TextMatches { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("related")]
-        public global::System.Collections.Generic.IList<global::GitHub.TopicSearchResultItemRelated?>? Related { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.TopicSearchResultItemRelatedItem>? Related { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("aliases")]
-        public global::System.Collections.Generic.IList<global::GitHub.TopicSearchResultItemAliases?>? Aliases { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.TopicSearchResultItemAliase>? Aliases { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

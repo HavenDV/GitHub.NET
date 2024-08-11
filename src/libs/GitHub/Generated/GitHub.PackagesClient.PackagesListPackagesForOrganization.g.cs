@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref global::GitHub.PackagesListPackagesForOrganizationPackageType packageType,
             ref string org,
-            ref global::GitHub.PackagesListPackagesForOrganizationVisibility visibility,
+            ref global::GitHub.PackagesListPackagesForOrganizationVisibility? visibility,
             ref int page,
             ref int perPage);
         partial void PreparePackagesListPackagesForOrganizationRequest(
@@ -17,7 +17,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::GitHub.PackagesListPackagesForOrganizationPackageType packageType,
             string org,
-            global::GitHub.PackagesListPackagesForOrganizationVisibility visibility,
+            global::GitHub.PackagesListPackagesForOrganizationVisibility? visibility,
             int page,
             int perPage);
         partial void ProcessPackagesListPackagesForOrganizationResponse(
@@ -48,7 +48,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Package>> PackagesListPackagesForOrganizationAsync(
             global::GitHub.PackagesListPackagesForOrganizationPackageType packageType,
             string org,
-            global::GitHub.PackagesListPackagesForOrganizationVisibility visibility,
+            global::GitHub.PackagesListPackagesForOrganizationVisibility? visibility,
             int page,
             int perPage,
             global::System.Threading.CancellationToken cancellationToken = default)

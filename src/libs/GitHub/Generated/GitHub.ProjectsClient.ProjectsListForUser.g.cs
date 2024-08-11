@@ -8,14 +8,14 @@ namespace GitHub
         partial void PrepareProjectsListForUserArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string username,
-            ref global::GitHub.ProjectsListForUserState state,
+            ref global::GitHub.ProjectsListForUserState? state,
             ref int perPage,
             ref int page);
         partial void PrepareProjectsListForUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string username,
-            global::GitHub.ProjectsListForUserState state,
+            global::GitHub.ProjectsListForUserState? state,
             int perPage,
             int page);
         partial void ProcessProjectsListForUserResponse(
@@ -45,7 +45,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Project>> ProjectsListForUserAsync(
             string username,
-            global::GitHub.ProjectsListForUserState state,
+            global::GitHub.ProjectsListForUserState? state,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

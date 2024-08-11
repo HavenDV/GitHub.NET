@@ -61,7 +61,7 @@ namespace GitHub
                 request: request);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Patch,
+                method: new global::System.Net.Http.HttpMethod("PATCH"),
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/issues/{issueNumber}", global::System.UriKind.RelativeOrAbsolute));
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.IssuesUpdateRequest),
@@ -164,8 +164,8 @@ namespace GitHub
             global::GitHub.IssuesUpdateRequestState? state = default,
             global::GitHub.IssuesUpdateRequestStateReason? stateReason = default,
             global::System.OneOf<string?, int>? milestone = default,
-            global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.IssuesUpdateRequestLabels?>?>? labels = default,
-            global::System.Collections.Generic.IList<string?>? assignees = default,
+            global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.IssuesUpdateRequestLabel?>>? labels = default,
+            global::System.Collections.Generic.IList<string>? assignees = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.IssuesUpdateRequest

@@ -55,7 +55,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parents")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookStatusCommitParents> Parents { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookStatusCommitParent> Parents { get; set; }
 
         /// <summary>
         /// 

@@ -48,7 +48,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        public object? Metadata { get; set; }
+        public global::GitHub.WebhookRubygemsMetadataMetadata? Metadata { get; set; }
 
         /// <summary>
         /// 
@@ -60,7 +60,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependencies")]
-        public global::System.Collections.Generic.IList<object?>? Dependencies { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookRubygemsMetadataDependencie>? Dependencies { get; set; }
 
         /// <summary>
         /// 

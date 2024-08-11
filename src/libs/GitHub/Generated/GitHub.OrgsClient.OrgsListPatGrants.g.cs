@@ -11,11 +11,11 @@ namespace GitHub
             ref string org,
             ref int perPage,
             ref int page,
-            ref global::GitHub.OrgsListPatGrantsSort sort,
-            ref global::GitHub.OrgsListPatGrantsDirection direction,
-            global::System.Collections.Generic.IList<string> owner,
-            ref string repository,
-            ref string permission,
+            ref global::GitHub.OrgsListPatGrantsSort? sort,
+            ref global::GitHub.OrgsListPatGrantsDirection? direction,
+            global::System.Collections.Generic.IList<string>? owner,
+            ref string? repository,
+            ref string? permission,
             global::System.DateTime lastUsedBefore,
             global::System.DateTime lastUsedAfter);
         partial void PrepareOrgsListPatGrantsRequest(
@@ -24,11 +24,11 @@ namespace GitHub
             string org,
             int perPage,
             int page,
-            global::GitHub.OrgsListPatGrantsSort sort,
-            global::GitHub.OrgsListPatGrantsDirection direction,
-            global::System.Collections.Generic.IList<string> owner,
-            string repository,
-            string permission,
+            global::GitHub.OrgsListPatGrantsSort? sort,
+            global::GitHub.OrgsListPatGrantsDirection? direction,
+            global::System.Collections.Generic.IList<string>? owner,
+            string? repository,
+            string? permission,
             global::System.DateTime lastUsedBefore,
             global::System.DateTime lastUsedAfter);
         partial void ProcessOrgsListPatGrantsResponse(
@@ -75,11 +75,11 @@ namespace GitHub
             string org,
             int perPage,
             int page,
-            global::GitHub.OrgsListPatGrantsSort sort,
-            global::GitHub.OrgsListPatGrantsDirection direction,
-            global::System.Collections.Generic.IList<string> owner,
-            string repository,
-            string permission,
+            global::GitHub.OrgsListPatGrantsSort? sort,
+            global::GitHub.OrgsListPatGrantsDirection? direction,
+            global::System.Collections.Generic.IList<string>? owner,
+            string? repository,
+            string? permission,
             global::System.DateTime lastUsedBefore,
             global::System.DateTime lastUsedAfter,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -101,7 +101,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/personal-access-tokens?per_page={perPage}&page={page}&sort={sort}&direction={direction}&{string.Join("&", owner.Select(static x => $"owner={x}"))}&repository={repository}&permission={permission}&last_used_before={lastUsedBefore:yyyy-MM-ddTHH:mm:ssZ}&last_used_after={lastUsedAfter:yyyy-MM-ddTHH:mm:ssZ}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/personal-access-tokens?per_page={perPage}&page={page}&sort={sort}&direction={direction}&{string.Join("&", owner?.Select(static x => $"owner={x}") ?? global::System.Array.Empty<string>())}&repository={repository}&permission={permission}&last_used_before={lastUsedBefore:yyyy-MM-ddTHH:mm:ssZ}&last_used_after={lastUsedAfter:yyyy-MM-ddTHH:mm:ssZ}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

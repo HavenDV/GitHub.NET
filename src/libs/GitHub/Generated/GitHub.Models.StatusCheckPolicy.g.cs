@@ -34,7 +34,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("checks")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.StatusCheckPolicyChecks> Checks { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.StatusCheckPolicyCheck> Checks { get; set; }
 
         /// <summary>
         /// Example: https://api.github.com/repos/octocat/Hello-World/branches/master/protection/required_status_checks/contexts

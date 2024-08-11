@@ -12,7 +12,7 @@ namespace GitHub
             ref int runId,
             ref int perPage,
             ref int page,
-            ref string name);
+            ref string? name);
         partial void PrepareActionsListWorkflowRunArtifactsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -21,7 +21,7 @@ namespace GitHub
             int runId,
             int perPage,
             int page,
-            string name);
+            string? name);
         partial void ProcessActionsListWorkflowRunArtifactsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -55,7 +55,7 @@ namespace GitHub
             int runId,
             int perPage,
             int page,
-            string name,
+            string? name,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

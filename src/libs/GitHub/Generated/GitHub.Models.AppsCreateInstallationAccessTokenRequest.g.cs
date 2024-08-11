@@ -12,7 +12,7 @@ namespace GitHub
         /// List of repository names that the token should have access to
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repositories")]
-        public global::System.Collections.Generic.IList<string?>? Repositories { get; set; }
+        public global::System.Collections.Generic.IList<string>? Repositories { get; set; }
 
         /// <summary>
         /// List of repository IDs that the token should have access to<br/>

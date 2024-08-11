@@ -10,18 +10,18 @@ namespace GitHub
             ref string org,
             ref int configurationId,
             ref int perPage,
-            ref string before,
-            ref string after,
-            ref string status);
+            ref string? before,
+            ref string? after,
+            ref string? status);
         partial void PrepareCodeSecurityGetRepositoriesForConfigurationRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             int configurationId,
             int perPage,
-            string before,
-            string after,
-            string status);
+            string? before,
+            string? after,
+            string? status);
         partial void ProcessCodeSecurityGetRepositoriesForConfigurationResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -53,9 +53,9 @@ namespace GitHub
             string org,
             int configurationId,
             int perPage,
-            string before,
-            string after,
-            string status,
+            string? before,
+            string? after,
+            string? status,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

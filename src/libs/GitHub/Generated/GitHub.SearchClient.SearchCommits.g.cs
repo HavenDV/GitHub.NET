@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareSearchCommitsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string q,
-            ref global::GitHub.SearchCommitsSort sort,
-            ref global::GitHub.SearchCommitsOrder order,
+            ref global::GitHub.SearchCommitsSort? sort,
+            ref global::GitHub.SearchCommitsOrder? order,
             ref int perPage,
             ref int page);
         partial void PrepareSearchCommitsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string q,
-            global::GitHub.SearchCommitsSort sort,
-            global::GitHub.SearchCommitsOrder order,
+            global::GitHub.SearchCommitsSort? sort,
+            global::GitHub.SearchCommitsOrder? order,
             int perPage,
             int page);
         partial void ProcessSearchCommitsResponse(
@@ -52,8 +52,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchCommitsResponse> SearchCommitsAsync(
             string q,
-            global::GitHub.SearchCommitsSort sort,
-            global::GitHub.SearchCommitsOrder order,
+            global::GitHub.SearchCommitsSort? sort,
+            global::GitHub.SearchCommitsOrder? order,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -36,7 +36,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pages")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookGollumPages> Pages { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookGollumPage> Pages { get; set; }
 
         /// <summary>
         /// The repository on GitHub where the event occurred. Webhook payloads contain the `repository` property<br/>

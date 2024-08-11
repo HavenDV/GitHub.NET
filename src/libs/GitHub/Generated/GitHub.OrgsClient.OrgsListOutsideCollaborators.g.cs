@@ -8,14 +8,14 @@ namespace GitHub
         partial void PrepareOrgsListOutsideCollaboratorsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref global::GitHub.OrgsListOutsideCollaboratorsFilter filter,
+            ref global::GitHub.OrgsListOutsideCollaboratorsFilter? filter,
             ref int perPage,
             ref int page);
         partial void PrepareOrgsListOutsideCollaboratorsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            global::GitHub.OrgsListOutsideCollaboratorsFilter filter,
+            global::GitHub.OrgsListOutsideCollaboratorsFilter? filter,
             int perPage,
             int page);
         partial void ProcessOrgsListOutsideCollaboratorsResponse(
@@ -45,7 +45,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>> OrgsListOutsideCollaboratorsAsync(
             string org,
-            global::GitHub.OrgsListOutsideCollaboratorsFilter filter,
+            global::GitHub.OrgsListOutsideCollaboratorsFilter? filter,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

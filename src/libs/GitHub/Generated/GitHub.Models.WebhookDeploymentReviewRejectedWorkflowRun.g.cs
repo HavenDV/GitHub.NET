@@ -80,7 +80,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("head_commit")]
-        public object? HeadCommit { get; set; }
+        public global::GitHub.WebhookDeploymentReviewRejectedWorkflowRunHeadCommit? HeadCommit { get; set; }
 
         /// <summary>
         /// 
@@ -153,13 +153,13 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pull_requests")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentReviewRejectedWorkflowRunPullRequests> PullRequests { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentReviewRejectedWorkflowRunPullRequest> PullRequests { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("referenced_workflows")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentReviewRejectedWorkflowRunReferencedWorkflows?>? ReferencedWorkflows { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentReviewRejectedWorkflowRunReferencedWorkflow>? ReferencedWorkflows { get; set; }
 
         /// <summary>
         /// 

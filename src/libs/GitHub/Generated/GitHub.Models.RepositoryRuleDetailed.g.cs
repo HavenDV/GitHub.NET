@@ -14,9 +14,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo>? Value1 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleCreation?, global::GitHub.RepositoryRuleRulesetInfo?>? Value1 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo>? Value1 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleCreation?, global::GitHub.RepositoryRuleRulesetInfo?>? Value1 { get; }
 #endif
 
         /// <summary>
@@ -30,17 +30,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCreation?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value1;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleCreation?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value1;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCreation?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value1 = value;
         }
@@ -49,9 +49,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo>? Value2 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleUpdate?, global::GitHub.RepositoryRuleRulesetInfo?>? Value2 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo>? Value2 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleUpdate?, global::GitHub.RepositoryRuleRulesetInfo?>? Value2 { get; }
 #endif
 
         /// <summary>
@@ -65,17 +65,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleUpdate?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value2;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleUpdate?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value2;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleUpdate?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value2 = value;
         }
@@ -84,9 +84,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo>? Value3 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleDeletion?, global::GitHub.RepositoryRuleRulesetInfo?>? Value3 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo>? Value3 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleDeletion?, global::GitHub.RepositoryRuleRulesetInfo?>? Value3 { get; }
 #endif
 
         /// <summary>
@@ -100,17 +100,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleDeletion?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value3;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleDeletion?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value3;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleDeletion?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value3 = value;
         }
@@ -119,9 +119,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo>? Value4 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory?, global::GitHub.RepositoryRuleRulesetInfo?>? Value4 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo>? Value4 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory?, global::GitHub.RepositoryRuleRulesetInfo?>? Value4 { get; }
 #endif
 
         /// <summary>
@@ -135,17 +135,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value4;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value4;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value4 = value;
         }
@@ -154,9 +154,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo>? Value5 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue?, global::GitHub.RepositoryRuleRulesetInfo?>? Value5 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo>? Value5 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue?, global::GitHub.RepositoryRuleRulesetInfo?>? Value5 { get; }
 #endif
 
         /// <summary>
@@ -170,17 +170,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value5;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value5;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value5 = value;
         }
@@ -189,9 +189,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo>? Value6 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments?, global::GitHub.RepositoryRuleRulesetInfo?>? Value6 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo>? Value6 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments?, global::GitHub.RepositoryRuleRulesetInfo?>? Value6 { get; }
 #endif
 
         /// <summary>
@@ -205,17 +205,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value6;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value6;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value6 = value;
         }
@@ -224,9 +224,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo>? Value7 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures?, global::GitHub.RepositoryRuleRulesetInfo?>? Value7 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo>? Value7 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures?, global::GitHub.RepositoryRuleRulesetInfo?>? Value7 { get; }
 #endif
 
         /// <summary>
@@ -240,17 +240,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value7;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value7;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value7 = value;
         }
@@ -259,9 +259,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo>? Value8 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRulePullRequest?, global::GitHub.RepositoryRuleRulesetInfo?>? Value8 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo>? Value8 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRulePullRequest?, global::GitHub.RepositoryRuleRulesetInfo?>? Value8 { get; }
 #endif
 
         /// <summary>
@@ -275,17 +275,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRulePullRequest?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value8;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRulePullRequest?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value8;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRulePullRequest?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value8 = value;
         }
@@ -294,9 +294,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo>? Value9 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks?, global::GitHub.RepositoryRuleRulesetInfo?>? Value9 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo>? Value9 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks?, global::GitHub.RepositoryRuleRulesetInfo?>? Value9 { get; }
 #endif
 
         /// <summary>
@@ -310,17 +310,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value9;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value9;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value9 = value;
         }
@@ -329,9 +329,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo>? Value10 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward?, global::GitHub.RepositoryRuleRulesetInfo?>? Value10 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo>? Value10 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward?, global::GitHub.RepositoryRuleRulesetInfo?>? Value10 { get; }
 #endif
 
         /// <summary>
@@ -345,17 +345,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value10;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value10;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value10 = value;
         }
@@ -364,9 +364,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo>? Value11 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? Value11 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo>? Value11 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? Value11 { get; }
 #endif
 
         /// <summary>
@@ -380,17 +380,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value11;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value11;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value11 = value;
         }
@@ -399,9 +399,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>? Value12 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>? Value12 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>? Value12 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>? Value12 { get; }
 #endif
 
         /// <summary>
@@ -415,17 +415,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value12;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value12;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value12 = value;
         }
@@ -434,9 +434,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>? Value13 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>? Value13 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>? Value13 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>? Value13 { get; }
 #endif
 
         /// <summary>
@@ -450,17 +450,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value13;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value13;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value13 = value;
         }
@@ -469,9 +469,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo>? Value14 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? Value14 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo>? Value14 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? Value14 { get; }
 #endif
 
         /// <summary>
@@ -485,17 +485,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value14;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value14;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value14 = value;
         }
@@ -504,9 +504,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo>? Value15 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? Value15 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo>? Value15 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? Value15 { get; }
 #endif
 
         /// <summary>
@@ -520,17 +520,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value15;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value15;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value15 = value;
         }
@@ -539,9 +539,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo>? Value16 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleWorkflows?, global::GitHub.RepositoryRuleRulesetInfo?>? Value16 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo>? Value16 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleWorkflows?, global::GitHub.RepositoryRuleRulesetInfo?>? Value16 { get; }
 #endif
 
         /// <summary>
@@ -555,17 +555,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleWorkflows?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value16;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleWorkflows?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value16;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleWorkflows?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value16 = value;
         }
@@ -574,9 +574,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo>? Value17 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning?, global::GitHub.RepositoryRuleRulesetInfo?>? Value17 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo>? Value17 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning?, global::GitHub.RepositoryRuleRulesetInfo?>? Value17 { get; }
 #endif
 
         /// <summary>
@@ -590,17 +590,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning?, global::GitHub.RepositoryRuleRulesetInfo?> value) => new RepositoryRuleDetailed(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo>?(RepositoryRuleDetailed @this) => @this.Value17;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning?, global::GitHub.RepositoryRuleRulesetInfo?>?(RepositoryRuleDetailed @this) => @this.Value17;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo>? value)
+        public RepositoryRuleDetailed(global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning?, global::GitHub.RepositoryRuleRulesetInfo?>? value)
         {
             Value17 = value;
         }
@@ -609,23 +609,23 @@ namespace GitHub
         /// 
         /// </summary>
         public RepositoryRuleDetailed(
-            global::System.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo>? value1,
-            global::System.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo>? value2,
-            global::System.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo>? value3,
-            global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo>? value4,
-            global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo>? value5,
-            global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo>? value6,
-            global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo>? value7,
-            global::System.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo>? value8,
-            global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo>? value9,
-            global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo>? value10,
-            global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo>? value11,
-            global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>? value12,
-            global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>? value13,
-            global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo>? value14,
-            global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo>? value15,
-            global::System.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo>? value16,
-            global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo>? value17
+            global::System.AllOf<global::GitHub.RepositoryRuleCreation?, global::GitHub.RepositoryRuleRulesetInfo?>? value1,
+            global::System.AllOf<global::GitHub.RepositoryRuleUpdate?, global::GitHub.RepositoryRuleRulesetInfo?>? value2,
+            global::System.AllOf<global::GitHub.RepositoryRuleDeletion?, global::GitHub.RepositoryRuleRulesetInfo?>? value3,
+            global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory?, global::GitHub.RepositoryRuleRulesetInfo?>? value4,
+            global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue?, global::GitHub.RepositoryRuleRulesetInfo?>? value5,
+            global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments?, global::GitHub.RepositoryRuleRulesetInfo?>? value6,
+            global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures?, global::GitHub.RepositoryRuleRulesetInfo?>? value7,
+            global::System.AllOf<global::GitHub.RepositoryRulePullRequest?, global::GitHub.RepositoryRuleRulesetInfo?>? value8,
+            global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks?, global::GitHub.RepositoryRuleRulesetInfo?>? value9,
+            global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward?, global::GitHub.RepositoryRuleRulesetInfo?>? value10,
+            global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? value11,
+            global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>? value12,
+            global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>? value13,
+            global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? value14,
+            global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>? value15,
+            global::System.AllOf<global::GitHub.RepositoryRuleWorkflows?, global::GitHub.RepositoryRuleRulesetInfo?>? value16,
+            global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning?, global::GitHub.RepositoryRuleRulesetInfo?>? value17
             )
         {
             Value1 = value1;
@@ -686,39 +686,39 @@ namespace GitHub
             var fields = new object?[]
             {
                 Value1,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleCreation?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value2,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleUpdate?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value3,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleDeletion?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value4,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value5,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value6,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value7,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value8,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRulePullRequest?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value9,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value10,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value11,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value12,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value13,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value14,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value15,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value16,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleWorkflows?, global::GitHub.RepositoryRuleRulesetInfo?>),
                 Value17,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning?, global::GitHub.RepositoryRuleRulesetInfo?>),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -734,23 +734,23 @@ namespace GitHub
         public bool Equals(RepositoryRuleDetailed other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value2, other.Value2) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value3, other.Value3) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value4, other.Value4) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value5, other.Value5) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value6, other.Value6) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value7, other.Value7) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value8, other.Value8) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value9, other.Value9) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value10, other.Value10) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value11, other.Value11) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value12, other.Value12) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value13, other.Value13) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value14, other.Value14) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value15, other.Value15) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value16, other.Value16) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo>?>.Default.Equals(Value17, other.Value17) 
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleCreation?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value1, other.Value1) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleUpdate?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value2, other.Value2) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleDeletion?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value3, other.Value3) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value4, other.Value4) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleMergeQueue?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value5, other.Value5) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleRequiredDeployments?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value6, other.Value6) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleRequiredSignatures?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value7, other.Value7) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRulePullRequest?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value8, other.Value8) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value9, other.Value9) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleNonFastForward?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value10, other.Value10) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value11, other.Value11) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value12, other.Value12) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value13, other.Value13) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleBranchNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value14, other.Value14) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleTagNamePattern?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value15, other.Value15) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleWorkflows?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value16, other.Value16) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRuleCodeScanning?, global::GitHub.RepositoryRuleRulesetInfo?>?>.Default.Equals(Value17, other.Value17) 
                 ;
         }
 

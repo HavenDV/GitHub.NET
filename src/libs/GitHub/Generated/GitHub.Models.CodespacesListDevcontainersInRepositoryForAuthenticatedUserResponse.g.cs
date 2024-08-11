@@ -20,7 +20,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("devcontainers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponseDevcontainers> Devcontainers { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponseDevcontainer> Devcontainers { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

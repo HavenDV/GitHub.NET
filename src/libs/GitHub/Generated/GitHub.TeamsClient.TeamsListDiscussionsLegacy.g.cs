@@ -8,14 +8,14 @@ namespace GitHub
         partial void PrepareTeamsListDiscussionsLegacyArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int teamId,
-            ref global::GitHub.TeamsListDiscussionsLegacyDirection direction,
+            ref global::GitHub.TeamsListDiscussionsLegacyDirection? direction,
             ref int perPage,
             ref int page);
         partial void PrepareTeamsListDiscussionsLegacyRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int teamId,
-            global::GitHub.TeamsListDiscussionsLegacyDirection direction,
+            global::GitHub.TeamsListDiscussionsLegacyDirection? direction,
             int perPage,
             int page);
         partial void ProcessTeamsListDiscussionsLegacyResponse(
@@ -49,7 +49,7 @@ namespace GitHub
         [global::System.Obsolete("This method marked as deprecated.")]
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.TeamDiscussion>> TeamsListDiscussionsLegacyAsync(
             int teamId,
-            global::GitHub.TeamsListDiscussionsLegacyDirection direction,
+            global::GitHub.TeamsListDiscussionsLegacyDirection? direction,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

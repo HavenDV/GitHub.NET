@@ -10,8 +10,8 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int perPage,
-            ref string before,
-            ref string after,
+            ref string? before,
+            ref string? after,
             ref string subjectDigest);
         partial void PrepareReposListAttestationsRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -19,8 +19,8 @@ namespace GitHub
             string owner,
             string repo,
             int perPage,
-            string before,
-            string after,
+            string? before,
+            string? after,
             string subjectDigest);
         partial void ProcessReposListAttestationsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -51,8 +51,8 @@ namespace GitHub
             string owner,
             string repo,
             int perPage,
-            string before,
-            string after,
+            string? before,
+            string? after,
             string subjectDigest,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::GitHub.ReposListForksSort sort,
+            ref global::GitHub.ReposListForksSort? sort,
             ref int perPage,
             ref int page);
         partial void PrepareReposListForksRequest(
@@ -17,7 +17,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::GitHub.ReposListForksSort sort,
+            global::GitHub.ReposListForksSort? sort,
             int perPage,
             int page);
         partial void ProcessReposListForksResponse(
@@ -48,7 +48,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.MinimalRepository>> ReposListForksAsync(
             string owner,
             string repo,
-            global::GitHub.ReposListForksSort sort,
+            global::GitHub.ReposListForksSort? sort,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

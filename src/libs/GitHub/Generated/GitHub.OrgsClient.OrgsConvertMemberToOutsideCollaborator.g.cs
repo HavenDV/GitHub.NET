@@ -34,7 +34,7 @@ namespace GitHub
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<object> OrgsConvertMemberToOutsideCollaboratorAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.OrgsConvertMemberToOutsideCollaboratorResponse> OrgsConvertMemberToOutsideCollaboratorAsync(
             string org,
             string username,
             global::GitHub.OrgsConvertMemberToOutsideCollaboratorRequest request,
@@ -102,7 +102,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.Object) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.OrgsConvertMemberToOutsideCollaboratorResponse) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
@@ -118,7 +118,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<object> OrgsConvertMemberToOutsideCollaboratorAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.OrgsConvertMemberToOutsideCollaboratorResponse> OrgsConvertMemberToOutsideCollaboratorAsync(
             string org,
             string username,
             bool async = false,

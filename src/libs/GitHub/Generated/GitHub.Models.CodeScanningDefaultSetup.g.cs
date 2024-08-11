@@ -19,7 +19,7 @@ namespace GitHub
         /// Languages to be analyzed.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("languages")]
-        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupLanguages?>? Languages { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupLanguage>? Languages { get; set; }
 
         /// <summary>
         /// CodeQL query suite to be used.

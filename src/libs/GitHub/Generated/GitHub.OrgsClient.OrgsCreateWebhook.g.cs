@@ -131,7 +131,7 @@ namespace GitHub
             string org,
             string name,
             global::GitHub.OrgsCreateWebhookRequestConfig config,
-            global::System.Collections.Generic.IList<string?>? events = default,
+            global::System.Collections.Generic.IList<string>? events = default,
             bool active = true,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

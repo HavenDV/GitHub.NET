@@ -8,14 +8,14 @@ namespace GitHub
         partial void PrepareProjectsListCollaboratorsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int projectId,
-            ref global::GitHub.ProjectsListCollaboratorsAffiliation affiliation,
+            ref global::GitHub.ProjectsListCollaboratorsAffiliation? affiliation,
             ref int perPage,
             ref int page);
         partial void PrepareProjectsListCollaboratorsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int projectId,
-            global::GitHub.ProjectsListCollaboratorsAffiliation affiliation,
+            global::GitHub.ProjectsListCollaboratorsAffiliation? affiliation,
             int perPage,
             int page);
         partial void ProcessProjectsListCollaboratorsResponse(
@@ -45,7 +45,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>> ProjectsListCollaboratorsAsync(
             int projectId,
-            global::GitHub.ProjectsListCollaboratorsAffiliation affiliation,
+            global::GitHub.ProjectsListCollaboratorsAffiliation? affiliation,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref int teamId,
             ref int discussionNumber,
-            ref global::GitHub.TeamsListDiscussionCommentsLegacyDirection direction,
+            ref global::GitHub.TeamsListDiscussionCommentsLegacyDirection? direction,
             ref int perPage,
             ref int page);
         partial void PrepareTeamsListDiscussionCommentsLegacyRequest(
@@ -17,7 +17,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int teamId,
             int discussionNumber,
-            global::GitHub.TeamsListDiscussionCommentsLegacyDirection direction,
+            global::GitHub.TeamsListDiscussionCommentsLegacyDirection? direction,
             int perPage,
             int page);
         partial void ProcessTeamsListDiscussionCommentsLegacyResponse(
@@ -53,7 +53,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.TeamDiscussionComment>> TeamsListDiscussionCommentsLegacyAsync(
             int teamId,
             int discussionNumber,
-            global::GitHub.TeamsListDiscussionCommentsLegacyDirection direction,
+            global::GitHub.TeamsListDiscussionCommentsLegacyDirection? direction,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

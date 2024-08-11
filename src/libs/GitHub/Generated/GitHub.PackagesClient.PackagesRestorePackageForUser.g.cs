@@ -10,14 +10,14 @@ namespace GitHub
             ref global::GitHub.PackagesRestorePackageForUserPackageType packageType,
             ref string packageName,
             ref string username,
-            ref string token);
+            ref string? token);
         partial void PreparePackagesRestorePackageForUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::GitHub.PackagesRestorePackageForUserPackageType packageType,
             string packageName,
             string username,
-            string token);
+            string? token);
         partial void ProcessPackagesRestorePackageForUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -46,7 +46,7 @@ namespace GitHub
             global::GitHub.PackagesRestorePackageForUserPackageType packageType,
             string packageName,
             string username,
-            string token,
+            string? token,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

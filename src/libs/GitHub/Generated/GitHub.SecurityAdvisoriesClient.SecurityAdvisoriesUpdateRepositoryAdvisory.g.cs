@@ -59,7 +59,7 @@ namespace GitHub
                 request: request);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Patch,
+                method: new global::System.Net.Http.HttpMethod("PATCH"),
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/security-advisories/{ghsaId}", global::System.UriKind.RelativeOrAbsolute));
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.RepositoryAdvisoryUpdate),
@@ -167,14 +167,14 @@ namespace GitHub
             string? summary = default,
             string? description = default,
             string? cveId = default,
-            global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryUpdateVulnerabilities?>? vulnerabilities = default,
-            global::System.Collections.Generic.IList<string?>? cweIds = default,
-            global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryUpdateCredits?>? credits = default,
+            global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryUpdateVulnerabilitie>? vulnerabilities = default,
+            global::System.Collections.Generic.IList<string>? cweIds = default,
+            global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryUpdateCredit>? credits = default,
             global::GitHub.RepositoryAdvisoryUpdateSeverity? severity = default,
             string? cvssVectorString = default,
             global::GitHub.RepositoryAdvisoryUpdateState? state = default,
-            global::System.Collections.Generic.IList<string?>? collaboratingUsers = default,
-            global::System.Collections.Generic.IList<string?>? collaboratingTeams = default,
+            global::System.Collections.Generic.IList<string>? collaboratingUsers = default,
+            global::System.Collections.Generic.IList<string>? collaboratingTeams = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.RepositoryAdvisoryUpdate

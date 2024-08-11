@@ -12,7 +12,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("certificates")]
-        public global::System.Collections.Generic.IList<global::GitHub.SigstoreBundle0VerificationMaterialX509CertificateChainCertificates?>? Certificates { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SigstoreBundle0VerificationMaterialX509CertificateChainCertificate>? Certificates { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

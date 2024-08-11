@@ -87,7 +87,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("head_commit")]
-        public object? HeadCommit { get; set; }
+        public global::GitHub.WebhookDeploymentCreatedWorkflowRunHeadCommit? HeadCommit { get; set; }
 
         /// <summary>
         /// 
@@ -153,20 +153,20 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("previous_attempt_url")]
-        public object? PreviousAttemptUrl { get; set; }
+        public global::GitHub.WebhookDeploymentCreatedWorkflowRunPreviousAttemptUrl? PreviousAttemptUrl { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pull_requests")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentCreatedWorkflowRunPullRequests> PullRequests { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentCreatedWorkflowRunPullRequest> PullRequests { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("referenced_workflows")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentCreatedWorkflowRunReferencedWorkflows?>? ReferencedWorkflows { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentCreatedWorkflowRunReferencedWorkflow>? ReferencedWorkflows { get; set; }
 
         /// <summary>
         /// 

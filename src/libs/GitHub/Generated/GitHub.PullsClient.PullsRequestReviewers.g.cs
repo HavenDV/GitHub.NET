@@ -45,8 +45,6 @@ namespace GitHub
             global::GitHub.PullsRequestReviewersRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: _httpClient);
             PreparePullsRequestReviewersArguments(
@@ -121,16 +119,26 @@ namespace GitHub
         /// <param name="owner"></param>
         /// <param name="repo"></param>
         /// <param name="pullNumber"></param>
+        /// <param name="reviewers">
+        /// An array of user `login`s that will be requested.
+        /// </param>
+        /// <param name="teamReviewers">
+        /// An array of team `slug`s that will be requested.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.PullRequestSimple> PullsRequestReviewersAsync(
             string owner,
             string repo,
             int pullNumber,
+            global::System.Collections.Generic.IList<string>? reviewers = default,
+            global::System.Collections.Generic.IList<string>? teamReviewers = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.PullsRequestReviewersRequest
             {
+                Reviewers = reviewers,
+                TeamReviewers = teamReviewers,
             };
 
             return await PullsRequestReviewersAsync(

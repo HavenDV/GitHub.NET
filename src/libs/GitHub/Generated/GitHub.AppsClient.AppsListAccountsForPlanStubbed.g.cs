@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareAppsListAccountsForPlanStubbedArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int planId,
-            ref global::GitHub.AppsListAccountsForPlanStubbedSort sort,
-            ref global::GitHub.AppsListAccountsForPlanStubbedDirection direction,
+            ref global::GitHub.AppsListAccountsForPlanStubbedSort? sort,
+            ref global::GitHub.AppsListAccountsForPlanStubbedDirection? direction,
             ref int perPage,
             ref int page);
         partial void PrepareAppsListAccountsForPlanStubbedRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int planId,
-            global::GitHub.AppsListAccountsForPlanStubbedSort sort,
-            global::GitHub.AppsListAccountsForPlanStubbedDirection direction,
+            global::GitHub.AppsListAccountsForPlanStubbedSort? sort,
+            global::GitHub.AppsListAccountsForPlanStubbedDirection? direction,
             int perPage,
             int page);
         partial void ProcessAppsListAccountsForPlanStubbedResponse(
@@ -49,8 +49,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.MarketplacePurchase>> AppsListAccountsForPlanStubbedAsync(
             int planId,
-            global::GitHub.AppsListAccountsForPlanStubbedSort sort,
-            global::GitHub.AppsListAccountsForPlanStubbedDirection direction,
+            global::GitHub.AppsListAccountsForPlanStubbedSort? sort,
+            global::GitHub.AppsListAccountsForPlanStubbedDirection? direction,
             int perPage,
             int page,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -132,7 +132,7 @@ namespace GitHub
             string repo,
             int pullNumber,
             global::System.Collections.Generic.IList<string> reviewers,
-            global::System.Collections.Generic.IList<string?>? teamReviewers = default,
+            global::System.Collections.Generic.IList<string>? teamReviewers = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.PullsRemoveRequestedReviewersRequest
