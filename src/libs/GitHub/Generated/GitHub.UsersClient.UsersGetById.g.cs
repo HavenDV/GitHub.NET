@@ -30,7 +30,7 @@ namespace GitHub
         /// <param name="accountId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.OneOf<global::GitHub.PrivateUser?, global::GitHub.PublicUser?>> UsersGetByIdAsync(
+        public async global::System.Threading.Tasks.Task<global::System.OneOf<global::GitHub.PrivateUser, global::GitHub.PublicUser>> UsersGetByIdAsync(
             int accountId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

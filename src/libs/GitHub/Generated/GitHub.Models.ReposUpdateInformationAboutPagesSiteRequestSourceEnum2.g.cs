@@ -6,7 +6,7 @@ namespace GitHub
     /// <summary>
     /// Update the source for the repository. Must include the branch name and path.
     /// </summary>
-    public sealed partial class ReposUpdateInformationAboutPagesSiteRequestSourceVariant2
+    public sealed partial class ReposUpdateInformationAboutPagesSiteRequestSourceEnum2
     {
         /// <summary>
         /// The repository branch used to publish your site's source files.
@@ -19,9 +19,9 @@ namespace GitHub
         /// The repository directory that includes the source files for the Pages site. Allowed paths are `/` or `/docs`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("path")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2PathJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.ReposUpdateInformationAboutPagesSiteRequestSourceEnumPathJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path Path { get; set; }
+        public required global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath Path { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

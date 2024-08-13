@@ -115,7 +115,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.GistSimple> GistsCreateAsync(
             global::GitHub.GistsCreateRequestFiles files,
             string? description = default,
-            global::System.OneOf<bool, global::GitHub.GistsCreateRequestPublic?>? @public = default,
+            global::System.OneOf<bool?, global::GitHub.GistsCreateRequestPublic?>? @public = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.GistsCreateRequest

@@ -50,7 +50,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.AnyOf<global::System.Collections.Generic.IList<global::GitHub.StarredRepository>?, global::System.Collections.Generic.IList<global::GitHub.Repository>?>> ActivityListReposStarredByUserAsync(
+        public async global::System.Threading.Tasks.Task<global::System.AnyOf<global::System.Collections.Generic.IList<global::GitHub.StarredRepository>, global::System.Collections.Generic.IList<global::GitHub.Repository>>> ActivityListReposStarredByUserAsync(
             string username,
             global::GitHub.ActivityListReposStarredByUserSort? sort,
             global::GitHub.ActivityListReposStarredByUserDirection? direction,

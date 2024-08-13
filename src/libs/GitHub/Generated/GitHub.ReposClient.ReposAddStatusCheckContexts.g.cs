@@ -10,14 +10,14 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref string branch,
-            global::System.OneOf<global::GitHub.ReposAddStatusCheckContextsRequest2?, global::System.Collections.Generic.IList<string>?> request);
+            global::System.OneOf<global::GitHub.ReposAddStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>> request);
         partial void PrepareReposAddStatusCheckContextsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             string branch,
-            global::System.OneOf<global::GitHub.ReposAddStatusCheckContextsRequest2?, global::System.Collections.Generic.IList<string>?> request);
+            global::System.OneOf<global::GitHub.ReposAddStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>> request);
         partial void ProcessReposAddStatusCheckContextsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -41,7 +41,7 @@ namespace GitHub
             string owner,
             string repo,
             string branch,
-            global::System.OneOf<global::GitHub.ReposAddStatusCheckContextsRequest2?, global::System.Collections.Generic.IList<string>?> request,
+            global::System.OneOf<global::GitHub.ReposAddStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>> request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -125,7 +125,7 @@ namespace GitHub
             string branch,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::System.OneOf<global::GitHub.ReposAddStatusCheckContextsRequest2?, global::System.Collections.Generic.IList<string>?>
+            var request = new global::System.OneOf<global::GitHub.ReposAddStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>>
             {
             };
 

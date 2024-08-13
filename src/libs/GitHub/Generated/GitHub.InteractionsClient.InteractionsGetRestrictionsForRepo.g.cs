@@ -31,7 +31,7 @@ namespace GitHub
         /// <param name="repo"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.AnyOf<global::GitHub.InteractionLimitResponse?, global::GitHub.InteractionsGetRestrictionsForRepoResponse2?>> InteractionsGetRestrictionsForRepoAsync(
+        public async global::System.Threading.Tasks.Task<global::System.AnyOf<global::GitHub.InteractionLimitResponse, global::GitHub.InteractionsGetRestrictionsForRepoResponse2>> InteractionsGetRestrictionsForRepoAsync(
             string owner,
             string repo,
             global::System.Threading.CancellationToken cancellationToken = default)

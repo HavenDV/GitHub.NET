@@ -119,7 +119,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labels")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.NullableIssueLabel?>> Labels { get; set; }
+        public required global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.NullableIssueLabel>> Labels { get; set; }
 
         /// <summary>
         /// A GitHub user.

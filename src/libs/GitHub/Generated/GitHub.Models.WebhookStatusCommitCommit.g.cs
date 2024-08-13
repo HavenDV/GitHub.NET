@@ -16,7 +16,7 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.AllOfJsonConverterFactory2))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.AllOf<global::GitHub.WebhookStatusCommitCommitAuthorVariant1?, global::GitHub.WebhookStatusCommitCommitAuthorVariant2?> Author { get; set; }
+        public required global::System.AllOf<global::GitHub.WebhookStatusCommitCommitAuthorVariant1, global::GitHub.WebhookStatusCommitCommitAuthorVariant2> Author { get; set; }
 
         /// <summary>
         /// 
@@ -31,7 +31,7 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("committer")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.AllOfJsonConverterFactory2))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.AllOf<global::GitHub.WebhookStatusCommitCommitCommitterVariant1?, global::GitHub.WebhookStatusCommitCommitCommitterVariant2?> Committer { get; set; }
+        public required global::System.AllOf<global::GitHub.WebhookStatusCommitCommitCommitterVariant1, global::GitHub.WebhookStatusCommitCommitCommitterVariant2> Committer { get; set; }
 
         /// <summary>
         /// 

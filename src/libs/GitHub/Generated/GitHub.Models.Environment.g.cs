@@ -65,7 +65,7 @@ namespace GitHub
         /// Built-in deployment protection rules for the environment.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("protection_rules")]
-        public global::System.Collections.Generic.IList<global::System.AnyOf<global::GitHub.EnvironmentProtectionRuleVariant1?, global::GitHub.EnvironmentProtectionRuleVariant2?, global::GitHub.EnvironmentProtectionRuleVariant3?>>? ProtectionRules { get; set; }
+        public global::System.Collections.Generic.IList<global::System.AnyOf<global::GitHub.EnvironmentProtectionRuleVariant1, global::GitHub.EnvironmentProtectionRuleVariant2, global::GitHub.EnvironmentProtectionRuleVariant3>>? ProtectionRules { get; set; }
 
         /// <summary>
         /// The type of deployment branch policy for this environment. To allow all branches to deploy, set to `null`.

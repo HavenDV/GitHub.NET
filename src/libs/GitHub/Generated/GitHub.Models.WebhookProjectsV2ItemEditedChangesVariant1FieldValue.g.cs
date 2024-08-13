@@ -39,14 +39,14 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("from")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory4))]
-        public global::System.OneOf<string?, int, global::GitHub.ProjectsV2SingleSelectOption?, global::GitHub.ProjectsV2IterationSetting?>? From { get; set; }
+        public global::System.OneOf<string?, int?, global::GitHub.ProjectsV2SingleSelectOption, global::GitHub.ProjectsV2IterationSetting>? From { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("to")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory4))]
-        public global::System.OneOf<string?, int, global::GitHub.ProjectsV2SingleSelectOption?, global::GitHub.ProjectsV2IterationSetting?>? To { get; set; }
+        public global::System.OneOf<string?, int?, global::GitHub.ProjectsV2SingleSelectOption, global::GitHub.ProjectsV2IterationSetting>? To { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

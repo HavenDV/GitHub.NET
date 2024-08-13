@@ -30,7 +30,7 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("account")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.AnyOfJsonConverterFactory2))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.AnyOf<global::GitHub.SimpleUser?, global::GitHub.Enterprise?> Account { get; set; }
+        public required global::System.AnyOf<global::GitHub.SimpleUser, global::GitHub.Enterprise> Account { get; set; }
 
         /// <summary>
         /// A GitHub user.

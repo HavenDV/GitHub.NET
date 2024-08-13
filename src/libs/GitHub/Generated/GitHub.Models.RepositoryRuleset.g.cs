@@ -86,7 +86,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.AnyOfJsonConverterFactory2))]
-        public global::System.AnyOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.OrgRulesetConditions?>? Conditions { get; set; }
+        public global::System.AnyOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.OrgRulesetConditions?>? Conditions { get; set; }
 
         /// <summary>
         /// 

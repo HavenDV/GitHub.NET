@@ -7,11 +7,11 @@ namespace GitHub
     {
         partial void PrepareCodespacesCreateForAuthenticatedUserArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::System.OneOf<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1?, global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2?> request);
+            global::System.OneOf<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1, global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2> request);
         partial void PrepareCodespacesCreateForAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.OneOf<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1?, global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2?> request);
+            global::System.OneOf<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1, global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2> request);
         partial void ProcessCodespacesCreateForAuthenticatedUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -31,7 +31,7 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.Codespace> CodespacesCreateForAuthenticatedUserAsync(
-            global::System.OneOf<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1?, global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2?> request,
+            global::System.OneOf<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1, global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2> request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -105,7 +105,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.Codespace> CodespacesCreateForAuthenticatedUserAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::System.OneOf<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1?, global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2?>
+            var request = new global::System.OneOf<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1, global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2>
             {
             };
 

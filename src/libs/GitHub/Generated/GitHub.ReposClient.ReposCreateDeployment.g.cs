@@ -216,7 +216,7 @@ namespace GitHub
             string? task = "deploy",
             bool autoMerge = true,
             global::System.Collections.Generic.IList<string>? requiredContexts = default,
-            global::System.OneOf<global::GitHub.ReposCreateDeploymentRequestPayload?, string?>? payload = default,
+            global::System.OneOf<global::GitHub.ReposCreateDeploymentRequestPayload, string?>? payload = default,
             string? environment = "production",
             string? description = default,
             bool transientEnvironment = false,

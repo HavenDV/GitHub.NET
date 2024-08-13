@@ -6,7 +6,7 @@ namespace GitHub
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class ReposUpdateInformationAboutPagesSiteRequestVariant5
+    public sealed partial class ReposCreatePagesSiteRequestEnum
     {
 
         /// <summary>

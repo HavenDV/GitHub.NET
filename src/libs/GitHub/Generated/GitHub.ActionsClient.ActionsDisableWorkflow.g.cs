@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::System.OneOf<int, string?> workflowId);
+            ref global::System.OneOf<int?, string?> workflowId);
         partial void PrepareActionsDisableWorkflowRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::System.OneOf<int, string?> workflowId);
+            global::System.OneOf<int?, string?> workflowId);
         partial void ProcessActionsDisableWorkflowResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,7 +33,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task ActionsDisableWorkflowAsync(
             string owner,
             string repo,
-            global::System.OneOf<int, string?> workflowId,
+            global::System.OneOf<int?, string?> workflowId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
