@@ -158,13 +158,13 @@ namespace GitHub
             string owner,
             string repo,
             int issueNumber,
-            global::System.OneOf<string?, int>? title = default,
+            global::System.OneOf<string?, int?>? title = default,
             string? body = default,
             string? assignee = default,
             global::GitHub.IssuesUpdateRequestState? state = default,
             global::GitHub.IssuesUpdateRequestStateReason? stateReason = default,
-            global::System.OneOf<string?, int>? milestone = default,
-            global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.IssuesUpdateRequestLabel?>>? labels = default,
+            global::System.OneOf<string?, int?>? milestone = default,
+            global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.IssuesUpdateRequestLabel>>? labels = default,
             global::System.Collections.Generic.IList<string>? assignees = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

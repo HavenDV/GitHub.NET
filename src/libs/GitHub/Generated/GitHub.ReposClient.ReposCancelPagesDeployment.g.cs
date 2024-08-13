@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::System.OneOf<int, string?> pagesDeploymentId);
+            ref global::System.OneOf<int?, string?> pagesDeploymentId);
         partial void PrepareReposCancelPagesDeploymentRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::System.OneOf<int, string?> pagesDeploymentId);
+            global::System.OneOf<int?, string?> pagesDeploymentId);
         partial void ProcessReposCancelPagesDeploymentResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -38,7 +38,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> ReposCancelPagesDeploymentAsync(
             string owner,
             string repo,
-            global::System.OneOf<int, string?> pagesDeploymentId,
+            global::System.OneOf<int?, string?> pagesDeploymentId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

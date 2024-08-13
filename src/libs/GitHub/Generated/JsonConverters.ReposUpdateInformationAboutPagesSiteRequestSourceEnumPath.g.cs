@@ -3,10 +3,10 @@
 namespace OpenApiGenerator.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class ReposUpdateInformationAboutPagesSiteRequestSourceVariant2PathJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path>
+    public sealed class ReposUpdateInformationAboutPagesSiteRequestSourceEnumPathJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath>
     {
         /// <inheritdoc />
-        public override global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path Read(
+        public override global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace OpenApiGenerator.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2PathExtensions.ToEnum(stringValue) ?? default;
+                        return global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnumPathExtensions.ToEnum(stringValue) ?? default;
                     }
                     
                     break;
@@ -26,7 +26,7 @@ namespace OpenApiGenerator.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path)numValue;
+                    return (global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath)numValue;
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -38,12 +38,12 @@ namespace OpenApiGenerator.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path value,
+            global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2PathExtensions.ToValueString(value));
+            writer.WriteStringValue(global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnumPathExtensions.ToValueString(value));
         }
     }
 }

@@ -10,14 +10,14 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int runId,
-            global::System.AnyOf<global::GitHub.ReviewCustomGatesCommentRequired?, global::GitHub.ReviewCustomGatesStateRequired?> request);
+            global::System.AnyOf<global::GitHub.ReviewCustomGatesCommentRequired, global::GitHub.ReviewCustomGatesStateRequired> request);
         partial void PrepareActionsReviewCustomGatesForRunRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             int runId,
-            global::System.AnyOf<global::GitHub.ReviewCustomGatesCommentRequired?, global::GitHub.ReviewCustomGatesStateRequired?> request);
+            global::System.AnyOf<global::GitHub.ReviewCustomGatesCommentRequired, global::GitHub.ReviewCustomGatesStateRequired> request);
         partial void ProcessActionsReviewCustomGatesForRunResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -39,7 +39,7 @@ namespace GitHub
             string owner,
             string repo,
             int runId,
-            global::System.AnyOf<global::GitHub.ReviewCustomGatesCommentRequired?, global::GitHub.ReviewCustomGatesStateRequired?> request,
+            global::System.AnyOf<global::GitHub.ReviewCustomGatesCommentRequired, global::GitHub.ReviewCustomGatesStateRequired> request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -103,7 +103,7 @@ namespace GitHub
             int runId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::System.AnyOf<global::GitHub.ReviewCustomGatesCommentRequired?, global::GitHub.ReviewCustomGatesStateRequired?>
+            var request = new global::System.AnyOf<global::GitHub.ReviewCustomGatesCommentRequired, global::GitHub.ReviewCustomGatesStateRequired>
             {
             };
 

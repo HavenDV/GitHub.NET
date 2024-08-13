@@ -265,7 +265,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requested_reviewers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::System.OneOf<global::GitHub.WebhookPullRequestUnlabeledPullRequestRequestedReviewerVariant1?, global::GitHub.WebhookPullRequestUnlabeledPullRequestRequestedReviewerVariant2?>> RequestedReviewers { get; set; }
+        public required global::System.Collections.Generic.IList<global::System.OneOf<global::GitHub.WebhookPullRequestUnlabeledPullRequestRequestedReviewerVariant1, global::GitHub.WebhookPullRequestUnlabeledPullRequestRequestedReviewerVariant2>> RequestedReviewers { get; set; }
 
         /// <summary>
         /// 

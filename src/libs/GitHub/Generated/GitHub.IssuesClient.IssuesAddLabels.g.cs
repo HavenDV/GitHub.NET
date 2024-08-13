@@ -10,14 +10,14 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int issueNumber,
-            global::System.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1?, global::System.Collections.Generic.IList<string>?, global::GitHub.IssuesAddLabelsRequestVariant3?, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>?, string?> request);
+            global::System.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesAddLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>, string?> request);
         partial void PrepareIssuesAddLabelsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             int issueNumber,
-            global::System.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1?, global::System.Collections.Generic.IList<string>?, global::GitHub.IssuesAddLabelsRequestVariant3?, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>?, string?> request);
+            global::System.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesAddLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>, string?> request);
         partial void ProcessIssuesAddLabelsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -41,7 +41,7 @@ namespace GitHub
             string owner,
             string repo,
             int issueNumber,
-            global::System.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1?, global::System.Collections.Generic.IList<string>?, global::GitHub.IssuesAddLabelsRequestVariant3?, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>?, string?> request,
+            global::System.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesAddLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>, string?> request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -125,7 +125,7 @@ namespace GitHub
             int issueNumber,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::System.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1?, global::System.Collections.Generic.IList<string>?, global::GitHub.IssuesAddLabelsRequestVariant3?, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>?, string?>
+            var request = new global::System.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesAddLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>, string?>
             {
             };
 

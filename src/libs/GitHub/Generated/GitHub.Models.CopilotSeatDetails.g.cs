@@ -16,21 +16,21 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("assignee")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory1))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.OneOf<global::GitHub.SimpleUser?> Assignee { get; set; }
+        public required global::System.OneOf<global::GitHub.SimpleUser> Assignee { get; set; }
 
         /// <summary>
         /// The organization to which this seat belongs.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organization")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory1))]
-        public global::System.OneOf<global::GitHub.OrganizationSimple?>? Organization { get; set; }
+        public global::System.OneOf<global::GitHub.OrganizationSimple>? Organization { get; set; }
 
         /// <summary>
         /// The team through which the assignee is granted access to GitHub Copilot, if applicable.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assigning_team")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<global::GitHub.Team?, global::GitHub.EnterpriseTeam?>? AssigningTeam { get; set; }
+        public global::System.OneOf<global::GitHub.Team, global::GitHub.EnterpriseTeam>? AssigningTeam { get; set; }
 
         /// <summary>
         /// The pending cancellation date for the seat, in `YYYY-MM-DD` format. This will be null unless the assignee's Copilot access has been canceled during the current billing cycle. If the seat has been cancelled, this corresponds to the start of the organization's next billing cycle.

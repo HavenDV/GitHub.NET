@@ -43,7 +43,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.AnyOf<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>?, global::System.Collections.Generic.IList<global::GitHub.Stargazer>?>> ActivityListStargazersForRepoAsync(
+        public async global::System.Threading.Tasks.Task<global::System.AnyOf<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>, global::System.Collections.Generic.IList<global::GitHub.Stargazer>>> ActivityListStargazersForRepoAsync(
             string owner,
             string repo,
             int perPage,

@@ -6,7 +6,7 @@ namespace GitHub
     /// <summary>
     /// The repository directory that includes the source files for the Pages site. Allowed paths are `/` or `/docs`.
     /// </summary>
-    public enum ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path
+    public enum ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath
     {
         /// <summary>
         /// 
@@ -21,29 +21,29 @@ namespace GitHub
     /// <summary>
     /// Enum extensions to do fast conversions without the reflection.
     /// </summary>
-    public static class ReposUpdateInformationAboutPagesSiteRequestSourceVariant2PathExtensions
+    public static class ReposUpdateInformationAboutPagesSiteRequestSourceEnumPathExtensions
     {
         /// <summary>
         /// Converts an enum to a string.
         /// </summary>
-        public static string ToValueString(this ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path value)
+        public static string ToValueString(this ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath value)
         {
             return value switch
             {
-                ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path.x => "/",
-                ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path.Docs => "/docs",
+                ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath.x => "/",
+                ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath.Docs => "/docs",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
         /// <summary>
         /// Converts an string to a enum.
         /// </summary>
-        public static ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path? ToEnum(string value)
+        public static ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath? ToEnum(string value)
         {
             return value switch
             {
-                "/" => ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path.x,
-                "/docs" => ReposUpdateInformationAboutPagesSiteRequestSourceVariant2Path.Docs,
+                "/" => ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath.x,
+                "/docs" => ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath.Docs,
                 _ => null,
             };
         }

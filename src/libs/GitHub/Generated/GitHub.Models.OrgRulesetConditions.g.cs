@@ -14,9 +14,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget?>? Value1 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>? Value1 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget?>? Value1 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>? Value1 { get; }
 #endif
 
         /// <summary>
@@ -30,17 +30,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget?> value) => new OrgRulesetConditions(value);
+        public static implicit operator OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget> value) => new OrgRulesetConditions(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget?>?(OrgRulesetConditions @this) => @this.Value1;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>?(OrgRulesetConditions @this) => @this.Value1;
 
         /// <summary>
         /// 
         /// </summary>
-        public OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget?>? value)
+        public OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>? value)
         {
             Value1 = value;
         }
@@ -49,9 +49,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget?>? Value2 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>? Value2 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget?>? Value2 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>? Value2 { get; }
 #endif
 
         /// <summary>
@@ -65,17 +65,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget?> value) => new OrgRulesetConditions(value);
+        public static implicit operator OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget> value) => new OrgRulesetConditions(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget?>?(OrgRulesetConditions @this) => @this.Value2;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>?(OrgRulesetConditions @this) => @this.Value2;
 
         /// <summary>
         /// 
         /// </summary>
-        public OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget?>? value)
+        public OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>? value)
         {
             Value2 = value;
         }
@@ -84,9 +84,9 @@ namespace GitHub
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget?>? Value3 { get; init; }
+        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>? Value3 { get; init; }
 #else
-        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget?>? Value3 { get; }
+        public global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>? Value3 { get; }
 #endif
 
         /// <summary>
@@ -100,17 +100,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget?> value) => new OrgRulesetConditions(value);
+        public static implicit operator OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget> value) => new OrgRulesetConditions(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget?>?(OrgRulesetConditions @this) => @this.Value3;
+        public static implicit operator global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>?(OrgRulesetConditions @this) => @this.Value3;
 
         /// <summary>
         /// 
         /// </summary>
-        public OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget?>? value)
+        public OrgRulesetConditions(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>? value)
         {
             Value3 = value;
         }
@@ -119,9 +119,9 @@ namespace GitHub
         /// 
         /// </summary>
         public OrgRulesetConditions(
-            global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget?>? value1,
-            global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget?>? value2,
-            global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget?>? value3
+            global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>? value1,
+            global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>? value2,
+            global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>? value3
             )
         {
             Value1 = value1;
@@ -154,11 +154,11 @@ namespace GitHub
             var fields = new object?[]
             {
                 Value1,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget?>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>),
                 Value2,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget?>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>),
                 Value3,
-                typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget?>),
+                typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -174,9 +174,9 @@ namespace GitHub
         public bool Equals(OrgRulesetConditions other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget?>?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget?>?>.Default.Equals(Value2, other.Value2) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRulesetConditions?, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget?>?>.Default.Equals(Value3, other.Value3) 
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>?>.Default.Equals(Value1, other.Value1) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>?>.Default.Equals(Value2, other.Value2) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>?>.Default.Equals(Value3, other.Value3) 
                 ;
         }
 

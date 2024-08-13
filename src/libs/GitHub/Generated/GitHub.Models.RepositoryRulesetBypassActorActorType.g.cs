@@ -28,6 +28,10 @@ namespace GitHub
         /// 
         /// </summary>
         DeployKey,
+        /// <summary>
+        /// 
+        /// </summary>
+        EnterpriseTeam,
     }
 
     /// <summary>
@@ -47,6 +51,7 @@ namespace GitHub
                 RepositoryRulesetBypassActorActorType.RepositoryRole => "RepositoryRole",
                 RepositoryRulesetBypassActorActorType.Team => "Team",
                 RepositoryRulesetBypassActorActorType.DeployKey => "DeployKey",
+                RepositoryRulesetBypassActorActorType.EnterpriseTeam => "EnterpriseTeam",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -62,6 +67,7 @@ namespace GitHub
                 "RepositoryRole" => RepositoryRulesetBypassActorActorType.RepositoryRole,
                 "Team" => RepositoryRulesetBypassActorActorType.Team,
                 "DeployKey" => RepositoryRulesetBypassActorActorType.DeployKey,
+                "EnterpriseTeam" => RepositoryRulesetBypassActorActorType.EnterpriseTeam,
                 _ => null,
             };
         }

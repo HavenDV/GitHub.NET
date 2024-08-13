@@ -42,7 +42,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("payload")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<global::GitHub.ReposCreateDeploymentRequestPayload?, string?>? Payload { get; set; }
+        public global::System.OneOf<global::GitHub.ReposCreateDeploymentRequestPayload, string?>? Payload { get; set; }
 
         /// <summary>
         /// Name for the target deployment environment (e.g., `production`, `staging`, `qa`).<br/>

@@ -66,7 +66,7 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.AllOfJsonConverterFactory1))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.AllOf<global::GitHub.SimpleUser?>? Author { get; set; }
+        public required global::System.AllOf<global::GitHub.SimpleUser>? Author { get; set; }
 
         /// <summary>
         /// The publisher of the advisory.
@@ -74,7 +74,7 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("publisher")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.AllOfJsonConverterFactory1))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.AllOf<global::GitHub.SimpleUser?>? Publisher { get; set; }
+        public required global::System.AllOf<global::GitHub.SimpleUser>? Publisher { get; set; }
 
         /// <summary>
         /// 
@@ -195,7 +195,7 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("private_fork")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.AllOfJsonConverterFactory1))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.AllOf<global::GitHub.SimpleRepository?>? PrivateFork { get; set; }
+        public required global::System.AllOf<global::GitHub.SimpleRepository>? PrivateFork { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

@@ -8,12 +8,12 @@ namespace GitHub
         partial void PrepareProjectsCreateCardArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int columnId,
-            global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1?, global::GitHub.ProjectsCreateCardRequestVariant2?> request);
+            global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1, global::GitHub.ProjectsCreateCardRequestVariant2> request);
         partial void PrepareProjectsCreateCardRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int columnId,
-            global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1?, global::GitHub.ProjectsCreateCardRequestVariant2?> request);
+            global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1, global::GitHub.ProjectsCreateCardRequestVariant2> request);
         partial void ProcessProjectsCreateCardResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -32,7 +32,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ProjectCard> ProjectsCreateCardAsync(
             int columnId,
-            global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1?, global::GitHub.ProjectsCreateCardRequestVariant2?> request,
+            global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1, global::GitHub.ProjectsCreateCardRequestVariant2> request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -107,7 +107,7 @@ namespace GitHub
             int columnId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1?, global::GitHub.ProjectsCreateCardRequestVariant2?>
+            var request = new global::System.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1, global::GitHub.ProjectsCreateCardRequestVariant2>
             {
             };
 

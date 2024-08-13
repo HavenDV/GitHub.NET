@@ -34,7 +34,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.AnyOfJsonConverterFactory2))]
-        public global::System.AnyOf<global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant1?, global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2?>? Source { get; set; }
+        public global::System.AnyOf<global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum?, global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum2>? Source { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

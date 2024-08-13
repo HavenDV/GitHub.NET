@@ -132,7 +132,7 @@ namespace GitHub
             string? cname = default,
             bool httpsEnforced = default,
             global::GitHub.ReposUpdateInformationAboutPagesSiteRequestBuildType? buildType = default,
-            global::System.AnyOf<global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant1?, global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceVariant2?>? source = default,
+            global::System.AnyOf<global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum?, global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum2>? source = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.ReposUpdateInformationAboutPagesSiteRequest
