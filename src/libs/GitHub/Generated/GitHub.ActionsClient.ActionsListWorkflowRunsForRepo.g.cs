@@ -54,7 +54,7 @@ namespace GitHub
         /// <param name="repo"></param>
         /// <param name="actor"></param>
         /// <param name="branch"></param>
-        /// <param name="@event"></param>
+        /// <param name="event"></param>
         /// <param name="status"></param>
         /// <param name="perPage">
         /// Default Value: 30

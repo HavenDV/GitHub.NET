@@ -51,7 +51,7 @@ namespace GitHub
         /// <param name="owner"></param>
         /// <param name="repo"></param>
         /// <param name="path"></param>
-        /// <param name="@ref"></param>
+        /// <param name="ref"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ContentTree> ReposGetContentAsync(

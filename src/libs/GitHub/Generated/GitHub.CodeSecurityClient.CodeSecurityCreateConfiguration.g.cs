@@ -123,6 +123,13 @@ namespace GitHub
         /// The enablement status of Dependency Graph<br/>
         /// Default Value: enabled
         /// </param>
+        /// <param name="dependencyGraphAutosubmitAction">
+        /// The enablement status of Automatic dependency submission<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="dependencyGraphAutosubmitActionOptions">
+        /// Feature options for Automatic dependency submission
+        /// </param>
         /// <param name="dependabotAlerts">
         /// The enablement status of Dependabot alerts<br/>
         /// Default Value: disabled
@@ -163,6 +170,8 @@ namespace GitHub
             string description,
             global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity? advancedSecurity = global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph? dependencyGraph = global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph.Enabled,
+            global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction? dependencyGraphAutosubmitAction = global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction.Disabled,
+            global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionOptions? dependencyGraphAutosubmitActionOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts? dependabotAlerts = global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates? dependabotSecurityUpdates = global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup = global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup.Disabled,
@@ -179,6 +188,8 @@ namespace GitHub
                 Description = description,
                 AdvancedSecurity = advancedSecurity,
                 DependencyGraph = dependencyGraph,
+                DependencyGraphAutosubmitAction = dependencyGraphAutosubmitAction,
+                DependencyGraphAutosubmitActionOptions = dependencyGraphAutosubmitActionOptions,
                 DependabotAlerts = dependabotAlerts,
                 DependabotSecurityUpdates = dependabotSecurityUpdates,
                 CodeScanningDefaultSetup = codeScanningDefaultSetup,

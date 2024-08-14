@@ -41,7 +41,7 @@ namespace GitHub
         /// For more information, see "[Managing rulesets for repositories in your organization](https://docs.github.com/organizations/managing-organization-settings/managing-rulesets-for-repositories-in-your-organization#viewing-insights-for-rulesets)."
         /// </summary>
         /// <param name="org"></param>
-        /// <param name="@ref"></param>
+        /// <param name="ref"></param>
         /// <param name="repositoryName"></param>
         /// <param name="timePeriod">
         /// Default Value: day

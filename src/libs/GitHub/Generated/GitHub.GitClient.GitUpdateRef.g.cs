@@ -33,7 +33,7 @@ namespace GitHub
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
-        /// <param name="@ref"></param>
+        /// <param name="ref"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -118,7 +118,7 @@ namespace GitHub
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
-        /// <param name="@ref"></param>
+        /// <param name="ref"></param>
         /// <param name="sha">
         /// The SHA1 value to set this reference to
         /// </param>

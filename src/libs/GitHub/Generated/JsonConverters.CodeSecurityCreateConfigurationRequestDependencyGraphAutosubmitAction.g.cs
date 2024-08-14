@@ -3,10 +3,10 @@
 namespace OpenApiGenerator.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class OrgCustomPropertyValueTypeJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.OrgCustomPropertyValueType>
+    public sealed class CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction>
     {
         /// <inheritdoc />
-        public override global::GitHub.OrgCustomPropertyValueType Read(
+        public override global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace OpenApiGenerator.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::GitHub.OrgCustomPropertyValueTypeExtensions.ToEnum(stringValue) ?? default;
+                        return global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionExtensions.ToEnum(stringValue) ?? default;
                     }
                     
                     break;
@@ -26,7 +26,7 @@ namespace OpenApiGenerator.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::GitHub.OrgCustomPropertyValueType)numValue;
+                    return (global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction)numValue;
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -38,12 +38,12 @@ namespace OpenApiGenerator.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::GitHub.OrgCustomPropertyValueType value,
+            global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::GitHub.OrgCustomPropertyValueTypeExtensions.ToValueString(value));
+            writer.WriteStringValue(global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionExtensions.ToValueString(value));
         }
     }
 }

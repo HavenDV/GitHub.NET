@@ -44,7 +44,7 @@ namespace GitHub
         /// <param name="sha">
         /// Default Value: none
         /// </param>
-        /// <param name="@ref">
+        /// <param name="ref">
         /// Default Value: none
         /// </param>
         /// <param name="task">

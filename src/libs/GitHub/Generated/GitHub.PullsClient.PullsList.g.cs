@@ -57,7 +57,7 @@ namespace GitHub
         /// Default Value: open
         /// </param>
         /// <param name="head"></param>
-        /// <param name="@base"></param>
+        /// <param name="base"></param>
         /// <param name="sort">
         /// Default Value: created
         /// </param>

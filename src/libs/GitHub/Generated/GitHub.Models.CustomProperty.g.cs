@@ -8,7 +8,7 @@ namespace GitHub
     /// <summary>
     /// Custom property defined on an organization
     /// </summary>
-    public sealed partial class OrgCustomProperty
+    public sealed partial class CustomProperty
     {
         /// <summary>
         /// The name of the property
@@ -18,13 +18,19 @@ namespace GitHub
         public required string PropertyName { get; set; }
 
         /// <summary>
+        /// The URL that can be used to fetch, update, or delete info about this property via the API.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("url")]
+        public string? Url { get; set; }
+
+        /// <summary>
         /// The type of the value for the property<br/>
         /// Example: single_select
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value_type")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OrgCustomPropertyValueTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CustomPropertyValueTypeJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.OrgCustomPropertyValueType ValueType { get; set; }
+        public required global::GitHub.CustomPropertyValueType ValueType { get; set; }
 
         /// <summary>
         /// Whether the property is required.
@@ -57,8 +63,8 @@ namespace GitHub
         /// Example: org_actors
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("values_editable_by")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OrgCustomPropertyValuesEditableByJsonConverter))]
-        public global::GitHub.OrgCustomPropertyValuesEditableBy? ValuesEditableBy { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CustomPropertyValuesEditableByJsonConverter))]
+        public global::GitHub.CustomPropertyValuesEditableBy? ValuesEditableBy { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
