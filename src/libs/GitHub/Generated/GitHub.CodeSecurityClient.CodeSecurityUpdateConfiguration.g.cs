@@ -128,6 +128,12 @@ namespace GitHub
         /// <param name="dependencyGraph">
         /// The enablement status of Dependency Graph
         /// </param>
+        /// <param name="dependencyGraphAutosubmitAction">
+        /// The enablement status of Automatic dependency submission
+        /// </param>
+        /// <param name="dependencyGraphAutosubmitActionOptions">
+        /// Feature options for Automatic dependency submission
+        /// </param>
         /// <param name="dependabotAlerts">
         /// The enablement status of Dependabot alerts
         /// </param>
@@ -161,6 +167,8 @@ namespace GitHub
             string? description = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestAdvancedSecurity? advancedSecurity = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestDependencyGraph? dependencyGraph = default,
+            global::GitHub.CodeSecurityUpdateConfigurationRequestDependencyGraphAutosubmitAction? dependencyGraphAutosubmitAction = default,
+            global::GitHub.CodeSecurityUpdateConfigurationRequestDependencyGraphAutosubmitActionOptions? dependencyGraphAutosubmitActionOptions = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestDependabotAlerts? dependabotAlerts = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestDependabotSecurityUpdates? dependabotSecurityUpdates = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup = default,
@@ -177,6 +185,8 @@ namespace GitHub
                 Description = description,
                 AdvancedSecurity = advancedSecurity,
                 DependencyGraph = dependencyGraph,
+                DependencyGraphAutosubmitAction = dependencyGraphAutosubmitAction,
+                DependencyGraphAutosubmitActionOptions = dependencyGraphAutosubmitActionOptions,
                 DependabotAlerts = dependabotAlerts,
                 DependabotSecurityUpdates = dependabotSecurityUpdates,
                 CodeScanningDefaultSetup = codeScanningDefaultSetup,

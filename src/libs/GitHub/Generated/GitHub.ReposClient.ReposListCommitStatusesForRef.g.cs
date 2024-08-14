@@ -36,7 +36,7 @@ namespace GitHub
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
-        /// <param name="@ref"></param>
+        /// <param name="ref"></param>
         /// <param name="perPage">
         /// Default Value: 30
         /// </param>

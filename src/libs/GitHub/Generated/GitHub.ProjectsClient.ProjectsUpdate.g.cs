@@ -120,7 +120,7 @@ namespace GitHub
         /// <param name="organizationPermission">
         /// The baseline permission that all organization members have on this project
         /// </param>
-        /// <param name="@private">
+        /// <param name="private">
         /// Whether or not this project can be seen by everyone.
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

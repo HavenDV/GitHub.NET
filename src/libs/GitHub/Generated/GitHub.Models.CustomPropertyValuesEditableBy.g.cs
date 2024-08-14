@@ -7,7 +7,7 @@ namespace GitHub
     /// Who can edit the values of the property<br/>
     /// Example: org_actors
     /// </summary>
-    public enum OrgCustomPropertyValuesEditableBy
+    public enum CustomPropertyValuesEditableBy
     {
         /// <summary>
         /// 
@@ -22,29 +22,29 @@ namespace GitHub
     /// <summary>
     /// Enum extensions to do fast conversions without the reflection.
     /// </summary>
-    public static class OrgCustomPropertyValuesEditableByExtensions
+    public static class CustomPropertyValuesEditableByExtensions
     {
         /// <summary>
         /// Converts an enum to a string.
         /// </summary>
-        public static string ToValueString(this OrgCustomPropertyValuesEditableBy value)
+        public static string ToValueString(this CustomPropertyValuesEditableBy value)
         {
             return value switch
             {
-                OrgCustomPropertyValuesEditableBy.OrgActors => "org_actors",
-                OrgCustomPropertyValuesEditableBy.OrgAndRepoActors => "org_and_repo_actors",
+                CustomPropertyValuesEditableBy.OrgActors => "org_actors",
+                CustomPropertyValuesEditableBy.OrgAndRepoActors => "org_and_repo_actors",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
         /// <summary>
         /// Converts an string to a enum.
         /// </summary>
-        public static OrgCustomPropertyValuesEditableBy? ToEnum(string value)
+        public static CustomPropertyValuesEditableBy? ToEnum(string value)
         {
             return value switch
             {
-                "org_actors" => OrgCustomPropertyValuesEditableBy.OrgActors,
-                "org_and_repo_actors" => OrgCustomPropertyValuesEditableBy.OrgAndRepoActors,
+                "org_actors" => CustomPropertyValuesEditableBy.OrgActors,
+                "org_and_repo_actors" => CustomPropertyValuesEditableBy.OrgAndRepoActors,
                 _ => null,
             };
         }

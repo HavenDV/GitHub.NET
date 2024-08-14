@@ -48,7 +48,7 @@ namespace GitHub
         /// <param name="page">
         /// Default Value: 1
         /// </param>
-        /// <param name="@ref"></param>
+        /// <param name="ref"></param>
         /// <param name="key"></param>
         /// <param name="sort">
         /// Default Value: last_accessed_at

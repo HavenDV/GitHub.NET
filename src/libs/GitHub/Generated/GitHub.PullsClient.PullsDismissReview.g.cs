@@ -143,7 +143,7 @@ namespace GitHub
         /// <param name="message">
         /// The message for the pull request review dismissal
         /// </param>
-        /// <param name="@event">
+        /// <param name="event">
         /// Example: "DISMISS"
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

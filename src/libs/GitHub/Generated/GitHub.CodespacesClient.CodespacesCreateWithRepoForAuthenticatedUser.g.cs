@@ -114,7 +114,7 @@ namespace GitHub
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
-        /// <param name="@ref">
+        /// <param name="ref">
         /// Git ref (typically a branch name) for this codespace
         /// </param>
         /// <param name="location">

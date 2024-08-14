@@ -48,6 +48,19 @@ namespace GitHub
         public global::GitHub.CodeSecurityConfigurationDependencyGraph? DependencyGraph { get; set; }
 
         /// <summary>
+        /// The enablement status of Automatic dependency submission
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dependency_graph_autosubmit_action")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityConfigurationDependencyGraphAutosubmitActionJsonConverter))]
+        public global::GitHub.CodeSecurityConfigurationDependencyGraphAutosubmitAction? DependencyGraphAutosubmitAction { get; set; }
+
+        /// <summary>
+        /// Feature options for Automatic dependency submission
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dependency_graph_autosubmit_action_options")]
+        public global::GitHub.CodeSecurityConfigurationDependencyGraphAutosubmitActionOptions? DependencyGraphAutosubmitActionOptions { get; set; }
+
+        /// <summary>
         /// The enablement status of Dependabot alerts
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependabot_alerts")]

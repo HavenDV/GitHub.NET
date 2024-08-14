@@ -3,10 +3,10 @@
 namespace OpenApiGenerator.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class OrgCustomPropertyValuesEditableByJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.OrgCustomPropertyValuesEditableBy>
+    public sealed class CustomPropertyValueTypeJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.CustomPropertyValueType>
     {
         /// <inheritdoc />
-        public override global::GitHub.OrgCustomPropertyValuesEditableBy Read(
+        public override global::GitHub.CustomPropertyValueType Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace OpenApiGenerator.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::GitHub.OrgCustomPropertyValuesEditableByExtensions.ToEnum(stringValue) ?? default;
+                        return global::GitHub.CustomPropertyValueTypeExtensions.ToEnum(stringValue) ?? default;
                     }
                     
                     break;
@@ -26,7 +26,7 @@ namespace OpenApiGenerator.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::GitHub.OrgCustomPropertyValuesEditableBy)numValue;
+                    return (global::GitHub.CustomPropertyValueType)numValue;
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -38,12 +38,12 @@ namespace OpenApiGenerator.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::GitHub.OrgCustomPropertyValuesEditableBy value,
+            global::GitHub.CustomPropertyValueType value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::GitHub.OrgCustomPropertyValuesEditableByExtensions.ToValueString(value));
+            writer.WriteStringValue(global::GitHub.CustomPropertyValueTypeExtensions.ToValueString(value));
         }
     }
 }

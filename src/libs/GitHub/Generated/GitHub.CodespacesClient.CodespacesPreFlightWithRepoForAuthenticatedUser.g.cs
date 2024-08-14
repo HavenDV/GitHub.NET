@@ -34,7 +34,7 @@ namespace GitHub
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
-        /// <param name="@ref">
+        /// <param name="ref">
         /// Example: main
         /// </param>
         /// <param name="clientIp">
