@@ -48,8 +48,9 @@ namespace GitHub
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/rulesets", global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ReposCreateOrgRulesetRequest);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
-                content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ReposCreateOrgRulesetRequest),
+                content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
                 mediaType: "application/json");
             httpRequest.Content = __httpRequestContent;
@@ -111,7 +112,8 @@ namespace GitHub
         /// <param name="target">
         /// The target of the ruleset<br/>
         /// &gt; [!NOTE]<br/>
-        /// &gt; The `push` target is in beta and is subject to change.
+        /// &gt; The `push` target is in beta and is subject to change.<br/>
+        /// Default Value: branch
         /// </param>
         /// <param name="enforcement">
         /// The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page (`evaluate` is only available with GitHub Enterprise).
@@ -131,7 +133,7 @@ namespace GitHub
             string org,
             string name,
             global::GitHub.RepositoryRuleEnforcement enforcement,
-            global::GitHub.ReposCreateOrgRulesetRequestTarget? target = default,
+            global::GitHub.ReposCreateOrgRulesetRequestTarget? target = global::GitHub.ReposCreateOrgRulesetRequestTarget.Branch,
             global::System.Collections.Generic.IList<global::GitHub.RepositoryRulesetBypassActor>? bypassActors = default,
             global::GitHub.OrgRulesetConditions? conditions = default,
             global::System.Collections.Generic.IList<global::GitHub.RepositoryRule>? rules = default,

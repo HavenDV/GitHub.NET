@@ -80,8 +80,9 @@ namespace GitHub
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/releases/{releaseId}/assets?name={name}&label={label}", global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ByteArray);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
-                content: global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ByteArray),
+                content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
                 mediaType: "application/octet-stream");
             httpRequest.Content = __httpRequestContent;
