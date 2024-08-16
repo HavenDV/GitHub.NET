@@ -51,17 +51,12 @@ namespace OpenApiGenerator.JsonConverters
             catch (global::System.Text.Json.JsonException)
             {
             }
+
             var result = new global::GitHub.OrgRulesetConditions(
                 value1,
-
                 value2,
-
                 value3
                 );
-            if (!result.Validate())
-            {
-                throw new global::System.Text.Json.JsonException($"Invalid JSON format for OneOf<{typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>).Name}, {typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>).Name}, {typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>).Name}>");
-            }
 
             if (value1 != null)
             {
@@ -69,20 +64,19 @@ namespace OpenApiGenerator.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>).Name}");
                 _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-
             else if (value2 != null)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>).Name}");
                 _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-
             else if (value3 != null)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>).Name}");
                 _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+
             return result;
         }
 
@@ -95,25 +89,18 @@ namespace OpenApiGenerator.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (!value.Validate())
-            {
-                throw new global::System.Text.Json.JsonException($"Invalid OneOf<{typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>).Name}, {typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>).Name}, {typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>).Name}> object.");
-            }
-
             if (value.IsValue1)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1, typeInfo);
             }
-
             else if (value.IsValue2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value2, typeInfo);
             }
-
             else if (value.IsValue3)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>?> ??

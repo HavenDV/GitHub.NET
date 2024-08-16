@@ -39,15 +39,11 @@ namespace OpenApiGenerator.JsonConverters
             catch (global::System.Text.Json.JsonException)
             {
             }
+
             var result = new global::GitHub.WebhookPullRequestReviewRequestRemoved(
                 value1,
-
                 value2
                 );
-            if (!result.Validate())
-            {
-                throw new global::System.Text.Json.JsonException($"Invalid JSON format for OneOf<{typeof(global::GitHub.WebhookPullRequestReviewRequestRemovedVariant1).Name}, {typeof(global::GitHub.WebhookPullRequestReviewRequestRemovedVariant2).Name}>");
-            }
 
             if (value1 != null)
             {
@@ -55,13 +51,13 @@ namespace OpenApiGenerator.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.WebhookPullRequestReviewRequestRemovedVariant1).Name}");
                 _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-
             else if (value2 != null)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.WebhookPullRequestReviewRequestRemovedVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.WebhookPullRequestReviewRequestRemovedVariant2> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.WebhookPullRequestReviewRequestRemovedVariant2).Name}");
                 _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+
             return result;
         }
 
@@ -74,18 +70,12 @@ namespace OpenApiGenerator.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (!value.Validate())
-            {
-                throw new global::System.Text.Json.JsonException($"Invalid OneOf<{typeof(global::GitHub.WebhookPullRequestReviewRequestRemovedVariant1).Name}, {typeof(global::GitHub.WebhookPullRequestReviewRequestRemovedVariant2).Name}> object.");
-            }
-
             if (value.IsValue1)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.WebhookPullRequestReviewRequestRemovedVariant1), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.WebhookPullRequestReviewRequestRemovedVariant1?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.WebhookPullRequestReviewRequestRemovedVariant1).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1, typeInfo);
             }
-
             else if (value.IsValue2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.WebhookPullRequestReviewRequestRemovedVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.WebhookPullRequestReviewRequestRemovedVariant2?> ??
