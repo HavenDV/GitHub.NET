@@ -446,6 +446,8 @@ namespace GitHub
             typeof(global::OpenApiGenerator.JsonConverters.CodeScanningDefaultSetupUpdateLanguageNullableJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.CodeScanningSarifsStatusProcessingStatusJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.CodeScanningSarifsStatusProcessingStatusNullableJsonConverter),
+            typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityConfigurationForRepositoryStatusJsonConverter),
+            typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityConfigurationForRepositoryStatusNullableJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.CodespaceMachinePrebuildAvailabilityJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.CodespaceMachinePrebuildAvailabilityNullableJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.RepositoryInvitationPermissionsJsonConverter),
