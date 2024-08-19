@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestEditedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookPullRequestEditedAction Action { get; set; }
+        public global::GitHub.WebhookPullRequestEditedAction Action { get; set; }
 
         /// <summary>
         /// The changes to the comment if the action was `edited`.

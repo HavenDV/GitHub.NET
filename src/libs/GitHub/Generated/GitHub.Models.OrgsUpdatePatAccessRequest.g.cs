@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OrgsUpdatePatAccessRequestActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.OrgsUpdatePatAccessRequestAction Action { get; set; }
+        public global::GitHub.OrgsUpdatePatAccessRequestAction Action { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

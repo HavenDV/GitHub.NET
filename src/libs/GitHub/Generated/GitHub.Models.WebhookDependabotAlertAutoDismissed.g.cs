@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookDependabotAlertAutoDismissedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookDependabotAlertAutoDismissedAction Action { get; set; }
+        public global::GitHub.WebhookDependabotAlertAutoDismissedAction Action { get; set; }
 
         /// <summary>
         /// A Dependabot alert.

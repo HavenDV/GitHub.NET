@@ -15,8 +15,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookProjectsV2ItemEditedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookProjectsV2ItemEditedAction Action { get; set; }
+        public global::GitHub.WebhookProjectsV2ItemEditedAction Action { get; set; }
 
         /// <summary>
         /// The changes made to the item may involve modifications in the item's fields and draft issue body.<br/>

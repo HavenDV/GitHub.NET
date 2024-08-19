@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.RepositoryRuleWorkflowsTypeJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.RepositoryRuleWorkflowsType Type { get; set; }
+        public global::GitHub.RepositoryRuleWorkflowsType Type { get; set; }
 
         /// <summary>
         /// 

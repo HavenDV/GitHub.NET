@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookMemberEditedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookMemberEditedAction Action { get; set; }
+        public global::GitHub.WebhookMemberEditedAction Action { get; set; }
 
         /// <summary>
         /// The changes to the collaborator permissions

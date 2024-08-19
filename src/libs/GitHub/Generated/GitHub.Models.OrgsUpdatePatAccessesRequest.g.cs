@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OrgsUpdatePatAccessesRequestActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.OrgsUpdatePatAccessesRequestAction Action { get; set; }
+        public global::GitHub.OrgsUpdatePatAccessesRequestAction Action { get; set; }
 
         /// <summary>
         /// The IDs of the fine-grained personal access tokens.

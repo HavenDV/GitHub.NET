@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookCommitCommentCreatedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookCommitCommentCreatedAction Action { get; set; }
+        public global::GitHub.WebhookCommitCommentCreatedAction Action { get; set; }
 
         /// <summary>
         /// The [commit comment](https://docs.github.com/rest/commits/comments#get-a-commit-comment) resource.

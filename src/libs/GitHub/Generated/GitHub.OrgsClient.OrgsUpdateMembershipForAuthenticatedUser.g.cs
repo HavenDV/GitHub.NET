@@ -113,7 +113,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.OrgMembership> OrgsUpdateMembershipForAuthenticatedUserAsync(
             string org,
-            global::GitHub.OrgsUpdateMembershipForAuthenticatedUserRequestState state,
+            global::GitHub.OrgsUpdateMembershipForAuthenticatedUserRequestState state = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.OrgsUpdateMembershipForAuthenticatedUserRequest

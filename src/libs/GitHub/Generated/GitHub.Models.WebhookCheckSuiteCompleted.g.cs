@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookCheckSuiteCompletedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookCheckSuiteCompletedAction Action { get; set; }
+        public global::GitHub.WebhookCheckSuiteCompletedAction Action { get; set; }
 
         /// <summary>
         /// The [check_suite](https://docs.github.com/rest/checks/suites#get-a-check-suite).

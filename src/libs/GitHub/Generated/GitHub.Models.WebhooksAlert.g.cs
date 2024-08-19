@@ -119,8 +119,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksAlertStateJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhooksAlertState State { get; set; }
+        public global::GitHub.WebhooksAlertState State { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

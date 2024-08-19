@@ -75,8 +75,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookCodeScanningAlertFixedAlertStateJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookCodeScanningAlertFixedAlertState State { get; set; }
+        public global::GitHub.WebhookCodeScanningAlertFixedAlertState State { get; set; }
 
         /// <summary>
         /// 

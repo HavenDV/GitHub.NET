@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookCustomPropertyDeletedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookCustomPropertyDeletedAction Action { get; set; }
+        public global::GitHub.WebhookCustomPropertyDeletedAction Action { get; set; }
 
         /// <summary>
         /// 

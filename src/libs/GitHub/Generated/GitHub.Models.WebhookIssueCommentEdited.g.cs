@@ -15,8 +15,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookIssueCommentEditedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookIssueCommentEditedAction Action { get; set; }
+        public global::GitHub.WebhookIssueCommentEditedAction Action { get; set; }
 
         /// <summary>
         /// The changes to the comment.

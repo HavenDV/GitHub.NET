@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookMilestoneEditedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookMilestoneEditedAction Action { get; set; }
+        public global::GitHub.WebhookMilestoneEditedAction Action { get; set; }
 
         /// <summary>
         /// The changes to the milestone if the action was `edited`.

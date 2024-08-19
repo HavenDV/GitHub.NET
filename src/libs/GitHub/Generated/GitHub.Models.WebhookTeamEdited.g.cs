@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookTeamEditedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookTeamEditedAction Action { get; set; }
+        public global::GitHub.WebhookTeamEditedAction Action { get; set; }
 
         /// <summary>
         /// The changes to the team if the action was `edited`.

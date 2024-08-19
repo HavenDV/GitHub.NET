@@ -15,8 +15,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookIssueCommentDeletedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookIssueCommentDeletedAction Action { get; set; }
+        public global::GitHub.WebhookIssueCommentDeletedAction Action { get; set; }
 
         /// <summary>
         /// The [comment](https://docs.github.com/rest/issues/comments#get-an-issue-comment) itself.
