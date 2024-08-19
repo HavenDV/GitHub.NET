@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookPersonalAccessTokenRequestCancelledActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookPersonalAccessTokenRequestCancelledAction Action { get; set; }
+        public global::GitHub.WebhookPersonalAccessTokenRequestCancelledAction Action { get; set; }
 
         /// <summary>
         /// Details of a Personal Access Token Request.

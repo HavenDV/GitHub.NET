@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookLabelEditedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookLabelEditedAction Action { get; set; }
+        public global::GitHub.WebhookLabelEditedAction Action { get; set; }
 
         /// <summary>
         /// The changes to the label if the action was `edited`.

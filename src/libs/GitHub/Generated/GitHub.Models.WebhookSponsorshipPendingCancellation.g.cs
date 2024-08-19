@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookSponsorshipPendingCancellationActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookSponsorshipPendingCancellationAction Action { get; set; }
+        public global::GitHub.WebhookSponsorshipPendingCancellationAction Action { get; set; }
 
         /// <summary>
         /// The `pending_cancellation` and `pending_tier_change` event types will include the date the cancellation or tier change will take effect.

@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestReviewRequestedVariant1ActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookPullRequestReviewRequestedVariant1Action Action { get; set; }
+        public global::GitHub.WebhookPullRequestReviewRequestedVariant1Action Action { get; set; }
 
         /// <summary>
         /// An enterprise on GitHub. Webhook payloads contain the `enterprise` property when the webhook is configured<br/>

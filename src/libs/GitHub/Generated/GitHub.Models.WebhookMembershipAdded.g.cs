@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookMembershipAddedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookMembershipAddedAction Action { get; set; }
+        public global::GitHub.WebhookMembershipAddedAction Action { get; set; }
 
         /// <summary>
         /// An enterprise on GitHub. Webhook payloads contain the `enterprise` property when the webhook is configured<br/>
@@ -59,8 +58,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookMembershipAddedScopeJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookMembershipAddedScope Scope { get; set; }
+        public global::GitHub.WebhookMembershipAddedScope Scope { get; set; }
 
         /// <summary>
         /// 

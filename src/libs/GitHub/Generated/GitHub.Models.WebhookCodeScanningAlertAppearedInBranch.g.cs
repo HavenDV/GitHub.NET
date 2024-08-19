@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookCodeScanningAlertAppearedInBranchActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookCodeScanningAlertAppearedInBranchAction Action { get; set; }
+        public global::GitHub.WebhookCodeScanningAlertAppearedInBranchAction Action { get; set; }
 
         /// <summary>
         /// The code scanning alert involved in the event.

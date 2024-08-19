@@ -66,8 +66,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookPingHookNameJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookPingHookName Name { get; set; }
+        public global::GitHub.WebhookPingHookName Name { get; set; }
 
         /// <summary>
         /// 

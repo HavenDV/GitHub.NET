@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookBranchProtectionRuleEditedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookBranchProtectionRuleEditedAction Action { get; set; }
+        public global::GitHub.WebhookBranchProtectionRuleEditedAction Action { get; set; }
 
         /// <summary>
         /// If the action was `edited`, the changes to the rule.

@@ -118,8 +118,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsUpdatePatAccessesAsync(
             string org,
-            global::GitHub.OrgsUpdatePatAccessesRequestAction action,
             global::System.Collections.Generic.IList<int> patIds,
+            global::GitHub.OrgsUpdatePatAccessesRequestAction action = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.OrgsUpdatePatAccessesRequest

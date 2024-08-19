@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookMergeGroupChecksRequestedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookMergeGroupChecksRequestedAction Action { get; set; }
+        public global::GitHub.WebhookMergeGroupChecksRequestedAction Action { get; set; }
 
         /// <summary>
         /// The GitHub App installation. Webhook payloads contain the `installation` property when the event is configured<br/>

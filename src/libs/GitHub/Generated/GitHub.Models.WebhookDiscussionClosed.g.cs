@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookDiscussionClosedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookDiscussionClosedAction Action { get; set; }
+        public global::GitHub.WebhookDiscussionClosedAction Action { get; set; }
 
         /// <summary>
         /// A Discussion in a repository.

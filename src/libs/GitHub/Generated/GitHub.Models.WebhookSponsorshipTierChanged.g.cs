@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookSponsorshipTierChangedActionJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookSponsorshipTierChangedAction Action { get; set; }
+        public global::GitHub.WebhookSponsorshipTierChangedAction Action { get; set; }
 
         /// <summary>
         /// 

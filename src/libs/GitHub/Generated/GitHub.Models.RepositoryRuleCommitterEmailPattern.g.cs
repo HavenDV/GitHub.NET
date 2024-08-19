@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.RepositoryRuleCommitterEmailPatternTypeJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.RepositoryRuleCommitterEmailPatternType Type { get; set; }
+        public global::GitHub.RepositoryRuleCommitterEmailPatternType Type { get; set; }
 
         /// <summary>
         /// 

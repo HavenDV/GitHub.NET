@@ -76,8 +76,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksReleaseAssetStateJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhooksReleaseAssetState State { get; set; }
+        public global::GitHub.WebhooksReleaseAssetState State { get; set; }
 
         /// <summary>
         /// 
