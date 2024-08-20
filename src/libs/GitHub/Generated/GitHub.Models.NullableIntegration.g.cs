@@ -31,6 +31,12 @@ namespace GitHub
         public required string NodeId { get; set; }
 
         /// <summary>
+        /// Example: "Iv1.25b5d1e65ffc4022"
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("client_id")]
+        public string? ClientId { get; set; }
+
+        /// <summary>
         /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
@@ -101,12 +107,6 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("installations_count")]
         public int InstallationsCount { get; set; }
-
-        /// <summary>
-        /// Example: "Iv1.25b5d1e65ffc4022"
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("client_id")]
-        public string? ClientId { get; set; }
 
         /// <summary>
         /// Example: "1d4b2097ac622ba702d19de498f005747a8b21d3"
