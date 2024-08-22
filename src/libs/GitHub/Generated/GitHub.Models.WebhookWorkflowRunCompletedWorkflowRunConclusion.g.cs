@@ -40,6 +40,10 @@ namespace GitHub
         /// 
         /// </summary>
         TimedOut,
+        /// <summary>
+        /// 
+        /// </summary>
+        StartupFailure,
     }
 
     /// <summary>
@@ -62,6 +66,7 @@ namespace GitHub
                 WebhookWorkflowRunCompletedWorkflowRunConclusion.Stale => "stale",
                 WebhookWorkflowRunCompletedWorkflowRunConclusion.Success => "success",
                 WebhookWorkflowRunCompletedWorkflowRunConclusion.TimedOut => "timed_out",
+                WebhookWorkflowRunCompletedWorkflowRunConclusion.StartupFailure => "startup_failure",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -80,6 +85,7 @@ namespace GitHub
                 "stale" => WebhookWorkflowRunCompletedWorkflowRunConclusion.Stale,
                 "success" => WebhookWorkflowRunCompletedWorkflowRunConclusion.Success,
                 "timed_out" => WebhookWorkflowRunCompletedWorkflowRunConclusion.TimedOut,
+                "startup_failure" => WebhookWorkflowRunCompletedWorkflowRunConclusion.StartupFailure,
                 _ => null,
             };
         }
