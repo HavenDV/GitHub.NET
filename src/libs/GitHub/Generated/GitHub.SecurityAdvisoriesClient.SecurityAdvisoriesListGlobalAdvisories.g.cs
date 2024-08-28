@@ -18,6 +18,8 @@ namespace GitHub
             ref string? published,
             ref string? updated,
             ref string? modified,
+            ref string? epssPercentage,
+            ref string? epssPercentile,
             ref string? before,
             ref string? after,
             ref global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? direction,
@@ -37,6 +39,8 @@ namespace GitHub
             string? published,
             string? updated,
             string? modified,
+            string? epssPercentage,
+            string? epssPercentile,
             string? before,
             string? after,
             global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? direction,
@@ -71,6 +75,8 @@ namespace GitHub
         /// <param name="published"></param>
         /// <param name="updated"></param>
         /// <param name="modified"></param>
+        /// <param name="epssPercentage"></param>
+        /// <param name="epssPercentile"></param>
         /// <param name="before"></param>
         /// <param name="after"></param>
         /// <param name="direction">
@@ -96,6 +102,8 @@ namespace GitHub
             string? published,
             string? updated,
             string? modified,
+            string? epssPercentage,
+            string? epssPercentile,
             string? before,
             string? after,
             global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? direction,
@@ -118,6 +126,8 @@ namespace GitHub
                 published: ref published,
                 updated: ref updated,
                 modified: ref modified,
+                epssPercentage: ref epssPercentage,
+                epssPercentile: ref epssPercentile,
                 before: ref before,
                 after: ref after,
                 direction: ref direction,
@@ -126,7 +136,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/advisories?ghsa_id={ghsaId}&type={type}&cve_id={cveId}&ecosystem={ecosystem}&severity={severity}&cwes={cwes}&is_withdrawn={isWithdrawn}&affects={affects}&published={published}&updated={updated}&modified={modified}&before={before}&after={after}&direction={direction}&per_page={perPage}&sort={sort}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/advisories?ghsa_id={ghsaId}&type={type}&cve_id={cveId}&ecosystem={ecosystem}&severity={severity}&cwes={cwes}&is_withdrawn={isWithdrawn}&affects={affects}&published={published}&updated={updated}&modified={modified}&epss_percentage={epssPercentage}&epss_percentile={epssPercentile}&before={before}&after={after}&direction={direction}&per_page={perPage}&sort={sort}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -145,6 +155,8 @@ namespace GitHub
                 published: published,
                 updated: updated,
                 modified: modified,
+                epssPercentage: epssPercentage,
+                epssPercentile: epssPercentile,
                 before: before,
                 after: after,
                 direction: direction,

@@ -152,6 +152,12 @@ namespace GitHub
         public required global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCwe>? Cwes { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("epss")]
+        public global::GitHub.GlobalAdvisoryEpss? Epss { get; set; }
+
+        /// <summary>
         /// The users who contributed to the advisory.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("credits")]

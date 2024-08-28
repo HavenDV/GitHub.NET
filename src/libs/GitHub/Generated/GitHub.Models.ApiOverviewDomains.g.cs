@@ -39,6 +39,12 @@ namespace GitHub
         public global::System.Collections.Generic.IList<string>? Actions { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("artifact_attestations")]
+        public global::GitHub.ApiOverviewDomainsArtifactAttestations? ArtifactAttestations { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
