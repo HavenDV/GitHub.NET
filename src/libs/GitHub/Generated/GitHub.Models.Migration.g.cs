@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class Migration
     {
         /// <summary>
-        /// Example: 79
+        /// Example: 79L
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

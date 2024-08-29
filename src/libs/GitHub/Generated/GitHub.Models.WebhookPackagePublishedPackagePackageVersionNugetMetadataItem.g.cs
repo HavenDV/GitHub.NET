@@ -15,7 +15,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<int?, string?>? Id { get; set; }
+        public global::System.OneOf<int?, string>? Id { get; set; }
 
         /// <summary>
         /// 
@@ -28,7 +28,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory4))]
-        public global::System.OneOf<bool?, string?, int?, global::GitHub.WebhookPackagePublishedPackagePackageVersionNugetMetadataItemValue>? Value { get; set; }
+        public global::System.OneOf<bool?, string, int?, global::GitHub.WebhookPackagePublishedPackagePackageVersionNugetMetadataItemValue>? Value { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

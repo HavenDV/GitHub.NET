@@ -10,7 +10,7 @@ namespace GitHub
     {
         /// <summary>
         /// The id of the environment.<br/>
-        /// Example: 56780428
+        /// Example: 56780428L
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         public long Id { get; set; }

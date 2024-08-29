@@ -17,7 +17,7 @@ namespace GitHub
 
         /// <summary>
         /// The project card's ID<br/>
-        /// Example: 42
+        /// Example: 42L
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
