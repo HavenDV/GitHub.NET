@@ -10,7 +10,7 @@ namespace GitHub
     {
         /// <summary>
         /// The id of the check.<br/>
-        /// Example: 21
+        /// Example: 21L
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

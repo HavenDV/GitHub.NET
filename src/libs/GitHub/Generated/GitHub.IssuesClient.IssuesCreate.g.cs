@@ -148,11 +148,11 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.Issue> IssuesCreateAsync(
             string owner,
             string repo,
-            global::System.OneOf<string?, int?> title,
+            global::System.OneOf<string, int?> title,
             string? body = default,
             string? assignee = default,
-            global::System.OneOf<string?, int?>? milestone = default,
-            global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.IssuesCreateRequestLabel>>? labels = default,
+            global::System.OneOf<string, int?>? milestone = default,
+            global::System.Collections.Generic.IList<global::System.OneOf<string, global::GitHub.IssuesCreateRequestLabel>>? labels = default,
             global::System.Collections.Generic.IList<string>? assignees = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

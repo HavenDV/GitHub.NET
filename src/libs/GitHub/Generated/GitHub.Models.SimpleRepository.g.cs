@@ -10,7 +10,7 @@ namespace GitHub
     {
         /// <summary>
         /// A unique identifier of the repository.<br/>
-        /// Example: 1296269
+        /// Example: 1296269L
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

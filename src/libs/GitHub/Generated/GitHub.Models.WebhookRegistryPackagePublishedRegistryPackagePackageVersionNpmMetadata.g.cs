@@ -33,14 +33,14 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataAuthor>? Author { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataAuthor>? Author { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bugs")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataBugs>? Bugs { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataBugs>? Bugs { get; set; }
 
         /// <summary>
         /// 
@@ -77,7 +77,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dist")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDist>? Dist { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDist>? Dist { get; set; }
 
         /// <summary>
         /// 
@@ -108,7 +108,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataRepository>? Repository { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataRepository>? Repository { get; set; }
 
         /// <summary>
         /// 
@@ -187,7 +187,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("directories")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2))]
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDirectories>? Directories { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDirectories>? Directories { get; set; }
 
         /// <summary>
         /// 

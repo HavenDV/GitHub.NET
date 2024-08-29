@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class MinimalRepository
     {
         /// <summary>
-        /// Example: 1296269
+        /// Example: 1296269L
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

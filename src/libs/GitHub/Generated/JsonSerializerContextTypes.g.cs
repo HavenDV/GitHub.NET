@@ -165,7 +165,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, int?, global::System.Collections.Generic.IList<string>>? Type38 { get; set; }
+        public global::System.OneOf<string, int?, global::System.Collections.Generic.IList<string>>? Type38 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -701,11 +701,11 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.IssueLabel>>? Type172 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.OneOf<string, global::GitHub.IssueLabel>>? Type172 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.IssueLabel>? Type173 { get; set; }
+        public global::System.OneOf<string, global::GitHub.IssueLabel>? Type173 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -1465,7 +1465,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::System.Collections.Generic.IList<string>>? Type363 { get; set; }
+        public global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? Type363 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -2369,7 +2369,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<global::GitHub.DeploymentPayload, string?>? Type589 { get; set; }
+        public global::System.OneOf<global::GitHub.DeploymentPayload, string>? Type589 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -3505,11 +3505,11 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.NullableIssueLabel>>? Type873 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.OneOf<string, global::GitHub.NullableIssueLabel>>? Type873 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.NullableIssueLabel>? Type874 { get; set; }
+        public global::System.OneOf<string, global::GitHub.NullableIssueLabel>? Type874 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -3849,7 +3849,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<int?, string?>? Type959 { get; set; }
+        public global::System.OneOf<int?, string>? Type959 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -7629,7 +7629,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<global::GitHub.WebhookDeploymentCreatedDeploymentPayload, string?>? Type1904 { get; set; }
+        public global::System.OneOf<global::GitHub.WebhookDeploymentCreatedDeploymentPayload, string>? Type1904 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -8249,7 +8249,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.WebhookDeploymentStatusCreatedDeploymentPayload>? Type2059 { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookDeploymentStatusCreatedDeploymentPayload>? Type2059 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -13581,7 +13581,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.WebhookPackagePublishedPackagePackageVersionBody>? Type3392 { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookPackagePublishedPackagePackageVersionBody>? Type3392 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -13701,7 +13701,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<bool?, string?, int?, global::GitHub.WebhookPackagePublishedPackagePackageVersionNugetMetadataItemValue>? Type3422 { get; set; }
+        public global::System.OneOf<bool?, string, int?, global::GitHub.WebhookPackagePublishedPackagePackageVersionNugetMetadataItemValue>? Type3422 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -14185,7 +14185,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, int?, global::GitHub.ProjectsV2SingleSelectOption, global::GitHub.ProjectsV2IterationSetting>? Type3543 { get; set; }
+        public global::System.OneOf<string, int?, global::GitHub.ProjectsV2SingleSelectOption, global::GitHub.ProjectsV2IterationSetting>? Type3543 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -21273,7 +21273,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionBody>? Type5315 { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionBody>? Type5315 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -21317,7 +21317,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataAuthor>? Type5326 { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataAuthor>? Type5326 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -21325,7 +21325,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataBugs>? Type5328 { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataBugs>? Type5328 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -21349,7 +21349,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDist>? Type5334 { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDist>? Type5334 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -21357,7 +21357,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataRepository>? Type5336 { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataRepository>? Type5336 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -21381,7 +21381,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDirectories>? Type5342 { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadataDirectories>? Type5342 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -21397,7 +21397,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNugetMetadataItemId, int?>? Type5346 { get; set; }
+        public global::System.OneOf<string, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNugetMetadataItemId, int?>? Type5346 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -21405,7 +21405,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<bool?, string?, int?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNugetMetadataItemValue>? Type5348 { get; set; }
+        public global::System.OneOf<bool?, string, int?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNugetMetadataItemValue>? Type5348 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -24109,7 +24109,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<global::GitHub.ReposCreateDeploymentRequestPayload, string?>? Type6024 { get; set; }
+        public global::System.OneOf<global::GitHub.ReposCreateDeploymentRequestPayload, string>? Type6024 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -24277,15 +24277,15 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, int?>? Type6066 { get; set; }
+        public global::System.OneOf<string, int?>? Type6066 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.IssuesCreateRequestLabel>>? Type6067 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.OneOf<string, global::GitHub.IssuesCreateRequestLabel>>? Type6067 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.IssuesCreateRequestLabel>? Type6068 { get; set; }
+        public global::System.OneOf<string, global::GitHub.IssuesCreateRequestLabel>? Type6068 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -24317,11 +24317,11 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.OneOf<string?, global::GitHub.IssuesUpdateRequestLabel>>? Type6076 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.OneOf<string, global::GitHub.IssuesUpdateRequestLabel>>? Type6076 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<string?, global::GitHub.IssuesUpdateRequestLabel>? Type6077 { get; set; }
+        public global::System.OneOf<string, global::GitHub.IssuesUpdateRequestLabel>? Type6077 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -24341,7 +24341,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesAddLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>, string?>? Type6082 { get; set; }
+        public global::System.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesAddLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>, string>? Type6082 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -24369,7 +24369,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<global::GitHub.IssuesSetLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesSetLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesSetLabelsRequestVariant4Item>, string?>? Type6089 { get; set; }
+        public global::System.OneOf<global::GitHub.IssuesSetLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesSetLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesSetLabelsRequestVariant4Item>, string>? Type6089 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -24841,11 +24841,11 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.AnyOf<int?, string?>>? Type6207 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.AnyOf<int?, string>>? Type6207 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.AnyOf<int?, string?>? Type6208 { get; set; }
+        public global::System.AnyOf<int?, string>? Type6208 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -24869,7 +24869,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest2, global::System.Collections.Generic.IList<string>, string?>? Type6214 { get; set; }
+        public global::System.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest2, global::System.Collections.Generic.IList<string>, string>? Type6214 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -24877,7 +24877,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::System.OneOf<global::GitHub.UsersDeleteEmailForAuthenticatedUserRequest2, global::System.Collections.Generic.IList<string>, string?>? Type6216 { get; set; }
+        public global::System.OneOf<global::GitHub.UsersDeleteEmailForAuthenticatedUserRequest2, global::System.Collections.Generic.IList<string>, string>? Type6216 { get; set; }
         /// <summary>
         /// 
         /// </summary>

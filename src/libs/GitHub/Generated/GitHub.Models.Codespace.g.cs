@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class Codespace
     {
         /// <summary>
-        /// Example: 1
+        /// Example: 1L
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

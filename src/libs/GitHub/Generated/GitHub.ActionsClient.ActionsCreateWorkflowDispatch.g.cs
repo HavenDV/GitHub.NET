@@ -9,14 +9,14 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::System.OneOf<int?, string?> workflowId,
+            ref global::System.OneOf<int?, string> workflowId,
             global::GitHub.ActionsCreateWorkflowDispatchRequest request);
         partial void PrepareActionsCreateWorkflowDispatchRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::System.OneOf<int?, string?> workflowId,
+            global::System.OneOf<int?, string> workflowId,
             global::GitHub.ActionsCreateWorkflowDispatchRequest request);
         partial void ProcessActionsCreateWorkflowDispatchResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -37,7 +37,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task ActionsCreateWorkflowDispatchAsync(
             string owner,
             string repo,
-            global::System.OneOf<int?, string?> workflowId,
+            global::System.OneOf<int?, string> workflowId,
             global::GitHub.ActionsCreateWorkflowDispatchRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -107,7 +107,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task ActionsCreateWorkflowDispatchAsync(
             string owner,
             string repo,
-            global::System.OneOf<int?, string?> workflowId,
+            global::System.OneOf<int?, string> workflowId,
             string @ref,
             global::GitHub.ActionsCreateWorkflowDispatchRequestInputs? inputs = default,
             global::System.Threading.CancellationToken cancellationToken = default)

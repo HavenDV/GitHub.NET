@@ -12,6 +12,7 @@ namespace GitHub
         /// The visibility of newly created repositories for which the code security configuration will be applied to by default
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("default_for_new_repos")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityDefaultConfigurationDefaultForNewReposJsonConverter))]
         public global::GitHub.CodeSecurityDefaultConfigurationDefaultForNewRepos? DefaultForNewRepos { get; set; }
 
         /// <summary>

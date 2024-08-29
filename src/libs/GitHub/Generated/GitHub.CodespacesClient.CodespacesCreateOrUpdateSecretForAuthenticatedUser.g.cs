@@ -127,7 +127,7 @@ namespace GitHub
             string secretName,
             string keyId,
             string? encryptedValue = default,
-            global::System.Collections.Generic.IList<global::System.AnyOf<int?, string?>>? selectedRepositoryIds = default,
+            global::System.Collections.Generic.IList<global::System.AnyOf<int?, string>>? selectedRepositoryIds = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest

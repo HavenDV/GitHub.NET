@@ -11,7 +11,7 @@ namespace GitHub
     {
         /// <summary>
         /// Unique identifier of the repository<br/>
-        /// Example: 42
+        /// Example: 42L
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]

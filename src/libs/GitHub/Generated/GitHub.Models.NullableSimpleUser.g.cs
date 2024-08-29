@@ -28,7 +28,7 @@ namespace GitHub
         public required string Login { get; set; }
 
         /// <summary>
-        /// Example: 1
+        /// Example: 1L
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
