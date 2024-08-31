@@ -46,8 +46,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.ReposGetAllEnvironmentsResponse> ReposGetAllEnvironmentsAsync(
             string owner,
             string repo,
-            int perPage,
-            int page,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

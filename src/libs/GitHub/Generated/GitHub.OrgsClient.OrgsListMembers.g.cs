@@ -50,10 +50,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>> OrgsListMembersAsync(
             string org,
-            global::GitHub.OrgsListMembersFilter? filter,
-            global::GitHub.OrgsListMembersRole? role,
-            int perPage,
-            int page,
+            global::GitHub.OrgsListMembersFilter? filter = global::GitHub.OrgsListMembersFilter.All,
+            global::GitHub.OrgsListMembersRole? role = global::GitHub.OrgsListMembersRole.All,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -68,7 +68,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/members?filter={filter}&role={role}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/members?filter={(global::System.Uri.EscapeDataString(filter?.ToValueString() ?? string.Empty))}&role={(global::System.Uri.EscapeDataString(role?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

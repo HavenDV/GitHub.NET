@@ -50,10 +50,10 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.ReposListAttestationsResponse> ReposListAttestationsAsync(
             string owner,
             string repo,
-            int perPage,
-            string? before,
-            string? after,
             string subjectDigest,
+            int perPage = 30,
+            string? before = default,
+            string? after = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

@@ -49,9 +49,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset>> ReposGetRepoRulesetsAsync(
             string owner,
             string repo,
-            int perPage,
-            int page,
-            bool includesParents,
+            int perPage = 30,
+            int page = 1,
+            bool includesParents = true,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

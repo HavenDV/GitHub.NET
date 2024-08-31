@@ -38,8 +38,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.Hovercard> UsersGetContextForUserAsync(
             string username,
-            global::GitHub.UsersGetContextForUserSubjectType? subjectType,
-            string? subjectId,
+            global::GitHub.UsersGetContextForUserSubjectType? subjectType = default,
+            string? subjectId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -52,7 +52,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/users/{username}/hovercard?subject_type={subjectType}&subject_id={subjectId}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/users/{username}/hovercard?subject_type={(global::System.Uri.EscapeDataString(subjectType?.ToValueString() ?? string.Empty))}&subject_id={subjectId}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

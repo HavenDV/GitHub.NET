@@ -52,10 +52,10 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfigurationRepositories>> CodeSecurityGetRepositoriesForConfigurationAsync(
             string org,
             int configurationId,
-            int perPage,
-            string? before,
-            string? after,
-            string? status,
+            int perPage = 30,
+            string? before = default,
+            string? after = default,
+            string? status = "all",
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

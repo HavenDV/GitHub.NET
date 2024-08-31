@@ -41,7 +41,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> PackagesRestorePackageForAuthenticatedUserAsync(
             global::GitHub.PackagesRestorePackageForAuthenticatedUserPackageType packageType,
             string packageName,
-            string? token,
+            string? token = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

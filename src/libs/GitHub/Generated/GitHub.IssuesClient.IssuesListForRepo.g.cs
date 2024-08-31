@@ -84,17 +84,17 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Issue>> IssuesListForRepoAsync(
             string owner,
             string repo,
-            string? milestone,
-            global::GitHub.IssuesListForRepoState? state,
-            string? assignee,
-            string? creator,
-            string? mentioned,
-            string? labels,
-            global::GitHub.IssuesListForRepoSort? sort,
-            global::GitHub.IssuesListForRepoDirection? direction,
-            global::System.DateTime since,
-            int perPage,
-            int page,
+            string? milestone = default,
+            global::GitHub.IssuesListForRepoState? state = global::GitHub.IssuesListForRepoState.Open,
+            string? assignee = default,
+            string? creator = default,
+            string? mentioned = default,
+            string? labels = default,
+            global::GitHub.IssuesListForRepoSort? sort = global::GitHub.IssuesListForRepoSort.Created,
+            global::GitHub.IssuesListForRepoDirection? direction = global::GitHub.IssuesListForRepoDirection.Desc,
+            global::System.DateTime since = default,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -117,7 +117,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/issues?milestone={milestone}&state={state}&assignee={assignee}&creator={creator}&mentioned={mentioned}&labels={labels}&sort={sort}&direction={direction}&since={since:yyyy-MM-ddTHH:mm:ssZ}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/issues?milestone={milestone}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&assignee={assignee}&creator={creator}&mentioned={mentioned}&labels={labels}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&since={since:yyyy-MM-ddTHH:mm:ssZ}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

@@ -61,12 +61,12 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RuleSuite>> ReposGetRepoRuleSuitesAsync(
             string owner,
             string repo,
-            string? @ref,
-            global::GitHub.ReposGetRepoRuleSuitesTimePeriod? timePeriod,
-            string? actorName,
-            global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult? ruleSuiteResult,
-            int perPage,
-            int page,
+            string? @ref = default,
+            global::GitHub.ReposGetRepoRuleSuitesTimePeriod? timePeriod = global::GitHub.ReposGetRepoRuleSuitesTimePeriod.Day,
+            string? actorName = default,
+            global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult? ruleSuiteResult = global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult.All,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -84,7 +84,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/rulesets/rule-suites?ref={@ref}&time_period={timePeriod}&actor_name={actorName}&rule_suite_result={ruleSuiteResult}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/rulesets/rule-suites?ref={@ref}&time_period={(global::System.Uri.EscapeDataString(timePeriod?.ToValueString() ?? string.Empty))}&actor_name={actorName}&rule_suite_result={(global::System.Uri.EscapeDataString(ruleSuiteResult?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

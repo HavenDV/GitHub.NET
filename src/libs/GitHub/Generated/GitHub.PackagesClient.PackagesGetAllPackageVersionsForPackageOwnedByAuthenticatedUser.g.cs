@@ -50,9 +50,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.PackageVersion>> PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserAsync(
             global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserPackageType packageType,
             string packageName,
-            int page,
-            int perPage,
-            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState? state,
+            int page = 1,
+            int perPage = 30,
+            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState? state = global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState.Active,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -67,7 +67,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/user/packages/{packageType}/{packageName}/versions?page={page}&per_page={perPage}&state={state}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/user/packages/{packageType}/{packageName}/versions?page={page}&per_page={perPage}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

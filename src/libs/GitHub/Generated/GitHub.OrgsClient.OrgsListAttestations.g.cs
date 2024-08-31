@@ -45,11 +45,11 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.OrgsListAttestationsResponse> OrgsListAttestationsAsync(
-            int perPage,
-            string? before,
-            string? after,
             string org,
             string subjectDigest,
+            int perPage = 30,
+            string? before = default,
+            string? after = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

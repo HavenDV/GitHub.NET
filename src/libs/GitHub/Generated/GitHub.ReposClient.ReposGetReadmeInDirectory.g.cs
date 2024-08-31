@@ -44,7 +44,7 @@ namespace GitHub
             string owner,
             string repo,
             string dir,
-            string? @ref,
+            string? @ref = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

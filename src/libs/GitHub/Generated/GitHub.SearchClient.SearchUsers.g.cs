@@ -53,10 +53,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchUsersResponse> SearchUsersAsync(
             string q,
-            global::GitHub.SearchUsersSort? sort,
-            global::GitHub.SearchUsersOrder? order,
-            int perPage,
-            int page,
+            global::GitHub.SearchUsersSort? sort = default,
+            global::GitHub.SearchUsersOrder? order = global::GitHub.SearchUsersOrder.Desc,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -71,7 +71,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/search/users?q={q}&sort={sort}&order={order}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/search/users?q={q}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&order={(global::System.Uri.EscapeDataString(order?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

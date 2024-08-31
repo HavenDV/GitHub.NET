@@ -48,9 +48,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CodespacesRepoMachinesForAuthenticatedUserResponse> CodespacesRepoMachinesForAuthenticatedUserAsync(
             string owner,
             string repo,
-            string? location,
-            string? clientIp,
-            string? @ref,
+            string? location = default,
+            string? clientIp = default,
+            string? @ref = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

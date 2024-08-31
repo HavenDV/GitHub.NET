@@ -76,18 +76,18 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.DependabotAlertWithRepository>> DependabotListAlertsForOrgAsync(
             string org,
-            string? state,
-            string? severity,
-            string? ecosystem,
-            string? package,
-            global::GitHub.DependabotListAlertsForOrgScope? scope,
-            global::GitHub.DependabotListAlertsForOrgSort? sort,
-            global::GitHub.DependabotListAlertsForOrgDirection? direction,
-            string? before,
-            string? after,
-            int first,
-            int last,
-            int perPage,
+            string? state = default,
+            string? severity = default,
+            string? ecosystem = default,
+            string? package = default,
+            global::GitHub.DependabotListAlertsForOrgScope? scope = default,
+            global::GitHub.DependabotListAlertsForOrgSort? sort = global::GitHub.DependabotListAlertsForOrgSort.Created,
+            global::GitHub.DependabotListAlertsForOrgDirection? direction = global::GitHub.DependabotListAlertsForOrgDirection.Desc,
+            string? before = default,
+            string? after = default,
+            int first = 30,
+            int last = default,
+            int perPage = 30,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -110,7 +110,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/dependabot/alerts?state={state}&severity={severity}&ecosystem={ecosystem}&package={package}&scope={scope}&sort={sort}&direction={direction}&before={before}&after={after}&first={first}&last={last}&per_page={perPage}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/dependabot/alerts?state={state}&severity={severity}&ecosystem={ecosystem}&package={package}&scope={(global::System.Uri.EscapeDataString(scope?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&before={before}&after={after}&first={first}&last={last}&per_page={perPage}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

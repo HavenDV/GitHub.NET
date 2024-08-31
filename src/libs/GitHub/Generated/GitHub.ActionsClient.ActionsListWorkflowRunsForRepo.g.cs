@@ -73,16 +73,16 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.ActionsListWorkflowRunsForRepoResponse> ActionsListWorkflowRunsForRepoAsync(
             string owner,
             string repo,
-            string? actor,
-            string? branch,
-            string? @event,
-            global::GitHub.ActionsListWorkflowRunsForRepoStatus? status,
-            int perPage,
-            int page,
-            global::System.DateTime created,
-            bool excludePullRequests,
-            int checkSuiteId,
-            string? headSha,
+            string? actor = default,
+            string? branch = default,
+            string? @event = default,
+            global::GitHub.ActionsListWorkflowRunsForRepoStatus? status = default,
+            int perPage = 30,
+            int page = 1,
+            global::System.DateTime created = default,
+            bool excludePullRequests = false,
+            int checkSuiteId = default,
+            string? headSha = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -104,7 +104,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/actions/runs?actor={actor}&branch={branch}&event={@event}&status={status}&per_page={perPage}&page={page}&created={created:yyyy-MM-ddTHH:mm:ssZ}&exclude_pull_requests={excludePullRequests}&check_suite_id={checkSuiteId}&head_sha={headSha}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/actions/runs?actor={actor}&branch={branch}&event={@event}&status={(global::System.Uri.EscapeDataString(status?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}&created={created:yyyy-MM-ddTHH:mm:ssZ}&exclude_pull_requests={excludePullRequests}&check_suite_id={checkSuiteId}&head_sha={headSha}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

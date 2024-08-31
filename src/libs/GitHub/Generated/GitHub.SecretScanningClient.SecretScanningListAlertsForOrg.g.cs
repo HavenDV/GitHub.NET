@@ -70,16 +70,16 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrganizationSecretScanningAlert>> SecretScanningListAlertsForOrgAsync(
             string org,
-            global::GitHub.SecretScanningListAlertsForOrgState? state,
-            string? secretType,
-            string? resolution,
-            global::GitHub.SecretScanningListAlertsForOrgSort? sort,
-            global::GitHub.SecretScanningListAlertsForOrgDirection? direction,
-            int page,
-            int perPage,
-            string? before,
-            string? after,
-            string? validity,
+            global::GitHub.SecretScanningListAlertsForOrgState? state = default,
+            string? secretType = default,
+            string? resolution = default,
+            global::GitHub.SecretScanningListAlertsForOrgSort? sort = global::GitHub.SecretScanningListAlertsForOrgSort.Created,
+            global::GitHub.SecretScanningListAlertsForOrgDirection? direction = global::GitHub.SecretScanningListAlertsForOrgDirection.Desc,
+            int page = 1,
+            int perPage = 30,
+            string? before = default,
+            string? after = default,
+            string? validity = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -100,7 +100,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/secret-scanning/alerts?state={state}&secret_type={secretType}&resolution={resolution}&sort={sort}&direction={direction}&page={page}&per_page={perPage}&before={before}&after={after}&validity={validity}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/secret-scanning/alerts?state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&secret_type={secretType}&resolution={resolution}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&page={page}&per_page={perPage}&before={before}&after={after}&validity={validity}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

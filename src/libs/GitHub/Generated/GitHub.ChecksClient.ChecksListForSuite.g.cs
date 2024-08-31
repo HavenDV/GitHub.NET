@@ -62,11 +62,11 @@ namespace GitHub
             string owner,
             string repo,
             int checkSuiteId,
-            string? checkName,
-            global::GitHub.ChecksListForSuiteStatus? status,
-            global::GitHub.ChecksListForSuiteFilter? filter,
-            int perPage,
-            int page,
+            string? checkName = default,
+            global::GitHub.ChecksListForSuiteStatus? status = default,
+            global::GitHub.ChecksListForSuiteFilter? filter = global::GitHub.ChecksListForSuiteFilter.Latest,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -84,7 +84,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/check-suites/{checkSuiteId}/check-runs?check_name={checkName}&status={status}&filter={filter}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/check-suites/{checkSuiteId}/check-runs?check_name={checkName}&status={(global::System.Uri.EscapeDataString(status?.ToValueString() ?? string.Empty))}&filter={(global::System.Uri.EscapeDataString(filter?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

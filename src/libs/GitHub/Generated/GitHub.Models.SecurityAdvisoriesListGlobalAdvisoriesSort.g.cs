@@ -16,6 +16,14 @@ namespace GitHub
         /// 
         /// </summary>
         Published,
+        /// <summary>
+        /// 
+        /// </summary>
+        EpssPercentage,
+        /// <summary>
+        /// 
+        /// </summary>
+        EpssPercentile,
     }
 
     /// <summary>
@@ -32,6 +40,8 @@ namespace GitHub
             {
                 SecurityAdvisoriesListGlobalAdvisoriesSort.Updated => "updated",
                 SecurityAdvisoriesListGlobalAdvisoriesSort.Published => "published",
+                SecurityAdvisoriesListGlobalAdvisoriesSort.EpssPercentage => "epss_percentage",
+                SecurityAdvisoriesListGlobalAdvisoriesSort.EpssPercentile => "epss_percentile",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +54,8 @@ namespace GitHub
             {
                 "updated" => SecurityAdvisoriesListGlobalAdvisoriesSort.Updated,
                 "published" => SecurityAdvisoriesListGlobalAdvisoriesSort.Published,
+                "epss_percentage" => SecurityAdvisoriesListGlobalAdvisoriesSort.EpssPercentage,
+                "epss_percentile" => SecurityAdvisoriesListGlobalAdvisoriesSort.EpssPercentile,
                 _ => null,
             };
         }
