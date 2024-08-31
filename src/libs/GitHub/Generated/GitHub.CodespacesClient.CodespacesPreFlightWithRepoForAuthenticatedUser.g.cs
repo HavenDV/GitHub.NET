@@ -45,8 +45,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CodespacesPreFlightWithRepoForAuthenticatedUserResponse> CodespacesPreFlightWithRepoForAuthenticatedUserAsync(
             string owner,
             string repo,
-            string? @ref,
-            string? clientIp,
+            string? @ref = default,
+            string? clientIp = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

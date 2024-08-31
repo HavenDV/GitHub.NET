@@ -46,7 +46,7 @@ namespace GitHub
             global::GitHub.PackagesRestorePackageForUserPackageType packageType,
             string packageName,
             string username,
-            string? token,
+            string? token = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

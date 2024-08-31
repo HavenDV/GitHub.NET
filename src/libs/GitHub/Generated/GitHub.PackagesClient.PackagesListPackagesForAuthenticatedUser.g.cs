@@ -44,9 +44,9 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Package>> PackagesListPackagesForAuthenticatedUserAsync(
             global::GitHub.PackagesListPackagesForAuthenticatedUserPackageType packageType,
-            global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? visibility,
-            int page,
-            int perPage,
+            global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? visibility = default,
+            int page = 1,
+            int perPage = 30,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -60,7 +60,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/user/packages?package_type={packageType}&visibility={visibility}&page={page}&per_page={perPage}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/user/packages?package_type={(global::System.Uri.EscapeDataString(packageType.ToValueString() ?? string.Empty))}&visibility={(global::System.Uri.EscapeDataString(visibility?.ToValueString() ?? string.Empty))}&page={page}&per_page={perPage}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

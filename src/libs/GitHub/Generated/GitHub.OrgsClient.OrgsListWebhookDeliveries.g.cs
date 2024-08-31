@@ -48,9 +48,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.HookDeliveryItem>> OrgsListWebhookDeliveriesAsync(
             string org,
             int hookId,
-            int perPage,
-            string? cursor,
-            bool redelivery,
+            int perPage = 30,
+            string? cursor = default,
+            bool redelivery = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

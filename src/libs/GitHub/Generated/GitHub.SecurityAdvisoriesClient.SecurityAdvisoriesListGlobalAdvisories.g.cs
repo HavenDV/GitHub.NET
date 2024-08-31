@@ -91,24 +91,24 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisory>> SecurityAdvisoriesListGlobalAdvisoriesAsync(
-            string? ghsaId,
-            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesType? type,
-            string? cveId,
-            global::GitHub.SecurityAdvisoryEcosystems? ecosystem,
-            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSeverity? severity,
-            global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? cwes,
-            bool isWithdrawn,
-            global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? affects,
-            string? published,
-            string? updated,
-            string? modified,
-            string? epssPercentage,
-            string? epssPercentile,
-            string? before,
-            string? after,
-            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? direction,
-            int perPage,
-            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort? sort,
+            string? ghsaId = default,
+            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesType? type = global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesType.Reviewed,
+            string? cveId = default,
+            global::GitHub.SecurityAdvisoryEcosystems? ecosystem = default,
+            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSeverity? severity = default,
+            global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? cwes = default,
+            bool isWithdrawn = default,
+            global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? affects = default,
+            string? published = default,
+            string? updated = default,
+            string? modified = default,
+            string? epssPercentage = default,
+            string? epssPercentile = default,
+            string? before = default,
+            string? after = default,
+            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? direction = global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection.Desc,
+            int perPage = 30,
+            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort? sort = global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort.Published,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -136,7 +136,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/advisories?ghsa_id={ghsaId}&type={type}&cve_id={cveId}&ecosystem={ecosystem}&severity={severity}&cwes={cwes}&is_withdrawn={isWithdrawn}&affects={affects}&published={published}&updated={updated}&modified={modified}&epss_percentage={epssPercentage}&epss_percentile={epssPercentile}&before={before}&after={after}&direction={direction}&per_page={perPage}&sort={sort}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/advisories?ghsa_id={ghsaId}&type={(global::System.Uri.EscapeDataString(type?.ToValueString() ?? string.Empty))}&cve_id={cveId}&ecosystem={(global::System.Uri.EscapeDataString(ecosystem?.ToValueString() ?? string.Empty))}&severity={(global::System.Uri.EscapeDataString(severity?.ToValueString() ?? string.Empty))}&cwes={cwes}&is_withdrawn={isWithdrawn}&affects={affects}&published={published}&updated={updated}&modified={modified}&epss_percentage={epssPercentage}&epss_percentile={epssPercentile}&before={before}&after={after}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&per_page={perPage}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

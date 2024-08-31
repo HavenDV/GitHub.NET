@@ -41,7 +41,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.PorterAuthor>> MigrationsGetCommitAuthorsAsync(
             string owner,
             string repo,
-            int since,
+            int since = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

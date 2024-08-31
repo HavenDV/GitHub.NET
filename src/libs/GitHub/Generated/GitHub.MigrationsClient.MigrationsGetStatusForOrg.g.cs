@@ -43,7 +43,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.Migration> MigrationsGetStatusForOrgAsync(
             string org,
             int migrationId,
-            global::System.Collections.Generic.IList<global::GitHub.MigrationsGetStatusForOrgExcludeItem>? exclude,
+            global::System.Collections.Generic.IList<global::GitHub.MigrationsGetStatusForOrgExcludeItem>? exclude = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

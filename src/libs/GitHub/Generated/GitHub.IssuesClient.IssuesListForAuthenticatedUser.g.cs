@@ -69,14 +69,14 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Issue>> IssuesListForAuthenticatedUserAsync(
-            global::GitHub.IssuesListForAuthenticatedUserFilter? filter,
-            global::GitHub.IssuesListForAuthenticatedUserState? state,
-            string? labels,
-            global::GitHub.IssuesListForAuthenticatedUserSort? sort,
-            global::GitHub.IssuesListForAuthenticatedUserDirection? direction,
-            global::System.DateTime since,
-            int perPage,
-            int page,
+            global::GitHub.IssuesListForAuthenticatedUserFilter? filter = global::GitHub.IssuesListForAuthenticatedUserFilter.Assigned,
+            global::GitHub.IssuesListForAuthenticatedUserState? state = global::GitHub.IssuesListForAuthenticatedUserState.Open,
+            string? labels = default,
+            global::GitHub.IssuesListForAuthenticatedUserSort? sort = global::GitHub.IssuesListForAuthenticatedUserSort.Created,
+            global::GitHub.IssuesListForAuthenticatedUserDirection? direction = global::GitHub.IssuesListForAuthenticatedUserDirection.Desc,
+            global::System.DateTime since = default,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -94,7 +94,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/user/issues?filter={filter}&state={state}&labels={labels}&sort={sort}&direction={direction}&since={since:yyyy-MM-ddTHH:mm:ssZ}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/user/issues?filter={(global::System.Uri.EscapeDataString(filter?.ToValueString() ?? string.Empty))}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&labels={labels}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&since={since:yyyy-MM-ddTHH:mm:ssZ}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

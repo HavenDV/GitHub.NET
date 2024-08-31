@@ -53,9 +53,9 @@ namespace GitHub
             string owner,
             string repo,
             int runId,
-            int perPage,
-            int page,
-            string? name,
+            int perPage = 30,
+            int page = 1,
+            string? name = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

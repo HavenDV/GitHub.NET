@@ -59,11 +59,11 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Milestone>> IssuesListMilestonesAsync(
             string owner,
             string repo,
-            global::GitHub.IssuesListMilestonesState? state,
-            global::GitHub.IssuesListMilestonesSort? sort,
-            global::GitHub.IssuesListMilestonesDirection? direction,
-            int perPage,
-            int page,
+            global::GitHub.IssuesListMilestonesState? state = global::GitHub.IssuesListMilestonesState.Open,
+            global::GitHub.IssuesListMilestonesSort? sort = global::GitHub.IssuesListMilestonesSort.DueOn,
+            global::GitHub.IssuesListMilestonesDirection? direction = global::GitHub.IssuesListMilestonesDirection.Asc,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -80,7 +80,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/milestones?state={state}&sort={sort}&direction={direction}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/milestones?state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

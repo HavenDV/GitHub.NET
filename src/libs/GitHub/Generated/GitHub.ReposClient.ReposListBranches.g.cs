@@ -46,9 +46,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ShortBranch>> ReposListBranchesAsync(
             string owner,
             string repo,
-            bool @protected,
-            int perPage,
-            int page,
+            bool @protected = default,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

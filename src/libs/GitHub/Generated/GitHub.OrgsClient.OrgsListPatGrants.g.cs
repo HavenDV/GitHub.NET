@@ -73,15 +73,15 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsListPatGrantsAsync(
             string org,
-            int perPage,
-            int page,
-            global::GitHub.OrgsListPatGrantsSort? sort,
-            global::GitHub.OrgsListPatGrantsDirection? direction,
-            global::System.Collections.Generic.IList<string>? owner,
-            string? repository,
-            string? permission,
-            global::System.DateTime lastUsedBefore,
-            global::System.DateTime lastUsedAfter,
+            int perPage = 30,
+            int page = 1,
+            global::GitHub.OrgsListPatGrantsSort? sort = global::GitHub.OrgsListPatGrantsSort.CreatedAt,
+            global::GitHub.OrgsListPatGrantsDirection? direction = global::GitHub.OrgsListPatGrantsDirection.Desc,
+            global::System.Collections.Generic.IList<string>? owner = default,
+            string? repository = default,
+            string? permission = default,
+            global::System.DateTime lastUsedBefore = default,
+            global::System.DateTime lastUsedAfter = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -101,7 +101,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/personal-access-tokens?per_page={perPage}&page={page}&sort={sort}&direction={direction}&{string.Join("&", owner?.Select(static x => $"owner={x}") ?? global::System.Array.Empty<string>())}&repository={repository}&permission={permission}&last_used_before={lastUsedBefore:yyyy-MM-ddTHH:mm:ssZ}&last_used_after={lastUsedAfter:yyyy-MM-ddTHH:mm:ssZ}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/personal-access-tokens?per_page={perPage}&page={page}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&{string.Join("&", owner?.Select(static x => $"owner={x}") ?? global::System.Array.Empty<string>())}&repository={repository}&permission={permission}&last_used_before={lastUsedBefore:yyyy-MM-ddTHH:mm:ssZ}&last_used_after={lastUsedAfter:yyyy-MM-ddTHH:mm:ssZ}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

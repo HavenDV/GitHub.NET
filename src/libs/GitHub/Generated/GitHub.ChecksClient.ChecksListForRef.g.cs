@@ -66,12 +66,12 @@ namespace GitHub
             string owner,
             string repo,
             string @ref,
-            string? checkName,
-            global::GitHub.ChecksListForRefStatus? status,
-            global::GitHub.ChecksListForRefFilter? filter,
-            int perPage,
-            int page,
-            int appId,
+            string? checkName = default,
+            global::GitHub.ChecksListForRefStatus? status = default,
+            global::GitHub.ChecksListForRefFilter? filter = global::GitHub.ChecksListForRefFilter.Latest,
+            int perPage = 30,
+            int page = 1,
+            int appId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -90,7 +90,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/commits/{@ref}/check-runs?check_name={checkName}&status={status}&filter={filter}&per_page={perPage}&page={page}&app_id={appId}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/commits/{@ref}/check-runs?check_name={checkName}&status={(global::System.Uri.EscapeDataString(status?.ToValueString() ?? string.Empty))}&filter={(global::System.Uri.EscapeDataString(filter?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}&app_id={appId}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

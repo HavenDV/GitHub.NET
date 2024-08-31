@@ -54,9 +54,9 @@ namespace GitHub
             global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgPackageType packageType,
             string packageName,
             string org,
-            int page,
-            int perPage,
-            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState? state,
+            int page = 1,
+            int perPage = 30,
+            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState? state = global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState.Active,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -72,7 +72,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/packages/{packageType}/{packageName}/versions?page={page}&per_page={perPage}&state={state}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/packages/{packageType}/{packageName}/versions?page={page}&per_page={perPage}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

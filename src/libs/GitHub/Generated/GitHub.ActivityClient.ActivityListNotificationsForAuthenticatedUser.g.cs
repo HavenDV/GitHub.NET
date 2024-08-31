@@ -52,12 +52,12 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Thread>> ActivityListNotificationsForAuthenticatedUserAsync(
-            bool all,
-            bool participating,
-            global::System.DateTime since,
-            global::System.DateTime before,
-            int page,
-            int perPage,
+            bool all = false,
+            bool participating = false,
+            global::System.DateTime since = default,
+            global::System.DateTime before = default,
+            int page = 1,
+            int perPage = 50,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

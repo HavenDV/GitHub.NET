@@ -48,9 +48,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Contributor>> ReposListContributorsAsync(
             string owner,
             string repo,
-            string? anon,
-            int perPage,
-            int page,
+            string? anon = default,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

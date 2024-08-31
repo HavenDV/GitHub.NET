@@ -48,10 +48,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfiguration>> CodeSecurityGetConfigurationsForOrgAsync(
             string org,
-            global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType? targetType,
-            int perPage,
-            string? before,
-            string? after,
+            global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType? targetType = global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType.All,
+            int perPage = 30,
+            string? before = default,
+            string? after = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -66,7 +66,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/code-security/configurations?target_type={targetType}&per_page={perPage}&before={before}&after={after}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/code-security/configurations?target_type={(global::System.Uri.EscapeDataString(targetType?.ToValueString() ?? string.Empty))}&per_page={perPage}&before={before}&after={after}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

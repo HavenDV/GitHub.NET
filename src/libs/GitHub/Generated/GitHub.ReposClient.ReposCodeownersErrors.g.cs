@@ -40,7 +40,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CodeownersErrors> ReposCodeownersErrorsAsync(
             string owner,
             string repo,
-            string? @ref,
+            string? @ref = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

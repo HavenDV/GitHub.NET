@@ -66,15 +66,15 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Repository>> ReposListForAuthenticatedUserAsync(
-            global::GitHub.ReposListForAuthenticatedUserVisibility? visibility,
-            string? affiliation,
-            global::GitHub.ReposListForAuthenticatedUserType? type,
-            global::GitHub.ReposListForAuthenticatedUserSort? sort,
-            global::GitHub.ReposListForAuthenticatedUserDirection? direction,
-            int perPage,
-            int page,
-            global::System.DateTime since,
-            global::System.DateTime before,
+            global::GitHub.ReposListForAuthenticatedUserVisibility? visibility = global::GitHub.ReposListForAuthenticatedUserVisibility.All,
+            string? affiliation = "owner,collaborator,organization_member",
+            global::GitHub.ReposListForAuthenticatedUserType? type = global::GitHub.ReposListForAuthenticatedUserType.All,
+            global::GitHub.ReposListForAuthenticatedUserSort? sort = global::GitHub.ReposListForAuthenticatedUserSort.FullName,
+            global::GitHub.ReposListForAuthenticatedUserDirection? direction = default,
+            int perPage = 30,
+            int page = 1,
+            global::System.DateTime since = default,
+            global::System.DateTime before = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -93,7 +93,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/user/repos?visibility={visibility}&affiliation={affiliation}&type={type}&sort={sort}&direction={direction}&per_page={perPage}&page={page}&since={since:yyyy-MM-ddTHH:mm:ssZ}&before={before:yyyy-MM-ddTHH:mm:ssZ}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/user/repos?visibility={(global::System.Uri.EscapeDataString(visibility?.ToValueString() ?? string.Empty))}&affiliation={affiliation}&type={(global::System.Uri.EscapeDataString(type?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}&since={since:yyyy-MM-ddTHH:mm:ssZ}&before={before:yyyy-MM-ddTHH:mm:ssZ}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

@@ -87,14 +87,14 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeScanningAnalysis>> CodeScanningListRecentAnalysesAsync(
             string owner,
             string repo,
-            string? toolName,
-            string? toolGuid,
-            int page,
-            int perPage,
-            string? @ref,
-            string? sarifId,
-            global::GitHub.CodeScanningListRecentAnalysesDirection? direction,
-            global::GitHub.CodeScanningListRecentAnalysesSort? sort,
+            string? toolName = default,
+            string? toolGuid = default,
+            int page = 1,
+            int perPage = 30,
+            string? @ref = default,
+            string? sarifId = default,
+            global::GitHub.CodeScanningListRecentAnalysesDirection? direction = global::GitHub.CodeScanningListRecentAnalysesDirection.Desc,
+            global::GitHub.CodeScanningListRecentAnalysesSort? sort = global::GitHub.CodeScanningListRecentAnalysesSort.Created,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -114,7 +114,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/analyses?tool_name={toolName}&tool_guid={toolGuid}&page={page}&per_page={perPage}&ref={@ref}&sarif_id={sarifId}&direction={direction}&sort={sort}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/analyses?tool_name={toolName}&tool_guid={toolGuid}&page={page}&per_page={perPage}&ref={@ref}&sarif_id={sarifId}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

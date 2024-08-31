@@ -49,7 +49,7 @@ namespace GitHub
             string repo,
             int runId,
             int attemptNumber,
-            bool excludePullRequests,
+            bool excludePullRequests = false,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

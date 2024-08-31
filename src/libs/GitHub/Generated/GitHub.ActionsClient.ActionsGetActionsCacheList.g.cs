@@ -61,12 +61,12 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.ActionsCacheList> ActionsGetActionsCacheListAsync(
             string owner,
             string repo,
-            int perPage,
-            int page,
-            string? @ref,
-            string? key,
-            global::GitHub.ActionsGetActionsCacheListSort? sort,
-            global::GitHub.ActionsGetActionsCacheListDirection? direction,
+            int perPage = 30,
+            int page = 1,
+            string? @ref = default,
+            string? key = default,
+            global::GitHub.ActionsGetActionsCacheListSort? sort = global::GitHub.ActionsGetActionsCacheListSort.LastAccessedAt,
+            global::GitHub.ActionsGetActionsCacheListDirection? direction = global::GitHub.ActionsGetActionsCacheListDirection.Desc,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -84,7 +84,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/actions/caches?per_page={perPage}&page={page}&ref={@ref}&key={key}&sort={sort}&direction={direction}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/actions/caches?per_page={perPage}&page={page}&ref={@ref}&key={key}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

@@ -53,10 +53,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrganizationInvitation>> OrgsListPendingInvitationsAsync(
             string org,
-            int perPage,
-            int page,
-            global::GitHub.OrgsListPendingInvitationsRole? role,
-            global::GitHub.OrgsListPendingInvitationsInvitationSource? invitationSource,
+            int perPage = 30,
+            int page = 1,
+            global::GitHub.OrgsListPendingInvitationsRole? role = global::GitHub.OrgsListPendingInvitationsRole.All,
+            global::GitHub.OrgsListPendingInvitationsInvitationSource? invitationSource = global::GitHub.OrgsListPendingInvitationsInvitationSource.All,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -71,7 +71,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/invitations?per_page={perPage}&page={page}&role={role}&invitation_source={invitationSource}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/invitations?per_page={perPage}&page={page}&role={(global::System.Uri.EscapeDataString(role?.ToValueString() ?? string.Empty))}&invitation_source={(global::System.Uri.EscapeDataString(invitationSource?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

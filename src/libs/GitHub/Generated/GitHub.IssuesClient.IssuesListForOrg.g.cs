@@ -73,14 +73,14 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Issue>> IssuesListForOrgAsync(
             string org,
-            global::GitHub.IssuesListForOrgFilter? filter,
-            global::GitHub.IssuesListForOrgState? state,
-            string? labels,
-            global::GitHub.IssuesListForOrgSort? sort,
-            global::GitHub.IssuesListForOrgDirection? direction,
-            global::System.DateTime since,
-            int perPage,
-            int page,
+            global::GitHub.IssuesListForOrgFilter? filter = global::GitHub.IssuesListForOrgFilter.Assigned,
+            global::GitHub.IssuesListForOrgState? state = global::GitHub.IssuesListForOrgState.Open,
+            string? labels = default,
+            global::GitHub.IssuesListForOrgSort? sort = global::GitHub.IssuesListForOrgSort.Created,
+            global::GitHub.IssuesListForOrgDirection? direction = global::GitHub.IssuesListForOrgDirection.Desc,
+            global::System.DateTime since = default,
+            int perPage = 30,
+            int page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -99,7 +99,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/issues?filter={filter}&state={state}&labels={labels}&sort={sort}&direction={direction}&since={since:yyyy-MM-ddTHH:mm:ssZ}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/issues?filter={(global::System.Uri.EscapeDataString(filter?.ToValueString() ?? string.Empty))}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&labels={labels}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&since={since:yyyy-MM-ddTHH:mm:ssZ}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

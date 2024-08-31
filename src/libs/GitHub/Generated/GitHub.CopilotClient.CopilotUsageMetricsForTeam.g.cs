@@ -61,10 +61,10 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CopilotUsageMetrics>> CopilotUsageMetricsForTeamAsync(
             string org,
             string teamSlug,
-            string? since,
-            string? until,
-            int page,
-            int perPage,
+            string? since = default,
+            string? until = default,
+            int page = 1,
+            int perPage = 28,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

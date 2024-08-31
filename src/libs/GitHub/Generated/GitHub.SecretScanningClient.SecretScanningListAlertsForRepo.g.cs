@@ -74,16 +74,16 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SecretScanningAlert>> SecretScanningListAlertsForRepoAsync(
             string owner,
             string repo,
-            global::GitHub.SecretScanningListAlertsForRepoState? state,
-            string? secretType,
-            string? resolution,
-            global::GitHub.SecretScanningListAlertsForRepoSort? sort,
-            global::GitHub.SecretScanningListAlertsForRepoDirection? direction,
-            int page,
-            int perPage,
-            string? before,
-            string? after,
-            string? validity,
+            global::GitHub.SecretScanningListAlertsForRepoState? state = default,
+            string? secretType = default,
+            string? resolution = default,
+            global::GitHub.SecretScanningListAlertsForRepoSort? sort = global::GitHub.SecretScanningListAlertsForRepoSort.Created,
+            global::GitHub.SecretScanningListAlertsForRepoDirection? direction = global::GitHub.SecretScanningListAlertsForRepoDirection.Desc,
+            int page = 1,
+            int perPage = 30,
+            string? before = default,
+            string? after = default,
+            string? validity = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -105,7 +105,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/secret-scanning/alerts?state={state}&secret_type={secretType}&resolution={resolution}&sort={sort}&direction={direction}&page={page}&per_page={perPage}&before={before}&after={after}&validity={validity}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/secret-scanning/alerts?state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&secret_type={secretType}&resolution={resolution}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&page={page}&per_page={perPage}&before={before}&after={after}&validity={validity}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

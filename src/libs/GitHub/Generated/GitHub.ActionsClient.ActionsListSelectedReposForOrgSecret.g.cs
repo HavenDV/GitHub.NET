@@ -47,8 +47,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.ActionsListSelectedReposForOrgSecretResponse> ActionsListSelectedReposForOrgSecretAsync(
             string org,
             string secretName,
-            int page,
-            int perPage,
+            int page = 1,
+            int perPage = 30,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

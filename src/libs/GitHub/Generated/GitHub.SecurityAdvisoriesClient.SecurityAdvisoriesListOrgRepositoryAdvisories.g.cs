@@ -56,12 +56,12 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisory>> SecurityAdvisoriesListOrgRepositoryAdvisoriesAsync(
             string org,
-            global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesDirection? direction,
-            global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort? sort,
-            string? before,
-            string? after,
-            int perPage,
-            global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesState? state,
+            global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesDirection? direction = global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesDirection.Desc,
+            global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort? sort = global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort.Created,
+            string? before = default,
+            string? after = default,
+            int perPage = 30,
+            global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesState? state = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -78,7 +78,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/security-advisories?direction={direction}&sort={sort}&before={before}&after={after}&per_page={perPage}&state={state}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/security-advisories?direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&before={before}&after={after}&per_page={perPage}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
