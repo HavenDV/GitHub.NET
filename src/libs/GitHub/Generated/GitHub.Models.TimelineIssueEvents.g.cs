@@ -11,7 +11,7 @@ namespace GitHub
     public readonly partial struct TimelineIssueEvents : global::System.IEquatable<TimelineIssueEvents>
     {
         /// <summary>
-        /// 
+        /// Labeled Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.LabeledIssueEvent? LabeledEvent { get; init; }
@@ -46,7 +46,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Unlabeled Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.UnlabeledIssueEvent? UnlabeledEvent { get; init; }
@@ -81,7 +81,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Milestoned Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.MilestonedIssueEvent? MilestonedEvent { get; init; }
@@ -116,7 +116,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Demilestoned Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.DemilestonedIssueEvent? DemilestonedEvent { get; init; }
@@ -151,7 +151,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Renamed Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.RenamedIssueEvent? RenamedEvent { get; init; }
@@ -186,7 +186,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Review Requested Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.ReviewRequestedIssueEvent? ReviewRequestedEvent { get; init; }
@@ -221,7 +221,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Review Request Removed Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.ReviewRequestRemovedIssueEvent? ReviewRequestRemovedEvent { get; init; }
@@ -256,7 +256,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Review Dismissed Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.ReviewDismissedIssueEvent? ReviewDismissedEvent { get; init; }
@@ -291,7 +291,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Locked Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.LockedIssueEvent? LockedEvent { get; init; }
@@ -326,7 +326,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Added to Project Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.AddedToProjectIssueEvent? AddedToProjectEvent { get; init; }
@@ -361,7 +361,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Moved Column in Project Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.MovedColumnInProjectIssueEvent? MovedColumnInProjectEvent { get; init; }
@@ -396,7 +396,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Removed from Project Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.RemovedFromProjectIssueEvent? RemovedFromProjectEvent { get; init; }
@@ -431,7 +431,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Converted Note to Issue Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.ConvertedNoteToIssueIssueEvent? ConvertedNoteToEvent { get; init; }
@@ -466,7 +466,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Timeline Comment Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.TimelineCommentEvent? CommentEvent { get; init; }
@@ -501,7 +501,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Timeline Cross Referenced Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.TimelineCrossReferencedEvent? CrossReferencedEvent { get; init; }
@@ -536,7 +536,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Timeline Committed Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.TimelineCommittedEvent? CommittedEvent { get; init; }
@@ -571,7 +571,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Timeline Reviewed Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.TimelineReviewedEvent? ReviewedEvent { get; init; }
@@ -606,7 +606,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Timeline Line Commented Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.TimelineLineCommentedEvent? LineCommentedEvent { get; init; }
@@ -641,7 +641,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Timeline Commit Commented Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.TimelineCommitCommentedEvent? CommitCommentedEvent { get; init; }
@@ -676,7 +676,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Timeline Assigned Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.TimelineAssignedIssueEvent? AssignedEvent { get; init; }
@@ -711,7 +711,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// Timeline Unassigned Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.TimelineUnassignedIssueEvent? UnassignedEvent { get; init; }
@@ -746,7 +746,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// 
+        /// State Change Issue Event
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.StateChangeIssueEvent? StateChangeEvent { get; init; }
