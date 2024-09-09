@@ -155,6 +155,10 @@ namespace GitHub
         /// The enablement status of secret scanning validity checks<br/>
         /// Default Value: disabled
         /// </param>
+        /// <param name="secretScanningNonProviderPatterns">
+        /// The enablement status of secret scanning non provider patterns<br/>
+        /// Default Value: disabled
+        /// </param>
         /// <param name="privateVulnerabilityReporting">
         /// The enablement status of private vulnerability reporting<br/>
         /// Default Value: disabled
@@ -179,6 +183,7 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? secretScanning = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? secretScanningPushProtection = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks.Disabled,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting = global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement? enforcement = global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement.Enforced,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -197,6 +202,7 @@ namespace GitHub
                 SecretScanning = secretScanning,
                 SecretScanningPushProtection = secretScanningPushProtection,
                 SecretScanningValidityChecks = secretScanningValidityChecks,
+                SecretScanningNonProviderPatterns = secretScanningNonProviderPatterns,
                 PrivateVulnerabilityReporting = privateVulnerabilityReporting,
                 Enforcement = enforcement,
             };

@@ -101,6 +101,14 @@ namespace GitHub
         public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? SecretScanningValidityChecks { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks.Disabled;
 
         /// <summary>
+        /// The enablement status of secret scanning non provider patterns<br/>
+        /// Default Value: disabled
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_non_provider_patterns")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatternsJsonConverter))]
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? SecretScanningNonProviderPatterns { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns.Disabled;
+
+        /// <summary>
         /// The enablement status of private vulnerability reporting<br/>
         /// Default Value: disabled
         /// </summary>

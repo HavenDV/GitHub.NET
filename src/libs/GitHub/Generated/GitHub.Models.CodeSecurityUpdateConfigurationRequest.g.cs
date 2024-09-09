@@ -90,6 +90,13 @@ namespace GitHub
         public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningValidityChecks? SecretScanningValidityChecks { get; set; }
 
         /// <summary>
+        /// The enablement status of secret scanning non-provider patterns
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_non_provider_patterns")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityUpdateConfigurationRequestSecretScanningNonProviderPatternsJsonConverter))]
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningNonProviderPatterns? SecretScanningNonProviderPatterns { get; set; }
+
+        /// <summary>
         /// The enablement status of private vulnerability reporting
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private_vulnerability_reporting")]

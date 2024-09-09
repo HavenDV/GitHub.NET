@@ -153,6 +153,9 @@ namespace GitHub
         /// <param name="secretScanningValidityChecks">
         /// The enablement status of secret scanning validity checks
         /// </param>
+        /// <param name="secretScanningNonProviderPatterns">
+        /// The enablement status of secret scanning non-provider patterns
+        /// </param>
         /// <param name="privateVulnerabilityReporting">
         /// The enablement status of private vulnerability reporting
         /// </param>
@@ -176,6 +179,7 @@ namespace GitHub
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanning? secretScanning = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningPushProtection? secretScanningPushProtection = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks = default,
+            global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestEnforcement? enforcement = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -194,6 +198,7 @@ namespace GitHub
                 SecretScanning = secretScanning,
                 SecretScanningPushProtection = secretScanningPushProtection,
                 SecretScanningValidityChecks = secretScanningValidityChecks,
+                SecretScanningNonProviderPatterns = secretScanningNonProviderPatterns,
                 PrivateVulnerabilityReporting = privateVulnerabilityReporting,
                 Enforcement = enforcement,
             };
