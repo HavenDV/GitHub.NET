@@ -4,9 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The target of the ruleset<br/>
-    /// &gt; [!NOTE]<br/>
-    /// &gt; The `push` target is in beta and is subject to change.
+    /// The target of the ruleset
     /// </summary>
     public enum ReposUpdateOrgRulesetRequestTarget
     {

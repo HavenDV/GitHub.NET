@@ -536,8 +536,6 @@ namespace GitHub
         }
 
         /// <summary>
-        /// &gt; [!NOTE]<br/>
-        /// &gt; `file_path_restriction` is in beta and subject to change.<br/>
         /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -573,8 +571,6 @@ namespace GitHub
         }
 
         /// <summary>
-        /// &gt; [!NOTE]<br/>
-        /// &gt; `max_file_path_length` is in beta and subject to change.<br/>
         /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -610,8 +606,6 @@ namespace GitHub
         }
 
         /// <summary>
-        /// &gt; [!NOTE]<br/>
-        /// &gt; `file_extension_restriction` is in beta and subject to change.<br/>
         /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -647,8 +641,6 @@ namespace GitHub
         }
 
         /// <summary>
-        /// &gt; [!NOTE]<br/>
-        /// &gt; `max_file_size` is in beta and subject to change.<br/>
         /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
         /// </summary>
 #if NET6_0_OR_GREATER
