@@ -25,9 +25,7 @@ namespace GitHub
         public required string Name { get; set; }
 
         /// <summary>
-        /// The target of the ruleset<br/>
-        /// &gt; [!NOTE]<br/>
-        /// &gt; The `push` target is in beta and is subject to change.
+        /// The target of the ruleset
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("target")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.RepositoryRulesetTargetJsonConverter))]

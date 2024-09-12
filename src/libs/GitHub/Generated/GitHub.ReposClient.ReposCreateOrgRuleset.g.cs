@@ -111,8 +111,6 @@ namespace GitHub
         /// </param>
         /// <param name="target">
         /// The target of the ruleset<br/>
-        /// &gt; [!NOTE]<br/>
-        /// &gt; The `push` target is in beta and is subject to change.<br/>
         /// Default Value: branch
         /// </param>
         /// <param name="enforcement">

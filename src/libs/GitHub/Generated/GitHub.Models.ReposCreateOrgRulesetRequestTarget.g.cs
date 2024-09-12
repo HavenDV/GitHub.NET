@@ -5,8 +5,6 @@ namespace GitHub
 {
     /// <summary>
     /// The target of the ruleset<br/>
-    /// &gt; [!NOTE]<br/>
-    /// &gt; The `push` target is in beta and is subject to change.<br/>
     /// Default Value: branch
     /// </summary>
     public enum ReposCreateOrgRulesetRequestTarget

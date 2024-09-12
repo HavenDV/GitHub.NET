@@ -117,9 +117,7 @@ namespace GitHub
         /// The name of the ruleset.
         /// </param>
         /// <param name="target">
-        /// The target of the ruleset<br/>
-        /// &gt; [!NOTE]<br/>
-        /// &gt; The `push` target is in beta and is subject to change.
+        /// The target of the ruleset
         /// </param>
         /// <param name="enforcement">
         /// The enforcement level of the ruleset. `evaluate` allows admins to test rules before enforcing them. Admins can view insights on the Rule Insights page (`evaluate` is only available with GitHub Enterprise).
