@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref int commentId,
+            ref long commentId,
             ref global::GitHub.ReactionsListForCommitCommentContent? content,
             ref int perPage,
             ref int page);
@@ -18,7 +18,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            int commentId,
+            long commentId,
             global::GitHub.ReactionsListForCommitCommentContent? content,
             int perPage,
             int page);
@@ -50,7 +50,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Reaction>> ReactionsListForCommitCommentAsync(
             string owner,
             string repo,
-            int commentId,
+            long commentId,
             global::GitHub.ReactionsListForCommitCommentContent? content = default,
             int perPage = 30,
             int page = 1,
