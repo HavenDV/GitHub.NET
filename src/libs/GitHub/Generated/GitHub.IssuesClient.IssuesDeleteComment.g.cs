@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref int commentId);
+            ref long commentId);
         partial void PrepareIssuesDeleteCommentRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            int commentId);
+            long commentId);
         partial void ProcessIssuesDeleteCommentResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -32,7 +32,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task IssuesDeleteCommentAsync(
             string owner,
             string repo,
-            int commentId,
+            long commentId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

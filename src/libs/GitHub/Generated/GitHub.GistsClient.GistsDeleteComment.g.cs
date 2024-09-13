@@ -8,12 +8,12 @@ namespace GitHub
         partial void PrepareGistsDeleteCommentArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string gistId,
-            ref int commentId);
+            ref long commentId);
         partial void PrepareGistsDeleteCommentRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string gistId,
-            int commentId);
+            long commentId);
         partial void ProcessGistsDeleteCommentResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -32,7 +32,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> GistsDeleteCommentAsync(
             string gistId,
-            int commentId,
+            long commentId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

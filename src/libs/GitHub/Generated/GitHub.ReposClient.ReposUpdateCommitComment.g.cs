@@ -9,14 +9,14 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref int commentId,
+            ref long commentId,
             global::GitHub.ReposUpdateCommitCommentRequest request);
         partial void PrepareReposUpdateCommitCommentRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            int commentId,
+            long commentId,
             global::GitHub.ReposUpdateCommitCommentRequest request);
         partial void ProcessReposUpdateCommitCommentResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -45,7 +45,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CommitComment> ReposUpdateCommitCommentAsync(
             string owner,
             string repo,
-            int commentId,
+            long commentId,
             global::GitHub.ReposUpdateCommitCommentRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -138,7 +138,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CommitComment> ReposUpdateCommitCommentAsync(
             string owner,
             string repo,
-            int commentId,
+            long commentId,
             string body,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

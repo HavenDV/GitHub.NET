@@ -9,14 +9,14 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref int commentId,
+            ref long commentId,
             global::GitHub.ReactionsCreateForPullRequestReviewCommentRequest request);
         partial void PrepareReactionsCreateForPullRequestReviewCommentRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            int commentId,
+            long commentId,
             global::GitHub.ReactionsCreateForPullRequestReviewCommentRequest request);
         partial void ProcessReactionsCreateForPullRequestReviewCommentResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -40,7 +40,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.Reaction> ReactionsCreateForPullRequestReviewCommentAsync(
             string owner,
             string repo,
-            int commentId,
+            long commentId,
             global::GitHub.ReactionsCreateForPullRequestReviewCommentRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -128,7 +128,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.Reaction> ReactionsCreateForPullRequestReviewCommentAsync(
             string owner,
             string repo,
-            int commentId,
+            long commentId,
             global::GitHub.ReactionsCreateForPullRequestReviewCommentRequestContent content,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

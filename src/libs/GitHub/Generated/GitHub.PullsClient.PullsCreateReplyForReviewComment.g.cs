@@ -10,7 +10,7 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int pullNumber,
-            ref int commentId,
+            ref long commentId,
             global::GitHub.PullsCreateReplyForReviewCommentRequest request);
         partial void PreparePullsCreateReplyForReviewCommentRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -18,7 +18,7 @@ namespace GitHub
             string owner,
             string repo,
             int pullNumber,
-            int commentId,
+            long commentId,
             global::GitHub.PullsCreateReplyForReviewCommentRequest request);
         partial void ProcessPullsCreateReplyForReviewCommentResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -51,7 +51,7 @@ namespace GitHub
             string owner,
             string repo,
             int pullNumber,
-            int commentId,
+            long commentId,
             global::GitHub.PullsCreateReplyForReviewCommentRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -150,7 +150,7 @@ namespace GitHub
             string owner,
             string repo,
             int pullNumber,
-            int commentId,
+            long commentId,
             string body,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

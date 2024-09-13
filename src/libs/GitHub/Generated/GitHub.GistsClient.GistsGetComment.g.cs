@@ -8,12 +8,12 @@ namespace GitHub
         partial void PrepareGistsGetCommentArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string gistId,
-            ref int commentId);
+            ref long commentId);
         partial void PrepareGistsGetCommentRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string gistId,
-            int commentId);
+            long commentId);
         partial void ProcessGistsGetCommentResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -36,7 +36,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.GistComment> GistsGetCommentAsync(
             string gistId,
-            int commentId,
+            long commentId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
