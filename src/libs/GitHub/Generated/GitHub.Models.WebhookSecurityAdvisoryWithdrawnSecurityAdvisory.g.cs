@@ -18,6 +18,12 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cvss_severities")]
+        public global::GitHub.CvssSeverities? CvssSeverities { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cwes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::GitHub.WebhookSecurityAdvisoryWithdrawnSecurityAdvisoryCwe> Cwes { get; set; }

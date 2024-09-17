@@ -59,6 +59,12 @@ namespace GitHub
         public required global::GitHub.DependabotAlertSecurityAdvisoryCvss Cvss { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cvss_severities")]
+        public global::GitHub.CvssSeverities? CvssSeverities { get; set; }
+
+        /// <summary>
         /// Details for the advisory pertaining to Common Weakness Enumeration.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cwes")]

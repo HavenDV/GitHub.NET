@@ -90,6 +90,12 @@ namespace GitHub
         /// <summary>
         /// Example: [192.0.2.1]
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("codespaces")]
+        public global::System.Collections.Generic.IList<string>? Codespaces { get; set; }
+
+        /// <summary>
+        /// Example: [192.0.2.1]
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependabot")]
         public global::System.Collections.Generic.IList<string>? Dependabot { get; set; }
 
