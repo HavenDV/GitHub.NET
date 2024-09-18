@@ -16,6 +16,10 @@ namespace GitHub
         /// 
         /// </summary>
         Fail,
+        /// <summary>
+        /// 
+        /// </summary>
+        Bypass,
     }
 
     /// <summary>
@@ -32,6 +36,7 @@ namespace GitHub
             {
                 RuleSuiteEvaluationResult.Pass => "pass",
                 RuleSuiteEvaluationResult.Fail => "fail",
+                RuleSuiteEvaluationResult.Bypass => "bypass",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +49,7 @@ namespace GitHub
             {
                 "pass" => RuleSuiteEvaluationResult.Pass,
                 "fail" => RuleSuiteEvaluationResult.Fail,
+                "bypass" => RuleSuiteEvaluationResult.Bypass,
                 _ => null,
             };
         }
