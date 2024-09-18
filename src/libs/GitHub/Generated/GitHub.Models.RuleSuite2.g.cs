@@ -70,7 +70,7 @@ namespace GitHub
         public global::GitHub.RuleSuiteResult2? Result { get; set; }
 
         /// <summary>
-        /// The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`.
+        /// The result of the rule evaluations for rules with the `active` and `evaluate` enforcement statuses, demonstrating whether rules would pass or fail if all rules in the rule suite were `active`. Null if no rules with `evaluate` enforcement status were run.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluation_result")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.RuleSuiteEvaluationResult2JsonConverter))]
