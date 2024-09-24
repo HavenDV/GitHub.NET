@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// Information about the seat breakdown and policies set for an organization with a Copilot Business subscription.
+    /// Information about the seat breakdown and policies set for an organization with a Copilot Business or Copilot Enterprise subscription.
     /// </summary>
     public sealed partial class CopilotOrganizationDetails
     {
