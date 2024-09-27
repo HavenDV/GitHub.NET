@@ -3517,6 +3517,8 @@ namespace GitHub
             typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestDequeuedPullRequestStateNullableJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestDequeuedPullRequestUserTypeJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestDequeuedPullRequestUserTypeNullableJsonConverter),
+            typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestDequeuedReasonJsonConverter),
+            typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestDequeuedReasonNullableJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestEditedActionJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestEditedActionNullableJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestEnqueuedActionJsonConverter),
