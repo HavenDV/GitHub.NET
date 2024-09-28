@@ -61,11 +61,11 @@ namespace GitHub
         public required global::GitHub.WebhooksReview Review { get; set; }
 
         /// <summary>
-        /// The GitHub user that triggered the event. This property is included in every webhook payload.
+        /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sender")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.SimpleUserWebhooks Sender { get; set; }
+        public required global::GitHub.SimpleUser Sender { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

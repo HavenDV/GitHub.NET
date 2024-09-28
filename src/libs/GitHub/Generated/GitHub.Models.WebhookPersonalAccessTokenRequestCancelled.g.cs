@@ -39,11 +39,11 @@ namespace GitHub
         public required global::GitHub.OrganizationSimpleWebhooks Organization { get; set; }
 
         /// <summary>
-        /// The GitHub user that triggered the event. This property is included in every webhook payload.
+        /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sender")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.SimpleUserWebhooks Sender { get; set; }
+        public required global::GitHub.SimpleUser Sender { get; set; }
 
         /// <summary>
         /// The GitHub App installation. Webhook payloads contain the `installation` property when the event is configured<br/>

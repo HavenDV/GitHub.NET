@@ -66,11 +66,11 @@ namespace GitHub
         public global::System.Collections.Generic.IList<global::GitHub.WebhooksReviewer>? Reviewers { get; set; }
 
         /// <summary>
-        /// The GitHub user that triggered the event. This property is included in every webhook payload.
+        /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sender")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.SimpleUserWebhooks Sender { get; set; }
+        public required global::GitHub.SimpleUser Sender { get; set; }
 
         /// <summary>
         /// 
