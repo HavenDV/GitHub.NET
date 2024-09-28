@@ -52,10 +52,10 @@ namespace GitHub
         public global::GitHub.RepositoryWebhooks? Repository { get; set; }
 
         /// <summary>
-        /// The GitHub user that triggered the event. This property is included in every webhook payload.
+        /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sender")]
-        public global::GitHub.SimpleUserWebhooks? Sender { get; set; }
+        public global::GitHub.SimpleUser? Sender { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

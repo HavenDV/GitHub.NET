@@ -16,7 +16,7 @@ namespace GitHub
         public global::GitHub.WebhookCommitCommentCreatedAction Action { get; set; }
 
         /// <summary>
-        /// The [commit comment](https://docs.github.com/rest/commits/comments#get-a-commit-comment) resource.
+        /// The [commit comment](${externalDocsUpapp/api/description/components/schemas/webhooks/issue-comment-created.yamlrl}/rest/commits/comments#get-a-commit-comment) resource.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("comment")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -54,11 +54,11 @@ namespace GitHub
         public required global::GitHub.RepositoryWebhooks Repository { get; set; }
 
         /// <summary>
-        /// The GitHub user that triggered the event. This property is included in every webhook payload.
+        /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sender")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.SimpleUserWebhooks Sender { get; set; }
+        public required global::GitHub.SimpleUser Sender { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
