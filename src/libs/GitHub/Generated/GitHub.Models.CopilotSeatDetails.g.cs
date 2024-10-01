@@ -11,19 +11,17 @@ namespace GitHub
     public sealed partial class CopilotSeatDetails
     {
         /// <summary>
-        /// The assignee that has been granted access to GitHub Copilot.
+        /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignee")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory1))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.OneOf<global::GitHub.SimpleUser> Assignee { get; set; }
+        public required global::GitHub.SimpleUser Assignee { get; set; }
 
         /// <summary>
-        /// The organization to which this seat belongs.
+        /// A GitHub organization.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organization")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory1))]
-        public global::System.OneOf<global::GitHub.OrganizationSimple>? Organization { get; set; }
+        public global::GitHub.NullableOrganizationSimple? Organization { get; set; }
 
         /// <summary>
         /// The team through which the assignee is granted access to GitHub Copilot, if applicable.

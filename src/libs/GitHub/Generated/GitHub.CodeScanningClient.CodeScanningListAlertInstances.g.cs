@@ -12,7 +12,8 @@ namespace GitHub
             ref int alertNumber,
             ref int page,
             ref int perPage,
-            ref string? @ref);
+            ref string? @ref,
+            ref int pr);
         partial void PrepareCodeScanningListAlertInstancesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -21,7 +22,8 @@ namespace GitHub
             int alertNumber,
             int page,
             int perPage,
-            string? @ref);
+            string? @ref,
+            int pr);
         partial void ProcessCodeScanningListAlertInstancesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -51,6 +53,7 @@ namespace GitHub
         /// The Git reference, formatted as `refs/pull/&lt;number&gt;/merge`, `refs/pull/&lt;number&gt;/head`,<br/>
         /// `refs/heads/&lt;branch name&gt;` or simply `&lt;branch name&gt;`.
         /// </param>
+        /// <param name="pr"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeScanningAlertInstance>> CodeScanningListAlertInstancesAsync(
@@ -60,6 +63,7 @@ namespace GitHub
             int page = 1,
             int perPage = 30,
             string? @ref = default,
+            int pr = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -71,11 +75,12 @@ namespace GitHub
                 alertNumber: ref alertNumber,
                 page: ref page,
                 perPage: ref perPage,
-                @ref: ref @ref);
+                @ref: ref @ref,
+                pr: ref pr);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/alerts/{alertNumber}/instances?page={page}&per_page={perPage}&ref={@ref}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/alerts/{alertNumber}/instances?page={page}&per_page={perPage}&ref={@ref}&pr={pr}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -88,7 +93,8 @@ namespace GitHub
                 alertNumber: alertNumber,
                 page: page,
                 perPage: perPage,
-                @ref: @ref);
+                @ref: @ref,
+                pr: pr);
 
             using var response = await _httpClient.SendAsync(
                 request: httpRequest,

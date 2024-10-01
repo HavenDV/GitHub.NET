@@ -13,6 +13,7 @@ namespace GitHub
             ref string? toolGuid,
             ref int page,
             ref int perPage,
+            ref int pr,
             ref string? @ref,
             ref string? sarifId,
             ref global::GitHub.CodeScanningListRecentAnalysesDirection? direction,
@@ -26,6 +27,7 @@ namespace GitHub
             string? toolGuid,
             int page,
             int perPage,
+            int pr,
             string? @ref,
             string? sarifId,
             global::GitHub.CodeScanningListRecentAnalysesDirection? direction,
@@ -68,6 +70,7 @@ namespace GitHub
         /// <param name="perPage">
         /// Default Value: 30
         /// </param>
+        /// <param name="pr"></param>
         /// <param name="ref">
         /// The Git reference, formatted as `refs/pull/&lt;number&gt;/merge`, `refs/pull/&lt;number&gt;/head`,<br/>
         /// `refs/heads/&lt;branch name&gt;` or simply `&lt;branch name&gt;`.
@@ -91,6 +94,7 @@ namespace GitHub
             string? toolGuid = default,
             int page = 1,
             int perPage = 30,
+            int pr = default,
             string? @ref = default,
             string? sarifId = default,
             global::GitHub.CodeScanningListRecentAnalysesDirection? direction = global::GitHub.CodeScanningListRecentAnalysesDirection.Desc,
@@ -107,6 +111,7 @@ namespace GitHub
                 toolGuid: ref toolGuid,
                 page: ref page,
                 perPage: ref perPage,
+                pr: ref pr,
                 @ref: ref @ref,
                 sarifId: ref sarifId,
                 direction: ref direction,
@@ -114,7 +119,7 @@ namespace GitHub
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/analyses?tool_name={toolName}&tool_guid={toolGuid}&page={page}&per_page={perPage}&ref={@ref}&sarif_id={sarifId}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/analyses?tool_name={toolName}&tool_guid={toolGuid}&page={page}&per_page={perPage}&pr={pr}&ref={@ref}&sarif_id={sarifId}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -128,6 +133,7 @@ namespace GitHub
                 toolGuid: toolGuid,
                 page: page,
                 perPage: perPage,
+                pr: pr,
                 @ref: @ref,
                 sarifId: sarifId,
                 direction: direction,
