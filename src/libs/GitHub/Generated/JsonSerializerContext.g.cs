@@ -5564,7 +5564,6 @@ namespace GitHub
             typeof(global::OpenApiGenerator.JsonConverters.WebhookConfigInsecureSslJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory3),
             typeof(global::OpenApiGenerator.JsonConverters.AnyOfJsonConverterFactory2),
-            typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory1),
             typeof(global::OpenApiGenerator.JsonConverters.OneOfJsonConverterFactory2),
             typeof(global::OpenApiGenerator.JsonConverters.OrgRulesetConditionsJsonConverter),
             typeof(global::OpenApiGenerator.JsonConverters.AllOfJsonConverterFactory2),

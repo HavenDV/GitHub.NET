@@ -10,14 +10,14 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref string branch,
-            global::System.OneOf<global::GitHub.ReposSetAppAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request);
+            global::GitHub.ReposSetAppAccessRestrictionsRequest request);
         partial void PrepareReposSetAppAccessRestrictionsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             string branch,
-            global::System.OneOf<global::GitHub.ReposSetAppAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request);
+            global::GitHub.ReposSetAppAccessRestrictionsRequest request);
         partial void ProcessReposSetAppAccessRestrictionsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -42,9 +42,11 @@ namespace GitHub
             string owner,
             string repo,
             string branch,
-            global::System.OneOf<global::GitHub.ReposSetAppAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request,
+            global::GitHub.ReposSetAppAccessRestrictionsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: _httpClient);
             PrepareReposSetAppAccessRestrictionsArguments(
@@ -57,7 +59,7 @@ namespace GitHub
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Put,
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.NullableOneOfReposSetAppAccessRestrictionsRequest2IListString);
+            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ReposSetAppAccessRestrictionsRequest);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -120,16 +122,21 @@ namespace GitHub
         /// <param name="owner"></param>
         /// <param name="repo"></param>
         /// <param name="branch"></param>
+        /// <param name="apps">
+        /// The GitHub Apps that have push access to this branch. Use the slugified version of the app name. **Note**: The list of users, apps, and teams in total is limited to 100 items.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Integration>> ReposSetAppAccessRestrictionsAsync(
             string owner,
             string repo,
             string branch,
+            global::System.Collections.Generic.IList<string> apps,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::System.OneOf<global::GitHub.ReposSetAppAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>>
+            var request = new global::GitHub.ReposSetAppAccessRestrictionsRequest
             {
+                Apps = apps,
             };
 
             return await ReposSetAppAccessRestrictionsAsync(

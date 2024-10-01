@@ -10,14 +10,14 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref string branch,
-            global::System.OneOf<global::GitHub.ReposRemoveUserAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request);
+            global::GitHub.ReposRemoveUserAccessRestrictionsRequest request);
         partial void PrepareReposRemoveUserAccessRestrictionsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             string branch,
-            global::System.OneOf<global::GitHub.ReposRemoveUserAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request);
+            global::GitHub.ReposRemoveUserAccessRestrictionsRequest request);
         partial void ProcessReposRemoveUserAccessRestrictionsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -45,9 +45,11 @@ namespace GitHub
             string owner,
             string repo,
             string branch,
-            global::System.OneOf<global::GitHub.ReposRemoveUserAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request,
+            global::GitHub.ReposRemoveUserAccessRestrictionsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: _httpClient);
             PrepareReposRemoveUserAccessRestrictionsArguments(
@@ -60,7 +62,7 @@ namespace GitHub
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
                 requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.NullableOneOfReposRemoveUserAccessRestrictionsRequest2IListString);
+            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ReposRemoveUserAccessRestrictionsRequest);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -126,16 +128,21 @@ namespace GitHub
         /// <param name="owner"></param>
         /// <param name="repo"></param>
         /// <param name="branch"></param>
+        /// <param name="users">
+        /// The username for users
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>> ReposRemoveUserAccessRestrictionsAsync(
             string owner,
             string repo,
             string branch,
+            global::System.Collections.Generic.IList<string> users,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::System.OneOf<global::GitHub.ReposRemoveUserAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>>
+            var request = new global::GitHub.ReposRemoveUserAccessRestrictionsRequest
             {
+                Users = users,
             };
 
             return await ReposRemoveUserAccessRestrictionsAsync(
