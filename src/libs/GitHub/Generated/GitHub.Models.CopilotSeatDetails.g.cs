@@ -62,6 +62,13 @@ namespace GitHub
         public global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
+        /// The Copilot plan of the organization, or the parent enterprise, when applicable.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("plan_type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CopilotSeatDetailsPlanTypeJsonConverter))]
+        public global::GitHub.CopilotSeatDetailsPlanType? PlanType { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
