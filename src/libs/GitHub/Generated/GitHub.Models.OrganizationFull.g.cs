@@ -215,12 +215,6 @@ namespace GitHub
         public int? DiskUsage { get; set; }
 
         /// <summary>
-        /// Example: 8
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("collaborators")]
-        public int? Collaborators { get; set; }
-
-        /// <summary>
         /// Example: org@example.com
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("billing_email")]

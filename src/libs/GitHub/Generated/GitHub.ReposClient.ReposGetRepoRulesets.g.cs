@@ -11,7 +11,8 @@ namespace GitHub
             ref string repo,
             ref int perPage,
             ref int page,
-            ref bool includesParents);
+            ref bool includesParents,
+            ref string? targets);
         partial void PrepareReposGetRepoRulesetsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -19,7 +20,8 @@ namespace GitHub
             string repo,
             int perPage,
             int page,
-            bool includesParents);
+            bool includesParents,
+            string? targets);
         partial void ProcessReposGetRepoRulesetsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -44,6 +46,9 @@ namespace GitHub
         /// <param name="includesParents">
         /// Default Value: true
         /// </param>
+        /// <param name="targets">
+        /// Example: branch,tag,push
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset>> ReposGetRepoRulesetsAsync(
@@ -52,6 +57,7 @@ namespace GitHub
             int perPage = 30,
             int page = 1,
             bool includesParents = true,
+            string? targets = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -62,11 +68,12 @@ namespace GitHub
                 repo: ref repo,
                 perPage: ref perPage,
                 page: ref page,
-                includesParents: ref includesParents);
+                includesParents: ref includesParents,
+                targets: ref targets);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/rulesets?per_page={perPage}&page={page}&includes_parents={includesParents}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/rulesets?per_page={perPage}&page={page}&includes_parents={includesParents}&targets={targets}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -78,7 +85,8 @@ namespace GitHub
                 repo: repo,
                 perPage: perPage,
                 page: page,
-                includesParents: includesParents);
+                includesParents: includesParents,
+                targets: targets);
 
             using var response = await _httpClient.SendAsync(
                 request: httpRequest,
