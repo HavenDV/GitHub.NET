@@ -31,6 +31,12 @@ namespace GitHub
         public global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningPushProtection? SecretScanningPushProtection { get; set; }
 
         /// <summary>
+        /// Use the `status` property to enable or disable secret scanning AI detection for this repository. For more information, see "[Responsible detection of generic secrets with AI](https://docs.github.com/code-security/secret-scanning/using-advanced-secret-scanning-and-push-protection-features/generic-secret-detection/responsible-ai-generic-secrets)."
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_ai_detection")]
+        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningAiDetection? SecretScanningAiDetection { get; set; }
+
+        /// <summary>
         /// Use the `status` property to enable or disable secret scanning non-provider patterns for this repository. For more information, see "[Supported secret scanning patterns](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_non_provider_patterns")]

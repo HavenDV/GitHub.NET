@@ -16,6 +16,8 @@ namespace GitHub
             ref string? @ref,
             ref int pr,
             ref global::GitHub.CodeScanningListAlertsForRepoDirection? direction,
+            ref string? before,
+            ref string? after,
             ref global::GitHub.CodeScanningListAlertsForRepoSort? sort,
             ref global::GitHub.CodeScanningAlertStateQuery? state,
             ref global::GitHub.CodeScanningAlertSeverity? severity);
@@ -31,6 +33,8 @@ namespace GitHub
             string? @ref,
             int pr,
             global::GitHub.CodeScanningListAlertsForRepoDirection? direction,
+            string? before,
+            string? after,
             global::GitHub.CodeScanningListAlertsForRepoSort? sort,
             global::GitHub.CodeScanningAlertStateQuery? state,
             global::GitHub.CodeScanningAlertSeverity? severity);
@@ -73,6 +77,8 @@ namespace GitHub
         /// <param name="direction">
         /// Default Value: desc
         /// </param>
+        /// <param name="before"></param>
+        /// <param name="after"></param>
         /// <param name="sort">
         /// Default Value: created
         /// </param>
@@ -94,6 +100,8 @@ namespace GitHub
             string? @ref = default,
             int pr = default,
             global::GitHub.CodeScanningListAlertsForRepoDirection? direction = global::GitHub.CodeScanningListAlertsForRepoDirection.Desc,
+            string? before = default,
+            string? after = default,
             global::GitHub.CodeScanningListAlertsForRepoSort? sort = global::GitHub.CodeScanningListAlertsForRepoSort.Created,
             global::GitHub.CodeScanningAlertStateQuery? state = default,
             global::GitHub.CodeScanningAlertSeverity? severity = default,
@@ -112,13 +120,15 @@ namespace GitHub
                 @ref: ref @ref,
                 pr: ref pr,
                 direction: ref direction,
+                before: ref before,
+                after: ref after,
                 sort: ref sort,
                 state: ref state,
                 severity: ref severity);
 
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/alerts?tool_name={toolName}&tool_guid={toolGuid}&page={page}&per_page={perPage}&ref={@ref}&pr={pr}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&severity={(global::System.Uri.EscapeDataString(severity?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/alerts?tool_name={toolName}&tool_guid={toolGuid}&page={page}&per_page={perPage}&ref={@ref}&pr={pr}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&before={before}&after={after}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&severity={(global::System.Uri.EscapeDataString(severity?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -135,6 +145,8 @@ namespace GitHub
                 @ref: @ref,
                 pr: pr,
                 direction: direction,
+                before: before,
+                after: after,
                 sort: sort,
                 state: state,
                 severity: severity);

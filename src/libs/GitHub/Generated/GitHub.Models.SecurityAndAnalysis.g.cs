@@ -39,6 +39,12 @@ namespace GitHub
         public global::GitHub.SecurityAndAnalysisSecretScanningNonProviderPatterns? SecretScanningNonProviderPatterns { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_ai_detection")]
+        public global::GitHub.SecurityAndAnalysisSecretScanningAiDetection? SecretScanningAiDetection { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
