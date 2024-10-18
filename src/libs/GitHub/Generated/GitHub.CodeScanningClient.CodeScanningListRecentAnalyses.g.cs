@@ -11,9 +11,9 @@ namespace GitHub
             ref string repo,
             ref string? toolName,
             ref string? toolGuid,
-            ref int page,
-            ref int perPage,
-            ref int pr,
+            ref int? page,
+            ref int? perPage,
+            ref int? pr,
             ref string? @ref,
             ref string? sarifId,
             ref global::GitHub.CodeScanningListRecentAnalysesDirection? direction,
@@ -25,9 +25,9 @@ namespace GitHub
             string repo,
             string? toolName,
             string? toolGuid,
-            int page,
-            int perPage,
-            int pr,
+            int? page,
+            int? perPage,
+            int? pr,
             string? @ref,
             string? sarifId,
             global::GitHub.CodeScanningListRecentAnalysesDirection? direction,
@@ -92,9 +92,9 @@ namespace GitHub
             string repo,
             string? toolName = default,
             string? toolGuid = default,
-            int page = 1,
-            int perPage = 30,
-            int pr = default,
+            int? page = 1,
+            int? perPage = 30,
+            int? pr = default,
             string? @ref = default,
             string? sarifId = default,
             global::GitHub.CodeScanningListRecentAnalysesDirection? direction = global::GitHub.CodeScanningListRecentAnalysesDirection.Desc,
@@ -117,9 +117,24 @@ namespace GitHub
                 direction: ref direction,
                 sort: ref sort);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/code-scanning/analyses",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("tool_name", toolName) 
+                .AddOptionalParameter("tool_guid", toolGuid) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("pr", pr?.ToString()) 
+                .AddOptionalParameter("ref", @ref) 
+                .AddOptionalParameter("sarif_id", sarifId) 
+                .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("sort", sort?.ToValueString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/analyses?tool_name={toolName}&tool_guid={toolGuid}&page={page}&per_page={perPage}&pr={pr}&ref={@ref}&sarif_id={sarifId}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -172,7 +187,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListCodeScanningAnalysis) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CodeScanningAnalysis>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.CodeScanningAnalysis> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

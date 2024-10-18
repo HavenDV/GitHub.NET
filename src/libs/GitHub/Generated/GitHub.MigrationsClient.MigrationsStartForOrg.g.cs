@@ -45,10 +45,14 @@ namespace GitHub
                 org: ref org,
                 request: request);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/migrations",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/migrations", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.MigrationsStartForOrgRequest);
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -97,7 +101,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.Migration) ??
+                global::GitHub.Migration.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
@@ -150,13 +154,13 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.Migration> MigrationsStartForOrgAsync(
             string org,
             global::System.Collections.Generic.IList<string> repositories,
-            bool lockRepositories = false,
-            bool excludeMetadata = false,
-            bool excludeGitData = false,
-            bool excludeAttachments = false,
-            bool excludeReleases = false,
-            bool excludeOwnerProjects = false,
-            bool orgMetadataOnly = false,
+            bool? lockRepositories = false,
+            bool? excludeMetadata = false,
+            bool? excludeGitData = false,
+            bool? excludeAttachments = false,
+            bool? excludeReleases = false,
+            bool? excludeOwnerProjects = false,
+            bool? orgMetadataOnly = false,
             global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForOrgRequestExcludeItem>? exclude = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

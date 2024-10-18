@@ -10,20 +10,20 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int alertNumber,
-            ref int page,
-            ref int perPage,
+            ref int? page,
+            ref int? perPage,
             ref string? @ref,
-            ref int pr);
+            ref int? pr);
         partial void PrepareCodeScanningListAlertInstancesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             int alertNumber,
-            int page,
-            int perPage,
+            int? page,
+            int? perPage,
             string? @ref,
-            int pr);
+            int? pr);
         partial void ProcessCodeScanningListAlertInstancesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -41,7 +41,8 @@ namespace GitHub
         /// <param name="owner"></param>
         /// <param name="repo"></param>
         /// <param name="alertNumber">
-        /// The security alert number.
+        /// The security alert number.<br/>
+        /// Included only in responses
         /// </param>
         /// <param name="page">
         /// Default Value: 1
@@ -60,10 +61,10 @@ namespace GitHub
             string owner,
             string repo,
             int alertNumber,
-            int page = 1,
-            int perPage = 30,
+            int? page = 1,
+            int? perPage = 30,
             string? @ref = default,
-            int pr = default,
+            int? pr = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -78,9 +79,19 @@ namespace GitHub
                 @ref: ref @ref,
                 pr: ref pr);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/code-scanning/alerts/{alertNumber}/instances",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("ref", @ref) 
+                .AddOptionalParameter("pr", pr?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/alerts/{alertNumber}/instances?page={page}&per_page={perPage}&ref={@ref}&pr={pr}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -129,7 +140,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListCodeScanningAlertInstance) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CodeScanningAlertInstance>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.CodeScanningAlertInstance> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

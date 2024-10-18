@@ -1,6 +1,6 @@
 #nullable enable
 
-namespace OpenApiGenerator.JsonConverters
+namespace GitHub.JsonConverters
 {
     /// <inheritdoc />
     public sealed class WebhookInstallationRepositoriesAddedActionNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.WebhookInstallationRepositoriesAddedAction?>

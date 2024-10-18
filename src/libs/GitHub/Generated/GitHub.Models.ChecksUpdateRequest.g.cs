@@ -30,13 +30,13 @@ namespace GitHub
         /// This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("started_at")]
-        public global::System.DateTime StartedAt { get; set; }
+        public global::System.DateTime? StartedAt { get; set; }
 
         /// <summary>
         /// The current status of the check run. Only GitHub Actions can set a status of `waiting`, `pending`, or `requested`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.ChecksUpdateRequestStatusJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.ChecksUpdateRequestStatusJsonConverter))]
         public global::GitHub.ChecksUpdateRequestStatus? Status { get; set; }
 
         /// <summary>
@@ -44,14 +44,14 @@ namespace GitHub
         /// **Note:** Providing `conclusion` will automatically set the `status` parameter to `completed`. You cannot change a check run conclusion to `stale`, only GitHub can set this.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conclusion")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.ChecksUpdateRequestConclusionJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.ChecksUpdateRequestConclusionJsonConverter))]
         public global::GitHub.ChecksUpdateRequestConclusion? Conclusion { get; set; }
 
         /// <summary>
         /// The time the check completed. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("completed_at")]
-        public global::System.DateTime CompletedAt { get; set; }
+        public global::System.DateTime? CompletedAt { get; set; }
 
         /// <summary>
         /// Check runs can accept a variety of data in the `output` object, including a `title` and `summary` and can optionally provide descriptive details about the run.
@@ -70,5 +70,63 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.ChecksUpdateRequest? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.ChecksUpdateRequest),
+                jsonSerializerContext) as global::GitHub.ChecksUpdateRequest;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.ChecksUpdateRequest? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.ChecksUpdateRequest>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

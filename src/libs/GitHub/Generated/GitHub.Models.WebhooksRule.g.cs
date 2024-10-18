@@ -19,7 +19,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_deletions_enforcement_level")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksRuleAllowDeletionsEnforcementLevelJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksRuleAllowDeletionsEnforcementLevelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhooksRuleAllowDeletionsEnforcementLevel AllowDeletionsEnforcementLevel { get; set; }
 
@@ -27,7 +27,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_force_pushes_enforcement_level")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksRuleAllowForcePushesEnforcementLevelJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksRuleAllowForcePushesEnforcementLevelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhooksRuleAllowForcePushesEnforcementLevel AllowForcePushesEnforcementLevel { get; set; }
 
@@ -56,7 +56,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("create_protected")]
-        public bool CreateProtected { get; set; }
+        public bool? CreateProtected { get; set; }
 
         /// <summary>
         /// 
@@ -90,7 +90,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("linear_history_requirement_enforcement_level")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksRuleLinearHistoryRequirementEnforcementLevelJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksRuleLinearHistoryRequirementEnforcementLevelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhooksRuleLinearHistoryRequirementEnforcementLevel LinearHistoryRequirementEnforcementLevel { get; set; }
 
@@ -98,7 +98,7 @@ namespace GitHub
         /// The enforcement level of the branch lock setting. `off` means the branch is not locked, `non_admins` means the branch is read-only for non_admins, and `everyone` means the branch is read-only for everyone.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lock_branch_enforcement_level")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksRuleLockBranchEnforcementLevelJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksRuleLockBranchEnforcementLevelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhooksRuleLockBranchEnforcementLevel LockBranchEnforcementLevel { get; set; }
 
@@ -106,13 +106,13 @@ namespace GitHub
         /// Whether users can pull changes from upstream when the branch is locked. Set to `true` to allow users to pull changes from upstream when the branch is locked. This setting is only applicable for forks.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("lock_allows_fork_sync")]
-        public bool LockAllowsForkSync { get; set; }
+        public bool? LockAllowsForkSync { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("merge_queue_enforcement_level")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksRuleMergeQueueEnforcementLevelJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksRuleMergeQueueEnforcementLevelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhooksRuleMergeQueueEnforcementLevel MergeQueueEnforcementLevel { get; set; }
 
@@ -127,7 +127,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pull_request_reviews_enforcement_level")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksRulePullRequestReviewsEnforcementLevelJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksRulePullRequestReviewsEnforcementLevelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhooksRulePullRequestReviewsEnforcementLevel PullRequestReviewsEnforcementLevel { get; set; }
 
@@ -149,7 +149,7 @@ namespace GitHub
         /// Whether the most recent push must be approved by someone other than the person who pushed it
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("require_last_push_approval")]
-        public bool RequireLastPushApproval { get; set; }
+        public bool? RequireLastPushApproval { get; set; }
 
         /// <summary>
         /// 
@@ -162,7 +162,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("required_conversation_resolution_level")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksRuleRequiredConversationResolutionLevelJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksRuleRequiredConversationResolutionLevelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhooksRuleRequiredConversationResolutionLevel RequiredConversationResolutionLevel { get; set; }
 
@@ -170,7 +170,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("required_deployments_enforcement_level")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksRuleRequiredDeploymentsEnforcementLevelJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksRuleRequiredDeploymentsEnforcementLevelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhooksRuleRequiredDeploymentsEnforcementLevel RequiredDeploymentsEnforcementLevel { get; set; }
 
@@ -185,7 +185,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("required_status_checks_enforcement_level")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksRuleRequiredStatusChecksEnforcementLevelJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksRuleRequiredStatusChecksEnforcementLevelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhooksRuleRequiredStatusChecksEnforcementLevel RequiredStatusChecksEnforcementLevel { get; set; }
 
@@ -193,7 +193,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("signature_requirement_enforcement_level")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhooksRuleSignatureRequirementEnforcementLevelJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksRuleSignatureRequirementEnforcementLevelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhooksRuleSignatureRequirementEnforcementLevel SignatureRequirementEnforcementLevel { get; set; }
 
@@ -216,5 +216,63 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.WebhooksRule? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.WebhooksRule),
+                jsonSerializerContext) as global::GitHub.WebhooksRule;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.WebhooksRule? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhooksRule>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

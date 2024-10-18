@@ -31,7 +31,7 @@ namespace GitHub
         /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("geo")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodespacesCreateForAuthenticatedUserRequestVariant1GeoJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodespacesCreateForAuthenticatedUserRequestVariant1GeoJsonConverter))]
         public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1Geo? Geo { get; set; }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace GitHub
         /// Whether to authorize requested permissions from devcontainer.json
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("multi_repo_permissions_opt_out")]
-        public bool MultiRepoPermissionsOptOut { get; set; }
+        public bool? MultiRepoPermissionsOptOut { get; set; }
 
         /// <summary>
         /// Working directory for this codespace
@@ -68,7 +68,7 @@ namespace GitHub
         /// Time in minutes before codespace stops from inactivity
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("idle_timeout_minutes")]
-        public int IdleTimeoutMinutes { get; set; }
+        public int? IdleTimeoutMinutes { get; set; }
 
         /// <summary>
         /// Display name for this codespace
@@ -80,12 +80,70 @@ namespace GitHub
         /// Duration in minutes after codespace has gone idle in which it will be deleted. Must be integer minutes between 0 and 43200 (30 days).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("retention_period_minutes")]
-        public int RetentionPeriodMinutes { get; set; }
+        public int? RetentionPeriodMinutes { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1),
+                jsonSerializerContext) as global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

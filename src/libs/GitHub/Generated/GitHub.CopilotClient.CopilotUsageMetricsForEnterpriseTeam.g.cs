@@ -11,8 +11,8 @@ namespace GitHub
             ref string teamSlug,
             ref string? since,
             ref string? until,
-            ref int page,
-            ref int perPage);
+            ref int? page,
+            ref int? perPage);
         partial void PrepareCopilotUsageMetricsForEnterpriseTeamRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -20,8 +20,8 @@ namespace GitHub
             string teamSlug,
             string? since,
             string? until,
-            int page,
-            int perPage);
+            int? page,
+            int? perPage);
         partial void ProcessCopilotUsageMetricsForEnterpriseTeamResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -63,8 +63,8 @@ namespace GitHub
             string teamSlug,
             string? since = default,
             string? until = default,
-            int page = 1,
-            int perPage = 28,
+            int? page = 1,
+            int? perPage = 28,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -78,9 +78,19 @@ namespace GitHub
                 page: ref page,
                 perPage: ref perPage);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/enterprises/{enterprise}/team/{teamSlug}/copilot/usage",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("since", since) 
+                .AddOptionalParameter("until", until) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/enterprises/{enterprise}/team/{teamSlug}/copilot/usage?since={since}&until={until}&page={page}&per_page={perPage}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -128,7 +138,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListCopilotUsageMetrics) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CopilotUsageMetrics>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.CopilotUsageMetrics> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

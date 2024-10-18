@@ -1,4 +1,4 @@
-dotnet tool install --global openapigenerator.cli --prerelease
+dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
 curl -o openapi.yaml https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.yaml
 # dotnet run --project ../../helpers/FixOpenApiSpec openapi.yaml
@@ -6,8 +6,9 @@ curl -o openapi.yaml https://raw.githubusercontent.com/github/rest-api-descripti
 #   echo "Failed, exiting..."
 #   exit 1
 # fi
-oag generate openapi.yaml \
+autosdk generate openapi.yaml \
   --namespace GitHub \
-  --clientClassName GitHubApi \
+  --clientClassName GitHubClient \
   --targetFramework net8.0 \
-  --output Generated
+  --output Generated \
+  --exclude-deprecated-operations

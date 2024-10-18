@@ -7,15 +7,15 @@ namespace GitHub
     {
         partial void PrepareCodespacesListForAuthenticatedUserArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref int perPage,
-            ref int page,
-            ref int repositoryId);
+            ref int? perPage,
+            ref int? page,
+            ref int? repositoryId);
         partial void PrepareCodespacesListForAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            int perPage,
-            int page,
-            int repositoryId);
+            int? perPage,
+            int? page,
+            int? repositoryId);
         partial void ProcessCodespacesListForAuthenticatedUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -40,9 +40,9 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.CodespacesListForAuthenticatedUserResponse> CodespacesListForAuthenticatedUserAsync(
-            int perPage = 30,
-            int page = 1,
-            int repositoryId = default,
+            int? perPage = 30,
+            int? page = 1,
+            int? repositoryId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -53,9 +53,18 @@ namespace GitHub
                 page: ref page,
                 repositoryId: ref repositoryId);
 
+            var __pathBuilder = new PathBuilder(
+                path: "/user/codespaces",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("repository_id", repositoryId?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/user/codespaces?per_page={perPage}&page={page}&repository_id={repositoryId}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -100,7 +109,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.CodespacesListForAuthenticatedUserResponse) ??
+                global::GitHub.CodespacesListForAuthenticatedUserResponse.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

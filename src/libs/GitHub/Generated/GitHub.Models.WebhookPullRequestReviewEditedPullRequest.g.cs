@@ -21,7 +21,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("active_lock_reason")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestReviewEditedPullRequestActiveLockReasonJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhookPullRequestReviewEditedPullRequestActiveLockReasonJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhookPullRequestReviewEditedPullRequestActiveLockReason? ActiveLockReason { get; set; }
 
@@ -43,7 +43,7 @@ namespace GitHub
         /// How the author is associated with the repository.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author_association")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestReviewEditedPullRequestAuthorAssociationJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhookPullRequestReviewEditedPullRequestAuthorAssociationJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhookPullRequestReviewEditedPullRequestAuthorAssociation AuthorAssociation { get; set; }
 
@@ -199,7 +199,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("requested_reviewers")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::System.OneOf<global::GitHub.WebhookPullRequestReviewEditedPullRequestRequestedReviewerVariant1, global::GitHub.WebhookPullRequestReviewEditedPullRequestRequestedReviewerVariant2>> RequestedReviewers { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.OneOf<global::GitHub.WebhookPullRequestReviewEditedPullRequestRequestedReviewerVariant1, global::GitHub.WebhookPullRequestReviewEditedPullRequestRequestedReviewerVariant2>> RequestedReviewers { get; set; }
 
         /// <summary>
         /// 
@@ -226,7 +226,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.WebhookPullRequestReviewEditedPullRequestStateJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhookPullRequestReviewEditedPullRequestStateJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhookPullRequestReviewEditedPullRequestState State { get; set; }
 
@@ -270,5 +270,63 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.WebhookPullRequestReviewEditedPullRequest? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.WebhookPullRequestReviewEditedPullRequest),
+                jsonSerializerContext) as global::GitHub.WebhookPullRequestReviewEditedPullRequest;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.WebhookPullRequestReviewEditedPullRequest? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookPullRequestReviewEditedPullRequest>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

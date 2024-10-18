@@ -8,15 +8,15 @@ namespace GitHub
         partial void PrepareReposGetOrgRulesetsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref int perPage,
-            ref int page,
+            ref int? perPage,
+            ref int? page,
             ref string? targets);
         partial void PrepareReposGetOrgRulesetsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            int perPage,
-            int page,
+            int? perPage,
+            int? page,
             string? targets);
         partial void ProcessReposGetOrgRulesetsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -45,8 +45,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset>> ReposGetOrgRulesetsAsync(
             string org,
-            int perPage = 30,
-            int page = 1,
+            int? perPage = 30,
+            int? page = 1,
             string? targets = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -59,9 +59,18 @@ namespace GitHub
                 page: ref page,
                 targets: ref targets);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/rulesets",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("targets", targets) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/rulesets?per_page={perPage}&page={page}&targets={targets}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -107,7 +116,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListRepositoryRuleset) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

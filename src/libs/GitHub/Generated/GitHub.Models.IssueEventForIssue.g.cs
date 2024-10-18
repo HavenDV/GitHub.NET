@@ -605,6 +605,184 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        public TResult? Match<TResult>(
+            global::System.Func<global::GitHub.LabeledIssueEvent?, TResult>? labeled = null,
+            global::System.Func<global::GitHub.UnlabeledIssueEvent?, TResult>? unlabeled = null,
+            global::System.Func<global::GitHub.AssignedIssueEvent?, TResult>? assigned = null,
+            global::System.Func<global::GitHub.UnassignedIssueEvent?, TResult>? unassigned = null,
+            global::System.Func<global::GitHub.MilestonedIssueEvent?, TResult>? milestoned = null,
+            global::System.Func<global::GitHub.DemilestonedIssueEvent?, TResult>? demilestoned = null,
+            global::System.Func<global::GitHub.RenamedIssueEvent?, TResult>? renamed = null,
+            global::System.Func<global::GitHub.ReviewRequestedIssueEvent?, TResult>? reviewRequested = null,
+            global::System.Func<global::GitHub.ReviewRequestRemovedIssueEvent?, TResult>? reviewRequestRemoved = null,
+            global::System.Func<global::GitHub.ReviewDismissedIssueEvent?, TResult>? reviewDismissed = null,
+            global::System.Func<global::GitHub.LockedIssueEvent?, TResult>? locked = null,
+            global::System.Func<global::GitHub.AddedToProjectIssueEvent?, TResult>? addedToProject = null,
+            global::System.Func<global::GitHub.MovedColumnInProjectIssueEvent?, TResult>? movedColumnInProject = null,
+            global::System.Func<global::GitHub.RemovedFromProjectIssueEvent?, TResult>? removedFromProject = null,
+            global::System.Func<global::GitHub.ConvertedNoteToIssueIssueEvent?, TResult>? convertedNoteTo = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsLabeled && labeled != null)
+            {
+                return labeled(Labeled!);
+            }
+            else if (IsUnlabeled && unlabeled != null)
+            {
+                return unlabeled(Unlabeled!);
+            }
+            else if (IsAssigned && assigned != null)
+            {
+                return assigned(Assigned!);
+            }
+            else if (IsUnassigned && unassigned != null)
+            {
+                return unassigned(Unassigned!);
+            }
+            else if (IsMilestoned && milestoned != null)
+            {
+                return milestoned(Milestoned!);
+            }
+            else if (IsDemilestoned && demilestoned != null)
+            {
+                return demilestoned(Demilestoned!);
+            }
+            else if (IsRenamed && renamed != null)
+            {
+                return renamed(Renamed!);
+            }
+            else if (IsReviewRequested && reviewRequested != null)
+            {
+                return reviewRequested(ReviewRequested!);
+            }
+            else if (IsReviewRequestRemoved && reviewRequestRemoved != null)
+            {
+                return reviewRequestRemoved(ReviewRequestRemoved!);
+            }
+            else if (IsReviewDismissed && reviewDismissed != null)
+            {
+                return reviewDismissed(ReviewDismissed!);
+            }
+            else if (IsLocked && locked != null)
+            {
+                return locked(Locked!);
+            }
+            else if (IsAddedToProject && addedToProject != null)
+            {
+                return addedToProject(AddedToProject!);
+            }
+            else if (IsMovedColumnInProject && movedColumnInProject != null)
+            {
+                return movedColumnInProject(MovedColumnInProject!);
+            }
+            else if (IsRemovedFromProject && removedFromProject != null)
+            {
+                return removedFromProject(RemovedFromProject!);
+            }
+            else if (IsConvertedNoteTo && convertedNoteTo != null)
+            {
+                return convertedNoteTo(ConvertedNoteTo!);
+            }
+
+            return default(TResult);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Match(
+            global::System.Action<global::GitHub.LabeledIssueEvent?>? labeled = null,
+            global::System.Action<global::GitHub.UnlabeledIssueEvent?>? unlabeled = null,
+            global::System.Action<global::GitHub.AssignedIssueEvent?>? assigned = null,
+            global::System.Action<global::GitHub.UnassignedIssueEvent?>? unassigned = null,
+            global::System.Action<global::GitHub.MilestonedIssueEvent?>? milestoned = null,
+            global::System.Action<global::GitHub.DemilestonedIssueEvent?>? demilestoned = null,
+            global::System.Action<global::GitHub.RenamedIssueEvent?>? renamed = null,
+            global::System.Action<global::GitHub.ReviewRequestedIssueEvent?>? reviewRequested = null,
+            global::System.Action<global::GitHub.ReviewRequestRemovedIssueEvent?>? reviewRequestRemoved = null,
+            global::System.Action<global::GitHub.ReviewDismissedIssueEvent?>? reviewDismissed = null,
+            global::System.Action<global::GitHub.LockedIssueEvent?>? locked = null,
+            global::System.Action<global::GitHub.AddedToProjectIssueEvent?>? addedToProject = null,
+            global::System.Action<global::GitHub.MovedColumnInProjectIssueEvent?>? movedColumnInProject = null,
+            global::System.Action<global::GitHub.RemovedFromProjectIssueEvent?>? removedFromProject = null,
+            global::System.Action<global::GitHub.ConvertedNoteToIssueIssueEvent?>? convertedNoteTo = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsLabeled)
+            {
+                labeled?.Invoke(Labeled!);
+            }
+            else if (IsUnlabeled)
+            {
+                unlabeled?.Invoke(Unlabeled!);
+            }
+            else if (IsAssigned)
+            {
+                assigned?.Invoke(Assigned!);
+            }
+            else if (IsUnassigned)
+            {
+                unassigned?.Invoke(Unassigned!);
+            }
+            else if (IsMilestoned)
+            {
+                milestoned?.Invoke(Milestoned!);
+            }
+            else if (IsDemilestoned)
+            {
+                demilestoned?.Invoke(Demilestoned!);
+            }
+            else if (IsRenamed)
+            {
+                renamed?.Invoke(Renamed!);
+            }
+            else if (IsReviewRequested)
+            {
+                reviewRequested?.Invoke(ReviewRequested!);
+            }
+            else if (IsReviewRequestRemoved)
+            {
+                reviewRequestRemoved?.Invoke(ReviewRequestRemoved!);
+            }
+            else if (IsReviewDismissed)
+            {
+                reviewDismissed?.Invoke(ReviewDismissed!);
+            }
+            else if (IsLocked)
+            {
+                locked?.Invoke(Locked!);
+            }
+            else if (IsAddedToProject)
+            {
+                addedToProject?.Invoke(AddedToProject!);
+            }
+            else if (IsMovedColumnInProject)
+            {
+                movedColumnInProject?.Invoke(MovedColumnInProject!);
+            }
+            else if (IsRemovedFromProject)
+            {
+                removedFromProject?.Invoke(RemovedFromProject!);
+            }
+            else if (IsConvertedNoteTo)
+            {
+                convertedNoteTo?.Invoke(ConvertedNoteTo!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public override int GetHashCode()
         {
             var fields = new object?[]
@@ -695,5 +873,63 @@ namespace GitHub
         {
             return obj is IssueEventForIssue o && Equals(o);
         }
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.IssueEventForIssue? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.IssueEventForIssue),
+                jsonSerializerContext) as global::GitHub.IssueEventForIssue?;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.IssueEventForIssue? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.IssueEventForIssue>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

@@ -8,7 +8,7 @@ namespace GitHub
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public sealed partial class SecurityAdvisoriesClient : global::System.IDisposable
+    public sealed partial class SecurityAdvisoriesClient : global::GitHub.ISecurityAdvisoriesClient, global::System.IDisposable
     {
         /// <summary>
         /// 
@@ -16,6 +16,12 @@ namespace GitHub
         public const string BaseUrl = "https://api.github.com";
 
         private readonly global::System.Net.Http.HttpClient _httpClient;
+        private global::System.Collections.Generic.List<global::GitHub.EndPointAuthorization> _authorizations;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; } = global::GitHub.SourceGenerationContext.Default;
 
 
         /// <summary>
@@ -24,14 +30,16 @@ namespace GitHub
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
         /// <param name="httpClient"></param>
-        /// <param name="baseUri"></param> 
+        /// <param name="baseUri"></param>
+        /// <param name="authorizations"></param>
         public SecurityAdvisoriesClient(
             global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null 
-            )
+            global::System.Uri? baseUri = null,
+            global::System.Collections.Generic.List<global::GitHub.EndPointAuthorization>? authorizations = null)
         {
             _httpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             _httpClient.BaseAddress ??= baseUri ?? new global::System.Uri(BaseUrl);
+            _authorizations = authorizations ?? new global::System.Collections.Generic.List<global::GitHub.EndPointAuthorization>();
 
             Initialized(_httpClient);
         }

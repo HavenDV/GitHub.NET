@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::System.OneOf<int?, string> workflowId);
+            ref global::GitHub.OneOf<int?, string> workflowId);
         partial void PrepareActionsDisableWorkflowRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::System.OneOf<int?, string> workflowId);
+            global::GitHub.OneOf<int?, string> workflowId);
         partial void ProcessActionsDisableWorkflowResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -33,7 +33,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task ActionsDisableWorkflowAsync(
             string owner,
             string repo,
-            global::System.OneOf<int?, string> workflowId,
+            global::GitHub.OneOf<int?, string> workflowId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -44,9 +44,13 @@ namespace GitHub
                 repo: ref repo,
                 workflowId: ref workflowId);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/actions/workflows/{workflowId}/disable",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Put,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/actions/workflows/{workflowId}/disable", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,

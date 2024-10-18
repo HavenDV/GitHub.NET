@@ -41,10 +41,14 @@ namespace GitHub
                 org: ref org,
                 request: request);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/actions/permissions/selected-actions",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Put,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/actions/permissions/selected-actions", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.SelectedActions);
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -95,8 +99,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task ActionsSetAllowedActionsOrganizationAsync(
             string org,
-            bool githubOwnedAllowed = default,
-            bool verifiedAllowed = default,
+            bool? githubOwnedAllowed = default,
+            bool? verifiedAllowed = default,
             global::System.Collections.Generic.IList<string>? patternsAllowed = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

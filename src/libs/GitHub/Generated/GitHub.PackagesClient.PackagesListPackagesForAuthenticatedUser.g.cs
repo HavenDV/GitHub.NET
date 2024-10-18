@@ -9,15 +9,15 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref global::GitHub.PackagesListPackagesForAuthenticatedUserPackageType packageType,
             ref global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? visibility,
-            ref int page,
-            ref int perPage);
+            ref int? page,
+            ref int? perPage);
         partial void PreparePackagesListPackagesForAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::GitHub.PackagesListPackagesForAuthenticatedUserPackageType packageType,
             global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? visibility,
-            int page,
-            int perPage);
+            int? page,
+            int? perPage);
         partial void ProcessPackagesListPackagesForAuthenticatedUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -45,8 +45,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Package>> PackagesListPackagesForAuthenticatedUserAsync(
             global::GitHub.PackagesListPackagesForAuthenticatedUserPackageType packageType,
             global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? visibility = default,
-            int page = 1,
-            int perPage = 30,
+            int? page = 1,
+            int? perPage = 30,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -58,9 +58,19 @@ namespace GitHub
                 page: ref page,
                 perPage: ref perPage);
 
+            var __pathBuilder = new PathBuilder(
+                path: "/user/packages",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddRequiredParameter("package_type", packageType.ToValueString()) 
+                .AddOptionalParameter("visibility", visibility?.ToValueString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/user/packages?package_type={(global::System.Uri.EscapeDataString(packageType.ToValueString() ?? string.Empty))}&visibility={(global::System.Uri.EscapeDataString(visibility?.ToValueString() ?? string.Empty))}&page={page}&per_page={perPage}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -106,7 +116,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListPackage) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.Package>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.Package> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

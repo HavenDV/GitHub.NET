@@ -459,7 +459,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_template")]
-        public bool IsTemplate { get; set; } = false;
+        public bool? IsTemplate { get; set; } = false;
 
         /// <summary>
         /// 
@@ -471,7 +471,7 @@ namespace GitHub
         /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_properties")]
-        public global::GitHub.NullableRepositoryWebhooksCustomProperties? CustomProperties { get; set; }
+        public object? CustomProperties { get; set; }
 
         /// <summary>
         /// Whether issues are enabled.<br/>
@@ -522,7 +522,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_discussions")]
-        public bool HasDiscussions { get; set; } = false;
+        public bool? HasDiscussions { get; set; } = false;
 
         /// <summary>
         /// Whether the repository is archived.<br/>
@@ -573,7 +573,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_rebase_merge")]
-        public bool AllowRebaseMerge { get; set; } = true;
+        public bool? AllowRebaseMerge { get; set; } = true;
 
         /// <summary>
         /// 
@@ -593,7 +593,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_squash_merge")]
-        public bool AllowSquashMerge { get; set; } = true;
+        public bool? AllowSquashMerge { get; set; } = true;
 
         /// <summary>
         /// Whether to allow Auto-merge to be used on pull requests.<br/>
@@ -601,7 +601,7 @@ namespace GitHub
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_auto_merge")]
-        public bool AllowAutoMerge { get; set; } = false;
+        public bool? AllowAutoMerge { get; set; } = false;
 
         /// <summary>
         /// Whether to delete head branches when pull requests are merged<br/>
@@ -609,7 +609,7 @@ namespace GitHub
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("delete_branch_on_merge")]
-        public bool DeleteBranchOnMerge { get; set; } = false;
+        public bool? DeleteBranchOnMerge { get; set; } = false;
 
         /// <summary>
         /// Whether or not a pull request head branch that is behind its base branch can always be updated even if it is not required to be up to date before merging.<br/>
@@ -617,7 +617,7 @@ namespace GitHub
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_update_branch")]
-        public bool AllowUpdateBranch { get; set; } = false;
+        public bool? AllowUpdateBranch { get; set; } = false;
 
         /// <summary>
         /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.<br/>
@@ -625,7 +625,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("use_squash_pr_title_as_default")]
         [global::System.Obsolete("This property marked as deprecated.")]
-        public bool UseSquashPrTitleAsDefault { get; set; } = false;
+        public bool? UseSquashPrTitleAsDefault { get; set; } = false;
 
         /// <summary>
         /// The default value for a squash merge commit title:<br/>
@@ -633,7 +633,7 @@ namespace GitHub
         /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("squash_merge_commit_title")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.NullableRepositoryWebhooksSquashMergeCommitTitleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.NullableRepositoryWebhooksSquashMergeCommitTitleJsonConverter))]
         public global::GitHub.NullableRepositoryWebhooksSquashMergeCommitTitle? SquashMergeCommitTitle { get; set; }
 
         /// <summary>
@@ -643,7 +643,7 @@ namespace GitHub
         /// - `BLANK` - default to a blank commit message.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("squash_merge_commit_message")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.NullableRepositoryWebhooksSquashMergeCommitMessageJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.NullableRepositoryWebhooksSquashMergeCommitMessageJsonConverter))]
         public global::GitHub.NullableRepositoryWebhooksSquashMergeCommitMessage? SquashMergeCommitMessage { get; set; }
 
         /// <summary>
@@ -652,7 +652,7 @@ namespace GitHub
         /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("merge_commit_title")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.NullableRepositoryWebhooksMergeCommitTitleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.NullableRepositoryWebhooksMergeCommitTitleJsonConverter))]
         public global::GitHub.NullableRepositoryWebhooksMergeCommitTitle? MergeCommitTitle { get; set; }
 
         /// <summary>
@@ -662,7 +662,7 @@ namespace GitHub
         /// - `BLANK` - default to a blank commit message.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("merge_commit_message")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.NullableRepositoryWebhooksMergeCommitMessageJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.NullableRepositoryWebhooksMergeCommitMessageJsonConverter))]
         public global::GitHub.NullableRepositoryWebhooksMergeCommitMessage? MergeCommitMessage { get; set; }
 
         /// <summary>
@@ -671,32 +671,32 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_merge_commit")]
-        public bool AllowMergeCommit { get; set; } = true;
+        public bool? AllowMergeCommit { get; set; } = true;
 
         /// <summary>
         /// Whether to allow forking this repo
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_forking")]
-        public bool AllowForking { get; set; }
+        public bool? AllowForking { get; set; }
 
         /// <summary>
         /// Whether to require contributors to sign off on web-based commits<br/>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("web_commit_signoff_required")]
-        public bool WebCommitSignoffRequired { get; set; } = false;
+        public bool? WebCommitSignoffRequired { get; set; } = false;
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("subscribers_count")]
-        public int SubscribersCount { get; set; }
+        public int? SubscribersCount { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("network_count")]
-        public int NetworkCount { get; set; }
+        public int? NetworkCount { get; set; }
 
         /// <summary>
         /// 
@@ -728,12 +728,70 @@ namespace GitHub
         /// Whether anonymous git access is enabled for this repository
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("anonymous_access_enabled")]
-        public bool AnonymousAccessEnabled { get; set; }
+        public bool? AnonymousAccessEnabled { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.NullableRepositoryWebhooks? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.NullableRepositoryWebhooks),
+                jsonSerializerContext) as global::GitHub.NullableRepositoryWebhooks;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.NullableRepositoryWebhooks? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.NullableRepositoryWebhooks>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

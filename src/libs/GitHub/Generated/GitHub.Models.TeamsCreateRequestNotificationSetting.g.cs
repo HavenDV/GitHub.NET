@@ -12,7 +12,7 @@ namespace GitHub
     public enum TeamsCreateRequestNotificationSetting
     {
         /// <summary>
-        /// 
+        /// `notifications_enabled`
         /// </summary>
         NotificationsEnabled,
         /// <summary>

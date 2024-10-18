@@ -55,10 +55,14 @@ namespace GitHub
                 @ref: ref @ref,
                 request: request);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/git/refs/{@ref}",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/git/refs/{@ref}", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.GitUpdateRefRequest);
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -109,7 +113,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.GitRef) ??
+                global::GitHub.GitRef.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
@@ -134,7 +138,7 @@ namespace GitHub
             string repo,
             string @ref,
             string sha,
-            bool force = false,
+            bool? force = false,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.GitUpdateRefRequest

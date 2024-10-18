@@ -50,10 +50,14 @@ namespace GitHub
                 repo: ref repo,
                 request: request);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/milestones",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/milestones", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.IssuesCreateMilestoneRequest);
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -103,7 +107,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.Milestone) ??
+                global::GitHub.Milestone.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
@@ -134,7 +138,7 @@ namespace GitHub
             string title,
             global::GitHub.IssuesCreateMilestoneRequestState? state = global::GitHub.IssuesCreateMilestoneRequestState.Open,
             string? description = default,
-            global::System.DateTime dueOn = default,
+            global::System.DateTime? dueOn = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.IssuesCreateMilestoneRequest

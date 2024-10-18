@@ -871,6 +871,254 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        public TResult? Match<TResult>(
+            global::System.Func<global::GitHub.LabeledIssueEvent?, TResult>? labeledEvent = null,
+            global::System.Func<global::GitHub.UnlabeledIssueEvent?, TResult>? unlabeledEvent = null,
+            global::System.Func<global::GitHub.MilestonedIssueEvent?, TResult>? milestonedEvent = null,
+            global::System.Func<global::GitHub.DemilestonedIssueEvent?, TResult>? demilestonedEvent = null,
+            global::System.Func<global::GitHub.RenamedIssueEvent?, TResult>? renamedEvent = null,
+            global::System.Func<global::GitHub.ReviewRequestedIssueEvent?, TResult>? reviewRequestedEvent = null,
+            global::System.Func<global::GitHub.ReviewRequestRemovedIssueEvent?, TResult>? reviewRequestRemovedEvent = null,
+            global::System.Func<global::GitHub.ReviewDismissedIssueEvent?, TResult>? reviewDismissedEvent = null,
+            global::System.Func<global::GitHub.LockedIssueEvent?, TResult>? lockedEvent = null,
+            global::System.Func<global::GitHub.AddedToProjectIssueEvent?, TResult>? addedToProjectEvent = null,
+            global::System.Func<global::GitHub.MovedColumnInProjectIssueEvent?, TResult>? movedColumnInProjectEvent = null,
+            global::System.Func<global::GitHub.RemovedFromProjectIssueEvent?, TResult>? removedFromProjectEvent = null,
+            global::System.Func<global::GitHub.ConvertedNoteToIssueIssueEvent?, TResult>? convertedNoteToEvent = null,
+            global::System.Func<global::GitHub.TimelineCommentEvent?, TResult>? commentEvent = null,
+            global::System.Func<global::GitHub.TimelineCrossReferencedEvent?, TResult>? crossReferencedEvent = null,
+            global::System.Func<global::GitHub.TimelineCommittedEvent?, TResult>? committedEvent = null,
+            global::System.Func<global::GitHub.TimelineReviewedEvent?, TResult>? reviewedEvent = null,
+            global::System.Func<global::GitHub.TimelineLineCommentedEvent?, TResult>? lineCommentedEvent = null,
+            global::System.Func<global::GitHub.TimelineCommitCommentedEvent?, TResult>? commitCommentedEvent = null,
+            global::System.Func<global::GitHub.TimelineAssignedIssueEvent?, TResult>? assignedEvent = null,
+            global::System.Func<global::GitHub.TimelineUnassignedIssueEvent?, TResult>? unassignedEvent = null,
+            global::System.Func<global::GitHub.StateChangeIssueEvent?, TResult>? stateChangeEvent = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsLabeledEvent && labeledEvent != null)
+            {
+                return labeledEvent(LabeledEvent!);
+            }
+            else if (IsUnlabeledEvent && unlabeledEvent != null)
+            {
+                return unlabeledEvent(UnlabeledEvent!);
+            }
+            else if (IsMilestonedEvent && milestonedEvent != null)
+            {
+                return milestonedEvent(MilestonedEvent!);
+            }
+            else if (IsDemilestonedEvent && demilestonedEvent != null)
+            {
+                return demilestonedEvent(DemilestonedEvent!);
+            }
+            else if (IsRenamedEvent && renamedEvent != null)
+            {
+                return renamedEvent(RenamedEvent!);
+            }
+            else if (IsReviewRequestedEvent && reviewRequestedEvent != null)
+            {
+                return reviewRequestedEvent(ReviewRequestedEvent!);
+            }
+            else if (IsReviewRequestRemovedEvent && reviewRequestRemovedEvent != null)
+            {
+                return reviewRequestRemovedEvent(ReviewRequestRemovedEvent!);
+            }
+            else if (IsReviewDismissedEvent && reviewDismissedEvent != null)
+            {
+                return reviewDismissedEvent(ReviewDismissedEvent!);
+            }
+            else if (IsLockedEvent && lockedEvent != null)
+            {
+                return lockedEvent(LockedEvent!);
+            }
+            else if (IsAddedToProjectEvent && addedToProjectEvent != null)
+            {
+                return addedToProjectEvent(AddedToProjectEvent!);
+            }
+            else if (IsMovedColumnInProjectEvent && movedColumnInProjectEvent != null)
+            {
+                return movedColumnInProjectEvent(MovedColumnInProjectEvent!);
+            }
+            else if (IsRemovedFromProjectEvent && removedFromProjectEvent != null)
+            {
+                return removedFromProjectEvent(RemovedFromProjectEvent!);
+            }
+            else if (IsConvertedNoteToEvent && convertedNoteToEvent != null)
+            {
+                return convertedNoteToEvent(ConvertedNoteToEvent!);
+            }
+            else if (IsCommentEvent && commentEvent != null)
+            {
+                return commentEvent(CommentEvent!);
+            }
+            else if (IsCrossReferencedEvent && crossReferencedEvent != null)
+            {
+                return crossReferencedEvent(CrossReferencedEvent!);
+            }
+            else if (IsCommittedEvent && committedEvent != null)
+            {
+                return committedEvent(CommittedEvent!);
+            }
+            else if (IsReviewedEvent && reviewedEvent != null)
+            {
+                return reviewedEvent(ReviewedEvent!);
+            }
+            else if (IsLineCommentedEvent && lineCommentedEvent != null)
+            {
+                return lineCommentedEvent(LineCommentedEvent!);
+            }
+            else if (IsCommitCommentedEvent && commitCommentedEvent != null)
+            {
+                return commitCommentedEvent(CommitCommentedEvent!);
+            }
+            else if (IsAssignedEvent && assignedEvent != null)
+            {
+                return assignedEvent(AssignedEvent!);
+            }
+            else if (IsUnassignedEvent && unassignedEvent != null)
+            {
+                return unassignedEvent(UnassignedEvent!);
+            }
+            else if (IsStateChangeEvent && stateChangeEvent != null)
+            {
+                return stateChangeEvent(StateChangeEvent!);
+            }
+
+            return default(TResult);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Match(
+            global::System.Action<global::GitHub.LabeledIssueEvent?>? labeledEvent = null,
+            global::System.Action<global::GitHub.UnlabeledIssueEvent?>? unlabeledEvent = null,
+            global::System.Action<global::GitHub.MilestonedIssueEvent?>? milestonedEvent = null,
+            global::System.Action<global::GitHub.DemilestonedIssueEvent?>? demilestonedEvent = null,
+            global::System.Action<global::GitHub.RenamedIssueEvent?>? renamedEvent = null,
+            global::System.Action<global::GitHub.ReviewRequestedIssueEvent?>? reviewRequestedEvent = null,
+            global::System.Action<global::GitHub.ReviewRequestRemovedIssueEvent?>? reviewRequestRemovedEvent = null,
+            global::System.Action<global::GitHub.ReviewDismissedIssueEvent?>? reviewDismissedEvent = null,
+            global::System.Action<global::GitHub.LockedIssueEvent?>? lockedEvent = null,
+            global::System.Action<global::GitHub.AddedToProjectIssueEvent?>? addedToProjectEvent = null,
+            global::System.Action<global::GitHub.MovedColumnInProjectIssueEvent?>? movedColumnInProjectEvent = null,
+            global::System.Action<global::GitHub.RemovedFromProjectIssueEvent?>? removedFromProjectEvent = null,
+            global::System.Action<global::GitHub.ConvertedNoteToIssueIssueEvent?>? convertedNoteToEvent = null,
+            global::System.Action<global::GitHub.TimelineCommentEvent?>? commentEvent = null,
+            global::System.Action<global::GitHub.TimelineCrossReferencedEvent?>? crossReferencedEvent = null,
+            global::System.Action<global::GitHub.TimelineCommittedEvent?>? committedEvent = null,
+            global::System.Action<global::GitHub.TimelineReviewedEvent?>? reviewedEvent = null,
+            global::System.Action<global::GitHub.TimelineLineCommentedEvent?>? lineCommentedEvent = null,
+            global::System.Action<global::GitHub.TimelineCommitCommentedEvent?>? commitCommentedEvent = null,
+            global::System.Action<global::GitHub.TimelineAssignedIssueEvent?>? assignedEvent = null,
+            global::System.Action<global::GitHub.TimelineUnassignedIssueEvent?>? unassignedEvent = null,
+            global::System.Action<global::GitHub.StateChangeIssueEvent?>? stateChangeEvent = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsLabeledEvent)
+            {
+                labeledEvent?.Invoke(LabeledEvent!);
+            }
+            else if (IsUnlabeledEvent)
+            {
+                unlabeledEvent?.Invoke(UnlabeledEvent!);
+            }
+            else if (IsMilestonedEvent)
+            {
+                milestonedEvent?.Invoke(MilestonedEvent!);
+            }
+            else if (IsDemilestonedEvent)
+            {
+                demilestonedEvent?.Invoke(DemilestonedEvent!);
+            }
+            else if (IsRenamedEvent)
+            {
+                renamedEvent?.Invoke(RenamedEvent!);
+            }
+            else if (IsReviewRequestedEvent)
+            {
+                reviewRequestedEvent?.Invoke(ReviewRequestedEvent!);
+            }
+            else if (IsReviewRequestRemovedEvent)
+            {
+                reviewRequestRemovedEvent?.Invoke(ReviewRequestRemovedEvent!);
+            }
+            else if (IsReviewDismissedEvent)
+            {
+                reviewDismissedEvent?.Invoke(ReviewDismissedEvent!);
+            }
+            else if (IsLockedEvent)
+            {
+                lockedEvent?.Invoke(LockedEvent!);
+            }
+            else if (IsAddedToProjectEvent)
+            {
+                addedToProjectEvent?.Invoke(AddedToProjectEvent!);
+            }
+            else if (IsMovedColumnInProjectEvent)
+            {
+                movedColumnInProjectEvent?.Invoke(MovedColumnInProjectEvent!);
+            }
+            else if (IsRemovedFromProjectEvent)
+            {
+                removedFromProjectEvent?.Invoke(RemovedFromProjectEvent!);
+            }
+            else if (IsConvertedNoteToEvent)
+            {
+                convertedNoteToEvent?.Invoke(ConvertedNoteToEvent!);
+            }
+            else if (IsCommentEvent)
+            {
+                commentEvent?.Invoke(CommentEvent!);
+            }
+            else if (IsCrossReferencedEvent)
+            {
+                crossReferencedEvent?.Invoke(CrossReferencedEvent!);
+            }
+            else if (IsCommittedEvent)
+            {
+                committedEvent?.Invoke(CommittedEvent!);
+            }
+            else if (IsReviewedEvent)
+            {
+                reviewedEvent?.Invoke(ReviewedEvent!);
+            }
+            else if (IsLineCommentedEvent)
+            {
+                lineCommentedEvent?.Invoke(LineCommentedEvent!);
+            }
+            else if (IsCommitCommentedEvent)
+            {
+                commitCommentedEvent?.Invoke(CommitCommentedEvent!);
+            }
+            else if (IsAssignedEvent)
+            {
+                assignedEvent?.Invoke(AssignedEvent!);
+            }
+            else if (IsUnassignedEvent)
+            {
+                unassignedEvent?.Invoke(UnassignedEvent!);
+            }
+            else if (IsStateChangeEvent)
+            {
+                stateChangeEvent?.Invoke(StateChangeEvent!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public override int GetHashCode()
         {
             var fields = new object?[]
@@ -982,5 +1230,63 @@ namespace GitHub
         {
             return obj is TimelineIssueEvents o && Equals(o);
         }
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.TimelineIssueEvents? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.TimelineIssueEvents),
+                jsonSerializerContext) as global::GitHub.TimelineIssueEvents?;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.TimelineIssueEvents? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.TimelineIssueEvents>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

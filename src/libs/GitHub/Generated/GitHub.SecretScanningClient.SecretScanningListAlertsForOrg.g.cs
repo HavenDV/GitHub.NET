@@ -13,8 +13,8 @@ namespace GitHub
             ref string? resolution,
             ref global::GitHub.SecretScanningListAlertsForOrgSort? sort,
             ref global::GitHub.SecretScanningListAlertsForOrgDirection? direction,
-            ref int page,
-            ref int perPage,
+            ref int? page,
+            ref int? perPage,
             ref string? before,
             ref string? after,
             ref string? validity);
@@ -27,8 +27,8 @@ namespace GitHub
             string? resolution,
             global::GitHub.SecretScanningListAlertsForOrgSort? sort,
             global::GitHub.SecretScanningListAlertsForOrgDirection? direction,
-            int page,
-            int perPage,
+            int? page,
+            int? perPage,
             string? before,
             string? after,
             string? validity);
@@ -75,8 +75,8 @@ namespace GitHub
             string? resolution = default,
             global::GitHub.SecretScanningListAlertsForOrgSort? sort = global::GitHub.SecretScanningListAlertsForOrgSort.Created,
             global::GitHub.SecretScanningListAlertsForOrgDirection? direction = global::GitHub.SecretScanningListAlertsForOrgDirection.Desc,
-            int page = 1,
-            int perPage = 30,
+            int? page = 1,
+            int? perPage = 30,
             string? before = default,
             string? after = default,
             string? validity = default,
@@ -98,9 +98,25 @@ namespace GitHub
                 after: ref after,
                 validity: ref validity);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/secret-scanning/alerts",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("state", state?.ToValueString()) 
+                .AddOptionalParameter("secret_type", secretType) 
+                .AddOptionalParameter("resolution", resolution) 
+                .AddOptionalParameter("sort", sort?.ToValueString()) 
+                .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("before", before) 
+                .AddOptionalParameter("after", after) 
+                .AddOptionalParameter("validity", validity) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/secret-scanning/alerts?state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&secret_type={secretType}&resolution={resolution}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&page={page}&per_page={perPage}&before={before}&after={after}&validity={validity}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -153,7 +169,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListOrganizationSecretScanningAlert) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.OrganizationSecretScanningAlert>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.OrganizationSecretScanningAlert> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

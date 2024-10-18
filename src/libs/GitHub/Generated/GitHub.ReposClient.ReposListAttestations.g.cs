@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref int perPage,
+            ref int? perPage,
             ref string? before,
             ref string? after,
             ref string subjectDigest);
@@ -18,7 +18,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            int perPage,
+            int? perPage,
             string? before,
             string? after,
             string subjectDigest);
@@ -51,7 +51,7 @@ namespace GitHub
             string owner,
             string repo,
             string subjectDigest,
-            int perPage = 30,
+            int? perPage = 30,
             string? before = default,
             string? after = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -67,9 +67,18 @@ namespace GitHub
                 after: ref after,
                 subjectDigest: ref subjectDigest);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/attestations/{subjectDigest}",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("before", before) 
+                .AddOptionalParameter("after", after) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/attestations/{subjectDigest}?per_page={perPage}&before={before}&after={after}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -117,7 +126,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.ReposListAttestationsResponse) ??
+                global::GitHub.ReposListAttestationsResponse.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

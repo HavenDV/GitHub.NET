@@ -8,15 +8,15 @@ namespace GitHub
         partial void PrepareOrgsListCustomPropertiesValuesForReposArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref int perPage,
-            ref int page,
+            ref int? perPage,
+            ref int? page,
             ref string? repositoryQuery);
         partial void PrepareOrgsListCustomPropertiesValuesForReposRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            int perPage,
-            int page,
+            int? perPage,
+            int? page,
             string? repositoryQuery);
         partial void ProcessOrgsListCustomPropertiesValuesForReposResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -44,8 +44,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrgRepoCustomPropertyValues>> OrgsListCustomPropertiesValuesForReposAsync(
             string org,
-            int perPage = 30,
-            int page = 1,
+            int? perPage = 30,
+            int? page = 1,
             string? repositoryQuery = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -58,9 +58,18 @@ namespace GitHub
                 page: ref page,
                 repositoryQuery: ref repositoryQuery);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/properties/values",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("repository_query", repositoryQuery) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/properties/values?per_page={perPage}&page={page}&repository_query={repositoryQuery}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -106,7 +115,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListOrgRepoCustomPropertyValues) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.OrgRepoCustomPropertyValues>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.OrgRepoCustomPropertyValues> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

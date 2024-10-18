@@ -1,0 +1,36 @@
+#nullable enable
+
+namespace GitHub
+{
+    public partial interface IReposClient
+    {
+        /// <summary>
+        /// Get all repository rulesets<br/>
+        /// Get all the rulesets for a repository.
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="repo"></param>
+        /// <param name="perPage">
+        /// Default Value: 30
+        /// </param>
+        /// <param name="page">
+        /// Default Value: 1
+        /// </param>
+        /// <param name="includesParents">
+        /// Default Value: true
+        /// </param>
+        /// <param name="targets">
+        /// Example: branch,tag,push
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset>> ReposGetRepoRulesetsAsync(
+            string owner,
+            string repo,
+            int? perPage = 30,
+            int? page = 1,
+            bool? includesParents = true,
+            string? targets = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

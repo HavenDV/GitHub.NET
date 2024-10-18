@@ -30,7 +30,7 @@ namespace GitHub
         /// <param name="username"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.OneOf<global::GitHub.PrivateUser, global::GitHub.PublicUser>> UsersGetByUsernameAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.OneOf<global::GitHub.PrivateUser, global::GitHub.PublicUser>> UsersGetByUsernameAsync(
             string username,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -40,9 +40,13 @@ namespace GitHub
                 httpClient: _httpClient,
                 username: ref username);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/users/{username}",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/users/{username}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -85,7 +89,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.NullableOneOfPrivateUserPublicUser) ??
+                global::GitHub.OneOf<global::GitHub.PrivateUser, global::GitHub.PublicUser>.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

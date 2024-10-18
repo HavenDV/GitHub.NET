@@ -12,13 +12,13 @@ namespace GitHub
             ref string? labels,
             ref global::GitHub.IssuesListSort? sort,
             ref global::GitHub.IssuesListDirection? direction,
-            global::System.DateTime since,
-            ref bool collab,
-            ref bool orgs,
-            ref bool owned,
-            ref bool pulls,
-            ref int perPage,
-            ref int page);
+            ref global::System.DateTime? since,
+            ref bool? collab,
+            ref bool? orgs,
+            ref bool? owned,
+            ref bool? pulls,
+            ref int? perPage,
+            ref int? page);
         partial void PrepareIssuesListRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -27,13 +27,13 @@ namespace GitHub
             string? labels,
             global::GitHub.IssuesListSort? sort,
             global::GitHub.IssuesListDirection? direction,
-            global::System.DateTime since,
-            bool collab,
-            bool orgs,
-            bool owned,
-            bool pulls,
-            int perPage,
-            int page);
+            global::System.DateTime? since,
+            bool? collab,
+            bool? orgs,
+            bool? owned,
+            bool? pulls,
+            int? perPage,
+            int? page);
         partial void ProcessIssuesListResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -88,13 +88,13 @@ namespace GitHub
             string? labels = default,
             global::GitHub.IssuesListSort? sort = global::GitHub.IssuesListSort.Created,
             global::GitHub.IssuesListDirection? direction = global::GitHub.IssuesListDirection.Desc,
-            global::System.DateTime since = default,
-            bool collab = default,
-            bool orgs = default,
-            bool owned = default,
-            bool pulls = default,
-            int perPage = 30,
-            int page = 1,
+            global::System.DateTime? since = default,
+            bool? collab = default,
+            bool? orgs = default,
+            bool? owned = default,
+            bool? pulls = default,
+            int? perPage = 30,
+            int? page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -106,7 +106,7 @@ namespace GitHub
                 labels: ref labels,
                 sort: ref sort,
                 direction: ref direction,
-                since: since,
+                since: ref since,
                 collab: ref collab,
                 orgs: ref orgs,
                 owned: ref owned,
@@ -114,9 +114,27 @@ namespace GitHub
                 perPage: ref perPage,
                 page: ref page);
 
+            var __pathBuilder = new PathBuilder(
+                path: "/issues",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("filter", filter?.ToValueString()) 
+                .AddOptionalParameter("state", state?.ToValueString()) 
+                .AddOptionalParameter("labels", labels) 
+                .AddOptionalParameter("sort", sort?.ToValueString()) 
+                .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("since", since?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
+                .AddOptionalParameter("collab", collab?.ToString()) 
+                .AddOptionalParameter("orgs", orgs?.ToString()) 
+                .AddOptionalParameter("owned", owned?.ToString()) 
+                .AddOptionalParameter("pulls", pulls?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/issues?filter={(global::System.Uri.EscapeDataString(filter?.ToValueString() ?? string.Empty))}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&labels={labels}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&since={since:yyyy-MM-ddTHH:mm:ssZ}&collab={collab}&orgs={orgs}&owned={owned}&pulls={pulls}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -170,7 +188,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListIssue) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.Issue>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.Issue> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

@@ -10,14 +10,14 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref string branch,
-            global::System.OneOf<global::GitHub.ReposSetTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request);
+            global::GitHub.OneOf<global::GitHub.ReposSetTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request);
         partial void PrepareReposSetTeamAccessRestrictionsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             string branch,
-            global::System.OneOf<global::GitHub.ReposSetTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request);
+            global::GitHub.OneOf<global::GitHub.ReposSetTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request);
         partial void ProcessReposSetTeamAccessRestrictionsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -42,7 +42,7 @@ namespace GitHub
             string owner,
             string repo,
             string branch,
-            global::System.OneOf<global::GitHub.ReposSetTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request,
+            global::GitHub.OneOf<global::GitHub.ReposSetTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>> request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -54,10 +54,14 @@ namespace GitHub
                 branch: ref branch,
                 request: request);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Put,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.NullableOneOfReposSetTeamAccessRestrictionsRequest2IListString);
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -108,7 +112,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListTeam) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.Team>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.Team> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
@@ -128,7 +132,7 @@ namespace GitHub
             string branch,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::System.OneOf<global::GitHub.ReposSetTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>>
+            var request = new global::GitHub.OneOf<global::GitHub.ReposSetTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>>
             {
             };
 

@@ -27,7 +27,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("advanced_security")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestAdvancedSecurityJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestAdvancedSecurityJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity? AdvancedSecurity { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity.Disabled;
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace GitHub
         /// Default Value: enabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependency_graph")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestDependencyGraphJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestDependencyGraphJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph? DependencyGraph { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph.Enabled;
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependency_graph_autosubmit_action")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction? DependencyGraphAutosubmitAction { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction.Disabled;
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependabot_alerts")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestDependabotAlertsJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestDependabotAlertsJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts? DependabotAlerts { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts.Disabled;
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependabot_security_updates")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdatesJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdatesJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates? DependabotSecurityUpdates { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates.Disabled;
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_default_setup")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetupJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetupJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? CodeScanningDefaultSetup { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup.Disabled;
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? SecretScanning { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning.Disabled;
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_push_protection")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningPushProtectionJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningPushProtectionJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? SecretScanningPushProtection { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection.Disabled;
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_validity_checks")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecksJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecksJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? SecretScanningValidityChecks { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks.Disabled;
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_non_provider_patterns")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatternsJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatternsJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? SecretScanningNonProviderPatterns { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns.Disabled;
 
         /// <summary>
@@ -113,7 +113,7 @@ namespace GitHub
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private_vulnerability_reporting")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReportingJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReportingJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? PrivateVulnerabilityReporting { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting.Disabled;
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace GitHub
         /// Default Value: enforced
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enforcement")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.CodeSecurityCreateConfigurationRequestEnforcementJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestEnforcementJsonConverter))]
         public global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement? Enforcement { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement.Enforced;
 
         /// <summary>
@@ -129,5 +129,63 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.CodeSecurityCreateConfigurationRequest? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.CodeSecurityCreateConfigurationRequest),
+                jsonSerializerContext) as global::GitHub.CodeSecurityCreateConfigurationRequest;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.CodeSecurityCreateConfigurationRequest? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CodeSecurityCreateConfigurationRequest>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

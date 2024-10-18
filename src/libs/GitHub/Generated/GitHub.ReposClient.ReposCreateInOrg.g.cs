@@ -46,10 +46,14 @@ namespace GitHub
                 org: ref org,
                 request: request);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/repos",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/repos", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ReposCreateInOrgRequest);
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -98,7 +102,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.FullRepository) ??
+                global::GitHub.FullRepository.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
@@ -212,27 +216,27 @@ namespace GitHub
             string name,
             string? description = default,
             string? homepage = default,
-            bool @private = false,
+            bool? @private = false,
             global::GitHub.ReposCreateInOrgRequestVisibility? visibility = default,
-            bool hasIssues = true,
-            bool hasProjects = true,
-            bool hasWiki = true,
-            bool hasDownloads = true,
-            bool isTemplate = false,
-            int teamId = default,
-            bool autoInit = false,
+            bool? hasIssues = true,
+            bool? hasProjects = true,
+            bool? hasWiki = true,
+            bool? hasDownloads = true,
+            bool? isTemplate = false,
+            int? teamId = default,
+            bool? autoInit = false,
             string? gitignoreTemplate = default,
             string? licenseTemplate = default,
-            bool allowSquashMerge = true,
-            bool allowMergeCommit = true,
-            bool allowRebaseMerge = true,
-            bool allowAutoMerge = false,
-            bool deleteBranchOnMerge = false,
+            bool? allowSquashMerge = true,
+            bool? allowMergeCommit = true,
+            bool? allowRebaseMerge = true,
+            bool? allowAutoMerge = false,
+            bool? deleteBranchOnMerge = false,
             global::GitHub.ReposCreateInOrgRequestSquashMergeCommitTitle? squashMergeCommitTitle = default,
             global::GitHub.ReposCreateInOrgRequestSquashMergeCommitMessage? squashMergeCommitMessage = default,
             global::GitHub.ReposCreateInOrgRequestMergeCommitTitle? mergeCommitTitle = default,
             global::GitHub.ReposCreateInOrgRequestMergeCommitMessage? mergeCommitMessage = default,
-            global::GitHub.ReposCreateInOrgRequestCustomProperties? customProperties = default,
+            object? customProperties = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.ReposCreateInOrgRequest

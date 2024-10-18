@@ -13,11 +13,11 @@ namespace GitHub
             ref string? branch,
             ref string? @event,
             ref global::GitHub.ActionsListWorkflowRunsForRepoStatus? status,
-            ref int perPage,
-            ref int page,
-            global::System.DateTime created,
-            ref bool excludePullRequests,
-            ref int checkSuiteId,
+            ref int? perPage,
+            ref int? page,
+            ref global::System.DateTime? created,
+            ref bool? excludePullRequests,
+            ref int? checkSuiteId,
             ref string? headSha);
         partial void PrepareActionsListWorkflowRunsForRepoRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -28,11 +28,11 @@ namespace GitHub
             string? branch,
             string? @event,
             global::GitHub.ActionsListWorkflowRunsForRepoStatus? status,
-            int perPage,
-            int page,
-            global::System.DateTime created,
-            bool excludePullRequests,
-            int checkSuiteId,
+            int? perPage,
+            int? page,
+            global::System.DateTime? created,
+            bool? excludePullRequests,
+            int? checkSuiteId,
             string? headSha);
         partial void ProcessActionsListWorkflowRunsForRepoResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -77,11 +77,11 @@ namespace GitHub
             string? branch = default,
             string? @event = default,
             global::GitHub.ActionsListWorkflowRunsForRepoStatus? status = default,
-            int perPage = 30,
-            int page = 1,
-            global::System.DateTime created = default,
-            bool excludePullRequests = false,
-            int checkSuiteId = default,
+            int? perPage = 30,
+            int? page = 1,
+            global::System.DateTime? created = default,
+            bool? excludePullRequests = false,
+            int? checkSuiteId = default,
             string? headSha = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -97,14 +97,30 @@ namespace GitHub
                 status: ref status,
                 perPage: ref perPage,
                 page: ref page,
-                created: created,
+                created: ref created,
                 excludePullRequests: ref excludePullRequests,
                 checkSuiteId: ref checkSuiteId,
                 headSha: ref headSha);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/actions/runs",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("actor", actor) 
+                .AddOptionalParameter("branch", branch) 
+                .AddOptionalParameter("event", @event) 
+                .AddOptionalParameter("status", status?.ToValueString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("created", created?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
+                .AddOptionalParameter("exclude_pull_requests", excludePullRequests?.ToString()) 
+                .AddOptionalParameter("check_suite_id", checkSuiteId?.ToString()) 
+                .AddOptionalParameter("head_sha", headSha) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/actions/runs?actor={actor}&branch={branch}&event={@event}&status={(global::System.Uri.EscapeDataString(status?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}&created={created:yyyy-MM-ddTHH:mm:ssZ}&exclude_pull_requests={excludePullRequests}&check_suite_id={checkSuiteId}&head_sha={headSha}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -158,7 +174,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.ActionsListWorkflowRunsForRepoResponse) ??
+                global::GitHub.ActionsListWorkflowRunsForRepoResponse.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

@@ -1,6 +1,6 @@
 #nullable enable
 
-namespace OpenApiGenerator.JsonConverters
+namespace GitHub.JsonConverters
 {
     /// <inheritdoc />
     public sealed class ChecksUpdateRequestVariant1StatusNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.ChecksUpdateRequestVariant1Status?>

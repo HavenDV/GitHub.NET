@@ -7,15 +7,15 @@ namespace GitHub
     {
         partial void PrepareCodespacesGetCodespacesForUserInOrgArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref int perPage,
-            ref int page,
+            ref int? perPage,
+            ref int? page,
             ref string org,
             ref string username);
         partial void PrepareCodespacesGetCodespacesForUserInOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            int perPage,
-            int page,
+            int? perPage,
+            int? page,
             string org,
             string username);
         partial void ProcessCodespacesGetCodespacesForUserInOrgResponse(
@@ -45,8 +45,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CodespacesGetCodespacesForUserInOrgResponse> CodespacesGetCodespacesForUserInOrgAsync(
             string org,
             string username,
-            int perPage = 30,
-            int page = 1,
+            int? perPage = 30,
+            int? page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -58,9 +58,17 @@ namespace GitHub
                 org: ref org,
                 username: ref username);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/members/{username}/codespaces",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/members/{username}/codespaces?per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -106,7 +114,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.CodespacesGetCodespacesForUserInOrgResponse) ??
+                global::GitHub.CodespacesGetCodespacesForUserInOrgResponse.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

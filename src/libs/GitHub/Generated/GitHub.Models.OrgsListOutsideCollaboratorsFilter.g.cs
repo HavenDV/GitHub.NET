@@ -9,7 +9,7 @@ namespace GitHub
     public enum OrgsListOutsideCollaboratorsFilter
     {
         /// <summary>
-        /// 
+        /// //github.com/blog/1614-two-factor-authentication) enabled will be returned.
         /// </summary>
         x2faDisabled,
         /// <summary>

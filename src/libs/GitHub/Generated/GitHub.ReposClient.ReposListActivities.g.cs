@@ -10,7 +10,7 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref global::GitHub.ReposListActivitiesDirection? direction,
-            ref int perPage,
+            ref int? perPage,
             ref string? before,
             ref string? after,
             ref string? @ref,
@@ -23,7 +23,7 @@ namespace GitHub
             string owner,
             string repo,
             global::GitHub.ReposListActivitiesDirection? direction,
-            int perPage,
+            int? perPage,
             string? before,
             string? after,
             string? @ref,
@@ -65,7 +65,7 @@ namespace GitHub
             string owner,
             string repo,
             global::GitHub.ReposListActivitiesDirection? direction = global::GitHub.ReposListActivitiesDirection.Desc,
-            int perPage = 30,
+            int? perPage = 30,
             string? before = default,
             string? after = default,
             string? @ref = default,
@@ -89,9 +89,23 @@ namespace GitHub
                 timePeriod: ref timePeriod,
                 activityType: ref activityType);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/activity",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("before", before) 
+                .AddOptionalParameter("after", after) 
+                .AddOptionalParameter("ref", @ref) 
+                .AddOptionalParameter("actor", actor) 
+                .AddOptionalParameter("time_period", timePeriod?.ToValueString()) 
+                .AddOptionalParameter("activity_type", activityType?.ToValueString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/activity?direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&per_page={perPage}&before={before}&after={after}&ref={@ref}&actor={actor}&time_period={(global::System.Uri.EscapeDataString(timePeriod?.ToValueString() ?? string.Empty))}&activity_type={(global::System.Uri.EscapeDataString(activityType?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -143,7 +157,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListActivity) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.Activity>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.Activity> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

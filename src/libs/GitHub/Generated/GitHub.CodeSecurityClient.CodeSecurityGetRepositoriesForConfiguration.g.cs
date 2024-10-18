@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
             ref int configurationId,
-            ref int perPage,
+            ref int? perPage,
             ref string? before,
             ref string? after,
             ref string? status);
@@ -18,7 +18,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             int configurationId,
-            int perPage,
+            int? perPage,
             string? before,
             string? after,
             string? status);
@@ -52,7 +52,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfigurationRepositories>> CodeSecurityGetRepositoriesForConfigurationAsync(
             string org,
             int configurationId,
-            int perPage = 30,
+            int? perPage = 30,
             string? before = default,
             string? after = default,
             string? status = "all",
@@ -69,9 +69,19 @@ namespace GitHub
                 after: ref after,
                 status: ref status);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/code-security/configurations/{configurationId}/repositories",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("before", before) 
+                .AddOptionalParameter("after", after) 
+                .AddOptionalParameter("status", status) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/code-security/configurations/{configurationId}/repositories?per_page={perPage}&before={before}&after={after}&status={status}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -119,7 +129,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListCodeSecurityConfigurationRepositories) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfigurationRepositories>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfigurationRepositories> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

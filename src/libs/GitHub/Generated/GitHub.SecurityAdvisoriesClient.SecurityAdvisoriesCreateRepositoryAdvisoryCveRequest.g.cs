@@ -37,7 +37,7 @@ namespace GitHub
         /// <param name="ghsaId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequestResponse> SecurityAdvisoriesCreateRepositoryAdvisoryCveRequestAsync(
+        public async global::System.Threading.Tasks.Task<string> SecurityAdvisoriesCreateRepositoryAdvisoryCveRequestAsync(
             string owner,
             string repo,
             string ghsaId,
@@ -51,9 +51,13 @@ namespace GitHub
                 repo: ref repo,
                 ghsaId: ref ghsaId);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/security-advisories/{ghsaId}/cve",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/security-advisories/{ghsaId}/cve", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -97,9 +101,7 @@ namespace GitHub
                 throw new global::System.InvalidOperationException(__content, ex);
             }
 
-            return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.SecurityAdvisoriesCreateRepositoryAdvisoryCveRequestResponse) ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            return __content;
         }
     }
 }

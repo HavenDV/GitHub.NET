@@ -1,6 +1,6 @@
 #nullable enable
 
-namespace OpenApiGenerator.JsonConverters
+namespace GitHub.JsonConverters
 {
     /// <inheritdoc />
     public sealed class WebhooksTeam1PrivacyJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.WebhooksTeam1Privacy>

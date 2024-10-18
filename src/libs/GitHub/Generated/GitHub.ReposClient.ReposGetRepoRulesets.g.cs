@@ -9,18 +9,18 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref int perPage,
-            ref int page,
-            ref bool includesParents,
+            ref int? perPage,
+            ref int? page,
+            ref bool? includesParents,
             ref string? targets);
         partial void PrepareReposGetRepoRulesetsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            int perPage,
-            int page,
-            bool includesParents,
+            int? perPage,
+            int? page,
+            bool? includesParents,
             string? targets);
         partial void ProcessReposGetRepoRulesetsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -54,9 +54,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset>> ReposGetRepoRulesetsAsync(
             string owner,
             string repo,
-            int perPage = 30,
-            int page = 1,
-            bool includesParents = true,
+            int? perPage = 30,
+            int? page = 1,
+            bool? includesParents = true,
             string? targets = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -71,9 +71,19 @@ namespace GitHub
                 includesParents: ref includesParents,
                 targets: ref targets);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/rulesets",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("includes_parents", includesParents?.ToString()) 
+                .AddOptionalParameter("targets", targets) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/rulesets?per_page={perPage}&page={page}&includes_parents={includesParents}&targets={targets}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -121,7 +131,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListRepositoryRuleset) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

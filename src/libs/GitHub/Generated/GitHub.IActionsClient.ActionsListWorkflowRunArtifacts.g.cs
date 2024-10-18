@@ -1,0 +1,34 @@
+#nullable enable
+
+namespace GitHub
+{
+    public partial interface IActionsClient
+    {
+        /// <summary>
+        /// List workflow run artifacts<br/>
+        /// Lists artifacts for a workflow run.<br/>
+        /// Anyone with read access to the repository can use this endpoint.<br/>
+        /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with a private repository.
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="repo"></param>
+        /// <param name="runId"></param>
+        /// <param name="perPage">
+        /// Default Value: 30
+        /// </param>
+        /// <param name="page">
+        /// Default Value: 1
+        /// </param>
+        /// <param name="name"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task<global::GitHub.ActionsListWorkflowRunArtifactsResponse> ActionsListWorkflowRunArtifactsAsync(
+            string owner,
+            string repo,
+            int runId,
+            int? perPage = 30,
+            int? page = 1,
+            string? name = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

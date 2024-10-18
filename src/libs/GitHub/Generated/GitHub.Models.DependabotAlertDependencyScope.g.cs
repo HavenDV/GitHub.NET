@@ -4,7 +4,8 @@
 namespace GitHub
 {
     /// <summary>
-    /// The execution scope of the vulnerable dependency.
+    /// The execution scope of the vulnerable dependency.<br/>
+    /// Included only in responses
     /// </summary>
     public enum DependabotAlertDependencyScope
     {

@@ -10,8 +10,8 @@ namespace GitHub
             ref global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgPackageType packageType,
             ref string packageName,
             ref string org,
-            ref int page,
-            ref int perPage,
+            ref int? page,
+            ref int? perPage,
             ref global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState? state);
         partial void PreparePackagesGetAllPackageVersionsForPackageOwnedByOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -19,8 +19,8 @@ namespace GitHub
             global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgPackageType packageType,
             string packageName,
             string org,
-            int page,
-            int perPage,
+            int? page,
+            int? perPage,
             global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState? state);
         partial void ProcessPackagesGetAllPackageVersionsForPackageOwnedByOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -54,8 +54,8 @@ namespace GitHub
             global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgPackageType packageType,
             string packageName,
             string org,
-            int page = 1,
-            int perPage = 30,
+            int? page = 1,
+            int? perPage = 30,
             global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState? state = global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState.Active,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -70,9 +70,18 @@ namespace GitHub
                 perPage: ref perPage,
                 state: ref state);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/packages/{packageType}/{packageName}/versions",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("state", state?.ToValueString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/packages/{packageType}/{packageName}/versions?page={page}&per_page={perPage}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -120,7 +129,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListPackageVersion) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.PackageVersion>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.PackageVersion> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

@@ -35,7 +35,7 @@ namespace GitHub
         /// Example: 42
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("check_suite_id")]
-        public int CheckSuiteId { get; set; }
+        public int? CheckSuiteId { get; set; }
 
         /// <summary>
         /// The node ID of the associated check suite.<br/>
@@ -80,7 +80,7 @@ namespace GitHub
         /// Example: 1
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("run_attempt")]
-        public int RunAttempt { get; set; }
+        public int? RunAttempt { get; set; }
 
         /// <summary>
         /// 
@@ -169,7 +169,7 @@ namespace GitHub
         /// The start time of the latest run. Resets on re-run.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("run_started_at")]
-        public global::System.DateTime RunStartedAt { get; set; }
+        public global::System.DateTime? RunStartedAt { get; set; }
 
         /// <summary>
         /// The URL to the jobs for the workflow run.<br/>
@@ -259,7 +259,7 @@ namespace GitHub
         /// Example: 5
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("head_repository_id")]
-        public int HeadRepositoryId { get; set; }
+        public int? HeadRepositoryId { get; set; }
 
         /// <summary>
         /// The event-specific title associated with the run or the run-name if set, or the value of `run-name` if it is set in the workflow.<br/>
@@ -274,5 +274,63 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.WorkflowRun? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.WorkflowRun),
+                jsonSerializerContext) as global::GitHub.WorkflowRun;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.WorkflowRun? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WorkflowRun>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

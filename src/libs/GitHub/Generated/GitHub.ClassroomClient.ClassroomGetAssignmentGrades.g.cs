@@ -38,9 +38,13 @@ namespace GitHub
                 httpClient: _httpClient,
                 assignmentId: ref assignmentId);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/assignments/{assignmentId}/grades",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/assignments/{assignmentId}/grades", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -83,7 +87,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListClassroomAssignmentGrade) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.ClassroomAssignmentGrade>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.ClassroomAssignmentGrade> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

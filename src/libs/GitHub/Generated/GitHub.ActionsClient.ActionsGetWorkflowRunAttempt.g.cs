@@ -11,7 +11,7 @@ namespace GitHub
             ref string repo,
             ref int runId,
             ref int attemptNumber,
-            ref bool excludePullRequests);
+            ref bool? excludePullRequests);
         partial void PrepareActionsGetWorkflowRunAttemptRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -19,7 +19,7 @@ namespace GitHub
             string repo,
             int runId,
             int attemptNumber,
-            bool excludePullRequests);
+            bool? excludePullRequests);
         partial void ProcessActionsGetWorkflowRunAttemptResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -49,7 +49,7 @@ namespace GitHub
             string repo,
             int runId,
             int attemptNumber,
-            bool excludePullRequests = false,
+            bool? excludePullRequests = false,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -62,9 +62,16 @@ namespace GitHub
                 attemptNumber: ref attemptNumber,
                 excludePullRequests: ref excludePullRequests);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/actions/runs/{runId}/attempts/{attemptNumber}",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("exclude_pull_requests", excludePullRequests?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/actions/runs/{runId}/attempts/{attemptNumber}?exclude_pull_requests={excludePullRequests}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -111,7 +118,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.WorkflowRun) ??
+                global::GitHub.WorkflowRun.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

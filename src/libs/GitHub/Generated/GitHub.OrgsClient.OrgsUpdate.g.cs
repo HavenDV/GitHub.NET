@@ -51,10 +51,14 @@ namespace GitHub
                 org: ref org,
                 request: request);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.OrgsUpdateRequest);
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -103,7 +107,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.OrganizationFull) ??
+                global::GitHub.OrganizationFull.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
@@ -206,21 +210,21 @@ namespace GitHub
             string? location = default,
             string? name = default,
             string? description = default,
-            bool hasOrganizationProjects = default,
-            bool hasRepositoryProjects = default,
+            bool? hasOrganizationProjects = default,
+            bool? hasRepositoryProjects = default,
             global::GitHub.OrgsUpdateRequestDefaultRepositoryPermission? defaultRepositoryPermission = global::GitHub.OrgsUpdateRequestDefaultRepositoryPermission.Read,
-            bool membersCanCreateRepositories = true,
-            bool membersCanCreateInternalRepositories = default,
-            bool membersCanCreatePrivateRepositories = default,
-            bool membersCanCreatePublicRepositories = default,
+            bool? membersCanCreateRepositories = true,
+            bool? membersCanCreateInternalRepositories = default,
+            bool? membersCanCreatePrivateRepositories = default,
+            bool? membersCanCreatePublicRepositories = default,
             global::GitHub.OrgsUpdateRequestMembersAllowedRepositoryCreationType? membersAllowedRepositoryCreationType = default,
-            bool membersCanCreatePages = true,
-            bool membersCanCreatePublicPages = true,
-            bool membersCanCreatePrivatePages = true,
-            bool membersCanForkPrivateRepositories = false,
-            bool webCommitSignoffRequired = false,
+            bool? membersCanCreatePages = true,
+            bool? membersCanCreatePublicPages = true,
+            bool? membersCanCreatePrivatePages = true,
+            bool? membersCanForkPrivateRepositories = false,
+            bool? webCommitSignoffRequired = false,
             string? blog = default,
-            bool secretScanningPushProtectionCustomLinkEnabled = default,
+            bool? secretScanningPushProtectionCustomLinkEnabled = default,
             string? secretScanningPushProtectionCustomLink = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

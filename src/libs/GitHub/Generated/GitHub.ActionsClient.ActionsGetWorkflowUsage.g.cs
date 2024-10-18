@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::System.OneOf<int?, string> workflowId);
+            ref global::GitHub.OneOf<int?, string> workflowId);
         partial void PrepareActionsGetWorkflowUsageRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::System.OneOf<int?, string> workflowId);
+            global::GitHub.OneOf<int?, string> workflowId);
         partial void ProcessActionsGetWorkflowUsageResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -40,7 +40,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.WorkflowUsage> ActionsGetWorkflowUsageAsync(
             string owner,
             string repo,
-            global::System.OneOf<int?, string> workflowId,
+            global::GitHub.OneOf<int?, string> workflowId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -51,9 +51,13 @@ namespace GitHub
                 repo: ref repo,
                 workflowId: ref workflowId);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/actions/workflows/{workflowId}/timing",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/actions/workflows/{workflowId}/timing", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -98,7 +102,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.WorkflowUsage) ??
+                global::GitHub.WorkflowUsage.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

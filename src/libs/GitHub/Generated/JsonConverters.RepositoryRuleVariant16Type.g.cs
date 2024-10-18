@@ -1,6 +1,6 @@
 #nullable enable
 
-namespace OpenApiGenerator.JsonConverters
+namespace GitHub.JsonConverters
 {
     /// <inheritdoc />
     public sealed class RepositoryRuleVariant16TypeJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.RepositoryRuleVariant16Type>

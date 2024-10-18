@@ -28,7 +28,7 @@ namespace GitHub
         /// <param name="code"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.AllOf<global::GitHub.Integration, global::GitHub.AppsCreateFromManifestResponse2>> AppsCreateFromManifestAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.AllOf<global::GitHub.Integration, global::GitHub.AppsCreateFromManifestResponse2>> AppsCreateFromManifestAsync(
             string code,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -38,9 +38,13 @@ namespace GitHub
                 httpClient: _httpClient,
                 code: ref code);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/app-manifests/{code}/conversions",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/app-manifests/{code}/conversions", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -83,7 +87,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.NullableAllOfIntegrationAppsCreateFromManifestResponse2) ??
+                global::GitHub.AllOf<global::GitHub.Integration, global::GitHub.AppsCreateFromManifestResponse2>.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

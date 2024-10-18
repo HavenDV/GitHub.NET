@@ -12,9 +12,9 @@ namespace GitHub
             ref string? cveId,
             ref global::GitHub.SecurityAdvisoryEcosystems? ecosystem,
             ref global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSeverity? severity,
-            ref global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? cwes,
-            ref bool isWithdrawn,
-            ref global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? affects,
+            ref global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? cwes,
+            ref bool? isWithdrawn,
+            ref global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? affects,
             ref string? published,
             ref string? updated,
             ref string? modified,
@@ -23,7 +23,7 @@ namespace GitHub
             ref string? before,
             ref string? after,
             ref global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? direction,
-            ref int perPage,
+            ref int? perPage,
             ref global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort? sort);
         partial void PrepareSecurityAdvisoriesListGlobalAdvisoriesRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -33,9 +33,9 @@ namespace GitHub
             string? cveId,
             global::GitHub.SecurityAdvisoryEcosystems? ecosystem,
             global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSeverity? severity,
-            global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? cwes,
-            bool isWithdrawn,
-            global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? affects,
+            global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? cwes,
+            bool? isWithdrawn,
+            global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? affects,
             string? published,
             string? updated,
             string? modified,
@@ -44,7 +44,7 @@ namespace GitHub
             string? before,
             string? after,
             global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? direction,
-            int perPage,
+            int? perPage,
             global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort? sort);
         partial void ProcessSecurityAdvisoriesListGlobalAdvisoriesResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -96,9 +96,9 @@ namespace GitHub
             string? cveId = default,
             global::GitHub.SecurityAdvisoryEcosystems? ecosystem = default,
             global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSeverity? severity = default,
-            global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? cwes = default,
-            bool isWithdrawn = default,
-            global::System.OneOf<string, global::System.Collections.Generic.IList<string>>? affects = default,
+            global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? cwes = default,
+            bool? isWithdrawn = default,
+            global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? affects = default,
             string? published = default,
             string? updated = default,
             string? modified = default,
@@ -107,7 +107,7 @@ namespace GitHub
             string? before = default,
             string? after = default,
             global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? direction = global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection.Desc,
-            int perPage = 30,
+            int? perPage = 30,
             global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort? sort = global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort.Published,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -134,9 +134,33 @@ namespace GitHub
                 perPage: ref perPage,
                 sort: ref sort);
 
+            var __pathBuilder = new PathBuilder(
+                path: "/advisories",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("ghsa_id", ghsaId) 
+                .AddOptionalParameter("type", type?.ToValueString()) 
+                .AddOptionalParameter("cve_id", cveId) 
+                .AddOptionalParameter("ecosystem", ecosystem?.ToValueString()) 
+                .AddOptionalParameter("severity", severity?.ToValueString()) 
+                .AddOptionalParameter("cwes", cwes?.ToString() ?? string.Empty) 
+                .AddOptionalParameter("is_withdrawn", isWithdrawn?.ToString()) 
+                .AddOptionalParameter("affects", affects?.ToString() ?? string.Empty) 
+                .AddOptionalParameter("published", published) 
+                .AddOptionalParameter("updated", updated) 
+                .AddOptionalParameter("modified", modified) 
+                .AddOptionalParameter("epss_percentage", epssPercentage) 
+                .AddOptionalParameter("epss_percentile", epssPercentile) 
+                .AddOptionalParameter("before", before) 
+                .AddOptionalParameter("after", after) 
+                .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("sort", sort?.ToValueString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/advisories?ghsa_id={ghsaId}&type={(global::System.Uri.EscapeDataString(type?.ToValueString() ?? string.Empty))}&cve_id={cveId}&ecosystem={(global::System.Uri.EscapeDataString(ecosystem?.ToValueString() ?? string.Empty))}&severity={(global::System.Uri.EscapeDataString(severity?.ToValueString() ?? string.Empty))}&cwes={cwes}&is_withdrawn={isWithdrawn}&affects={affects}&published={published}&updated={updated}&modified={modified}&epss_percentage={epssPercentage}&epss_percentile={epssPercentile}&before={before}&after={after}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&per_page={perPage}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -196,7 +220,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListGlobalAdvisory) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisory>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisory> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

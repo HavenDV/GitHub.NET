@@ -7,21 +7,21 @@ namespace GitHub
     {
         partial void PrepareActivityListNotificationsForAuthenticatedUserArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref bool all,
-            ref bool participating,
-            global::System.DateTime since,
-            global::System.DateTime before,
-            ref int page,
-            ref int perPage);
+            ref bool? all,
+            ref bool? participating,
+            ref global::System.DateTime? since,
+            ref global::System.DateTime? before,
+            ref int? page,
+            ref int? perPage);
         partial void PrepareActivityListNotificationsForAuthenticatedUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            bool all,
-            bool participating,
-            global::System.DateTime since,
-            global::System.DateTime before,
-            int page,
-            int perPage);
+            bool? all,
+            bool? participating,
+            global::System.DateTime? since,
+            global::System.DateTime? before,
+            int? page,
+            int? perPage);
         partial void ProcessActivityListNotificationsForAuthenticatedUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -52,12 +52,12 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Thread>> ActivityListNotificationsForAuthenticatedUserAsync(
-            bool all = false,
-            bool participating = false,
-            global::System.DateTime since = default,
-            global::System.DateTime before = default,
-            int page = 1,
-            int perPage = 50,
+            bool? all = false,
+            bool? participating = false,
+            global::System.DateTime? since = default,
+            global::System.DateTime? before = default,
+            int? page = 1,
+            int? perPage = 50,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -66,14 +66,26 @@ namespace GitHub
                 httpClient: _httpClient,
                 all: ref all,
                 participating: ref participating,
-                since: since,
-                before: before,
+                since: ref since,
+                before: ref before,
                 page: ref page,
                 perPage: ref perPage);
 
+            var __pathBuilder = new PathBuilder(
+                path: "/notifications",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("all", all?.ToString()) 
+                .AddOptionalParameter("participating", participating?.ToString()) 
+                .AddOptionalParameter("since", since?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
+                .AddOptionalParameter("before", before?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/notifications?all={all}&participating={participating}&since={since:yyyy-MM-ddTHH:mm:ssZ}&before={before:yyyy-MM-ddTHH:mm:ssZ}&page={page}&per_page={perPage}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -121,7 +133,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListThread) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.Thread>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.Thread> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

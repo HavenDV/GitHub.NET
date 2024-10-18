@@ -1,4 +1,3 @@
-using System.Linq;
 
 #nullable enable
 
@@ -9,15 +8,15 @@ namespace GitHub
         partial void PrepareMigrationsListForOrgArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref int perPage,
-            ref int page,
+            ref int? perPage,
+            ref int? page,
             global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExcludeItem>? exclude);
         partial void PrepareMigrationsListForOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            int perPage,
-            int page,
+            int? perPage,
+            int? page,
             global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExcludeItem>? exclude);
         partial void ProcessMigrationsListForOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -45,8 +44,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Migration>> MigrationsListForOrgAsync(
             string org,
-            int perPage = 30,
-            int page = 1,
+            int? perPage = 30,
+            int? page = 1,
             global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExcludeItem>? exclude = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -59,9 +58,17 @@ namespace GitHub
                 page: ref page,
                 exclude: exclude);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/migrations",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/migrations?per_page={perPage}&page={page}&{string.Join("&", exclude?.Select(static x => $"exclude={x}") ?? global::System.Array.Empty<string>())}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -107,7 +114,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListMigration) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.Migration>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.Migration> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

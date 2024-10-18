@@ -132,7 +132,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_verified")]
-        public bool IsVerified { get; set; }
+        public bool? IsVerified { get; set; }
 
         /// <summary>
         /// Example: true
@@ -194,13 +194,13 @@ namespace GitHub
         /// Example: 100
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_private_repos")]
-        public int TotalPrivateRepos { get; set; }
+        public int? TotalPrivateRepos { get; set; }
 
         /// <summary>
         /// Example: 100
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owned_private_repos")]
-        public int OwnedPrivateRepos { get; set; }
+        public int? OwnedPrivateRepos { get; set; }
 
         /// <summary>
         /// Example: 81
@@ -254,37 +254,37 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("members_can_create_public_repositories")]
-        public bool MembersCanCreatePublicRepositories { get; set; }
+        public bool? MembersCanCreatePublicRepositories { get; set; }
 
         /// <summary>
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("members_can_create_private_repositories")]
-        public bool MembersCanCreatePrivateRepositories { get; set; }
+        public bool? MembersCanCreatePrivateRepositories { get; set; }
 
         /// <summary>
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("members_can_create_internal_repositories")]
-        public bool MembersCanCreateInternalRepositories { get; set; }
+        public bool? MembersCanCreateInternalRepositories { get; set; }
 
         /// <summary>
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("members_can_create_pages")]
-        public bool MembersCanCreatePages { get; set; }
+        public bool? MembersCanCreatePages { get; set; }
 
         /// <summary>
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("members_can_create_public_pages")]
-        public bool MembersCanCreatePublicPages { get; set; }
+        public bool? MembersCanCreatePublicPages { get; set; }
 
         /// <summary>
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("members_can_create_private_pages")]
-        public bool MembersCanCreatePrivatePages { get; set; }
+        public bool? MembersCanCreatePrivatePages { get; set; }
 
         /// <summary>
         /// Example: false
@@ -296,7 +296,7 @@ namespace GitHub
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("web_commit_signoff_required")]
-        public bool WebCommitSignoffRequired { get; set; }
+        public bool? WebCommitSignoffRequired { get; set; }
 
         /// <summary>
         /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
@@ -306,7 +306,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("advanced_security_enabled_for_new_repositories")]
         [global::System.Obsolete("This property marked as deprecated.")]
-        public bool AdvancedSecurityEnabledForNewRepositories { get; set; }
+        public bool? AdvancedSecurityEnabledForNewRepositories { get; set; }
 
         /// <summary>
         /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
@@ -316,7 +316,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependabot_alerts_enabled_for_new_repositories")]
         [global::System.Obsolete("This property marked as deprecated.")]
-        public bool DependabotAlertsEnabledForNewRepositories { get; set; }
+        public bool? DependabotAlertsEnabledForNewRepositories { get; set; }
 
         /// <summary>
         /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
@@ -326,7 +326,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependabot_security_updates_enabled_for_new_repositories")]
         [global::System.Obsolete("This property marked as deprecated.")]
-        public bool DependabotSecurityUpdatesEnabledForNewRepositories { get; set; }
+        public bool? DependabotSecurityUpdatesEnabledForNewRepositories { get; set; }
 
         /// <summary>
         /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
@@ -336,7 +336,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependency_graph_enabled_for_new_repositories")]
         [global::System.Obsolete("This property marked as deprecated.")]
-        public bool DependencyGraphEnabledForNewRepositories { get; set; }
+        public bool? DependencyGraphEnabledForNewRepositories { get; set; }
 
         /// <summary>
         /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
@@ -346,7 +346,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_enabled_for_new_repositories")]
         [global::System.Obsolete("This property marked as deprecated.")]
-        public bool SecretScanningEnabledForNewRepositories { get; set; }
+        public bool? SecretScanningEnabledForNewRepositories { get; set; }
 
         /// <summary>
         /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
@@ -356,14 +356,14 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_push_protection_enabled_for_new_repositories")]
         [global::System.Obsolete("This property marked as deprecated.")]
-        public bool SecretScanningPushProtectionEnabledForNewRepositories { get; set; }
+        public bool? SecretScanningPushProtectionEnabledForNewRepositories { get; set; }
 
         /// <summary>
         /// Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.<br/>
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_push_protection_custom_link_enabled")]
-        public bool SecretScanningPushProtectionCustomLinkEnabled { get; set; }
+        public bool? SecretScanningPushProtectionCustomLinkEnabled { get; set; }
 
         /// <summary>
         /// An optional URL string to display to contributors who are blocked from pushing a secret.<br/>
@@ -398,5 +398,63 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.OrganizationFull? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.OrganizationFull),
+                jsonSerializerContext) as global::GitHub.OrganizationFull;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.OrganizationFull? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.OrganizationFull>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

@@ -1,6 +1,6 @@
 #nullable enable
 
-namespace OpenApiGenerator.JsonConverters
+namespace GitHub.JsonConverters
 {
     /// <inheritdoc />
     public sealed class NullableIssueStateReasonJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.NullableIssueStateReason>

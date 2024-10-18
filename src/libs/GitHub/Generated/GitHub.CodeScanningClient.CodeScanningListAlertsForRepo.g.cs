@@ -11,10 +11,10 @@ namespace GitHub
             ref string repo,
             ref string? toolName,
             ref string? toolGuid,
-            ref int page,
-            ref int perPage,
+            ref int? page,
+            ref int? perPage,
             ref string? @ref,
-            ref int pr,
+            ref int? pr,
             ref global::GitHub.CodeScanningListAlertsForRepoDirection? direction,
             ref string? before,
             ref string? after,
@@ -28,10 +28,10 @@ namespace GitHub
             string repo,
             string? toolName,
             string? toolGuid,
-            int page,
-            int perPage,
+            int? page,
+            int? perPage,
             string? @ref,
-            int pr,
+            int? pr,
             global::GitHub.CodeScanningListAlertsForRepoDirection? direction,
             string? before,
             string? after,
@@ -95,10 +95,10 @@ namespace GitHub
             string repo,
             string? toolName = default,
             string? toolGuid = default,
-            int page = 1,
-            int perPage = 30,
+            int? page = 1,
+            int? perPage = 30,
             string? @ref = default,
-            int pr = default,
+            int? pr = default,
             global::GitHub.CodeScanningListAlertsForRepoDirection? direction = global::GitHub.CodeScanningListAlertsForRepoDirection.Desc,
             string? before = default,
             string? after = default,
@@ -126,9 +126,27 @@ namespace GitHub
                 state: ref state,
                 severity: ref severity);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/code-scanning/alerts",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("tool_name", toolName) 
+                .AddOptionalParameter("tool_guid", toolGuid) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("ref", @ref) 
+                .AddOptionalParameter("pr", pr?.ToString()) 
+                .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("before", before) 
+                .AddOptionalParameter("after", after) 
+                .AddOptionalParameter("sort", sort?.ToValueString()) 
+                .AddOptionalParameter("state", state?.ToValueString()) 
+                .AddOptionalParameter("severity", severity?.ToValueString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/code-scanning/alerts?tool_name={toolName}&tool_guid={toolGuid}&page={page}&per_page={perPage}&ref={@ref}&pr={pr}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&before={before}&after={after}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}&severity={(global::System.Uri.EscapeDataString(severity?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -184,7 +202,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListCodeScanningAlertItems) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CodeScanningAlertItems>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.CodeScanningAlertItems> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

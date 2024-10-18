@@ -8,14 +8,14 @@ namespace GitHub
         partial void PrepareCopilotListCopilotSeatsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref int page,
-            ref int perPage);
+            ref int? page,
+            ref int? perPage);
         partial void PrepareCopilotListCopilotSeatsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            int page,
-            int perPage);
+            int? page,
+            int? perPage);
         partial void ProcessCopilotListCopilotSeatsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -44,8 +44,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.CopilotListCopilotSeatsResponse> CopilotListCopilotSeatsAsync(
             string org,
-            int page = 1,
-            int perPage = 50,
+            int? page = 1,
+            int? perPage = 50,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -56,9 +56,17 @@ namespace GitHub
                 page: ref page,
                 perPage: ref perPage);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/copilot/billing/seats",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/copilot/billing/seats?page={page}&per_page={perPage}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -103,7 +111,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.CopilotListCopilotSeatsResponse) ??
+                global::GitHub.CopilotListCopilotSeatsResponse.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

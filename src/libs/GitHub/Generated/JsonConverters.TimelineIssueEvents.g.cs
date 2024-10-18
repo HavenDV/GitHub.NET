@@ -1,7 +1,7 @@
 #nullable enable
 #pragma warning disable CS0618 // Type or member is obsolete
 
-namespace OpenApiGenerator.JsonConverters
+namespace GitHub.JsonConverters
 {
     /// <inheritdoc />
     public class TimelineIssueEventsJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::GitHub.TimelineIssueEvents>

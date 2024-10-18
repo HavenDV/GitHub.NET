@@ -12,7 +12,7 @@ namespace GitHub
             ref global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort? sort,
             ref string? before,
             ref string? after,
-            ref int perPage,
+            ref int? perPage,
             ref global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesState? state);
         partial void PrepareSecurityAdvisoriesListOrgRepositoryAdvisoriesRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -22,7 +22,7 @@ namespace GitHub
             global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort? sort,
             string? before,
             string? after,
-            int perPage,
+            int? perPage,
             global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesState? state);
         partial void ProcessSecurityAdvisoriesListOrgRepositoryAdvisoriesResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -60,7 +60,7 @@ namespace GitHub
             global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort? sort = global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort.Created,
             string? before = default,
             string? after = default,
-            int perPage = 30,
+            int? perPage = 30,
             global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesState? state = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -76,9 +76,21 @@ namespace GitHub
                 perPage: ref perPage,
                 state: ref state);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/security-advisories",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("sort", sort?.ToValueString()) 
+                .AddOptionalParameter("before", before) 
+                .AddOptionalParameter("after", after) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("state", state?.ToValueString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/security-advisories?direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&before={before}&after={after}&per_page={perPage}&state={(global::System.Uri.EscapeDataString(state?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -127,7 +139,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListRepositoryAdvisory) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisory>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisory> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

@@ -32,7 +32,8 @@ namespace GitHub
         /// <param name="owner"></param>
         /// <param name="repo"></param>
         /// <param name="alertNumber">
-        /// The security alert number.
+        /// The security alert number.<br/>
+        /// Included only in responses
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -50,9 +51,13 @@ namespace GitHub
                 repo: ref repo,
                 alertNumber: ref alertNumber);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/dependabot/alerts/{alertNumber}",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/dependabot/alerts/{alertNumber}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -97,7 +102,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.DependabotAlert) ??
+                global::GitHub.DependabotAlert.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

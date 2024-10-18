@@ -426,7 +426,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_template")]
-        public bool IsTemplate { get; set; }
+        public bool? IsTemplate { get; set; }
 
         /// <summary>
         /// Example: [octocat, atom, electron, API]
@@ -466,7 +466,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_downloads")]
-        public bool HasDownloads { get; set; }
+        public bool? HasDownloads { get; set; }
 
         /// <summary>
         /// Example: true
@@ -527,7 +527,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_rebase_merge")]
-        public bool AllowRebaseMerge { get; set; }
+        public bool? AllowRebaseMerge { get; set; }
 
         /// <summary>
         /// A repository on GitHub.
@@ -545,37 +545,37 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_squash_merge")]
-        public bool AllowSquashMerge { get; set; }
+        public bool? AllowSquashMerge { get; set; }
 
         /// <summary>
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_auto_merge")]
-        public bool AllowAutoMerge { get; set; }
+        public bool? AllowAutoMerge { get; set; }
 
         /// <summary>
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("delete_branch_on_merge")]
-        public bool DeleteBranchOnMerge { get; set; }
+        public bool? DeleteBranchOnMerge { get; set; }
 
         /// <summary>
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_merge_commit")]
-        public bool AllowMergeCommit { get; set; }
+        public bool? AllowMergeCommit { get; set; }
 
         /// <summary>
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_update_branch")]
-        public bool AllowUpdateBranch { get; set; }
+        public bool? AllowUpdateBranch { get; set; }
 
         /// <summary>
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("use_squash_pr_title_as_default")]
-        public bool UseSquashPrTitleAsDefault { get; set; }
+        public bool? UseSquashPrTitleAsDefault { get; set; }
 
         /// <summary>
         /// The default value for a squash merge commit title:<br/>
@@ -584,7 +584,7 @@ namespace GitHub
         /// Example: PR_TITLE
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("squash_merge_commit_title")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.FullRepositorySquashMergeCommitTitleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.FullRepositorySquashMergeCommitTitleJsonConverter))]
         public global::GitHub.FullRepositorySquashMergeCommitTitle? SquashMergeCommitTitle { get; set; }
 
         /// <summary>
@@ -595,7 +595,7 @@ namespace GitHub
         /// Example: PR_BODY
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("squash_merge_commit_message")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.FullRepositorySquashMergeCommitMessageJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.FullRepositorySquashMergeCommitMessageJsonConverter))]
         public global::GitHub.FullRepositorySquashMergeCommitMessage? SquashMergeCommitMessage { get; set; }
 
         /// <summary>
@@ -605,7 +605,7 @@ namespace GitHub
         /// Example: PR_TITLE
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("merge_commit_title")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.FullRepositoryMergeCommitTitleJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.FullRepositoryMergeCommitTitleJsonConverter))]
         public global::GitHub.FullRepositoryMergeCommitTitle? MergeCommitTitle { get; set; }
 
         /// <summary>
@@ -616,20 +616,20 @@ namespace GitHub
         /// Example: PR_BODY
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("merge_commit_message")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::OpenApiGenerator.JsonConverters.FullRepositoryMergeCommitMessageJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.FullRepositoryMergeCommitMessageJsonConverter))]
         public global::GitHub.FullRepositoryMergeCommitMessage? MergeCommitMessage { get; set; }
 
         /// <summary>
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_forking")]
-        public bool AllowForking { get; set; }
+        public bool? AllowForking { get; set; }
 
         /// <summary>
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("web_commit_signoff_required")]
-        public bool WebCommitSignoffRequired { get; set; }
+        public bool? WebCommitSignoffRequired { get; set; }
 
         /// <summary>
         /// Example: 42
@@ -702,7 +702,7 @@ namespace GitHub
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("anonymous_access_enabled")]
-        public bool AnonymousAccessEnabled { get; set; } = true;
+        public bool? AnonymousAccessEnabled { get; set; } = true;
 
         /// <summary>
         /// Code of Conduct Simple
@@ -720,12 +720,70 @@ namespace GitHub
         /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_properties")]
-        public global::GitHub.FullRepositoryCustomProperties? CustomProperties { get; set; }
+        public object? CustomProperties { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.FullRepository? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.FullRepository),
+                jsonSerializerContext) as global::GitHub.FullRepository;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.FullRepository? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.FullRepository>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

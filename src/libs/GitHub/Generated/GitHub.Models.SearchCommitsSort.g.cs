@@ -9,11 +9,11 @@ namespace GitHub
     public enum SearchCommitsSort
     {
         /// <summary>
-        /// 
+        /// [best match](https://docs.github.com/rest/search/search#ranking-search-results)
         /// </summary>
         AuthorDate,
         /// <summary>
-        /// 
+        /// [best match](https://docs.github.com/rest/search/search#ranking-search-results)
         /// </summary>
         CommitterDate,
     }

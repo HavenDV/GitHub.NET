@@ -30,37 +30,37 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataAuthor? Author { get; set; }
+        public object? Author { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bugs")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataBugs? Bugs { get; set; }
+        public object? Bugs { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependencies")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataDependencies? Dependencies { get; set; }
+        public object? Dependencies { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dev_dependencies")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataDevDependencies? DevDependencies { get; set; }
+        public object? DevDependencies { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("peer_dependencies")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataPeerDependencies? PeerDependencies { get; set; }
+        public object? PeerDependencies { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("optional_dependencies")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataOptionalDependencies? OptionalDependencies { get; set; }
+        public object? OptionalDependencies { get; set; }
 
         /// <summary>
         /// 
@@ -72,7 +72,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dist")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataDist? Dist { get; set; }
+        public object? Dist { get; set; }
 
         /// <summary>
         /// 
@@ -102,13 +102,13 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataRepository? Repository { get; set; }
+        public object? Repository { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("scripts")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataScripts? Scripts { get; set; }
+        public object? Scripts { get; set; }
 
         /// <summary>
         /// 
@@ -132,25 +132,25 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_shrinkwrap")]
-        public bool HasShrinkwrap { get; set; }
+        public bool? HasShrinkwrap { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maintainers")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataMaintainer>? Maintainers { get; set; }
+        public global::System.Collections.Generic.IList<object>? Maintainers { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("contributors")]
-        public global::System.Collections.Generic.IList<global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataContributor>? Contributors { get; set; }
+        public global::System.Collections.Generic.IList<object>? Contributors { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("engines")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataEngines? Engines { get; set; }
+        public object? Engines { get; set; }
 
         /// <summary>
         /// 
@@ -168,19 +168,19 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bin")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataBin? Bin { get; set; }
+        public object? Bin { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("man")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataMan? Man { get; set; }
+        public object? Man { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("directories")]
-        public global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadataDirectories? Directories { get; set; }
+        public object? Directories { get; set; }
 
         /// <summary>
         /// 
@@ -210,7 +210,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("release_id")]
-        public int ReleaseId { get; set; }
+        public int? ReleaseId { get; set; }
 
         /// <summary>
         /// 
@@ -222,18 +222,76 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("published_via_actions")]
-        public bool PublishedViaActions { get; set; }
+        public bool? PublishedViaActions { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deleted_by_id")]
-        public int DeletedById { get; set; }
+        public int? DeletedById { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata),
+                jsonSerializerContext) as global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

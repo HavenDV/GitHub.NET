@@ -9,11 +9,11 @@ namespace GitHub
     public enum ReposListForAuthenticatedUserDirection
     {
         /// <summary>
-        /// 
+        /// `asc` when using `full_name`, otherwise `desc`.
         /// </summary>
         Asc,
         /// <summary>
-        /// 
+        /// `asc` when using `full_name`, otherwise `desc`.
         /// </summary>
         Desc,
     }

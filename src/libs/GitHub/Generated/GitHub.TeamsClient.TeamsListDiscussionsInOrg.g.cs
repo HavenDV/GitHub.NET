@@ -10,8 +10,8 @@ namespace GitHub
             ref string org,
             ref string teamSlug,
             ref global::GitHub.TeamsListDiscussionsInOrgDirection? direction,
-            ref int perPage,
-            ref int page,
+            ref int? perPage,
+            ref int? page,
             ref string? pinned);
         partial void PrepareTeamsListDiscussionsInOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -19,8 +19,8 @@ namespace GitHub
             string org,
             string teamSlug,
             global::GitHub.TeamsListDiscussionsInOrgDirection? direction,
-            int perPage,
-            int page,
+            int? perPage,
+            int? page,
             string? pinned);
         partial void ProcessTeamsListDiscussionsInOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -56,8 +56,8 @@ namespace GitHub
             string org,
             string teamSlug,
             global::GitHub.TeamsListDiscussionsInOrgDirection? direction = global::GitHub.TeamsListDiscussionsInOrgDirection.Desc,
-            int perPage = 30,
-            int page = 1,
+            int? perPage = 30,
+            int? page = 1,
             string? pinned = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -72,9 +72,19 @@ namespace GitHub
                 page: ref page,
                 pinned: ref pinned);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/teams/{teamSlug}/discussions",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("pinned", pinned) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/teams/{teamSlug}/discussions?direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}&pinned={pinned}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -122,7 +132,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListTeamDiscussion) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.TeamDiscussion>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.TeamDiscussion> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

@@ -60,10 +60,14 @@ namespace GitHub
                 environmentName: ref environmentName,
                 request: request);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/environments/{environmentName}",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Put,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/environments/{environmentName}", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ReposCreateOrUpdateEnvironmentRequest);
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -114,7 +118,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.Environment) ??
+                global::GitHub.Environment.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
@@ -150,8 +154,8 @@ namespace GitHub
             string owner,
             string repo,
             string environmentName,
-            int waitTimer = default,
-            bool preventSelfReview = default,
+            int? waitTimer = default,
+            bool? preventSelfReview = default,
             global::System.Collections.Generic.IList<global::GitHub.ReposCreateOrUpdateEnvironmentRequestReviewer>? reviewers = default,
             global::GitHub.DeploymentBranchPolicySettings? deploymentBranchPolicy = default,
             global::System.Threading.CancellationToken cancellationToken = default)

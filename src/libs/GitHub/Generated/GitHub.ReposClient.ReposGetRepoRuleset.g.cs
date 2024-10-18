@@ -10,14 +10,14 @@ namespace GitHub
             ref string owner,
             ref string repo,
             ref int rulesetId,
-            ref bool includesParents);
+            ref bool? includesParents);
         partial void PrepareReposGetRepoRulesetRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
             int rulesetId,
-            bool includesParents);
+            bool? includesParents);
         partial void ProcessReposGetRepoRulesetResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -45,7 +45,7 @@ namespace GitHub
             string owner,
             string repo,
             int rulesetId,
-            bool includesParents = true,
+            bool? includesParents = true,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -57,9 +57,16 @@ namespace GitHub
                 rulesetId: ref rulesetId,
                 includesParents: ref includesParents);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/rulesets/{rulesetId}",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("includes_parents", includesParents?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/rulesets/{rulesetId}?includes_parents={includesParents}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -105,7 +112,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.RepositoryRuleset) ??
+                global::GitHub.RepositoryRuleset.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

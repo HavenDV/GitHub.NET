@@ -4,7 +4,8 @@
 namespace GitHub
 {
     /// <summary>
-    /// The severity of the advisory.
+    /// The severity of the advisory.<br/>
+    /// Included only in responses
     /// </summary>
     public enum DependabotAlertSecurityAdvisorySeverity
     {

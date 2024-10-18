@@ -8,16 +8,16 @@ namespace GitHub
         partial void PrepareOrgsListPendingInvitationsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            ref int perPage,
-            ref int page,
+            ref int? perPage,
+            ref int? page,
             ref global::GitHub.OrgsListPendingInvitationsRole? role,
             ref global::GitHub.OrgsListPendingInvitationsInvitationSource? invitationSource);
         partial void PrepareOrgsListPendingInvitationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            int perPage,
-            int page,
+            int? perPage,
+            int? page,
             global::GitHub.OrgsListPendingInvitationsRole? role,
             global::GitHub.OrgsListPendingInvitationsInvitationSource? invitationSource);
         partial void ProcessOrgsListPendingInvitationsResponse(
@@ -53,8 +53,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrganizationInvitation>> OrgsListPendingInvitationsAsync(
             string org,
-            int perPage = 30,
-            int page = 1,
+            int? perPage = 30,
+            int? page = 1,
             global::GitHub.OrgsListPendingInvitationsRole? role = global::GitHub.OrgsListPendingInvitationsRole.All,
             global::GitHub.OrgsListPendingInvitationsInvitationSource? invitationSource = global::GitHub.OrgsListPendingInvitationsInvitationSource.All,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -69,9 +69,19 @@ namespace GitHub
                 role: ref role,
                 invitationSource: ref invitationSource);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/invitations",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("role", role?.ToValueString()) 
+                .AddOptionalParameter("invitation_source", invitationSource?.ToValueString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/invitations?per_page={perPage}&page={page}&role={(global::System.Uri.EscapeDataString(role?.ToValueString() ?? string.Empty))}&invitation_source={(global::System.Uri.EscapeDataString(invitationSource?.ToValueString() ?? string.Empty))}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -118,7 +128,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListOrganizationInvitation) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.OrganizationInvitation>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.OrganizationInvitation> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

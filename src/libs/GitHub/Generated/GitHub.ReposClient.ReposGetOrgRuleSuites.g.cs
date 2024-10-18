@@ -9,23 +9,23 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
             ref string? @ref,
-            ref int repositoryName,
+            ref int? repositoryName,
             ref global::GitHub.ReposGetOrgRuleSuitesTimePeriod? timePeriod,
             ref string? actorName,
             ref global::GitHub.ReposGetOrgRuleSuitesRuleSuiteResult? ruleSuiteResult,
-            ref int perPage,
-            ref int page);
+            ref int? perPage,
+            ref int? page);
         partial void PrepareReposGetOrgRuleSuitesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             string? @ref,
-            int repositoryName,
+            int? repositoryName,
             global::GitHub.ReposGetOrgRuleSuitesTimePeriod? timePeriod,
             string? actorName,
             global::GitHub.ReposGetOrgRuleSuitesRuleSuiteResult? ruleSuiteResult,
-            int perPage,
-            int page);
+            int? perPage,
+            int? page);
         partial void ProcessReposGetOrgRuleSuitesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -61,12 +61,12 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RuleSuite>> ReposGetOrgRuleSuitesAsync(
             string org,
             string? @ref = default,
-            int repositoryName = default,
+            int? repositoryName = default,
             global::GitHub.ReposGetOrgRuleSuitesTimePeriod? timePeriod = global::GitHub.ReposGetOrgRuleSuitesTimePeriod.Day,
             string? actorName = default,
             global::GitHub.ReposGetOrgRuleSuitesRuleSuiteResult? ruleSuiteResult = global::GitHub.ReposGetOrgRuleSuitesRuleSuiteResult.All,
-            int perPage = 30,
-            int page = 1,
+            int? perPage = 30,
+            int? page = 1,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -82,9 +82,22 @@ namespace GitHub
                 perPage: ref perPage,
                 page: ref page);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/orgs/{org}/rulesets/rule-suites",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("ref", @ref) 
+                .AddOptionalParameter("repository_name", repositoryName?.ToString()) 
+                .AddOptionalParameter("time_period", timePeriod?.ToValueString()) 
+                .AddOptionalParameter("actor_name", actorName) 
+                .AddOptionalParameter("rule_suite_result", ruleSuiteResult?.ToValueString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/orgs/{org}/rulesets/rule-suites?ref={@ref}&repository_name={repositoryName}&time_period={(global::System.Uri.EscapeDataString(timePeriod?.ToValueString() ?? string.Empty))}&actor_name={actorName}&rule_suite_result={(global::System.Uri.EscapeDataString(ruleSuiteResult?.ToValueString() ?? string.Empty))}&per_page={perPage}&page={page}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -134,7 +147,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListRuleSuite) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.RuleSuite>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.RuleSuite> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

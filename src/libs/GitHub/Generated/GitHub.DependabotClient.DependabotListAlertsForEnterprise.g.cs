@@ -17,9 +17,9 @@ namespace GitHub
             ref global::GitHub.DependabotListAlertsForEnterpriseDirection? direction,
             ref string? before,
             ref string? after,
-            ref int first,
-            ref int last,
-            ref int perPage);
+            ref int? first,
+            ref int? last,
+            ref int? perPage);
         partial void PrepareDependabotListAlertsForEnterpriseRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -33,9 +33,9 @@ namespace GitHub
             global::GitHub.DependabotListAlertsForEnterpriseDirection? direction,
             string? before,
             string? after,
-            int first,
-            int last,
-            int perPage);
+            int? first,
+            int? last,
+            int? perPage);
         partial void ProcessDependabotListAlertsForEnterpriseResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -86,9 +86,9 @@ namespace GitHub
             global::GitHub.DependabotListAlertsForEnterpriseDirection? direction = global::GitHub.DependabotListAlertsForEnterpriseDirection.Desc,
             string? before = default,
             string? after = default,
-            int first = 30,
-            int last = default,
-            int perPage = 30,
+            int? first = 30,
+            int? last = default,
+            int? perPage = 30,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -109,9 +109,27 @@ namespace GitHub
                 last: ref last,
                 perPage: ref perPage);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/enterprises/{enterprise}/dependabot/alerts",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("state", state) 
+                .AddOptionalParameter("severity", severity) 
+                .AddOptionalParameter("ecosystem", ecosystem) 
+                .AddOptionalParameter("package", package) 
+                .AddOptionalParameter("scope", scope?.ToValueString()) 
+                .AddOptionalParameter("sort", sort?.ToValueString()) 
+                .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("before", before) 
+                .AddOptionalParameter("after", after) 
+                .AddOptionalParameter("first", first?.ToString()) 
+                .AddOptionalParameter("last", last?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/enterprises/{enterprise}/dependabot/alerts?state={state}&severity={severity}&ecosystem={ecosystem}&package={package}&scope={(global::System.Uri.EscapeDataString(scope?.ToValueString() ?? string.Empty))}&sort={(global::System.Uri.EscapeDataString(sort?.ToValueString() ?? string.Empty))}&direction={(global::System.Uri.EscapeDataString(direction?.ToValueString() ?? string.Empty))}&before={before}&after={after}&first={first}&last={last}&per_page={perPage}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -166,7 +184,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListDependabotAlertWithRepository) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.DependabotAlertWithRepository>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.DependabotAlertWithRepository> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

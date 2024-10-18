@@ -58,10 +58,14 @@ namespace GitHub
                 checkRunId: ref checkRunId,
                 request: request);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/check-runs/{checkRunId}",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/check-runs/{checkRunId}", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ChecksUpdateRequest);
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -112,7 +116,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.CheckRun) ??
+                global::GitHub.CheckRun.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
@@ -163,10 +167,10 @@ namespace GitHub
             string? name = default,
             string? detailsUrl = default,
             string? externalId = default,
-            global::System.DateTime startedAt = default,
+            global::System.DateTime? startedAt = default,
             global::GitHub.ChecksUpdateRequestStatus? status = default,
             global::GitHub.ChecksUpdateRequestConclusion? conclusion = default,
-            global::System.DateTime completedAt = default,
+            global::System.DateTime? completedAt = default,
             global::GitHub.ChecksUpdateRequestOutput? output = default,
             global::System.Collections.Generic.IList<global::GitHub.ChecksUpdateRequestAction>? actions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

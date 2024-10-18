@@ -7,7 +7,7 @@ namespace GitHub
     {
         partial void PrepareUsersListAttestationsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref int perPage,
+            ref int? perPage,
             ref string? before,
             ref string? after,
             ref string username,
@@ -15,7 +15,7 @@ namespace GitHub
         partial void PrepareUsersListAttestationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            int perPage,
+            int? perPage,
             string? before,
             string? after,
             string username,
@@ -47,7 +47,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.UsersListAttestationsResponse> UsersListAttestationsAsync(
             string username,
             string subjectDigest,
-            int perPage = 30,
+            int? perPage = 30,
             string? before = default,
             string? after = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -62,9 +62,18 @@ namespace GitHub
                 username: ref username,
                 subjectDigest: ref subjectDigest);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/users/{username}/attestations/{subjectDigest}",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("before", before) 
+                .AddOptionalParameter("after", after) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/users/{username}/attestations/{subjectDigest}?per_page={perPage}&before={before}&after={after}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -111,7 +120,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.UsersListAttestationsResponse) ??
+                global::GitHub.UsersListAttestationsResponse.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

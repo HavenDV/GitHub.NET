@@ -11,6 +11,11 @@ namespace GitHub
     public readonly partial struct RepositoryRule : global::System.IEquatable<RepositoryRule>
     {
         /// <summary>
+        /// 
+        /// </summary>
+        public global::GitHub.RepositoryRuleDiscriminatorType? Type { get; }
+
+        /// <summary>
         /// Only allow users with bypass permission to create matching refs.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -749,6 +754,7 @@ namespace GitHub
         /// 
         /// </summary>
         public RepositoryRule(
+            global::GitHub.RepositoryRuleDiscriminatorType? type,
             global::GitHub.RepositoryRuleCreation? value1,
             global::GitHub.RepositoryRuleUpdate? value2,
             global::GitHub.RepositoryRuleDeletion? value3,
@@ -772,6 +778,8 @@ namespace GitHub
             global::GitHub.RepositoryRuleCodeScanning? value21
             )
         {
+            Type = type;
+
             Value1 = value1;
             Value2 = value2;
             Value3 = value3;
@@ -828,6 +836,244 @@ namespace GitHub
         public bool Validate()
         {
             return IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && IsValue21;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TResult? Match<TResult>(
+            global::System.Func<global::GitHub.RepositoryRuleCreation?, TResult>? value1 = null,
+            global::System.Func<global::GitHub.RepositoryRuleUpdate?, TResult>? value2 = null,
+            global::System.Func<global::GitHub.RepositoryRuleDeletion?, TResult>? value3 = null,
+            global::System.Func<global::GitHub.RepositoryRuleRequiredLinearHistory?, TResult>? value4 = null,
+            global::System.Func<global::GitHub.RepositoryRuleMergeQueue?, TResult>? value5 = null,
+            global::System.Func<global::GitHub.RepositoryRuleRequiredDeployments?, TResult>? value6 = null,
+            global::System.Func<global::GitHub.RepositoryRuleRequiredSignatures?, TResult>? value7 = null,
+            global::System.Func<global::GitHub.RepositoryRulePullRequest?, TResult>? value8 = null,
+            global::System.Func<global::GitHub.RepositoryRuleRequiredStatusChecks?, TResult>? value9 = null,
+            global::System.Func<global::GitHub.RepositoryRuleNonFastForward?, TResult>? value10 = null,
+            global::System.Func<global::GitHub.RepositoryRuleCommitMessagePattern?, TResult>? value11 = null,
+            global::System.Func<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, TResult>? value12 = null,
+            global::System.Func<global::GitHub.RepositoryRuleCommitterEmailPattern?, TResult>? value13 = null,
+            global::System.Func<global::GitHub.RepositoryRuleBranchNamePattern?, TResult>? value14 = null,
+            global::System.Func<global::GitHub.RepositoryRuleTagNamePattern?, TResult>? value15 = null,
+            global::System.Func<global::GitHub.RepositoryRuleVariant16?, TResult>? value16 = null,
+            global::System.Func<global::GitHub.RepositoryRuleVariant17?, TResult>? value17 = null,
+            global::System.Func<global::GitHub.RepositoryRuleVariant18?, TResult>? value18 = null,
+            global::System.Func<global::GitHub.RepositoryRuleVariant19?, TResult>? value19 = null,
+            global::System.Func<global::GitHub.RepositoryRuleWorkflows?, TResult>? value20 = null,
+            global::System.Func<global::GitHub.RepositoryRuleCodeScanning?, TResult>? value21 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsValue1 && value1 != null)
+            {
+                return value1(Value1!);
+            }
+            else if (IsValue2 && value2 != null)
+            {
+                return value2(Value2!);
+            }
+            else if (IsValue3 && value3 != null)
+            {
+                return value3(Value3!);
+            }
+            else if (IsValue4 && value4 != null)
+            {
+                return value4(Value4!);
+            }
+            else if (IsValue5 && value5 != null)
+            {
+                return value5(Value5!);
+            }
+            else if (IsValue6 && value6 != null)
+            {
+                return value6(Value6!);
+            }
+            else if (IsValue7 && value7 != null)
+            {
+                return value7(Value7!);
+            }
+            else if (IsValue8 && value8 != null)
+            {
+                return value8(Value8!);
+            }
+            else if (IsValue9 && value9 != null)
+            {
+                return value9(Value9!);
+            }
+            else if (IsValue10 && value10 != null)
+            {
+                return value10(Value10!);
+            }
+            else if (IsValue11 && value11 != null)
+            {
+                return value11(Value11!);
+            }
+            else if (IsValue12 && value12 != null)
+            {
+                return value12(Value12!);
+            }
+            else if (IsValue13 && value13 != null)
+            {
+                return value13(Value13!);
+            }
+            else if (IsValue14 && value14 != null)
+            {
+                return value14(Value14!);
+            }
+            else if (IsValue15 && value15 != null)
+            {
+                return value15(Value15!);
+            }
+            else if (IsValue16 && value16 != null)
+            {
+                return value16(Value16!);
+            }
+            else if (IsValue17 && value17 != null)
+            {
+                return value17(Value17!);
+            }
+            else if (IsValue18 && value18 != null)
+            {
+                return value18(Value18!);
+            }
+            else if (IsValue19 && value19 != null)
+            {
+                return value19(Value19!);
+            }
+            else if (IsValue20 && value20 != null)
+            {
+                return value20(Value20!);
+            }
+            else if (IsValue21 && value21 != null)
+            {
+                return value21(Value21!);
+            }
+
+            return default(TResult);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Match(
+            global::System.Action<global::GitHub.RepositoryRuleCreation?>? value1 = null,
+            global::System.Action<global::GitHub.RepositoryRuleUpdate?>? value2 = null,
+            global::System.Action<global::GitHub.RepositoryRuleDeletion?>? value3 = null,
+            global::System.Action<global::GitHub.RepositoryRuleRequiredLinearHistory?>? value4 = null,
+            global::System.Action<global::GitHub.RepositoryRuleMergeQueue?>? value5 = null,
+            global::System.Action<global::GitHub.RepositoryRuleRequiredDeployments?>? value6 = null,
+            global::System.Action<global::GitHub.RepositoryRuleRequiredSignatures?>? value7 = null,
+            global::System.Action<global::GitHub.RepositoryRulePullRequest?>? value8 = null,
+            global::System.Action<global::GitHub.RepositoryRuleRequiredStatusChecks?>? value9 = null,
+            global::System.Action<global::GitHub.RepositoryRuleNonFastForward?>? value10 = null,
+            global::System.Action<global::GitHub.RepositoryRuleCommitMessagePattern?>? value11 = null,
+            global::System.Action<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?>? value12 = null,
+            global::System.Action<global::GitHub.RepositoryRuleCommitterEmailPattern?>? value13 = null,
+            global::System.Action<global::GitHub.RepositoryRuleBranchNamePattern?>? value14 = null,
+            global::System.Action<global::GitHub.RepositoryRuleTagNamePattern?>? value15 = null,
+            global::System.Action<global::GitHub.RepositoryRuleVariant16?>? value16 = null,
+            global::System.Action<global::GitHub.RepositoryRuleVariant17?>? value17 = null,
+            global::System.Action<global::GitHub.RepositoryRuleVariant18?>? value18 = null,
+            global::System.Action<global::GitHub.RepositoryRuleVariant19?>? value19 = null,
+            global::System.Action<global::GitHub.RepositoryRuleWorkflows?>? value20 = null,
+            global::System.Action<global::GitHub.RepositoryRuleCodeScanning?>? value21 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsValue1)
+            {
+                value1?.Invoke(Value1!);
+            }
+            else if (IsValue2)
+            {
+                value2?.Invoke(Value2!);
+            }
+            else if (IsValue3)
+            {
+                value3?.Invoke(Value3!);
+            }
+            else if (IsValue4)
+            {
+                value4?.Invoke(Value4!);
+            }
+            else if (IsValue5)
+            {
+                value5?.Invoke(Value5!);
+            }
+            else if (IsValue6)
+            {
+                value6?.Invoke(Value6!);
+            }
+            else if (IsValue7)
+            {
+                value7?.Invoke(Value7!);
+            }
+            else if (IsValue8)
+            {
+                value8?.Invoke(Value8!);
+            }
+            else if (IsValue9)
+            {
+                value9?.Invoke(Value9!);
+            }
+            else if (IsValue10)
+            {
+                value10?.Invoke(Value10!);
+            }
+            else if (IsValue11)
+            {
+                value11?.Invoke(Value11!);
+            }
+            else if (IsValue12)
+            {
+                value12?.Invoke(Value12!);
+            }
+            else if (IsValue13)
+            {
+                value13?.Invoke(Value13!);
+            }
+            else if (IsValue14)
+            {
+                value14?.Invoke(Value14!);
+            }
+            else if (IsValue15)
+            {
+                value15?.Invoke(Value15!);
+            }
+            else if (IsValue16)
+            {
+                value16?.Invoke(Value16!);
+            }
+            else if (IsValue17)
+            {
+                value17?.Invoke(Value17!);
+            }
+            else if (IsValue18)
+            {
+                value18?.Invoke(Value18!);
+            }
+            else if (IsValue19)
+            {
+                value19?.Invoke(Value19!);
+            }
+            else if (IsValue20)
+            {
+                value20?.Invoke(Value20!);
+            }
+            else if (IsValue21)
+            {
+                value21?.Invoke(Value21!);
+            }
         }
 
         /// <summary>
@@ -941,5 +1187,63 @@ namespace GitHub
         {
             return obj is RepositoryRule o && Equals(o);
         }
+
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public string ToJson(
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                this.GetType(),
+                jsonSerializerContext);
+        }
+
+        /// <summary>
+        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public string ToJson(
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Serialize(
+                this,
+                jsonSerializerOptions);
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerContext.
+        /// </summary>
+        public static global::GitHub.RepositoryRule? FromJson(
+            string json,
+            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize(
+                json,
+                typeof(global::GitHub.RepositoryRule),
+                jsonSerializerContext) as global::GitHub.RepositoryRule?;
+        }
+
+        /// <summary>
+        /// Deserializes a JSON string using the provided JsonSerializerOptions.
+        /// </summary>
+#if NET8_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
+        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
+#endif
+        public static global::GitHub.RepositoryRule? FromJson(
+            string json,
+            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        {
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.RepositoryRule>(
+                json,
+                jsonSerializerOptions);
+        }
+
     }
 }

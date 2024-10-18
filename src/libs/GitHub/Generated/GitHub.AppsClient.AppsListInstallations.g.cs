@@ -7,16 +7,16 @@ namespace GitHub
     {
         partial void PrepareAppsListInstallationsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref int perPage,
-            ref int page,
-            global::System.DateTime since,
+            ref int? perPage,
+            ref int? page,
+            ref global::System.DateTime? since,
             ref string? outdated);
         partial void PrepareAppsListInstallationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            int perPage,
-            int page,
-            global::System.DateTime since,
+            int? perPage,
+            int? page,
+            global::System.DateTime? since,
             string? outdated);
         partial void ProcessAppsListInstallationsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -43,9 +43,9 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Installation>> AppsListInstallationsAsync(
-            int perPage = 30,
-            int page = 1,
-            global::System.DateTime since = default,
+            int? perPage = 30,
+            int? page = 1,
+            global::System.DateTime? since = default,
             string? outdated = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -55,12 +55,22 @@ namespace GitHub
                 httpClient: _httpClient,
                 perPage: ref perPage,
                 page: ref page,
-                since: since,
+                since: ref since,
                 outdated: ref outdated);
 
+            var __pathBuilder = new PathBuilder(
+                path: "/app/installations",
+                baseUri: _httpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("since", since?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
+                .AddOptionalParameter("outdated", outdated) 
+                ; 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/app/installations?per_page={perPage}&page={page}&since={since:yyyy-MM-ddTHH:mm:ssZ}&outdated={outdated}", global::System.UriKind.RelativeOrAbsolute));
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
                 client: _httpClient,
@@ -106,7 +116,7 @@ namespace GitHub
             }
 
             return
-                global::System.Text.Json.JsonSerializer.Deserialize(__content, global::GitHub.SourceGenerationContext.Default.IListInstallation) ??
+                global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.Installation>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.Installation> ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

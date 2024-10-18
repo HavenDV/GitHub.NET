@@ -9,14 +9,14 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref global::System.OneOf<int?, string> workflowId,
+            ref global::GitHub.OneOf<int?, string> workflowId,
             global::GitHub.ActionsCreateWorkflowDispatchRequest request);
         partial void PrepareActionsCreateWorkflowDispatchRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            global::System.OneOf<int?, string> workflowId,
+            global::GitHub.OneOf<int?, string> workflowId,
             global::GitHub.ActionsCreateWorkflowDispatchRequest request);
         partial void ProcessActionsCreateWorkflowDispatchResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -37,7 +37,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task ActionsCreateWorkflowDispatchAsync(
             string owner,
             string repo,
-            global::System.OneOf<int?, string> workflowId,
+            global::GitHub.OneOf<int?, string> workflowId,
             global::GitHub.ActionsCreateWorkflowDispatchRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -52,10 +52,14 @@ namespace GitHub
                 workflowId: ref workflowId,
                 request: request);
 
+            var __pathBuilder = new PathBuilder(
+                path: $"/repos/{owner}/{repo}/actions/workflows/{workflowId}/dispatches",
+                baseUri: _httpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
             using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
-                requestUri: new global::System.Uri(_httpClient.BaseAddress?.AbsoluteUri.TrimEnd('/') + $"/repos/{owner}/{repo}/actions/workflows/{workflowId}/dispatches", global::System.UriKind.RelativeOrAbsolute));
-            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, global::GitHub.SourceGenerationContext.Default.ActionsCreateWorkflowDispatchRequest);
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
             var __httpRequestContent = new global::System.Net.Http.StringContent(
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
@@ -107,9 +111,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task ActionsCreateWorkflowDispatchAsync(
             string owner,
             string repo,
-            global::System.OneOf<int?, string> workflowId,
+            global::GitHub.OneOf<int?, string> workflowId,
             string @ref,
-            global::GitHub.ActionsCreateWorkflowDispatchRequestInputs? inputs = default,
+            object? inputs = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var request = new global::GitHub.ActionsCreateWorkflowDispatchRequest
