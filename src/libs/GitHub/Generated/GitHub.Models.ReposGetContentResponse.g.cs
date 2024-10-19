@@ -11,43 +11,28 @@ namespace GitHub
     public readonly partial struct ReposGetContentResponse : global::System.IEquatable<ReposGetContentResponse>
     {
         /// <summary>
-        /// 
-        /// </summary>
-        public global::GitHub.ReposGetContentResponseDiscriminatorType? Type { get; }
-
-        /// <summary>
         /// A list of directory items
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>? Collections.Generic.IList<global::GitHub.DirectoryItem> { get; init; }
+        public global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>? Value1 { get; init; }
 #else
-        public global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>? Collections.Generic.IList<global::GitHub.DirectoryItem> { get; }
+        public global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>? Value1 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Collections.Generic.IList<global::GitHub.DirectoryItem>))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
 #endif
-        public bool IsCollections.Generic.IList<global::GitHub.DirectoryItem> => Collections.Generic.IList<global::GitHub.DirectoryItem> != null;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static implicit operator ReposGetContentResponse(global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem> value) => new ReposGetContentResponse(value);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static implicit operator global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>?(ReposGetContentResponse @this) => @this.Collections.Generic.IList<global::GitHub.DirectoryItem>;
+        public bool IsValue1 => Value1 != null;
 
         /// <summary>
         /// 
         /// </summary>
         public ReposGetContentResponse(global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>? value)
         {
-            Collections.Generic.IList<global::GitHub.DirectoryItem> = value;
+            Value1 = value;
         }
 
         /// <summary>
@@ -159,16 +144,13 @@ namespace GitHub
         /// 
         /// </summary>
         public ReposGetContentResponse(
-            global::GitHub.ReposGetContentResponseDiscriminatorType? type,
-            global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>? collectionsGenericIList<global::GitHubDirectoryItem>,
+            global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>? value1,
             global::GitHub.ContentFile? file,
             global::GitHub.ContentSymlink? symlink,
             global::GitHub.ContentSubmodule? submodule
             )
         {
-            Type = type;
-
-            Collections.Generic.IList<global::GitHub.DirectoryItem> = collectionsGenericIList<global::GitHubDirectoryItem>;
+            Value1 = value1;
             File = file;
             Symlink = symlink;
             Submodule = submodule;
@@ -181,7 +163,7 @@ namespace GitHub
             Submodule as object ??
             Symlink as object ??
             File as object ??
-            Collections.Generic.IList<global::GitHub.DirectoryItem> as object 
+            Value1 as object 
             ;
 
         /// <summary>
@@ -189,14 +171,14 @@ namespace GitHub
         /// </summary>
         public bool Validate()
         {
-            return IsCollections.Generic.IList<global::GitHub.DirectoryItem> && !IsFile && !IsSymlink && !IsSubmodule || !IsCollections.Generic.IList<global::GitHub.DirectoryItem> && IsFile && !IsSymlink && !IsSubmodule || !IsCollections.Generic.IList<global::GitHub.DirectoryItem> && !IsFile && IsSymlink && !IsSubmodule || !IsCollections.Generic.IList<global::GitHub.DirectoryItem> && !IsFile && !IsSymlink && IsSubmodule;
+            return IsValue1 && !IsFile && !IsSymlink && !IsSubmodule || !IsValue1 && IsFile && !IsSymlink && !IsSubmodule || !IsValue1 && !IsFile && IsSymlink && !IsSubmodule || !IsValue1 && !IsFile && !IsSymlink && IsSubmodule;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>?, TResult>? collectionsGenericIList<global::GitHubDirectoryItem> = null,
+            global::System.Func<global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>?, TResult>? value1 = null,
             global::System.Func<global::GitHub.ContentFile?, TResult>? file = null,
             global::System.Func<global::GitHub.ContentSymlink?, TResult>? symlink = null,
             global::System.Func<global::GitHub.ContentSubmodule?, TResult>? submodule = null,
@@ -207,9 +189,9 @@ namespace GitHub
                 Validate();
             }
 
-            if (IsCollections.Generic.IList<global::GitHub.DirectoryItem> && collectionsGenericIList<global::GitHubDirectoryItem> != null)
+            if (IsValue1 && value1 != null)
             {
-                return collectionsGenericIList<global::GitHubDirectoryItem>(Collections.Generic.IList<global::GitHub.DirectoryItem>!);
+                return value1(Value1!);
             }
             else if (IsFile && file != null)
             {
@@ -231,7 +213,7 @@ namespace GitHub
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>?>? collectionsGenericIList<global::GitHubDirectoryItem> = null,
+            global::System.Action<global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>?>? value1 = null,
             global::System.Action<global::GitHub.ContentFile?>? file = null,
             global::System.Action<global::GitHub.ContentSymlink?>? symlink = null,
             global::System.Action<global::GitHub.ContentSubmodule?>? submodule = null,
@@ -242,9 +224,9 @@ namespace GitHub
                 Validate();
             }
 
-            if (IsCollections.Generic.IList<global::GitHub.DirectoryItem>)
+            if (IsValue1)
             {
-                collectionsGenericIList<global::GitHubDirectoryItem>?.Invoke(Collections.Generic.IList<global::GitHub.DirectoryItem>!);
+                value1?.Invoke(Value1!);
             }
             else if (IsFile)
             {
@@ -267,7 +249,7 @@ namespace GitHub
         {
             var fields = new object?[]
             {
-                Collections.Generic.IList<global::GitHub.DirectoryItem>,
+                Value1,
                 typeof(global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>),
                 File,
                 typeof(global::GitHub.ContentFile),
@@ -290,7 +272,7 @@ namespace GitHub
         public bool Equals(ReposGetContentResponse other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>?>.Default.Equals(Collections.Generic.IList<global::GitHub.DirectoryItem>, other.Collections.Generic.IList<global::GitHub.DirectoryItem>) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>?>.Default.Equals(Value1, other.Value1) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.ContentFile?>.Default.Equals(File, other.File) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.ContentSymlink?>.Default.Equals(Symlink, other.Symlink) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.ContentSubmodule?>.Default.Equals(Submodule, other.Submodule) 
