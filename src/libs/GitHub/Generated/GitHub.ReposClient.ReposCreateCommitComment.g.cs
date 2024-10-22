@@ -146,7 +146,7 @@ namespace GitHub
         /// Line index in the diff to comment on.
         /// </param>
         /// <param name="line">
-        /// **Deprecated**. Use **position** parameter instead. Line number in the file to comment on.
+        /// **Closing down notice**. Use **position** parameter instead. Line number in the file to comment on.
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>

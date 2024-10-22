@@ -34,7 +34,7 @@ namespace GitHub
         /// The requested location for a new codespace. Best efforts are made to respect this upon creation. Assigned by IP if not provided.
         /// </param>
         /// <param name="geo">
-        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
         /// </param>
         /// <param name="clientIp">
         /// IP for location auto-detection when proxying a request

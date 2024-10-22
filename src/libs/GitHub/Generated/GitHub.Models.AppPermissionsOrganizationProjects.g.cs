@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The level of permission to grant the access token to manage organization projects and projects beta (where available).
+    /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
     /// </summary>
     public enum AppPermissionsOrganizationProjects
     {

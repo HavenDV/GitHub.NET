@@ -28,7 +28,7 @@ namespace GitHub
         public int? Position { get; set; }
 
         /// <summary>
-        /// **Deprecated**. Use **position** parameter instead. Line number in the file to comment on.
+        /// **Closing down notice**. Use **position** parameter instead. Line number in the file to comment on.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("line")]
         public int? Line { get; set; }

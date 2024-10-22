@@ -13,7 +13,7 @@ namespace GitHub
         /// <param name="username"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.OneOf<global::GitHub.PrivateUser, global::GitHub.PublicUser>> UsersGetByUsernameAsync(
+        global::System.Threading.Tasks.Task<global::GitHub.UsersGetByUsernameResponse> UsersGetByUsernameAsync(
             string username,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

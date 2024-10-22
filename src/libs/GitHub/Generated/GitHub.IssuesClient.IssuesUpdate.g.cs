@@ -141,7 +141,7 @@ namespace GitHub
         /// The contents of the issue.
         /// </param>
         /// <param name="assignee">
-        /// Username to assign to this issue. **This field is deprecated.**
+        /// Username to assign to this issue. **This field is closing down.**
         /// </param>
         /// <param name="state">
         /// The open or closed state of the issue.

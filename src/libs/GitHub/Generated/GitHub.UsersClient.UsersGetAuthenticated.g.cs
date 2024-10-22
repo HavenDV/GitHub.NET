@@ -25,7 +25,7 @@ namespace GitHub
         /// </summary>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.OneOf<global::GitHub.PrivateUser, global::GitHub.PublicUser>> UsersGetAuthenticatedAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.UsersGetAuthenticatedResponse> UsersGetAuthenticatedAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -81,7 +81,7 @@ namespace GitHub
             }
 
             return
-                global::GitHub.OneOf<global::GitHub.PrivateUser, global::GitHub.PublicUser>.FromJson(__content, JsonSerializerContext) ??
+                global::GitHub.UsersGetAuthenticatedResponse.FromJson(__content, JsonSerializerContext) ??
                 throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }

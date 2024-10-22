@@ -205,7 +205,7 @@ namespace GitHub
         public global::GitHub.AppPermissionsOrganizationCustomProperties? OrganizationCustomProperties { get; set; }
 
         /// <summary>
-        /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in beta and is subject to change.
+        /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organization_copilot_seat_management")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AppPermissionsOrganizationCopilotSeatManagementJsonConverter))]
@@ -254,7 +254,7 @@ namespace GitHub
         public global::GitHub.AppPermissionsOrganizationPlan? OrganizationPlan { get; set; }
 
         /// <summary>
-        /// The level of permission to grant the access token to manage organization projects and projects beta (where available).
+        /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("organization_projects")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AppPermissionsOrganizationProjectsJsonConverter))]

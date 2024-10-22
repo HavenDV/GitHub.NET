@@ -7,7 +7,7 @@ namespace GitHub
         /// <summary>
         /// List all Copilot seat assignments for an enterprise<br/>
         /// &gt; [!NOTE]<br/>
-        /// &gt; This endpoint is in beta and is subject to change.<br/>
+        /// &gt; This endpoint is in public preview and is subject to change.<br/>
         /// Lists all active Copilot seats across organizations or enterprise teams for an enterprise with a Copilot Business or Copilot Enterprise subscription.<br/>
         /// Users with access through multiple organizations or enterprise teams will only be counted toward `total_seats` once.<br/>
         /// For each organization or enterprise team which grants Copilot access to a user, a seat detail object will appear in the `seats` array.<br/>

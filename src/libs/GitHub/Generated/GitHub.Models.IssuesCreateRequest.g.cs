@@ -25,7 +25,7 @@ namespace GitHub
         public string? Body { get; set; }
 
         /// <summary>
-        /// Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is deprecated.**_
+        /// Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is closing down.**_
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignee")]
         public string? Assignee { get; set; }

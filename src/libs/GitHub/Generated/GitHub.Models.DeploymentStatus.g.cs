@@ -61,7 +61,7 @@ namespace GitHub
         public string? Environment { get; set; }
 
         /// <summary>
-        /// Deprecated: the URL to associate with this status.<br/>
+        /// Closing down notice: the URL to associate with this status.<br/>
         /// Example: https://example.com/deployment/42/output
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("target_url")]

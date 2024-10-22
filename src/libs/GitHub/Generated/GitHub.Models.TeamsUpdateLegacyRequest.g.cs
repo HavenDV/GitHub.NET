@@ -43,7 +43,7 @@ namespace GitHub
         public global::GitHub.TeamsUpdateLegacyRequestNotificationSetting? NotificationSetting { get; set; }
 
         /// <summary>
-        /// **Deprecated**. The permission that new repositories will be added to the team with when none is specified.<br/>
+        /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.<br/>
         /// Default Value: pull
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("permission")]

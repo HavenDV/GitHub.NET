@@ -211,5 +211,10 @@ namespace GitHub
         /// </summary>
         public CodeSecurityClient CodeSecurity { get; }
 
+        /// <summary>
+        /// Manage private registry configurations.
+        /// </summary>
+        public PrivateRegistriesClient PrivateRegistries { get; }
+
     }
 }
