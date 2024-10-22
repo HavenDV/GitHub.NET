@@ -53,7 +53,7 @@ namespace GitHub
         /// Default: `notifications_enabled`
         /// </param>
         /// <param name="permission">
-        /// **Deprecated**. The permission that new repositories will be added to the team with when none is specified.<br/>
+        /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.<br/>
         /// Default Value: pull
         /// </param>
         /// <param name="parentTeamId">

@@ -26,7 +26,7 @@ namespace GitHub
         /// <summary>
         /// Remove users from the Copilot subscription for an organization<br/>
         /// &gt; [!NOTE]<br/>
-        /// &gt; This endpoint is in beta and is subject to change.<br/>
+        /// &gt; This endpoint is in public preview and is subject to change.<br/>
         /// Cancels the Copilot seat assignment for each user specified.<br/>
         /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.<br/>
         /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".<br/>
@@ -115,7 +115,7 @@ namespace GitHub
         /// <summary>
         /// Remove users from the Copilot subscription for an organization<br/>
         /// &gt; [!NOTE]<br/>
-        /// &gt; This endpoint is in beta and is subject to change.<br/>
+        /// &gt; This endpoint is in public preview and is subject to change.<br/>
         /// Cancels the Copilot seat assignment for each user specified.<br/>
         /// This will cause the specified users to lose access to GitHub Copilot at the end of the current billing cycle, and the organization will not be billed further for those users.<br/>
         /// For more information about Copilot pricing, see "[Pricing for GitHub Copilot](https://docs.github.com/billing/managing-billing-for-github-copilot/about-billing-for-github-copilot#about-billing-for-github-copilot)".<br/>

@@ -153,6 +153,12 @@ namespace GitHub
         public string? StarredAt { get; set; }
 
         /// <summary>
+        /// Example: public
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("user_view_type")]
+        public string? UserViewType { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]

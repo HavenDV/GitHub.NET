@@ -24,7 +24,7 @@ namespace GitHub
         public string? Body { get; set; }
 
         /// <summary>
-        /// Username to assign to this issue. **This field is deprecated.**
+        /// Username to assign to this issue. **This field is closing down.**
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignee")]
         public string? Assignee { get; set; }

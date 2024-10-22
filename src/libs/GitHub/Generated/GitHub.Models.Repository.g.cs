@@ -601,7 +601,7 @@ namespace GitHub
         public bool? AllowUpdateBranch { get; set; } = false;
 
         /// <summary>
-        /// Whether a squash merge commit can use the pull request title as default. **This property has been deprecated. Please use `squash_merge_commit_title` instead.<br/>
+        /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.<br/>
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("use_squash_pr_title_as_default")]

@@ -337,6 +337,14 @@ namespace GitHub
         };
 
         /// <summary>
+        /// Manage private registry configurations.
+        /// </summary>
+        public PrivateRegistriesClient PrivateRegistries => new PrivateRegistriesClient(_httpClient, authorizations: _authorizations)
+        {
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Creates a new instance of the GitHubClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.

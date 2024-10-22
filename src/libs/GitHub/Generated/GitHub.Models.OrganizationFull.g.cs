@@ -299,7 +299,7 @@ namespace GitHub
         public bool? WebCommitSignoffRequired { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether GitHub Advanced Security is enabled for new repositories and repositories transferred to this organization.<br/>
         /// This field is only visible to organization owners or members of a team with the security manager role.<br/>
         /// Example: false
@@ -309,7 +309,7 @@ namespace GitHub
         public bool? AdvancedSecurityEnabledForNewRepositories { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// This field is only visible to organization owners or members of a team with the security manager role.<br/>
         /// Example: false
@@ -319,7 +319,7 @@ namespace GitHub
         public bool? DependabotAlertsEnabledForNewRepositories { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether Dependabot security updates are automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// This field is only visible to organization owners or members of a team with the security manager role.<br/>
         /// Example: false
@@ -329,7 +329,7 @@ namespace GitHub
         public bool? DependabotSecurityUpdatesEnabledForNewRepositories { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether dependency graph is automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// This field is only visible to organization owners or members of a team with the security manager role.<br/>
         /// Example: false
@@ -339,7 +339,7 @@ namespace GitHub
         public bool? DependencyGraphEnabledForNewRepositories { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether secret scanning is automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// This field is only visible to organization owners or members of a team with the security manager role.<br/>
         /// Example: false
@@ -349,7 +349,7 @@ namespace GitHub
         public bool? SecretScanningEnabledForNewRepositories { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether secret scanning push protection is automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// This field is only visible to organization owners or members of a team with the security manager role.<br/>
         /// Example: false

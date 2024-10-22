@@ -21,7 +21,7 @@ namespace GitHub
         public string? Location { get; set; }
 
         /// <summary>
-        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("geo")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodespacesCreateWithRepoForAuthenticatedUserRequestGeoJsonConverter))]

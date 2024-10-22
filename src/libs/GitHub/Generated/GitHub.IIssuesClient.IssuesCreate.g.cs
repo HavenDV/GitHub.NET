@@ -46,7 +46,7 @@ namespace GitHub
         /// The contents of the issue.
         /// </param>
         /// <param name="assignee">
-        /// Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is deprecated.**_
+        /// Login for the user that this issue should be assigned to. _NOTE: Only users with push access can set the assignee for new issues. The assignee is silently dropped otherwise. **This field is closing down.**_
         /// </param>
         /// <param name="milestone"></param>
         /// <param name="labels">

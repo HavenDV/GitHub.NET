@@ -57,14 +57,14 @@ namespace GitHub
         public required string Path { get; set; }
 
         /// <summary>
-        /// The line index in the diff to which the comment applies. This field is deprecated; use `line` instead.<br/>
+        /// The line index in the diff to which the comment applies. This field is closing down; use `line` instead.<br/>
         /// Example: 1
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("position")]
         public int? Position { get; set; }
 
         /// <summary>
-        /// The index of the original line in the diff to which the comment applies. This field is deprecated; use `original_line` instead.<br/>
+        /// The index of the original line in the diff to which the comment applies. This field is closing down; use `original_line` instead.<br/>
         /// Example: 4
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("original_position")]

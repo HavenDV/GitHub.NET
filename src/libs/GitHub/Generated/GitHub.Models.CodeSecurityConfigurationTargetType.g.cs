@@ -16,6 +16,10 @@ namespace GitHub
         /// 
         /// </summary>
         Organization,
+        /// <summary>
+        /// 
+        /// </summary>
+        Enterprise,
     }
 
     /// <summary>
@@ -32,6 +36,7 @@ namespace GitHub
             {
                 CodeSecurityConfigurationTargetType.Global => "global",
                 CodeSecurityConfigurationTargetType.Organization => "organization",
+                CodeSecurityConfigurationTargetType.Enterprise => "enterprise",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +49,7 @@ namespace GitHub
             {
                 "global" => CodeSecurityConfigurationTargetType.Global,
                 "organization" => CodeSecurityConfigurationTargetType.Organization,
+                "enterprise" => CodeSecurityConfigurationTargetType.Enterprise,
                 _ => null,
             };
         }

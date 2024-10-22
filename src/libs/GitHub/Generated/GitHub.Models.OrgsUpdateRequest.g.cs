@@ -97,7 +97,7 @@ namespace GitHub
 
         /// <summary>
         /// Specifies which types of repositories non-admin organization members can create. `private` is only available to repositories that are part of an organization on GitHub Enterprise Cloud. <br/>
-        /// **Note:** This parameter is deprecated and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See the parameter deprecation notice in the operation description for details.
+        /// **Note:** This parameter is closing down and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See the parameter deprecation notice in the operation description for details.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("members_allowed_repository_creation_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrgsUpdateRequestMembersAllowedRepositoryCreationTypeJsonConverter))]
@@ -145,7 +145,7 @@ namespace GitHub
         public string? Blog { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether GitHub Advanced Security is automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."<br/>
         /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
@@ -155,7 +155,7 @@ namespace GitHub
         public bool? AdvancedSecurityEnabledForNewRepositories { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether Dependabot alerts are automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."<br/>
         /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
@@ -165,7 +165,7 @@ namespace GitHub
         public bool? DependabotAlertsEnabledForNewRepositories { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether Dependabot security updates are automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."<br/>
         /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
@@ -175,7 +175,7 @@ namespace GitHub
         public bool? DependabotSecurityUpdatesEnabledForNewRepositories { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether dependency graph is automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."<br/>
         /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
@@ -185,7 +185,7 @@ namespace GitHub
         public bool? DependencyGraphEnabledForNewRepositories { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether secret scanning is automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."<br/>
         /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.
@@ -195,7 +195,7 @@ namespace GitHub
         public bool? SecretScanningEnabledForNewRepositories { get; set; }
 
         /// <summary>
-        /// **Deprecated.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
+        /// **Endpoint closing down notice.** Please use [code security configurations](https://docs.github.com/rest/code-security/configurations) instead.<br/>
         /// Whether secret scanning push protection is automatically enabled for new repositories and repositories transferred to this organization.<br/>
         /// To use this parameter, you must have admin permissions for the repository or be an owner or security manager for the organization that owns the repository. For more information, see "[Managing security managers in your organization](https://docs.github.com/organizations/managing-peoples-access-to-your-organization-with-roles/managing-security-managers-in-your-organization)."<br/>
         /// You can check which security and analysis features are currently enabled by using a `GET /orgs/{org}` request.

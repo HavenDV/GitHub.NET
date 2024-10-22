@@ -5575,6 +5575,12 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.CodeSecuritySetConfigurationAsDefaultResponseDefaultForNewReposNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.ReposGetContentResponseDiscriminatorTypeJsonConverter),
             typeof(global::GitHub.JsonConverters.ReposGetContentResponseDiscriminatorTypeNullableJsonConverter),
+            typeof(global::GitHub.JsonConverters.UsersGetAuthenticatedResponseDiscriminatorUserViewTypeJsonConverter),
+            typeof(global::GitHub.JsonConverters.UsersGetAuthenticatedResponseDiscriminatorUserViewTypeNullableJsonConverter),
+            typeof(global::GitHub.JsonConverters.UsersGetByIdResponseDiscriminatorUserViewTypeJsonConverter),
+            typeof(global::GitHub.JsonConverters.UsersGetByIdResponseDiscriminatorUserViewTypeNullableJsonConverter),
+            typeof(global::GitHub.JsonConverters.UsersGetByUsernameResponseDiscriminatorUserViewTypeJsonConverter),
+            typeof(global::GitHub.JsonConverters.UsersGetByUsernameResponseDiscriminatorUserViewTypeNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookConfigInsecureSslJsonConverter),
             typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory3),
             typeof(global::GitHub.JsonConverters.AnyOfJsonConverterFactory2),
@@ -5593,6 +5599,9 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.WebhookPullRequestReviewRequestedJsonConverter),
             typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory5),
             typeof(global::GitHub.JsonConverters.ReposGetContentResponseJsonConverter),
+            typeof(global::GitHub.JsonConverters.UsersGetAuthenticatedResponseJsonConverter),
+            typeof(global::GitHub.JsonConverters.UsersGetByIdResponseJsonConverter),
+            typeof(global::GitHub.JsonConverters.UsersGetByUsernameResponseJsonConverter),
         })]
 
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::GitHub.JsonSerializerContextTypes))]

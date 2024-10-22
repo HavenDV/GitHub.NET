@@ -23,6 +23,12 @@ namespace GitHub
         public required long Id { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("user_view_type")]
+        public string? UserViewType { get; set; }
+
+        /// <summary>
         /// Example: MDQ6VXNlcjE=
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_id")]
@@ -284,12 +290,6 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("plan")]
         public global::GitHub.PrivateUserPlan? Plan { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("suspended_at")]
-        public global::System.DateTime? SuspendedAt { get; set; }
 
         /// <summary>
         /// 

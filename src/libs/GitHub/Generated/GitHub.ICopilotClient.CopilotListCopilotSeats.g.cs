@@ -7,7 +7,7 @@ namespace GitHub
         /// <summary>
         /// List all Copilot seat assignments for an organization<br/>
         /// &gt; [!NOTE]<br/>
-        /// &gt; This endpoint is in beta and is subject to change.<br/>
+        /// &gt; This endpoint is in public preview and is subject to change.<br/>
         /// Lists all active Copilot seats for an organization with a Copilot Business or Copilot Enterprise subscription.<br/>
         /// Only organization owners can view assigned seats.<br/>
         /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:org` scopes to use this endpoint.

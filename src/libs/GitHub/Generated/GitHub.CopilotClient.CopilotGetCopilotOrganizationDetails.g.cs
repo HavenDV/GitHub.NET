@@ -24,7 +24,7 @@ namespace GitHub
         /// <summary>
         /// Get Copilot seat information and settings for an organization<br/>
         /// &gt; [!NOTE]<br/>
-        /// &gt; This endpoint is in beta and is subject to change.<br/>
+        /// &gt; This endpoint is in public preview and is subject to change.<br/>
         /// Gets information about an organization's Copilot subscription, including seat breakdown<br/>
         /// and feature policies. To configure these settings, go to your organization's settings on GitHub.com.<br/>
         /// For more information, see "[Managing policies for Copilot in your organization](https://docs.github.com/copilot/managing-copilot/managing-policies-for-copilot-business-in-your-organization)".<br/>

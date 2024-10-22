@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is being deprecated.
+    /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
     /// </summary>
     public enum CodespacesCreateForAuthenticatedUserRequestVariant1Geo
     {
