@@ -41,17 +41,17 @@ namespace GitHub
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
-                client: _httpClient);
+                client: HttpClient);
             PrepareCodeSecurityCreateConfigurationArguments(
-                httpClient: _httpClient,
+                httpClient: HttpClient,
                 org: ref org,
                 request: request);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/orgs/{org}/code-security/configurations",
-                baseUri: _httpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
-            using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
+            using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
@@ -59,47 +59,47 @@ namespace GitHub
                 content: __httpRequestContentBody,
                 encoding: global::System.Text.Encoding.UTF8,
                 mediaType: "application/json");
-            httpRequest.Content = __httpRequestContent;
+            __httpRequest.Content = __httpRequestContent;
 
             PrepareRequest(
-                client: _httpClient,
-                request: httpRequest);
+                client: HttpClient,
+                request: __httpRequest);
             PrepareCodeSecurityCreateConfigurationRequest(
-                httpClient: _httpClient,
-                httpRequestMessage: httpRequest,
+                httpClient: HttpClient,
+                httpRequestMessage: __httpRequest,
                 org: org,
                 request: request);
 
-            using var response = await _httpClient.SendAsync(
-                request: httpRequest,
+            using var __response = await HttpClient.SendAsync(
+                request: __httpRequest,
                 completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
 
             ProcessResponse(
-                client: _httpClient,
-                response: response);
+                client: HttpClient,
+                response: __response);
             ProcessCodeSecurityCreateConfigurationResponse(
-                httpClient: _httpClient,
-                httpResponseMessage: response);
+                httpClient: HttpClient,
+                httpResponseMessage: __response);
 
-            var __content = await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+            var __content = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
             ProcessResponseContent(
-                client: _httpClient,
-                response: response,
+                client: HttpClient,
+                response: __response,
                 content: ref __content);
             ProcessCodeSecurityCreateConfigurationResponseContent(
-                httpClient: _httpClient,
-                httpResponseMessage: response,
+                httpClient: HttpClient,
+                httpResponseMessage: __response,
                 content: ref __content);
 
             try
             {
-                response.EnsureSuccessStatusCode();
+                __response.EnsureSuccessStatusCode();
             }
-            catch (global::System.Net.Http.HttpRequestException ex)
+            catch (global::System.Net.Http.HttpRequestException __ex)
             {
-                throw new global::System.InvalidOperationException(__content, ex);
+                throw new global::System.InvalidOperationException(__content, __ex);
             }
 
             return
@@ -155,6 +155,13 @@ namespace GitHub
         /// The enablement status of secret scanning push protection<br/>
         /// Default Value: disabled
         /// </param>
+        /// <param name="secretScanningDelegatedBypass">
+        /// The enablement status of secret scanning delegated bypass<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="secretScanningDelegatedBypassOptions">
+        /// Feature options for secret scanning delegated bypass
+        /// </param>
         /// <param name="secretScanningValidityChecks">
         /// The enablement status of secret scanning validity checks<br/>
         /// Default Value: disabled
@@ -186,13 +193,15 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup = global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? secretScanning = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? secretScanningPushProtection = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection.Disabled,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass? secretScanningDelegatedBypass = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass.Disabled,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptions? secretScanningDelegatedBypassOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting = global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement? enforcement = global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement.Enforced,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var request = new global::GitHub.CodeSecurityCreateConfigurationRequest
+            var __request = new global::GitHub.CodeSecurityCreateConfigurationRequest
             {
                 Name = name,
                 Description = description,
@@ -205,6 +214,8 @@ namespace GitHub
                 CodeScanningDefaultSetup = codeScanningDefaultSetup,
                 SecretScanning = secretScanning,
                 SecretScanningPushProtection = secretScanningPushProtection,
+                SecretScanningDelegatedBypass = secretScanningDelegatedBypass,
+                SecretScanningDelegatedBypassOptions = secretScanningDelegatedBypassOptions,
                 SecretScanningValidityChecks = secretScanningValidityChecks,
                 SecretScanningNonProviderPatterns = secretScanningNonProviderPatterns,
                 PrivateVulnerabilityReporting = privateVulnerabilityReporting,
@@ -213,7 +224,7 @@ namespace GitHub
 
             return await CodeSecurityCreateConfigurationAsync(
                 org: org,
-                request: request,
+                request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }

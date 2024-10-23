@@ -17,7 +17,9 @@ namespace GitHub
             ref int? perPage,
             ref string? before,
             ref string? after,
-            ref string? validity);
+            ref string? validity,
+            ref bool? isPubliclyLeaked,
+            ref bool? isMultiRepo);
         partial void PrepareSecretScanningListAlertsForOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -31,7 +33,9 @@ namespace GitHub
             int? perPage,
             string? before,
             string? after,
-            string? validity);
+            string? validity,
+            bool? isPubliclyLeaked,
+            bool? isMultiRepo);
         partial void ProcessSecretScanningListAlertsForOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -66,6 +70,12 @@ namespace GitHub
         /// <param name="before"></param>
         /// <param name="after"></param>
         /// <param name="validity"></param>
+        /// <param name="isPubliclyLeaked">
+        /// Default Value: false
+        /// </param>
+        /// <param name="isMultiRepo">
+        /// Default Value: false
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrganizationSecretScanningAlert>> SecretScanningListAlertsForOrgAsync(
@@ -80,12 +90,14 @@ namespace GitHub
             string? before = default,
             string? after = default,
             string? validity = default,
+            bool? isPubliclyLeaked = false,
+            bool? isMultiRepo = false,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
-                client: _httpClient);
+                client: HttpClient);
             PrepareSecretScanningListAlertsForOrgArguments(
-                httpClient: _httpClient,
+                httpClient: HttpClient,
                 org: ref org,
                 state: ref state,
                 secretType: ref secretType,
@@ -96,11 +108,13 @@ namespace GitHub
                 perPage: ref perPage,
                 before: ref before,
                 after: ref after,
-                validity: ref validity);
+                validity: ref validity,
+                isPubliclyLeaked: ref isPubliclyLeaked,
+                isMultiRepo: ref isMultiRepo);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/orgs/{org}/secret-scanning/alerts",
-                baseUri: _httpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
                 .AddOptionalParameter("state", state?.ToValueString()) 
                 .AddOptionalParameter("secret_type", secretType) 
@@ -112,18 +126,20 @@ namespace GitHub
                 .AddOptionalParameter("before", before) 
                 .AddOptionalParameter("after", after) 
                 .AddOptionalParameter("validity", validity) 
+                .AddOptionalParameter("is_publicly_leaked", isPubliclyLeaked?.ToString()) 
+                .AddOptionalParameter("is_multi_repo", isMultiRepo?.ToString()) 
                 ; 
             var __path = __pathBuilder.ToString();
-            using var httpRequest = new global::System.Net.Http.HttpRequestMessage(
+            using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 
             PrepareRequest(
-                client: _httpClient,
-                request: httpRequest);
+                client: HttpClient,
+                request: __httpRequest);
             PrepareSecretScanningListAlertsForOrgRequest(
-                httpClient: _httpClient,
-                httpRequestMessage: httpRequest,
+                httpClient: HttpClient,
+                httpRequestMessage: __httpRequest,
                 org: org,
                 state: state,
                 secretType: secretType,
@@ -134,38 +150,40 @@ namespace GitHub
                 perPage: perPage,
                 before: before,
                 after: after,
-                validity: validity);
+                validity: validity,
+                isPubliclyLeaked: isPubliclyLeaked,
+                isMultiRepo: isMultiRepo);
 
-            using var response = await _httpClient.SendAsync(
-                request: httpRequest,
+            using var __response = await HttpClient.SendAsync(
+                request: __httpRequest,
                 completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
 
             ProcessResponse(
-                client: _httpClient,
-                response: response);
+                client: HttpClient,
+                response: __response);
             ProcessSecretScanningListAlertsForOrgResponse(
-                httpClient: _httpClient,
-                httpResponseMessage: response);
+                httpClient: HttpClient,
+                httpResponseMessage: __response);
 
-            var __content = await response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+            var __content = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
             ProcessResponseContent(
-                client: _httpClient,
-                response: response,
+                client: HttpClient,
+                response: __response,
                 content: ref __content);
             ProcessSecretScanningListAlertsForOrgResponseContent(
-                httpClient: _httpClient,
-                httpResponseMessage: response,
+                httpClient: HttpClient,
+                httpResponseMessage: __response,
                 content: ref __content);
 
             try
             {
-                response.EnsureSuccessStatusCode();
+                __response.EnsureSuccessStatusCode();
             }
-            catch (global::System.Net.Http.HttpRequestException ex)
+            catch (global::System.Net.Http.HttpRequestException __ex)
             {
-                throw new global::System.InvalidOperationException(__content, ex);
+                throw new global::System.InvalidOperationException(__content, __ex);
             }
 
             return

@@ -35,7 +35,7 @@ namespace GitHub
         /// A custom webhook event name. Must be 100 characters or fewer.
         /// </param>
         /// <param name="clientPayload">
-        /// JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10.
+        /// JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10. The total size of the JSON payload must be less than 64KB.
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
