@@ -62,6 +62,12 @@ namespace GitHub
         /// <param name="secretScanningPushProtection">
         /// The enablement status of secret scanning push protection
         /// </param>
+        /// <param name="secretScanningDelegatedBypass">
+        /// The enablement status of secret scanning delegated bypass
+        /// </param>
+        /// <param name="secretScanningDelegatedBypassOptions">
+        /// Feature options for secret scanning delegated bypass
+        /// </param>
         /// <param name="secretScanningValidityChecks">
         /// The enablement status of secret scanning validity checks
         /// </param>
@@ -90,6 +96,8 @@ namespace GitHub
             global::GitHub.CodeSecurityUpdateConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanning? secretScanning = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningPushProtection? secretScanningPushProtection = default,
+            global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypass? secretScanningDelegatedBypass = default,
+            global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptions? secretScanningDelegatedBypassOptions = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting = default,

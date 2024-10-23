@@ -67,6 +67,13 @@ namespace GitHub
         /// The enablement status of secret scanning push protection<br/>
         /// Default Value: disabled
         /// </param>
+        /// <param name="secretScanningDelegatedBypass">
+        /// The enablement status of secret scanning delegated bypass<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="secretScanningDelegatedBypassOptions">
+        /// Feature options for secret scanning delegated bypass
+        /// </param>
         /// <param name="secretScanningValidityChecks">
         /// The enablement status of secret scanning validity checks<br/>
         /// Default Value: disabled
@@ -98,6 +105,8 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup = global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? secretScanning = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? secretScanningPushProtection = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection.Disabled,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass? secretScanningDelegatedBypass = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass.Disabled,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptions? secretScanningDelegatedBypassOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns.Disabled,
             global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting = global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting.Disabled,

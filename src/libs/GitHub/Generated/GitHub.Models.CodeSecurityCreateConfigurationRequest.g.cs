@@ -93,6 +93,20 @@ namespace GitHub
         public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? SecretScanningPushProtection { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection.Disabled;
 
         /// <summary>
+        /// The enablement status of secret scanning delegated bypass<br/>
+        /// Default Value: disabled
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_delegated_bypass")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassJsonConverter))]
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass? SecretScanningDelegatedBypass { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass.Disabled;
+
+        /// <summary>
+        /// Feature options for secret scanning delegated bypass
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_delegated_bypass_options")]
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptions? SecretScanningDelegatedBypassOptions { get; set; }
+
+        /// <summary>
         /// The enablement status of secret scanning validity checks<br/>
         /// Default Value: disabled
         /// </summary>

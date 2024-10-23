@@ -215,6 +215,14 @@ namespace GitHub
         public int? DiskUsage { get; set; }
 
         /// <summary>
+        /// The number of collaborators on private repositories.<br/>
+        /// This field may be null if the number of private repositories is over 50,000.<br/>
+        /// Example: 8
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("collaborators")]
+        public int? Collaborators { get; set; }
+
+        /// <summary>
         /// Example: org@example.com
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("billing_email")]

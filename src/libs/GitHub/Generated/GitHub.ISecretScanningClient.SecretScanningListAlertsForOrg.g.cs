@@ -29,6 +29,12 @@ namespace GitHub
         /// <param name="before"></param>
         /// <param name="after"></param>
         /// <param name="validity"></param>
+        /// <param name="isPubliclyLeaked">
+        /// Default Value: false
+        /// </param>
+        /// <param name="isMultiRepo">
+        /// Default Value: false
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrganizationSecretScanningAlert>> SecretScanningListAlertsForOrgAsync(
@@ -43,6 +49,8 @@ namespace GitHub
             string? before = default,
             string? after = default,
             string? validity = default,
+            bool? isPubliclyLeaked = false,
+            bool? isMultiRepo = false,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

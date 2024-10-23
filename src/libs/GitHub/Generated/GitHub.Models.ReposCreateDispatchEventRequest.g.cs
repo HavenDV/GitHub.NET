@@ -16,7 +16,7 @@ namespace GitHub
         public required string EventType { get; set; }
 
         /// <summary>
-        /// JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10.
+        /// JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10. The total size of the JSON payload must be less than 64KB.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("client_payload")]
         public object? ClientPayload { get; set; }

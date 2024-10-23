@@ -126,6 +126,18 @@ namespace GitHub
         public global::GitHub.SecretScanningAlertValidity? Validity { get; set; }
 
         /// <summary>
+        /// Whether the detected secret was publicly leaked.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("publicly_leaked")]
+        public bool? PubliclyLeaked { get; set; }
+
+        /// <summary>
+        /// Whether the detected secret was found in multiple repositories under the same organization or enterprise.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("multi_repo")]
+        public bool? MultiRepo { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
