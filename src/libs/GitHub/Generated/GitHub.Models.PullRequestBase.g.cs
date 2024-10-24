@@ -23,11 +23,11 @@ namespace GitHub
         public required string Ref { get; set; }
 
         /// <summary>
-        /// 
+        /// A repository on GitHub.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repo")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.PullRequestBaseRepo Repo { get; set; }
+        public required global::GitHub.Repository Repo { get; set; }
 
         /// <summary>
         /// 
@@ -37,11 +37,11 @@ namespace GitHub
         public required string Sha { get; set; }
 
         /// <summary>
-        /// 
+        /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.PullRequestBaseUser User { get; set; }
+        public required global::GitHub.SimpleUser User { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
