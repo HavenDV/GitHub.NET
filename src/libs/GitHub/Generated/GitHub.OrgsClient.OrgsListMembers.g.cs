@@ -50,10 +50,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>> OrgsListMembersAsync(
             string org,
-            global::GitHub.OrgsListMembersFilter? filter = global::GitHub.OrgsListMembersFilter.All,
-            global::GitHub.OrgsListMembersRole? role = global::GitHub.OrgsListMembersRole.All,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.OrgsListMembersFilter? filter = default,
+            global::GitHub.OrgsListMembersRole? role = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

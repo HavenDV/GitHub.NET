@@ -47,8 +47,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.ActionsListSelectedReposForOrgVariableResponse> ActionsListSelectedReposForOrgVariableAsync(
             string org,
             string name,
-            int? page = 1,
-            int? perPage = 30,
+            int? page = default,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

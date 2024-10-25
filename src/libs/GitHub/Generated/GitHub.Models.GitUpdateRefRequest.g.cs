@@ -20,7 +20,7 @@ namespace GitHub
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("force")]
-        public bool? Force { get; set; } = false;
+        public bool? Force { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

@@ -66,13 +66,13 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Repository>> ReposListForAuthenticatedUserAsync(
-            global::GitHub.ReposListForAuthenticatedUserVisibility? visibility = global::GitHub.ReposListForAuthenticatedUserVisibility.All,
-            string? affiliation = "owner,collaborator,organization_member",
-            global::GitHub.ReposListForAuthenticatedUserType? type = global::GitHub.ReposListForAuthenticatedUserType.All,
-            global::GitHub.ReposListForAuthenticatedUserSort? sort = global::GitHub.ReposListForAuthenticatedUserSort.FullName,
+            global::GitHub.ReposListForAuthenticatedUserVisibility? visibility = default,
+            string? affiliation = default,
+            global::GitHub.ReposListForAuthenticatedUserType? type = default,
+            global::GitHub.ReposListForAuthenticatedUserSort? sort = default,
             global::GitHub.ReposListForAuthenticatedUserDirection? direction = default,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             global::System.DateTime? since = default,
             global::System.DateTime? before = default,
             global::System.Threading.CancellationToken cancellationToken = default)

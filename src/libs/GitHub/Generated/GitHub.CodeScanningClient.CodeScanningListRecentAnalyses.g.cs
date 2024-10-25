@@ -92,13 +92,13 @@ namespace GitHub
             string repo,
             string? toolName = default,
             string? toolGuid = default,
-            int? page = 1,
-            int? perPage = 30,
+            int? page = default,
+            int? perPage = default,
             int? pr = default,
             string? @ref = default,
             string? sarifId = default,
-            global::GitHub.CodeScanningListRecentAnalysesDirection? direction = global::GitHub.CodeScanningListRecentAnalysesDirection.Desc,
-            global::GitHub.CodeScanningListRecentAnalysesSort? sort = global::GitHub.CodeScanningListRecentAnalysesSort.Created,
+            global::GitHub.CodeScanningListRecentAnalysesDirection? direction = default,
+            global::GitHub.CodeScanningListRecentAnalysesSort? sort = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

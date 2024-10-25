@@ -25,7 +25,7 @@ namespace GitHub
         /// Default Value: github-pages
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
-        public string? Environment { get; set; } = "github-pages";
+        public string? Environment { get; set; }
 
         /// <summary>
         /// A unique string that represents the version of the build for this deployment.<br/>
@@ -33,7 +33,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pages_build_version")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string PagesBuildVersion { get; set; }
+        public required string PagesBuildVersion { get; set; } = "GITHUB_SHA";
 
         /// <summary>
         /// The OIDC token issued by GitHub Actions certifying the origin of the deployment.

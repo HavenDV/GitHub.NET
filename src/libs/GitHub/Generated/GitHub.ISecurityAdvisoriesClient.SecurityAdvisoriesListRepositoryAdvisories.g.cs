@@ -29,11 +29,11 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisory>> SecurityAdvisoriesListRepositoryAdvisoriesAsync(
             string owner,
             string repo,
-            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection? direction = global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection.Desc,
-            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort? sort = global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort.Created,
+            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection? direction = default,
+            global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort? sort = default,
             string? before = default,
             string? after = default,
-            int? perPage = 30,
+            int? perPage = default,
             global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesState? state = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

@@ -83,15 +83,15 @@ namespace GitHub
             global::GitHub.SecretScanningListAlertsForOrgState? state = default,
             string? secretType = default,
             string? resolution = default,
-            global::GitHub.SecretScanningListAlertsForOrgSort? sort = global::GitHub.SecretScanningListAlertsForOrgSort.Created,
-            global::GitHub.SecretScanningListAlertsForOrgDirection? direction = global::GitHub.SecretScanningListAlertsForOrgDirection.Desc,
-            int? page = 1,
-            int? perPage = 30,
+            global::GitHub.SecretScanningListAlertsForOrgSort? sort = default,
+            global::GitHub.SecretScanningListAlertsForOrgDirection? direction = default,
+            int? page = default,
+            int? perPage = default,
             string? before = default,
             string? after = default,
             string? validity = default,
-            bool? isPubliclyLeaked = false,
-            bool? isMultiRepo = false,
+            bool? isPubliclyLeaked = default,
+            bool? isMultiRepo = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

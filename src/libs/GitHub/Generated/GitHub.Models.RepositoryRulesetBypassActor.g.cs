@@ -28,7 +28,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bypass_mode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.RepositoryRulesetBypassActorBypassModeJsonConverter))]
-        public global::GitHub.RepositoryRulesetBypassActorBypassMode? BypassMode { get; set; } = global::GitHub.RepositoryRulesetBypassActorBypassMode.Always;
+        public global::GitHub.RepositoryRulesetBypassActorBypassMode? BypassMode { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

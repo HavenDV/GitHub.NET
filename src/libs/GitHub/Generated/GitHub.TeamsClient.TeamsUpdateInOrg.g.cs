@@ -156,7 +156,7 @@ namespace GitHub
             string? description = default,
             global::GitHub.TeamsUpdateInOrgRequestPrivacy? privacy = default,
             global::GitHub.TeamsUpdateInOrgRequestNotificationSetting? notificationSetting = default,
-            global::GitHub.TeamsUpdateInOrgRequestPermission? permission = global::GitHub.TeamsUpdateInOrgRequestPermission.Pull,
+            global::GitHub.TeamsUpdateInOrgRequestPermission? permission = default,
             int? parentTeamId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

@@ -25,9 +25,9 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>> TeamsListMembersInOrgAsync(
             string org,
             string teamSlug,
-            global::GitHub.TeamsListMembersInOrgRole? role = global::GitHub.TeamsListMembersInOrgRole.All,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.TeamsListMembersInOrgRole? role = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

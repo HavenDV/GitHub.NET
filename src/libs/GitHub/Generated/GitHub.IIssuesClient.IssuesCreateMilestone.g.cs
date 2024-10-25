@@ -44,7 +44,7 @@ namespace GitHub
             string owner,
             string repo,
             string title,
-            global::GitHub.IssuesCreateMilestoneRequestState? state = global::GitHub.IssuesCreateMilestoneRequestState.Open,
+            global::GitHub.IssuesCreateMilestoneRequestState? state = default,
             string? description = default,
             global::System.DateTime? dueOn = default,
             global::System.Threading.CancellationToken cancellationToken = default);

@@ -145,7 +145,7 @@ namespace GitHub
             string oidcToken,
             double? artifactId = default,
             string? artifactUrl = default,
-            string? environment = "github-pages",
+            string? environment = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.ReposCreatePagesDeploymentRequest

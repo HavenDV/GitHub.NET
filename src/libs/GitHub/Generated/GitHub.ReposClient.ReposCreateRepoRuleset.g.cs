@@ -143,7 +143,7 @@ namespace GitHub
             string repo,
             string name,
             global::GitHub.RepositoryRuleEnforcement enforcement,
-            global::GitHub.ReposCreateRepoRulesetRequestTarget? target = global::GitHub.ReposCreateRepoRulesetRequestTarget.Branch,
+            global::GitHub.ReposCreateRepoRulesetRequestTarget? target = default,
             global::System.Collections.Generic.IList<global::GitHub.RepositoryRulesetBypassActor>? bypassActors = default,
             global::GitHub.RepositoryRulesetConditions? conditions = default,
             global::System.Collections.Generic.IList<global::GitHub.RepositoryRule>? rules = default,

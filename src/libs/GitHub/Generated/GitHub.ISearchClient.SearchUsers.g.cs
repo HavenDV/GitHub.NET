@@ -29,9 +29,9 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.SearchUsersResponse> SearchUsersAsync(
             string q,
             global::GitHub.SearchUsersSort? sort = default,
-            global::GitHub.SearchUsersOrder? order = global::GitHub.SearchUsersOrder.Desc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.SearchUsersOrder? order = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

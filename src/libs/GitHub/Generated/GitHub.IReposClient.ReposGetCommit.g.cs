@@ -53,8 +53,8 @@ namespace GitHub
             string owner,
             string repo,
             string @ref,
-            int? page = 1,
-            int? perPage = 30,
+            int? page = default,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

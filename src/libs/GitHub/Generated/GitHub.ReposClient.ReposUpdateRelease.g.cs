@@ -161,7 +161,7 @@ namespace GitHub
             string? body = default,
             bool? draft = default,
             bool? prerelease = default,
-            global::GitHub.ReposUpdateReleaseRequestMakeLatest? makeLatest = global::GitHub.ReposUpdateReleaseRequestMakeLatest.True,
+            global::GitHub.ReposUpdateReleaseRequestMakeLatest? makeLatest = default,
             string? discussionCategoryName = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

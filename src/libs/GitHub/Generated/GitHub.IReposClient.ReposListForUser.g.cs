@@ -26,11 +26,11 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.MinimalRepository>> ReposListForUserAsync(
             string username,
-            global::GitHub.ReposListForUserType? type = global::GitHub.ReposListForUserType.Owner,
-            global::GitHub.ReposListForUserSort? sort = global::GitHub.ReposListForUserSort.FullName,
+            global::GitHub.ReposListForUserType? type = default,
+            global::GitHub.ReposListForUserSort? sort = default,
             global::GitHub.ReposListForUserDirection? direction = default,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -49,9 +49,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Project>> ProjectsListForRepoAsync(
             string owner,
             string repo,
-            global::GitHub.ProjectsListForRepoState? state = global::GitHub.ProjectsListForRepoState.Open,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.ProjectsListForRepoState? state = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

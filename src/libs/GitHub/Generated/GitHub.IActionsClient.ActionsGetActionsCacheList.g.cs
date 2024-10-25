@@ -30,12 +30,12 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.ActionsCacheList> ActionsGetActionsCacheListAsync(
             string owner,
             string repo,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             string? @ref = default,
             string? key = default,
-            global::GitHub.ActionsGetActionsCacheListSort? sort = global::GitHub.ActionsGetActionsCacheListSort.LastAccessedAt,
-            global::GitHub.ActionsGetActionsCacheListDirection? direction = global::GitHub.ActionsGetActionsCacheListDirection.Desc,
+            global::GitHub.ActionsGetActionsCacheListSort? sort = default,
+            global::GitHub.ActionsGetActionsCacheListDirection? direction = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

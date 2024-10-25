@@ -15,6 +15,10 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        AllWithoutConfigurations,
+        /// <summary>
+        /// 
+        /// </summary>
         Public,
         /// <summary>
         /// 
@@ -39,6 +43,7 @@ namespace GitHub
             return value switch
             {
                 CodeSecurityAttachConfigurationRequestScope.All => "all",
+                CodeSecurityAttachConfigurationRequestScope.AllWithoutConfigurations => "all_without_configurations",
                 CodeSecurityAttachConfigurationRequestScope.Public => "public",
                 CodeSecurityAttachConfigurationRequestScope.PrivateOrInternal => "private_or_internal",
                 CodeSecurityAttachConfigurationRequestScope.Selected => "selected",
@@ -53,6 +58,7 @@ namespace GitHub
             return value switch
             {
                 "all" => CodeSecurityAttachConfigurationRequestScope.All,
+                "all_without_configurations" => CodeSecurityAttachConfigurationRequestScope.AllWithoutConfigurations,
                 "public" => CodeSecurityAttachConfigurationRequestScope.Public,
                 "private_or_internal" => CodeSecurityAttachConfigurationRequestScope.PrivateOrInternal,
                 "selected" => CodeSecurityAttachConfigurationRequestScope.Selected,

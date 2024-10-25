@@ -12,7 +12,7 @@ namespace GitHub
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enabled")]
-        public bool? Enabled { get; set; } = false;
+        public bool? Enabled { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

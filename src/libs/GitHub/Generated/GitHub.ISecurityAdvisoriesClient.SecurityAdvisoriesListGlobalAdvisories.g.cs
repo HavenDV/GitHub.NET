@@ -41,7 +41,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisory>> SecurityAdvisoriesListGlobalAdvisoriesAsync(
             string? ghsaId = default,
-            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesType? type = global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesType.Reviewed,
+            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesType? type = default,
             string? cveId = default,
             global::GitHub.SecurityAdvisoryEcosystems? ecosystem = default,
             global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSeverity? severity = default,
@@ -55,9 +55,9 @@ namespace GitHub
             string? epssPercentile = default,
             string? before = default,
             string? after = default,
-            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? direction = global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection.Desc,
-            int? perPage = 30,
-            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort? sort = global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort.Published,
+            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? direction = default,
+            int? perPage = default,
+            global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort? sort = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

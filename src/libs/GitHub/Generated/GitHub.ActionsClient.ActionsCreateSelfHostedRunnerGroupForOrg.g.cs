@@ -141,11 +141,11 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.RunnerGroupsOrg> ActionsCreateSelfHostedRunnerGroupForOrgAsync(
             string org,
             string name,
-            global::GitHub.ActionsCreateSelfHostedRunnerGroupForOrgRequestVisibility? visibility = global::GitHub.ActionsCreateSelfHostedRunnerGroupForOrgRequestVisibility.All,
+            global::GitHub.ActionsCreateSelfHostedRunnerGroupForOrgRequestVisibility? visibility = default,
             global::System.Collections.Generic.IList<int>? selectedRepositoryIds = default,
             global::System.Collections.Generic.IList<int>? runners = default,
-            bool? allowsPublicRepositories = false,
-            bool? restrictedToWorkflows = false,
+            bool? allowsPublicRepositories = default,
+            bool? restrictedToWorkflows = default,
             global::System.Collections.Generic.IList<string>? selectedWorkflows = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

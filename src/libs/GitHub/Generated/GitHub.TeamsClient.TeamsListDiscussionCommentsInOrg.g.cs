@@ -56,9 +56,9 @@ namespace GitHub
             string org,
             string teamSlug,
             int discussionNumber,
-            global::GitHub.TeamsListDiscussionCommentsInOrgDirection? direction = global::GitHub.TeamsListDiscussionCommentsInOrgDirection.Desc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.TeamsListDiscussionCommentsInOrgDirection? direction = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

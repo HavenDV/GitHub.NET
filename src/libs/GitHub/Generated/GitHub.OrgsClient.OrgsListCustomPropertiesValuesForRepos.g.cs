@@ -44,8 +44,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrgRepoCustomPropertyValues>> OrgsListCustomPropertiesValuesForReposAsync(
             string org,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             string? repositoryQuery = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

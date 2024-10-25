@@ -63,7 +63,7 @@ namespace GitHub
             bool? dismissStaleReviews = default,
             bool? requireCodeOwnerReviews = default,
             int? requiredApprovingReviewCount = default,
-            bool? requireLastPushApproval = false,
+            bool? requireLastPushApproval = default,
             global::GitHub.ReposUpdatePullRequestReviewProtectionRequestBypassPullRequestAllowances? bypassPullRequestAllowances = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

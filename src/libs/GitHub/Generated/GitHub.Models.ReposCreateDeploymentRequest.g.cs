@@ -22,14 +22,14 @@ namespace GitHub
         /// Default Value: deploy
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("task")]
-        public string? Task { get; set; } = "deploy";
+        public string? Task { get; set; }
 
         /// <summary>
         /// Attempts to automatically merge the default branch into the requested ref, if it's behind the default branch.<br/>
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("auto_merge")]
-        public bool? AutoMerge { get; set; } = true;
+        public bool? AutoMerge { get; set; }
 
         /// <summary>
         /// The [status](https://docs.github.com/rest/commits/statuses) contexts to verify against commit status checks. If you omit this parameter, GitHub verifies all unique contexts before creating a deployment. To bypass checking entirely, pass an empty array. Defaults to all unique contexts.
@@ -49,7 +49,7 @@ namespace GitHub
         /// Default Value: production
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("environment")]
-        public string? Environment { get; set; } = "production";
+        public string? Environment { get; set; }
 
         /// <summary>
         /// Short description of the deployment.
@@ -62,7 +62,7 @@ namespace GitHub
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("transient_environment")]
-        public bool? TransientEnvironment { get; set; } = false;
+        public bool? TransientEnvironment { get; set; }
 
         /// <summary>
         /// Specifies if the given environment is one that end-users directly interact with. Default: `true` when `environment` is `production` and `false` otherwise.

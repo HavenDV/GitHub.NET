@@ -142,7 +142,7 @@ namespace GitHub
             string repo,
             int milestoneNumber,
             string? title = default,
-            global::GitHub.IssuesUpdateMilestoneRequestState? state = global::GitHub.IssuesUpdateMilestoneRequestState.Open,
+            global::GitHub.IssuesUpdateMilestoneRequestState? state = default,
             string? description = default,
             global::System.DateTime? dueOn = default,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -126,13 +126,13 @@ namespace GitHub
             string owner,
             string repo,
             string @ref,
-            string? task = "deploy",
-            bool? autoMerge = true,
+            string? task = default,
+            bool? autoMerge = default,
             global::System.Collections.Generic.IList<string>? requiredContexts = default,
             global::GitHub.OneOf<object, string>? payload = default,
-            string? environment = "production",
+            string? environment = default,
             string? description = default,
-            bool? transientEnvironment = false,
+            bool? transientEnvironment = default,
             bool? productionEnvironment = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

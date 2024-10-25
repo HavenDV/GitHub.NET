@@ -46,7 +46,7 @@ namespace GitHub
             string name,
             int runnerGroupId,
             global::System.Collections.Generic.IList<string> labels,
-            string? workFolder = "_work",
+            string? workFolder = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

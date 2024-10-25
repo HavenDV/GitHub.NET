@@ -64,12 +64,12 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Deployment>> ReposListDeploymentsAsync(
             string owner,
             string repo,
-            string? sha = "none",
-            string? @ref = "none",
-            string? task = "none",
-            string? environment = "none",
-            int? perPage = 30,
-            int? page = 1,
+            string? sha = default,
+            string? @ref = default,
+            string? task = default,
+            string? environment = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

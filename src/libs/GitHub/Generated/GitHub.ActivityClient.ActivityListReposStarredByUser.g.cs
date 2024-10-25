@@ -52,10 +52,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.AnyOf<global::System.Collections.Generic.IList<global::GitHub.StarredRepository>, global::System.Collections.Generic.IList<global::GitHub.Repository>>> ActivityListReposStarredByUserAsync(
             string username,
-            global::GitHub.ActivityListReposStarredByUserSort? sort = global::GitHub.ActivityListReposStarredByUserSort.Created,
-            global::GitHub.ActivityListReposStarredByUserDirection? direction = global::GitHub.ActivityListReposStarredByUserDirection.Desc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.ActivityListReposStarredByUserSort? sort = default,
+            global::GitHub.ActivityListReposStarredByUserDirection? direction = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

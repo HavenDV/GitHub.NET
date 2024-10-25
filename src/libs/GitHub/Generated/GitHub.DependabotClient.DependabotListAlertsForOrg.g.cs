@@ -81,13 +81,13 @@ namespace GitHub
             string? ecosystem = default,
             string? package = default,
             global::GitHub.DependabotListAlertsForOrgScope? scope = default,
-            global::GitHub.DependabotListAlertsForOrgSort? sort = global::GitHub.DependabotListAlertsForOrgSort.Created,
-            global::GitHub.DependabotListAlertsForOrgDirection? direction = global::GitHub.DependabotListAlertsForOrgDirection.Desc,
+            global::GitHub.DependabotListAlertsForOrgSort? sort = default,
+            global::GitHub.DependabotListAlertsForOrgDirection? direction = default,
             string? before = default,
             string? after = default,
-            int? first = 30,
+            int? first = default,
             int? last = default,
-            int? perPage = 30,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

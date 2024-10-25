@@ -27,9 +27,9 @@ namespace GitHub
             global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgPackageType packageType,
             string packageName,
             string org,
-            int? page = 1,
-            int? perPage = 30,
-            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState? state = global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState.Active,
+            int? page = default,
+            int? perPage = default,
+            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState? state = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -152,7 +152,7 @@ namespace GitHub
             int hookId,
             global::GitHub.OrgsUpdateWebhookRequestConfig? config = default,
             global::System.Collections.Generic.IList<string>? events = default,
-            bool? active = true,
+            bool? active = default,
             string? name = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

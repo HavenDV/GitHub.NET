@@ -69,14 +69,14 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Issue>> IssuesListForAuthenticatedUserAsync(
-            global::GitHub.IssuesListForAuthenticatedUserFilter? filter = global::GitHub.IssuesListForAuthenticatedUserFilter.Assigned,
-            global::GitHub.IssuesListForAuthenticatedUserState? state = global::GitHub.IssuesListForAuthenticatedUserState.Open,
+            global::GitHub.IssuesListForAuthenticatedUserFilter? filter = default,
+            global::GitHub.IssuesListForAuthenticatedUserState? state = default,
             string? labels = default,
-            global::GitHub.IssuesListForAuthenticatedUserSort? sort = global::GitHub.IssuesListForAuthenticatedUserSort.Created,
-            global::GitHub.IssuesListForAuthenticatedUserDirection? direction = global::GitHub.IssuesListForAuthenticatedUserDirection.Desc,
+            global::GitHub.IssuesListForAuthenticatedUserSort? sort = default,
+            global::GitHub.IssuesListForAuthenticatedUserDirection? direction = default,
             global::System.DateTime? since = default,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

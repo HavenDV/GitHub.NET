@@ -64,9 +64,9 @@ namespace GitHub
             int checkSuiteId,
             string? checkName = default,
             global::GitHub.ChecksListForSuiteStatus? status = default,
-            global::GitHub.ChecksListForSuiteFilter? filter = global::GitHub.ChecksListForSuiteFilter.Latest,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.ChecksListForSuiteFilter? filter = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

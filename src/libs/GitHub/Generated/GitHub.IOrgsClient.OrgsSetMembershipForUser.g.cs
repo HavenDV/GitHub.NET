@@ -46,7 +46,7 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.OrgMembership> OrgsSetMembershipForUserAsync(
             string org,
             string username,
-            global::GitHub.OrgsSetMembershipForUserRequestRole? role = global::GitHub.OrgsSetMembershipForUserRequestRole.Member,
+            global::GitHub.OrgsSetMembershipForUserRequestRole? role = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

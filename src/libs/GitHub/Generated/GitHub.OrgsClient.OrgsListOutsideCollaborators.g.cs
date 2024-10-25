@@ -45,9 +45,9 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>> OrgsListOutsideCollaboratorsAsync(
             string org,
-            global::GitHub.OrgsListOutsideCollaboratorsFilter? filter = global::GitHub.OrgsListOutsideCollaboratorsFilter.All,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.OrgsListOutsideCollaboratorsFilter? filter = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

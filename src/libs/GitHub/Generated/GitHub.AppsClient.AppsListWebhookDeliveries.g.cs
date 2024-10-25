@@ -38,7 +38,7 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.HookDeliveryItem>> AppsListWebhookDeliveriesAsync(
-            int? perPage = 30,
+            int? perPage = default,
             string? cursor = default,
             bool? redelivery = default,
             global::System.Threading.CancellationToken cancellationToken = default)

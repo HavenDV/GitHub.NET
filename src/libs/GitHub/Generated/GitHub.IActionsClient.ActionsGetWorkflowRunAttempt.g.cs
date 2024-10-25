@@ -24,7 +24,7 @@ namespace GitHub
             string repo,
             int runId,
             int attemptNumber,
-            bool? excludePullRequests = false,
+            bool? excludePullRequests = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

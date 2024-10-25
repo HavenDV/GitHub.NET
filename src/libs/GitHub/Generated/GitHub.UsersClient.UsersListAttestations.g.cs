@@ -47,7 +47,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.UsersListAttestationsResponse> UsersListAttestationsAsync(
             string username,
             string subjectDigest,
-            int? perPage = 30,
+            int? perPage = default,
             string? before = default,
             string? after = default,
             global::System.Threading.CancellationToken cancellationToken = default)

@@ -24,8 +24,8 @@ namespace GitHub
             global::GitHub.PackagesListPackagesForOrganizationPackageType packageType,
             string org,
             global::GitHub.PackagesListPackagesForOrganizationVisibility? visibility = default,
-            int? page = 1,
-            int? perPage = 30,
+            int? page = default,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
