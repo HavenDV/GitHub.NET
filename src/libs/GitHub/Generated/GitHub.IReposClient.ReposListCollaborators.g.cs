@@ -29,10 +29,10 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Collaborator>> ReposListCollaboratorsAsync(
             string owner,
             string repo,
-            global::GitHub.ReposListCollaboratorsAffiliation? affiliation = global::GitHub.ReposListCollaboratorsAffiliation.All,
+            global::GitHub.ReposListCollaboratorsAffiliation? affiliation = default,
             global::GitHub.ReposListCollaboratorsPermission? permission = default,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

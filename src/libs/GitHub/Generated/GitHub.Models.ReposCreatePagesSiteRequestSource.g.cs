@@ -21,7 +21,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("path")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.ReposCreatePagesSiteRequestSourcePathJsonConverter))]
-        public global::GitHub.ReposCreatePagesSiteRequestSourcePath? Path { get; set; } = global::GitHub.ReposCreatePagesSiteRequestSourcePath.x;
+        public global::GitHub.ReposCreatePagesSiteRequestSourcePath? Path { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

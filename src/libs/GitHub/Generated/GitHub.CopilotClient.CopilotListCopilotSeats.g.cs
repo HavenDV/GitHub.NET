@@ -44,8 +44,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.CopilotListCopilotSeatsResponse> CopilotListCopilotSeatsAsync(
             string org,
-            int? page = 1,
-            int? perPage = 50,
+            int? page = default,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

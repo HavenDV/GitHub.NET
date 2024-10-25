@@ -70,7 +70,7 @@ namespace GitHub
             global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryCreateCredit>? credits = default,
             global::GitHub.RepositoryAdvisoryCreateSeverity? severity = default,
             string? cvssVectorString = default,
-            bool? startPrivateFork = false,
+            bool? startPrivateFork = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

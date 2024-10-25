@@ -60,9 +60,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchCodeResponse> SearchCodeAsync(
             string q,
             global::GitHub.SearchCodeSort? sort = default,
-            global::GitHub.SearchCodeOrder? order = global::GitHub.SearchCodeOrder.Desc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.SearchCodeOrder? order = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

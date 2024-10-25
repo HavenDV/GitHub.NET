@@ -59,7 +59,7 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.NullableMilestoneStateJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.NullableMilestoneState State { get; set; }
+        public required global::GitHub.NullableMilestoneState State { get; set; } = global::GitHub.NullableMilestoneState.Open;
 
         /// <summary>
         /// The title of the milestone.<br/>

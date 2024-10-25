@@ -114,7 +114,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<string> MarkdownRenderAsync(
             string text,
-            global::GitHub.MarkdownRenderRequestMode? mode = global::GitHub.MarkdownRenderRequestMode.Markdown,
+            global::GitHub.MarkdownRenderRequestMode? mode = default,
             string? context = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

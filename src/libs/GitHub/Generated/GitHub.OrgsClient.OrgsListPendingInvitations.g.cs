@@ -53,10 +53,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrganizationInvitation>> OrgsListPendingInvitationsAsync(
             string org,
-            int? perPage = 30,
-            int? page = 1,
-            global::GitHub.OrgsListPendingInvitationsRole? role = global::GitHub.OrgsListPendingInvitationsRole.All,
-            global::GitHub.OrgsListPendingInvitationsInvitationSource? invitationSource = global::GitHub.OrgsListPendingInvitationsInvitationSource.All,
+            int? perPage = default,
+            int? page = default,
+            global::GitHub.OrgsListPendingInvitationsRole? role = default,
+            global::GitHub.OrgsListPendingInvitationsInvitationSource? invitationSource = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

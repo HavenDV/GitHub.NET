@@ -166,7 +166,7 @@ namespace GitHub
             string headSha,
             string? detailsUrl = default,
             string? externalId = default,
-            global::GitHub.ChecksCreateRequestStatus? status = global::GitHub.ChecksCreateRequestStatus.Queued,
+            global::GitHub.ChecksCreateRequestStatus? status = default,
             global::System.DateTime? startedAt = default,
             global::GitHub.ChecksCreateRequestConclusion? conclusion = default,
             global::System.DateTime? completedAt = default,

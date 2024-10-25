@@ -35,9 +35,9 @@ namespace GitHub
             string @ref,
             string? checkName = default,
             global::GitHub.ChecksListForRefStatus? status = default,
-            global::GitHub.ChecksListForRefFilter? filter = global::GitHub.ChecksListForRefFilter.Latest,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.ChecksListForRefFilter? filter = default,
+            int? perPage = default,
+            int? page = default,
             int? appId = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

@@ -45,13 +45,13 @@ namespace GitHub
             string? package = default,
             string? manifest = default,
             global::GitHub.DependabotListAlertsForRepoScope? scope = default,
-            global::GitHub.DependabotListAlertsForRepoSort? sort = global::GitHub.DependabotListAlertsForRepoSort.Created,
-            global::GitHub.DependabotListAlertsForRepoDirection? direction = global::GitHub.DependabotListAlertsForRepoDirection.Desc,
-            int? page = 1,
-            int? perPage = 30,
+            global::GitHub.DependabotListAlertsForRepoSort? sort = default,
+            global::GitHub.DependabotListAlertsForRepoDirection? direction = default,
+            int? page = default,
+            int? perPage = default,
             string? before = default,
             string? after = default,
-            int? first = 30,
+            int? first = default,
             int? last = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

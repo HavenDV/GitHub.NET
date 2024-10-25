@@ -39,7 +39,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CloneTraffic> ReposGetClonesAsync(
             string owner,
             string repo,
-            global::GitHub.ReposGetClonesPer? per = global::GitHub.ReposGetClonesPer.Day,
+            global::GitHub.ReposGetClonesPer? per = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

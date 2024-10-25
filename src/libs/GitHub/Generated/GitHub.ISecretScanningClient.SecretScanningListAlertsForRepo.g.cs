@@ -44,15 +44,15 @@ namespace GitHub
             global::GitHub.SecretScanningListAlertsForRepoState? state = default,
             string? secretType = default,
             string? resolution = default,
-            global::GitHub.SecretScanningListAlertsForRepoSort? sort = global::GitHub.SecretScanningListAlertsForRepoSort.Created,
-            global::GitHub.SecretScanningListAlertsForRepoDirection? direction = global::GitHub.SecretScanningListAlertsForRepoDirection.Desc,
-            int? page = 1,
-            int? perPage = 30,
+            global::GitHub.SecretScanningListAlertsForRepoSort? sort = default,
+            global::GitHub.SecretScanningListAlertsForRepoDirection? direction = default,
+            int? page = default,
+            int? perPage = default,
             string? before = default,
             string? after = default,
             string? validity = default,
-            bool? isPubliclyLeaked = false,
-            bool? isMultiRepo = false,
+            bool? isPubliclyLeaked = default,
+            bool? isMultiRepo = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -137,7 +137,7 @@ namespace GitHub
             string org,
             int? inviteeId = default,
             string? email = default,
-            global::GitHub.OrgsCreateInvitationRequestRole? role = global::GitHub.OrgsCreateInvitationRequestRole.DirectMember,
+            global::GitHub.OrgsCreateInvitationRequestRole? role = default,
             global::System.Collections.Generic.IList<int>? teamIds = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

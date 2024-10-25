@@ -56,9 +56,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchIssuesAndPullRequestsResponse> SearchIssuesAndPullRequestsAsync(
             string q,
             global::GitHub.SearchIssuesAndPullRequestsSort? sort = default,
-            global::GitHub.SearchIssuesAndPullRequestsOrder? order = global::GitHub.SearchIssuesAndPullRequestsOrder.Desc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.SearchIssuesAndPullRequestsOrder? order = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

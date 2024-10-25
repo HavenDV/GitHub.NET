@@ -49,10 +49,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.MarketplacePurchase>> AppsListAccountsForPlanStubbedAsync(
             int planId,
-            global::GitHub.AppsListAccountsForPlanStubbedSort? sort = global::GitHub.AppsListAccountsForPlanStubbedSort.Created,
+            global::GitHub.AppsListAccountsForPlanStubbedSort? sort = default,
             global::GitHub.AppsListAccountsForPlanStubbedDirection? direction = default,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

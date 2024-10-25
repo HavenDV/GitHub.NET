@@ -44,18 +44,18 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Issue>> IssuesListAsync(
-            global::GitHub.IssuesListFilter? filter = global::GitHub.IssuesListFilter.Assigned,
-            global::GitHub.IssuesListState? state = global::GitHub.IssuesListState.Open,
+            global::GitHub.IssuesListFilter? filter = default,
+            global::GitHub.IssuesListState? state = default,
             string? labels = default,
-            global::GitHub.IssuesListSort? sort = global::GitHub.IssuesListSort.Created,
-            global::GitHub.IssuesListDirection? direction = global::GitHub.IssuesListDirection.Desc,
+            global::GitHub.IssuesListSort? sort = default,
+            global::GitHub.IssuesListDirection? direction = default,
             global::System.DateTime? since = default,
             bool? collab = default,
             bool? orgs = default,
             bool? owned = default,
             bool? pulls = default,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

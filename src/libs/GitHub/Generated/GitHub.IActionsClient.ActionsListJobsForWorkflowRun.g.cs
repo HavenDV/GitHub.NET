@@ -29,9 +29,9 @@ namespace GitHub
             string owner,
             string repo,
             int runId,
-            global::GitHub.ActionsListJobsForWorkflowRunFilter? filter = global::GitHub.ActionsListJobsForWorkflowRunFilter.Latest,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.ActionsListJobsForWorkflowRunFilter? filter = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

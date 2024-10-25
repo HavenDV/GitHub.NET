@@ -40,7 +40,7 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.CodespaceWithFullRepository> CodespacesPublishForAuthenticatedUserAsync(
             string codespaceName,
             string? name = default,
-            bool? @private = false,
+            bool? @private = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

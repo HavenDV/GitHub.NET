@@ -15,7 +15,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("permission")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.ProjectsAddCollaboratorRequestPermissionJsonConverter))]
-        public global::GitHub.ProjectsAddCollaboratorRequestPermission? Permission { get; set; } = global::GitHub.ProjectsAddCollaboratorRequestPermission.Write;
+        public global::GitHub.ProjectsAddCollaboratorRequestPermission? Permission { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

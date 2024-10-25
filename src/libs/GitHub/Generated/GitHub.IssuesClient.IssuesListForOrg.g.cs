@@ -73,14 +73,14 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Issue>> IssuesListForOrgAsync(
             string org,
-            global::GitHub.IssuesListForOrgFilter? filter = global::GitHub.IssuesListForOrgFilter.Assigned,
-            global::GitHub.IssuesListForOrgState? state = global::GitHub.IssuesListForOrgState.Open,
+            global::GitHub.IssuesListForOrgFilter? filter = default,
+            global::GitHub.IssuesListForOrgState? state = default,
             string? labels = default,
-            global::GitHub.IssuesListForOrgSort? sort = global::GitHub.IssuesListForOrgSort.Created,
-            global::GitHub.IssuesListForOrgDirection? direction = global::GitHub.IssuesListForOrgDirection.Desc,
+            global::GitHub.IssuesListForOrgSort? sort = default,
+            global::GitHub.IssuesListForOrgDirection? direction = default,
             global::System.DateTime? since = default,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

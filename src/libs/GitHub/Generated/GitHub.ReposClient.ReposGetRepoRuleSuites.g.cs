@@ -62,11 +62,11 @@ namespace GitHub
             string owner,
             string repo,
             string? @ref = default,
-            global::GitHub.ReposGetRepoRuleSuitesTimePeriod? timePeriod = global::GitHub.ReposGetRepoRuleSuitesTimePeriod.Day,
+            global::GitHub.ReposGetRepoRuleSuitesTimePeriod? timePeriod = default,
             string? actorName = default,
-            global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult? ruleSuiteResult = global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult.All,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult? ruleSuiteResult = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

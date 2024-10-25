@@ -48,8 +48,8 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfiguration>> CodeSecurityGetConfigurationsForOrgAsync(
             string org,
-            global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType? targetType = global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType.All,
-            int? perPage = 30,
+            global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType? targetType = default,
+            int? perPage = default,
             string? before = default,
             string? after = default,
             global::System.Threading.CancellationToken cancellationToken = default)

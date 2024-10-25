@@ -49,7 +49,7 @@ namespace GitHub
             string org,
             string name,
             global::GitHub.RepositoryRuleEnforcement enforcement,
-            global::GitHub.ReposCreateOrgRulesetRequestTarget? target = global::GitHub.ReposCreateOrgRulesetRequestTarget.Branch,
+            global::GitHub.ReposCreateOrgRulesetRequestTarget? target = default,
             global::System.Collections.Generic.IList<global::GitHub.RepositoryRulesetBypassActor>? bypassActors = default,
             global::GitHub.OrgRulesetConditions? conditions = default,
             global::System.Collections.Generic.IList<global::GitHub.RepositoryRule>? rules = default,

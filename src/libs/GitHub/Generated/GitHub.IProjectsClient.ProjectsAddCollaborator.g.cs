@@ -35,7 +35,7 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.BasicError> ProjectsAddCollaboratorAsync(
             int projectId,
             string username,
-            global::GitHub.ProjectsAddCollaboratorRequestPermission? permission = global::GitHub.ProjectsAddCollaboratorRequestPermission.Write,
+            global::GitHub.ProjectsAddCollaboratorRequestPermission? permission = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

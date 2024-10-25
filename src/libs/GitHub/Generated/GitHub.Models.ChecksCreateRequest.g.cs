@@ -40,7 +40,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.ChecksCreateRequestStatusJsonConverter))]
-        public global::GitHub.ChecksCreateRequestStatus? Status { get; set; } = global::GitHub.ChecksCreateRequestStatus.Queued;
+        public global::GitHub.ChecksCreateRequestStatus? Status { get; set; }
 
         /// <summary>
         /// The time that the check run began. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.

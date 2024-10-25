@@ -22,8 +22,8 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse> ActionsListRepoAccessToSelfHostedRunnerGroupInOrgAsync(
             string org,
             int runnerGroupId,
-            int? page = 1,
-            int? perPage = 30,
+            int? page = default,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

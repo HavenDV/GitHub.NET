@@ -60,7 +60,7 @@ namespace GitHub
             string owner,
             string repo,
             string username,
-            string? permission = "push",
+            string? permission = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -25,10 +25,10 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Repository>> ActivityListReposStarredByAuthenticatedUserAsync(
-            global::GitHub.ActivityListReposStarredByAuthenticatedUserSort? sort = global::GitHub.ActivityListReposStarredByAuthenticatedUserSort.Created,
-            global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection? direction = global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection.Desc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.ActivityListReposStarredByAuthenticatedUserSort? sort = default,
+            global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection? direction = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

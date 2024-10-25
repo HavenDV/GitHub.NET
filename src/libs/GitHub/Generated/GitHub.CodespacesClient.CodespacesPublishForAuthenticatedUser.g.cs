@@ -128,7 +128,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CodespaceWithFullRepository> CodespacesPublishForAuthenticatedUserAsync(
             string codespaceName,
             string? name = default,
-            bool? @private = false,
+            bool? @private = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.CodespacesPublishForAuthenticatedUserRequest

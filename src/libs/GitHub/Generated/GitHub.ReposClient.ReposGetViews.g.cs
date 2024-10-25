@@ -39,7 +39,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.ViewTraffic> ReposGetViewsAsync(
             string owner,
             string repo,
-            global::GitHub.ReposGetViewsPer? per = global::GitHub.ReposGetViewsPer.Day,
+            global::GitHub.ReposGetViewsPer? per = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

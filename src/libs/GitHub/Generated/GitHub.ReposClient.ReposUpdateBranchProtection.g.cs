@@ -184,8 +184,8 @@ namespace GitHub
             bool? allowDeletions = default,
             bool? blockCreations = default,
             bool? requiredConversationResolution = default,
-            bool? lockBranch = false,
-            bool? allowForkSyncing = false,
+            bool? lockBranch = default,
+            bool? allowForkSyncing = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.ReposUpdateBranchProtectionRequest

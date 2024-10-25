@@ -126,7 +126,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.OrgsConvertMemberToOutsideCollaboratorResponse> OrgsConvertMemberToOutsideCollaboratorAsync(
             string org,
             string username,
-            bool? async = false,
+            bool? async = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.OrgsConvertMemberToOutsideCollaboratorRequest

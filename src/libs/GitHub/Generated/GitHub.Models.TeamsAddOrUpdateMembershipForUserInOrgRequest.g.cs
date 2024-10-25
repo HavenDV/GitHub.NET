@@ -14,7 +14,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.TeamsAddOrUpdateMembershipForUserInOrgRequestRoleJsonConverter))]
-        public global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequestRole? Role { get; set; } = global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequestRole.Member;
+        public global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequestRole? Role { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

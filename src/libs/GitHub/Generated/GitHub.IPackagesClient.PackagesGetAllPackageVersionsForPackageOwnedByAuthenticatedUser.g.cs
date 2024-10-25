@@ -25,9 +25,9 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.PackageVersion>> PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserAsync(
             global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserPackageType packageType,
             string packageName,
-            int? page = 1,
-            int? perPage = 30,
-            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState? state = global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState.Active,
+            int? page = default,
+            int? perPage = default,
+            global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState? state = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -30,7 +30,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrgsCreateInvitationRequestRoleJsonConverter))]
-        public global::GitHub.OrgsCreateInvitationRequestRole? Role { get; set; } = global::GitHub.OrgsCreateInvitationRequestRole.DirectMember;
+        public global::GitHub.OrgsCreateInvitationRequestRole? Role { get; set; }
 
         /// <summary>
         /// Specify IDs for the teams you want to invite new members to.

@@ -37,10 +37,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsListPatGrantRequestsAsync(
             string org,
-            int? perPage = 30,
-            int? page = 1,
-            global::GitHub.OrgsListPatGrantRequestsSort? sort = global::GitHub.OrgsListPatGrantRequestsSort.CreatedAt,
-            global::GitHub.OrgsListPatGrantRequestsDirection? direction = global::GitHub.OrgsListPatGrantRequestsDirection.Desc,
+            int? perPage = default,
+            int? page = default,
+            global::GitHub.OrgsListPatGrantRequestsSort? sort = default,
+            global::GitHub.OrgsListPatGrantRequestsDirection? direction = default,
             global::System.Collections.Generic.IList<string>? owner = default,
             string? repository = default,
             string? permission = default,

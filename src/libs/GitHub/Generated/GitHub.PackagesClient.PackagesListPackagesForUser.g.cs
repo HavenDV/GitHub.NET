@@ -49,8 +49,8 @@ namespace GitHub
             global::GitHub.PackagesListPackagesForUserPackageType packageType,
             string username,
             global::GitHub.PackagesListPackagesForUserVisibility? visibility = default,
-            int? page = 1,
-            int? perPage = 30,
+            int? page = default,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

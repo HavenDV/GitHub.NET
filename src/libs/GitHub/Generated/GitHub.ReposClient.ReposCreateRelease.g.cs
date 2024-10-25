@@ -159,11 +159,11 @@ namespace GitHub
             string? targetCommitish = default,
             string? name = default,
             string? body = default,
-            bool? draft = false,
-            bool? prerelease = false,
+            bool? draft = default,
+            bool? prerelease = default,
             string? discussionCategoryName = default,
-            bool? generateReleaseNotes = false,
-            global::GitHub.ReposCreateReleaseRequestMakeLatest? makeLatest = global::GitHub.ReposCreateReleaseRequestMakeLatest.True,
+            bool? generateReleaseNotes = default,
+            global::GitHub.ReposCreateReleaseRequestMakeLatest? makeLatest = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.ReposCreateReleaseRequest

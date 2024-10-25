@@ -44,16 +44,16 @@ namespace GitHub
             string owner,
             string repo,
             string? milestone = default,
-            global::GitHub.IssuesListForRepoState? state = global::GitHub.IssuesListForRepoState.Open,
+            global::GitHub.IssuesListForRepoState? state = default,
             string? assignee = default,
             string? creator = default,
             string? mentioned = default,
             string? labels = default,
-            global::GitHub.IssuesListForRepoSort? sort = global::GitHub.IssuesListForRepoSort.Created,
-            global::GitHub.IssuesListForRepoDirection? direction = global::GitHub.IssuesListForRepoDirection.Desc,
+            global::GitHub.IssuesListForRepoSort? sort = default,
+            global::GitHub.IssuesListForRepoDirection? direction = default,
             global::System.DateTime? since = default,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

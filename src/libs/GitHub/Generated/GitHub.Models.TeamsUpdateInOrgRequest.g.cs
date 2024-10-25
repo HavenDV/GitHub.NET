@@ -47,7 +47,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("permission")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.TeamsUpdateInOrgRequestPermissionJsonConverter))]
-        public global::GitHub.TeamsUpdateInOrgRequestPermission? Permission { get; set; } = global::GitHub.TeamsUpdateInOrgRequestPermission.Pull;
+        public global::GitHub.TeamsUpdateInOrgRequestPermission? Permission { get; set; }
 
         /// <summary>
         /// The ID of a team to set as the parent team.

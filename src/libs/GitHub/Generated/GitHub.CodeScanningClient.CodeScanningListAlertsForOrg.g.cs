@@ -82,11 +82,11 @@ namespace GitHub
             string? toolGuid = default,
             string? before = default,
             string? after = default,
-            int? page = 1,
-            int? perPage = 30,
-            global::GitHub.CodeScanningListAlertsForOrgDirection? direction = global::GitHub.CodeScanningListAlertsForOrgDirection.Desc,
+            int? page = default,
+            int? perPage = default,
+            global::GitHub.CodeScanningListAlertsForOrgDirection? direction = default,
             global::GitHub.CodeScanningAlertStateQuery? state = default,
-            global::GitHub.CodeScanningListAlertsForOrgSort? sort = global::GitHub.CodeScanningListAlertsForOrgSort.Created,
+            global::GitHub.CodeScanningListAlertsForOrgSort? sort = default,
             global::GitHub.CodeScanningAlertSeverity? severity = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

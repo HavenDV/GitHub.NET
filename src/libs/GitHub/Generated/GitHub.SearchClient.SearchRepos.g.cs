@@ -53,9 +53,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchReposResponse> SearchReposAsync(
             string q,
             global::GitHub.SearchReposSort? sort = default,
-            global::GitHub.SearchReposOrder? order = global::GitHub.SearchReposOrder.Desc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.SearchReposOrder? order = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

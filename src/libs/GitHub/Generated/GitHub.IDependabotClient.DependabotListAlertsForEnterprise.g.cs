@@ -41,13 +41,13 @@ namespace GitHub
             string? ecosystem = default,
             string? package = default,
             global::GitHub.DependabotListAlertsForEnterpriseScope? scope = default,
-            global::GitHub.DependabotListAlertsForEnterpriseSort? sort = global::GitHub.DependabotListAlertsForEnterpriseSort.Created,
-            global::GitHub.DependabotListAlertsForEnterpriseDirection? direction = global::GitHub.DependabotListAlertsForEnterpriseDirection.Desc,
+            global::GitHub.DependabotListAlertsForEnterpriseSort? sort = default,
+            global::GitHub.DependabotListAlertsForEnterpriseDirection? direction = default,
             string? before = default,
             string? after = default,
-            int? first = 30,
+            int? first = default,
             int? last = default,
-            int? perPage = 30,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

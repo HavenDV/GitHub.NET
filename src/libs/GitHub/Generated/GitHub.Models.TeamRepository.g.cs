@@ -77,7 +77,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool Private { get; set; }
+        public required bool Private { get; set; } = false;
 
         /// <summary>
         /// Example: https://github.com/octocat/Hello-World
@@ -457,7 +457,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_template")]
-        public bool? IsTemplate { get; set; } = false;
+        public bool? IsTemplate { get; set; }
 
         /// <summary>
         /// 
@@ -472,7 +472,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_issues")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool HasIssues { get; set; }
+        public required bool HasIssues { get; set; } = true;
 
         /// <summary>
         /// Whether projects are enabled.<br/>
@@ -481,7 +481,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_projects")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool HasProjects { get; set; }
+        public required bool HasProjects { get; set; } = true;
 
         /// <summary>
         /// Whether the wiki is enabled.<br/>
@@ -490,7 +490,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_wiki")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool HasWiki { get; set; }
+        public required bool HasWiki { get; set; } = true;
 
         /// <summary>
         /// 
@@ -506,7 +506,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_downloads")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool HasDownloads { get; set; }
+        public required bool HasDownloads { get; set; } = true;
 
         /// <summary>
         /// Whether the repository is archived.<br/>
@@ -514,7 +514,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("archived")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool Archived { get; set; }
+        public required bool Archived { get; set; } = false;
 
         /// <summary>
         /// Returns whether or not this repository disabled.
@@ -528,7 +528,7 @@ namespace GitHub
         /// Default Value: public
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
-        public string? Visibility { get; set; } = "public";
+        public string? Visibility { get; set; }
 
         /// <summary>
         /// 
@@ -557,7 +557,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_rebase_merge")]
-        public bool? AllowRebaseMerge { get; set; } = true;
+        public bool? AllowRebaseMerge { get; set; }
 
         /// <summary>
         /// 
@@ -571,7 +571,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_squash_merge")]
-        public bool? AllowSquashMerge { get; set; } = true;
+        public bool? AllowSquashMerge { get; set; }
 
         /// <summary>
         /// Whether to allow Auto-merge to be used on pull requests.<br/>
@@ -579,7 +579,7 @@ namespace GitHub
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_auto_merge")]
-        public bool? AllowAutoMerge { get; set; } = false;
+        public bool? AllowAutoMerge { get; set; }
 
         /// <summary>
         /// Whether to delete head branches when pull requests are merged<br/>
@@ -587,7 +587,7 @@ namespace GitHub
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("delete_branch_on_merge")]
-        public bool? DeleteBranchOnMerge { get; set; } = false;
+        public bool? DeleteBranchOnMerge { get; set; }
 
         /// <summary>
         /// Whether to allow merge commits for pull requests.<br/>
@@ -595,7 +595,7 @@ namespace GitHub
         /// Example: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_merge_commit")]
-        public bool? AllowMergeCommit { get; set; } = true;
+        public bool? AllowMergeCommit { get; set; }
 
         /// <summary>
         /// Whether to allow forking this repo<br/>
@@ -603,7 +603,7 @@ namespace GitHub
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_forking")]
-        public bool? AllowForking { get; set; } = false;
+        public bool? AllowForking { get; set; }
 
         /// <summary>
         /// Whether to require contributors to sign off on web-based commits<br/>
@@ -611,7 +611,7 @@ namespace GitHub
         /// Example: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("web_commit_signoff_required")]
-        public bool? WebCommitSignoffRequired { get; set; } = false;
+        public bool? WebCommitSignoffRequired { get; set; }
 
         /// <summary>
         /// 

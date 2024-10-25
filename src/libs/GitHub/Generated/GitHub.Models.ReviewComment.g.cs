@@ -166,7 +166,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("side")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.ReviewCommentSideJsonConverter))]
-        public global::GitHub.ReviewCommentSide? Side { get; set; } = global::GitHub.ReviewCommentSide.RIGHT;
+        public global::GitHub.ReviewCommentSide? Side { get; set; }
 
         /// <summary>
         /// The side of the first line of the range for a multi-line comment.<br/>
@@ -174,7 +174,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("start_side")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.ReviewCommentStartSideJsonConverter))]
-        public global::GitHub.ReviewCommentStartSide? StartSide { get; set; } = global::GitHub.ReviewCommentStartSide.RIGHT;
+        public global::GitHub.ReviewCommentStartSide? StartSide { get; set; }
 
         /// <summary>
         /// The line of the blob to which the comment applies. The last line of the range for a multi-line comment<br/>

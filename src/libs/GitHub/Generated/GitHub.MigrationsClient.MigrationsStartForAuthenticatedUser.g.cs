@@ -147,7 +147,7 @@ namespace GitHub
             bool? excludeAttachments = default,
             bool? excludeReleases = default,
             bool? excludeOwnerProjects = default,
-            bool? orgMetadataOnly = false,
+            bool? orgMetadataOnly = default,
             global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForAuthenticatedUserRequestExcludeItem>? exclude = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

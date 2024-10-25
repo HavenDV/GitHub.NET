@@ -42,7 +42,7 @@ namespace GitHub
             string repo,
             string keyPrefix,
             string urlTemplate,
-            bool? isAlphanumeric = true,
+            bool? isAlphanumeric = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

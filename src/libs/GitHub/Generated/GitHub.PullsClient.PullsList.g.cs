@@ -73,13 +73,13 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.PullRequestSimple>> PullsListAsync(
             string owner,
             string repo,
-            global::GitHub.PullsListState? state = global::GitHub.PullsListState.Open,
+            global::GitHub.PullsListState? state = default,
             string? head = default,
             string? @base = default,
-            global::GitHub.PullsListSort? sort = global::GitHub.PullsListSort.Created,
+            global::GitHub.PullsListSort? sort = default,
             global::GitHub.PullsListDirection? direction = default,
-            int? perPage = 30,
-            int? page = 1,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

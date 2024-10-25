@@ -28,7 +28,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("advanced_security")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestAdvancedSecurityJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity? AdvancedSecurity { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity? AdvancedSecurity { get; set; }
 
         /// <summary>
         /// The enablement status of Dependency Graph<br/>
@@ -36,7 +36,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependency_graph")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestDependencyGraphJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph? DependencyGraph { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph.Enabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph? DependencyGraph { get; set; }
 
         /// <summary>
         /// The enablement status of Automatic dependency submission<br/>
@@ -44,7 +44,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependency_graph_autosubmit_action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction? DependencyGraphAutosubmitAction { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction? DependencyGraphAutosubmitAction { get; set; }
 
         /// <summary>
         /// Feature options for Automatic dependency submission
@@ -58,7 +58,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependabot_alerts")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestDependabotAlertsJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts? DependabotAlerts { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts? DependabotAlerts { get; set; }
 
         /// <summary>
         /// The enablement status of Dependabot security updates<br/>
@@ -66,7 +66,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependabot_security_updates")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdatesJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates? DependabotSecurityUpdates { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates? DependabotSecurityUpdates { get; set; }
 
         /// <summary>
         /// The enablement status of code scanning default setup<br/>
@@ -74,7 +74,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_default_setup")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetupJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? CodeScanningDefaultSetup { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? CodeScanningDefaultSetup { get; set; }
 
         /// <summary>
         /// The enablement status of secret scanning<br/>
@@ -82,7 +82,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? SecretScanning { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? SecretScanning { get; set; }
 
         /// <summary>
         /// The enablement status of secret scanning push protection<br/>
@@ -90,7 +90,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_push_protection")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningPushProtectionJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? SecretScanningPushProtection { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? SecretScanningPushProtection { get; set; }
 
         /// <summary>
         /// The enablement status of secret scanning delegated bypass<br/>
@@ -98,7 +98,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_delegated_bypass")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass? SecretScanningDelegatedBypass { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass? SecretScanningDelegatedBypass { get; set; }
 
         /// <summary>
         /// Feature options for secret scanning delegated bypass
@@ -112,7 +112,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_validity_checks")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecksJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? SecretScanningValidityChecks { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? SecretScanningValidityChecks { get; set; }
 
         /// <summary>
         /// The enablement status of secret scanning non provider patterns<br/>
@@ -120,7 +120,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_non_provider_patterns")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatternsJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? SecretScanningNonProviderPatterns { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? SecretScanningNonProviderPatterns { get; set; }
 
         /// <summary>
         /// The enablement status of private vulnerability reporting<br/>
@@ -128,7 +128,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private_vulnerability_reporting")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReportingJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? PrivateVulnerabilityReporting { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting.Disabled;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? PrivateVulnerabilityReporting { get; set; }
 
         /// <summary>
         /// The enforcement status for a security configuration<br/>
@@ -136,7 +136,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("enforcement")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationRequestEnforcementJsonConverter))]
-        public global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement? Enforcement { get; set; } = global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement.Enforced;
+        public global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement? Enforcement { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

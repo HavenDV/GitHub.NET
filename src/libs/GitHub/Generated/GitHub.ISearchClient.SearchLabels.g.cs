@@ -30,9 +30,9 @@ namespace GitHub
             int repositoryId,
             string q,
             global::GitHub.SearchLabelsSort? sort = default,
-            global::GitHub.SearchLabelsOrder? order = global::GitHub.SearchLabelsOrder.Desc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.SearchLabelsOrder? order = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

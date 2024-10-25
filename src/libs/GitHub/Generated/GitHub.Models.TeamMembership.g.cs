@@ -23,7 +23,7 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.TeamMembershipRoleJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.TeamMembershipRole Role { get; set; }
+        public required global::GitHub.TeamMembershipRole Role { get; set; } = global::GitHub.TeamMembershipRole.Member;
 
         /// <summary>
         /// The state of the user's membership in the team.

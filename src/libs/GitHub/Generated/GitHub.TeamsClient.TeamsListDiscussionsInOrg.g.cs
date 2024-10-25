@@ -55,9 +55,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.TeamDiscussion>> TeamsListDiscussionsInOrgAsync(
             string org,
             string teamSlug,
-            global::GitHub.TeamsListDiscussionsInOrgDirection? direction = global::GitHub.TeamsListDiscussionsInOrgDirection.Desc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.TeamsListDiscussionsInOrgDirection? direction = default,
+            int? perPage = default,
+            int? page = default,
             string? pinned = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

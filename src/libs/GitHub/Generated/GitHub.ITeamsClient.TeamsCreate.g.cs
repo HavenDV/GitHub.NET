@@ -69,7 +69,7 @@ namespace GitHub
             global::System.Collections.Generic.IList<string>? repoNames = default,
             global::GitHub.TeamsCreateRequestPrivacy? privacy = default,
             global::GitHub.TeamsCreateRequestNotificationSetting? notificationSetting = default,
-            global::GitHub.TeamsCreateRequestPermission? permission = global::GitHub.TeamsCreateRequestPermission.Pull,
+            global::GitHub.TeamsCreateRequestPermission? permission = default,
             int? parentTeamId = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

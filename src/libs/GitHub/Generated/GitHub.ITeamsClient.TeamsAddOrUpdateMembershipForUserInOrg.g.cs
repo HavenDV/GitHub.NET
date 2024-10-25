@@ -52,7 +52,7 @@ namespace GitHub
             string org,
             string teamSlug,
             string username,
-            global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequestRole? role = global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequestRole.Member,
+            global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequestRole? role = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

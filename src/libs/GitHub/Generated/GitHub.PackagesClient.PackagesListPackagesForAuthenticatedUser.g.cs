@@ -45,8 +45,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Package>> PackagesListPackagesForAuthenticatedUserAsync(
             global::GitHub.PackagesListPackagesForAuthenticatedUserPackageType packageType,
             global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? visibility = default,
-            int? page = 1,
-            int? perPage = 30,
+            int? page = default,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

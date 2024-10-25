@@ -59,11 +59,11 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Milestone>> IssuesListMilestonesAsync(
             string owner,
             string repo,
-            global::GitHub.IssuesListMilestonesState? state = global::GitHub.IssuesListMilestonesState.Open,
-            global::GitHub.IssuesListMilestonesSort? sort = global::GitHub.IssuesListMilestonesSort.DueOn,
-            global::GitHub.IssuesListMilestonesDirection? direction = global::GitHub.IssuesListMilestonesDirection.Asc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.IssuesListMilestonesState? state = default,
+            global::GitHub.IssuesListMilestonesSort? sort = default,
+            global::GitHub.IssuesListMilestonesDirection? direction = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

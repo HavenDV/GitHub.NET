@@ -56,11 +56,11 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisory>> SecurityAdvisoriesListOrgRepositoryAdvisoriesAsync(
             string org,
-            global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesDirection? direction = global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesDirection.Desc,
-            global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort? sort = global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort.Created,
+            global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesDirection? direction = default,
+            global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort? sort = default,
             string? before = default,
             string? after = default,
-            int? perPage = 30,
+            int? perPage = default,
             global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesState? state = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

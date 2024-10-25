@@ -27,7 +27,7 @@ namespace GitHub
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_alphanumeric")]
-        public bool? IsAlphanumeric { get; set; } = true;
+        public bool? IsAlphanumeric { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema

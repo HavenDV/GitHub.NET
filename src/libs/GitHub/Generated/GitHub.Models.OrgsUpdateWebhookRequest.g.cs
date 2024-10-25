@@ -26,7 +26,7 @@ namespace GitHub
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("active")]
-        public bool? Active { get; set; } = true;
+        public bool? Active { get; set; }
 
         /// <summary>
         /// Example: "web"

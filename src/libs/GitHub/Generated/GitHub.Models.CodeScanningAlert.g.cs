@@ -56,7 +56,7 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeScanningAlertStateJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.CodeScanningAlertState State { get; set; }
+        public required global::GitHub.CodeScanningAlertState? State { get; set; }
 
         /// <summary>
         /// The time that the alert was no longer detected and was considered fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.<br/>

@@ -21,7 +21,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.IssuesCreateMilestoneRequestStateJsonConverter))]
-        public global::GitHub.IssuesCreateMilestoneRequestState? State { get; set; } = global::GitHub.IssuesCreateMilestoneRequestState.Open;
+        public global::GitHub.IssuesCreateMilestoneRequestState? State { get; set; }
 
         /// <summary>
         /// A description of the milestone.

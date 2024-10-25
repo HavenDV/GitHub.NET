@@ -34,7 +34,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.ThreadSubscription> ActivitySetThreadSubscriptionAsync(
             int threadId,
-            bool? ignored = false,
+            bool? ignored = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

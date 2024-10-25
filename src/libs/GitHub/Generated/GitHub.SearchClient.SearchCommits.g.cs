@@ -53,9 +53,9 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.SearchCommitsResponse> SearchCommitsAsync(
             string q,
             global::GitHub.SearchCommitsSort? sort = default,
-            global::GitHub.SearchCommitsOrder? order = global::GitHub.SearchCommitsOrder.Desc,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.SearchCommitsOrder? order = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

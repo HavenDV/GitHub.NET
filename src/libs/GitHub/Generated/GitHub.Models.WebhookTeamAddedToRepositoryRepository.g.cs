@@ -15,7 +15,7 @@ namespace GitHub
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_auto_merge")]
-        public bool? AllowAutoMerge { get; set; } = false;
+        public bool? AllowAutoMerge { get; set; }
 
         /// <summary>
         /// Whether to allow private forks
@@ -28,21 +28,21 @@ namespace GitHub
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_merge_commit")]
-        public bool? AllowMergeCommit { get; set; } = true;
+        public bool? AllowMergeCommit { get; set; }
 
         /// <summary>
         /// Whether to allow rebase merges for pull requests.<br/>
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_rebase_merge")]
-        public bool? AllowRebaseMerge { get; set; } = true;
+        public bool? AllowRebaseMerge { get; set; }
 
         /// <summary>
         /// Whether to allow squash merges for pull requests.<br/>
         /// Default Value: true
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allow_squash_merge")]
-        public bool? AllowSquashMerge { get; set; } = true;
+        public bool? AllowSquashMerge { get; set; }
 
         /// <summary>
         /// 
@@ -63,7 +63,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("archived")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool Archived { get; set; }
+        public required bool Archived { get; set; } = false;
 
         /// <summary>
         /// 
@@ -161,7 +161,7 @@ namespace GitHub
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("delete_branch_on_merge")]
-        public bool? DeleteBranchOnMerge { get; set; } = false;
+        public bool? DeleteBranchOnMerge { get; set; }
 
         /// <summary>
         /// 
@@ -266,7 +266,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_downloads")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool HasDownloads { get; set; }
+        public required bool HasDownloads { get; set; } = true;
 
         /// <summary>
         /// Whether issues are enabled.<br/>
@@ -274,7 +274,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_issues")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool HasIssues { get; set; }
+        public required bool HasIssues { get; set; } = true;
 
         /// <summary>
         /// 
@@ -289,7 +289,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_projects")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool HasProjects { get; set; }
+        public required bool HasProjects { get; set; } = true;
 
         /// <summary>
         /// Whether the wiki is enabled.<br/>
@@ -297,7 +297,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_wiki")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool HasWiki { get; set; }
+        public required bool HasWiki { get; set; } = true;
 
         /// <summary>
         /// 

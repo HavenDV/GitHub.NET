@@ -79,14 +79,14 @@ namespace GitHub
             global::GitHub.SecretScanningListAlertsForEnterpriseState? state = default,
             string? secretType = default,
             string? resolution = default,
-            global::GitHub.SecretScanningListAlertsForEnterpriseSort? sort = global::GitHub.SecretScanningListAlertsForEnterpriseSort.Created,
-            global::GitHub.SecretScanningListAlertsForEnterpriseDirection? direction = global::GitHub.SecretScanningListAlertsForEnterpriseDirection.Desc,
-            int? perPage = 30,
+            global::GitHub.SecretScanningListAlertsForEnterpriseSort? sort = default,
+            global::GitHub.SecretScanningListAlertsForEnterpriseDirection? direction = default,
+            int? perPage = default,
             string? before = default,
             string? after = default,
             string? validity = default,
-            bool? isPubliclyLeaked = false,
-            bool? isMultiRepo = false,
+            bool? isPubliclyLeaked = default,
+            bool? isMultiRepo = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(

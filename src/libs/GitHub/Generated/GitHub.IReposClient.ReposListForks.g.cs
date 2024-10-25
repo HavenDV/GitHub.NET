@@ -23,9 +23,9 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.MinimalRepository>> ReposListForksAsync(
             string owner,
             string repo,
-            global::GitHub.ReposListForksSort? sort = global::GitHub.ReposListForksSort.Newest,
-            int? perPage = 30,
-            int? page = 1,
+            global::GitHub.ReposListForksSort? sort = default,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

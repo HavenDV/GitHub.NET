@@ -64,8 +64,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Activity>> ReposListActivitiesAsync(
             string owner,
             string repo,
-            global::GitHub.ReposListActivitiesDirection? direction = global::GitHub.ReposListActivitiesDirection.Desc,
-            int? perPage = 30,
+            global::GitHub.ReposListActivitiesDirection? direction = default,
+            int? perPage = default,
             string? before = default,
             string? after = default,
             string? @ref = default,

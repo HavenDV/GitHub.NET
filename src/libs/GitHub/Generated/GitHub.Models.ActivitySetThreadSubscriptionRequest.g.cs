@@ -13,7 +13,7 @@ namespace GitHub
         /// Default Value: false
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ignored")]
-        public bool? Ignored { get; set; } = false;
+        public bool? Ignored { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
