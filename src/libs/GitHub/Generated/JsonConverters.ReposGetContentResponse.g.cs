@@ -29,36 +29,36 @@ namespace GitHub.JsonConverters
             }
 
             readerCopy = reader;
-            global::GitHub.ContentFile? file = default;
+            global::GitHub.ContentFile? value2 = default;
             try
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.ContentFile), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.ContentFile> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.ContentFile).Name}");
-                file = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+                value2 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
             }
             catch (global::System.Text.Json.JsonException)
             {
             }
 
             readerCopy = reader;
-            global::GitHub.ContentSymlink? symlink = default;
+            global::GitHub.ContentSymlink? value3 = default;
             try
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.ContentSymlink), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.ContentSymlink> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.ContentSymlink).Name}");
-                symlink = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+                value3 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
             }
             catch (global::System.Text.Json.JsonException)
             {
             }
 
             readerCopy = reader;
-            global::GitHub.ContentSubmodule? submodule = default;
+            global::GitHub.ContentSubmodule? value4 = default;
             try
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.ContentSubmodule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.ContentSubmodule> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.ContentSubmodule).Name}");
-                submodule = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+                value4 = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
             }
             catch (global::System.Text.Json.JsonException)
             {
@@ -66,9 +66,9 @@ namespace GitHub.JsonConverters
 
             var result = new global::GitHub.ReposGetContentResponse(
                 value1,
-                file,
-                symlink,
-                submodule
+                value2,
+                value3,
+                value4
                 );
 
             if (value1 != null)
@@ -77,19 +77,19 @@ namespace GitHub.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>).Name}");
                 _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-            else if (file != null)
+            else if (value2 != null)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.ContentFile), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.ContentFile> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.ContentFile).Name}");
                 _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-            else if (symlink != null)
+            else if (value3 != null)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.ContentSymlink), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.ContentSymlink> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.ContentSymlink).Name}");
                 _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-            else if (submodule != null)
+            else if (value4 != null)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.ContentSubmodule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.ContentSubmodule> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.ContentSubmodule).Name}");
@@ -114,23 +114,23 @@ namespace GitHub.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::GitHub.ContentDirectoryItem>).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1, typeInfo);
             }
-            else if (value.IsFile)
+            else if (value.IsValue2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.ContentFile), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.ContentFile?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.ContentFile).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.File, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value2, typeInfo);
             }
-            else if (value.IsSymlink)
+            else if (value.IsValue3)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.ContentSymlink), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.ContentSymlink?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.ContentSymlink).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Symlink, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value3, typeInfo);
             }
-            else if (value.IsSubmodule)
+            else if (value.IsValue4)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.ContentSubmodule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.ContentSubmodule?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.ContentSubmodule).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Submodule, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value4, typeInfo);
             }
         }
     }
