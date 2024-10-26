@@ -19,18 +19,18 @@ namespace GitHub
         /// Only allow users with bypass permission to create matching refs.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleCreation? Value1 { get; init; }
+        public global::GitHub.RepositoryRuleCreation? Creation { get; init; }
 #else
-        public global::GitHub.RepositoryRuleCreation? Value1 { get; }
+        public global::GitHub.RepositoryRuleCreation? Creation { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Creation))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsCreation => Creation != null;
 
         /// <summary>
         /// 
@@ -40,32 +40,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleCreation?(RepositoryRule @this) => @this.Value1;
+        public static implicit operator global::GitHub.RepositoryRuleCreation?(RepositoryRule @this) => @this.Creation;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleCreation? value)
         {
-            Value1 = value;
+            Creation = value;
         }
 
         /// <summary>
         /// Only allow users with bypass permission to update matching refs.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleUpdate? Value2 { get; init; }
+        public global::GitHub.RepositoryRuleUpdate? Update { get; init; }
 #else
-        public global::GitHub.RepositoryRuleUpdate? Value2 { get; }
+        public global::GitHub.RepositoryRuleUpdate? Update { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Update))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsUpdate => Update != null;
 
         /// <summary>
         /// 
@@ -75,32 +75,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleUpdate?(RepositoryRule @this) => @this.Value2;
+        public static implicit operator global::GitHub.RepositoryRuleUpdate?(RepositoryRule @this) => @this.Update;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleUpdate? value)
         {
-            Value2 = value;
+            Update = value;
         }
 
         /// <summary>
         /// Only allow users with bypass permissions to delete matching refs.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleDeletion? Value3 { get; init; }
+        public global::GitHub.RepositoryRuleDeletion? Deletion { get; init; }
 #else
-        public global::GitHub.RepositoryRuleDeletion? Value3 { get; }
+        public global::GitHub.RepositoryRuleDeletion? Deletion { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Deletion))]
 #endif
-        public bool IsValue3 => Value3 != null;
+        public bool IsDeletion => Deletion != null;
 
         /// <summary>
         /// 
@@ -110,32 +110,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleDeletion?(RepositoryRule @this) => @this.Value3;
+        public static implicit operator global::GitHub.RepositoryRuleDeletion?(RepositoryRule @this) => @this.Deletion;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleDeletion? value)
         {
-            Value3 = value;
+            Deletion = value;
         }
 
         /// <summary>
         /// Prevent merge commits from being pushed to matching refs.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleRequiredLinearHistory? Value4 { get; init; }
+        public global::GitHub.RepositoryRuleRequiredLinearHistory? RequiredLinearHistory { get; init; }
 #else
-        public global::GitHub.RepositoryRuleRequiredLinearHistory? Value4 { get; }
+        public global::GitHub.RepositoryRuleRequiredLinearHistory? RequiredLinearHistory { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value4))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RequiredLinearHistory))]
 #endif
-        public bool IsValue4 => Value4 != null;
+        public bool IsRequiredLinearHistory => RequiredLinearHistory != null;
 
         /// <summary>
         /// 
@@ -145,32 +145,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleRequiredLinearHistory?(RepositoryRule @this) => @this.Value4;
+        public static implicit operator global::GitHub.RepositoryRuleRequiredLinearHistory?(RepositoryRule @this) => @this.RequiredLinearHistory;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleRequiredLinearHistory? value)
         {
-            Value4 = value;
+            RequiredLinearHistory = value;
         }
 
         /// <summary>
         /// Merges must be performed via a merge queue.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleMergeQueue? Value5 { get; init; }
+        public global::GitHub.RepositoryRuleMergeQueue? MergeQueue { get; init; }
 #else
-        public global::GitHub.RepositoryRuleMergeQueue? Value5 { get; }
+        public global::GitHub.RepositoryRuleMergeQueue? MergeQueue { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value5))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MergeQueue))]
 #endif
-        public bool IsValue5 => Value5 != null;
+        public bool IsMergeQueue => MergeQueue != null;
 
         /// <summary>
         /// 
@@ -180,32 +180,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleMergeQueue?(RepositoryRule @this) => @this.Value5;
+        public static implicit operator global::GitHub.RepositoryRuleMergeQueue?(RepositoryRule @this) => @this.MergeQueue;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleMergeQueue? value)
         {
-            Value5 = value;
+            MergeQueue = value;
         }
 
         /// <summary>
         /// Choose which environments must be successfully deployed to before refs can be pushed into a ref that matches this rule.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleRequiredDeployments? Value6 { get; init; }
+        public global::GitHub.RepositoryRuleRequiredDeployments? RequiredDeployments { get; init; }
 #else
-        public global::GitHub.RepositoryRuleRequiredDeployments? Value6 { get; }
+        public global::GitHub.RepositoryRuleRequiredDeployments? RequiredDeployments { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value6))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RequiredDeployments))]
 #endif
-        public bool IsValue6 => Value6 != null;
+        public bool IsRequiredDeployments => RequiredDeployments != null;
 
         /// <summary>
         /// 
@@ -215,32 +215,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleRequiredDeployments?(RepositoryRule @this) => @this.Value6;
+        public static implicit operator global::GitHub.RepositoryRuleRequiredDeployments?(RepositoryRule @this) => @this.RequiredDeployments;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleRequiredDeployments? value)
         {
-            Value6 = value;
+            RequiredDeployments = value;
         }
 
         /// <summary>
         /// Commits pushed to matching refs must have verified signatures.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleRequiredSignatures? Value7 { get; init; }
+        public global::GitHub.RepositoryRuleRequiredSignatures? RequiredSignatures { get; init; }
 #else
-        public global::GitHub.RepositoryRuleRequiredSignatures? Value7 { get; }
+        public global::GitHub.RepositoryRuleRequiredSignatures? RequiredSignatures { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value7))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RequiredSignatures))]
 #endif
-        public bool IsValue7 => Value7 != null;
+        public bool IsRequiredSignatures => RequiredSignatures != null;
 
         /// <summary>
         /// 
@@ -250,32 +250,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleRequiredSignatures?(RepositoryRule @this) => @this.Value7;
+        public static implicit operator global::GitHub.RepositoryRuleRequiredSignatures?(RepositoryRule @this) => @this.RequiredSignatures;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleRequiredSignatures? value)
         {
-            Value7 = value;
+            RequiredSignatures = value;
         }
 
         /// <summary>
         /// Require all commits be made to a non-target branch and submitted via a pull request before they can be merged.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRulePullRequest? Value8 { get; init; }
+        public global::GitHub.RepositoryRulePullRequest? PullRequest { get; init; }
 #else
-        public global::GitHub.RepositoryRulePullRequest? Value8 { get; }
+        public global::GitHub.RepositoryRulePullRequest? PullRequest { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value8))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PullRequest))]
 #endif
-        public bool IsValue8 => Value8 != null;
+        public bool IsPullRequest => PullRequest != null;
 
         /// <summary>
         /// 
@@ -285,32 +285,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRulePullRequest?(RepositoryRule @this) => @this.Value8;
+        public static implicit operator global::GitHub.RepositoryRulePullRequest?(RepositoryRule @this) => @this.PullRequest;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRulePullRequest? value)
         {
-            Value8 = value;
+            PullRequest = value;
         }
 
         /// <summary>
         /// Choose which status checks must pass before the ref is updated. When enabled, commits must first be pushed to another ref where the checks pass.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleRequiredStatusChecks? Value9 { get; init; }
+        public global::GitHub.RepositoryRuleRequiredStatusChecks? RequiredStatusChecks { get; init; }
 #else
-        public global::GitHub.RepositoryRuleRequiredStatusChecks? Value9 { get; }
+        public global::GitHub.RepositoryRuleRequiredStatusChecks? RequiredStatusChecks { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value9))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(RequiredStatusChecks))]
 #endif
-        public bool IsValue9 => Value9 != null;
+        public bool IsRequiredStatusChecks => RequiredStatusChecks != null;
 
         /// <summary>
         /// 
@@ -320,32 +320,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleRequiredStatusChecks?(RepositoryRule @this) => @this.Value9;
+        public static implicit operator global::GitHub.RepositoryRuleRequiredStatusChecks?(RepositoryRule @this) => @this.RequiredStatusChecks;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleRequiredStatusChecks? value)
         {
-            Value9 = value;
+            RequiredStatusChecks = value;
         }
 
         /// <summary>
         /// Prevent users with push access from force pushing to refs.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleNonFastForward? Value10 { get; init; }
+        public global::GitHub.RepositoryRuleNonFastForward? NonFastForward { get; init; }
 #else
-        public global::GitHub.RepositoryRuleNonFastForward? Value10 { get; }
+        public global::GitHub.RepositoryRuleNonFastForward? NonFastForward { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value10))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(NonFastForward))]
 #endif
-        public bool IsValue10 => Value10 != null;
+        public bool IsNonFastForward => NonFastForward != null;
 
         /// <summary>
         /// 
@@ -355,32 +355,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleNonFastForward?(RepositoryRule @this) => @this.Value10;
+        public static implicit operator global::GitHub.RepositoryRuleNonFastForward?(RepositoryRule @this) => @this.NonFastForward;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleNonFastForward? value)
         {
-            Value10 = value;
+            NonFastForward = value;
         }
 
         /// <summary>
         /// Parameters to be used for the commit_message_pattern rule
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleCommitMessagePattern? Value11 { get; init; }
+        public global::GitHub.RepositoryRuleCommitMessagePattern? CommitMessagePattern { get; init; }
 #else
-        public global::GitHub.RepositoryRuleCommitMessagePattern? Value11 { get; }
+        public global::GitHub.RepositoryRuleCommitMessagePattern? CommitMessagePattern { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value11))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CommitMessagePattern))]
 #endif
-        public bool IsValue11 => Value11 != null;
+        public bool IsCommitMessagePattern => CommitMessagePattern != null;
 
         /// <summary>
         /// 
@@ -390,32 +390,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleCommitMessagePattern?(RepositoryRule @this) => @this.Value11;
+        public static implicit operator global::GitHub.RepositoryRuleCommitMessagePattern?(RepositoryRule @this) => @this.CommitMessagePattern;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleCommitMessagePattern? value)
         {
-            Value11 = value;
+            CommitMessagePattern = value;
         }
 
         /// <summary>
         /// Parameters to be used for the commit_author_email_pattern rule
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleCommitAuthorEmailPattern? Value12 { get; init; }
+        public global::GitHub.RepositoryRuleCommitAuthorEmailPattern? CommitAuthorEmailPattern { get; init; }
 #else
-        public global::GitHub.RepositoryRuleCommitAuthorEmailPattern? Value12 { get; }
+        public global::GitHub.RepositoryRuleCommitAuthorEmailPattern? CommitAuthorEmailPattern { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value12))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CommitAuthorEmailPattern))]
 #endif
-        public bool IsValue12 => Value12 != null;
+        public bool IsCommitAuthorEmailPattern => CommitAuthorEmailPattern != null;
 
         /// <summary>
         /// 
@@ -425,32 +425,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleCommitAuthorEmailPattern?(RepositoryRule @this) => @this.Value12;
+        public static implicit operator global::GitHub.RepositoryRuleCommitAuthorEmailPattern?(RepositoryRule @this) => @this.CommitAuthorEmailPattern;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleCommitAuthorEmailPattern? value)
         {
-            Value12 = value;
+            CommitAuthorEmailPattern = value;
         }
 
         /// <summary>
         /// Parameters to be used for the committer_email_pattern rule
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleCommitterEmailPattern? Value13 { get; init; }
+        public global::GitHub.RepositoryRuleCommitterEmailPattern? CommitterEmailPattern { get; init; }
 #else
-        public global::GitHub.RepositoryRuleCommitterEmailPattern? Value13 { get; }
+        public global::GitHub.RepositoryRuleCommitterEmailPattern? CommitterEmailPattern { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value13))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CommitterEmailPattern))]
 #endif
-        public bool IsValue13 => Value13 != null;
+        public bool IsCommitterEmailPattern => CommitterEmailPattern != null;
 
         /// <summary>
         /// 
@@ -460,32 +460,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleCommitterEmailPattern?(RepositoryRule @this) => @this.Value13;
+        public static implicit operator global::GitHub.RepositoryRuleCommitterEmailPattern?(RepositoryRule @this) => @this.CommitterEmailPattern;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleCommitterEmailPattern? value)
         {
-            Value13 = value;
+            CommitterEmailPattern = value;
         }
 
         /// <summary>
         /// Parameters to be used for the branch_name_pattern rule
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleBranchNamePattern? Value14 { get; init; }
+        public global::GitHub.RepositoryRuleBranchNamePattern? BranchNamePattern { get; init; }
 #else
-        public global::GitHub.RepositoryRuleBranchNamePattern? Value14 { get; }
+        public global::GitHub.RepositoryRuleBranchNamePattern? BranchNamePattern { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value14))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(BranchNamePattern))]
 #endif
-        public bool IsValue14 => Value14 != null;
+        public bool IsBranchNamePattern => BranchNamePattern != null;
 
         /// <summary>
         /// 
@@ -495,32 +495,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleBranchNamePattern?(RepositoryRule @this) => @this.Value14;
+        public static implicit operator global::GitHub.RepositoryRuleBranchNamePattern?(RepositoryRule @this) => @this.BranchNamePattern;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleBranchNamePattern? value)
         {
-            Value14 = value;
+            BranchNamePattern = value;
         }
 
         /// <summary>
         /// Parameters to be used for the tag_name_pattern rule
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleTagNamePattern? Value15 { get; init; }
+        public global::GitHub.RepositoryRuleTagNamePattern? TagNamePattern { get; init; }
 #else
-        public global::GitHub.RepositoryRuleTagNamePattern? Value15 { get; }
+        public global::GitHub.RepositoryRuleTagNamePattern? TagNamePattern { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value15))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TagNamePattern))]
 #endif
-        public bool IsValue15 => Value15 != null;
+        public bool IsTagNamePattern => TagNamePattern != null;
 
         /// <summary>
         /// 
@@ -530,32 +530,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleTagNamePattern?(RepositoryRule @this) => @this.Value15;
+        public static implicit operator global::GitHub.RepositoryRuleTagNamePattern?(RepositoryRule @this) => @this.TagNamePattern;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleTagNamePattern? value)
         {
-            Value15 = value;
+            TagNamePattern = value;
         }
 
         /// <summary>
         /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleVariant16? Value16 { get; init; }
+        public global::GitHub.RepositoryRuleVariant16? FilePathRestriction { get; init; }
 #else
-        public global::GitHub.RepositoryRuleVariant16? Value16 { get; }
+        public global::GitHub.RepositoryRuleVariant16? FilePathRestriction { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value16))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FilePathRestriction))]
 #endif
-        public bool IsValue16 => Value16 != null;
+        public bool IsFilePathRestriction => FilePathRestriction != null;
 
         /// <summary>
         /// 
@@ -565,32 +565,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleVariant16?(RepositoryRule @this) => @this.Value16;
+        public static implicit operator global::GitHub.RepositoryRuleVariant16?(RepositoryRule @this) => @this.FilePathRestriction;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleVariant16? value)
         {
-            Value16 = value;
+            FilePathRestriction = value;
         }
 
         /// <summary>
         /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleVariant17? Value17 { get; init; }
+        public global::GitHub.RepositoryRuleVariant17? MaxFilePathLength { get; init; }
 #else
-        public global::GitHub.RepositoryRuleVariant17? Value17 { get; }
+        public global::GitHub.RepositoryRuleVariant17? MaxFilePathLength { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value17))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MaxFilePathLength))]
 #endif
-        public bool IsValue17 => Value17 != null;
+        public bool IsMaxFilePathLength => MaxFilePathLength != null;
 
         /// <summary>
         /// 
@@ -600,32 +600,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleVariant17?(RepositoryRule @this) => @this.Value17;
+        public static implicit operator global::GitHub.RepositoryRuleVariant17?(RepositoryRule @this) => @this.MaxFilePathLength;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleVariant17? value)
         {
-            Value17 = value;
+            MaxFilePathLength = value;
         }
 
         /// <summary>
         /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleVariant18? Value18 { get; init; }
+        public global::GitHub.RepositoryRuleVariant18? FileExtensionRestriction { get; init; }
 #else
-        public global::GitHub.RepositoryRuleVariant18? Value18 { get; }
+        public global::GitHub.RepositoryRuleVariant18? FileExtensionRestriction { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value18))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FileExtensionRestriction))]
 #endif
-        public bool IsValue18 => Value18 != null;
+        public bool IsFileExtensionRestriction => FileExtensionRestriction != null;
 
         /// <summary>
         /// 
@@ -635,32 +635,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleVariant18?(RepositoryRule @this) => @this.Value18;
+        public static implicit operator global::GitHub.RepositoryRuleVariant18?(RepositoryRule @this) => @this.FileExtensionRestriction;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleVariant18? value)
         {
-            Value18 = value;
+            FileExtensionRestriction = value;
         }
 
         /// <summary>
         /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleVariant19? Value19 { get; init; }
+        public global::GitHub.RepositoryRuleVariant19? MaxFileSize { get; init; }
 #else
-        public global::GitHub.RepositoryRuleVariant19? Value19 { get; }
+        public global::GitHub.RepositoryRuleVariant19? MaxFileSize { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value19))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MaxFileSize))]
 #endif
-        public bool IsValue19 => Value19 != null;
+        public bool IsMaxFileSize => MaxFileSize != null;
 
         /// <summary>
         /// 
@@ -670,32 +670,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleVariant19?(RepositoryRule @this) => @this.Value19;
+        public static implicit operator global::GitHub.RepositoryRuleVariant19?(RepositoryRule @this) => @this.MaxFileSize;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleVariant19? value)
         {
-            Value19 = value;
+            MaxFileSize = value;
         }
 
         /// <summary>
         /// Require all changes made to a targeted branch to pass the specified workflows before they can be merged.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleWorkflows? Value20 { get; init; }
+        public global::GitHub.RepositoryRuleWorkflows? Workflows { get; init; }
 #else
-        public global::GitHub.RepositoryRuleWorkflows? Value20 { get; }
+        public global::GitHub.RepositoryRuleWorkflows? Workflows { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value20))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Workflows))]
 #endif
-        public bool IsValue20 => Value20 != null;
+        public bool IsWorkflows => Workflows != null;
 
         /// <summary>
         /// 
@@ -705,32 +705,32 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleWorkflows?(RepositoryRule @this) => @this.Value20;
+        public static implicit operator global::GitHub.RepositoryRuleWorkflows?(RepositoryRule @this) => @this.Workflows;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleWorkflows? value)
         {
-            Value20 = value;
+            Workflows = value;
         }
 
         /// <summary>
         /// Choose which tools must provide code scanning results before the reference is updated. When configured, code scanning must be enabled and have results for both the commit and the reference being updated.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleCodeScanning? Value21 { get; init; }
+        public global::GitHub.RepositoryRuleCodeScanning? CodeScanning { get; init; }
 #else
-        public global::GitHub.RepositoryRuleCodeScanning? Value21 { get; }
+        public global::GitHub.RepositoryRuleCodeScanning? CodeScanning { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value21))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CodeScanning))]
 #endif
-        public bool IsValue21 => Value21 != null;
+        public bool IsCodeScanning => CodeScanning != null;
 
         /// <summary>
         /// 
@@ -740,14 +740,14 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleCodeScanning?(RepositoryRule @this) => @this.Value21;
+        public static implicit operator global::GitHub.RepositoryRuleCodeScanning?(RepositoryRule @this) => @this.CodeScanning;
 
         /// <summary>
         /// 
         /// </summary>
         public RepositoryRule(global::GitHub.RepositoryRuleCodeScanning? value)
         {
-            Value21 = value;
+            CodeScanning = value;
         }
 
         /// <summary>
@@ -755,79 +755,79 @@ namespace GitHub
         /// </summary>
         public RepositoryRule(
             global::GitHub.RepositoryRuleDiscriminatorType? type,
-            global::GitHub.RepositoryRuleCreation? value1,
-            global::GitHub.RepositoryRuleUpdate? value2,
-            global::GitHub.RepositoryRuleDeletion? value3,
-            global::GitHub.RepositoryRuleRequiredLinearHistory? value4,
-            global::GitHub.RepositoryRuleMergeQueue? value5,
-            global::GitHub.RepositoryRuleRequiredDeployments? value6,
-            global::GitHub.RepositoryRuleRequiredSignatures? value7,
-            global::GitHub.RepositoryRulePullRequest? value8,
-            global::GitHub.RepositoryRuleRequiredStatusChecks? value9,
-            global::GitHub.RepositoryRuleNonFastForward? value10,
-            global::GitHub.RepositoryRuleCommitMessagePattern? value11,
-            global::GitHub.RepositoryRuleCommitAuthorEmailPattern? value12,
-            global::GitHub.RepositoryRuleCommitterEmailPattern? value13,
-            global::GitHub.RepositoryRuleBranchNamePattern? value14,
-            global::GitHub.RepositoryRuleTagNamePattern? value15,
-            global::GitHub.RepositoryRuleVariant16? value16,
-            global::GitHub.RepositoryRuleVariant17? value17,
-            global::GitHub.RepositoryRuleVariant18? value18,
-            global::GitHub.RepositoryRuleVariant19? value19,
-            global::GitHub.RepositoryRuleWorkflows? value20,
-            global::GitHub.RepositoryRuleCodeScanning? value21
+            global::GitHub.RepositoryRuleCreation? creation,
+            global::GitHub.RepositoryRuleUpdate? update,
+            global::GitHub.RepositoryRuleDeletion? deletion,
+            global::GitHub.RepositoryRuleRequiredLinearHistory? requiredLinearHistory,
+            global::GitHub.RepositoryRuleMergeQueue? mergeQueue,
+            global::GitHub.RepositoryRuleRequiredDeployments? requiredDeployments,
+            global::GitHub.RepositoryRuleRequiredSignatures? requiredSignatures,
+            global::GitHub.RepositoryRulePullRequest? pullRequest,
+            global::GitHub.RepositoryRuleRequiredStatusChecks? requiredStatusChecks,
+            global::GitHub.RepositoryRuleNonFastForward? nonFastForward,
+            global::GitHub.RepositoryRuleCommitMessagePattern? commitMessagePattern,
+            global::GitHub.RepositoryRuleCommitAuthorEmailPattern? commitAuthorEmailPattern,
+            global::GitHub.RepositoryRuleCommitterEmailPattern? committerEmailPattern,
+            global::GitHub.RepositoryRuleBranchNamePattern? branchNamePattern,
+            global::GitHub.RepositoryRuleTagNamePattern? tagNamePattern,
+            global::GitHub.RepositoryRuleVariant16? filePathRestriction,
+            global::GitHub.RepositoryRuleVariant17? maxFilePathLength,
+            global::GitHub.RepositoryRuleVariant18? fileExtensionRestriction,
+            global::GitHub.RepositoryRuleVariant19? maxFileSize,
+            global::GitHub.RepositoryRuleWorkflows? workflows,
+            global::GitHub.RepositoryRuleCodeScanning? codeScanning
             )
         {
             Type = type;
 
-            Value1 = value1;
-            Value2 = value2;
-            Value3 = value3;
-            Value4 = value4;
-            Value5 = value5;
-            Value6 = value6;
-            Value7 = value7;
-            Value8 = value8;
-            Value9 = value9;
-            Value10 = value10;
-            Value11 = value11;
-            Value12 = value12;
-            Value13 = value13;
-            Value14 = value14;
-            Value15 = value15;
-            Value16 = value16;
-            Value17 = value17;
-            Value18 = value18;
-            Value19 = value19;
-            Value20 = value20;
-            Value21 = value21;
+            Creation = creation;
+            Update = update;
+            Deletion = deletion;
+            RequiredLinearHistory = requiredLinearHistory;
+            MergeQueue = mergeQueue;
+            RequiredDeployments = requiredDeployments;
+            RequiredSignatures = requiredSignatures;
+            PullRequest = pullRequest;
+            RequiredStatusChecks = requiredStatusChecks;
+            NonFastForward = nonFastForward;
+            CommitMessagePattern = commitMessagePattern;
+            CommitAuthorEmailPattern = commitAuthorEmailPattern;
+            CommitterEmailPattern = committerEmailPattern;
+            BranchNamePattern = branchNamePattern;
+            TagNamePattern = tagNamePattern;
+            FilePathRestriction = filePathRestriction;
+            MaxFilePathLength = maxFilePathLength;
+            FileExtensionRestriction = fileExtensionRestriction;
+            MaxFileSize = maxFileSize;
+            Workflows = workflows;
+            CodeScanning = codeScanning;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value21 as object ??
-            Value20 as object ??
-            Value19 as object ??
-            Value18 as object ??
-            Value17 as object ??
-            Value16 as object ??
-            Value15 as object ??
-            Value14 as object ??
-            Value13 as object ??
-            Value12 as object ??
-            Value11 as object ??
-            Value10 as object ??
-            Value9 as object ??
-            Value8 as object ??
-            Value7 as object ??
-            Value6 as object ??
-            Value5 as object ??
-            Value4 as object ??
-            Value3 as object ??
-            Value2 as object ??
-            Value1 as object 
+            CodeScanning as object ??
+            Workflows as object ??
+            MaxFileSize as object ??
+            FileExtensionRestriction as object ??
+            MaxFilePathLength as object ??
+            FilePathRestriction as object ??
+            TagNamePattern as object ??
+            BranchNamePattern as object ??
+            CommitterEmailPattern as object ??
+            CommitAuthorEmailPattern as object ??
+            CommitMessagePattern as object ??
+            NonFastForward as object ??
+            RequiredStatusChecks as object ??
+            PullRequest as object ??
+            RequiredSignatures as object ??
+            RequiredDeployments as object ??
+            MergeQueue as object ??
+            RequiredLinearHistory as object ??
+            Deletion as object ??
+            Update as object ??
+            Creation as object 
             ;
 
         /// <summary>
@@ -835,34 +835,34 @@ namespace GitHub
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && IsValue18 && !IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && IsValue19 && !IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && IsValue20 && !IsValue21 || !IsValue1 && !IsValue2 && !IsValue3 && !IsValue4 && !IsValue5 && !IsValue6 && !IsValue7 && !IsValue8 && !IsValue9 && !IsValue10 && !IsValue11 && !IsValue12 && !IsValue13 && !IsValue14 && !IsValue15 && !IsValue16 && !IsValue17 && !IsValue18 && !IsValue19 && !IsValue20 && IsValue21;
+            return IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && IsMaxFileSize && !IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && IsWorkflows && !IsCodeScanning || !IsCreation && !IsUpdate && !IsDeletion && !IsRequiredLinearHistory && !IsMergeQueue && !IsRequiredDeployments && !IsRequiredSignatures && !IsPullRequest && !IsRequiredStatusChecks && !IsNonFastForward && !IsCommitMessagePattern && !IsCommitAuthorEmailPattern && !IsCommitterEmailPattern && !IsBranchNamePattern && !IsTagNamePattern && !IsFilePathRestriction && !IsMaxFilePathLength && !IsFileExtensionRestriction && !IsMaxFileSize && !IsWorkflows && IsCodeScanning;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::GitHub.RepositoryRuleCreation?, TResult>? value1 = null,
-            global::System.Func<global::GitHub.RepositoryRuleUpdate?, TResult>? value2 = null,
-            global::System.Func<global::GitHub.RepositoryRuleDeletion?, TResult>? value3 = null,
-            global::System.Func<global::GitHub.RepositoryRuleRequiredLinearHistory?, TResult>? value4 = null,
-            global::System.Func<global::GitHub.RepositoryRuleMergeQueue?, TResult>? value5 = null,
-            global::System.Func<global::GitHub.RepositoryRuleRequiredDeployments?, TResult>? value6 = null,
-            global::System.Func<global::GitHub.RepositoryRuleRequiredSignatures?, TResult>? value7 = null,
-            global::System.Func<global::GitHub.RepositoryRulePullRequest?, TResult>? value8 = null,
-            global::System.Func<global::GitHub.RepositoryRuleRequiredStatusChecks?, TResult>? value9 = null,
-            global::System.Func<global::GitHub.RepositoryRuleNonFastForward?, TResult>? value10 = null,
-            global::System.Func<global::GitHub.RepositoryRuleCommitMessagePattern?, TResult>? value11 = null,
-            global::System.Func<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, TResult>? value12 = null,
-            global::System.Func<global::GitHub.RepositoryRuleCommitterEmailPattern?, TResult>? value13 = null,
-            global::System.Func<global::GitHub.RepositoryRuleBranchNamePattern?, TResult>? value14 = null,
-            global::System.Func<global::GitHub.RepositoryRuleTagNamePattern?, TResult>? value15 = null,
-            global::System.Func<global::GitHub.RepositoryRuleVariant16?, TResult>? value16 = null,
-            global::System.Func<global::GitHub.RepositoryRuleVariant17?, TResult>? value17 = null,
-            global::System.Func<global::GitHub.RepositoryRuleVariant18?, TResult>? value18 = null,
-            global::System.Func<global::GitHub.RepositoryRuleVariant19?, TResult>? value19 = null,
-            global::System.Func<global::GitHub.RepositoryRuleWorkflows?, TResult>? value20 = null,
-            global::System.Func<global::GitHub.RepositoryRuleCodeScanning?, TResult>? value21 = null,
+            global::System.Func<global::GitHub.RepositoryRuleCreation?, TResult>? creation = null,
+            global::System.Func<global::GitHub.RepositoryRuleUpdate?, TResult>? update = null,
+            global::System.Func<global::GitHub.RepositoryRuleDeletion?, TResult>? deletion = null,
+            global::System.Func<global::GitHub.RepositoryRuleRequiredLinearHistory?, TResult>? requiredLinearHistory = null,
+            global::System.Func<global::GitHub.RepositoryRuleMergeQueue?, TResult>? mergeQueue = null,
+            global::System.Func<global::GitHub.RepositoryRuleRequiredDeployments?, TResult>? requiredDeployments = null,
+            global::System.Func<global::GitHub.RepositoryRuleRequiredSignatures?, TResult>? requiredSignatures = null,
+            global::System.Func<global::GitHub.RepositoryRulePullRequest?, TResult>? pullRequest = null,
+            global::System.Func<global::GitHub.RepositoryRuleRequiredStatusChecks?, TResult>? requiredStatusChecks = null,
+            global::System.Func<global::GitHub.RepositoryRuleNonFastForward?, TResult>? nonFastForward = null,
+            global::System.Func<global::GitHub.RepositoryRuleCommitMessagePattern?, TResult>? commitMessagePattern = null,
+            global::System.Func<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?, TResult>? commitAuthorEmailPattern = null,
+            global::System.Func<global::GitHub.RepositoryRuleCommitterEmailPattern?, TResult>? committerEmailPattern = null,
+            global::System.Func<global::GitHub.RepositoryRuleBranchNamePattern?, TResult>? branchNamePattern = null,
+            global::System.Func<global::GitHub.RepositoryRuleTagNamePattern?, TResult>? tagNamePattern = null,
+            global::System.Func<global::GitHub.RepositoryRuleVariant16?, TResult>? filePathRestriction = null,
+            global::System.Func<global::GitHub.RepositoryRuleVariant17?, TResult>? maxFilePathLength = null,
+            global::System.Func<global::GitHub.RepositoryRuleVariant18?, TResult>? fileExtensionRestriction = null,
+            global::System.Func<global::GitHub.RepositoryRuleVariant19?, TResult>? maxFileSize = null,
+            global::System.Func<global::GitHub.RepositoryRuleWorkflows?, TResult>? workflows = null,
+            global::System.Func<global::GitHub.RepositoryRuleCodeScanning?, TResult>? codeScanning = null,
             bool validate = true)
         {
             if (validate)
@@ -870,89 +870,89 @@ namespace GitHub
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsCreation && creation != null)
             {
-                return value1(Value1!);
+                return creation(Creation!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsUpdate && update != null)
             {
-                return value2(Value2!);
+                return update(Update!);
             }
-            else if (IsValue3 && value3 != null)
+            else if (IsDeletion && deletion != null)
             {
-                return value3(Value3!);
+                return deletion(Deletion!);
             }
-            else if (IsValue4 && value4 != null)
+            else if (IsRequiredLinearHistory && requiredLinearHistory != null)
             {
-                return value4(Value4!);
+                return requiredLinearHistory(RequiredLinearHistory!);
             }
-            else if (IsValue5 && value5 != null)
+            else if (IsMergeQueue && mergeQueue != null)
             {
-                return value5(Value5!);
+                return mergeQueue(MergeQueue!);
             }
-            else if (IsValue6 && value6 != null)
+            else if (IsRequiredDeployments && requiredDeployments != null)
             {
-                return value6(Value6!);
+                return requiredDeployments(RequiredDeployments!);
             }
-            else if (IsValue7 && value7 != null)
+            else if (IsRequiredSignatures && requiredSignatures != null)
             {
-                return value7(Value7!);
+                return requiredSignatures(RequiredSignatures!);
             }
-            else if (IsValue8 && value8 != null)
+            else if (IsPullRequest && pullRequest != null)
             {
-                return value8(Value8!);
+                return pullRequest(PullRequest!);
             }
-            else if (IsValue9 && value9 != null)
+            else if (IsRequiredStatusChecks && requiredStatusChecks != null)
             {
-                return value9(Value9!);
+                return requiredStatusChecks(RequiredStatusChecks!);
             }
-            else if (IsValue10 && value10 != null)
+            else if (IsNonFastForward && nonFastForward != null)
             {
-                return value10(Value10!);
+                return nonFastForward(NonFastForward!);
             }
-            else if (IsValue11 && value11 != null)
+            else if (IsCommitMessagePattern && commitMessagePattern != null)
             {
-                return value11(Value11!);
+                return commitMessagePattern(CommitMessagePattern!);
             }
-            else if (IsValue12 && value12 != null)
+            else if (IsCommitAuthorEmailPattern && commitAuthorEmailPattern != null)
             {
-                return value12(Value12!);
+                return commitAuthorEmailPattern(CommitAuthorEmailPattern!);
             }
-            else if (IsValue13 && value13 != null)
+            else if (IsCommitterEmailPattern && committerEmailPattern != null)
             {
-                return value13(Value13!);
+                return committerEmailPattern(CommitterEmailPattern!);
             }
-            else if (IsValue14 && value14 != null)
+            else if (IsBranchNamePattern && branchNamePattern != null)
             {
-                return value14(Value14!);
+                return branchNamePattern(BranchNamePattern!);
             }
-            else if (IsValue15 && value15 != null)
+            else if (IsTagNamePattern && tagNamePattern != null)
             {
-                return value15(Value15!);
+                return tagNamePattern(TagNamePattern!);
             }
-            else if (IsValue16 && value16 != null)
+            else if (IsFilePathRestriction && filePathRestriction != null)
             {
-                return value16(Value16!);
+                return filePathRestriction(FilePathRestriction!);
             }
-            else if (IsValue17 && value17 != null)
+            else if (IsMaxFilePathLength && maxFilePathLength != null)
             {
-                return value17(Value17!);
+                return maxFilePathLength(MaxFilePathLength!);
             }
-            else if (IsValue18 && value18 != null)
+            else if (IsFileExtensionRestriction && fileExtensionRestriction != null)
             {
-                return value18(Value18!);
+                return fileExtensionRestriction(FileExtensionRestriction!);
             }
-            else if (IsValue19 && value19 != null)
+            else if (IsMaxFileSize && maxFileSize != null)
             {
-                return value19(Value19!);
+                return maxFileSize(MaxFileSize!);
             }
-            else if (IsValue20 && value20 != null)
+            else if (IsWorkflows && workflows != null)
             {
-                return value20(Value20!);
+                return workflows(Workflows!);
             }
-            else if (IsValue21 && value21 != null)
+            else if (IsCodeScanning && codeScanning != null)
             {
-                return value21(Value21!);
+                return codeScanning(CodeScanning!);
             }
 
             return default(TResult);
@@ -962,27 +962,27 @@ namespace GitHub
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::GitHub.RepositoryRuleCreation?>? value1 = null,
-            global::System.Action<global::GitHub.RepositoryRuleUpdate?>? value2 = null,
-            global::System.Action<global::GitHub.RepositoryRuleDeletion?>? value3 = null,
-            global::System.Action<global::GitHub.RepositoryRuleRequiredLinearHistory?>? value4 = null,
-            global::System.Action<global::GitHub.RepositoryRuleMergeQueue?>? value5 = null,
-            global::System.Action<global::GitHub.RepositoryRuleRequiredDeployments?>? value6 = null,
-            global::System.Action<global::GitHub.RepositoryRuleRequiredSignatures?>? value7 = null,
-            global::System.Action<global::GitHub.RepositoryRulePullRequest?>? value8 = null,
-            global::System.Action<global::GitHub.RepositoryRuleRequiredStatusChecks?>? value9 = null,
-            global::System.Action<global::GitHub.RepositoryRuleNonFastForward?>? value10 = null,
-            global::System.Action<global::GitHub.RepositoryRuleCommitMessagePattern?>? value11 = null,
-            global::System.Action<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?>? value12 = null,
-            global::System.Action<global::GitHub.RepositoryRuleCommitterEmailPattern?>? value13 = null,
-            global::System.Action<global::GitHub.RepositoryRuleBranchNamePattern?>? value14 = null,
-            global::System.Action<global::GitHub.RepositoryRuleTagNamePattern?>? value15 = null,
-            global::System.Action<global::GitHub.RepositoryRuleVariant16?>? value16 = null,
-            global::System.Action<global::GitHub.RepositoryRuleVariant17?>? value17 = null,
-            global::System.Action<global::GitHub.RepositoryRuleVariant18?>? value18 = null,
-            global::System.Action<global::GitHub.RepositoryRuleVariant19?>? value19 = null,
-            global::System.Action<global::GitHub.RepositoryRuleWorkflows?>? value20 = null,
-            global::System.Action<global::GitHub.RepositoryRuleCodeScanning?>? value21 = null,
+            global::System.Action<global::GitHub.RepositoryRuleCreation?>? creation = null,
+            global::System.Action<global::GitHub.RepositoryRuleUpdate?>? update = null,
+            global::System.Action<global::GitHub.RepositoryRuleDeletion?>? deletion = null,
+            global::System.Action<global::GitHub.RepositoryRuleRequiredLinearHistory?>? requiredLinearHistory = null,
+            global::System.Action<global::GitHub.RepositoryRuleMergeQueue?>? mergeQueue = null,
+            global::System.Action<global::GitHub.RepositoryRuleRequiredDeployments?>? requiredDeployments = null,
+            global::System.Action<global::GitHub.RepositoryRuleRequiredSignatures?>? requiredSignatures = null,
+            global::System.Action<global::GitHub.RepositoryRulePullRequest?>? pullRequest = null,
+            global::System.Action<global::GitHub.RepositoryRuleRequiredStatusChecks?>? requiredStatusChecks = null,
+            global::System.Action<global::GitHub.RepositoryRuleNonFastForward?>? nonFastForward = null,
+            global::System.Action<global::GitHub.RepositoryRuleCommitMessagePattern?>? commitMessagePattern = null,
+            global::System.Action<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?>? commitAuthorEmailPattern = null,
+            global::System.Action<global::GitHub.RepositoryRuleCommitterEmailPattern?>? committerEmailPattern = null,
+            global::System.Action<global::GitHub.RepositoryRuleBranchNamePattern?>? branchNamePattern = null,
+            global::System.Action<global::GitHub.RepositoryRuleTagNamePattern?>? tagNamePattern = null,
+            global::System.Action<global::GitHub.RepositoryRuleVariant16?>? filePathRestriction = null,
+            global::System.Action<global::GitHub.RepositoryRuleVariant17?>? maxFilePathLength = null,
+            global::System.Action<global::GitHub.RepositoryRuleVariant18?>? fileExtensionRestriction = null,
+            global::System.Action<global::GitHub.RepositoryRuleVariant19?>? maxFileSize = null,
+            global::System.Action<global::GitHub.RepositoryRuleWorkflows?>? workflows = null,
+            global::System.Action<global::GitHub.RepositoryRuleCodeScanning?>? codeScanning = null,
             bool validate = true)
         {
             if (validate)
@@ -990,89 +990,89 @@ namespace GitHub
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsCreation)
             {
-                value1?.Invoke(Value1!);
+                creation?.Invoke(Creation!);
             }
-            else if (IsValue2)
+            else if (IsUpdate)
             {
-                value2?.Invoke(Value2!);
+                update?.Invoke(Update!);
             }
-            else if (IsValue3)
+            else if (IsDeletion)
             {
-                value3?.Invoke(Value3!);
+                deletion?.Invoke(Deletion!);
             }
-            else if (IsValue4)
+            else if (IsRequiredLinearHistory)
             {
-                value4?.Invoke(Value4!);
+                requiredLinearHistory?.Invoke(RequiredLinearHistory!);
             }
-            else if (IsValue5)
+            else if (IsMergeQueue)
             {
-                value5?.Invoke(Value5!);
+                mergeQueue?.Invoke(MergeQueue!);
             }
-            else if (IsValue6)
+            else if (IsRequiredDeployments)
             {
-                value6?.Invoke(Value6!);
+                requiredDeployments?.Invoke(RequiredDeployments!);
             }
-            else if (IsValue7)
+            else if (IsRequiredSignatures)
             {
-                value7?.Invoke(Value7!);
+                requiredSignatures?.Invoke(RequiredSignatures!);
             }
-            else if (IsValue8)
+            else if (IsPullRequest)
             {
-                value8?.Invoke(Value8!);
+                pullRequest?.Invoke(PullRequest!);
             }
-            else if (IsValue9)
+            else if (IsRequiredStatusChecks)
             {
-                value9?.Invoke(Value9!);
+                requiredStatusChecks?.Invoke(RequiredStatusChecks!);
             }
-            else if (IsValue10)
+            else if (IsNonFastForward)
             {
-                value10?.Invoke(Value10!);
+                nonFastForward?.Invoke(NonFastForward!);
             }
-            else if (IsValue11)
+            else if (IsCommitMessagePattern)
             {
-                value11?.Invoke(Value11!);
+                commitMessagePattern?.Invoke(CommitMessagePattern!);
             }
-            else if (IsValue12)
+            else if (IsCommitAuthorEmailPattern)
             {
-                value12?.Invoke(Value12!);
+                commitAuthorEmailPattern?.Invoke(CommitAuthorEmailPattern!);
             }
-            else if (IsValue13)
+            else if (IsCommitterEmailPattern)
             {
-                value13?.Invoke(Value13!);
+                committerEmailPattern?.Invoke(CommitterEmailPattern!);
             }
-            else if (IsValue14)
+            else if (IsBranchNamePattern)
             {
-                value14?.Invoke(Value14!);
+                branchNamePattern?.Invoke(BranchNamePattern!);
             }
-            else if (IsValue15)
+            else if (IsTagNamePattern)
             {
-                value15?.Invoke(Value15!);
+                tagNamePattern?.Invoke(TagNamePattern!);
             }
-            else if (IsValue16)
+            else if (IsFilePathRestriction)
             {
-                value16?.Invoke(Value16!);
+                filePathRestriction?.Invoke(FilePathRestriction!);
             }
-            else if (IsValue17)
+            else if (IsMaxFilePathLength)
             {
-                value17?.Invoke(Value17!);
+                maxFilePathLength?.Invoke(MaxFilePathLength!);
             }
-            else if (IsValue18)
+            else if (IsFileExtensionRestriction)
             {
-                value18?.Invoke(Value18!);
+                fileExtensionRestriction?.Invoke(FileExtensionRestriction!);
             }
-            else if (IsValue19)
+            else if (IsMaxFileSize)
             {
-                value19?.Invoke(Value19!);
+                maxFileSize?.Invoke(MaxFileSize!);
             }
-            else if (IsValue20)
+            else if (IsWorkflows)
             {
-                value20?.Invoke(Value20!);
+                workflows?.Invoke(Workflows!);
             }
-            else if (IsValue21)
+            else if (IsCodeScanning)
             {
-                value21?.Invoke(Value21!);
+                codeScanning?.Invoke(CodeScanning!);
             }
         }
 
@@ -1083,47 +1083,47 @@ namespace GitHub
         {
             var fields = new object?[]
             {
-                Value1,
+                Creation,
                 typeof(global::GitHub.RepositoryRuleCreation),
-                Value2,
+                Update,
                 typeof(global::GitHub.RepositoryRuleUpdate),
-                Value3,
+                Deletion,
                 typeof(global::GitHub.RepositoryRuleDeletion),
-                Value4,
+                RequiredLinearHistory,
                 typeof(global::GitHub.RepositoryRuleRequiredLinearHistory),
-                Value5,
+                MergeQueue,
                 typeof(global::GitHub.RepositoryRuleMergeQueue),
-                Value6,
+                RequiredDeployments,
                 typeof(global::GitHub.RepositoryRuleRequiredDeployments),
-                Value7,
+                RequiredSignatures,
                 typeof(global::GitHub.RepositoryRuleRequiredSignatures),
-                Value8,
+                PullRequest,
                 typeof(global::GitHub.RepositoryRulePullRequest),
-                Value9,
+                RequiredStatusChecks,
                 typeof(global::GitHub.RepositoryRuleRequiredStatusChecks),
-                Value10,
+                NonFastForward,
                 typeof(global::GitHub.RepositoryRuleNonFastForward),
-                Value11,
+                CommitMessagePattern,
                 typeof(global::GitHub.RepositoryRuleCommitMessagePattern),
-                Value12,
+                CommitAuthorEmailPattern,
                 typeof(global::GitHub.RepositoryRuleCommitAuthorEmailPattern),
-                Value13,
+                CommitterEmailPattern,
                 typeof(global::GitHub.RepositoryRuleCommitterEmailPattern),
-                Value14,
+                BranchNamePattern,
                 typeof(global::GitHub.RepositoryRuleBranchNamePattern),
-                Value15,
+                TagNamePattern,
                 typeof(global::GitHub.RepositoryRuleTagNamePattern),
-                Value16,
+                FilePathRestriction,
                 typeof(global::GitHub.RepositoryRuleVariant16),
-                Value17,
+                MaxFilePathLength,
                 typeof(global::GitHub.RepositoryRuleVariant17),
-                Value18,
+                FileExtensionRestriction,
                 typeof(global::GitHub.RepositoryRuleVariant18),
-                Value19,
+                MaxFileSize,
                 typeof(global::GitHub.RepositoryRuleVariant19),
-                Value20,
+                Workflows,
                 typeof(global::GitHub.RepositoryRuleWorkflows),
-                Value21,
+                CodeScanning,
                 typeof(global::GitHub.RepositoryRuleCodeScanning),
             };
             const int offset = unchecked((int)2166136261);
@@ -1140,27 +1140,27 @@ namespace GitHub
         public bool Equals(RepositoryRule other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCreation?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleUpdate?>.Default.Equals(Value2, other.Value2) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleDeletion?>.Default.Equals(Value3, other.Value3) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredLinearHistory?>.Default.Equals(Value4, other.Value4) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleMergeQueue?>.Default.Equals(Value5, other.Value5) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredDeployments?>.Default.Equals(Value6, other.Value6) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredSignatures?>.Default.Equals(Value7, other.Value7) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRulePullRequest?>.Default.Equals(Value8, other.Value8) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredStatusChecks?>.Default.Equals(Value9, other.Value9) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleNonFastForward?>.Default.Equals(Value10, other.Value10) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitMessagePattern?>.Default.Equals(Value11, other.Value11) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?>.Default.Equals(Value12, other.Value12) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitterEmailPattern?>.Default.Equals(Value13, other.Value13) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleBranchNamePattern?>.Default.Equals(Value14, other.Value14) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleTagNamePattern?>.Default.Equals(Value15, other.Value15) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant16?>.Default.Equals(Value16, other.Value16) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant17?>.Default.Equals(Value17, other.Value17) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant18?>.Default.Equals(Value18, other.Value18) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant19?>.Default.Equals(Value19, other.Value19) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleWorkflows?>.Default.Equals(Value20, other.Value20) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCodeScanning?>.Default.Equals(Value21, other.Value21) 
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCreation?>.Default.Equals(Creation, other.Creation) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleUpdate?>.Default.Equals(Update, other.Update) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleDeletion?>.Default.Equals(Deletion, other.Deletion) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredLinearHistory?>.Default.Equals(RequiredLinearHistory, other.RequiredLinearHistory) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleMergeQueue?>.Default.Equals(MergeQueue, other.MergeQueue) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredDeployments?>.Default.Equals(RequiredDeployments, other.RequiredDeployments) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredSignatures?>.Default.Equals(RequiredSignatures, other.RequiredSignatures) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRulePullRequest?>.Default.Equals(PullRequest, other.PullRequest) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleRequiredStatusChecks?>.Default.Equals(RequiredStatusChecks, other.RequiredStatusChecks) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleNonFastForward?>.Default.Equals(NonFastForward, other.NonFastForward) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitMessagePattern?>.Default.Equals(CommitMessagePattern, other.CommitMessagePattern) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitAuthorEmailPattern?>.Default.Equals(CommitAuthorEmailPattern, other.CommitAuthorEmailPattern) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitterEmailPattern?>.Default.Equals(CommitterEmailPattern, other.CommitterEmailPattern) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleBranchNamePattern?>.Default.Equals(BranchNamePattern, other.BranchNamePattern) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleTagNamePattern?>.Default.Equals(TagNamePattern, other.TagNamePattern) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant16?>.Default.Equals(FilePathRestriction, other.FilePathRestriction) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant17?>.Default.Equals(MaxFilePathLength, other.MaxFilePathLength) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant18?>.Default.Equals(FileExtensionRestriction, other.FileExtensionRestriction) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant19?>.Default.Equals(MaxFileSize, other.MaxFileSize) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleWorkflows?>.Default.Equals(Workflows, other.Workflows) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCodeScanning?>.Default.Equals(CodeScanning, other.CodeScanning) 
                 ;
         }
 
