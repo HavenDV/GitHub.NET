@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class OrganizationProgrammaticAccessGrant
     {
         /// <summary>
-        /// Unique identifier of the fine-grained personal access token. The `pat_id` used to get details about an approved fine-grained personal access token.
+        /// Unique identifier of the fine-grained personal access token grant. The `pat_id` used to get details about an approved fine-grained personal access token.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -50,6 +50,13 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("access_granted_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AccessGrantedAt { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the user's token. This field can also be found in audit log events and the organization's settings for their PAT grants.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("token_id")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TokenId { get; set; }
 
         /// <summary>
         /// Whether the associated fine-grained personal access token has expired.

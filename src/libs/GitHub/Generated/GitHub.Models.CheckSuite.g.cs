@@ -9,11 +9,11 @@ namespace GitHub
     public sealed partial class CheckSuite
     {
         /// <summary>
-        /// Example: 5
+        /// Example: 5L
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required int Id { get; set; }
+        public required long Id { get; set; }
 
         /// <summary>
         /// Example: MDEwOkNoZWNrU3VpdGU1

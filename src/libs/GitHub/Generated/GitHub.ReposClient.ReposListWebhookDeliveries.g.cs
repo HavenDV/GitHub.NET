@@ -11,8 +11,7 @@ namespace GitHub
             ref string repo,
             ref int hookId,
             ref int? perPage,
-            ref string? cursor,
-            ref bool? redelivery);
+            ref string? cursor);
         partial void PrepareReposListWebhookDeliveriesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -20,8 +19,7 @@ namespace GitHub
             string repo,
             int hookId,
             int? perPage,
-            string? cursor,
-            bool? redelivery);
+            string? cursor);
         partial void ProcessReposListWebhookDeliveriesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -42,7 +40,6 @@ namespace GitHub
         /// Default Value: 30
         /// </param>
         /// <param name="cursor"></param>
-        /// <param name="redelivery"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.HookDeliveryItem>> ReposListWebhookDeliveriesAsync(
@@ -51,7 +48,6 @@ namespace GitHub
             int hookId,
             int? perPage = default,
             string? cursor = default,
-            bool? redelivery = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -62,8 +58,7 @@ namespace GitHub
                 repo: ref repo,
                 hookId: ref hookId,
                 perPage: ref perPage,
-                cursor: ref cursor,
-                redelivery: ref redelivery);
+                cursor: ref cursor);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/repos/{owner}/{repo}/hooks/{hookId}/deliveries",
@@ -71,7 +66,6 @@ namespace GitHub
             __pathBuilder 
                 .AddOptionalParameter("per_page", perPage?.ToString()) 
                 .AddOptionalParameter("cursor", cursor) 
-                .AddOptionalParameter("redelivery", redelivery?.ToString()) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -88,8 +82,7 @@ namespace GitHub
                 repo: repo,
                 hookId: hookId,
                 perPage: perPage,
-                cursor: cursor,
-                redelivery: redelivery);
+                cursor: cursor);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
