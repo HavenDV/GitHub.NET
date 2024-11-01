@@ -59,6 +59,13 @@ namespace GitHub
         public required string CreatedAt { get; set; }
 
         /// <summary>
+        /// Unique identifier of the user's token. This field can also be found in audit log events and the organization's settings for their PAT grants.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("token_id")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required int TokenId { get; set; }
+
+        /// <summary>
         /// Whether the associated fine-grained personal access token has expired.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("token_expired")]

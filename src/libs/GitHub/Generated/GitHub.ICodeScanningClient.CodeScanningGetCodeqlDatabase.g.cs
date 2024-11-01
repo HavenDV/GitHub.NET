@@ -12,7 +12,7 @@ namespace GitHub
         /// to [`application/zip`](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types), and make sure<br/>
         /// your HTTP client is configured to follow redirects or use the `Location` header<br/>
         /// to make a second request to get the redirect URL.<br/>
-        /// OAuth app tokens and personal access tokens (classic) need the `security_events` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
+        /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
