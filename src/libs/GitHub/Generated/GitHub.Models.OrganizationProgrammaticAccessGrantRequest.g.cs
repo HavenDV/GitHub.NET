@@ -66,6 +66,13 @@ namespace GitHub
         public required int TokenId { get; set; }
 
         /// <summary>
+        /// The name given to the user's token. This field can also be found in an organization's settings page for Active Tokens.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("token_name")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string TokenName { get; set; }
+
+        /// <summary>
         /// Whether the associated fine-grained personal access token has expired.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("token_expired")]

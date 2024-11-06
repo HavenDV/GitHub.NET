@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The total number of seat assignments created.
+    /// The total number of seats created for members of the specified team(s).
     /// </summary>
     public sealed partial class CopilotAddCopilotSeatsForTeamsResponse
     {

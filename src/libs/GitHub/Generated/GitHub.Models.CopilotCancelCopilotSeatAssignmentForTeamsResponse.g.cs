@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The total number of seat assignments cancelled.
+    /// The total number of seats set to "pending cancellation" for members of the specified team(s).
     /// </summary>
     public sealed partial class CopilotCancelCopilotSeatAssignmentForTeamsResponse
     {
