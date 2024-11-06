@@ -217,6 +217,12 @@ namespace GitHub
         public string? SecretScanningPushProtectionCustomLink { get; set; }
 
         /// <summary>
+        /// Controls whether or not deploy keys may be added and used for repositories in the organization.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("deploy_keys_enabled_for_repositories")]
+        public bool? DeployKeysEnabledForRepositories { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]

@@ -111,6 +111,9 @@ namespace GitHub
         /// <param name="secretScanningPushProtectionCustomLink">
         /// If `secret_scanning_push_protection_custom_link_enabled` is true, the URL that will be displayed to contributors who are blocked from pushing a secret.
         /// </param>
+        /// <param name="deployKeysEnabledForRepositories">
+        /// Controls whether or not deploy keys may be added and used for repositories in the organization.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.OrganizationFull> OrgsUpdateAsync(
@@ -138,6 +141,7 @@ namespace GitHub
             string? blog = default,
             bool? secretScanningPushProtectionCustomLinkEnabled = default,
             string? secretScanningPushProtectionCustomLink = default,
+            bool? deployKeysEnabledForRepositories = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
