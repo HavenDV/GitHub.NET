@@ -39,6 +39,7 @@ namespace GitHub
         /// The response contains metrics for up to 28 days prior. Usage metrics are processed once per day for the previous day,<br/>
         /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,<br/>
         /// they must have telemetry enabled in their IDE.<br/>
+        /// The time zone in the response is in UTC time, that means that the cutoff time for the "day" is UTC time.<br/>
         /// Only owners and billing managers can view Copilot usage metrics for the enterprise.<br/>
         /// OAuth app tokens and personal access tokens (classic) need either the `manage_billing:copilot` or `read:enterprise` scopes to use this endpoint.
         /// </summary>
