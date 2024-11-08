@@ -44,10 +44,10 @@ namespace GitHub
         public required string SyncToOrganizations { get; set; }
 
         /// <summary>
-        /// Example: 1
+        /// Example: 62ab9291-fae2-468e-974b-7e45096d5021
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("group_id")]
-        public int? GroupId { get; set; }
+        public string? GroupId { get; set; }
 
         /// <summary>
         /// Example: https://github.com/enterprises/dc/teams/justice-league
