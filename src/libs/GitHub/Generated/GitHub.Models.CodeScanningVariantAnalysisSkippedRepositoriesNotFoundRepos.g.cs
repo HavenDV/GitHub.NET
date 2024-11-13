@@ -12,6 +12,7 @@ namespace GitHub
         /// The total number of repositories that were skipped for this reason.<br/>
         /// Example: 2
         /// </summary>
+        /// <example>2</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int RepositoryCount { get; set; }
@@ -29,91 +30,30 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="repositoryCount">
+        /// The total number of repositories that were skipped for this reason.<br/>
+        /// Example: 2
+        /// </param>
+        /// <param name="repositoryFullNames">
+        /// A list of full repository names that were skipped. This list may not include all repositories that were skipped.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos(
+            int repositoryCount,
+            global::System.Collections.Generic.IList<string> repositoryFullNames)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.RepositoryCount = repositoryCount;
+            this.RepositoryFullNames = repositoryFullNames ?? throw new global::System.ArgumentNullException(nameof(repositoryFullNames));
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos),
-                jsonSerializerContext) as global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

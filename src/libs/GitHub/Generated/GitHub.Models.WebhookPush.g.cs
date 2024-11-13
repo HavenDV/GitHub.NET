@@ -127,91 +127,100 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookPush" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="after">
+        /// The SHA of the most recent commit on `ref` after the push.
+        /// </param>
+        /// <param name="baseRef"></param>
+        /// <param name="before">
+        /// The SHA of the most recent commit on `ref` before the push.
+        /// </param>
+        /// <param name="commits">
+        /// An array of commit objects describing the pushed commits. (Pushed commits are all commits that are included in the `compare` between the `before` commit and the `after` commit.) The array includes a maximum of 2048 commits. If necessary, you can use the [Commits API](https://docs.github.com/rest/commits) to fetch additional commits.
+        /// </param>
+        /// <param name="compare">
+        /// URL that shows the changes in this `ref` update, from the `before` commit to the `after` commit. For a newly created `ref` that is directly based on the default branch, this is the comparison between the head of the default branch and the `after` commit. Otherwise, this shows all commits until the `after` commit.
+        /// </param>
+        /// <param name="created">
+        /// Whether this push created the `ref`.
+        /// </param>
+        /// <param name="deleted">
+        /// Whether this push deleted the `ref`.
+        /// </param>
+        /// <param name="enterprise">
+        /// An enterprise on GitHub. Webhook payloads contain the `enterprise` property when the webhook is configured<br/>
+        /// on an enterprise account or an organization that's part of an enterprise account. For more information,<br/>
+        /// see "[About enterprise accounts](https://docs.github.com/admin/overview/about-enterprise-accounts)."
+        /// </param>
+        /// <param name="forced">
+        /// Whether this push was a force push of the `ref`.
+        /// </param>
+        /// <param name="headCommit"></param>
+        /// <param name="installation">
+        /// The GitHub App installation. Webhook payloads contain the `installation` property when the event is configured<br/>
+        /// for and sent to a GitHub App. For more information,<br/>
+        /// see "[Using webhooks with GitHub Apps](https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps)."
+        /// </param>
+        /// <param name="organization">
+        /// A GitHub organization. Webhook payloads contain the `organization` property when the webhook is configured for an<br/>
+        /// organization, or when the event occurs from activity in a repository owned by an organization.
+        /// </param>
+        /// <param name="pusher">
+        /// Metaproperties for Git author/committer information.
+        /// </param>
+        /// <param name="ref">
+        /// The full git ref that was pushed. Example: `refs/heads/main` or `refs/tags/v3.14.1`.
+        /// </param>
+        /// <param name="repository">
+        /// A git repository
+        /// </param>
+        /// <param name="sender">
+        /// A GitHub user.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookPush(
+            string after,
+            string? baseRef,
+            string before,
+            global::System.Collections.Generic.IList<global::GitHub.WebhookPushCommit> commits,
+            string compare,
+            bool created,
+            bool deleted,
+            bool forced,
+            global::GitHub.WebhookPushHeadCommit? headCommit,
+            global::GitHub.WebhookPushPusher pusher,
+            string @ref,
+            global::GitHub.WebhookPushRepository repository,
+            global::GitHub.EnterpriseWebhooks? enterprise,
+            global::GitHub.SimpleInstallation? installation,
+            global::GitHub.OrganizationSimpleWebhooks? organization,
+            global::GitHub.SimpleUser? sender)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.After = after ?? throw new global::System.ArgumentNullException(nameof(after));
+            this.BaseRef = baseRef ?? throw new global::System.ArgumentNullException(nameof(baseRef));
+            this.Before = before ?? throw new global::System.ArgumentNullException(nameof(before));
+            this.Commits = commits ?? throw new global::System.ArgumentNullException(nameof(commits));
+            this.Compare = compare ?? throw new global::System.ArgumentNullException(nameof(compare));
+            this.Created = created;
+            this.Deleted = deleted;
+            this.Forced = forced;
+            this.HeadCommit = headCommit ?? throw new global::System.ArgumentNullException(nameof(headCommit));
+            this.Pusher = pusher ?? throw new global::System.ArgumentNullException(nameof(pusher));
+            this.Ref = @ref ?? throw new global::System.ArgumentNullException(nameof(@ref));
+            this.Repository = repository ?? throw new global::System.ArgumentNullException(nameof(repository));
+            this.Enterprise = enterprise;
+            this.Installation = installation;
+            this.Organization = organization;
+            this.Sender = sender;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookPush" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookPush()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookPush? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookPush),
-                jsonSerializerContext) as global::GitHub.WebhookPush;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookPush? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookPush>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookPush?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookPush),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookPush;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookPush?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookPush?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

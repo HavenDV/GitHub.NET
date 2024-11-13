@@ -74,91 +74,49 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookRubygemsMetadata" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="name"></param>
+        /// <param name="description"></param>
+        /// <param name="readme"></param>
+        /// <param name="homepage"></param>
+        /// <param name="versionInfo"></param>
+        /// <param name="platform"></param>
+        /// <param name="metadata"></param>
+        /// <param name="repo"></param>
+        /// <param name="dependencies"></param>
+        /// <param name="commitOid"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookRubygemsMetadata(
+            string? name,
+            string? description,
+            string? readme,
+            string? homepage,
+            global::GitHub.WebhookRubygemsMetadataVersionInfo? versionInfo,
+            string? platform,
+            global::System.Collections.Generic.Dictionary<string, string>? metadata,
+            string? repo,
+            global::System.Collections.Generic.IList<global::System.Collections.Generic.Dictionary<string, string>>? dependencies,
+            string? commitOid)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Name = name;
+            this.Description = description;
+            this.Readme = readme;
+            this.Homepage = homepage;
+            this.VersionInfo = versionInfo;
+            this.Platform = platform;
+            this.Metadata = metadata;
+            this.Repo = repo;
+            this.Dependencies = dependencies;
+            this.CommitOid = commitOid;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookRubygemsMetadata" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookRubygemsMetadata()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookRubygemsMetadata? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookRubygemsMetadata),
-                jsonSerializerContext) as global::GitHub.WebhookRubygemsMetadata;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookRubygemsMetadata? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookRubygemsMetadata>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookRubygemsMetadata?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookRubygemsMetadata),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookRubygemsMetadata;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookRubygemsMetadata?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookRubygemsMetadata?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

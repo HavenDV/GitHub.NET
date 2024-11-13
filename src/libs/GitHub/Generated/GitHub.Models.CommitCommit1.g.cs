@@ -11,6 +11,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/repos/octocat/Hello-World/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e
         /// </summary>
+        /// <example>https://api.github.com/repos/octocat/Hello-World/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -32,6 +33,7 @@ namespace GitHub
         /// <summary>
         /// Example: Fix all the bugs
         /// </summary>
+        /// <example>Fix all the bugs</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Message { get; set; }
@@ -39,6 +41,7 @@ namespace GitHub
         /// <summary>
         /// Example: 0
         /// </summary>
+        /// <example>0</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("comment_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int CommentCount { get; set; }
@@ -62,91 +65,50 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CommitCommit1" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="url">
+        /// Example: https://api.github.com/repos/octocat/Hello-World/commits/6dcb09b5b57875f334f61aebed695e2e4193db5e
+        /// </param>
+        /// <param name="author">
+        /// Metaproperties for Git author/committer information.
+        /// </param>
+        /// <param name="committer">
+        /// Metaproperties for Git author/committer information.
+        /// </param>
+        /// <param name="message">
+        /// Example: Fix all the bugs
+        /// </param>
+        /// <param name="commentCount">
+        /// Example: 0
+        /// </param>
+        /// <param name="tree"></param>
+        /// <param name="verification"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CommitCommit1(
+            string url,
+            global::GitHub.NullableGitUser? author,
+            global::GitHub.NullableGitUser? committer,
+            string message,
+            int commentCount,
+            global::GitHub.CommitCommit1Tree tree,
+            global::GitHub.Verification? verification)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
+            this.Committer = committer ?? throw new global::System.ArgumentNullException(nameof(committer));
+            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
+            this.CommentCount = commentCount;
+            this.Tree = tree ?? throw new global::System.ArgumentNullException(nameof(tree));
+            this.Verification = verification;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CommitCommit1" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CommitCommit1()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CommitCommit1? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CommitCommit1),
-                jsonSerializerContext) as global::GitHub.CommitCommit1;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CommitCommit1? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CommitCommit1>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CommitCommit1?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CommitCommit1),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CommitCommit1;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CommitCommit1?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CommitCommit1?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

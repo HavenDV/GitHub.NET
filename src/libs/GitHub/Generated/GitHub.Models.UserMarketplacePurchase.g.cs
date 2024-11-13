@@ -11,6 +11,7 @@ namespace GitHub
         /// <summary>
         /// Example: monthly
         /// </summary>
+        /// <example>monthly</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("billing_cycle")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string BillingCycle { get; set; }
@@ -32,6 +33,7 @@ namespace GitHub
         /// <summary>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("on_free_trial")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool OnFreeTrial { get; set; }
@@ -70,91 +72,49 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="UserMarketplacePurchase" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="billingCycle">
+        /// Example: monthly
+        /// </param>
+        /// <param name="nextBillingDate"></param>
+        /// <param name="unitCount"></param>
+        /// <param name="onFreeTrial">
+        /// Example: true
+        /// </param>
+        /// <param name="freeTrialEndsOn"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="account"></param>
+        /// <param name="plan">
+        /// Marketplace Listing Plan
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public UserMarketplacePurchase(
+            string billingCycle,
+            global::System.DateTime? nextBillingDate,
+            int? unitCount,
+            bool onFreeTrial,
+            global::System.DateTime? freeTrialEndsOn,
+            global::System.DateTime? updatedAt,
+            global::GitHub.MarketplaceAccount account,
+            global::GitHub.MarketplaceListingPlan plan)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.BillingCycle = billingCycle ?? throw new global::System.ArgumentNullException(nameof(billingCycle));
+            this.NextBillingDate = nextBillingDate;
+            this.UnitCount = unitCount;
+            this.OnFreeTrial = onFreeTrial;
+            this.FreeTrialEndsOn = freeTrialEndsOn;
+            this.UpdatedAt = updatedAt;
+            this.Account = account ?? throw new global::System.ArgumentNullException(nameof(account));
+            this.Plan = plan ?? throw new global::System.ArgumentNullException(nameof(plan));
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="UserMarketplacePurchase" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public UserMarketplacePurchase()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.UserMarketplacePurchase? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.UserMarketplacePurchase),
-                jsonSerializerContext) as global::GitHub.UserMarketplacePurchase;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.UserMarketplacePurchase? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.UserMarketplacePurchase>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.UserMarketplacePurchase?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.UserMarketplacePurchase),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.UserMarketplacePurchase;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.UserMarketplacePurchase?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.UserMarketplacePurchase?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

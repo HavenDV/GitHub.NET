@@ -144,91 +144,117 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CodeSecurityCreateConfigurationRequest" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="name">
+        /// The name of the code security configuration. Must be unique within the organization.
+        /// </param>
+        /// <param name="description">
+        /// A description of the code security configuration
+        /// </param>
+        /// <param name="advancedSecurity">
+        /// The enablement status of GitHub Advanced Security<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="dependencyGraph">
+        /// The enablement status of Dependency Graph<br/>
+        /// Default Value: enabled
+        /// </param>
+        /// <param name="dependencyGraphAutosubmitAction">
+        /// The enablement status of Automatic dependency submission<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="dependencyGraphAutosubmitActionOptions">
+        /// Feature options for Automatic dependency submission
+        /// </param>
+        /// <param name="dependabotAlerts">
+        /// The enablement status of Dependabot alerts<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="dependabotSecurityUpdates">
+        /// The enablement status of Dependabot security updates<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="codeScanningDefaultSetup">
+        /// The enablement status of code scanning default setup<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="secretScanning">
+        /// The enablement status of secret scanning<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="secretScanningPushProtection">
+        /// The enablement status of secret scanning push protection<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="secretScanningDelegatedBypass">
+        /// The enablement status of secret scanning delegated bypass<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="secretScanningDelegatedBypassOptions">
+        /// Feature options for secret scanning delegated bypass
+        /// </param>
+        /// <param name="secretScanningValidityChecks">
+        /// The enablement status of secret scanning validity checks<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="secretScanningNonProviderPatterns">
+        /// The enablement status of secret scanning non provider patterns<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="privateVulnerabilityReporting">
+        /// The enablement status of private vulnerability reporting<br/>
+        /// Default Value: disabled
+        /// </param>
+        /// <param name="enforcement">
+        /// The enforcement status for a security configuration<br/>
+        /// Default Value: enforced
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CodeSecurityCreateConfigurationRequest(
+            string name,
+            string description,
+            global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity? advancedSecurity,
+            global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph? dependencyGraph,
+            global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction? dependencyGraphAutosubmitAction,
+            global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionOptions? dependencyGraphAutosubmitActionOptions,
+            global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts? dependabotAlerts,
+            global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates? dependabotSecurityUpdates,
+            global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? secretScanning,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? secretScanningPushProtection,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass? secretScanningDelegatedBypass,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptions? secretScanningDelegatedBypassOptions,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns,
+            global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting,
+            global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement? enforcement)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
+            this.AdvancedSecurity = advancedSecurity;
+            this.DependencyGraph = dependencyGraph;
+            this.DependencyGraphAutosubmitAction = dependencyGraphAutosubmitAction;
+            this.DependencyGraphAutosubmitActionOptions = dependencyGraphAutosubmitActionOptions;
+            this.DependabotAlerts = dependabotAlerts;
+            this.DependabotSecurityUpdates = dependabotSecurityUpdates;
+            this.CodeScanningDefaultSetup = codeScanningDefaultSetup;
+            this.SecretScanning = secretScanning;
+            this.SecretScanningPushProtection = secretScanningPushProtection;
+            this.SecretScanningDelegatedBypass = secretScanningDelegatedBypass;
+            this.SecretScanningDelegatedBypassOptions = secretScanningDelegatedBypassOptions;
+            this.SecretScanningValidityChecks = secretScanningValidityChecks;
+            this.SecretScanningNonProviderPatterns = secretScanningNonProviderPatterns;
+            this.PrivateVulnerabilityReporting = privateVulnerabilityReporting;
+            this.Enforcement = enforcement;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CodeSecurityCreateConfigurationRequest" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CodeSecurityCreateConfigurationRequest()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CodeSecurityCreateConfigurationRequest? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CodeSecurityCreateConfigurationRequest),
-                jsonSerializerContext) as global::GitHub.CodeSecurityCreateConfigurationRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CodeSecurityCreateConfigurationRequest? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CodeSecurityCreateConfigurationRequest>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CodeSecurityCreateConfigurationRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CodeSecurityCreateConfigurationRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CodeSecurityCreateConfigurationRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CodeSecurityCreateConfigurationRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CodeSecurityCreateConfigurationRequest?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

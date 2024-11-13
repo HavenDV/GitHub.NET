@@ -49,91 +49,34 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id"></param>
+        /// <param name="login"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="organizationBillingEmail"></param>
+        /// <param name="type"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount(
+            int id,
+            string login,
+            string nodeId,
+            string? organizationBillingEmail,
+            string type)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Login = login ?? throw new global::System.ArgumentNullException(nameof(login));
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.OrganizationBillingEmail = organizationBillingEmail ?? throw new global::System.ArgumentNullException(nameof(organizationBillingEmail));
+            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount),
-                jsonSerializerContext) as global::GitHub.WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookMarketplacePurchasePendingChangePreviousMarketplacePurchaseAccount?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

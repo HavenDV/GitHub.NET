@@ -13,8 +13,8 @@ namespace GitHub
         /// <param name="patId"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsUpdatePatAccessAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task OrgsUpdatePatAccessAsync(
             string org,
             int patId,
             global::GitHub.OrgsUpdatePatAccessRequest request,
@@ -32,7 +32,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsUpdatePatAccessAsync(
+        global::System.Threading.Tasks.Task OrgsUpdatePatAccessAsync(
             string org,
             int patId,
             global::GitHub.OrgsUpdatePatAccessRequestAction action = default,

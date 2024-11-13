@@ -16,19 +16,14 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessActivityDeleteThreadSubscriptionResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
         /// Delete a thread subscription<br/>
         /// Mutes all future notifications for a conversation until you comment on the thread or get an **@mention**. If you are watching the repository of the thread, you will still receive notifications. To ignore future notifications for a repository you are watching, use the [Set a thread subscription](https://docs.github.com/rest/activity/notifications#set-a-thread-subscription) endpoint and set `ignore` to `true`.
         /// </summary>
         /// <param name="threadId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> ActivityDeleteThreadSubscriptionAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task ActivityDeleteThreadSubscriptionAsync(
             int threadId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -65,30 +60,23 @@ namespace GitHub
             ProcessActivityDeleteThreadSubscriptionResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
-
-            var __content = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-
-            ProcessResponseContent(
-                client: HttpClient,
-                response: __response,
-                content: ref __content);
-            ProcessActivityDeleteThreadSubscriptionResponseContent(
-                httpClient: HttpClient,
-                httpResponseMessage: __response,
-                content: ref __content);
-
             try
             {
                 __response.EnsureSuccessStatusCode();
             }
             catch (global::System.Net.Http.HttpRequestException __ex)
             {
-                throw new global::System.InvalidOperationException(__content, __ex);
+                throw new global::GitHub.ApiException(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    innerException: __ex,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
             }
-
-            return
-                global::GitHub.BasicError.FromJson(__content, JsonSerializerContext) ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }
 }

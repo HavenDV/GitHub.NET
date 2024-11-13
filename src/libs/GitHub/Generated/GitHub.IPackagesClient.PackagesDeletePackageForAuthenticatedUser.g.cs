@@ -12,8 +12,8 @@ namespace GitHub
         /// <param name="packageType"></param>
         /// <param name="packageName"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> PackagesDeletePackageForAuthenticatedUserAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task PackagesDeletePackageForAuthenticatedUserAsync(
             global::GitHub.PackagesDeletePackageForAuthenticatedUserPackageType packageType,
             string packageName,
             global::System.Threading.CancellationToken cancellationToken = default);

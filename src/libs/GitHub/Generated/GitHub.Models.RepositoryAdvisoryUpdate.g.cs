@@ -82,91 +82,74 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="RepositoryAdvisoryUpdate" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="summary">
+        /// A short summary of the advisory.
+        /// </param>
+        /// <param name="description">
+        /// A detailed description of what the advisory impacts.
+        /// </param>
+        /// <param name="cveId">
+        /// The Common Vulnerabilities and Exposures (CVE) ID.
+        /// </param>
+        /// <param name="vulnerabilities">
+        /// A product affected by the vulnerability detailed in a repository security advisory.
+        /// </param>
+        /// <param name="cweIds">
+        /// A list of Common Weakness Enumeration (CWE) IDs.
+        /// </param>
+        /// <param name="credits">
+        /// A list of users receiving credit for their participation in the security advisory.
+        /// </param>
+        /// <param name="severity">
+        /// The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
+        /// </param>
+        /// <param name="cvssVectorString">
+        /// The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or `severity`.
+        /// </param>
+        /// <param name="state">
+        /// The state of the advisory.
+        /// </param>
+        /// <param name="collaboratingUsers">
+        /// A list of usernames who have been granted write access to the advisory.
+        /// </param>
+        /// <param name="collaboratingTeams">
+        /// A list of team slugs which have been granted write access to the advisory.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public RepositoryAdvisoryUpdate(
+            string? summary,
+            string? description,
+            string? cveId,
+            global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryUpdateVulnerabilitie>? vulnerabilities,
+            global::System.Collections.Generic.IList<string>? cweIds,
+            global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisoryUpdateCredit>? credits,
+            global::GitHub.RepositoryAdvisoryUpdateSeverity? severity,
+            string? cvssVectorString,
+            global::GitHub.RepositoryAdvisoryUpdateState? state,
+            global::System.Collections.Generic.IList<string>? collaboratingUsers,
+            global::System.Collections.Generic.IList<string>? collaboratingTeams)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Summary = summary;
+            this.Description = description;
+            this.CveId = cveId;
+            this.Vulnerabilities = vulnerabilities;
+            this.CweIds = cweIds;
+            this.Credits = credits;
+            this.Severity = severity;
+            this.CvssVectorString = cvssVectorString;
+            this.State = state;
+            this.CollaboratingUsers = collaboratingUsers;
+            this.CollaboratingTeams = collaboratingTeams;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="RepositoryAdvisoryUpdate" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public RepositoryAdvisoryUpdate()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.RepositoryAdvisoryUpdate? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.RepositoryAdvisoryUpdate),
-                jsonSerializerContext) as global::GitHub.RepositoryAdvisoryUpdate;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.RepositoryAdvisoryUpdate? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.RepositoryAdvisoryUpdate>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.RepositoryAdvisoryUpdate?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.RepositoryAdvisoryUpdate),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.RepositoryAdvisoryUpdate;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.RepositoryAdvisoryUpdate?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.RepositoryAdvisoryUpdate?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

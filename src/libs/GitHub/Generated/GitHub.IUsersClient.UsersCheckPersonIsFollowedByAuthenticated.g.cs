@@ -9,8 +9,8 @@ namespace GitHub
         /// </summary>
         /// <param name="username"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> UsersCheckPersonIsFollowedByAuthenticatedAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task UsersCheckPersonIsFollowedByAuthenticatedAsync(
             string username,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

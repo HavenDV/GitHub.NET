@@ -243,91 +243,124 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="UserSearchResultItem" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="login"></param>
+        /// <param name="id"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="avatarUrl"></param>
+        /// <param name="gravatarId"></param>
+        /// <param name="url"></param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="followersUrl"></param>
+        /// <param name="subscriptionsUrl"></param>
+        /// <param name="organizationsUrl"></param>
+        /// <param name="reposUrl"></param>
+        /// <param name="receivedEventsUrl"></param>
+        /// <param name="type"></param>
+        /// <param name="score"></param>
+        /// <param name="followingUrl"></param>
+        /// <param name="gistsUrl"></param>
+        /// <param name="starredUrl"></param>
+        /// <param name="eventsUrl"></param>
+        /// <param name="publicRepos"></param>
+        /// <param name="publicGists"></param>
+        /// <param name="followers"></param>
+        /// <param name="following"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="name"></param>
+        /// <param name="bio"></param>
+        /// <param name="email"></param>
+        /// <param name="location"></param>
+        /// <param name="siteAdmin"></param>
+        /// <param name="hireable"></param>
+        /// <param name="textMatches"></param>
+        /// <param name="blog"></param>
+        /// <param name="company"></param>
+        /// <param name="suspendedAt"></param>
+        /// <param name="userViewType"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public UserSearchResultItem(
+            string login,
+            long id,
+            string nodeId,
+            string avatarUrl,
+            string? gravatarId,
+            string url,
+            string htmlUrl,
+            string followersUrl,
+            string subscriptionsUrl,
+            string organizationsUrl,
+            string reposUrl,
+            string receivedEventsUrl,
+            string type,
+            double score,
+            string followingUrl,
+            string gistsUrl,
+            string starredUrl,
+            string eventsUrl,
+            bool siteAdmin,
+            int? publicRepos,
+            int? publicGists,
+            int? followers,
+            int? following,
+            global::System.DateTime? createdAt,
+            global::System.DateTime? updatedAt,
+            string? name,
+            string? bio,
+            string? email,
+            string? location,
+            bool? hireable,
+            global::System.Collections.Generic.IList<global::GitHub.SearchResultTextMatche>? textMatches,
+            string? blog,
+            string? company,
+            global::System.DateTime? suspendedAt,
+            string? userViewType)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Login = login ?? throw new global::System.ArgumentNullException(nameof(login));
+            this.Id = id;
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
+            this.GravatarId = gravatarId ?? throw new global::System.ArgumentNullException(nameof(gravatarId));
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.FollowersUrl = followersUrl ?? throw new global::System.ArgumentNullException(nameof(followersUrl));
+            this.SubscriptionsUrl = subscriptionsUrl ?? throw new global::System.ArgumentNullException(nameof(subscriptionsUrl));
+            this.OrganizationsUrl = organizationsUrl ?? throw new global::System.ArgumentNullException(nameof(organizationsUrl));
+            this.ReposUrl = reposUrl ?? throw new global::System.ArgumentNullException(nameof(reposUrl));
+            this.ReceivedEventsUrl = receivedEventsUrl ?? throw new global::System.ArgumentNullException(nameof(receivedEventsUrl));
+            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
+            this.Score = score;
+            this.FollowingUrl = followingUrl ?? throw new global::System.ArgumentNullException(nameof(followingUrl));
+            this.GistsUrl = gistsUrl ?? throw new global::System.ArgumentNullException(nameof(gistsUrl));
+            this.StarredUrl = starredUrl ?? throw new global::System.ArgumentNullException(nameof(starredUrl));
+            this.EventsUrl = eventsUrl ?? throw new global::System.ArgumentNullException(nameof(eventsUrl));
+            this.SiteAdmin = siteAdmin;
+            this.PublicRepos = publicRepos;
+            this.PublicGists = publicGists;
+            this.Followers = followers;
+            this.Following = following;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.Name = name;
+            this.Bio = bio;
+            this.Email = email;
+            this.Location = location;
+            this.Hireable = hireable;
+            this.TextMatches = textMatches;
+            this.Blog = blog;
+            this.Company = company;
+            this.SuspendedAt = suspendedAt;
+            this.UserViewType = userViewType;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="UserSearchResultItem" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public UserSearchResultItem()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.UserSearchResultItem? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.UserSearchResultItem),
-                jsonSerializerContext) as global::GitHub.UserSearchResultItem;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.UserSearchResultItem? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.UserSearchResultItem>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.UserSearchResultItem?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.UserSearchResultItem),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.UserSearchResultItem;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.UserSearchResultItem?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.UserSearchResultItem?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

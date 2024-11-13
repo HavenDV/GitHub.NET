@@ -58,91 +58,43 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="ProtectedBranchRequiredPullRequestReviews" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="url"></param>
+        /// <param name="dismissStaleReviews"></param>
+        /// <param name="requireCodeOwnerReviews"></param>
+        /// <param name="requiredApprovingReviewCount"></param>
+        /// <param name="requireLastPushApproval">
+        /// Whether the most recent push must be approved by someone other than the person who pushed it.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="dismissalRestrictions"></param>
+        /// <param name="bypassPullRequestAllowances"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public ProtectedBranchRequiredPullRequestReviews(
+            string url,
+            bool? dismissStaleReviews,
+            bool? requireCodeOwnerReviews,
+            int? requiredApprovingReviewCount,
+            bool? requireLastPushApproval,
+            global::GitHub.ProtectedBranchRequiredPullRequestReviewsDismissalRestrictions? dismissalRestrictions,
+            global::GitHub.ProtectedBranchRequiredPullRequestReviewsBypassPullRequestAllowances? bypassPullRequestAllowances)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.DismissStaleReviews = dismissStaleReviews;
+            this.RequireCodeOwnerReviews = requireCodeOwnerReviews;
+            this.RequiredApprovingReviewCount = requiredApprovingReviewCount;
+            this.RequireLastPushApproval = requireLastPushApproval;
+            this.DismissalRestrictions = dismissalRestrictions;
+            this.BypassPullRequestAllowances = bypassPullRequestAllowances;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="ProtectedBranchRequiredPullRequestReviews" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public ProtectedBranchRequiredPullRequestReviews()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.ProtectedBranchRequiredPullRequestReviews? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.ProtectedBranchRequiredPullRequestReviews),
-                jsonSerializerContext) as global::GitHub.ProtectedBranchRequiredPullRequestReviews;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.ProtectedBranchRequiredPullRequestReviews? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.ProtectedBranchRequiredPullRequestReviews>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.ProtectedBranchRequiredPullRequestReviews?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.ProtectedBranchRequiredPullRequestReviews),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.ProtectedBranchRequiredPullRequestReviews;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.ProtectedBranchRequiredPullRequestReviews?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.ProtectedBranchRequiredPullRequestReviews?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

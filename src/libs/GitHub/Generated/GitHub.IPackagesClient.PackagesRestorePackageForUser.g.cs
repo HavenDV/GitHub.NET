@@ -18,8 +18,8 @@ namespace GitHub
         /// <param name="username"></param>
         /// <param name="token"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> PackagesRestorePackageForUserAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task PackagesRestorePackageForUserAsync(
             global::GitHub.PackagesRestorePackageForUserPackageType packageType,
             string packageName,
             string username,

@@ -18,11 +18,6 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCodespacesRemoveRepositoryForSecretForAuthenticatedUserResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
         /// Remove a selected repository from a user secret<br/>
         /// Removes a repository from the selected repositories for a user's development environment secret.<br/>
@@ -32,8 +27,8 @@ namespace GitHub
         /// <param name="secretName"></param>
         /// <param name="repositoryId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> CodespacesRemoveRepositoryForSecretForAuthenticatedUserAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task CodespacesRemoveRepositoryForSecretForAuthenticatedUserAsync(
             string secretName,
             int repositoryId,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -73,30 +68,23 @@ namespace GitHub
             ProcessCodespacesRemoveRepositoryForSecretForAuthenticatedUserResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
-
-            var __content = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-
-            ProcessResponseContent(
-                client: HttpClient,
-                response: __response,
-                content: ref __content);
-            ProcessCodespacesRemoveRepositoryForSecretForAuthenticatedUserResponseContent(
-                httpClient: HttpClient,
-                httpResponseMessage: __response,
-                content: ref __content);
-
             try
             {
                 __response.EnsureSuccessStatusCode();
             }
             catch (global::System.Net.Http.HttpRequestException __ex)
             {
-                throw new global::System.InvalidOperationException(__content, __ex);
+                throw new global::GitHub.ApiException(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    innerException: __ex,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
             }
-
-            return
-                global::GitHub.BasicError.FromJson(__content, JsonSerializerContext) ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
     }
 }

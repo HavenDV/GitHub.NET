@@ -259,91 +259,124 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="actions"></param>
+        /// <param name="administration"></param>
+        /// <param name="checks"></param>
+        /// <param name="contentReferences"></param>
+        /// <param name="contents"></param>
+        /// <param name="deployments"></param>
+        /// <param name="discussions"></param>
+        /// <param name="emails"></param>
+        /// <param name="environments"></param>
+        /// <param name="issues"></param>
+        /// <param name="keys"></param>
+        /// <param name="members"></param>
+        /// <param name="metadata"></param>
+        /// <param name="organizationAdministration"></param>
+        /// <param name="organizationHooks"></param>
+        /// <param name="organizationPackages"></param>
+        /// <param name="organizationPlan"></param>
+        /// <param name="organizationProjects"></param>
+        /// <param name="organizationSecrets"></param>
+        /// <param name="organizationSelfHostedRunners"></param>
+        /// <param name="organizationUserBlocking"></param>
+        /// <param name="packages"></param>
+        /// <param name="pages"></param>
+        /// <param name="pullRequests"></param>
+        /// <param name="repositoryHooks"></param>
+        /// <param name="repositoryProjects"></param>
+        /// <param name="secretScanningAlerts"></param>
+        /// <param name="secrets"></param>
+        /// <param name="securityEvents"></param>
+        /// <param name="securityScanningAlert"></param>
+        /// <param name="singleFile"></param>
+        /// <param name="statuses"></param>
+        /// <param name="teamDiscussions"></param>
+        /// <param name="vulnerabilityAlerts"></param>
+        /// <param name="workflows"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions(
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsActions? actions,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsAdministration? administration,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsChecks? checks,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsContentReferences? contentReferences,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsContents? contents,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsDeployments? deployments,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsDiscussions? discussions,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsEmails? emails,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsEnvironments? environments,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsIssues? issues,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsKeys? keys,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsMembers? members,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsMetadata? metadata,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsOrganizationAdministration? organizationAdministration,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsOrganizationHooks? organizationHooks,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsOrganizationPackages? organizationPackages,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsOrganizationPlan? organizationPlan,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsOrganizationProjects? organizationProjects,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsOrganizationSecrets? organizationSecrets,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsOrganizationSelfHostedRunners? organizationSelfHostedRunners,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsOrganizationUserBlocking? organizationUserBlocking,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsPackages? packages,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsPages? pages,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsPullRequests? pullRequests,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsRepositoryHooks? repositoryHooks,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsRepositoryProjects? repositoryProjects,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsSecretScanningAlerts? secretScanningAlerts,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsSecrets? secrets,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsSecurityEvents? securityEvents,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsSecurityScanningAlert? securityScanningAlert,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsSingleFile? singleFile,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsStatuses? statuses,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsTeamDiscussions? teamDiscussions,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsVulnerabilityAlerts? vulnerabilityAlerts,
+            global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsWorkflows? workflows)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Actions = actions;
+            this.Administration = administration;
+            this.Checks = checks;
+            this.ContentReferences = contentReferences;
+            this.Contents = contents;
+            this.Deployments = deployments;
+            this.Discussions = discussions;
+            this.Emails = emails;
+            this.Environments = environments;
+            this.Issues = issues;
+            this.Keys = keys;
+            this.Members = members;
+            this.Metadata = metadata;
+            this.OrganizationAdministration = organizationAdministration;
+            this.OrganizationHooks = organizationHooks;
+            this.OrganizationPackages = organizationPackages;
+            this.OrganizationPlan = organizationPlan;
+            this.OrganizationProjects = organizationProjects;
+            this.OrganizationSecrets = organizationSecrets;
+            this.OrganizationSelfHostedRunners = organizationSelfHostedRunners;
+            this.OrganizationUserBlocking = organizationUserBlocking;
+            this.Packages = packages;
+            this.Pages = pages;
+            this.PullRequests = pullRequests;
+            this.RepositoryHooks = repositoryHooks;
+            this.RepositoryProjects = repositoryProjects;
+            this.SecretScanningAlerts = secretScanningAlerts;
+            this.Secrets = secrets;
+            this.SecurityEvents = securityEvents;
+            this.SecurityScanningAlert = securityScanningAlert;
+            this.SingleFile = singleFile;
+            this.Statuses = statuses;
+            this.TeamDiscussions = teamDiscussions;
+            this.VulnerabilityAlerts = vulnerabilityAlerts;
+            this.Workflows = workflows;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions),
-                jsonSerializerContext) as global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

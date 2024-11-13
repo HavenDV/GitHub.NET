@@ -12,8 +12,8 @@ namespace GitHub
         /// <param name="clientId"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.ValidationError> AppsDeleteAuthorizationAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task AppsDeleteAuthorizationAsync(
             string clientId,
             global::GitHub.AppsDeleteAuthorizationRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -29,7 +29,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.ValidationError> AppsDeleteAuthorizationAsync(
+        global::System.Threading.Tasks.Task AppsDeleteAuthorizationAsync(
             string clientId,
             string accessToken,
             global::System.Threading.CancellationToken cancellationToken = default);

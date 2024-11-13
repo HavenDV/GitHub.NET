@@ -19,6 +19,7 @@ namespace GitHub
         /// <summary>
         /// Example: path/to/package-lock.json
         /// </summary>
+        /// <example>path/to/package-lock.json</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("manifest")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Manifest { get; set; }
@@ -26,6 +27,7 @@ namespace GitHub
         /// <summary>
         /// Example: npm
         /// </summary>
+        /// <example>npm</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("ecosystem")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Ecosystem { get; set; }
@@ -33,6 +35,7 @@ namespace GitHub
         /// <summary>
         /// Example: @actions/core
         /// </summary>
+        /// <example>@actions/core</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -40,6 +43,7 @@ namespace GitHub
         /// <summary>
         /// Example: 1.0.0
         /// </summary>
+        /// <example>1.0.0</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("version")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Version { get; set; }
@@ -47,6 +51,7 @@ namespace GitHub
         /// <summary>
         /// Example: pkg:/npm/%40actions/core@1.1.0
         /// </summary>
+        /// <example>pkg:/npm/%40actions/core@1.1.0</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("package_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? PackageUrl { get; set; }
@@ -54,6 +59,7 @@ namespace GitHub
         /// <summary>
         /// Example: MIT
         /// </summary>
+        /// <example>MIT</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("license")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? License { get; set; }
@@ -61,6 +67,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/github/actions
         /// </summary>
+        /// <example>https://github.com/github/actions</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("source_repository_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? SourceRepositoryUrl { get; set; }
@@ -86,91 +93,65 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="DependencyGraphDiffItem" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="changeType"></param>
+        /// <param name="manifest">
+        /// Example: path/to/package-lock.json
+        /// </param>
+        /// <param name="ecosystem">
+        /// Example: npm
+        /// </param>
+        /// <param name="name">
+        /// Example: @actions/core
+        /// </param>
+        /// <param name="version">
+        /// Example: 1.0.0
+        /// </param>
+        /// <param name="packageUrl">
+        /// Example: pkg:/npm/%40actions/core@1.1.0
+        /// </param>
+        /// <param name="license">
+        /// Example: MIT
+        /// </param>
+        /// <param name="sourceRepositoryUrl">
+        /// Example: https://github.com/github/actions
+        /// </param>
+        /// <param name="vulnerabilities"></param>
+        /// <param name="scope">
+        /// Where the dependency is utilized. `development` means that the dependency is only utilized in the development environment. `runtime` means that the dependency is utilized at runtime and in the development environment.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public DependencyGraphDiffItem(
+            global::GitHub.DependencyGraphDiffItemChangeType changeType,
+            string manifest,
+            string ecosystem,
+            string name,
+            string version,
+            string? packageUrl,
+            string? license,
+            string? sourceRepositoryUrl,
+            global::System.Collections.Generic.IList<global::GitHub.DependencyGraphDiffItemVulnerabilitie> vulnerabilities,
+            global::GitHub.DependencyGraphDiffItemScope scope)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.ChangeType = changeType;
+            this.Manifest = manifest ?? throw new global::System.ArgumentNullException(nameof(manifest));
+            this.Ecosystem = ecosystem ?? throw new global::System.ArgumentNullException(nameof(ecosystem));
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Version = version ?? throw new global::System.ArgumentNullException(nameof(version));
+            this.PackageUrl = packageUrl ?? throw new global::System.ArgumentNullException(nameof(packageUrl));
+            this.License = license ?? throw new global::System.ArgumentNullException(nameof(license));
+            this.SourceRepositoryUrl = sourceRepositoryUrl ?? throw new global::System.ArgumentNullException(nameof(sourceRepositoryUrl));
+            this.Vulnerabilities = vulnerabilities ?? throw new global::System.ArgumentNullException(nameof(vulnerabilities));
+            this.Scope = scope;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="DependencyGraphDiffItem" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public DependencyGraphDiffItem()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.DependencyGraphDiffItem? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.DependencyGraphDiffItem),
-                jsonSerializerContext) as global::GitHub.DependencyGraphDiffItem;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.DependencyGraphDiffItem? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.DependencyGraphDiffItem>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.DependencyGraphDiffItem?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.DependencyGraphDiffItem),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.DependencyGraphDiffItem;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.DependencyGraphDiffItem?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.DependencyGraphDiffItem?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

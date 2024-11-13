@@ -12,8 +12,8 @@ namespace GitHub
         /// <param name="repo"></param>
         /// <param name="issueNumber"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> IssuesRemoveAllLabelsAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task IssuesRemoveAllLabelsAsync(
             string owner,
             string repo,
             int issueNumber,

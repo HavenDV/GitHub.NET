@@ -12,6 +12,7 @@ namespace GitHub
         /// The API address for accessing this Page resource.<br/>
         /// Example: https://api.github.com/repos/github/hello-world/pages
         /// </summary>
+        /// <example>https://api.github.com/repos/github/hello-world/pages</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -20,6 +21,7 @@ namespace GitHub
         /// The status of the most recent build of the Page.<br/>
         /// Example: built
         /// </summary>
+        /// <example>built</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.PageStatusJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -29,6 +31,7 @@ namespace GitHub
         /// The Pages site's custom domain<br/>
         /// Example: example.com
         /// </summary>
+        /// <example>example.com</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("cname")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? Cname { get; set; }
@@ -37,6 +40,7 @@ namespace GitHub
         /// The state if the domain is verified<br/>
         /// Example: pending
         /// </summary>
+        /// <example>pending</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("protected_domain_state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.PageProtectedDomainStateJsonConverter))]
         public global::GitHub.PageProtectedDomainState? ProtectedDomainState { get; set; }
@@ -52,6 +56,8 @@ namespace GitHub
         /// Default Value: false<br/>
         /// Example: false
         /// </summary>
+        /// <default>false</default>
+        /// <example>false</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_404")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Custom404 { get; set; } = false;
@@ -60,6 +66,7 @@ namespace GitHub
         /// The web address the Page can be accessed from.<br/>
         /// Example: https://example.com
         /// </summary>
+        /// <example>https://example.com</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("html_url")]
         public string? HtmlUrl { get; set; }
 
@@ -67,6 +74,7 @@ namespace GitHub
         /// The process in which the Page will be built.<br/>
         /// Example: legacy
         /// </summary>
+        /// <example>legacy</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("build_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.PageBuildTypeJsonConverter))]
         public global::GitHub.PageBuildType? BuildType { get; set; }
@@ -81,6 +89,7 @@ namespace GitHub
         /// Whether the GitHub Pages site is publicly visible. If set to `true`, the site is accessible to anyone on the internet. If set to `false`, the site will only be accessible to users who have at least `read` access to the repository that published the site.<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("public")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Public { get; set; }
@@ -95,6 +104,7 @@ namespace GitHub
         /// Whether https is enabled on the domain<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("https_enforced")]
         public bool? HttpsEnforced { get; set; }
 
@@ -104,91 +114,85 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="Page" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="url">
+        /// The API address for accessing this Page resource.<br/>
+        /// Example: https://api.github.com/repos/github/hello-world/pages
+        /// </param>
+        /// <param name="status">
+        /// The status of the most recent build of the Page.<br/>
+        /// Example: built
+        /// </param>
+        /// <param name="cname">
+        /// The Pages site's custom domain<br/>
+        /// Example: example.com
+        /// </param>
+        /// <param name="protectedDomainState">
+        /// The state if the domain is verified<br/>
+        /// Example: pending
+        /// </param>
+        /// <param name="pendingDomainUnverifiedAt">
+        /// The timestamp when a pending domain becomes unverified.
+        /// </param>
+        /// <param name="custom404">
+        /// Whether the Page has a custom 404 page.<br/>
+        /// Default Value: false<br/>
+        /// Example: false
+        /// </param>
+        /// <param name="htmlUrl">
+        /// The web address the Page can be accessed from.<br/>
+        /// Example: https://example.com
+        /// </param>
+        /// <param name="buildType">
+        /// The process in which the Page will be built.<br/>
+        /// Example: legacy
+        /// </param>
+        /// <param name="source"></param>
+        /// <param name="public">
+        /// Whether the GitHub Pages site is publicly visible. If set to `true`, the site is accessible to anyone on the internet. If set to `false`, the site will only be accessible to users who have at least `read` access to the repository that published the site.<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="httpsCertificate"></param>
+        /// <param name="httpsEnforced">
+        /// Whether https is enabled on the domain<br/>
+        /// Example: true
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public Page(
+            string url,
+            global::GitHub.PageStatus? status,
+            string? cname,
+            bool custom404,
+            bool @public,
+            global::GitHub.PageProtectedDomainState? protectedDomainState,
+            global::System.DateTime? pendingDomainUnverifiedAt,
+            string? htmlUrl,
+            global::GitHub.PageBuildType? buildType,
+            global::GitHub.PagesSourceHash? source,
+            global::GitHub.PagesHttpsCertificate? httpsCertificate,
+            bool? httpsEnforced)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.Status = status;
+            this.Cname = cname ?? throw new global::System.ArgumentNullException(nameof(cname));
+            this.Custom404 = custom404;
+            this.Public = @public;
+            this.ProtectedDomainState = protectedDomainState;
+            this.PendingDomainUnverifiedAt = pendingDomainUnverifiedAt;
+            this.HtmlUrl = htmlUrl;
+            this.BuildType = buildType;
+            this.Source = source;
+            this.HttpsCertificate = httpsCertificate;
+            this.HttpsEnforced = httpsEnforced;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="Page" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public Page()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.Page? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.Page),
-                jsonSerializerContext) as global::GitHub.Page;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.Page? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.Page>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.Page?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.Page),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.Page;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.Page?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.Page?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

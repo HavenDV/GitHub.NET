@@ -14,8 +14,8 @@ namespace GitHub
         /// <param name="packageName"></param>
         /// <param name="org"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> PackagesDeletePackageForOrgAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task PackagesDeletePackageForOrgAsync(
             global::GitHub.PackagesDeletePackageForOrgPackageType packageType,
             string packageName,
             string org,

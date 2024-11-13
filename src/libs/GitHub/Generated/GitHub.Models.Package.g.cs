@@ -12,6 +12,7 @@ namespace GitHub
         /// Unique identifier of the package.<br/>
         /// Example: 1
         /// </summary>
+        /// <example>1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
@@ -20,6 +21,7 @@ namespace GitHub
         /// The name of the package.<br/>
         /// Example: super-linter
         /// </summary>
+        /// <example>super-linter</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -27,6 +29,7 @@ namespace GitHub
         /// <summary>
         /// Example: docker
         /// </summary>
+        /// <example>docker</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("package_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.PackagePackageTypeJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -35,6 +38,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/orgs/github/packages/container/super-linter
         /// </summary>
+        /// <example>https://api.github.com/orgs/github/packages/container/super-linter</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -42,6 +46,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/orgs/github/packages/container/package/super-linter
         /// </summary>
+        /// <example>https://github.com/orgs/github/packages/container/package/super-linter</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("html_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string HtmlUrl { get; set; }
@@ -50,6 +55,7 @@ namespace GitHub
         /// The number of versions of the package.<br/>
         /// Example: 1
         /// </summary>
+        /// <example>1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("version_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int VersionCount { get; set; }
@@ -57,6 +63,7 @@ namespace GitHub
         /// <summary>
         /// Example: private
         /// </summary>
+        /// <example>private</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.PackageVisibilityJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -94,91 +101,73 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="Package" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// Unique identifier of the package.<br/>
+        /// Example: 1
+        /// </param>
+        /// <param name="name">
+        /// The name of the package.<br/>
+        /// Example: super-linter
+        /// </param>
+        /// <param name="packageType">
+        /// Example: docker
+        /// </param>
+        /// <param name="url">
+        /// Example: https://api.github.com/orgs/github/packages/container/super-linter
+        /// </param>
+        /// <param name="htmlUrl">
+        /// Example: https://github.com/orgs/github/packages/container/package/super-linter
+        /// </param>
+        /// <param name="versionCount">
+        /// The number of versions of the package.<br/>
+        /// Example: 1
+        /// </param>
+        /// <param name="visibility">
+        /// Example: private
+        /// </param>
+        /// <param name="owner">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="repository">
+        /// Minimal Repository
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public Package(
+            int id,
+            string name,
+            global::GitHub.PackagePackageType packageType,
+            string url,
+            string htmlUrl,
+            int versionCount,
+            global::GitHub.PackageVisibility visibility,
+            global::System.DateTime createdAt,
+            global::System.DateTime updatedAt,
+            global::GitHub.NullableSimpleUser? owner,
+            global::GitHub.NullableMinimalRepository? repository)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.PackageType = packageType;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.VersionCount = versionCount;
+            this.Visibility = visibility;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.Owner = owner;
+            this.Repository = repository;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="Package" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public Package()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.Package? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.Package),
-                jsonSerializerContext) as global::GitHub.Package;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.Package? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.Package>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.Package?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.Package),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.Package;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.Package?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.Package?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

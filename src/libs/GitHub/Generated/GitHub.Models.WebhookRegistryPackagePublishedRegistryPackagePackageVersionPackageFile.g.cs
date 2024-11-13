@@ -91,91 +91,52 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="contentType"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="downloadUrl"></param>
+        /// <param name="id"></param>
+        /// <param name="md5"></param>
+        /// <param name="name"></param>
+        /// <param name="sha1"></param>
+        /// <param name="sha256"></param>
+        /// <param name="size"></param>
+        /// <param name="state"></param>
+        /// <param name="updatedAt"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile(
+            string contentType,
+            string createdAt,
+            string downloadUrl,
+            int id,
+            string? md5,
+            string name,
+            string? sha1,
+            string? sha256,
+            int size,
+            string? state,
+            string updatedAt)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.ContentType = contentType ?? throw new global::System.ArgumentNullException(nameof(contentType));
+            this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
+            this.DownloadUrl = downloadUrl ?? throw new global::System.ArgumentNullException(nameof(downloadUrl));
+            this.Id = id;
+            this.Md5 = md5 ?? throw new global::System.ArgumentNullException(nameof(md5));
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Sha1 = sha1 ?? throw new global::System.ArgumentNullException(nameof(sha1));
+            this.Sha256 = sha256 ?? throw new global::System.ArgumentNullException(nameof(sha256));
+            this.Size = size;
+            this.State = state ?? throw new global::System.ArgumentNullException(nameof(state));
+            this.UpdatedAt = updatedAt ?? throw new global::System.ArgumentNullException(nameof(updatedAt));
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile),
-                jsonSerializerContext) as global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionPackageFile?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

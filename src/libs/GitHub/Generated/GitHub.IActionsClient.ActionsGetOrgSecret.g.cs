@@ -13,7 +13,7 @@ namespace GitHub
         /// <param name="org"></param>
         /// <param name="secretName"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.OrganizationActionsSecret> ActionsGetOrgSecretAsync(
             string org,
             string secretName,

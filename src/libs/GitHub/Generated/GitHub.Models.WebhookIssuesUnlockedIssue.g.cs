@@ -219,91 +219,123 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookIssuesUnlockedIssue" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="activeLockReason"></param>
+        /// <param name="assignee"></param>
+        /// <param name="assignees"></param>
+        /// <param name="authorAssociation">
+        /// How the author is associated with the repository.
+        /// </param>
+        /// <param name="body">
+        /// Contents of the issue
+        /// </param>
+        /// <param name="closedAt"></param>
+        /// <param name="comments"></param>
+        /// <param name="commentsUrl"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="draft"></param>
+        /// <param name="eventsUrl"></param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="id"></param>
+        /// <param name="labels"></param>
+        /// <param name="labelsUrl"></param>
+        /// <param name="locked"></param>
+        /// <param name="milestone">
+        /// A collection of related issues and pull requests.
+        /// </param>
+        /// <param name="nodeId"></param>
+        /// <param name="number"></param>
+        /// <param name="performedViaGithubApp">
+        /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
+        /// </param>
+        /// <param name="pullRequest"></param>
+        /// <param name="reactions"></param>
+        /// <param name="repositoryUrl"></param>
+        /// <param name="state">
+        /// State of the issue; either 'open' or 'closed'
+        /// </param>
+        /// <param name="stateReason"></param>
+        /// <param name="timelineUrl"></param>
+        /// <param name="title">
+        /// Title of the issue
+        /// </param>
+        /// <param name="updatedAt"></param>
+        /// <param name="url">
+        /// URL for the issue
+        /// </param>
+        /// <param name="user"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookIssuesUnlockedIssue(
+            global::GitHub.WebhookIssuesUnlockedIssueActiveLockReason? activeLockReason,
+            global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesUnlockedIssueAssignee2> assignees,
+            global::GitHub.WebhookIssuesUnlockedIssueAuthorAssociation authorAssociation,
+            string? body,
+            global::System.DateTime? closedAt,
+            int comments,
+            string commentsUrl,
+            global::System.DateTime createdAt,
+            string eventsUrl,
+            string htmlUrl,
+            long id,
+            string labelsUrl,
+            bool locked,
+            global::GitHub.WebhookIssuesUnlockedIssueMilestone? milestone,
+            string nodeId,
+            int number,
+            global::GitHub.WebhookIssuesUnlockedIssueReactions reactions,
+            string repositoryUrl,
+            string title,
+            global::System.DateTime updatedAt,
+            string url,
+            global::GitHub.WebhookIssuesUnlockedIssueUser? user,
+            global::GitHub.WebhookIssuesUnlockedIssueAssignee? assignee,
+            bool? draft,
+            global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesUnlockedIssueLabel>? labels,
+            global::GitHub.WebhookIssuesUnlockedIssuePerformedViaGithubApp? performedViaGithubApp,
+            global::GitHub.WebhookIssuesUnlockedIssuePullRequest? pullRequest,
+            global::GitHub.WebhookIssuesUnlockedIssueState? state,
+            string? stateReason,
+            string? timelineUrl)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.ActiveLockReason = activeLockReason;
+            this.Assignees = assignees ?? throw new global::System.ArgumentNullException(nameof(assignees));
+            this.AuthorAssociation = authorAssociation;
+            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
+            this.ClosedAt = closedAt;
+            this.Comments = comments;
+            this.CommentsUrl = commentsUrl ?? throw new global::System.ArgumentNullException(nameof(commentsUrl));
+            this.CreatedAt = createdAt;
+            this.EventsUrl = eventsUrl ?? throw new global::System.ArgumentNullException(nameof(eventsUrl));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.Id = id;
+            this.LabelsUrl = labelsUrl ?? throw new global::System.ArgumentNullException(nameof(labelsUrl));
+            this.Locked = locked;
+            this.Milestone = milestone ?? throw new global::System.ArgumentNullException(nameof(milestone));
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.Number = number;
+            this.Reactions = reactions ?? throw new global::System.ArgumentNullException(nameof(reactions));
+            this.RepositoryUrl = repositoryUrl ?? throw new global::System.ArgumentNullException(nameof(repositoryUrl));
+            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.UpdatedAt = updatedAt;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.Assignee = assignee;
+            this.Draft = draft;
+            this.Labels = labels;
+            this.PerformedViaGithubApp = performedViaGithubApp;
+            this.PullRequest = pullRequest;
+            this.State = state;
+            this.StateReason = stateReason;
+            this.TimelineUrl = timelineUrl;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookIssuesUnlockedIssue" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookIssuesUnlockedIssue()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookIssuesUnlockedIssue? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookIssuesUnlockedIssue),
-                jsonSerializerContext) as global::GitHub.WebhookIssuesUnlockedIssue;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookIssuesUnlockedIssue? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookIssuesUnlockedIssue>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookIssuesUnlockedIssue?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookIssuesUnlockedIssue),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookIssuesUnlockedIssue;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookIssuesUnlockedIssue?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookIssuesUnlockedIssue?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

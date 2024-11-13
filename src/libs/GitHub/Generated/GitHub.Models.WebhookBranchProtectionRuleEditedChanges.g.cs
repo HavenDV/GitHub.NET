@@ -80,91 +80,52 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookBranchProtectionRuleEditedChanges" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="adminEnforced"></param>
+        /// <param name="authorizedActorNames"></param>
+        /// <param name="authorizedActorsOnly"></param>
+        /// <param name="authorizedDismissalActorsOnly"></param>
+        /// <param name="linearHistoryRequirementEnforcementLevel"></param>
+        /// <param name="lockBranchEnforcementLevel"></param>
+        /// <param name="lockAllowsForkSync"></param>
+        /// <param name="pullRequestReviewsEnforcementLevel"></param>
+        /// <param name="requireLastPushApproval"></param>
+        /// <param name="requiredStatusChecks"></param>
+        /// <param name="requiredStatusChecksEnforcementLevel"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookBranchProtectionRuleEditedChanges(
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesAdminEnforced? adminEnforced,
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesAuthorizedActorNames? authorizedActorNames,
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesAuthorizedActorsOnly? authorizedActorsOnly,
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesAuthorizedDismissalActorsOnly? authorizedDismissalActorsOnly,
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesLinearHistoryRequirementEnforcementLevel? linearHistoryRequirementEnforcementLevel,
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesLockBranchEnforcementLevel? lockBranchEnforcementLevel,
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesLockAllowsForkSync? lockAllowsForkSync,
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesPullRequestReviewsEnforcementLevel? pullRequestReviewsEnforcementLevel,
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesRequireLastPushApproval? requireLastPushApproval,
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesRequiredStatusChecks? requiredStatusChecks,
+            global::GitHub.WebhookBranchProtectionRuleEditedChangesRequiredStatusChecksEnforcementLevel? requiredStatusChecksEnforcementLevel)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.AdminEnforced = adminEnforced;
+            this.AuthorizedActorNames = authorizedActorNames;
+            this.AuthorizedActorsOnly = authorizedActorsOnly;
+            this.AuthorizedDismissalActorsOnly = authorizedDismissalActorsOnly;
+            this.LinearHistoryRequirementEnforcementLevel = linearHistoryRequirementEnforcementLevel;
+            this.LockBranchEnforcementLevel = lockBranchEnforcementLevel;
+            this.LockAllowsForkSync = lockAllowsForkSync;
+            this.PullRequestReviewsEnforcementLevel = pullRequestReviewsEnforcementLevel;
+            this.RequireLastPushApproval = requireLastPushApproval;
+            this.RequiredStatusChecks = requiredStatusChecks;
+            this.RequiredStatusChecksEnforcementLevel = requiredStatusChecksEnforcementLevel;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookBranchProtectionRuleEditedChanges" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookBranchProtectionRuleEditedChanges()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookBranchProtectionRuleEditedChanges? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookBranchProtectionRuleEditedChanges),
-                jsonSerializerContext) as global::GitHub.WebhookBranchProtectionRuleEditedChanges;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookBranchProtectionRuleEditedChanges? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookBranchProtectionRuleEditedChanges>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookBranchProtectionRuleEditedChanges?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookBranchProtectionRuleEditedChanges),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookBranchProtectionRuleEditedChanges;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookBranchProtectionRuleEditedChanges?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookBranchProtectionRuleEditedChanges?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

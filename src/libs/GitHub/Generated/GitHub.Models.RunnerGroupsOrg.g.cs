@@ -101,91 +101,68 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="RunnerGroupsOrg" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="visibility"></param>
+        /// <param name="default"></param>
+        /// <param name="selectedRepositoriesUrl">
+        /// Link to the selected repositories resource for this runner group. Not present unless visibility was set to `selected`
+        /// </param>
+        /// <param name="runnersUrl"></param>
+        /// <param name="hostedRunnersUrl"></param>
+        /// <param name="inherited"></param>
+        /// <param name="inheritedAllowsPublicRepositories"></param>
+        /// <param name="allowsPublicRepositories"></param>
+        /// <param name="workflowRestrictionsReadOnly">
+        /// If `true`, the `restricted_to_workflows` and `selected_workflows` fields cannot be modified.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="restrictedToWorkflows">
+        /// If `true`, the runner group will be restricted to running only the workflows specified in the `selected_workflows` array.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="selectedWorkflows">
+        /// List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public RunnerGroupsOrg(
+            double id,
+            string name,
+            string visibility,
+            bool @default,
+            string runnersUrl,
+            bool inherited,
+            bool allowsPublicRepositories,
+            string? selectedRepositoriesUrl,
+            string? hostedRunnersUrl,
+            bool? inheritedAllowsPublicRepositories,
+            bool? workflowRestrictionsReadOnly,
+            bool? restrictedToWorkflows,
+            global::System.Collections.Generic.IList<string>? selectedWorkflows)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Visibility = visibility ?? throw new global::System.ArgumentNullException(nameof(visibility));
+            this.Default = @default;
+            this.RunnersUrl = runnersUrl ?? throw new global::System.ArgumentNullException(nameof(runnersUrl));
+            this.Inherited = inherited;
+            this.AllowsPublicRepositories = allowsPublicRepositories;
+            this.SelectedRepositoriesUrl = selectedRepositoriesUrl;
+            this.HostedRunnersUrl = hostedRunnersUrl;
+            this.InheritedAllowsPublicRepositories = inheritedAllowsPublicRepositories;
+            this.WorkflowRestrictionsReadOnly = workflowRestrictionsReadOnly;
+            this.RestrictedToWorkflows = restrictedToWorkflows;
+            this.SelectedWorkflows = selectedWorkflows;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="RunnerGroupsOrg" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public RunnerGroupsOrg()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.RunnerGroupsOrg? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.RunnerGroupsOrg),
-                jsonSerializerContext) as global::GitHub.RunnerGroupsOrg;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.RunnerGroupsOrg? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.RunnerGroupsOrg>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.RunnerGroupsOrg?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.RunnerGroupsOrg),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.RunnerGroupsOrg;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.RunnerGroupsOrg?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.RunnerGroupsOrg?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

@@ -14,7 +14,7 @@ namespace GitHub
         /// <param name="gistId"></param>
         /// <param name="commentId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.GistComment> GistsGetCommentAsync(
             string gistId,
             long commentId,

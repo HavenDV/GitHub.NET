@@ -73,91 +73,56 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookCodeScanningAlertFixedAlertMostRecentInstance" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="analysisKey">
+        /// Identifies the configuration under which the analysis was executed. For example, in GitHub Actions this includes the workflow filename and job name.
+        /// </param>
+        /// <param name="category">
+        /// Identifies the configuration under which the analysis was executed.
+        /// </param>
+        /// <param name="classifications"></param>
+        /// <param name="commitSha"></param>
+        /// <param name="environment">
+        /// Identifies the variable values associated with the environment in which the analysis that generated this alert instance was performed, such as the language that was analyzed.
+        /// </param>
+        /// <param name="location"></param>
+        /// <param name="message"></param>
+        /// <param name="ref">
+        /// The full Git reference, formatted as `refs/heads/&lt;branch name&gt;`.
+        /// </param>
+        /// <param name="state">
+        /// State of a code scanning alert.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookCodeScanningAlertFixedAlertMostRecentInstance(
+            string analysisKey,
+            string environment,
+            string @ref,
+            global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstanceState state,
+            string? category,
+            global::System.Collections.Generic.IList<string>? classifications,
+            string? commitSha,
+            global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstanceLocation? location,
+            global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstanceMessage? message)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.AnalysisKey = analysisKey ?? throw new global::System.ArgumentNullException(nameof(analysisKey));
+            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
+            this.Ref = @ref ?? throw new global::System.ArgumentNullException(nameof(@ref));
+            this.State = state;
+            this.Category = category;
+            this.Classifications = classifications;
+            this.CommitSha = commitSha;
+            this.Location = location;
+            this.Message = message;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookCodeScanningAlertFixedAlertMostRecentInstance" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookCodeScanningAlertFixedAlertMostRecentInstance()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstance? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstance),
-                jsonSerializerContext) as global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstance;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstance? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstance>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstance?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstance),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstance;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstance?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookCodeScanningAlertFixedAlertMostRecentInstance?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

@@ -26,6 +26,11 @@ namespace GitHub
         /// <inheritdoc/>
         public global::System.Collections.Generic.List<global::GitHub.EndPointAuthorization> Authorizations { get; }
 
+        /// <inheritdoc/>
+        public bool ReadResponseAsString { get; set; }
+#if DEBUG
+            = true;
+#endif
         /// <summary>
         /// 
         /// </summary>
@@ -37,6 +42,7 @@ namespace GitHub
         /// </summary>
         public ActionsClient Actions => new ActionsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -45,6 +51,7 @@ namespace GitHub
         /// </summary>
         public ActivityClient Activity => new ActivityClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -53,6 +60,7 @@ namespace GitHub
         /// </summary>
         public AppsClient Apps => new AppsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -61,6 +69,7 @@ namespace GitHub
         /// </summary>
         public BillingClient Billing => new BillingClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -69,6 +78,7 @@ namespace GitHub
         /// </summary>
         public ChecksClient Checks => new ChecksClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -77,6 +87,7 @@ namespace GitHub
         /// </summary>
         public CodeScanningClient CodeScanning => new CodeScanningClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -85,6 +96,7 @@ namespace GitHub
         /// </summary>
         public CodesOfConductClient CodesOfConduct => new CodesOfConductClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -93,6 +105,7 @@ namespace GitHub
         /// </summary>
         public EmojisClient Emojis => new EmojisClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -101,6 +114,7 @@ namespace GitHub
         /// </summary>
         public DependabotClient Dependabot => new DependabotClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -109,6 +123,7 @@ namespace GitHub
         /// </summary>
         public DependencyGraphClient DependencyGraph => new DependencyGraphClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -117,6 +132,7 @@ namespace GitHub
         /// </summary>
         public GistsClient Gists => new GistsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -125,6 +141,7 @@ namespace GitHub
         /// </summary>
         public GitClient Git => new GitClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -133,6 +150,7 @@ namespace GitHub
         /// </summary>
         public GitignoreClient Gitignore => new GitignoreClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -141,6 +159,7 @@ namespace GitHub
         /// </summary>
         public IssuesClient Issues => new IssuesClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -149,6 +168,7 @@ namespace GitHub
         /// </summary>
         public LicensesClient Licenses => new LicensesClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -157,6 +177,7 @@ namespace GitHub
         /// </summary>
         public MarkdownClient Markdown => new MarkdownClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -165,6 +186,7 @@ namespace GitHub
         /// </summary>
         public MergeQueueClient MergeQueue => new MergeQueueClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -173,6 +195,7 @@ namespace GitHub
         /// </summary>
         public MetaClient Meta => new MetaClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -181,6 +204,7 @@ namespace GitHub
         /// </summary>
         public MigrationsClient Migrations => new MigrationsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -189,6 +213,7 @@ namespace GitHub
         /// </summary>
         public OidcClient Oidc => new OidcClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -197,6 +222,7 @@ namespace GitHub
         /// </summary>
         public OrgsClient Orgs => new OrgsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -205,6 +231,7 @@ namespace GitHub
         /// </summary>
         public PackagesClient Packages => new PackagesClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -213,6 +240,7 @@ namespace GitHub
         /// </summary>
         public ProjectsClient Projects => new ProjectsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -221,6 +249,7 @@ namespace GitHub
         /// </summary>
         public PullsClient Pulls => new PullsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -229,6 +258,7 @@ namespace GitHub
         /// </summary>
         public RateLimitClient RateLimit => new RateLimitClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -237,6 +267,7 @@ namespace GitHub
         /// </summary>
         public ReactionsClient Reactions => new ReactionsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -245,6 +276,7 @@ namespace GitHub
         /// </summary>
         public ReposClient Repos => new ReposClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -253,6 +285,7 @@ namespace GitHub
         /// </summary>
         public SearchClient Search => new SearchClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -261,6 +294,7 @@ namespace GitHub
         /// </summary>
         public SecretScanningClient SecretScanning => new SecretScanningClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -269,6 +303,7 @@ namespace GitHub
         /// </summary>
         public TeamsClient Teams => new TeamsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -277,6 +312,7 @@ namespace GitHub
         /// </summary>
         public UsersClient Users => new UsersClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -285,6 +321,7 @@ namespace GitHub
         /// </summary>
         public CodespacesClient Codespaces => new CodespacesClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -293,6 +330,7 @@ namespace GitHub
         /// </summary>
         public CopilotClient Copilot => new CopilotClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -301,6 +339,7 @@ namespace GitHub
         /// </summary>
         public SecurityAdvisoriesClient SecurityAdvisories => new SecurityAdvisoriesClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -309,6 +348,7 @@ namespace GitHub
         /// </summary>
         public InteractionsClient Interactions => new InteractionsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -317,6 +357,7 @@ namespace GitHub
         /// </summary>
         public ClassroomClient Classroom => new ClassroomClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -325,6 +366,7 @@ namespace GitHub
         /// </summary>
         public DesktopClient Desktop => new DesktopClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -333,6 +375,7 @@ namespace GitHub
         /// </summary>
         public EnterpriseTeamsClient EnterpriseTeams => new EnterpriseTeamsClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -341,6 +384,7 @@ namespace GitHub
         /// </summary>
         public CodeSecurityClient CodeSecurity => new CodeSecurityClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -349,6 +393,7 @@ namespace GitHub
         /// </summary>
         public PrivateRegistriesClient PrivateRegistries => new PrivateRegistriesClient(HttpClient, authorizations: Authorizations)
         {
+            ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
         };
 

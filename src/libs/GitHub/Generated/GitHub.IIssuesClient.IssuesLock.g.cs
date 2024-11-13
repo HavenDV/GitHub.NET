@@ -14,8 +14,8 @@ namespace GitHub
         /// <param name="issueNumber"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> IssuesLockAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task IssuesLockAsync(
             string owner,
             string repo,
             int issueNumber,
@@ -39,7 +39,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> IssuesLockAsync(
+        global::System.Threading.Tasks.Task IssuesLockAsync(
             string owner,
             string repo,
             int issueNumber,

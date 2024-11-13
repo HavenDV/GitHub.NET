@@ -44,18 +44,21 @@ namespace GitHub
         /// <summary>
         /// Example: README.md
         /// </summary>
+        /// <example>README.md</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("single_file")]
         public string? SingleFile { get; set; }
 
         /// <summary>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_multiple_single_files")]
         public bool? HasMultipleSingleFiles { get; set; }
 
         /// <summary>
         /// Example: [config.yml, .github/issue_TEMPLATE.md]
         /// </summary>
+        /// <example>[config.yml, .github/issue_TEMPLATE.md]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("single_file_paths")]
         public global::System.Collections.Generic.IList<string>? SingleFilePaths { get; set; }
 
@@ -65,91 +68,51 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="InstallationToken" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="token"></param>
+        /// <param name="expiresAt"></param>
+        /// <param name="permissions">
+        /// The permissions granted to the user access token.
+        /// </param>
+        /// <param name="repositorySelection"></param>
+        /// <param name="repositories"></param>
+        /// <param name="singleFile">
+        /// Example: README.md
+        /// </param>
+        /// <param name="hasMultipleSingleFiles">
+        /// Example: true
+        /// </param>
+        /// <param name="singleFilePaths">
+        /// Example: [config.yml, .github/issue_TEMPLATE.md]
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public InstallationToken(
+            string token,
+            string expiresAt,
+            global::GitHub.AppPermissions? permissions,
+            global::GitHub.InstallationTokenRepositorySelection? repositorySelection,
+            global::System.Collections.Generic.IList<global::GitHub.Repository>? repositories,
+            string? singleFile,
+            bool? hasMultipleSingleFiles,
+            global::System.Collections.Generic.IList<string>? singleFilePaths)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
+            this.ExpiresAt = expiresAt ?? throw new global::System.ArgumentNullException(nameof(expiresAt));
+            this.Permissions = permissions;
+            this.RepositorySelection = repositorySelection;
+            this.Repositories = repositories;
+            this.SingleFile = singleFile;
+            this.HasMultipleSingleFiles = hasMultipleSingleFiles;
+            this.SingleFilePaths = singleFilePaths;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="InstallationToken" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public InstallationToken()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.InstallationToken? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.InstallationToken),
-                jsonSerializerContext) as global::GitHub.InstallationToken;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.InstallationToken? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.InstallationToken>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.InstallationToken?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.InstallationToken),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.InstallationToken;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.InstallationToken?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.InstallationToken?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

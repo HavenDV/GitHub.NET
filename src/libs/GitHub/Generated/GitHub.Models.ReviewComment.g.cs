@@ -11,6 +11,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/repos/octocat/Hello-World/pulls/comments/1
         /// </summary>
+        /// <example>https://api.github.com/repos/octocat/Hello-World/pulls/comments/1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -18,6 +19,7 @@ namespace GitHub
         /// <summary>
         /// Example: 42L
         /// </summary>
+        /// <example>42L</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("pull_request_review_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required long? PullRequestReviewId { get; set; }
@@ -25,6 +27,7 @@ namespace GitHub
         /// <summary>
         /// Example: 10L
         /// </summary>
+        /// <example>10L</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required long Id { get; set; }
@@ -32,6 +35,7 @@ namespace GitHub
         /// <summary>
         /// Example: MDI0OlB1bGxSZXF1ZXN0UmV2aWV3Q29tbWVudDEw
         /// </summary>
+        /// <example>MDI0OlB1bGxSZXF1ZXN0UmV2aWV3Q29tbWVudDEw</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string NodeId { get; set; }
@@ -39,6 +43,7 @@ namespace GitHub
         /// <summary>
         /// Example: @@ -16,33 +16,40 @@ public class Connection : IConnection...
         /// </summary>
+        /// <example>@@ -16,33 +16,40 @@ public class Connection : IConnection...</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("diff_hunk")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DiffHunk { get; set; }
@@ -46,6 +51,7 @@ namespace GitHub
         /// <summary>
         /// Example: file1.txt
         /// </summary>
+        /// <example>file1.txt</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("path")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Path { get; set; }
@@ -53,6 +59,7 @@ namespace GitHub
         /// <summary>
         /// Example: 1
         /// </summary>
+        /// <example>1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("position")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int? Position { get; set; }
@@ -60,6 +67,7 @@ namespace GitHub
         /// <summary>
         /// Example: 4
         /// </summary>
+        /// <example>4</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("original_position")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int OriginalPosition { get; set; }
@@ -67,6 +75,7 @@ namespace GitHub
         /// <summary>
         /// Example: 6dcb09b5b57875f334f61aebed695e2e4193db5e
         /// </summary>
+        /// <example>6dcb09b5b57875f334f61aebed695e2e4193db5e</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("commit_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string CommitId { get; set; }
@@ -74,6 +83,7 @@ namespace GitHub
         /// <summary>
         /// Example: 9c48853fa3dc5c1c3d6f1f1cd1f2743e72652840
         /// </summary>
+        /// <example>9c48853fa3dc5c1c3d6f1f1cd1f2743e72652840</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("original_commit_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string OriginalCommitId { get; set; }
@@ -81,6 +91,7 @@ namespace GitHub
         /// <summary>
         /// Example: 8
         /// </summary>
+        /// <example>8</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("in_reply_to_id")]
         public int? InReplyToId { get; set; }
 
@@ -94,6 +105,7 @@ namespace GitHub
         /// <summary>
         /// Example: Great stuff
         /// </summary>
+        /// <example>Great stuff</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("body")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Body { get; set; }
@@ -115,6 +127,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/octocat/Hello-World/pull/1#discussion-diff-1
         /// </summary>
+        /// <example>https://github.com/octocat/Hello-World/pull/1#discussion-diff-1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("html_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string HtmlUrl { get; set; }
@@ -122,6 +135,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/repos/octocat/Hello-World/pulls/1
         /// </summary>
+        /// <example>https://api.github.com/repos/octocat/Hello-World/pulls/1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("pull_request_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PullRequestUrl { get; set; }
@@ -130,6 +144,7 @@ namespace GitHub
         /// How the author is associated with the repository.<br/>
         /// Example: OWNER
         /// </summary>
+        /// <example>OWNER</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("author_association")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AuthorAssociationJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -180,6 +195,7 @@ namespace GitHub
         /// The line of the blob to which the comment applies. The last line of the range for a multi-line comment<br/>
         /// Example: 2
         /// </summary>
+        /// <example>2</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("line")]
         public int? Line { get; set; }
 
@@ -187,6 +203,7 @@ namespace GitHub
         /// The original line of the blob to which the comment applies. The last line of the range for a multi-line comment<br/>
         /// Example: 2
         /// </summary>
+        /// <example>2</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("original_line")]
         public int? OriginalLine { get; set; }
 
@@ -194,6 +211,7 @@ namespace GitHub
         /// The first line of the range for a multi-line comment.<br/>
         /// Example: 2
         /// </summary>
+        /// <example>2</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("start_line")]
         public int? StartLine { get; set; }
 
@@ -201,6 +219,7 @@ namespace GitHub
         /// The original first line of the range for a multi-line comment.<br/>
         /// Example: 2
         /// </summary>
+        /// <example>2</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("original_start_line")]
         public int? OriginalStartLine { get; set; }
 
@@ -210,91 +229,154 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="ReviewComment" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="url">
+        /// Example: https://api.github.com/repos/octocat/Hello-World/pulls/comments/1
+        /// </param>
+        /// <param name="pullRequestReviewId">
+        /// Example: 42L
+        /// </param>
+        /// <param name="id">
+        /// Example: 10L
+        /// </param>
+        /// <param name="nodeId">
+        /// Example: MDI0OlB1bGxSZXF1ZXN0UmV2aWV3Q29tbWVudDEw
+        /// </param>
+        /// <param name="diffHunk">
+        /// Example: @@ -16,33 +16,40 @@ public class Connection : IConnection...
+        /// </param>
+        /// <param name="path">
+        /// Example: file1.txt
+        /// </param>
+        /// <param name="position">
+        /// Example: 1
+        /// </param>
+        /// <param name="originalPosition">
+        /// Example: 4
+        /// </param>
+        /// <param name="commitId">
+        /// Example: 6dcb09b5b57875f334f61aebed695e2e4193db5e
+        /// </param>
+        /// <param name="originalCommitId">
+        /// Example: 9c48853fa3dc5c1c3d6f1f1cd1f2743e72652840
+        /// </param>
+        /// <param name="inReplyToId">
+        /// Example: 8
+        /// </param>
+        /// <param name="user">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="body">
+        /// Example: Great stuff
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="htmlUrl">
+        /// Example: https://github.com/octocat/Hello-World/pull/1#discussion-diff-1
+        /// </param>
+        /// <param name="pullRequestUrl">
+        /// Example: https://api.github.com/repos/octocat/Hello-World/pulls/1
+        /// </param>
+        /// <param name="authorAssociation">
+        /// How the author is associated with the repository.<br/>
+        /// Example: OWNER
+        /// </param>
+        /// <param name="links"></param>
+        /// <param name="bodyText"></param>
+        /// <param name="bodyHtml"></param>
+        /// <param name="reactions"></param>
+        /// <param name="side">
+        /// The side of the first line of the range for a multi-line comment.<br/>
+        /// Default Value: RIGHT
+        /// </param>
+        /// <param name="startSide">
+        /// The side of the first line of the range for a multi-line comment.<br/>
+        /// Default Value: RIGHT
+        /// </param>
+        /// <param name="line">
+        /// The line of the blob to which the comment applies. The last line of the range for a multi-line comment<br/>
+        /// Example: 2
+        /// </param>
+        /// <param name="originalLine">
+        /// The original line of the blob to which the comment applies. The last line of the range for a multi-line comment<br/>
+        /// Example: 2
+        /// </param>
+        /// <param name="startLine">
+        /// The first line of the range for a multi-line comment.<br/>
+        /// Example: 2
+        /// </param>
+        /// <param name="originalStartLine">
+        /// The original first line of the range for a multi-line comment.<br/>
+        /// Example: 2
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public ReviewComment(
+            string url,
+            long? pullRequestReviewId,
+            long id,
+            string nodeId,
+            string diffHunk,
+            string path,
+            int? position,
+            int originalPosition,
+            string commitId,
+            string originalCommitId,
+            global::GitHub.NullableSimpleUser? user,
+            string body,
+            global::System.DateTime createdAt,
+            global::System.DateTime updatedAt,
+            string htmlUrl,
+            string pullRequestUrl,
+            global::GitHub.AuthorAssociation authorAssociation,
+            global::GitHub.ReviewCommentLinks links,
+            int? inReplyToId,
+            string? bodyText,
+            string? bodyHtml,
+            global::GitHub.ReactionRollup? reactions,
+            global::GitHub.ReviewCommentSide? side,
+            global::GitHub.ReviewCommentStartSide? startSide,
+            int? line,
+            int? originalLine,
+            int? startLine,
+            int? originalStartLine)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.PullRequestReviewId = pullRequestReviewId;
+            this.Id = id;
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.DiffHunk = diffHunk ?? throw new global::System.ArgumentNullException(nameof(diffHunk));
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
+            this.Position = position;
+            this.OriginalPosition = originalPosition;
+            this.CommitId = commitId ?? throw new global::System.ArgumentNullException(nameof(commitId));
+            this.OriginalCommitId = originalCommitId ?? throw new global::System.ArgumentNullException(nameof(originalCommitId));
+            this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.PullRequestUrl = pullRequestUrl ?? throw new global::System.ArgumentNullException(nameof(pullRequestUrl));
+            this.AuthorAssociation = authorAssociation;
+            this.Links = links ?? throw new global::System.ArgumentNullException(nameof(links));
+            this.InReplyToId = inReplyToId;
+            this.BodyText = bodyText;
+            this.BodyHtml = bodyHtml;
+            this.Reactions = reactions;
+            this.Side = side;
+            this.StartSide = startSide;
+            this.Line = line;
+            this.OriginalLine = originalLine;
+            this.StartLine = startLine;
+            this.OriginalStartLine = originalStartLine;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="ReviewComment" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public ReviewComment()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.ReviewComment? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.ReviewComment),
-                jsonSerializerContext) as global::GitHub.ReviewComment;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.ReviewComment? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.ReviewComment>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.ReviewComment?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.ReviewComment),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.ReviewComment;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.ReviewComment?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.ReviewComment?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

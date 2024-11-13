@@ -74,91 +74,64 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CopilotSeatDetails" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="assignee">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="organization">
+        /// A GitHub organization.
+        /// </param>
+        /// <param name="assigningTeam">
+        /// The team through which the assignee is granted access to GitHub Copilot, if applicable.
+        /// </param>
+        /// <param name="pendingCancellationDate">
+        /// The pending cancellation date for the seat, in `YYYY-MM-DD` format. This will be null unless the assignee's Copilot access has been canceled during the current billing cycle. If the seat has been cancelled, this corresponds to the start of the organization's next billing cycle.
+        /// </param>
+        /// <param name="lastActivityAt">
+        /// Timestamp of user's last GitHub Copilot activity, in ISO 8601 format.
+        /// </param>
+        /// <param name="lastActivityEditor">
+        /// Last editor that was used by the user for a GitHub Copilot completion.
+        /// </param>
+        /// <param name="createdAt">
+        /// Timestamp of when the assignee was last granted access to GitHub Copilot, in ISO 8601 format.
+        /// </param>
+        /// <param name="updatedAt">
+        /// Timestamp of when the assignee's GitHub Copilot access was last updated, in ISO 8601 format.
+        /// </param>
+        /// <param name="planType">
+        /// The Copilot plan of the organization, or the parent enterprise, when applicable.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CopilotSeatDetails(
+            global::GitHub.SimpleUser assignee,
+            global::System.DateTime createdAt,
+            global::GitHub.NullableOrganizationSimple? organization,
+            global::GitHub.OneOf<global::GitHub.Team, global::GitHub.EnterpriseTeam>? assigningTeam,
+            global::System.DateTime? pendingCancellationDate,
+            global::System.DateTime? lastActivityAt,
+            string? lastActivityEditor,
+            global::System.DateTime? updatedAt,
+            global::GitHub.CopilotSeatDetailsPlanType? planType)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Assignee = assignee ?? throw new global::System.ArgumentNullException(nameof(assignee));
+            this.CreatedAt = createdAt;
+            this.Organization = organization;
+            this.AssigningTeam = assigningTeam;
+            this.PendingCancellationDate = pendingCancellationDate;
+            this.LastActivityAt = lastActivityAt;
+            this.LastActivityEditor = lastActivityEditor;
+            this.UpdatedAt = updatedAt;
+            this.PlanType = planType;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CopilotSeatDetails" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CopilotSeatDetails()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CopilotSeatDetails? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CopilotSeatDetails),
-                jsonSerializerContext) as global::GitHub.CopilotSeatDetails;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CopilotSeatDetails? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CopilotSeatDetails>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CopilotSeatDetails?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CopilotSeatDetails),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CopilotSeatDetails;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CopilotSeatDetails?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CopilotSeatDetails?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

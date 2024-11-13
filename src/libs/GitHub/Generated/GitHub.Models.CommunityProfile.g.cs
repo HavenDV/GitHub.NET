@@ -11,6 +11,7 @@ namespace GitHub
         /// <summary>
         /// Example: 100
         /// </summary>
+        /// <example>100</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("health_percentage")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int HealthPercentage { get; set; }
@@ -18,6 +19,7 @@ namespace GitHub
         /// <summary>
         /// Example: My first repository on GitHub!
         /// </summary>
+        /// <example>My first repository on GitHub!</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? Description { get; set; }
@@ -25,6 +27,7 @@ namespace GitHub
         /// <summary>
         /// Example: example.com
         /// </summary>
+        /// <example>example.com</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("documentation")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? Documentation { get; set; }
@@ -46,6 +49,7 @@ namespace GitHub
         /// <summary>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("content_reports_enabled")]
         public bool? ContentReportsEnabled { get; set; }
 
@@ -55,91 +59,45 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CommunityProfile" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="healthPercentage">
+        /// Example: 100
+        /// </param>
+        /// <param name="description">
+        /// Example: My first repository on GitHub!
+        /// </param>
+        /// <param name="documentation">
+        /// Example: example.com
+        /// </param>
+        /// <param name="files"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="contentReportsEnabled">
+        /// Example: true
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CommunityProfile(
+            int healthPercentage,
+            string? description,
+            string? documentation,
+            global::GitHub.CommunityProfileFiles files,
+            global::System.DateTime? updatedAt,
+            bool? contentReportsEnabled)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.HealthPercentage = healthPercentage;
+            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
+            this.Documentation = documentation ?? throw new global::System.ArgumentNullException(nameof(documentation));
+            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
+            this.UpdatedAt = updatedAt;
+            this.ContentReportsEnabled = contentReportsEnabled;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CommunityProfile" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CommunityProfile()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CommunityProfile? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CommunityProfile),
-                jsonSerializerContext) as global::GitHub.CommunityProfile;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CommunityProfile? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CommunityProfile>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CommunityProfile?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CommunityProfile),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CommunityProfile;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CommunityProfile?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CommunityProfile?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

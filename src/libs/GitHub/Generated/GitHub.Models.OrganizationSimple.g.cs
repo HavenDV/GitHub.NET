@@ -11,6 +11,7 @@ namespace GitHub
         /// <summary>
         /// Example: github
         /// </summary>
+        /// <example>github</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("login")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Login { get; set; }
@@ -18,6 +19,7 @@ namespace GitHub
         /// <summary>
         /// Example: 1
         /// </summary>
+        /// <example>1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
@@ -25,6 +27,7 @@ namespace GitHub
         /// <summary>
         /// Example: MDEyOk9yZ2FuaXphdGlvbjE=
         /// </summary>
+        /// <example>MDEyOk9yZ2FuaXphdGlvbjE=</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string NodeId { get; set; }
@@ -32,6 +35,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/orgs/github
         /// </summary>
+        /// <example>https://api.github.com/orgs/github</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -39,6 +43,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/orgs/github/repos
         /// </summary>
+        /// <example>https://api.github.com/orgs/github/repos</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("repos_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ReposUrl { get; set; }
@@ -46,6 +51,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/orgs/github/events
         /// </summary>
+        /// <example>https://api.github.com/orgs/github/events</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("events_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string EventsUrl { get; set; }
@@ -53,6 +59,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/orgs/github/hooks
         /// </summary>
+        /// <example>https://api.github.com/orgs/github/hooks</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("hooks_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string HooksUrl { get; set; }
@@ -60,6 +67,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/orgs/github/issues
         /// </summary>
+        /// <example>https://api.github.com/orgs/github/issues</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("issues_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string IssuesUrl { get; set; }
@@ -67,6 +75,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/orgs/github/members{/member}
         /// </summary>
+        /// <example>https://api.github.com/orgs/github/members{/member}</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("members_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string MembersUrl { get; set; }
@@ -74,6 +83,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/orgs/github/public_members{/member}
         /// </summary>
+        /// <example>https://api.github.com/orgs/github/public_members{/member}</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("public_members_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PublicMembersUrl { get; set; }
@@ -81,6 +91,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/images/error/octocat_happy.gif
         /// </summary>
+        /// <example>https://github.com/images/error/octocat_happy.gif</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("avatar_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AvatarUrl { get; set; }
@@ -88,6 +99,7 @@ namespace GitHub
         /// <summary>
         /// Example: A great organization
         /// </summary>
+        /// <example>A great organization</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? Description { get; set; }
@@ -98,91 +110,79 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="OrganizationSimple" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="login">
+        /// Example: github
+        /// </param>
+        /// <param name="id">
+        /// Example: 1
+        /// </param>
+        /// <param name="nodeId">
+        /// Example: MDEyOk9yZ2FuaXphdGlvbjE=
+        /// </param>
+        /// <param name="url">
+        /// Example: https://api.github.com/orgs/github
+        /// </param>
+        /// <param name="reposUrl">
+        /// Example: https://api.github.com/orgs/github/repos
+        /// </param>
+        /// <param name="eventsUrl">
+        /// Example: https://api.github.com/orgs/github/events
+        /// </param>
+        /// <param name="hooksUrl">
+        /// Example: https://api.github.com/orgs/github/hooks
+        /// </param>
+        /// <param name="issuesUrl">
+        /// Example: https://api.github.com/orgs/github/issues
+        /// </param>
+        /// <param name="membersUrl">
+        /// Example: https://api.github.com/orgs/github/members{/member}
+        /// </param>
+        /// <param name="publicMembersUrl">
+        /// Example: https://api.github.com/orgs/github/public_members{/member}
+        /// </param>
+        /// <param name="avatarUrl">
+        /// Example: https://github.com/images/error/octocat_happy.gif
+        /// </param>
+        /// <param name="description">
+        /// Example: A great organization
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public OrganizationSimple(
+            string login,
+            int id,
+            string nodeId,
+            string url,
+            string reposUrl,
+            string eventsUrl,
+            string hooksUrl,
+            string issuesUrl,
+            string membersUrl,
+            string publicMembersUrl,
+            string avatarUrl,
+            string? description)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Login = login ?? throw new global::System.ArgumentNullException(nameof(login));
+            this.Id = id;
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.ReposUrl = reposUrl ?? throw new global::System.ArgumentNullException(nameof(reposUrl));
+            this.EventsUrl = eventsUrl ?? throw new global::System.ArgumentNullException(nameof(eventsUrl));
+            this.HooksUrl = hooksUrl ?? throw new global::System.ArgumentNullException(nameof(hooksUrl));
+            this.IssuesUrl = issuesUrl ?? throw new global::System.ArgumentNullException(nameof(issuesUrl));
+            this.MembersUrl = membersUrl ?? throw new global::System.ArgumentNullException(nameof(membersUrl));
+            this.PublicMembersUrl = publicMembersUrl ?? throw new global::System.ArgumentNullException(nameof(publicMembersUrl));
+            this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
+            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="OrganizationSimple" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public OrganizationSimple()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.OrganizationSimple? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.OrganizationSimple),
-                jsonSerializerContext) as global::GitHub.OrganizationSimple;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.OrganizationSimple? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.OrganizationSimple>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.OrganizationSimple?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.OrganizationSimple),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.OrganizationSimple;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.OrganizationSimple?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.OrganizationSimple?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

@@ -12,7 +12,7 @@ namespace GitHub
         /// <param name="org"></param>
         /// <param name="runnerGroupId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.RunnerGroupsOrg> ActionsGetSelfHostedRunnerGroupForOrgAsync(
             string org,
             int runnerGroupId,

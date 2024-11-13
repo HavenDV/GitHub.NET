@@ -98,91 +98,61 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="GpgKeySubkey" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id"></param>
+        /// <param name="primaryKeyId"></param>
+        /// <param name="keyId"></param>
+        /// <param name="publicKey"></param>
+        /// <param name="emails"></param>
+        /// <param name="subkeys"></param>
+        /// <param name="canSign"></param>
+        /// <param name="canEncryptComms"></param>
+        /// <param name="canEncryptStorage"></param>
+        /// <param name="canCertify"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="expiresAt"></param>
+        /// <param name="rawKey"></param>
+        /// <param name="revoked"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public GpgKeySubkey(
+            long? id,
+            int? primaryKeyId,
+            string? keyId,
+            string? publicKey,
+            global::System.Collections.Generic.IList<global::GitHub.GpgKeySubkeyEmail>? emails,
+            global::System.Collections.Generic.IList<object>? subkeys,
+            bool? canSign,
+            bool? canEncryptComms,
+            bool? canEncryptStorage,
+            bool? canCertify,
+            string? createdAt,
+            string? expiresAt,
+            string? rawKey,
+            bool? revoked)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.PrimaryKeyId = primaryKeyId;
+            this.KeyId = keyId;
+            this.PublicKey = publicKey;
+            this.Emails = emails;
+            this.Subkeys = subkeys;
+            this.CanSign = canSign;
+            this.CanEncryptComms = canEncryptComms;
+            this.CanEncryptStorage = canEncryptStorage;
+            this.CanCertify = canCertify;
+            this.CreatedAt = createdAt;
+            this.ExpiresAt = expiresAt;
+            this.RawKey = rawKey;
+            this.Revoked = revoked;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="GpgKeySubkey" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public GpgKeySubkey()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.GpgKeySubkey? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.GpgKeySubkey),
-                jsonSerializerContext) as global::GitHub.GpgKeySubkey;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.GpgKeySubkey? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.GpgKeySubkey>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.GpgKeySubkey?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.GpgKeySubkey),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.GpgKeySubkey;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.GpgKeySubkey?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.GpgKeySubkey?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

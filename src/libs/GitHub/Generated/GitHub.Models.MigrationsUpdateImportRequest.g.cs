@@ -24,6 +24,7 @@ namespace GitHub
         /// The type of version control system you are migrating from.<br/>
         /// Example: "git"
         /// </summary>
+        /// <example>"git"</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("vcs")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.MigrationsUpdateImportRequestVcsJsonConverter))]
         public global::GitHub.MigrationsUpdateImportRequestVcs? Vcs { get; set; }
@@ -32,6 +33,7 @@ namespace GitHub
         /// For a tfvc import, the name of the project that is being imported.<br/>
         /// Example: "project1"
         /// </summary>
+        /// <example>"project1"</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("tfvc_project")]
         public string? TfvcProject { get; set; }
 
@@ -41,91 +43,41 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="MigrationsUpdateImportRequest" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="vcsUsername">
+        /// The username to provide to the originating repository.
+        /// </param>
+        /// <param name="vcsPassword">
+        /// The password to provide to the originating repository.
+        /// </param>
+        /// <param name="vcs">
+        /// The type of version control system you are migrating from.<br/>
+        /// Example: "git"
+        /// </param>
+        /// <param name="tfvcProject">
+        /// For a tfvc import, the name of the project that is being imported.<br/>
+        /// Example: "project1"
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public MigrationsUpdateImportRequest(
+            string? vcsUsername,
+            string? vcsPassword,
+            global::GitHub.MigrationsUpdateImportRequestVcs? vcs,
+            string? tfvcProject)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.VcsUsername = vcsUsername;
+            this.VcsPassword = vcsPassword;
+            this.Vcs = vcs;
+            this.TfvcProject = tfvcProject;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="MigrationsUpdateImportRequest" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public MigrationsUpdateImportRequest()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.MigrationsUpdateImportRequest? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.MigrationsUpdateImportRequest),
-                jsonSerializerContext) as global::GitHub.MigrationsUpdateImportRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.MigrationsUpdateImportRequest? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.MigrationsUpdateImportRequest>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.MigrationsUpdateImportRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.MigrationsUpdateImportRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.MigrationsUpdateImportRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.MigrationsUpdateImportRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.MigrationsUpdateImportRequest?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

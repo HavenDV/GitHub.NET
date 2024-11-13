@@ -12,8 +12,8 @@ namespace GitHub
         /// <param name="org"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsReviewPatGrantRequestsInBulkAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task<string> OrgsReviewPatGrantRequestsInBulkAsync(
             string org,
             global::GitHub.OrgsReviewPatGrantRequestsInBulkRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -35,7 +35,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsReviewPatGrantRequestsInBulkAsync(
+        global::System.Threading.Tasks.Task<string> OrgsReviewPatGrantRequestsInBulkAsync(
             string org,
             global::GitHub.OrgsReviewPatGrantRequestsInBulkRequestAction action,
             global::System.Collections.Generic.IList<int>? patRequestIds = default,

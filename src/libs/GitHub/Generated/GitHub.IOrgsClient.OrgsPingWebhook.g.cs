@@ -15,8 +15,8 @@ namespace GitHub
         /// <param name="org"></param>
         /// <param name="hookId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsPingWebhookAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task OrgsPingWebhookAsync(
             string org,
             int hookId,
             global::System.Threading.CancellationToken cancellationToken = default);

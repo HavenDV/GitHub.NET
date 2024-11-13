@@ -47,7 +47,7 @@ namespace GitHub
         /// <param name="repo"></param>
         /// <param name="pullNumber"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.PullRequest> PullsGetAsync(
             string owner,
             string repo,
@@ -91,30 +91,207 @@ namespace GitHub
             ProcessPullsGetResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
-
-            var __content = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-
-            ProcessResponseContent(
-                client: HttpClient,
-                response: __response,
-                content: ref __content);
-            ProcessPullsGetResponseContent(
-                httpClient: HttpClient,
-                httpResponseMessage: __response,
-                content: ref __content);
-
-            try
+            // 
+            if ((int)__response.StatusCode == 304)
             {
-                __response.EnsureSuccessStatusCode();
+                string? __content_304 = null;
+                if (ReadResponseAsString)
+                {
+                    __content_304 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                }
+                else
+                {
+                    var __contentStream_304 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                }
+
+                throw new global::GitHub.ApiException(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_304,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
             }
-            catch (global::System.Net.Http.HttpRequestException __ex)
+            // Resource not found
+            if ((int)__response.StatusCode == 404)
             {
-                throw new global::System.InvalidOperationException(__content, __ex);
+                string? __content_404 = null;
+                global::GitHub.BasicError? __value_404 = null;
+                if (ReadResponseAsString)
+                {
+                    __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                    __value_404 = global::GitHub.BasicError.FromJson(__content_404, JsonSerializerContext);
+                }
+                else
+                {
+                    var __contentStream_404 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                    __value_404 = await global::GitHub.BasicError.FromJsonStreamAsync(__contentStream_404, JsonSerializerContext).ConfigureAwait(false);
+                }
+
+                throw new global::GitHub.ApiException<global::GitHub.BasicError>(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_404,
+                    ResponseObject = __value_404,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
+            // Unacceptable
+            if ((int)__response.StatusCode == 406)
+            {
+                string? __content_406 = null;
+                global::GitHub.BasicError? __value_406 = null;
+                if (ReadResponseAsString)
+                {
+                    __content_406 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                    __value_406 = global::GitHub.BasicError.FromJson(__content_406, JsonSerializerContext);
+                }
+                else
+                {
+                    var __contentStream_406 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                    __value_406 = await global::GitHub.BasicError.FromJsonStreamAsync(__contentStream_406, JsonSerializerContext).ConfigureAwait(false);
+                }
+
+                throw new global::GitHub.ApiException<global::GitHub.BasicError>(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_406,
+                    ResponseObject = __value_406,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
+            // Internal Error
+            if ((int)__response.StatusCode == 500)
+            {
+                string? __content_500 = null;
+                global::GitHub.BasicError? __value_500 = null;
+                if (ReadResponseAsString)
+                {
+                    __content_500 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                    __value_500 = global::GitHub.BasicError.FromJson(__content_500, JsonSerializerContext);
+                }
+                else
+                {
+                    var __contentStream_500 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                    __value_500 = await global::GitHub.BasicError.FromJsonStreamAsync(__contentStream_500, JsonSerializerContext).ConfigureAwait(false);
+                }
+
+                throw new global::GitHub.ApiException<global::GitHub.BasicError>(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_500,
+                    ResponseObject = __value_500,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
+            // Service unavailable
+            if ((int)__response.StatusCode == 503)
+            {
+                string? __content_503 = null;
+                global::GitHub.PullsGetResponse? __value_503 = null;
+                if (ReadResponseAsString)
+                {
+                    __content_503 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                    __value_503 = global::GitHub.PullsGetResponse.FromJson(__content_503, JsonSerializerContext);
+                }
+                else
+                {
+                    var __contentStream_503 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                    __value_503 = await global::GitHub.PullsGetResponse.FromJsonStreamAsync(__contentStream_503, JsonSerializerContext).ConfigureAwait(false);
+                }
+
+                throw new global::GitHub.ApiException<global::GitHub.PullsGetResponse>(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_503,
+                    ResponseObject = __value_503,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
             }
 
-            return
-                global::GitHub.PullRequest.FromJson(__content, JsonSerializerContext) ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            if (ReadResponseAsString)
+            {
+                var __content = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+
+                ProcessResponseContent(
+                    client: HttpClient,
+                    response: __response,
+                    content: ref __content);
+                ProcessPullsGetResponseContent(
+                    httpClient: HttpClient,
+                    httpResponseMessage: __response,
+                    content: ref __content);
+
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+                }
+                catch (global::System.Net.Http.HttpRequestException __ex)
+                {
+                    throw new global::GitHub.ApiException(
+                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseBody = __content,
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+
+                return
+                    global::GitHub.PullRequest.FromJson(__content, JsonSerializerContext) ??
+                    throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+            }
+            else
+            {
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+                }
+                catch (global::System.Net.Http.HttpRequestException __ex)
+                {
+                    throw new global::GitHub.ApiException(
+                        message: __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+
+                using var __responseStream = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+
+                var __responseValue = await global::GitHub.PullRequest.FromJsonStreamAsync(__responseStream, JsonSerializerContext).ConfigureAwait(false);
+
+                return
+                    __responseValue ??
+                    throw new global::System.InvalidOperationException("Response deserialization failed.");
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ namespace GitHub
         /// <param name="pullNumber"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.PullRequestMergeResult> PullsMergeAsync(
             string owner,
             string repo,

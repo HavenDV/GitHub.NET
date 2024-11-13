@@ -40,6 +40,7 @@ namespace GitHub
         /// The reason for the state change. Ignored unless `state` is changed.<br/>
         /// Example: not_planned
         /// </summary>
+        /// <example>not_planned</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("state_reason")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.IssuesUpdateRequestStateReasonJsonConverter))]
         public global::GitHub.IssuesUpdateRequestStateReason? StateReason { get; set; }
@@ -69,91 +70,58 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="IssuesUpdateRequest" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="title">
+        /// The title of the issue.
+        /// </param>
+        /// <param name="body">
+        /// The contents of the issue.
+        /// </param>
+        /// <param name="assignee">
+        /// Username to assign to this issue. **This field is closing down.**
+        /// </param>
+        /// <param name="state">
+        /// The open or closed state of the issue.
+        /// </param>
+        /// <param name="stateReason">
+        /// The reason for the state change. Ignored unless `state` is changed.<br/>
+        /// Example: not_planned
+        /// </param>
+        /// <param name="milestone"></param>
+        /// <param name="labels">
+        /// Labels to associate with this issue. Pass one or more labels to _replace_ the set of labels on this issue. Send an empty array (`[]`) to clear all labels from the issue. Only users with push access can set labels for issues. Without push access to the repository, label changes are silently dropped.
+        /// </param>
+        /// <param name="assignees">
+        /// Usernames to assign to this issue. Pass one or more user logins to _replace_ the set of assignees on this issue. Send an empty array (`[]`) to clear all assignees from the issue. Only users with push access can set assignees for new issues. Without push access to the repository, assignee changes are silently dropped.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public IssuesUpdateRequest(
+            global::GitHub.OneOf<string, int?>? title,
+            string? body,
+            string? assignee,
+            global::GitHub.IssuesUpdateRequestState? state,
+            global::GitHub.IssuesUpdateRequestStateReason? stateReason,
+            global::GitHub.OneOf<string, int?>? milestone,
+            global::System.Collections.Generic.IList<global::GitHub.OneOf<string, global::GitHub.IssuesUpdateRequestLabel>>? labels,
+            global::System.Collections.Generic.IList<string>? assignees)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Title = title;
+            this.Body = body;
+            this.Assignee = assignee;
+            this.State = state;
+            this.StateReason = stateReason;
+            this.Milestone = milestone;
+            this.Labels = labels;
+            this.Assignees = assignees;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="IssuesUpdateRequest" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public IssuesUpdateRequest()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.IssuesUpdateRequest? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.IssuesUpdateRequest),
-                jsonSerializerContext) as global::GitHub.IssuesUpdateRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.IssuesUpdateRequest? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.IssuesUpdateRequest>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.IssuesUpdateRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.IssuesUpdateRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.IssuesUpdateRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.IssuesUpdateRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.IssuesUpdateRequest?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

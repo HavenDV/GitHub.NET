@@ -20,11 +20,6 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCodespacesSetSelectedReposForOrgSecretResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
         /// Set selected repositories for an organization secret<br/>
         /// Replaces all repositories for an organization development environment secret when the `visibility`<br/>
@@ -36,8 +31,8 @@ namespace GitHub
         /// <param name="secretName"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> CodespacesSetSelectedReposForOrgSecretAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task CodespacesSetSelectedReposForOrgSecretAsync(
             string org,
             string secretName,
             global::GitHub.CodespacesSetSelectedReposForOrgSecretRequest request,
@@ -88,30 +83,23 @@ namespace GitHub
             ProcessCodespacesSetSelectedReposForOrgSecretResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
-
-            var __content = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-
-            ProcessResponseContent(
-                client: HttpClient,
-                response: __response,
-                content: ref __content);
-            ProcessCodespacesSetSelectedReposForOrgSecretResponseContent(
-                httpClient: HttpClient,
-                httpResponseMessage: __response,
-                content: ref __content);
-
             try
             {
                 __response.EnsureSuccessStatusCode();
             }
             catch (global::System.Net.Http.HttpRequestException __ex)
             {
-                throw new global::System.InvalidOperationException(__content, __ex);
+                throw new global::GitHub.ApiException(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    innerException: __ex,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
             }
-
-            return
-                global::GitHub.BasicError.FromJson(__content, JsonSerializerContext) ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
         /// <summary>
@@ -128,7 +116,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.BasicError> CodespacesSetSelectedReposForOrgSecretAsync(
+        public async global::System.Threading.Tasks.Task CodespacesSetSelectedReposForOrgSecretAsync(
             string org,
             string secretName,
             global::System.Collections.Generic.IList<int> selectedRepositoryIds,
@@ -139,7 +127,7 @@ namespace GitHub
                 SelectedRepositoryIds = selectedRepositoryIds,
             };
 
-            return await CodespacesSetSelectedReposForOrgSecretAsync(
+            await CodespacesSetSelectedReposForOrgSecretAsync(
                 org: org,
                 secretName: secretName,
                 request: __request,

@@ -116,91 +116,72 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookDeploymentStatusCreatedDeploymentStatus" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="createdAt"></param>
+        /// <param name="creator"></param>
+        /// <param name="deploymentUrl"></param>
+        /// <param name="description">
+        /// The optional human-readable description added to the status.
+        /// </param>
+        /// <param name="environment"></param>
+        /// <param name="environmentUrl"></param>
+        /// <param name="id"></param>
+        /// <param name="logUrl"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="performedViaGithubApp">
+        /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
+        /// </param>
+        /// <param name="repositoryUrl"></param>
+        /// <param name="state">
+        /// The new state. Can be `pending`, `success`, `failure`, or `error`.
+        /// </param>
+        /// <param name="targetUrl">
+        /// The optional link added to the status.
+        /// </param>
+        /// <param name="updatedAt"></param>
+        /// <param name="url"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookDeploymentStatusCreatedDeploymentStatus(
+            string createdAt,
+            global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatusCreator? creator,
+            string deploymentUrl,
+            string description,
+            string environment,
+            int id,
+            string nodeId,
+            string repositoryUrl,
+            string state,
+            string targetUrl,
+            string updatedAt,
+            string url,
+            string? environmentUrl,
+            string? logUrl,
+            global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatusPerformedViaGithubApp? performedViaGithubApp)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
+            this.Creator = creator ?? throw new global::System.ArgumentNullException(nameof(creator));
+            this.DeploymentUrl = deploymentUrl ?? throw new global::System.ArgumentNullException(nameof(deploymentUrl));
+            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
+            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
+            this.Id = id;
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.RepositoryUrl = repositoryUrl ?? throw new global::System.ArgumentNullException(nameof(repositoryUrl));
+            this.State = state ?? throw new global::System.ArgumentNullException(nameof(state));
+            this.TargetUrl = targetUrl ?? throw new global::System.ArgumentNullException(nameof(targetUrl));
+            this.UpdatedAt = updatedAt ?? throw new global::System.ArgumentNullException(nameof(updatedAt));
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.EnvironmentUrl = environmentUrl;
+            this.LogUrl = logUrl;
+            this.PerformedViaGithubApp = performedViaGithubApp;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookDeploymentStatusCreatedDeploymentStatus" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookDeploymentStatusCreatedDeploymentStatus()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatus? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatus),
-                jsonSerializerContext) as global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatus;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatus? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatus>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatus?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatus),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatus;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatus?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookDeploymentStatusCreatedDeploymentStatus?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

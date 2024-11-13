@@ -182,91 +182,103 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="PagesHealthCheckAltDomain" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="host"></param>
+        /// <param name="uri"></param>
+        /// <param name="nameservers"></param>
+        /// <param name="dnsResolves"></param>
+        /// <param name="isProxied"></param>
+        /// <param name="isCloudflareIp"></param>
+        /// <param name="isFastlyIp"></param>
+        /// <param name="isOldIpAddress"></param>
+        /// <param name="isARecord"></param>
+        /// <param name="hasCnameRecord"></param>
+        /// <param name="hasMxRecordsPresent"></param>
+        /// <param name="isValidDomain"></param>
+        /// <param name="isApexDomain"></param>
+        /// <param name="shouldBeARecord"></param>
+        /// <param name="isCnameToGithubUserDomain"></param>
+        /// <param name="isCnameToPagesDotGithubDotCom"></param>
+        /// <param name="isCnameToFastly"></param>
+        /// <param name="isPointedToGithubPagesIp"></param>
+        /// <param name="isNonGithubPagesIpPresent"></param>
+        /// <param name="isPagesDomain"></param>
+        /// <param name="isServedByPages"></param>
+        /// <param name="isValid"></param>
+        /// <param name="reason"></param>
+        /// <param name="respondsToHttps"></param>
+        /// <param name="enforcesHttps"></param>
+        /// <param name="httpsError"></param>
+        /// <param name="isHttpsEligible"></param>
+        /// <param name="caaError"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public PagesHealthCheckAltDomain(
+            string? host,
+            string? uri,
+            string? nameservers,
+            bool? dnsResolves,
+            bool? isProxied,
+            bool? isCloudflareIp,
+            bool? isFastlyIp,
+            bool? isOldIpAddress,
+            bool? isARecord,
+            bool? hasCnameRecord,
+            bool? hasMxRecordsPresent,
+            bool? isValidDomain,
+            bool? isApexDomain,
+            bool? shouldBeARecord,
+            bool? isCnameToGithubUserDomain,
+            bool? isCnameToPagesDotGithubDotCom,
+            bool? isCnameToFastly,
+            bool? isPointedToGithubPagesIp,
+            bool? isNonGithubPagesIpPresent,
+            bool? isPagesDomain,
+            bool? isServedByPages,
+            bool? isValid,
+            string? reason,
+            bool? respondsToHttps,
+            bool? enforcesHttps,
+            string? httpsError,
+            bool? isHttpsEligible,
+            string? caaError)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Host = host;
+            this.Uri = uri;
+            this.Nameservers = nameservers;
+            this.DnsResolves = dnsResolves;
+            this.IsProxied = isProxied;
+            this.IsCloudflareIp = isCloudflareIp;
+            this.IsFastlyIp = isFastlyIp;
+            this.IsOldIpAddress = isOldIpAddress;
+            this.IsARecord = isARecord;
+            this.HasCnameRecord = hasCnameRecord;
+            this.HasMxRecordsPresent = hasMxRecordsPresent;
+            this.IsValidDomain = isValidDomain;
+            this.IsApexDomain = isApexDomain;
+            this.ShouldBeARecord = shouldBeARecord;
+            this.IsCnameToGithubUserDomain = isCnameToGithubUserDomain;
+            this.IsCnameToPagesDotGithubDotCom = isCnameToPagesDotGithubDotCom;
+            this.IsCnameToFastly = isCnameToFastly;
+            this.IsPointedToGithubPagesIp = isPointedToGithubPagesIp;
+            this.IsNonGithubPagesIpPresent = isNonGithubPagesIpPresent;
+            this.IsPagesDomain = isPagesDomain;
+            this.IsServedByPages = isServedByPages;
+            this.IsValid = isValid;
+            this.Reason = reason;
+            this.RespondsToHttps = respondsToHttps;
+            this.EnforcesHttps = enforcesHttps;
+            this.HttpsError = httpsError;
+            this.IsHttpsEligible = isHttpsEligible;
+            this.CaaError = caaError;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="PagesHealthCheckAltDomain" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public PagesHealthCheckAltDomain()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.PagesHealthCheckAltDomain? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.PagesHealthCheckAltDomain),
-                jsonSerializerContext) as global::GitHub.PagesHealthCheckAltDomain;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.PagesHealthCheckAltDomain? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.PagesHealthCheckAltDomain>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.PagesHealthCheckAltDomain?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.PagesHealthCheckAltDomain),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.PagesHealthCheckAltDomain;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.PagesHealthCheckAltDomain?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.PagesHealthCheckAltDomain?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

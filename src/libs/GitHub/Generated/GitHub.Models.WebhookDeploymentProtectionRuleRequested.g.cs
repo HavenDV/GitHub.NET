@@ -79,91 +79,69 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookDeploymentProtectionRuleRequested" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="action"></param>
+        /// <param name="environment">
+        /// The name of the environment that has the deployment protection rule.
+        /// </param>
+        /// <param name="event">
+        /// The event that triggered the deployment protection rule.
+        /// </param>
+        /// <param name="deploymentCallbackUrl">
+        /// The URL to review the deployment protection rule.
+        /// </param>
+        /// <param name="deployment">
+        /// A request for a specific ref(branch,sha,tag) to be deployed
+        /// </param>
+        /// <param name="pullRequests"></param>
+        /// <param name="repository">
+        /// The repository on GitHub where the event occurred. Webhook payloads contain the `repository` property<br/>
+        /// when the event occurs from activity in a repository.
+        /// </param>
+        /// <param name="organization">
+        /// A GitHub organization. Webhook payloads contain the `organization` property when the webhook is configured for an<br/>
+        /// organization, or when the event occurs from activity in a repository owned by an organization.
+        /// </param>
+        /// <param name="installation">
+        /// The GitHub App installation. Webhook payloads contain the `installation` property when the event is configured<br/>
+        /// for and sent to a GitHub App. For more information,<br/>
+        /// see "[Using webhooks with GitHub Apps](https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps)."
+        /// </param>
+        /// <param name="sender">
+        /// A GitHub user.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookDeploymentProtectionRuleRequested(
+            global::GitHub.WebhookDeploymentProtectionRuleRequestedAction? action,
+            string? environment,
+            string? @event,
+            string? deploymentCallbackUrl,
+            global::GitHub.Deployment? deployment,
+            global::System.Collections.Generic.IList<global::GitHub.PullRequest>? pullRequests,
+            global::GitHub.RepositoryWebhooks? repository,
+            global::GitHub.OrganizationSimpleWebhooks? organization,
+            global::GitHub.SimpleInstallation? installation,
+            global::GitHub.SimpleUser? sender)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Action = action;
+            this.Environment = environment;
+            this.Event = @event;
+            this.DeploymentCallbackUrl = deploymentCallbackUrl;
+            this.Deployment = deployment;
+            this.PullRequests = pullRequests;
+            this.Repository = repository;
+            this.Organization = organization;
+            this.Installation = installation;
+            this.Sender = sender;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookDeploymentProtectionRuleRequested" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookDeploymentProtectionRuleRequested()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookDeploymentProtectionRuleRequested? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookDeploymentProtectionRuleRequested),
-                jsonSerializerContext) as global::GitHub.WebhookDeploymentProtectionRuleRequested;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookDeploymentProtectionRuleRequested? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookDeploymentProtectionRuleRequested>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookDeploymentProtectionRuleRequested?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookDeploymentProtectionRuleRequested),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookDeploymentProtectionRuleRequested;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookDeploymentProtectionRuleRequested?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookDeploymentProtectionRuleRequested?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

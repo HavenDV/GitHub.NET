@@ -12,6 +12,7 @@ namespace GitHub
         /// Lock the repositories being migrated at the start of the migration<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("lock_repositories")]
         public bool? LockRepositories { get; set; }
 
@@ -19,6 +20,7 @@ namespace GitHub
         /// Indicates whether metadata should be excluded and only git source should be included for the migration.<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclude_metadata")]
         public bool? ExcludeMetadata { get; set; }
 
@@ -26,6 +28,7 @@ namespace GitHub
         /// Indicates whether the repository git data should be excluded from the migration.<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclude_git_data")]
         public bool? ExcludeGitData { get; set; }
 
@@ -33,6 +36,7 @@ namespace GitHub
         /// Do not include attachments in the migration<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclude_attachments")]
         public bool? ExcludeAttachments { get; set; }
 
@@ -40,6 +44,7 @@ namespace GitHub
         /// Do not include releases in the migration<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclude_releases")]
         public bool? ExcludeReleases { get; set; }
 
@@ -47,6 +52,7 @@ namespace GitHub
         /// Indicates whether projects owned by the organization or users should be excluded.<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclude_owner_projects")]
         public bool? ExcludeOwnerProjects { get; set; }
 
@@ -55,6 +61,7 @@ namespace GitHub
         /// Default Value: false<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("org_metadata_only")]
         public bool? OrgMetadataOnly { get; set; }
 
@@ -62,6 +69,7 @@ namespace GitHub
         /// Exclude attributes from the API response to improve performance<br/>
         /// Example: [repositories]
         /// </summary>
+        /// <example>[repositories]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("exclude")]
         public global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForAuthenticatedUserRequestExcludeItem>? Exclude { get; set; }
 
@@ -78,91 +86,71 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="MigrationsStartForAuthenticatedUserRequest" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="lockRepositories">
+        /// Lock the repositories being migrated at the start of the migration<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="excludeMetadata">
+        /// Indicates whether metadata should be excluded and only git source should be included for the migration.<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="excludeGitData">
+        /// Indicates whether the repository git data should be excluded from the migration.<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="excludeAttachments">
+        /// Do not include attachments in the migration<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="excludeReleases">
+        /// Do not include releases in the migration<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="excludeOwnerProjects">
+        /// Indicates whether projects owned by the organization or users should be excluded.<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="orgMetadataOnly">
+        /// Indicates whether this should only include organization metadata (repositories array should be empty and will ignore other flags).<br/>
+        /// Default Value: false<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="exclude">
+        /// Exclude attributes from the API response to improve performance<br/>
+        /// Example: [repositories]
+        /// </param>
+        /// <param name="repositories"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public MigrationsStartForAuthenticatedUserRequest(
+            global::System.Collections.Generic.IList<string> repositories,
+            bool? lockRepositories,
+            bool? excludeMetadata,
+            bool? excludeGitData,
+            bool? excludeAttachments,
+            bool? excludeReleases,
+            bool? excludeOwnerProjects,
+            bool? orgMetadataOnly,
+            global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForAuthenticatedUserRequestExcludeItem>? exclude)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Repositories = repositories ?? throw new global::System.ArgumentNullException(nameof(repositories));
+            this.LockRepositories = lockRepositories;
+            this.ExcludeMetadata = excludeMetadata;
+            this.ExcludeGitData = excludeGitData;
+            this.ExcludeAttachments = excludeAttachments;
+            this.ExcludeReleases = excludeReleases;
+            this.ExcludeOwnerProjects = excludeOwnerProjects;
+            this.OrgMetadataOnly = orgMetadataOnly;
+            this.Exclude = exclude;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="MigrationsStartForAuthenticatedUserRequest" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public MigrationsStartForAuthenticatedUserRequest()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.MigrationsStartForAuthenticatedUserRequest? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.MigrationsStartForAuthenticatedUserRequest),
-                jsonSerializerContext) as global::GitHub.MigrationsStartForAuthenticatedUserRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.MigrationsStartForAuthenticatedUserRequest? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.MigrationsStartForAuthenticatedUserRequest>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.MigrationsStartForAuthenticatedUserRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.MigrationsStartForAuthenticatedUserRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.MigrationsStartForAuthenticatedUserRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.MigrationsStartForAuthenticatedUserRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.MigrationsStartForAuthenticatedUserRequest?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

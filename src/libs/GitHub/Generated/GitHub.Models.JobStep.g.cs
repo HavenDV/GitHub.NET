@@ -12,6 +12,7 @@ namespace GitHub
         /// The phase of the lifecycle that the job is currently in.<br/>
         /// Example: queued
         /// </summary>
+        /// <example>queued</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.JobStepStatusJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -21,6 +22,7 @@ namespace GitHub
         /// The outcome of the job.<br/>
         /// Example: success
         /// </summary>
+        /// <example>success</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("conclusion")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? Conclusion { get; set; }
@@ -29,6 +31,7 @@ namespace GitHub
         /// The name of the job.<br/>
         /// Example: test-coverage
         /// </summary>
+        /// <example>test-coverage</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -36,6 +39,7 @@ namespace GitHub
         /// <summary>
         /// Example: 1
         /// </summary>
+        /// <example>1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("number")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Number { get; set; }
@@ -58,91 +62,52 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="JobStep" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="status">
+        /// The phase of the lifecycle that the job is currently in.<br/>
+        /// Example: queued
+        /// </param>
+        /// <param name="conclusion">
+        /// The outcome of the job.<br/>
+        /// Example: success
+        /// </param>
+        /// <param name="name">
+        /// The name of the job.<br/>
+        /// Example: test-coverage
+        /// </param>
+        /// <param name="number">
+        /// Example: 1
+        /// </param>
+        /// <param name="startedAt">
+        /// The time that the step started, in ISO 8601 format.
+        /// </param>
+        /// <param name="completedAt">
+        /// The time that the job finished, in ISO 8601 format.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public JobStep(
+            global::GitHub.JobStepStatus status,
+            string? conclusion,
+            string name,
+            int number,
+            global::System.DateTime? startedAt,
+            global::System.DateTime? completedAt)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Status = status;
+            this.Conclusion = conclusion ?? throw new global::System.ArgumentNullException(nameof(conclusion));
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Number = number;
+            this.StartedAt = startedAt;
+            this.CompletedAt = completedAt;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="JobStep" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public JobStep()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.JobStep? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.JobStep),
-                jsonSerializerContext) as global::GitHub.JobStep;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.JobStep? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.JobStep>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.JobStep?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.JobStep),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.JobStep;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.JobStep?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.JobStep?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

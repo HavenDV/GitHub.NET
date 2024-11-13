@@ -150,91 +150,83 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="GistSimpleForkOf" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="url"></param>
+        /// <param name="forksUrl"></param>
+        /// <param name="commitsUrl"></param>
+        /// <param name="id"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="gitPullUrl"></param>
+        /// <param name="gitPushUrl"></param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="files"></param>
+        /// <param name="public"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="description"></param>
+        /// <param name="comments"></param>
+        /// <param name="user">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="commentsUrl"></param>
+        /// <param name="owner">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="truncated"></param>
+        /// <param name="forks"></param>
+        /// <param name="history"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public GistSimpleForkOf(
+            string url,
+            string forksUrl,
+            string commitsUrl,
+            string id,
+            string nodeId,
+            string gitPullUrl,
+            string gitPushUrl,
+            string htmlUrl,
+            global::System.Collections.Generic.Dictionary<string, global::GitHub.GistSimpleForkOfFiles2> files,
+            bool @public,
+            global::System.DateTime createdAt,
+            global::System.DateTime updatedAt,
+            string? description,
+            int comments,
+            global::GitHub.NullableSimpleUser? user,
+            string commentsUrl,
+            global::GitHub.NullableSimpleUser? owner,
+            bool? truncated,
+            global::System.Collections.Generic.IList<object>? forks,
+            global::System.Collections.Generic.IList<object>? history)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.ForksUrl = forksUrl ?? throw new global::System.ArgumentNullException(nameof(forksUrl));
+            this.CommitsUrl = commitsUrl ?? throw new global::System.ArgumentNullException(nameof(commitsUrl));
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.GitPullUrl = gitPullUrl ?? throw new global::System.ArgumentNullException(nameof(gitPullUrl));
+            this.GitPushUrl = gitPushUrl ?? throw new global::System.ArgumentNullException(nameof(gitPushUrl));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
+            this.Public = @public;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
+            this.Comments = comments;
+            this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.CommentsUrl = commentsUrl ?? throw new global::System.ArgumentNullException(nameof(commentsUrl));
+            this.Owner = owner;
+            this.Truncated = truncated;
+            this.Forks = forks;
+            this.History = history;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="GistSimpleForkOf" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public GistSimpleForkOf()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.GistSimpleForkOf? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.GistSimpleForkOf),
-                jsonSerializerContext) as global::GitHub.GistSimpleForkOf;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.GistSimpleForkOf? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.GistSimpleForkOf>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.GistSimpleForkOf?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.GistSimpleForkOf),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.GistSimpleForkOf;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.GistSimpleForkOf?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.GistSimpleForkOf?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

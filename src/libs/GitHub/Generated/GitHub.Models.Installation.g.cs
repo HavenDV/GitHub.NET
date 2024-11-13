@@ -14,6 +14,7 @@ namespace GitHub
         /// The ID of the installation.<br/>
         /// Example: 1
         /// </summary>
+        /// <example>1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
@@ -37,6 +38,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/app/installations/1/access_tokens
         /// </summary>
+        /// <example>https://api.github.com/app/installations/1/access_tokens</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("access_tokens_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AccessTokensUrl { get; set; }
@@ -44,6 +46,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/installation/repositories
         /// </summary>
+        /// <example>https://api.github.com/installation/repositories</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("repositories_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string RepositoriesUrl { get; set; }
@@ -51,6 +54,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/organizations/github/settings/installations/1
         /// </summary>
+        /// <example>https://github.com/organizations/github/settings/installations/1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("html_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string HtmlUrl { get; set; }
@@ -58,6 +62,7 @@ namespace GitHub
         /// <summary>
         /// Example: 1
         /// </summary>
+        /// <example>1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("app_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int AppId { get; set; }
@@ -72,6 +77,7 @@ namespace GitHub
         /// <summary>
         /// Example: Organization
         /// </summary>
+        /// <example>Organization</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("target_type")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string TargetType { get; set; }
@@ -107,6 +113,7 @@ namespace GitHub
         /// <summary>
         /// Example: config.yaml
         /// </summary>
+        /// <example>config.yaml</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("single_file_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? SingleFileName { get; set; }
@@ -114,18 +121,21 @@ namespace GitHub
         /// <summary>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_multiple_single_files")]
         public bool? HasMultipleSingleFiles { get; set; }
 
         /// <summary>
         /// Example: [config.yml, .github/issue_TEMPLATE.md]
         /// </summary>
+        /// <example>[config.yml, .github/issue_TEMPLATE.md]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("single_file_paths")]
         public global::System.Collections.Generic.IList<string>? SingleFilePaths { get; set; }
 
         /// <summary>
         /// Example: github-actions
         /// </summary>
+        /// <example>github-actions</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("app_slug")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AppSlug { get; set; }
@@ -147,6 +157,7 @@ namespace GitHub
         /// <summary>
         /// Example: "test_13f1e99741e3e004@d7e1eb0bc0a1ba12.com"
         /// </summary>
+        /// <example>"test_13f1e99741e3e004@d7e1eb0bc0a1ba12.com"</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("contact_email")]
         public string? ContactEmail { get; set; }
 
@@ -156,91 +167,110 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="Installation" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// The ID of the installation.<br/>
+        /// Example: 1
+        /// </param>
+        /// <param name="account"></param>
+        /// <param name="repositorySelection">
+        /// Describe whether all repositories have been selected or there's a selection involved
+        /// </param>
+        /// <param name="accessTokensUrl">
+        /// Example: https://api.github.com/app/installations/1/access_tokens
+        /// </param>
+        /// <param name="repositoriesUrl">
+        /// Example: https://api.github.com/installation/repositories
+        /// </param>
+        /// <param name="htmlUrl">
+        /// Example: https://github.com/organizations/github/settings/installations/1
+        /// </param>
+        /// <param name="appId">
+        /// Example: 1
+        /// </param>
+        /// <param name="targetId">
+        /// The ID of the user or organization this token is being scoped to.
+        /// </param>
+        /// <param name="targetType">
+        /// Example: Organization
+        /// </param>
+        /// <param name="permissions">
+        /// The permissions granted to the user access token.
+        /// </param>
+        /// <param name="events"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="singleFileName">
+        /// Example: config.yaml
+        /// </param>
+        /// <param name="hasMultipleSingleFiles">
+        /// Example: true
+        /// </param>
+        /// <param name="singleFilePaths">
+        /// Example: [config.yml, .github/issue_TEMPLATE.md]
+        /// </param>
+        /// <param name="appSlug">
+        /// Example: github-actions
+        /// </param>
+        /// <param name="suspendedBy">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="suspendedAt"></param>
+        /// <param name="contactEmail">
+        /// Example: "test_13f1e99741e3e004@d7e1eb0bc0a1ba12.com"
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public Installation(
+            int id,
+            global::GitHub.AnyOf<global::GitHub.SimpleUser, global::GitHub.Enterprise>? account,
+            global::GitHub.InstallationRepositorySelection repositorySelection,
+            string accessTokensUrl,
+            string repositoriesUrl,
+            string htmlUrl,
+            int appId,
+            int targetId,
+            string targetType,
+            global::GitHub.AppPermissions permissions,
+            global::System.Collections.Generic.IList<string> events,
+            global::System.DateTime createdAt,
+            global::System.DateTime updatedAt,
+            string? singleFileName,
+            string appSlug,
+            global::GitHub.NullableSimpleUser? suspendedBy,
+            global::System.DateTime? suspendedAt,
+            bool? hasMultipleSingleFiles,
+            global::System.Collections.Generic.IList<string>? singleFilePaths,
+            string? contactEmail)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Account = account;
+            this.RepositorySelection = repositorySelection;
+            this.AccessTokensUrl = accessTokensUrl ?? throw new global::System.ArgumentNullException(nameof(accessTokensUrl));
+            this.RepositoriesUrl = repositoriesUrl ?? throw new global::System.ArgumentNullException(nameof(repositoriesUrl));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.AppId = appId;
+            this.TargetId = targetId;
+            this.TargetType = targetType ?? throw new global::System.ArgumentNullException(nameof(targetType));
+            this.Permissions = permissions ?? throw new global::System.ArgumentNullException(nameof(permissions));
+            this.Events = events ?? throw new global::System.ArgumentNullException(nameof(events));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.SingleFileName = singleFileName ?? throw new global::System.ArgumentNullException(nameof(singleFileName));
+            this.AppSlug = appSlug ?? throw new global::System.ArgumentNullException(nameof(appSlug));
+            this.SuspendedBy = suspendedBy ?? throw new global::System.ArgumentNullException(nameof(suspendedBy));
+            this.SuspendedAt = suspendedAt;
+            this.HasMultipleSingleFiles = hasMultipleSingleFiles;
+            this.SingleFilePaths = singleFilePaths;
+            this.ContactEmail = contactEmail;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="Installation" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public Installation()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.Installation? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.Installation),
-                jsonSerializerContext) as global::GitHub.Installation;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.Installation? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.Installation>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.Installation?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.Installation),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.Installation;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.Installation?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.Installation?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

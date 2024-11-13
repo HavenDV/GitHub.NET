@@ -154,91 +154,94 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookWorkflowJobCompletedWorkflowJobVariant2" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="checkRunUrl"></param>
+        /// <param name="completedAt"></param>
+        /// <param name="conclusion"></param>
+        /// <param name="createdAt">
+        /// The time that the job created.
+        /// </param>
+        /// <param name="headSha"></param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="id"></param>
+        /// <param name="labels"></param>
+        /// <param name="name"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="runAttempt"></param>
+        /// <param name="runId"></param>
+        /// <param name="runUrl"></param>
+        /// <param name="runnerGroupId"></param>
+        /// <param name="runnerGroupName"></param>
+        /// <param name="runnerId"></param>
+        /// <param name="runnerName"></param>
+        /// <param name="startedAt"></param>
+        /// <param name="status"></param>
+        /// <param name="headBranch">
+        /// The name of the current branch.
+        /// </param>
+        /// <param name="workflowName">
+        /// The name of the workflow.
+        /// </param>
+        /// <param name="steps"></param>
+        /// <param name="url"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookWorkflowJobCompletedWorkflowJobVariant2(
+            global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2Conclusion conclusion,
+            string? checkRunUrl,
+            string? completedAt,
+            string? createdAt,
+            string? headSha,
+            string? htmlUrl,
+            int? id,
+            global::System.Collections.Generic.IList<string>? labels,
+            string? name,
+            string? nodeId,
+            int? runAttempt,
+            int? runId,
+            string? runUrl,
+            double? runnerGroupId,
+            string? runnerGroupName,
+            double? runnerId,
+            string? runnerName,
+            string? startedAt,
+            string? status,
+            string? headBranch,
+            string? workflowName,
+            global::System.Collections.Generic.IList<object>? steps,
+            string? url)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Conclusion = conclusion;
+            this.CheckRunUrl = checkRunUrl;
+            this.CompletedAt = completedAt;
+            this.CreatedAt = createdAt;
+            this.HeadSha = headSha;
+            this.HtmlUrl = htmlUrl;
+            this.Id = id;
+            this.Labels = labels;
+            this.Name = name;
+            this.NodeId = nodeId;
+            this.RunAttempt = runAttempt;
+            this.RunId = runId;
+            this.RunUrl = runUrl;
+            this.RunnerGroupId = runnerGroupId;
+            this.RunnerGroupName = runnerGroupName;
+            this.RunnerId = runnerId;
+            this.RunnerName = runnerName;
+            this.StartedAt = startedAt;
+            this.Status = status;
+            this.HeadBranch = headBranch;
+            this.WorkflowName = workflowName;
+            this.Steps = steps;
+            this.Url = url;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookWorkflowJobCompletedWorkflowJobVariant2" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookWorkflowJobCompletedWorkflowJobVariant2()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2),
-                jsonSerializerContext) as global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

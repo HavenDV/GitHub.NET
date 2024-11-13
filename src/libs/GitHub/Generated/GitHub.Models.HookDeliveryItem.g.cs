@@ -12,6 +12,7 @@ namespace GitHub
         /// Unique identifier of the webhook delivery.<br/>
         /// Example: 42
         /// </summary>
+        /// <example>42</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
@@ -20,6 +21,7 @@ namespace GitHub
         /// Unique identifier for the event (shared with all deliveries for all webhooks that subscribe to this event).<br/>
         /// Example: 58474f00-b361-11eb-836d-0e4f3503ccbe
         /// </summary>
+        /// <example>58474f00-b361-11eb-836d-0e4f3503ccbe</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("guid")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Guid { get; set; }
@@ -35,6 +37,7 @@ namespace GitHub
         /// Whether the webhook delivery is a redelivery.<br/>
         /// Example: false
         /// </summary>
+        /// <example>false</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("redelivery")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Redelivery { get; set; }
@@ -43,6 +46,7 @@ namespace GitHub
         /// Time spent delivering.<br/>
         /// Example: 0.03
         /// </summary>
+        /// <example>0.03</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("duration")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Duration { get; set; }
@@ -51,6 +55,7 @@ namespace GitHub
         /// Describes the response returned after attempting the delivery.<br/>
         /// Example: failed to connect
         /// </summary>
+        /// <example>failed to connect</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Status { get; set; }
@@ -59,6 +64,7 @@ namespace GitHub
         /// Status code received when delivery was made.<br/>
         /// Example: 502
         /// </summary>
+        /// <example>502</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("status_code")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int StatusCode { get; set; }
@@ -67,6 +73,7 @@ namespace GitHub
         /// The event that triggered the delivery.<br/>
         /// Example: issues
         /// </summary>
+        /// <example>issues</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("event")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Event { get; set; }
@@ -75,6 +82,7 @@ namespace GitHub
         /// The type of activity for the event that triggered the delivery.<br/>
         /// Example: opened
         /// </summary>
+        /// <example>opened</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? Action { get; set; }
@@ -83,6 +91,7 @@ namespace GitHub
         /// The id of the GitHub App installation associated with this event.<br/>
         /// Example: 123
         /// </summary>
+        /// <example>123</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("installation_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int? InstallationId { get; set; }
@@ -91,6 +100,7 @@ namespace GitHub
         /// The id of the repository associated with this event.<br/>
         /// Example: 123
         /// </summary>
+        /// <example>123</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int? RepositoryId { get; set; }
@@ -107,91 +117,89 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="HookDeliveryItem" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// Unique identifier of the webhook delivery.<br/>
+        /// Example: 42
+        /// </param>
+        /// <param name="guid">
+        /// Unique identifier for the event (shared with all deliveries for all webhooks that subscribe to this event).<br/>
+        /// Example: 58474f00-b361-11eb-836d-0e4f3503ccbe
+        /// </param>
+        /// <param name="deliveredAt">
+        /// Time when the webhook delivery occurred.
+        /// </param>
+        /// <param name="redelivery">
+        /// Whether the webhook delivery is a redelivery.<br/>
+        /// Example: false
+        /// </param>
+        /// <param name="duration">
+        /// Time spent delivering.<br/>
+        /// Example: 0.03
+        /// </param>
+        /// <param name="status">
+        /// Describes the response returned after attempting the delivery.<br/>
+        /// Example: failed to connect
+        /// </param>
+        /// <param name="statusCode">
+        /// Status code received when delivery was made.<br/>
+        /// Example: 502
+        /// </param>
+        /// <param name="event">
+        /// The event that triggered the delivery.<br/>
+        /// Example: issues
+        /// </param>
+        /// <param name="action">
+        /// The type of activity for the event that triggered the delivery.<br/>
+        /// Example: opened
+        /// </param>
+        /// <param name="installationId">
+        /// The id of the GitHub App installation associated with this event.<br/>
+        /// Example: 123
+        /// </param>
+        /// <param name="repositoryId">
+        /// The id of the repository associated with this event.<br/>
+        /// Example: 123
+        /// </param>
+        /// <param name="throttledAt">
+        /// Time when the webhook delivery was throttled.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public HookDeliveryItem(
+            int id,
+            string guid,
+            global::System.DateTime deliveredAt,
+            bool redelivery,
+            double duration,
+            string status,
+            int statusCode,
+            string @event,
+            string? action,
+            int? installationId,
+            int? repositoryId,
+            global::System.DateTime? throttledAt)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Guid = guid ?? throw new global::System.ArgumentNullException(nameof(guid));
+            this.DeliveredAt = deliveredAt;
+            this.Redelivery = redelivery;
+            this.Duration = duration;
+            this.Status = status ?? throw new global::System.ArgumentNullException(nameof(status));
+            this.StatusCode = statusCode;
+            this.Event = @event ?? throw new global::System.ArgumentNullException(nameof(@event));
+            this.Action = action ?? throw new global::System.ArgumentNullException(nameof(action));
+            this.InstallationId = installationId;
+            this.RepositoryId = repositoryId;
+            this.ThrottledAt = throttledAt;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="HookDeliveryItem" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public HookDeliveryItem()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.HookDeliveryItem? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.HookDeliveryItem),
-                jsonSerializerContext) as global::GitHub.HookDeliveryItem;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.HookDeliveryItem? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.HookDeliveryItem>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.HookDeliveryItem?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.HookDeliveryItem),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.HookDeliveryItem;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.HookDeliveryItem?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.HookDeliveryItem?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

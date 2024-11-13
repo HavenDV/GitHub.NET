@@ -152,91 +152,87 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhooksRelease1" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="assets"></param>
+        /// <param name="assetsUrl"></param>
+        /// <param name="author"></param>
+        /// <param name="body"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="discussionUrl"></param>
+        /// <param name="draft">
+        /// Whether the release is a draft or published
+        /// </param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="prerelease">
+        /// Whether the release is identified as a prerelease or a full release.
+        /// </param>
+        /// <param name="publishedAt"></param>
+        /// <param name="reactions"></param>
+        /// <param name="tagName">
+        /// The name of the tag.
+        /// </param>
+        /// <param name="tarballUrl"></param>
+        /// <param name="targetCommitish">
+        /// Specifies the commitish value that determines where the Git tag is created from.
+        /// </param>
+        /// <param name="uploadUrl"></param>
+        /// <param name="url"></param>
+        /// <param name="zipballUrl"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhooksRelease1(
+            global::System.Collections.Generic.IList<global::GitHub.WebhooksRelease1Asset> assets,
+            string assetsUrl,
+            global::GitHub.WebhooksRelease1Author? author,
+            string? body,
+            global::System.DateTime? createdAt,
+            bool draft,
+            string htmlUrl,
+            int id,
+            string? name,
+            string nodeId,
+            bool prerelease,
+            global::System.DateTime? publishedAt,
+            string tagName,
+            string? tarballUrl,
+            string targetCommitish,
+            string uploadUrl,
+            string url,
+            string? zipballUrl,
+            string? discussionUrl,
+            global::GitHub.WebhooksRelease1Reactions? reactions)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Assets = assets ?? throw new global::System.ArgumentNullException(nameof(assets));
+            this.AssetsUrl = assetsUrl ?? throw new global::System.ArgumentNullException(nameof(assetsUrl));
+            this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
+            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
+            this.CreatedAt = createdAt;
+            this.Draft = draft;
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.Id = id;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.Prerelease = prerelease;
+            this.PublishedAt = publishedAt;
+            this.TagName = tagName ?? throw new global::System.ArgumentNullException(nameof(tagName));
+            this.TarballUrl = tarballUrl ?? throw new global::System.ArgumentNullException(nameof(tarballUrl));
+            this.TargetCommitish = targetCommitish ?? throw new global::System.ArgumentNullException(nameof(targetCommitish));
+            this.UploadUrl = uploadUrl ?? throw new global::System.ArgumentNullException(nameof(uploadUrl));
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.ZipballUrl = zipballUrl ?? throw new global::System.ArgumentNullException(nameof(zipballUrl));
+            this.DiscussionUrl = discussionUrl;
+            this.Reactions = reactions;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhooksRelease1" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhooksRelease1()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhooksRelease1? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhooksRelease1),
-                jsonSerializerContext) as global::GitHub.WebhooksRelease1;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhooksRelease1? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhooksRelease1>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhooksRelease1?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhooksRelease1),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhooksRelease1;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhooksRelease1?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhooksRelease1?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

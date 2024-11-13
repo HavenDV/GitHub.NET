@@ -76,91 +76,69 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CopilotUsageMetrics" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="day">
+        /// The date for which the usage metrics are reported, in `YYYY-MM-DD` format.
+        /// </param>
+        /// <param name="totalSuggestionsCount">
+        /// The total number of Copilot code completion suggestions shown to users.
+        /// </param>
+        /// <param name="totalAcceptancesCount">
+        /// The total number of Copilot code completion suggestions accepted by users.
+        /// </param>
+        /// <param name="totalLinesSuggested">
+        /// The total number of lines of code completions suggested by Copilot.
+        /// </param>
+        /// <param name="totalLinesAccepted">
+        /// The total number of lines of code completions accepted by users.
+        /// </param>
+        /// <param name="totalActiveUsers">
+        /// The total number of users who were shown Copilot code completion suggestions during the day specified.
+        /// </param>
+        /// <param name="totalChatAcceptances">
+        /// The total instances of users who accepted code suggested by Copilot Chat in the IDE (panel and inline).
+        /// </param>
+        /// <param name="totalChatTurns">
+        /// The total number of chat turns (prompt and response pairs) sent between users and Copilot Chat in the IDE.
+        /// </param>
+        /// <param name="totalActiveChatUsers">
+        /// The total number of users who interacted with Copilot Chat in the IDE during the day specified.
+        /// </param>
+        /// <param name="breakdown">
+        /// Breakdown of Copilot code completions usage by language and editor
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CopilotUsageMetrics(
+            global::System.DateTime day,
+            global::System.Collections.Generic.IList<global::GitHub.CopilotUsageMetricsBreakdownItem>? breakdown,
+            int? totalSuggestionsCount,
+            int? totalAcceptancesCount,
+            int? totalLinesSuggested,
+            int? totalLinesAccepted,
+            int? totalActiveUsers,
+            int? totalChatAcceptances,
+            int? totalChatTurns,
+            int? totalActiveChatUsers)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Day = day;
+            this.Breakdown = breakdown ?? throw new global::System.ArgumentNullException(nameof(breakdown));
+            this.TotalSuggestionsCount = totalSuggestionsCount;
+            this.TotalAcceptancesCount = totalAcceptancesCount;
+            this.TotalLinesSuggested = totalLinesSuggested;
+            this.TotalLinesAccepted = totalLinesAccepted;
+            this.TotalActiveUsers = totalActiveUsers;
+            this.TotalChatAcceptances = totalChatAcceptances;
+            this.TotalChatTurns = totalChatTurns;
+            this.TotalActiveChatUsers = totalActiveChatUsers;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CopilotUsageMetrics" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CopilotUsageMetrics()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CopilotUsageMetrics? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CopilotUsageMetrics),
-                jsonSerializerContext) as global::GitHub.CopilotUsageMetrics;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CopilotUsageMetrics? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CopilotUsageMetrics>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CopilotUsageMetrics?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CopilotUsageMetrics),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CopilotUsageMetrics;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CopilotUsageMetrics?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CopilotUsageMetrics?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

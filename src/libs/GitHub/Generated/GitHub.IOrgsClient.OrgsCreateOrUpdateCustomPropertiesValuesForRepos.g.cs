@@ -17,8 +17,8 @@ namespace GitHub
         /// <param name="org"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsCreateOrUpdateCustomPropertiesValuesForReposAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task OrgsCreateOrUpdateCustomPropertiesValuesForReposAsync(
             string org,
             global::GitHub.OrgsCreateOrUpdateCustomPropertiesValuesForReposRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -42,7 +42,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsCreateOrUpdateCustomPropertiesValuesForReposAsync(
+        global::System.Threading.Tasks.Task OrgsCreateOrUpdateCustomPropertiesValuesForReposAsync(
             string org,
             global::System.Collections.Generic.IList<string> repositoryNames,
             global::System.Collections.Generic.IList<global::GitHub.CustomPropertyValue> properties,

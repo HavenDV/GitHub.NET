@@ -269,91 +269,133 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookPullRequestReviewCommentCreatedPullRequest" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="links"></param>
+        /// <param name="activeLockReason"></param>
+        /// <param name="assignee"></param>
+        /// <param name="assignees"></param>
+        /// <param name="authorAssociation">
+        /// How the author is associated with the repository.
+        /// </param>
+        /// <param name="autoMerge">
+        /// The status of auto merging a pull request.
+        /// </param>
+        /// <param name="base"></param>
+        /// <param name="body"></param>
+        /// <param name="closedAt"></param>
+        /// <param name="commentsUrl"></param>
+        /// <param name="commitsUrl"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="diffUrl"></param>
+        /// <param name="draft"></param>
+        /// <param name="head"></param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="id"></param>
+        /// <param name="issueUrl"></param>
+        /// <param name="labels"></param>
+        /// <param name="locked"></param>
+        /// <param name="mergeCommitSha"></param>
+        /// <param name="mergedAt"></param>
+        /// <param name="milestone">
+        /// A collection of related issues and pull requests.
+        /// </param>
+        /// <param name="nodeId"></param>
+        /// <param name="number"></param>
+        /// <param name="patchUrl"></param>
+        /// <param name="requestedReviewers"></param>
+        /// <param name="requestedTeams"></param>
+        /// <param name="reviewCommentUrl"></param>
+        /// <param name="reviewCommentsUrl"></param>
+        /// <param name="state"></param>
+        /// <param name="statusesUrl"></param>
+        /// <param name="title"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="url"></param>
+        /// <param name="user"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookPullRequestReviewCommentCreatedPullRequest(
+            global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestLinks links,
+            global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestActiveLockReason? activeLockReason,
+            global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestAssignee? assignee,
+            global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestAssignee2> assignees,
+            global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestAuthorAssociation authorAssociation,
+            global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestBase @base,
+            string? body,
+            string? closedAt,
+            string commentsUrl,
+            string commitsUrl,
+            string createdAt,
+            string diffUrl,
+            global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestHead head,
+            string htmlUrl,
+            int id,
+            string issueUrl,
+            global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestLabel> labels,
+            bool locked,
+            string? mergeCommitSha,
+            string? mergedAt,
+            global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestMilestone? milestone,
+            string nodeId,
+            int number,
+            string patchUrl,
+            global::System.Collections.Generic.IList<global::GitHub.OneOf<global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestRequestedReviewerVariant1, global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestRequestedReviewerVariant2>> requestedReviewers,
+            global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestRequestedTeam> requestedTeams,
+            string reviewCommentUrl,
+            string reviewCommentsUrl,
+            global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestState state,
+            string statusesUrl,
+            string title,
+            string updatedAt,
+            string url,
+            global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestUser? user,
+            global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequestAutoMerge? autoMerge,
+            bool? draft)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Links = links ?? throw new global::System.ArgumentNullException(nameof(links));
+            this.ActiveLockReason = activeLockReason;
+            this.Assignee = assignee ?? throw new global::System.ArgumentNullException(nameof(assignee));
+            this.Assignees = assignees ?? throw new global::System.ArgumentNullException(nameof(assignees));
+            this.AuthorAssociation = authorAssociation;
+            this.Base = @base ?? throw new global::System.ArgumentNullException(nameof(@base));
+            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
+            this.ClosedAt = closedAt ?? throw new global::System.ArgumentNullException(nameof(closedAt));
+            this.CommentsUrl = commentsUrl ?? throw new global::System.ArgumentNullException(nameof(commentsUrl));
+            this.CommitsUrl = commitsUrl ?? throw new global::System.ArgumentNullException(nameof(commitsUrl));
+            this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
+            this.DiffUrl = diffUrl ?? throw new global::System.ArgumentNullException(nameof(diffUrl));
+            this.Head = head ?? throw new global::System.ArgumentNullException(nameof(head));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.Id = id;
+            this.IssueUrl = issueUrl ?? throw new global::System.ArgumentNullException(nameof(issueUrl));
+            this.Labels = labels ?? throw new global::System.ArgumentNullException(nameof(labels));
+            this.Locked = locked;
+            this.MergeCommitSha = mergeCommitSha ?? throw new global::System.ArgumentNullException(nameof(mergeCommitSha));
+            this.MergedAt = mergedAt ?? throw new global::System.ArgumentNullException(nameof(mergedAt));
+            this.Milestone = milestone ?? throw new global::System.ArgumentNullException(nameof(milestone));
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.Number = number;
+            this.PatchUrl = patchUrl ?? throw new global::System.ArgumentNullException(nameof(patchUrl));
+            this.RequestedReviewers = requestedReviewers ?? throw new global::System.ArgumentNullException(nameof(requestedReviewers));
+            this.RequestedTeams = requestedTeams ?? throw new global::System.ArgumentNullException(nameof(requestedTeams));
+            this.ReviewCommentUrl = reviewCommentUrl ?? throw new global::System.ArgumentNullException(nameof(reviewCommentUrl));
+            this.ReviewCommentsUrl = reviewCommentsUrl ?? throw new global::System.ArgumentNullException(nameof(reviewCommentsUrl));
+            this.State = state;
+            this.StatusesUrl = statusesUrl ?? throw new global::System.ArgumentNullException(nameof(statusesUrl));
+            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.UpdatedAt = updatedAt ?? throw new global::System.ArgumentNullException(nameof(updatedAt));
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.AutoMerge = autoMerge;
+            this.Draft = draft;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookPullRequestReviewCommentCreatedPullRequest" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookPullRequestReviewCommentCreatedPullRequest()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequest? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequest),
-                jsonSerializerContext) as global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequest? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequest>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookPullRequestReviewCommentCreatedPullRequest?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

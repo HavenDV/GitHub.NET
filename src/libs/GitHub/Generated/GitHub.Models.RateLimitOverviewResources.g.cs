@@ -76,91 +76,49 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="RateLimitOverviewResources" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="core"></param>
+        /// <param name="graphql"></param>
+        /// <param name="search"></param>
+        /// <param name="codeSearch"></param>
+        /// <param name="sourceImport"></param>
+        /// <param name="integrationManifest"></param>
+        /// <param name="codeScanningUpload"></param>
+        /// <param name="actionsRunnerRegistration"></param>
+        /// <param name="scim"></param>
+        /// <param name="dependencySnapshots"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public RateLimitOverviewResources(
+            global::GitHub.RateLimit core,
+            global::GitHub.RateLimit search,
+            global::GitHub.RateLimit? graphql,
+            global::GitHub.RateLimit? codeSearch,
+            global::GitHub.RateLimit? sourceImport,
+            global::GitHub.RateLimit? integrationManifest,
+            global::GitHub.RateLimit? codeScanningUpload,
+            global::GitHub.RateLimit? actionsRunnerRegistration,
+            global::GitHub.RateLimit? scim,
+            global::GitHub.RateLimit? dependencySnapshots)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Core = core ?? throw new global::System.ArgumentNullException(nameof(core));
+            this.Search = search ?? throw new global::System.ArgumentNullException(nameof(search));
+            this.Graphql = graphql;
+            this.CodeSearch = codeSearch;
+            this.SourceImport = sourceImport;
+            this.IntegrationManifest = integrationManifest;
+            this.CodeScanningUpload = codeScanningUpload;
+            this.ActionsRunnerRegistration = actionsRunnerRegistration;
+            this.Scim = scim;
+            this.DependencySnapshots = dependencySnapshots;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="RateLimitOverviewResources" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public RateLimitOverviewResources()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.RateLimitOverviewResources? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.RateLimitOverviewResources),
-                jsonSerializerContext) as global::GitHub.RateLimitOverviewResources;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.RateLimitOverviewResources? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.RateLimitOverviewResources>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.RateLimitOverviewResources?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.RateLimitOverviewResources),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.RateLimitOverviewResources;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.RateLimitOverviewResources?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.RateLimitOverviewResources?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

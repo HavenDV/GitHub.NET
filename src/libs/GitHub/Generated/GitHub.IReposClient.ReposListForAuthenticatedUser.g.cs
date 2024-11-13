@@ -31,7 +31,7 @@ namespace GitHub
         /// <param name="since"></param>
         /// <param name="before"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Repository>> ReposListForAuthenticatedUserAsync(
             global::GitHub.ReposListForAuthenticatedUserVisibility? visibility = default,
             string? affiliation = default,

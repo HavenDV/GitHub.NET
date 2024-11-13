@@ -148,91 +148,85 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="Contributor" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="login"></param>
+        /// <param name="id"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="avatarUrl"></param>
+        /// <param name="gravatarId"></param>
+        /// <param name="url"></param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="followersUrl"></param>
+        /// <param name="followingUrl"></param>
+        /// <param name="gistsUrl"></param>
+        /// <param name="starredUrl"></param>
+        /// <param name="subscriptionsUrl"></param>
+        /// <param name="organizationsUrl"></param>
+        /// <param name="reposUrl"></param>
+        /// <param name="eventsUrl"></param>
+        /// <param name="receivedEventsUrl"></param>
+        /// <param name="type"></param>
+        /// <param name="siteAdmin"></param>
+        /// <param name="contributions"></param>
+        /// <param name="email"></param>
+        /// <param name="name"></param>
+        /// <param name="userViewType"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public Contributor(
+            string type,
+            int contributions,
+            string? login,
+            int? id,
+            string? nodeId,
+            string? avatarUrl,
+            string? gravatarId,
+            string? url,
+            string? htmlUrl,
+            string? followersUrl,
+            string? followingUrl,
+            string? gistsUrl,
+            string? starredUrl,
+            string? subscriptionsUrl,
+            string? organizationsUrl,
+            string? reposUrl,
+            string? eventsUrl,
+            string? receivedEventsUrl,
+            bool? siteAdmin,
+            string? email,
+            string? name,
+            string? userViewType)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
+            this.Contributions = contributions;
+            this.Login = login;
+            this.Id = id;
+            this.NodeId = nodeId;
+            this.AvatarUrl = avatarUrl;
+            this.GravatarId = gravatarId;
+            this.Url = url;
+            this.HtmlUrl = htmlUrl;
+            this.FollowersUrl = followersUrl;
+            this.FollowingUrl = followingUrl;
+            this.GistsUrl = gistsUrl;
+            this.StarredUrl = starredUrl;
+            this.SubscriptionsUrl = subscriptionsUrl;
+            this.OrganizationsUrl = organizationsUrl;
+            this.ReposUrl = reposUrl;
+            this.EventsUrl = eventsUrl;
+            this.ReceivedEventsUrl = receivedEventsUrl;
+            this.SiteAdmin = siteAdmin;
+            this.Email = email;
+            this.Name = name;
+            this.UserViewType = userViewType;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="Contributor" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public Contributor()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.Contributor? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.Contributor),
-                jsonSerializerContext) as global::GitHub.Contributor;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.Contributor? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.Contributor>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.Contributor?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.Contributor),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.Contributor;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.Contributor?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.Contributor?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

@@ -11,8 +11,8 @@ namespace GitHub
         /// <param name="migrationId"></param>
         /// <param name="repoName"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> MigrationsUnlockRepoForAuthenticatedUserAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task MigrationsUnlockRepoForAuthenticatedUserAsync(
             int migrationId,
             string repoName,
             global::System.Threading.CancellationToken cancellationToken = default);

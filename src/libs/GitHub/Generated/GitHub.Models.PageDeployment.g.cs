@@ -22,6 +22,7 @@ namespace GitHub
         /// The URI to monitor GitHub Pages deployment status.<br/>
         /// Example: https://api.github.com/repos/github/hello-world/pages/deployments/4fd754f7e594640989b406850d0bc8f06a121251
         /// </summary>
+        /// <example>https://api.github.com/repos/github/hello-world/pages/deployments/4fd754f7e594640989b406850d0bc8f06a121251</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("status_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string StatusUrl { get; set; }
@@ -30,6 +31,7 @@ namespace GitHub
         /// The URI to the deployed GitHub Pages.<br/>
         /// Example: hello-world.github.io
         /// </summary>
+        /// <example>hello-world.github.io</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("page_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PageUrl { get; set; }
@@ -38,6 +40,7 @@ namespace GitHub
         /// The URI to the deployed GitHub Pages preview.<br/>
         /// Example: monalisa-1231a2312sa32-23sda74.drafts.github.io
         /// </summary>
+        /// <example>monalisa-1231a2312sa32-23sda74.drafts.github.io</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("preview_url")]
         public string? PreviewUrl { get; set; }
 
@@ -47,91 +50,42 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="PageDeployment" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// The ID of the GitHub Pages deployment. This is the Git SHA of the deployed commit.
+        /// </param>
+        /// <param name="statusUrl">
+        /// The URI to monitor GitHub Pages deployment status.<br/>
+        /// Example: https://api.github.com/repos/github/hello-world/pages/deployments/4fd754f7e594640989b406850d0bc8f06a121251
+        /// </param>
+        /// <param name="pageUrl">
+        /// The URI to the deployed GitHub Pages.<br/>
+        /// Example: hello-world.github.io
+        /// </param>
+        /// <param name="previewUrl">
+        /// The URI to the deployed GitHub Pages preview.<br/>
+        /// Example: monalisa-1231a2312sa32-23sda74.drafts.github.io
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public PageDeployment(
+            global::GitHub.OneOf<int?, string> id,
+            string statusUrl,
+            string pageUrl,
+            string? previewUrl)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.StatusUrl = statusUrl ?? throw new global::System.ArgumentNullException(nameof(statusUrl));
+            this.PageUrl = pageUrl ?? throw new global::System.ArgumentNullException(nameof(pageUrl));
+            this.PreviewUrl = previewUrl;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="PageDeployment" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public PageDeployment()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.PageDeployment? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.PageDeployment),
-                jsonSerializerContext) as global::GitHub.PageDeployment;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.PageDeployment? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.PageDeployment>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.PageDeployment?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.PageDeployment),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.PageDeployment;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.PageDeployment?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.PageDeployment?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

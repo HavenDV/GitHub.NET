@@ -19,6 +19,7 @@ namespace GitHub
         /// Unique identifier of the review<br/>
         /// Example: 42
         /// </summary>
+        /// <example>42</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
@@ -26,6 +27,7 @@ namespace GitHub
         /// <summary>
         /// Example: MDE3OlB1bGxSZXF1ZXN0UmV2aWV3ODA=
         /// </summary>
+        /// <example>MDE3OlB1bGxSZXF1ZXN0UmV2aWV3ODA=</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string NodeId { get; set; }
@@ -41,6 +43,7 @@ namespace GitHub
         /// The text of the review.<br/>
         /// Example: This looks great.
         /// </summary>
+        /// <example>This looks great.</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("body")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? Body { get; set; }
@@ -48,6 +51,7 @@ namespace GitHub
         /// <summary>
         /// Example: CHANGES_REQUESTED
         /// </summary>
+        /// <example>CHANGES_REQUESTED</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string State { get; set; }
@@ -55,6 +59,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/octocat/Hello-World/pull/12#pullrequestreview-80
         /// </summary>
+        /// <example>https://github.com/octocat/Hello-World/pull/12#pullrequestreview-80</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("html_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string HtmlUrl { get; set; }
@@ -62,6 +67,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/repos/octocat/Hello-World/pulls/12
         /// </summary>
+        /// <example>https://api.github.com/repos/octocat/Hello-World/pulls/12</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("pull_request_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PullRequestUrl { get; set; }
@@ -83,6 +89,7 @@ namespace GitHub
         /// A commit SHA for the review.<br/>
         /// Example: 54bb654c9e6025347f57900a4a5c2313a96b8035
         /// </summary>
+        /// <example>54bb654c9e6025347f57900a4a5c2313a96b8035</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("commit_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string CommitId { get; set; }
@@ -103,6 +110,7 @@ namespace GitHub
         /// How the author is associated with the repository.<br/>
         /// Example: OWNER
         /// </summary>
+        /// <example>OWNER</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("author_association")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AuthorAssociationJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -114,91 +122,83 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="TimelineReviewedEvent" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="event"></param>
+        /// <param name="id">
+        /// Unique identifier of the review<br/>
+        /// Example: 42
+        /// </param>
+        /// <param name="nodeId">
+        /// Example: MDE3OlB1bGxSZXF1ZXN0UmV2aWV3ODA=
+        /// </param>
+        /// <param name="user">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="body">
+        /// The text of the review.<br/>
+        /// Example: This looks great.
+        /// </param>
+        /// <param name="state">
+        /// Example: CHANGES_REQUESTED
+        /// </param>
+        /// <param name="htmlUrl">
+        /// Example: https://github.com/octocat/Hello-World/pull/12#pullrequestreview-80
+        /// </param>
+        /// <param name="pullRequestUrl">
+        /// Example: https://api.github.com/repos/octocat/Hello-World/pulls/12
+        /// </param>
+        /// <param name="links"></param>
+        /// <param name="submittedAt"></param>
+        /// <param name="commitId">
+        /// A commit SHA for the review.<br/>
+        /// Example: 54bb654c9e6025347f57900a4a5c2313a96b8035
+        /// </param>
+        /// <param name="bodyHtml"></param>
+        /// <param name="bodyText"></param>
+        /// <param name="authorAssociation">
+        /// How the author is associated with the repository.<br/>
+        /// Example: OWNER
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public TimelineReviewedEvent(
+            string @event,
+            int id,
+            string nodeId,
+            global::GitHub.SimpleUser user,
+            string? body,
+            string state,
+            string htmlUrl,
+            string pullRequestUrl,
+            global::GitHub.TimelineReviewedEventLinks links,
+            string commitId,
+            global::GitHub.AuthorAssociation authorAssociation,
+            global::System.DateTime? submittedAt,
+            string? bodyHtml,
+            string? bodyText)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Event = @event ?? throw new global::System.ArgumentNullException(nameof(@event));
+            this.Id = id;
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
+            this.State = state ?? throw new global::System.ArgumentNullException(nameof(state));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.PullRequestUrl = pullRequestUrl ?? throw new global::System.ArgumentNullException(nameof(pullRequestUrl));
+            this.Links = links ?? throw new global::System.ArgumentNullException(nameof(links));
+            this.CommitId = commitId ?? throw new global::System.ArgumentNullException(nameof(commitId));
+            this.AuthorAssociation = authorAssociation;
+            this.SubmittedAt = submittedAt;
+            this.BodyHtml = bodyHtml;
+            this.BodyText = bodyText;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="TimelineReviewedEvent" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public TimelineReviewedEvent()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.TimelineReviewedEvent? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.TimelineReviewedEvent),
-                jsonSerializerContext) as global::GitHub.TimelineReviewedEvent;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.TimelineReviewedEvent? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.TimelineReviewedEvent>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.TimelineReviewedEvent?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.TimelineReviewedEvent),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.TimelineReviewedEvent;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.TimelineReviewedEvent?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.TimelineReviewedEvent?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

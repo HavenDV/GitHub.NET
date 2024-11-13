@@ -58,91 +58,54 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CodespacesCreateForAuthenticatedUserRequestVariant2" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="pullRequest">
+        /// Pull request number for this codespace
+        /// </param>
+        /// <param name="location">
+        /// The requested location for a new codespace. Best efforts are made to respect this upon creation. Assigned by IP if not provided.
+        /// </param>
+        /// <param name="geo">
+        /// The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces `location`, which is closing down.
+        /// </param>
+        /// <param name="machine">
+        /// Machine type to use for this codespace
+        /// </param>
+        /// <param name="devcontainerPath">
+        /// Path to devcontainer.json config to use for this codespace
+        /// </param>
+        /// <param name="workingDirectory">
+        /// Working directory for this codespace
+        /// </param>
+        /// <param name="idleTimeoutMinutes">
+        /// Time in minutes before codespace stops from inactivity
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CodespacesCreateForAuthenticatedUserRequestVariant2(
+            global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2PullRequest pullRequest,
+            string? location,
+            global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2Geo? geo,
+            string? machine,
+            string? devcontainerPath,
+            string? workingDirectory,
+            int? idleTimeoutMinutes)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.PullRequest = pullRequest ?? throw new global::System.ArgumentNullException(nameof(pullRequest));
+            this.Location = location;
+            this.Geo = geo;
+            this.Machine = machine;
+            this.DevcontainerPath = devcontainerPath;
+            this.WorkingDirectory = workingDirectory;
+            this.IdleTimeoutMinutes = idleTimeoutMinutes;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CodespacesCreateForAuthenticatedUserRequestVariant2" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CodespacesCreateForAuthenticatedUserRequestVariant2()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2),
-                jsonSerializerContext) as global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

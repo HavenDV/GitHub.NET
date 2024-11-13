@@ -12,6 +12,7 @@ namespace GitHub
         /// Unique identifier of the repository invitation.<br/>
         /// Example: 42L
         /// </summary>
+        /// <example>42L</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required long Id { get; set; }
@@ -41,6 +42,7 @@ namespace GitHub
         /// The permission associated with the invitation.<br/>
         /// Example: read
         /// </summary>
+        /// <example>read</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("permissions")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.RepositoryInvitationPermissionsJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -63,6 +65,7 @@ namespace GitHub
         /// URL for the repository invitation<br/>
         /// Example: https://api.github.com/user/repository-invitations/1
         /// </summary>
+        /// <example>https://api.github.com/user/repository-invitations/1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -70,6 +73,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/octocat/Hello-World/invitations
         /// </summary>
+        /// <example>https://github.com/octocat/Hello-World/invitations</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("html_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string HtmlUrl { get; set; }
@@ -87,91 +91,68 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="RepositoryInvitation" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// Unique identifier of the repository invitation.<br/>
+        /// Example: 42L
+        /// </param>
+        /// <param name="repository">
+        /// Minimal Repository
+        /// </param>
+        /// <param name="invitee">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="inviter">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="permissions">
+        /// The permission associated with the invitation.<br/>
+        /// Example: read
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="expired">
+        /// Whether or not the invitation has expired
+        /// </param>
+        /// <param name="url">
+        /// URL for the repository invitation<br/>
+        /// Example: https://api.github.com/user/repository-invitations/1
+        /// </param>
+        /// <param name="htmlUrl">
+        /// Example: https://github.com/octocat/Hello-World/invitations
+        /// </param>
+        /// <param name="nodeId"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public RepositoryInvitation(
+            long id,
+            global::GitHub.MinimalRepository repository,
+            global::GitHub.NullableSimpleUser? invitee,
+            global::GitHub.NullableSimpleUser? inviter,
+            global::GitHub.RepositoryInvitationPermissions permissions,
+            global::System.DateTime createdAt,
+            string url,
+            string htmlUrl,
+            string nodeId,
+            bool? expired)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Repository = repository ?? throw new global::System.ArgumentNullException(nameof(repository));
+            this.Invitee = invitee ?? throw new global::System.ArgumentNullException(nameof(invitee));
+            this.Inviter = inviter ?? throw new global::System.ArgumentNullException(nameof(inviter));
+            this.Permissions = permissions;
+            this.CreatedAt = createdAt;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.Expired = expired;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="RepositoryInvitation" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public RepositoryInvitation()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.RepositoryInvitation? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.RepositoryInvitation),
-                jsonSerializerContext) as global::GitHub.RepositoryInvitation;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.RepositoryInvitation? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.RepositoryInvitation>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.RepositoryInvitation?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.RepositoryInvitation),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.RepositoryInvitation;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.RepositoryInvitation?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.RepositoryInvitation?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

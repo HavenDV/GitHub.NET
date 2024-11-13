@@ -12,6 +12,7 @@ namespace GitHub
         /// A unique identifier of the repository.<br/>
         /// Example: 1296269
         /// </summary>
+        /// <example>1296269</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
@@ -20,6 +21,7 @@ namespace GitHub
         /// The name of the repository.<br/>
         /// Example: Hello-World
         /// </summary>
+        /// <example>Hello-World</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -28,6 +30,7 @@ namespace GitHub
         /// The full, globally unique, name of the repository.<br/>
         /// Example: octocat/Hello-World
         /// </summary>
+        /// <example>octocat/Hello-World</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("full_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string FullName { get; set; }
@@ -42,6 +45,7 @@ namespace GitHub
         /// <summary>
         /// Example: 80
         /// </summary>
+        /// <example>80</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("stargazers_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int StargazersCount { get; set; }
@@ -59,91 +63,50 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CodeScanningVariantAnalysisRepository" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// A unique identifier of the repository.<br/>
+        /// Example: 1296269
+        /// </param>
+        /// <param name="name">
+        /// The name of the repository.<br/>
+        /// Example: Hello-World
+        /// </param>
+        /// <param name="fullName">
+        /// The full, globally unique, name of the repository.<br/>
+        /// Example: octocat/Hello-World
+        /// </param>
+        /// <param name="private">
+        /// Whether the repository is private.
+        /// </param>
+        /// <param name="stargazersCount">
+        /// Example: 80
+        /// </param>
+        /// <param name="updatedAt"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CodeScanningVariantAnalysisRepository(
+            int id,
+            string name,
+            string fullName,
+            bool @private,
+            int stargazersCount,
+            global::System.DateTime? updatedAt)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.FullName = fullName ?? throw new global::System.ArgumentNullException(nameof(fullName));
+            this.Private = @private;
+            this.StargazersCount = stargazersCount;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CodeScanningVariantAnalysisRepository" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CodeScanningVariantAnalysisRepository()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CodeScanningVariantAnalysisRepository? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CodeScanningVariantAnalysisRepository),
-                jsonSerializerContext) as global::GitHub.CodeScanningVariantAnalysisRepository;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CodeScanningVariantAnalysisRepository? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CodeScanningVariantAnalysisRepository>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CodeScanningVariantAnalysisRepository?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CodeScanningVariantAnalysisRepository),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CodeScanningVariantAnalysisRepository;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CodeScanningVariantAnalysisRepository?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CodeScanningVariantAnalysisRepository?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

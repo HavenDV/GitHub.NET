@@ -149,91 +149,130 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="OrganizationSecretScanningAlert" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="number">
+        /// The security alert number.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="createdAt">
+        /// The time that the alert was created in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="updatedAt">
+        /// The time that the alert was last updated in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="url">
+        /// The REST API URL of the alert resource.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="htmlUrl">
+        /// The GitHub URL of the alert resource.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="locationsUrl">
+        /// The REST API URL of the code locations for this alert.
+        /// </param>
+        /// <param name="state">
+        /// Sets the state of the secret scanning alert. You must provide `resolution` when you set the state to `resolved`.
+        /// </param>
+        /// <param name="resolution">
+        /// **Required when the `state` is `resolved`.** The reason for resolving the alert.
+        /// </param>
+        /// <param name="resolvedAt">
+        /// The time that the alert was resolved in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        /// </param>
+        /// <param name="resolvedBy">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="secretType">
+        /// The type of secret that secret scanning detected.
+        /// </param>
+        /// <param name="secretTypeDisplayName">
+        /// User-friendly name for the detected secret, matching the `secret_type`.<br/>
+        /// For a list of built-in patterns, see "[Supported secret scanning patterns](https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets)."
+        /// </param>
+        /// <param name="secret">
+        /// The secret that was detected.
+        /// </param>
+        /// <param name="repository">
+        /// A GitHub repository.
+        /// </param>
+        /// <param name="pushProtectionBypassed">
+        /// Whether push protection was bypassed for the detected secret.
+        /// </param>
+        /// <param name="pushProtectionBypassedBy">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="pushProtectionBypassedAt">
+        /// The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        /// </param>
+        /// <param name="resolutionComment">
+        /// The comment that was optionally added when this alert was closed
+        /// </param>
+        /// <param name="validity">
+        /// The token status as of the latest validity check.
+        /// </param>
+        /// <param name="publiclyLeaked">
+        /// Whether the secret was publicly leaked.
+        /// </param>
+        /// <param name="multiRepo">
+        /// Whether the detected secret was found in multiple repositories in the same organization or enterprise.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public OrganizationSecretScanningAlert(
+            int? number,
+            global::System.DateTime? createdAt,
+            global::System.DateTime? updatedAt,
+            string? url,
+            string? htmlUrl,
+            string? locationsUrl,
+            global::GitHub.SecretScanningAlertState? state,
+            global::GitHub.SecretScanningAlertResolution? resolution,
+            global::System.DateTime? resolvedAt,
+            global::GitHub.NullableSimpleUser? resolvedBy,
+            string? secretType,
+            string? secretTypeDisplayName,
+            string? secret,
+            global::GitHub.SimpleRepository? repository,
+            bool? pushProtectionBypassed,
+            global::GitHub.NullableSimpleUser? pushProtectionBypassedBy,
+            global::System.DateTime? pushProtectionBypassedAt,
+            string? resolutionComment,
+            global::GitHub.OrganizationSecretScanningAlertValidity? validity,
+            bool? publiclyLeaked,
+            bool? multiRepo)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Number = number;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.Url = url;
+            this.HtmlUrl = htmlUrl;
+            this.LocationsUrl = locationsUrl;
+            this.State = state;
+            this.Resolution = resolution;
+            this.ResolvedAt = resolvedAt;
+            this.ResolvedBy = resolvedBy;
+            this.SecretType = secretType;
+            this.SecretTypeDisplayName = secretTypeDisplayName;
+            this.Secret = secret;
+            this.Repository = repository;
+            this.PushProtectionBypassed = pushProtectionBypassed;
+            this.PushProtectionBypassedBy = pushProtectionBypassedBy;
+            this.PushProtectionBypassedAt = pushProtectionBypassedAt;
+            this.ResolutionComment = resolutionComment;
+            this.Validity = validity;
+            this.PubliclyLeaked = publiclyLeaked;
+            this.MultiRepo = multiRepo;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="OrganizationSecretScanningAlert" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public OrganizationSecretScanningAlert()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.OrganizationSecretScanningAlert? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.OrganizationSecretScanningAlert),
-                jsonSerializerContext) as global::GitHub.OrganizationSecretScanningAlert;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.OrganizationSecretScanningAlert? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.OrganizationSecretScanningAlert>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.OrganizationSecretScanningAlert?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.OrganizationSecretScanningAlert),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.OrganizationSecretScanningAlert;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.OrganizationSecretScanningAlert?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.OrganizationSecretScanningAlert?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

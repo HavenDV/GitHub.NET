@@ -26,6 +26,7 @@ namespace GitHub
         /// <summary>
         /// Example: config.yaml
         /// </summary>
+        /// <example>config.yaml</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("single_file_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? SingleFileName { get; set; }
@@ -33,18 +34,21 @@ namespace GitHub
         /// <summary>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_multiple_single_files")]
         public bool? HasMultipleSingleFiles { get; set; }
 
         /// <summary>
         /// Example: [config.yml, .github/issue_TEMPLATE.md]
         /// </summary>
+        /// <example>[config.yml, .github/issue_TEMPLATE.md]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("single_file_paths")]
         public global::System.Collections.Generic.IList<string>? SingleFilePaths { get; set; }
 
         /// <summary>
         /// Example: https://api.github.com/users/octocat/repos
         /// </summary>
+        /// <example>https://api.github.com/users/octocat/repos</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("repositories_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string RepositoriesUrl { get; set; }
@@ -62,91 +66,54 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="NullableScopedInstallation" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="permissions">
+        /// The permissions granted to the user access token.
+        /// </param>
+        /// <param name="repositorySelection">
+        /// Describe whether all repositories have been selected or there's a selection involved
+        /// </param>
+        /// <param name="singleFileName">
+        /// Example: config.yaml
+        /// </param>
+        /// <param name="hasMultipleSingleFiles">
+        /// Example: true
+        /// </param>
+        /// <param name="singleFilePaths">
+        /// Example: [config.yml, .github/issue_TEMPLATE.md]
+        /// </param>
+        /// <param name="repositoriesUrl">
+        /// Example: https://api.github.com/users/octocat/repos
+        /// </param>
+        /// <param name="account">
+        /// A GitHub user.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public NullableScopedInstallation(
+            global::GitHub.AppPermissions permissions,
+            global::GitHub.NullableScopedInstallationRepositorySelection repositorySelection,
+            string? singleFileName,
+            string repositoriesUrl,
+            global::GitHub.SimpleUser account,
+            bool? hasMultipleSingleFiles,
+            global::System.Collections.Generic.IList<string>? singleFilePaths)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Permissions = permissions ?? throw new global::System.ArgumentNullException(nameof(permissions));
+            this.RepositorySelection = repositorySelection;
+            this.SingleFileName = singleFileName ?? throw new global::System.ArgumentNullException(nameof(singleFileName));
+            this.RepositoriesUrl = repositoriesUrl ?? throw new global::System.ArgumentNullException(nameof(repositoriesUrl));
+            this.Account = account ?? throw new global::System.ArgumentNullException(nameof(account));
+            this.HasMultipleSingleFiles = hasMultipleSingleFiles;
+            this.SingleFilePaths = singleFilePaths;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="NullableScopedInstallation" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public NullableScopedInstallation()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.NullableScopedInstallation? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.NullableScopedInstallation),
-                jsonSerializerContext) as global::GitHub.NullableScopedInstallation;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.NullableScopedInstallation? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.NullableScopedInstallation>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.NullableScopedInstallation?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.NullableScopedInstallation),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.NullableScopedInstallation;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.NullableScopedInstallation?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.NullableScopedInstallation?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

@@ -14,8 +14,8 @@ namespace GitHub
         /// <param name="repo"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.ValidationError> ReposUpdateInformationAboutPagesSiteAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task ReposUpdateInformationAboutPagesSiteAsync(
             string owner,
             string repo,
             global::GitHub.ReposUpdateInformationAboutPagesSiteRequest request,
@@ -41,7 +41,7 @@ namespace GitHub
         /// <param name="source"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.ValidationError> ReposUpdateInformationAboutPagesSiteAsync(
+        global::System.Threading.Tasks.Task ReposUpdateInformationAboutPagesSiteAsync(
             string owner,
             string repo,
             string? cname = default,
