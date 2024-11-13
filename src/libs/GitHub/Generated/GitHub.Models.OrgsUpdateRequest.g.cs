@@ -141,6 +141,7 @@ namespace GitHub
         /// <summary>
         /// Example: "http://github.blog"
         /// </summary>
+        /// <example>"http://github.blog"</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("blog")]
         public string? Blog { get; set; }
 
@@ -228,91 +229,147 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="OrgsUpdateRequest" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="billingEmail">
+        /// Billing email address. This address is not publicized.
+        /// </param>
+        /// <param name="company">
+        /// The company name.
+        /// </param>
+        /// <param name="email">
+        /// The publicly visible email address.
+        /// </param>
+        /// <param name="twitterUsername">
+        /// The Twitter username of the company.
+        /// </param>
+        /// <param name="location">
+        /// The location.
+        /// </param>
+        /// <param name="name">
+        /// The shorthand name of the company.
+        /// </param>
+        /// <param name="description">
+        /// The description of the company. The maximum size is 160 characters.
+        /// </param>
+        /// <param name="hasOrganizationProjects">
+        /// Whether an organization can use organization projects.
+        /// </param>
+        /// <param name="hasRepositoryProjects">
+        /// Whether repositories that belong to the organization can use repository projects.
+        /// </param>
+        /// <param name="defaultRepositoryPermission">
+        /// Default permission level members have for organization repositories.<br/>
+        /// Default Value: read
+        /// </param>
+        /// <param name="membersCanCreateRepositories">
+        /// Whether of non-admin organization members can create repositories. **Note:** A parameter can override this parameter. See `members_allowed_repository_creation_type` in this table for details.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="membersCanCreateInternalRepositories">
+        /// Whether organization members can create internal repositories, which are visible to all enterprise members. You can only allow members to create internal repositories if your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+. For more information, see "[Restricting repository creation in your organization](https://docs.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
+        /// </param>
+        /// <param name="membersCanCreatePrivateRepositories">
+        /// Whether organization members can create private repositories, which are visible to organization members with permission. For more information, see "[Restricting repository creation in your organization](https://docs.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
+        /// </param>
+        /// <param name="membersCanCreatePublicRepositories">
+        /// Whether organization members can create public repositories, which are visible to anyone. For more information, see "[Restricting repository creation in your organization](https://docs.github.com/github/setting-up-and-managing-organizations-and-teams/restricting-repository-creation-in-your-organization)" in the GitHub Help documentation.
+        /// </param>
+        /// <param name="membersAllowedRepositoryCreationType">
+        /// Specifies which types of repositories non-admin organization members can create. `private` is only available to repositories that are part of an organization on GitHub Enterprise Cloud. <br/>
+        /// **Note:** This parameter is closing down and will be removed in the future. Its return value ignores internal repositories. Using this parameter overrides values set in `members_can_create_repositories`. See the parameter deprecation notice in the operation description for details.
+        /// </param>
+        /// <param name="membersCanCreatePages">
+        /// Whether organization members can create GitHub Pages sites. Existing published sites will not be impacted.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="membersCanCreatePublicPages">
+        /// Whether organization members can create public GitHub Pages sites. Existing published sites will not be impacted.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="membersCanCreatePrivatePages">
+        /// Whether organization members can create private GitHub Pages sites. Existing published sites will not be impacted.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="membersCanForkPrivateRepositories">
+        /// Whether organization members can fork private organization repositories.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="webCommitSignoffRequired">
+        /// Whether contributors to organization repositories are required to sign off on commits they make through GitHub's web interface.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="blog">
+        /// Example: "http://github.blog"
+        /// </param>
+        /// <param name="secretScanningPushProtectionCustomLinkEnabled">
+        /// Whether a custom link is shown to contributors who are blocked from pushing a secret by push protection.
+        /// </param>
+        /// <param name="secretScanningPushProtectionCustomLink">
+        /// If `secret_scanning_push_protection_custom_link_enabled` is true, the URL that will be displayed to contributors who are blocked from pushing a secret.
+        /// </param>
+        /// <param name="deployKeysEnabledForRepositories">
+        /// Controls whether or not deploy keys may be added and used for repositories in the organization.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public OrgsUpdateRequest(
+            string? billingEmail,
+            string? company,
+            string? email,
+            string? twitterUsername,
+            string? location,
+            string? name,
+            string? description,
+            bool? hasOrganizationProjects,
+            bool? hasRepositoryProjects,
+            global::GitHub.OrgsUpdateRequestDefaultRepositoryPermission? defaultRepositoryPermission,
+            bool? membersCanCreateRepositories,
+            bool? membersCanCreateInternalRepositories,
+            bool? membersCanCreatePrivateRepositories,
+            bool? membersCanCreatePublicRepositories,
+            global::GitHub.OrgsUpdateRequestMembersAllowedRepositoryCreationType? membersAllowedRepositoryCreationType,
+            bool? membersCanCreatePages,
+            bool? membersCanCreatePublicPages,
+            bool? membersCanCreatePrivatePages,
+            bool? membersCanForkPrivateRepositories,
+            bool? webCommitSignoffRequired,
+            string? blog,
+            bool? secretScanningPushProtectionCustomLinkEnabled,
+            string? secretScanningPushProtectionCustomLink,
+            bool? deployKeysEnabledForRepositories)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.BillingEmail = billingEmail;
+            this.Company = company;
+            this.Email = email;
+            this.TwitterUsername = twitterUsername;
+            this.Location = location;
+            this.Name = name;
+            this.Description = description;
+            this.HasOrganizationProjects = hasOrganizationProjects;
+            this.HasRepositoryProjects = hasRepositoryProjects;
+            this.DefaultRepositoryPermission = defaultRepositoryPermission;
+            this.MembersCanCreateRepositories = membersCanCreateRepositories;
+            this.MembersCanCreateInternalRepositories = membersCanCreateInternalRepositories;
+            this.MembersCanCreatePrivateRepositories = membersCanCreatePrivateRepositories;
+            this.MembersCanCreatePublicRepositories = membersCanCreatePublicRepositories;
+            this.MembersAllowedRepositoryCreationType = membersAllowedRepositoryCreationType;
+            this.MembersCanCreatePages = membersCanCreatePages;
+            this.MembersCanCreatePublicPages = membersCanCreatePublicPages;
+            this.MembersCanCreatePrivatePages = membersCanCreatePrivatePages;
+            this.MembersCanForkPrivateRepositories = membersCanForkPrivateRepositories;
+            this.WebCommitSignoffRequired = webCommitSignoffRequired;
+            this.Blog = blog;
+            this.SecretScanningPushProtectionCustomLinkEnabled = secretScanningPushProtectionCustomLinkEnabled;
+            this.SecretScanningPushProtectionCustomLink = secretScanningPushProtectionCustomLink;
+            this.DeployKeysEnabledForRepositories = deployKeysEnabledForRepositories;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="OrgsUpdateRequest" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public OrgsUpdateRequest()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.OrgsUpdateRequest? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.OrgsUpdateRequest),
-                jsonSerializerContext) as global::GitHub.OrgsUpdateRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.OrgsUpdateRequest? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.OrgsUpdateRequest>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.OrgsUpdateRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.OrgsUpdateRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.OrgsUpdateRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.OrgsUpdateRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.OrgsUpdateRequest?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

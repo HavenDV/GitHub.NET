@@ -70,91 +70,64 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CodeScanningAlertRuleSummary" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// A unique identifier for the rule used to detect the alert.
+        /// </param>
+        /// <param name="name">
+        /// The name of the rule used to detect the alert.
+        /// </param>
+        /// <param name="severity">
+        /// The severity of the alert.
+        /// </param>
+        /// <param name="securitySeverityLevel">
+        /// The security severity of the alert.
+        /// </param>
+        /// <param name="description">
+        /// A short description of the rule used to detect the alert.
+        /// </param>
+        /// <param name="fullDescription">
+        /// A description of the rule used to detect the alert.
+        /// </param>
+        /// <param name="tags">
+        /// A set of tags applicable for the rule.
+        /// </param>
+        /// <param name="help">
+        /// Detailed documentation for the rule as GitHub Flavored Markdown.
+        /// </param>
+        /// <param name="helpUri">
+        /// A link to the documentation for the rule used to detect the alert.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CodeScanningAlertRuleSummary(
+            string? id,
+            string? name,
+            global::GitHub.CodeScanningAlertRuleSummarySeverity? severity,
+            global::GitHub.CodeScanningAlertRuleSummarySecuritySeverityLevel? securitySeverityLevel,
+            string? description,
+            string? fullDescription,
+            global::System.Collections.Generic.IList<string>? tags,
+            string? help,
+            string? helpUri)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Name = name;
+            this.Severity = severity;
+            this.SecuritySeverityLevel = securitySeverityLevel;
+            this.Description = description;
+            this.FullDescription = fullDescription;
+            this.Tags = tags;
+            this.Help = help;
+            this.HelpUri = helpUri;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CodeScanningAlertRuleSummary" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CodeScanningAlertRuleSummary()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CodeScanningAlertRuleSummary? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CodeScanningAlertRuleSummary),
-                jsonSerializerContext) as global::GitHub.CodeScanningAlertRuleSummary;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CodeScanningAlertRuleSummary? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CodeScanningAlertRuleSummary>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CodeScanningAlertRuleSummary?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CodeScanningAlertRuleSummary),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CodeScanningAlertRuleSummary;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CodeScanningAlertRuleSummary?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CodeScanningAlertRuleSummary?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

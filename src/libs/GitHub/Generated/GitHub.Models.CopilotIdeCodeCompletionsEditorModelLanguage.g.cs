@@ -50,91 +50,49 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CopilotIdeCodeCompletionsEditorModelLanguage" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="name">
+        /// Name of the language used for Copilot code completion suggestions, for the given editor.
+        /// </param>
+        /// <param name="totalEngagedUsers">
+        /// Number of users who accepted at least one Copilot code completion suggestion for the given editor, for the given language. Includes both full and partial acceptances.
+        /// </param>
+        /// <param name="totalCodeSuggestions">
+        /// The number of Copilot code suggestions generated for the given editor, for the given language.
+        /// </param>
+        /// <param name="totalCodeAcceptances">
+        /// The number of Copilot code suggestions accepted for the given editor, for the given language. Includes both full and partial acceptances.
+        /// </param>
+        /// <param name="totalCodeLinesSuggested">
+        /// The number of lines of code suggested by Copilot code completions for the given editor, for the given language.
+        /// </param>
+        /// <param name="totalCodeLinesAccepted">
+        /// The number of lines of code accepted from Copilot code suggestions for the given editor, for the given language.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CopilotIdeCodeCompletionsEditorModelLanguage(
+            string? name,
+            int? totalEngagedUsers,
+            int? totalCodeSuggestions,
+            int? totalCodeAcceptances,
+            int? totalCodeLinesSuggested,
+            int? totalCodeLinesAccepted)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Name = name;
+            this.TotalEngagedUsers = totalEngagedUsers;
+            this.TotalCodeSuggestions = totalCodeSuggestions;
+            this.TotalCodeAcceptances = totalCodeAcceptances;
+            this.TotalCodeLinesSuggested = totalCodeLinesSuggested;
+            this.TotalCodeLinesAccepted = totalCodeLinesAccepted;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CopilotIdeCodeCompletionsEditorModelLanguage" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CopilotIdeCodeCompletionsEditorModelLanguage()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CopilotIdeCodeCompletionsEditorModelLanguage? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CopilotIdeCodeCompletionsEditorModelLanguage),
-                jsonSerializerContext) as global::GitHub.CopilotIdeCodeCompletionsEditorModelLanguage;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CopilotIdeCodeCompletionsEditorModelLanguage? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CopilotIdeCodeCompletionsEditorModelLanguage>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CopilotIdeCodeCompletionsEditorModelLanguage?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CopilotIdeCodeCompletionsEditorModelLanguage),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CopilotIdeCodeCompletionsEditorModelLanguage;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CopilotIdeCodeCompletionsEditorModelLanguage?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CopilotIdeCodeCompletionsEditorModelLanguage?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

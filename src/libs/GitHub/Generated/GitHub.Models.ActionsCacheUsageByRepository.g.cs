@@ -12,6 +12,7 @@ namespace GitHub
         /// The repository owner and name for the cache usage being shown.<br/>
         /// Example: octo-org/Hello-World
         /// </summary>
+        /// <example>octo-org/Hello-World</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("full_name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string FullName { get; set; }
@@ -20,6 +21,7 @@ namespace GitHub
         /// The sum of the size in bytes of all the active cache items in the repository.<br/>
         /// Example: 2322142
         /// </summary>
+        /// <example>2322142</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("active_caches_size_in_bytes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int ActiveCachesSizeInBytes { get; set; }
@@ -28,6 +30,7 @@ namespace GitHub
         /// The number of active caches in the repository.<br/>
         /// Example: 3
         /// </summary>
+        /// <example>3</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("active_caches_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int ActiveCachesCount { get; set; }
@@ -38,91 +41,37 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="ActionsCacheUsageByRepository" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="fullName">
+        /// The repository owner and name for the cache usage being shown.<br/>
+        /// Example: octo-org/Hello-World
+        /// </param>
+        /// <param name="activeCachesSizeInBytes">
+        /// The sum of the size in bytes of all the active cache items in the repository.<br/>
+        /// Example: 2322142
+        /// </param>
+        /// <param name="activeCachesCount">
+        /// The number of active caches in the repository.<br/>
+        /// Example: 3
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public ActionsCacheUsageByRepository(
+            string fullName,
+            int activeCachesSizeInBytes,
+            int activeCachesCount)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.FullName = fullName ?? throw new global::System.ArgumentNullException(nameof(fullName));
+            this.ActiveCachesSizeInBytes = activeCachesSizeInBytes;
+            this.ActiveCachesCount = activeCachesCount;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="ActionsCacheUsageByRepository" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public ActionsCacheUsageByRepository()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.ActionsCacheUsageByRepository? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.ActionsCacheUsageByRepository),
-                jsonSerializerContext) as global::GitHub.ActionsCacheUsageByRepository;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.ActionsCacheUsageByRepository? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.ActionsCacheUsageByRepository>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.ActionsCacheUsageByRepository?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.ActionsCacheUsageByRepository),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.ActionsCacheUsageByRepository;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.ActionsCacheUsageByRepository?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.ActionsCacheUsageByRepository?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

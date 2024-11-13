@@ -249,91 +249,124 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookDeploymentStatusCreatedWorkflowRun" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="actor"></param>
+        /// <param name="artifactsUrl"></param>
+        /// <param name="cancelUrl"></param>
+        /// <param name="checkSuiteId"></param>
+        /// <param name="checkSuiteNodeId"></param>
+        /// <param name="checkSuiteUrl"></param>
+        /// <param name="conclusion"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="displayTitle"></param>
+        /// <param name="event"></param>
+        /// <param name="headBranch"></param>
+        /// <param name="headCommit"></param>
+        /// <param name="headRepository"></param>
+        /// <param name="headSha"></param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="id"></param>
+        /// <param name="jobsUrl"></param>
+        /// <param name="logsUrl"></param>
+        /// <param name="name"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="path"></param>
+        /// <param name="previousAttemptUrl"></param>
+        /// <param name="pullRequests"></param>
+        /// <param name="referencedWorkflows"></param>
+        /// <param name="repository"></param>
+        /// <param name="rerunUrl"></param>
+        /// <param name="runAttempt"></param>
+        /// <param name="runNumber"></param>
+        /// <param name="runStartedAt"></param>
+        /// <param name="status"></param>
+        /// <param name="triggeringActor"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="url"></param>
+        /// <param name="workflowId"></param>
+        /// <param name="workflowUrl"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookDeploymentStatusCreatedWorkflowRun(
+            global::GitHub.WebhookDeploymentStatusCreatedWorkflowRunActor? actor,
+            int checkSuiteId,
+            string checkSuiteNodeId,
+            global::GitHub.WebhookDeploymentStatusCreatedWorkflowRunConclusion? conclusion,
+            global::System.DateTime createdAt,
+            string displayTitle,
+            string @event,
+            string headBranch,
+            string headSha,
+            string htmlUrl,
+            int id,
+            string name,
+            string nodeId,
+            string path,
+            global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentStatusCreatedWorkflowRunPullRequest> pullRequests,
+            int runAttempt,
+            int runNumber,
+            global::System.DateTime runStartedAt,
+            global::GitHub.WebhookDeploymentStatusCreatedWorkflowRunStatus status,
+            global::GitHub.WebhookDeploymentStatusCreatedWorkflowRunTriggeringActor? triggeringActor,
+            global::System.DateTime updatedAt,
+            string url,
+            int workflowId,
+            string? artifactsUrl,
+            string? cancelUrl,
+            string? checkSuiteUrl,
+            object? headCommit,
+            global::GitHub.WebhookDeploymentStatusCreatedWorkflowRunHeadRepository? headRepository,
+            string? jobsUrl,
+            string? logsUrl,
+            object? previousAttemptUrl,
+            global::System.Collections.Generic.IList<global::GitHub.WebhookDeploymentStatusCreatedWorkflowRunReferencedWorkflow>? referencedWorkflows,
+            global::GitHub.WebhookDeploymentStatusCreatedWorkflowRunRepository? repository,
+            string? rerunUrl,
+            string? workflowUrl)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Actor = actor ?? throw new global::System.ArgumentNullException(nameof(actor));
+            this.CheckSuiteId = checkSuiteId;
+            this.CheckSuiteNodeId = checkSuiteNodeId ?? throw new global::System.ArgumentNullException(nameof(checkSuiteNodeId));
+            this.Conclusion = conclusion;
+            this.CreatedAt = createdAt;
+            this.DisplayTitle = displayTitle ?? throw new global::System.ArgumentNullException(nameof(displayTitle));
+            this.Event = @event ?? throw new global::System.ArgumentNullException(nameof(@event));
+            this.HeadBranch = headBranch ?? throw new global::System.ArgumentNullException(nameof(headBranch));
+            this.HeadSha = headSha ?? throw new global::System.ArgumentNullException(nameof(headSha));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.Id = id;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
+            this.PullRequests = pullRequests ?? throw new global::System.ArgumentNullException(nameof(pullRequests));
+            this.RunAttempt = runAttempt;
+            this.RunNumber = runNumber;
+            this.RunStartedAt = runStartedAt;
+            this.Status = status;
+            this.TriggeringActor = triggeringActor ?? throw new global::System.ArgumentNullException(nameof(triggeringActor));
+            this.UpdatedAt = updatedAt;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.WorkflowId = workflowId;
+            this.ArtifactsUrl = artifactsUrl;
+            this.CancelUrl = cancelUrl;
+            this.CheckSuiteUrl = checkSuiteUrl;
+            this.HeadCommit = headCommit;
+            this.HeadRepository = headRepository;
+            this.JobsUrl = jobsUrl;
+            this.LogsUrl = logsUrl;
+            this.PreviousAttemptUrl = previousAttemptUrl;
+            this.ReferencedWorkflows = referencedWorkflows;
+            this.Repository = repository;
+            this.RerunUrl = rerunUrl;
+            this.WorkflowUrl = workflowUrl;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookDeploymentStatusCreatedWorkflowRun" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookDeploymentStatusCreatedWorkflowRun()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookDeploymentStatusCreatedWorkflowRun? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookDeploymentStatusCreatedWorkflowRun),
-                jsonSerializerContext) as global::GitHub.WebhookDeploymentStatusCreatedWorkflowRun;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookDeploymentStatusCreatedWorkflowRun? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookDeploymentStatusCreatedWorkflowRun>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookDeploymentStatusCreatedWorkflowRun?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookDeploymentStatusCreatedWorkflowRun),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookDeploymentStatusCreatedWorkflowRun;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookDeploymentStatusCreatedWorkflowRun?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookDeploymentStatusCreatedWorkflowRun?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

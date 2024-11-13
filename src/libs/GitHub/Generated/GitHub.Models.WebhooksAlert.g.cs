@@ -127,91 +127,70 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhooksAlert" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="affectedPackageName"></param>
+        /// <param name="affectedRange"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="dismissReason"></param>
+        /// <param name="dismissedAt"></param>
+        /// <param name="dismisser"></param>
+        /// <param name="externalIdentifier"></param>
+        /// <param name="externalReference"></param>
+        /// <param name="fixReason"></param>
+        /// <param name="fixedAt"></param>
+        /// <param name="fixedIn"></param>
+        /// <param name="ghsaId"></param>
+        /// <param name="id"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="number"></param>
+        /// <param name="severity"></param>
+        /// <param name="state"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhooksAlert(
+            string affectedPackageName,
+            string affectedRange,
+            string createdAt,
+            string externalIdentifier,
+            string? externalReference,
+            string ghsaId,
+            int id,
+            string nodeId,
+            int number,
+            string severity,
+            string? dismissReason,
+            string? dismissedAt,
+            global::GitHub.WebhooksAlertDismisser? dismisser,
+            string? fixReason,
+            global::System.DateTime? fixedAt,
+            string? fixedIn,
+            global::GitHub.WebhooksAlertState state)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.AffectedPackageName = affectedPackageName ?? throw new global::System.ArgumentNullException(nameof(affectedPackageName));
+            this.AffectedRange = affectedRange ?? throw new global::System.ArgumentNullException(nameof(affectedRange));
+            this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
+            this.ExternalIdentifier = externalIdentifier ?? throw new global::System.ArgumentNullException(nameof(externalIdentifier));
+            this.ExternalReference = externalReference ?? throw new global::System.ArgumentNullException(nameof(externalReference));
+            this.GhsaId = ghsaId ?? throw new global::System.ArgumentNullException(nameof(ghsaId));
+            this.Id = id;
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.Number = number;
+            this.Severity = severity ?? throw new global::System.ArgumentNullException(nameof(severity));
+            this.DismissReason = dismissReason;
+            this.DismissedAt = dismissedAt;
+            this.Dismisser = dismisser;
+            this.FixReason = fixReason;
+            this.FixedAt = fixedAt;
+            this.FixedIn = fixedIn;
+            this.State = state;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhooksAlert" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhooksAlert()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhooksAlert? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhooksAlert),
-                jsonSerializerContext) as global::GitHub.WebhooksAlert;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhooksAlert? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhooksAlert>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhooksAlert?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhooksAlert),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhooksAlert;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhooksAlert?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhooksAlert?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

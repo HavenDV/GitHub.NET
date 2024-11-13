@@ -13,8 +13,8 @@ namespace GitHub
         /// <param name="repo"></param>
         /// <param name="pagesDeploymentId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> ReposCancelPagesDeploymentAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task ReposCancelPagesDeploymentAsync(
             string owner,
             string repo,
             global::GitHub.OneOf<int?, string> pagesDeploymentId,

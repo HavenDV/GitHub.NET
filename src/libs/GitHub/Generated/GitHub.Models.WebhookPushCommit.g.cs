@@ -88,91 +88,70 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookPushCommit" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="added">
+        /// An array of files added in the commit. A maximum of 3000 changed files will be reported per commit.
+        /// </param>
+        /// <param name="author">
+        /// Metaproperties for Git author/committer information.
+        /// </param>
+        /// <param name="committer">
+        /// Metaproperties for Git author/committer information.
+        /// </param>
+        /// <param name="distinct">
+        /// Whether this commit is distinct from any that have been pushed before.
+        /// </param>
+        /// <param name="id"></param>
+        /// <param name="message">
+        /// The commit message.
+        /// </param>
+        /// <param name="modified">
+        /// An array of files modified by the commit. A maximum of 3000 changed files will be reported per commit.
+        /// </param>
+        /// <param name="removed">
+        /// An array of files removed in the commit. A maximum of 3000 changed files will be reported per commit.
+        /// </param>
+        /// <param name="timestamp">
+        /// The ISO 8601 timestamp of the commit.
+        /// </param>
+        /// <param name="treeId"></param>
+        /// <param name="url">
+        /// URL that points to the commit API resource.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookPushCommit(
+            global::GitHub.WebhookPushCommitAuthor author,
+            global::GitHub.WebhookPushCommitCommitter committer,
+            bool distinct,
+            string id,
+            string message,
+            global::System.DateTime timestamp,
+            string treeId,
+            string url,
+            global::System.Collections.Generic.IList<string>? added,
+            global::System.Collections.Generic.IList<string>? modified,
+            global::System.Collections.Generic.IList<string>? removed)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
+            this.Committer = committer ?? throw new global::System.ArgumentNullException(nameof(committer));
+            this.Distinct = distinct;
+            this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
+            this.Timestamp = timestamp;
+            this.TreeId = treeId ?? throw new global::System.ArgumentNullException(nameof(treeId));
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.Added = added;
+            this.Modified = modified;
+            this.Removed = removed;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookPushCommit" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookPushCommit()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookPushCommit? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookPushCommit),
-                jsonSerializerContext) as global::GitHub.WebhookPushCommit;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookPushCommit? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookPushCommit>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookPushCommit?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookPushCommit),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookPushCommit;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookPushCommit?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookPushCommit?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

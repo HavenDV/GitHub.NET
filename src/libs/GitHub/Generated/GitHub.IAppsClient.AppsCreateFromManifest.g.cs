@@ -10,7 +10,7 @@ namespace GitHub
         /// </summary>
         /// <param name="code"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.AllOf<global::GitHub.Integration, global::GitHub.AppsCreateFromManifestResponse2>> AppsCreateFromManifestAsync(
             string code,
             global::System.Threading.CancellationToken cancellationToken = default);

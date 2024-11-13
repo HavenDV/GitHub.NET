@@ -11,6 +11,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/repos/octocat/Hello-World/compare/master...topic
         /// </summary>
+        /// <example>https://api.github.com/repos/octocat/Hello-World/compare/master...topic</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -18,6 +19,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/octocat/Hello-World/compare/master...topic
         /// </summary>
+        /// <example>https://github.com/octocat/Hello-World/compare/master...topic</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("html_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string HtmlUrl { get; set; }
@@ -25,6 +27,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/octocat/Hello-World/compare/octocat:bbcd538c8e72b8c175046e27cc8f907076331401...octocat:0328041d1152db8ae77652d1618a02e57f745f17
         /// </summary>
+        /// <example>https://github.com/octocat/Hello-World/compare/octocat:bbcd538c8e72b8c175046e27cc8f907076331401...octocat:0328041d1152db8ae77652d1618a02e57f745f17</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("permalink_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PermalinkUrl { get; set; }
@@ -32,6 +35,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/octocat/Hello-World/compare/master...topic.diff
         /// </summary>
+        /// <example>https://github.com/octocat/Hello-World/compare/master...topic.diff</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("diff_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DiffUrl { get; set; }
@@ -39,6 +43,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://github.com/octocat/Hello-World/compare/master...topic.patch
         /// </summary>
+        /// <example>https://github.com/octocat/Hello-World/compare/master...topic.patch</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("patch_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string PatchUrl { get; set; }
@@ -60,6 +65,7 @@ namespace GitHub
         /// <summary>
         /// Example: ahead
         /// </summary>
+        /// <example>ahead</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CommitComparisonStatusJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -68,6 +74,7 @@ namespace GitHub
         /// <summary>
         /// Example: 4
         /// </summary>
+        /// <example>4</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("ahead_by")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int AheadBy { get; set; }
@@ -75,6 +82,7 @@ namespace GitHub
         /// <summary>
         /// Example: 5
         /// </summary>
+        /// <example>5</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("behind_by")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int BehindBy { get; set; }
@@ -82,6 +90,7 @@ namespace GitHub
         /// <summary>
         /// Example: 6
         /// </summary>
+        /// <example>6</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_commits")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int TotalCommits { get; set; }
@@ -105,91 +114,80 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CommitComparison" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="url">
+        /// Example: https://api.github.com/repos/octocat/Hello-World/compare/master...topic
+        /// </param>
+        /// <param name="htmlUrl">
+        /// Example: https://github.com/octocat/Hello-World/compare/master...topic
+        /// </param>
+        /// <param name="permalinkUrl">
+        /// Example: https://github.com/octocat/Hello-World/compare/octocat:bbcd538c8e72b8c175046e27cc8f907076331401...octocat:0328041d1152db8ae77652d1618a02e57f745f17
+        /// </param>
+        /// <param name="diffUrl">
+        /// Example: https://github.com/octocat/Hello-World/compare/master...topic.diff
+        /// </param>
+        /// <param name="patchUrl">
+        /// Example: https://github.com/octocat/Hello-World/compare/master...topic.patch
+        /// </param>
+        /// <param name="baseCommit">
+        /// Commit
+        /// </param>
+        /// <param name="mergeBaseCommit">
+        /// Commit
+        /// </param>
+        /// <param name="status">
+        /// Example: ahead
+        /// </param>
+        /// <param name="aheadBy">
+        /// Example: 4
+        /// </param>
+        /// <param name="behindBy">
+        /// Example: 5
+        /// </param>
+        /// <param name="totalCommits">
+        /// Example: 6
+        /// </param>
+        /// <param name="commits"></param>
+        /// <param name="files"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CommitComparison(
+            string url,
+            string htmlUrl,
+            string permalinkUrl,
+            string diffUrl,
+            string patchUrl,
+            global::GitHub.Commit baseCommit,
+            global::GitHub.Commit mergeBaseCommit,
+            global::GitHub.CommitComparisonStatus status,
+            int aheadBy,
+            int behindBy,
+            int totalCommits,
+            global::System.Collections.Generic.IList<global::GitHub.Commit> commits,
+            global::System.Collections.Generic.IList<global::GitHub.DiffEntry>? files)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.PermalinkUrl = permalinkUrl ?? throw new global::System.ArgumentNullException(nameof(permalinkUrl));
+            this.DiffUrl = diffUrl ?? throw new global::System.ArgumentNullException(nameof(diffUrl));
+            this.PatchUrl = patchUrl ?? throw new global::System.ArgumentNullException(nameof(patchUrl));
+            this.BaseCommit = baseCommit ?? throw new global::System.ArgumentNullException(nameof(baseCommit));
+            this.MergeBaseCommit = mergeBaseCommit ?? throw new global::System.ArgumentNullException(nameof(mergeBaseCommit));
+            this.Status = status;
+            this.AheadBy = aheadBy;
+            this.BehindBy = behindBy;
+            this.TotalCommits = totalCommits;
+            this.Commits = commits ?? throw new global::System.ArgumentNullException(nameof(commits));
+            this.Files = files;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CommitComparison" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CommitComparison()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CommitComparison? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CommitComparison),
-                jsonSerializerContext) as global::GitHub.CommitComparison;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CommitComparison? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CommitComparison>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CommitComparison?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CommitComparison),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CommitComparison;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CommitComparison?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CommitComparison?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

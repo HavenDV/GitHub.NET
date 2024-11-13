@@ -31,24 +31,28 @@ namespace GitHub
         /// <summary>
         /// Example: 28
         /// </summary>
+        /// <example>28</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("line")]
         public int? Line { get; set; }
 
         /// <summary>
         /// Example: RIGHT
         /// </summary>
+        /// <example>RIGHT</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("side")]
         public string? Side { get; set; }
 
         /// <summary>
         /// Example: 26
         /// </summary>
+        /// <example>26</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("start_line")]
         public int? StartLine { get; set; }
 
         /// <summary>
         /// Example: LEFT
         /// </summary>
+        /// <example>LEFT</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("start_side")]
         public string? StartSide { get; set; }
 
@@ -58,91 +62,54 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="PullsCreateReviewRequestComment" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="path">
+        /// The relative path to the file that necessitates a review comment.
+        /// </param>
+        /// <param name="position">
+        /// The position in the diff where you want to add a review comment. Note this value is not the same as the line number in the file. The `position` value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
+        /// </param>
+        /// <param name="body">
+        /// Text of the review comment.
+        /// </param>
+        /// <param name="line">
+        /// Example: 28
+        /// </param>
+        /// <param name="side">
+        /// Example: RIGHT
+        /// </param>
+        /// <param name="startLine">
+        /// Example: 26
+        /// </param>
+        /// <param name="startSide">
+        /// Example: LEFT
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public PullsCreateReviewRequestComment(
+            string path,
+            string body,
+            int? position,
+            int? line,
+            string? side,
+            int? startLine,
+            string? startSide)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
+            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
+            this.Position = position;
+            this.Line = line;
+            this.Side = side;
+            this.StartLine = startLine;
+            this.StartSide = startSide;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="PullsCreateReviewRequestComment" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public PullsCreateReviewRequestComment()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.PullsCreateReviewRequestComment? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.PullsCreateReviewRequestComment),
-                jsonSerializerContext) as global::GitHub.PullsCreateReviewRequestComment;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.PullsCreateReviewRequestComment? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.PullsCreateReviewRequestComment>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.PullsCreateReviewRequestComment?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.PullsCreateReviewRequestComment),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.PullsCreateReviewRequestComment;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.PullsCreateReviewRequestComment?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.PullsCreateReviewRequestComment?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

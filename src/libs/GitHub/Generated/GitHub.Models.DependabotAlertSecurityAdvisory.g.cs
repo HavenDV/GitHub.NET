@@ -13,6 +13,7 @@ namespace GitHub
         /// The unique GitHub Security Advisory ID assigned to the advisory.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("ghsa_id")]
         public string GhsaId { get; set; } = default!;
 
@@ -27,6 +28,7 @@ namespace GitHub
         /// A short, plain text summary of the advisory.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("summary")]
         public string Summary { get; set; } = default!;
 
@@ -34,6 +36,7 @@ namespace GitHub
         /// A long-form Markdown-supported description of the advisory.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string Description { get; set; } = default!;
 
@@ -41,6 +44,7 @@ namespace GitHub
         /// Vulnerable version range information for the advisory.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("vulnerabilities")]
         public global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityVulnerability> Vulnerabilities { get; set; } = default!;
 
@@ -48,6 +52,7 @@ namespace GitHub
         /// The severity of the advisory.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("severity")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.DependabotAlertSecurityAdvisorySeverityJsonConverter))]
         public global::GitHub.DependabotAlertSecurityAdvisorySeverity Severity { get; set; } = default!;
@@ -56,6 +61,7 @@ namespace GitHub
         /// Details for the advisory pertaining to the Common Vulnerability Scoring System.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("cvss")]
         public global::GitHub.DependabotAlertSecurityAdvisoryCvss Cvss { get; set; } = default!;
 
@@ -69,6 +75,7 @@ namespace GitHub
         /// Details for the advisory pertaining to Common Weakness Enumeration.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("cwes")]
         public global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryCwe> Cwes { get; set; } = default!;
 
@@ -76,6 +83,7 @@ namespace GitHub
         /// Values that identify this advisory among security information sources.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("identifiers")]
         public global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryIdentifier> Identifiers { get; set; } = default!;
 
@@ -83,6 +91,7 @@ namespace GitHub
         /// Links to additional advisory information.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("references")]
         public global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryReference> References { get; set; } = default!;
 
@@ -90,6 +99,7 @@ namespace GitHub
         /// The time that the advisory was published in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("published_at")]
         public global::System.DateTime PublishedAt { get; set; } = default!;
 
@@ -97,6 +107,7 @@ namespace GitHub
         /// The time that the advisory was last modified in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
         public global::System.DateTime UpdatedAt { get; set; } = default!;
 
@@ -113,91 +124,100 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="DependabotAlertSecurityAdvisory" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="ghsaId">
+        /// The unique GitHub Security Advisory ID assigned to the advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="cveId">
+        /// The unique CVE ID assigned to the advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="summary">
+        /// A short, plain text summary of the advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="description">
+        /// A long-form Markdown-supported description of the advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="vulnerabilities">
+        /// Vulnerable version range information for the advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="severity">
+        /// The severity of the advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="cvss">
+        /// Details for the advisory pertaining to the Common Vulnerability Scoring System.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="cvssSeverities"></param>
+        /// <param name="cwes">
+        /// Details for the advisory pertaining to Common Weakness Enumeration.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="identifiers">
+        /// Values that identify this advisory among security information sources.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="references">
+        /// Links to additional advisory information.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="publishedAt">
+        /// The time that the advisory was published in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="updatedAt">
+        /// The time that the advisory was last modified in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="withdrawnAt">
+        /// The time that the advisory was withdrawn in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.<br/>
+        /// Included only in responses
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public DependabotAlertSecurityAdvisory(
+            string? cveId,
+            global::GitHub.CvssSeverities? cvssSeverities,
+            global::System.DateTime? withdrawnAt,
+            string ghsaId = default!,
+            string summary = default!,
+            string description = default!,
+            global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityVulnerability> vulnerabilities = default!,
+            global::GitHub.DependabotAlertSecurityAdvisorySeverity severity = default!,
+            global::GitHub.DependabotAlertSecurityAdvisoryCvss cvss = default!,
+            global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryCwe> cwes = default!,
+            global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryIdentifier> identifiers = default!,
+            global::System.Collections.Generic.IList<global::GitHub.DependabotAlertSecurityAdvisoryReference> references = default!,
+            global::System.DateTime publishedAt = default!,
+            global::System.DateTime updatedAt = default!)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.GhsaId = ghsaId;
+            this.CveId = cveId;
+            this.Summary = summary;
+            this.Description = description;
+            this.Vulnerabilities = vulnerabilities;
+            this.Severity = severity;
+            this.Cvss = cvss;
+            this.CvssSeverities = cvssSeverities;
+            this.Cwes = cwes;
+            this.Identifiers = identifiers;
+            this.References = references;
+            this.PublishedAt = publishedAt;
+            this.UpdatedAt = updatedAt;
+            this.WithdrawnAt = withdrawnAt;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="DependabotAlertSecurityAdvisory" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public DependabotAlertSecurityAdvisory()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.DependabotAlertSecurityAdvisory? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.DependabotAlertSecurityAdvisory),
-                jsonSerializerContext) as global::GitHub.DependabotAlertSecurityAdvisory;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.DependabotAlertSecurityAdvisory? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.DependabotAlertSecurityAdvisory>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.DependabotAlertSecurityAdvisory?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.DependabotAlertSecurityAdvisory),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.DependabotAlertSecurityAdvisory;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.DependabotAlertSecurityAdvisory?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.DependabotAlertSecurityAdvisory?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

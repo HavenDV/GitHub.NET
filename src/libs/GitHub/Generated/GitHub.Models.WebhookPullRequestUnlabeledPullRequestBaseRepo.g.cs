@@ -61,6 +61,7 @@ namespace GitHub
         /// Whether the repository is archived.<br/>
         /// Default Value: false
         /// </summary>
+        /// <default>false</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("archived")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Archived { get; set; } = false;
@@ -258,6 +259,7 @@ namespace GitHub
         /// Whether downloads are enabled.<br/>
         /// Default Value: true
         /// </summary>
+        /// <default>true</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_downloads")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool HasDownloads { get; set; } = true;
@@ -266,6 +268,7 @@ namespace GitHub
         /// Whether issues are enabled.<br/>
         /// Default Value: true
         /// </summary>
+        /// <default>true</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_issues")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool HasIssues { get; set; } = true;
@@ -281,6 +284,7 @@ namespace GitHub
         /// Whether projects are enabled.<br/>
         /// Default Value: true
         /// </summary>
+        /// <default>true</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_projects")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool HasProjects { get; set; } = true;
@@ -289,6 +293,7 @@ namespace GitHub
         /// Whether the wiki is enabled.<br/>
         /// Default Value: true
         /// </summary>
+        /// <default>true</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_wiki")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool HasWiki { get; set; } = true;
@@ -297,6 +302,7 @@ namespace GitHub
         /// Whether discussions are enabled.<br/>
         /// Default Value: false
         /// </summary>
+        /// <default>false</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_discussions")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool HasDiscussions { get; set; } = false;
@@ -696,91 +702,375 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookPullRequestUnlabeledPullRequestBaseRepo" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="allowAutoMerge">
+        /// Whether to allow auto-merge for pull requests.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="allowForking">
+        /// Whether to allow private forks
+        /// </param>
+        /// <param name="allowMergeCommit">
+        /// Whether to allow merge commits for pull requests.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="allowRebaseMerge">
+        /// Whether to allow rebase merges for pull requests.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="allowSquashMerge">
+        /// Whether to allow squash merges for pull requests.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="allowUpdateBranch"></param>
+        /// <param name="archiveUrl"></param>
+        /// <param name="archived">
+        /// Whether the repository is archived.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="assigneesUrl"></param>
+        /// <param name="blobsUrl"></param>
+        /// <param name="branchesUrl"></param>
+        /// <param name="cloneUrl"></param>
+        /// <param name="collaboratorsUrl"></param>
+        /// <param name="commentsUrl"></param>
+        /// <param name="commitsUrl"></param>
+        /// <param name="compareUrl"></param>
+        /// <param name="contentsUrl"></param>
+        /// <param name="contributorsUrl"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="defaultBranch">
+        /// The default branch of the repository.
+        /// </param>
+        /// <param name="deleteBranchOnMerge">
+        /// Whether to delete head branches when pull requests are merged<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="deploymentsUrl"></param>
+        /// <param name="description"></param>
+        /// <param name="disabled">
+        /// Returns whether or not this repository is disabled.
+        /// </param>
+        /// <param name="downloadsUrl"></param>
+        /// <param name="eventsUrl"></param>
+        /// <param name="fork"></param>
+        /// <param name="forks"></param>
+        /// <param name="forksCount"></param>
+        /// <param name="forksUrl"></param>
+        /// <param name="fullName"></param>
+        /// <param name="gitCommitsUrl"></param>
+        /// <param name="gitRefsUrl"></param>
+        /// <param name="gitTagsUrl"></param>
+        /// <param name="gitUrl"></param>
+        /// <param name="hasDownloads">
+        /// Whether downloads are enabled.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="hasIssues">
+        /// Whether issues are enabled.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="hasPages"></param>
+        /// <param name="hasProjects">
+        /// Whether projects are enabled.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="hasWiki">
+        /// Whether the wiki is enabled.<br/>
+        /// Default Value: true
+        /// </param>
+        /// <param name="hasDiscussions">
+        /// Whether discussions are enabled.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="homepage"></param>
+        /// <param name="hooksUrl"></param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="id">
+        /// Unique identifier of the repository
+        /// </param>
+        /// <param name="isTemplate"></param>
+        /// <param name="issueCommentUrl"></param>
+        /// <param name="issueEventsUrl"></param>
+        /// <param name="issuesUrl"></param>
+        /// <param name="keysUrl"></param>
+        /// <param name="labelsUrl"></param>
+        /// <param name="language"></param>
+        /// <param name="languagesUrl"></param>
+        /// <param name="license"></param>
+        /// <param name="masterBranch"></param>
+        /// <param name="mergeCommitMessage">
+        /// The default value for a merge commit message.<br/>
+        /// - `PR_TITLE` - default to the pull request's title.<br/>
+        /// - `PR_BODY` - default to the pull request's body.<br/>
+        /// - `BLANK` - default to a blank commit message.
+        /// </param>
+        /// <param name="mergeCommitTitle">
+        /// The default value for a merge commit title.<br/>
+        /// - `PR_TITLE` - default to the pull request's title.<br/>
+        /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
+        /// </param>
+        /// <param name="mergesUrl"></param>
+        /// <param name="milestonesUrl"></param>
+        /// <param name="mirrorUrl"></param>
+        /// <param name="name">
+        /// The name of the repository.
+        /// </param>
+        /// <param name="nodeId"></param>
+        /// <param name="notificationsUrl"></param>
+        /// <param name="openIssues"></param>
+        /// <param name="openIssuesCount"></param>
+        /// <param name="organization"></param>
+        /// <param name="owner"></param>
+        /// <param name="permissions"></param>
+        /// <param name="private">
+        /// Whether the repository is private or public.
+        /// </param>
+        /// <param name="public"></param>
+        /// <param name="pullsUrl"></param>
+        /// <param name="pushedAt"></param>
+        /// <param name="releasesUrl"></param>
+        /// <param name="roleName"></param>
+        /// <param name="size"></param>
+        /// <param name="squashMergeCommitMessage">
+        /// The default value for a squash merge commit message:<br/>
+        /// - `PR_BODY` - default to the pull request's body.<br/>
+        /// - `COMMIT_MESSAGES` - default to the branch's commit messages.<br/>
+        /// - `BLANK` - default to a blank commit message.
+        /// </param>
+        /// <param name="squashMergeCommitTitle">
+        /// The default value for a squash merge commit title:<br/>
+        /// - `PR_TITLE` - default to the pull request's title.<br/>
+        /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
+        /// </param>
+        /// <param name="sshUrl"></param>
+        /// <param name="stargazers"></param>
+        /// <param name="stargazersCount"></param>
+        /// <param name="stargazersUrl"></param>
+        /// <param name="statusesUrl"></param>
+        /// <param name="subscribersUrl"></param>
+        /// <param name="subscriptionUrl"></param>
+        /// <param name="svnUrl"></param>
+        /// <param name="tagsUrl"></param>
+        /// <param name="teamsUrl"></param>
+        /// <param name="topics"></param>
+        /// <param name="treesUrl"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="url"></param>
+        /// <param name="useSquashPrTitleAsDefault">
+        /// Whether a squash merge commit can use the pull request title as default. **This property is closing down. Please use `squash_merge_commit_title` instead.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="visibility"></param>
+        /// <param name="watchers"></param>
+        /// <param name="watchersCount"></param>
+        /// <param name="webCommitSignoffRequired">
+        /// Whether to require contributors to sign off on web-based commits
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookPullRequestUnlabeledPullRequestBaseRepo(
+            string archiveUrl,
+            bool archived,
+            string assigneesUrl,
+            string blobsUrl,
+            string branchesUrl,
+            string cloneUrl,
+            string collaboratorsUrl,
+            string commentsUrl,
+            string commitsUrl,
+            string compareUrl,
+            string contentsUrl,
+            string contributorsUrl,
+            global::GitHub.OneOf<int?, global::System.DateTime?> createdAt,
+            string defaultBranch,
+            string deploymentsUrl,
+            string? description,
+            string downloadsUrl,
+            string eventsUrl,
+            bool fork,
+            int forks,
+            int forksCount,
+            string forksUrl,
+            string fullName,
+            string gitCommitsUrl,
+            string gitRefsUrl,
+            string gitTagsUrl,
+            string gitUrl,
+            bool hasDownloads,
+            bool hasIssues,
+            bool hasPages,
+            bool hasProjects,
+            bool hasWiki,
+            bool hasDiscussions,
+            string? homepage,
+            string hooksUrl,
+            string htmlUrl,
+            long id,
+            string issueCommentUrl,
+            string issueEventsUrl,
+            string issuesUrl,
+            string keysUrl,
+            string labelsUrl,
+            string? language,
+            string languagesUrl,
+            global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepoLicense? license,
+            string mergesUrl,
+            string milestonesUrl,
+            string? mirrorUrl,
+            string name,
+            string nodeId,
+            string notificationsUrl,
+            int openIssues,
+            int openIssuesCount,
+            global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepoOwner? owner,
+            bool @private,
+            string pullsUrl,
+            global::GitHub.OneOf<int?, global::System.DateTime?>? pushedAt,
+            string releasesUrl,
+            int size,
+            string sshUrl,
+            int stargazersCount,
+            string stargazersUrl,
+            string statusesUrl,
+            string subscribersUrl,
+            string subscriptionUrl,
+            string svnUrl,
+            string tagsUrl,
+            string teamsUrl,
+            global::System.Collections.Generic.IList<string> topics,
+            string treesUrl,
+            global::System.DateTime updatedAt,
+            string url,
+            global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepoVisibility visibility,
+            int watchers,
+            int watchersCount,
+            bool? allowAutoMerge,
+            bool? allowForking,
+            bool? allowMergeCommit,
+            bool? allowRebaseMerge,
+            bool? allowSquashMerge,
+            bool? allowUpdateBranch,
+            bool? deleteBranchOnMerge,
+            bool? disabled,
+            bool? isTemplate,
+            string? masterBranch,
+            global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepoMergeCommitMessage? mergeCommitMessage,
+            global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepoMergeCommitTitle? mergeCommitTitle,
+            string? organization,
+            global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepoPermissions? permissions,
+            bool? @public,
+            string? roleName,
+            global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepoSquashMergeCommitMessage? squashMergeCommitMessage,
+            global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepoSquashMergeCommitTitle? squashMergeCommitTitle,
+            int? stargazers,
+            bool? useSquashPrTitleAsDefault,
+            bool? webCommitSignoffRequired)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.ArchiveUrl = archiveUrl ?? throw new global::System.ArgumentNullException(nameof(archiveUrl));
+            this.Archived = archived;
+            this.AssigneesUrl = assigneesUrl ?? throw new global::System.ArgumentNullException(nameof(assigneesUrl));
+            this.BlobsUrl = blobsUrl ?? throw new global::System.ArgumentNullException(nameof(blobsUrl));
+            this.BranchesUrl = branchesUrl ?? throw new global::System.ArgumentNullException(nameof(branchesUrl));
+            this.CloneUrl = cloneUrl ?? throw new global::System.ArgumentNullException(nameof(cloneUrl));
+            this.CollaboratorsUrl = collaboratorsUrl ?? throw new global::System.ArgumentNullException(nameof(collaboratorsUrl));
+            this.CommentsUrl = commentsUrl ?? throw new global::System.ArgumentNullException(nameof(commentsUrl));
+            this.CommitsUrl = commitsUrl ?? throw new global::System.ArgumentNullException(nameof(commitsUrl));
+            this.CompareUrl = compareUrl ?? throw new global::System.ArgumentNullException(nameof(compareUrl));
+            this.ContentsUrl = contentsUrl ?? throw new global::System.ArgumentNullException(nameof(contentsUrl));
+            this.ContributorsUrl = contributorsUrl ?? throw new global::System.ArgumentNullException(nameof(contributorsUrl));
+            this.CreatedAt = createdAt;
+            this.DefaultBranch = defaultBranch ?? throw new global::System.ArgumentNullException(nameof(defaultBranch));
+            this.DeploymentsUrl = deploymentsUrl ?? throw new global::System.ArgumentNullException(nameof(deploymentsUrl));
+            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
+            this.DownloadsUrl = downloadsUrl ?? throw new global::System.ArgumentNullException(nameof(downloadsUrl));
+            this.EventsUrl = eventsUrl ?? throw new global::System.ArgumentNullException(nameof(eventsUrl));
+            this.Fork = fork;
+            this.Forks = forks;
+            this.ForksCount = forksCount;
+            this.ForksUrl = forksUrl ?? throw new global::System.ArgumentNullException(nameof(forksUrl));
+            this.FullName = fullName ?? throw new global::System.ArgumentNullException(nameof(fullName));
+            this.GitCommitsUrl = gitCommitsUrl ?? throw new global::System.ArgumentNullException(nameof(gitCommitsUrl));
+            this.GitRefsUrl = gitRefsUrl ?? throw new global::System.ArgumentNullException(nameof(gitRefsUrl));
+            this.GitTagsUrl = gitTagsUrl ?? throw new global::System.ArgumentNullException(nameof(gitTagsUrl));
+            this.GitUrl = gitUrl ?? throw new global::System.ArgumentNullException(nameof(gitUrl));
+            this.HasDownloads = hasDownloads;
+            this.HasIssues = hasIssues;
+            this.HasPages = hasPages;
+            this.HasProjects = hasProjects;
+            this.HasWiki = hasWiki;
+            this.HasDiscussions = hasDiscussions;
+            this.Homepage = homepage ?? throw new global::System.ArgumentNullException(nameof(homepage));
+            this.HooksUrl = hooksUrl ?? throw new global::System.ArgumentNullException(nameof(hooksUrl));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.Id = id;
+            this.IssueCommentUrl = issueCommentUrl ?? throw new global::System.ArgumentNullException(nameof(issueCommentUrl));
+            this.IssueEventsUrl = issueEventsUrl ?? throw new global::System.ArgumentNullException(nameof(issueEventsUrl));
+            this.IssuesUrl = issuesUrl ?? throw new global::System.ArgumentNullException(nameof(issuesUrl));
+            this.KeysUrl = keysUrl ?? throw new global::System.ArgumentNullException(nameof(keysUrl));
+            this.LabelsUrl = labelsUrl ?? throw new global::System.ArgumentNullException(nameof(labelsUrl));
+            this.Language = language ?? throw new global::System.ArgumentNullException(nameof(language));
+            this.LanguagesUrl = languagesUrl ?? throw new global::System.ArgumentNullException(nameof(languagesUrl));
+            this.License = license ?? throw new global::System.ArgumentNullException(nameof(license));
+            this.MergesUrl = mergesUrl ?? throw new global::System.ArgumentNullException(nameof(mergesUrl));
+            this.MilestonesUrl = milestonesUrl ?? throw new global::System.ArgumentNullException(nameof(milestonesUrl));
+            this.MirrorUrl = mirrorUrl ?? throw new global::System.ArgumentNullException(nameof(mirrorUrl));
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.NotificationsUrl = notificationsUrl ?? throw new global::System.ArgumentNullException(nameof(notificationsUrl));
+            this.OpenIssues = openIssues;
+            this.OpenIssuesCount = openIssuesCount;
+            this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
+            this.Private = @private;
+            this.PullsUrl = pullsUrl ?? throw new global::System.ArgumentNullException(nameof(pullsUrl));
+            this.PushedAt = pushedAt;
+            this.ReleasesUrl = releasesUrl ?? throw new global::System.ArgumentNullException(nameof(releasesUrl));
+            this.Size = size;
+            this.SshUrl = sshUrl ?? throw new global::System.ArgumentNullException(nameof(sshUrl));
+            this.StargazersCount = stargazersCount;
+            this.StargazersUrl = stargazersUrl ?? throw new global::System.ArgumentNullException(nameof(stargazersUrl));
+            this.StatusesUrl = statusesUrl ?? throw new global::System.ArgumentNullException(nameof(statusesUrl));
+            this.SubscribersUrl = subscribersUrl ?? throw new global::System.ArgumentNullException(nameof(subscribersUrl));
+            this.SubscriptionUrl = subscriptionUrl ?? throw new global::System.ArgumentNullException(nameof(subscriptionUrl));
+            this.SvnUrl = svnUrl ?? throw new global::System.ArgumentNullException(nameof(svnUrl));
+            this.TagsUrl = tagsUrl ?? throw new global::System.ArgumentNullException(nameof(tagsUrl));
+            this.TeamsUrl = teamsUrl ?? throw new global::System.ArgumentNullException(nameof(teamsUrl));
+            this.Topics = topics ?? throw new global::System.ArgumentNullException(nameof(topics));
+            this.TreesUrl = treesUrl ?? throw new global::System.ArgumentNullException(nameof(treesUrl));
+            this.UpdatedAt = updatedAt;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.Visibility = visibility;
+            this.Watchers = watchers;
+            this.WatchersCount = watchersCount;
+            this.AllowAutoMerge = allowAutoMerge;
+            this.AllowForking = allowForking;
+            this.AllowMergeCommit = allowMergeCommit;
+            this.AllowRebaseMerge = allowRebaseMerge;
+            this.AllowSquashMerge = allowSquashMerge;
+            this.AllowUpdateBranch = allowUpdateBranch;
+            this.DeleteBranchOnMerge = deleteBranchOnMerge;
+            this.Disabled = disabled;
+            this.IsTemplate = isTemplate;
+            this.MasterBranch = masterBranch;
+            this.MergeCommitMessage = mergeCommitMessage;
+            this.MergeCommitTitle = mergeCommitTitle;
+            this.Organization = organization;
+            this.Permissions = permissions;
+            this.Public = @public;
+            this.RoleName = roleName;
+            this.SquashMergeCommitMessage = squashMergeCommitMessage;
+            this.SquashMergeCommitTitle = squashMergeCommitTitle;
+            this.Stargazers = stargazers;
+            this.UseSquashPrTitleAsDefault = useSquashPrTitleAsDefault;
+            this.WebCommitSignoffRequired = webCommitSignoffRequired;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookPullRequestUnlabeledPullRequestBaseRepo" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookPullRequestUnlabeledPullRequestBaseRepo()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepo? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepo),
-                jsonSerializerContext) as global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepo;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepo? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepo>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepo?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepo),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepo;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepo?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookPullRequestUnlabeledPullRequestBaseRepo?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

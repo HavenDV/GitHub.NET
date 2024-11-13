@@ -11,6 +11,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/marketplace_listing/plans/1313
         /// </summary>
+        /// <example>https://api.github.com/marketplace_listing/plans/1313</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -18,6 +19,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/marketplace_listing/plans/1313/accounts
         /// </summary>
+        /// <example>https://api.github.com/marketplace_listing/plans/1313/accounts</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("accounts_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AccountsUrl { get; set; }
@@ -25,6 +27,7 @@ namespace GitHub
         /// <summary>
         /// Example: 1313
         /// </summary>
+        /// <example>1313</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
@@ -32,6 +35,7 @@ namespace GitHub
         /// <summary>
         /// Example: 3
         /// </summary>
+        /// <example>3</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("number")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Number { get; set; }
@@ -39,6 +43,7 @@ namespace GitHub
         /// <summary>
         /// Example: Pro
         /// </summary>
+        /// <example>Pro</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -46,6 +51,7 @@ namespace GitHub
         /// <summary>
         /// Example: A professional-grade CI solution
         /// </summary>
+        /// <example>A professional-grade CI solution</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Description { get; set; }
@@ -53,6 +59,7 @@ namespace GitHub
         /// <summary>
         /// Example: 1099
         /// </summary>
+        /// <example>1099</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("monthly_price_in_cents")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int MonthlyPriceInCents { get; set; }
@@ -60,6 +67,7 @@ namespace GitHub
         /// <summary>
         /// Example: 11870
         /// </summary>
+        /// <example>11870</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("yearly_price_in_cents")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int YearlyPriceInCents { get; set; }
@@ -67,6 +75,7 @@ namespace GitHub
         /// <summary>
         /// Example: FLAT_RATE
         /// </summary>
+        /// <example>FLAT_RATE</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("price_model")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.MarketplaceListingPlanPriceModelJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -75,6 +84,7 @@ namespace GitHub
         /// <summary>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("has_free_trial")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool HasFreeTrial { get; set; }
@@ -89,6 +99,7 @@ namespace GitHub
         /// <summary>
         /// Example: published
         /// </summary>
+        /// <example>published</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string State { get; set; }
@@ -96,6 +107,7 @@ namespace GitHub
         /// <summary>
         /// Example: [Up to 25 private repositories, 11 concurrent builds]
         /// </summary>
+        /// <example>[Up to 25 private repositories, 11 concurrent builds]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("bullets")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> Bullets { get; set; }
@@ -106,91 +118,82 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="MarketplaceListingPlan" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="url">
+        /// Example: https://api.github.com/marketplace_listing/plans/1313
+        /// </param>
+        /// <param name="accountsUrl">
+        /// Example: https://api.github.com/marketplace_listing/plans/1313/accounts
+        /// </param>
+        /// <param name="id">
+        /// Example: 1313
+        /// </param>
+        /// <param name="number">
+        /// Example: 3
+        /// </param>
+        /// <param name="name">
+        /// Example: Pro
+        /// </param>
+        /// <param name="description">
+        /// Example: A professional-grade CI solution
+        /// </param>
+        /// <param name="monthlyPriceInCents">
+        /// Example: 1099
+        /// </param>
+        /// <param name="yearlyPriceInCents">
+        /// Example: 11870
+        /// </param>
+        /// <param name="priceModel">
+        /// Example: FLAT_RATE
+        /// </param>
+        /// <param name="hasFreeTrial">
+        /// Example: true
+        /// </param>
+        /// <param name="unitName"></param>
+        /// <param name="state">
+        /// Example: published
+        /// </param>
+        /// <param name="bullets">
+        /// Example: [Up to 25 private repositories, 11 concurrent builds]
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public MarketplaceListingPlan(
+            string url,
+            string accountsUrl,
+            int id,
+            int number,
+            string name,
+            string description,
+            int monthlyPriceInCents,
+            int yearlyPriceInCents,
+            global::GitHub.MarketplaceListingPlanPriceModel priceModel,
+            bool hasFreeTrial,
+            string? unitName,
+            string state,
+            global::System.Collections.Generic.IList<string> bullets)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.AccountsUrl = accountsUrl ?? throw new global::System.ArgumentNullException(nameof(accountsUrl));
+            this.Id = id;
+            this.Number = number;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
+            this.MonthlyPriceInCents = monthlyPriceInCents;
+            this.YearlyPriceInCents = yearlyPriceInCents;
+            this.PriceModel = priceModel;
+            this.HasFreeTrial = hasFreeTrial;
+            this.UnitName = unitName ?? throw new global::System.ArgumentNullException(nameof(unitName));
+            this.State = state ?? throw new global::System.ArgumentNullException(nameof(state));
+            this.Bullets = bullets ?? throw new global::System.ArgumentNullException(nameof(bullets));
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="MarketplaceListingPlan" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public MarketplaceListingPlan()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.MarketplaceListingPlan? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.MarketplaceListingPlan),
-                jsonSerializerContext) as global::GitHub.MarketplaceListingPlan;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.MarketplaceListingPlan? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.MarketplaceListingPlan>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.MarketplaceListingPlan?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.MarketplaceListingPlan),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.MarketplaceListingPlan;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.MarketplaceListingPlan?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.MarketplaceListingPlan?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

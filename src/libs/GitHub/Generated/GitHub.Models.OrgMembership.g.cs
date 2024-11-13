@@ -11,6 +11,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/orgs/octocat/memberships/defunkt
         /// </summary>
+        /// <example>https://api.github.com/orgs/octocat/memberships/defunkt</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -19,6 +20,7 @@ namespace GitHub
         /// The state of the member in the organization. The `pending` state indicates the user has not yet accepted an invitation.<br/>
         /// Example: active
         /// </summary>
+        /// <example>active</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrgMembershipStateJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -28,6 +30,7 @@ namespace GitHub
         /// The user's membership type in the organization.<br/>
         /// Example: admin
         /// </summary>
+        /// <example>admin</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrgMembershipRoleJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -36,6 +39,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/orgs/octocat
         /// </summary>
+        /// <example>https://api.github.com/orgs/octocat</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("organization_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string OrganizationUrl { get; set; }
@@ -66,91 +70,54 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="OrgMembership" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="url">
+        /// Example: https://api.github.com/orgs/octocat/memberships/defunkt
+        /// </param>
+        /// <param name="state">
+        /// The state of the member in the organization. The `pending` state indicates the user has not yet accepted an invitation.<br/>
+        /// Example: active
+        /// </param>
+        /// <param name="role">
+        /// The user's membership type in the organization.<br/>
+        /// Example: admin
+        /// </param>
+        /// <param name="organizationUrl">
+        /// Example: https://api.github.com/orgs/octocat
+        /// </param>
+        /// <param name="organization">
+        /// A GitHub organization.
+        /// </param>
+        /// <param name="user">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="permissions"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public OrgMembership(
+            string url,
+            global::GitHub.OrgMembershipState state,
+            global::GitHub.OrgMembershipRole role,
+            string organizationUrl,
+            global::GitHub.OrganizationSimple organization,
+            global::GitHub.NullableSimpleUser? user,
+            global::GitHub.OrgMembershipPermissions? permissions)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.State = state;
+            this.Role = role;
+            this.OrganizationUrl = organizationUrl ?? throw new global::System.ArgumentNullException(nameof(organizationUrl));
+            this.Organization = organization ?? throw new global::System.ArgumentNullException(nameof(organization));
+            this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.Permissions = permissions;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="OrgMembership" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public OrgMembership()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.OrgMembership? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.OrgMembership),
-                jsonSerializerContext) as global::GitHub.OrgMembership;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.OrgMembership? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.OrgMembership>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.OrgMembership?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.OrgMembership),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.OrgMembership;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.OrgMembership?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.OrgMembership?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

@@ -117,91 +117,68 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="Authorization" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id"></param>
+        /// <param name="url"></param>
+        /// <param name="scopes">
+        /// A list of scopes that this authorization is in.
+        /// </param>
+        /// <param name="token"></param>
+        /// <param name="tokenLastEight"></param>
+        /// <param name="hashedToken"></param>
+        /// <param name="app"></param>
+        /// <param name="note"></param>
+        /// <param name="noteUrl"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="fingerprint"></param>
+        /// <param name="user">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="installation"></param>
+        /// <param name="expiresAt"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public Authorization(
+            long id,
+            string url,
+            global::System.Collections.Generic.IList<string>? scopes,
+            string token,
+            string? tokenLastEight,
+            string? hashedToken,
+            global::GitHub.AuthorizationApp app,
+            string? note,
+            string? noteUrl,
+            global::System.DateTime updatedAt,
+            global::System.DateTime createdAt,
+            string? fingerprint,
+            global::System.DateTime? expiresAt,
+            global::GitHub.NullableSimpleUser? user,
+            global::GitHub.NullableScopedInstallation? installation)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.Scopes = scopes ?? throw new global::System.ArgumentNullException(nameof(scopes));
+            this.Token = token ?? throw new global::System.ArgumentNullException(nameof(token));
+            this.TokenLastEight = tokenLastEight ?? throw new global::System.ArgumentNullException(nameof(tokenLastEight));
+            this.HashedToken = hashedToken ?? throw new global::System.ArgumentNullException(nameof(hashedToken));
+            this.App = app ?? throw new global::System.ArgumentNullException(nameof(app));
+            this.Note = note ?? throw new global::System.ArgumentNullException(nameof(note));
+            this.NoteUrl = noteUrl ?? throw new global::System.ArgumentNullException(nameof(noteUrl));
+            this.UpdatedAt = updatedAt;
+            this.CreatedAt = createdAt;
+            this.Fingerprint = fingerprint ?? throw new global::System.ArgumentNullException(nameof(fingerprint));
+            this.ExpiresAt = expiresAt;
+            this.User = user;
+            this.Installation = installation;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="Authorization" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public Authorization()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.Authorization? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.Authorization),
-                jsonSerializerContext) as global::GitHub.Authorization;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.Authorization? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.Authorization>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.Authorization?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.Authorization),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.Authorization;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.Authorization?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.Authorization?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

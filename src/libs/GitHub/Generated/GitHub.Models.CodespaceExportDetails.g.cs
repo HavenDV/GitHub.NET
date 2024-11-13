@@ -12,6 +12,7 @@ namespace GitHub
         /// State of the latest export<br/>
         /// Example: succeeded | failed | in_progress
         /// </summary>
+        /// <example>succeeded | failed | in_progress</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         public string? State { get; set; }
 
@@ -25,6 +26,7 @@ namespace GitHub
         /// Name of the exported branch<br/>
         /// Example: codespace-monalisa-octocat-hello-world-g4wpq6h95q
         /// </summary>
+        /// <example>codespace-monalisa-octocat-hello-world-g4wpq6h95q</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("branch")]
         public string? Branch { get; set; }
 
@@ -32,6 +34,7 @@ namespace GitHub
         /// Git commit SHA of the exported branch<br/>
         /// Example: fd95a81ca01e48ede9f39c799ecbcef817b8a3b2
         /// </summary>
+        /// <example>fd95a81ca01e48ede9f39c799ecbcef817b8a3b2</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("sha")]
         public string? Sha { get; set; }
 
@@ -39,6 +42,7 @@ namespace GitHub
         /// Id for the export details<br/>
         /// Example: latest
         /// </summary>
+        /// <example>latest</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         public string? Id { get; set; }
 
@@ -46,6 +50,7 @@ namespace GitHub
         /// Url for fetching export details<br/>
         /// Example: https://api.github.com/user/codespaces/:name/exports/latest
         /// </summary>
+        /// <example>https://api.github.com/user/codespaces/:name/exports/latest</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("export_url")]
         public string? ExportUrl { get; set; }
 
@@ -53,6 +58,7 @@ namespace GitHub
         /// Web url for the exported branch<br/>
         /// Example: https://github.com/octocat/hello-world/tree/:branch
         /// </summary>
+        /// <example>https://github.com/octocat/hello-world/tree/:branch</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("html_url")]
         public string? HtmlUrl { get; set; }
 
@@ -62,91 +68,60 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CodespaceExportDetails" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="state">
+        /// State of the latest export<br/>
+        /// Example: succeeded | failed | in_progress
+        /// </param>
+        /// <param name="completedAt">
+        /// Completion time of the last export operation
+        /// </param>
+        /// <param name="branch">
+        /// Name of the exported branch<br/>
+        /// Example: codespace-monalisa-octocat-hello-world-g4wpq6h95q
+        /// </param>
+        /// <param name="sha">
+        /// Git commit SHA of the exported branch<br/>
+        /// Example: fd95a81ca01e48ede9f39c799ecbcef817b8a3b2
+        /// </param>
+        /// <param name="id">
+        /// Id for the export details<br/>
+        /// Example: latest
+        /// </param>
+        /// <param name="exportUrl">
+        /// Url for fetching export details<br/>
+        /// Example: https://api.github.com/user/codespaces/:name/exports/latest
+        /// </param>
+        /// <param name="htmlUrl">
+        /// Web url for the exported branch<br/>
+        /// Example: https://github.com/octocat/hello-world/tree/:branch
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CodespaceExportDetails(
+            string? state,
+            global::System.DateTime? completedAt,
+            string? branch,
+            string? sha,
+            string? id,
+            string? exportUrl,
+            string? htmlUrl)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.State = state;
+            this.CompletedAt = completedAt;
+            this.Branch = branch;
+            this.Sha = sha;
+            this.Id = id;
+            this.ExportUrl = exportUrl;
+            this.HtmlUrl = htmlUrl;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CodespaceExportDetails" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CodespaceExportDetails()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CodespaceExportDetails? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CodespaceExportDetails),
-                jsonSerializerContext) as global::GitHub.CodespaceExportDetails;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CodespaceExportDetails? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CodespaceExportDetails>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CodespaceExportDetails?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CodespaceExportDetails),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CodespaceExportDetails;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CodespaceExportDetails?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CodespaceExportDetails?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

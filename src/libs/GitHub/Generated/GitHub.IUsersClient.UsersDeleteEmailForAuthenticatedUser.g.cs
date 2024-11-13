@@ -10,8 +10,8 @@ namespace GitHub
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> UsersDeleteEmailForAuthenticatedUserAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task UsersDeleteEmailForAuthenticatedUserAsync(
             global::GitHub.OneOf<global::GitHub.UsersDeleteEmailForAuthenticatedUserRequest2, global::System.Collections.Generic.IList<string>, string> request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
@@ -21,7 +21,7 @@ namespace GitHub
         /// </summary>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> UsersDeleteEmailForAuthenticatedUserAsync(
+        global::System.Threading.Tasks.Task UsersDeleteEmailForAuthenticatedUserAsync(
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

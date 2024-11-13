@@ -12,8 +12,8 @@ namespace GitHub
         /// <param name="username"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> ProjectsAddCollaboratorAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task ProjectsAddCollaboratorAsync(
             int projectId,
             string username,
             global::GitHub.ProjectsAddCollaboratorRequest request,
@@ -32,7 +32,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> ProjectsAddCollaboratorAsync(
+        global::System.Threading.Tasks.Task ProjectsAddCollaboratorAsync(
             int projectId,
             string username,
             global::GitHub.ProjectsAddCollaboratorRequestPermission? permission = default,

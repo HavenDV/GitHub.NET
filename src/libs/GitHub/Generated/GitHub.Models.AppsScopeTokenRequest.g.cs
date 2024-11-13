@@ -12,6 +12,7 @@ namespace GitHub
         /// The access token used to authenticate to the GitHub API.<br/>
         /// Example: e72e16c7e42f292c6912e7710c838347ae178b4a
         /// </summary>
+        /// <example>e72e16c7e42f292c6912e7710c838347ae178b4a</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("access_token")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AccessToken { get; set; }
@@ -20,6 +21,7 @@ namespace GitHub
         /// The name of the user or organization to scope the user access token to. **Required** unless `target_id` is specified.<br/>
         /// Example: octocat
         /// </summary>
+        /// <example>octocat</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("target")]
         public string? Target { get; set; }
 
@@ -27,6 +29,7 @@ namespace GitHub
         /// The ID of the user or organization to scope the user access token to. **Required** unless `target` is specified.<br/>
         /// Example: 1
         /// </summary>
+        /// <example>1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("target_id")]
         public int? TargetId { get; set; }
 
@@ -40,6 +43,7 @@ namespace GitHub
         /// The list of repository IDs to scope the user access token to. `repository_ids` may not be specified if `repositories` is specified.<br/>
         /// Example: [1]
         /// </summary>
+        /// <example>[1]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository_ids")]
         public global::System.Collections.Generic.IList<int>? RepositoryIds { get; set; }
 
@@ -55,91 +59,53 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="AppsScopeTokenRequest" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="accessToken">
+        /// The access token used to authenticate to the GitHub API.<br/>
+        /// Example: e72e16c7e42f292c6912e7710c838347ae178b4a
+        /// </param>
+        /// <param name="target">
+        /// The name of the user or organization to scope the user access token to. **Required** unless `target_id` is specified.<br/>
+        /// Example: octocat
+        /// </param>
+        /// <param name="targetId">
+        /// The ID of the user or organization to scope the user access token to. **Required** unless `target` is specified.<br/>
+        /// Example: 1
+        /// </param>
+        /// <param name="repositories">
+        /// The list of repository names to scope the user access token to. `repositories` may not be specified if `repository_ids` is specified.
+        /// </param>
+        /// <param name="repositoryIds">
+        /// The list of repository IDs to scope the user access token to. `repository_ids` may not be specified if `repositories` is specified.<br/>
+        /// Example: [1]
+        /// </param>
+        /// <param name="permissions">
+        /// The permissions granted to the user access token.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public AppsScopeTokenRequest(
+            string accessToken,
+            string? target,
+            int? targetId,
+            global::System.Collections.Generic.IList<string>? repositories,
+            global::System.Collections.Generic.IList<int>? repositoryIds,
+            global::GitHub.AppPermissions? permissions)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.AccessToken = accessToken ?? throw new global::System.ArgumentNullException(nameof(accessToken));
+            this.Target = target;
+            this.TargetId = targetId;
+            this.Repositories = repositories;
+            this.RepositoryIds = repositoryIds;
+            this.Permissions = permissions;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="AppsScopeTokenRequest" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public AppsScopeTokenRequest()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.AppsScopeTokenRequest? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.AppsScopeTokenRequest),
-                jsonSerializerContext) as global::GitHub.AppsScopeTokenRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.AppsScopeTokenRequest? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.AppsScopeTokenRequest>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.AppsScopeTokenRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.AppsScopeTokenRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.AppsScopeTokenRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.AppsScopeTokenRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.AppsScopeTokenRequest?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

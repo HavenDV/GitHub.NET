@@ -22,7 +22,7 @@ namespace GitHub
         /// Default Value: 1
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>> OrgsListMembersAsync(
             string org,
             global::GitHub.OrgsListMembersFilter? filter = default,

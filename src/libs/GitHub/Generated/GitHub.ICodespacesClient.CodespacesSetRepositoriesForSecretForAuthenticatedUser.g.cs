@@ -13,8 +13,8 @@ namespace GitHub
         /// <param name="secretName"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> CodespacesSetRepositoriesForSecretForAuthenticatedUserAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task CodespacesSetRepositoriesForSecretForAuthenticatedUserAsync(
             string secretName,
             global::GitHub.CodespacesSetRepositoriesForSecretForAuthenticatedUserRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -31,7 +31,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> CodespacesSetRepositoriesForSecretForAuthenticatedUserAsync(
+        global::System.Threading.Tasks.Task CodespacesSetRepositoriesForSecretForAuthenticatedUserAsync(
             string secretName,
             global::System.Collections.Generic.IList<int> selectedRepositoryIds,
             global::System.Threading.CancellationToken cancellationToken = default);

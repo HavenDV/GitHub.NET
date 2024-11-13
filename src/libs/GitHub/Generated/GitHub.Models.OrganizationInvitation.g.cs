@@ -72,6 +72,7 @@ namespace GitHub
         /// <summary>
         /// Example: "MDIyOk9yZ2FuaXphdGlvbkludml0YXRpb24x"
         /// </summary>
+        /// <example>"MDIyOk9yZ2FuaXphdGlvbkludml0YXRpb24x"</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string NodeId { get; set; }
@@ -79,6 +80,7 @@ namespace GitHub
         /// <summary>
         /// Example: "https://api.github.com/organizations/16/invitations/1/teams"
         /// </summary>
+        /// <example>"https://api.github.com/organizations/16/invitations/1/teams"</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("invitation_teams_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string InvitationTeamsUrl { get; set; }
@@ -86,6 +88,7 @@ namespace GitHub
         /// <summary>
         /// Example: "member"
         /// </summary>
+        /// <example>"member"</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("invitation_source")]
         public string? InvitationSource { get; set; }
 
@@ -95,91 +98,63 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="OrganizationInvitation" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id"></param>
+        /// <param name="login"></param>
+        /// <param name="email"></param>
+        /// <param name="role"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="failedAt"></param>
+        /// <param name="failedReason"></param>
+        /// <param name="inviter">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="teamCount"></param>
+        /// <param name="nodeId">
+        /// Example: "MDIyOk9yZ2FuaXphdGlvbkludml0YXRpb24x"
+        /// </param>
+        /// <param name="invitationTeamsUrl">
+        /// Example: "https://api.github.com/organizations/16/invitations/1/teams"
+        /// </param>
+        /// <param name="invitationSource">
+        /// Example: "member"
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public OrganizationInvitation(
+            long id,
+            string? login,
+            string? email,
+            string role,
+            string createdAt,
+            global::GitHub.SimpleUser inviter,
+            int teamCount,
+            string nodeId,
+            string invitationTeamsUrl,
+            string? failedAt,
+            string? failedReason,
+            string? invitationSource)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Login = login ?? throw new global::System.ArgumentNullException(nameof(login));
+            this.Email = email ?? throw new global::System.ArgumentNullException(nameof(email));
+            this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
+            this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
+            this.Inviter = inviter ?? throw new global::System.ArgumentNullException(nameof(inviter));
+            this.TeamCount = teamCount;
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.InvitationTeamsUrl = invitationTeamsUrl ?? throw new global::System.ArgumentNullException(nameof(invitationTeamsUrl));
+            this.FailedAt = failedAt;
+            this.FailedReason = failedReason;
+            this.InvitationSource = invitationSource;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="OrganizationInvitation" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public OrganizationInvitation()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.OrganizationInvitation? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.OrganizationInvitation),
-                jsonSerializerContext) as global::GitHub.OrganizationInvitation;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.OrganizationInvitation? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.OrganizationInvitation>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.OrganizationInvitation?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.OrganizationInvitation),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.OrganizationInvitation;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.OrganizationInvitation?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.OrganizationInvitation?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

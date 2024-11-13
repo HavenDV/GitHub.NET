@@ -15,7 +15,7 @@ namespace GitHub
         /// <param name="name"></param>
         /// <param name="repositoryId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task ActionsAddSelectedRepoToOrgVariableAsync(
             string org,
             string name,

@@ -14,8 +14,8 @@ namespace GitHub
         /// <param name="org"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> CodeSecurityDetachConfigurationAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task CodeSecurityDetachConfigurationAsync(
             string org,
             global::GitHub.CodeSecurityDetachConfigurationRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -33,7 +33,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> CodeSecurityDetachConfigurationAsync(
+        global::System.Threading.Tasks.Task CodeSecurityDetachConfigurationAsync(
             string org,
             global::System.Collections.Generic.IList<int>? selectedRepositoryIds = default,
             global::System.Threading.CancellationToken cancellationToken = default);

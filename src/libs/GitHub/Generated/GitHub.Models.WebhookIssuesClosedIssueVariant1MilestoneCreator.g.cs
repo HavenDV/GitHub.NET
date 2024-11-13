@@ -149,91 +149,85 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookIssuesClosedIssueVariant1MilestoneCreator" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="avatarUrl"></param>
+        /// <param name="deleted"></param>
+        /// <param name="email"></param>
+        /// <param name="eventsUrl"></param>
+        /// <param name="followersUrl"></param>
+        /// <param name="followingUrl"></param>
+        /// <param name="gistsUrl"></param>
+        /// <param name="gravatarId"></param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="id"></param>
+        /// <param name="login"></param>
+        /// <param name="name"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="organizationsUrl"></param>
+        /// <param name="receivedEventsUrl"></param>
+        /// <param name="reposUrl"></param>
+        /// <param name="siteAdmin"></param>
+        /// <param name="starredUrl"></param>
+        /// <param name="subscriptionsUrl"></param>
+        /// <param name="type"></param>
+        /// <param name="url"></param>
+        /// <param name="userViewType"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookIssuesClosedIssueVariant1MilestoneCreator(
+            int id,
+            string login,
+            string? avatarUrl,
+            bool? deleted,
+            string? email,
+            string? eventsUrl,
+            string? followersUrl,
+            string? followingUrl,
+            string? gistsUrl,
+            string? gravatarId,
+            string? htmlUrl,
+            string? name,
+            string? nodeId,
+            string? organizationsUrl,
+            string? receivedEventsUrl,
+            string? reposUrl,
+            bool? siteAdmin,
+            string? starredUrl,
+            string? subscriptionsUrl,
+            global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreatorType? type,
+            string? url,
+            string? userViewType)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Login = login ?? throw new global::System.ArgumentNullException(nameof(login));
+            this.AvatarUrl = avatarUrl;
+            this.Deleted = deleted;
+            this.Email = email;
+            this.EventsUrl = eventsUrl;
+            this.FollowersUrl = followersUrl;
+            this.FollowingUrl = followingUrl;
+            this.GistsUrl = gistsUrl;
+            this.GravatarId = gravatarId;
+            this.HtmlUrl = htmlUrl;
+            this.Name = name;
+            this.NodeId = nodeId;
+            this.OrganizationsUrl = organizationsUrl;
+            this.ReceivedEventsUrl = receivedEventsUrl;
+            this.ReposUrl = reposUrl;
+            this.SiteAdmin = siteAdmin;
+            this.StarredUrl = starredUrl;
+            this.SubscriptionsUrl = subscriptionsUrl;
+            this.Type = type;
+            this.Url = url;
+            this.UserViewType = userViewType;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookIssuesClosedIssueVariant1MilestoneCreator" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookIssuesClosedIssueVariant1MilestoneCreator()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreator? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreator),
-                jsonSerializerContext) as global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreator;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreator? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreator>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreator?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreator),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreator;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreator?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookIssuesClosedIssueVariant1MilestoneCreator?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

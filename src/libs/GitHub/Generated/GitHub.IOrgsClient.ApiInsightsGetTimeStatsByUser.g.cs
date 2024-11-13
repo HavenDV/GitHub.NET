@@ -14,7 +14,7 @@ namespace GitHub
         /// <param name="maxTimestamp"></param>
         /// <param name="timestampIncrement"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ApiInsightsTimeStat>> ApiInsightsGetTimeStatsByUserAsync(
             string org,
             string userId,

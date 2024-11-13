@@ -93,91 +93,66 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="ProtectedBranch" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="url"></param>
+        /// <param name="requiredStatusChecks">
+        /// Status Check Policy
+        /// </param>
+        /// <param name="requiredPullRequestReviews"></param>
+        /// <param name="requiredSignatures"></param>
+        /// <param name="enforceAdmins"></param>
+        /// <param name="requiredLinearHistory"></param>
+        /// <param name="allowForcePushes"></param>
+        /// <param name="allowDeletions"></param>
+        /// <param name="restrictions">
+        /// Branch Restriction Policy
+        /// </param>
+        /// <param name="requiredConversationResolution"></param>
+        /// <param name="blockCreations"></param>
+        /// <param name="lockBranch">
+        /// Whether to set the branch as read-only. If this is true, users will not be able to push to the branch.
+        /// </param>
+        /// <param name="allowForkSyncing">
+        /// Whether users can pull changes from upstream when the branch is locked. Set to `true` to allow fork syncing. Set to `false` to prevent fork syncing.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public ProtectedBranch(
+            string url,
+            global::GitHub.StatusCheckPolicy? requiredStatusChecks,
+            global::GitHub.ProtectedBranchRequiredPullRequestReviews? requiredPullRequestReviews,
+            global::GitHub.ProtectedBranchRequiredSignatures? requiredSignatures,
+            global::GitHub.ProtectedBranchEnforceAdmins? enforceAdmins,
+            global::GitHub.ProtectedBranchRequiredLinearHistory? requiredLinearHistory,
+            global::GitHub.ProtectedBranchAllowForcePushes? allowForcePushes,
+            global::GitHub.ProtectedBranchAllowDeletions? allowDeletions,
+            global::GitHub.BranchRestrictionPolicy? restrictions,
+            global::GitHub.ProtectedBranchRequiredConversationResolution? requiredConversationResolution,
+            global::GitHub.ProtectedBranchBlockCreations? blockCreations,
+            global::GitHub.ProtectedBranchLockBranch? lockBranch,
+            global::GitHub.ProtectedBranchAllowForkSyncing? allowForkSyncing)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.RequiredStatusChecks = requiredStatusChecks;
+            this.RequiredPullRequestReviews = requiredPullRequestReviews;
+            this.RequiredSignatures = requiredSignatures;
+            this.EnforceAdmins = enforceAdmins;
+            this.RequiredLinearHistory = requiredLinearHistory;
+            this.AllowForcePushes = allowForcePushes;
+            this.AllowDeletions = allowDeletions;
+            this.Restrictions = restrictions;
+            this.RequiredConversationResolution = requiredConversationResolution;
+            this.BlockCreations = blockCreations;
+            this.LockBranch = lockBranch;
+            this.AllowForkSyncing = allowForkSyncing;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="ProtectedBranch" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public ProtectedBranch()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.ProtectedBranch? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.ProtectedBranch),
-                jsonSerializerContext) as global::GitHub.ProtectedBranch;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.ProtectedBranch? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.ProtectedBranch>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.ProtectedBranch?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.ProtectedBranch),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.ProtectedBranch;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.ProtectedBranch?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.ProtectedBranch?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

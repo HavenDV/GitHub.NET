@@ -12,6 +12,7 @@ namespace GitHub
         /// Unique identifier of the repository.<br/>
         /// Example: 42
         /// </summary>
+        /// <example>42</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
@@ -20,6 +21,7 @@ namespace GitHub
         /// Whether an accepted assignment has been submitted.<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("submitted")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Submitted { get; set; }
@@ -28,6 +30,7 @@ namespace GitHub
         /// Whether a submission passed.<br/>
         /// Example: true
         /// </summary>
+        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("passing")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Passing { get; set; }
@@ -36,6 +39,7 @@ namespace GitHub
         /// Count of student commits.<br/>
         /// Example: 5
         /// </summary>
+        /// <example>5</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("commit_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int CommitCount { get; set; }
@@ -44,6 +48,7 @@ namespace GitHub
         /// Most recent grade.<br/>
         /// Example: 10/10
         /// </summary>
+        /// <example>10/10</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("grade")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Grade { get; set; }
@@ -75,91 +80,62 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="ClassroomAcceptedAssignment" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// Unique identifier of the repository.<br/>
+        /// Example: 42
+        /// </param>
+        /// <param name="submitted">
+        /// Whether an accepted assignment has been submitted.<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="passing">
+        /// Whether a submission passed.<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="commitCount">
+        /// Count of student commits.<br/>
+        /// Example: 5
+        /// </param>
+        /// <param name="grade">
+        /// Most recent grade.<br/>
+        /// Example: 10/10
+        /// </param>
+        /// <param name="students"></param>
+        /// <param name="repository">
+        /// A GitHub repository view for Classroom
+        /// </param>
+        /// <param name="assignment">
+        /// A GitHub Classroom assignment
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public ClassroomAcceptedAssignment(
+            int id,
+            bool submitted,
+            bool passing,
+            int commitCount,
+            string grade,
+            global::System.Collections.Generic.IList<global::GitHub.SimpleClassroomUser> students,
+            global::GitHub.SimpleClassroomRepository repository,
+            global::GitHub.SimpleClassroomAssignment assignment)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Submitted = submitted;
+            this.Passing = passing;
+            this.CommitCount = commitCount;
+            this.Grade = grade ?? throw new global::System.ArgumentNullException(nameof(grade));
+            this.Students = students ?? throw new global::System.ArgumentNullException(nameof(students));
+            this.Repository = repository ?? throw new global::System.ArgumentNullException(nameof(repository));
+            this.Assignment = assignment ?? throw new global::System.ArgumentNullException(nameof(assignment));
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="ClassroomAcceptedAssignment" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public ClassroomAcceptedAssignment()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.ClassroomAcceptedAssignment? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.ClassroomAcceptedAssignment),
-                jsonSerializerContext) as global::GitHub.ClassroomAcceptedAssignment;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.ClassroomAcceptedAssignment? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.ClassroomAcceptedAssignment>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.ClassroomAcceptedAssignment?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.ClassroomAcceptedAssignment),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.ClassroomAcceptedAssignment;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.ClassroomAcceptedAssignment?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.ClassroomAcceptedAssignment?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

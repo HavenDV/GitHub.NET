@@ -350,91 +350,259 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="AppPermissions" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="actions">
+        /// The level of permission to grant the access token for GitHub Actions workflows, workflow runs, and artifacts.
+        /// </param>
+        /// <param name="administration">
+        /// The level of permission to grant the access token for repository creation, deletion, settings, teams, and collaborators creation.
+        /// </param>
+        /// <param name="checks">
+        /// The level of permission to grant the access token for checks on code.
+        /// </param>
+        /// <param name="codespaces">
+        /// The level of permission to grant the access token to create, edit, delete, and list Codespaces.
+        /// </param>
+        /// <param name="contents">
+        /// The level of permission to grant the access token for repository contents, commits, branches, downloads, releases, and merges.
+        /// </param>
+        /// <param name="dependabotSecrets">
+        /// The leve of permission to grant the access token to manage Dependabot secrets.
+        /// </param>
+        /// <param name="deployments">
+        /// The level of permission to grant the access token for deployments and deployment statuses.
+        /// </param>
+        /// <param name="environments">
+        /// The level of permission to grant the access token for managing repository environments.
+        /// </param>
+        /// <param name="issues">
+        /// The level of permission to grant the access token for issues and related comments, assignees, labels, and milestones.
+        /// </param>
+        /// <param name="metadata">
+        /// The level of permission to grant the access token to search repositories, list collaborators, and access repository metadata.
+        /// </param>
+        /// <param name="packages">
+        /// The level of permission to grant the access token for packages published to GitHub Packages.
+        /// </param>
+        /// <param name="pages">
+        /// The level of permission to grant the access token to retrieve Pages statuses, configuration, and builds, as well as create new builds.
+        /// </param>
+        /// <param name="pullRequests">
+        /// The level of permission to grant the access token for pull requests and related comments, assignees, labels, milestones, and merges.
+        /// </param>
+        /// <param name="repositoryCustomProperties">
+        /// The level of permission to grant the access token to view and edit custom properties for a repository, when allowed by the property.
+        /// </param>
+        /// <param name="repositoryHooks">
+        /// The level of permission to grant the access token to manage the post-receive hooks for a repository.
+        /// </param>
+        /// <param name="repositoryProjects">
+        /// The level of permission to grant the access token to manage repository projects, columns, and cards.
+        /// </param>
+        /// <param name="secretScanningAlerts">
+        /// The level of permission to grant the access token to view and manage secret scanning alerts.
+        /// </param>
+        /// <param name="secrets">
+        /// The level of permission to grant the access token to manage repository secrets.
+        /// </param>
+        /// <param name="securityEvents">
+        /// The level of permission to grant the access token to view and manage security events like code scanning alerts.
+        /// </param>
+        /// <param name="singleFile">
+        /// The level of permission to grant the access token to manage just a single file.
+        /// </param>
+        /// <param name="statuses">
+        /// The level of permission to grant the access token for commit statuses.
+        /// </param>
+        /// <param name="vulnerabilityAlerts">
+        /// The level of permission to grant the access token to manage Dependabot alerts.
+        /// </param>
+        /// <param name="workflows">
+        /// The level of permission to grant the access token to update GitHub Actions workflow files.
+        /// </param>
+        /// <param name="members">
+        /// The level of permission to grant the access token for organization teams and members.
+        /// </param>
+        /// <param name="organizationAdministration">
+        /// The level of permission to grant the access token to manage access to an organization.
+        /// </param>
+        /// <param name="organizationCustomRoles">
+        /// The level of permission to grant the access token for custom repository roles management.
+        /// </param>
+        /// <param name="organizationCustomOrgRoles">
+        /// The level of permission to grant the access token for custom organization roles management.
+        /// </param>
+        /// <param name="organizationCustomProperties">
+        /// The level of permission to grant the access token for custom property management.
+        /// </param>
+        /// <param name="organizationCopilotSeatManagement">
+        /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
+        /// </param>
+        /// <param name="organizationAnnouncementBanners">
+        /// The level of permission to grant the access token to view and manage announcement banners for an organization.
+        /// </param>
+        /// <param name="organizationEvents">
+        /// The level of permission to grant the access token to view events triggered by an activity in an organization.
+        /// </param>
+        /// <param name="organizationHooks">
+        /// The level of permission to grant the access token to manage the post-receive hooks for an organization.
+        /// </param>
+        /// <param name="organizationPersonalAccessTokens">
+        /// The level of permission to grant the access token for viewing and managing fine-grained personal access token requests to an organization.
+        /// </param>
+        /// <param name="organizationPersonalAccessTokenRequests">
+        /// The level of permission to grant the access token for viewing and managing fine-grained personal access tokens that have been approved by an organization.
+        /// </param>
+        /// <param name="organizationPlan">
+        /// The level of permission to grant the access token for viewing an organization's plan.
+        /// </param>
+        /// <param name="organizationProjects">
+        /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
+        /// </param>
+        /// <param name="organizationPackages">
+        /// The level of permission to grant the access token for organization packages published to GitHub Packages.
+        /// </param>
+        /// <param name="organizationSecrets">
+        /// The level of permission to grant the access token to manage organization secrets.
+        /// </param>
+        /// <param name="organizationSelfHostedRunners">
+        /// The level of permission to grant the access token to view and manage GitHub Actions self-hosted runners available to an organization.
+        /// </param>
+        /// <param name="organizationUserBlocking">
+        /// The level of permission to grant the access token to view and manage users blocked by the organization.
+        /// </param>
+        /// <param name="teamDiscussions">
+        /// The level of permission to grant the access token to manage team discussions and related comments.
+        /// </param>
+        /// <param name="emailAddresses">
+        /// The level of permission to grant the access token to manage the email addresses belonging to a user.
+        /// </param>
+        /// <param name="followers">
+        /// The level of permission to grant the access token to manage the followers belonging to a user.
+        /// </param>
+        /// <param name="gitSshKeys">
+        /// The level of permission to grant the access token to manage git SSH keys.
+        /// </param>
+        /// <param name="gpgKeys">
+        /// The level of permission to grant the access token to view and manage GPG keys belonging to a user.
+        /// </param>
+        /// <param name="interactionLimits">
+        /// The level of permission to grant the access token to view and manage interaction limits on a repository.
+        /// </param>
+        /// <param name="profile">
+        /// The level of permission to grant the access token to manage the profile settings belonging to a user.
+        /// </param>
+        /// <param name="starring">
+        /// The level of permission to grant the access token to list and manage repositories a user is starring.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public AppPermissions(
+            global::GitHub.AppPermissionsActions? actions,
+            global::GitHub.AppPermissionsAdministration? administration,
+            global::GitHub.AppPermissionsChecks? checks,
+            global::GitHub.AppPermissionsCodespaces? codespaces,
+            global::GitHub.AppPermissionsContents? contents,
+            global::GitHub.AppPermissionsDependabotSecrets? dependabotSecrets,
+            global::GitHub.AppPermissionsDeployments? deployments,
+            global::GitHub.AppPermissionsEnvironments? environments,
+            global::GitHub.AppPermissionsIssues? issues,
+            global::GitHub.AppPermissionsMetadata? metadata,
+            global::GitHub.AppPermissionsPackages? packages,
+            global::GitHub.AppPermissionsPages? pages,
+            global::GitHub.AppPermissionsPullRequests? pullRequests,
+            global::GitHub.AppPermissionsRepositoryCustomProperties? repositoryCustomProperties,
+            global::GitHub.AppPermissionsRepositoryHooks? repositoryHooks,
+            global::GitHub.AppPermissionsRepositoryProjects? repositoryProjects,
+            global::GitHub.AppPermissionsSecretScanningAlerts? secretScanningAlerts,
+            global::GitHub.AppPermissionsSecrets? secrets,
+            global::GitHub.AppPermissionsSecurityEvents? securityEvents,
+            global::GitHub.AppPermissionsSingleFile? singleFile,
+            global::GitHub.AppPermissionsStatuses? statuses,
+            global::GitHub.AppPermissionsVulnerabilityAlerts? vulnerabilityAlerts,
+            global::GitHub.AppPermissionsWorkflows? workflows,
+            global::GitHub.AppPermissionsMembers? members,
+            global::GitHub.AppPermissionsOrganizationAdministration? organizationAdministration,
+            global::GitHub.AppPermissionsOrganizationCustomRoles? organizationCustomRoles,
+            global::GitHub.AppPermissionsOrganizationCustomOrgRoles? organizationCustomOrgRoles,
+            global::GitHub.AppPermissionsOrganizationCustomProperties? organizationCustomProperties,
+            global::GitHub.AppPermissionsOrganizationCopilotSeatManagement? organizationCopilotSeatManagement,
+            global::GitHub.AppPermissionsOrganizationAnnouncementBanners? organizationAnnouncementBanners,
+            global::GitHub.AppPermissionsOrganizationEvents? organizationEvents,
+            global::GitHub.AppPermissionsOrganizationHooks? organizationHooks,
+            global::GitHub.AppPermissionsOrganizationPersonalAccessTokens? organizationPersonalAccessTokens,
+            global::GitHub.AppPermissionsOrganizationPersonalAccessTokenRequests? organizationPersonalAccessTokenRequests,
+            global::GitHub.AppPermissionsOrganizationPlan? organizationPlan,
+            global::GitHub.AppPermissionsOrganizationProjects? organizationProjects,
+            global::GitHub.AppPermissionsOrganizationPackages? organizationPackages,
+            global::GitHub.AppPermissionsOrganizationSecrets? organizationSecrets,
+            global::GitHub.AppPermissionsOrganizationSelfHostedRunners? organizationSelfHostedRunners,
+            global::GitHub.AppPermissionsOrganizationUserBlocking? organizationUserBlocking,
+            global::GitHub.AppPermissionsTeamDiscussions? teamDiscussions,
+            global::GitHub.AppPermissionsEmailAddresses? emailAddresses,
+            global::GitHub.AppPermissionsFollowers? followers,
+            global::GitHub.AppPermissionsGitSshKeys? gitSshKeys,
+            global::GitHub.AppPermissionsGpgKeys? gpgKeys,
+            global::GitHub.AppPermissionsInteractionLimits? interactionLimits,
+            global::GitHub.AppPermissionsProfile? profile,
+            global::GitHub.AppPermissionsStarring? starring)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Actions = actions;
+            this.Administration = administration;
+            this.Checks = checks;
+            this.Codespaces = codespaces;
+            this.Contents = contents;
+            this.DependabotSecrets = dependabotSecrets;
+            this.Deployments = deployments;
+            this.Environments = environments;
+            this.Issues = issues;
+            this.Metadata = metadata;
+            this.Packages = packages;
+            this.Pages = pages;
+            this.PullRequests = pullRequests;
+            this.RepositoryCustomProperties = repositoryCustomProperties;
+            this.RepositoryHooks = repositoryHooks;
+            this.RepositoryProjects = repositoryProjects;
+            this.SecretScanningAlerts = secretScanningAlerts;
+            this.Secrets = secrets;
+            this.SecurityEvents = securityEvents;
+            this.SingleFile = singleFile;
+            this.Statuses = statuses;
+            this.VulnerabilityAlerts = vulnerabilityAlerts;
+            this.Workflows = workflows;
+            this.Members = members;
+            this.OrganizationAdministration = organizationAdministration;
+            this.OrganizationCustomRoles = organizationCustomRoles;
+            this.OrganizationCustomOrgRoles = organizationCustomOrgRoles;
+            this.OrganizationCustomProperties = organizationCustomProperties;
+            this.OrganizationCopilotSeatManagement = organizationCopilotSeatManagement;
+            this.OrganizationAnnouncementBanners = organizationAnnouncementBanners;
+            this.OrganizationEvents = organizationEvents;
+            this.OrganizationHooks = organizationHooks;
+            this.OrganizationPersonalAccessTokens = organizationPersonalAccessTokens;
+            this.OrganizationPersonalAccessTokenRequests = organizationPersonalAccessTokenRequests;
+            this.OrganizationPlan = organizationPlan;
+            this.OrganizationProjects = organizationProjects;
+            this.OrganizationPackages = organizationPackages;
+            this.OrganizationSecrets = organizationSecrets;
+            this.OrganizationSelfHostedRunners = organizationSelfHostedRunners;
+            this.OrganizationUserBlocking = organizationUserBlocking;
+            this.TeamDiscussions = teamDiscussions;
+            this.EmailAddresses = emailAddresses;
+            this.Followers = followers;
+            this.GitSshKeys = gitSshKeys;
+            this.GpgKeys = gpgKeys;
+            this.InteractionLimits = interactionLimits;
+            this.Profile = profile;
+            this.Starring = starring;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="AppPermissions" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public AppPermissions()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.AppPermissions? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.AppPermissions),
-                jsonSerializerContext) as global::GitHub.AppPermissions;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.AppPermissions? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.AppPermissions>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.AppPermissions?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.AppPermissions),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.AppPermissions;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.AppPermissions?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.AppPermissions?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

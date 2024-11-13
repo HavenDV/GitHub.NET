@@ -101,91 +101,80 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CodeScanningVariantAnalysis" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// The ID of the variant analysis.
+        /// </param>
+        /// <param name="controllerRepo">
+        /// A GitHub repository.
+        /// </param>
+        /// <param name="actor">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="queryLanguage">
+        /// The language targeted by the CodeQL query
+        /// </param>
+        /// <param name="queryPackUrl">
+        /// The download url for the query pack.
+        /// </param>
+        /// <param name="createdAt">
+        /// The date and time at which the variant analysis was created, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+        /// </param>
+        /// <param name="updatedAt">
+        /// The date and time at which the variant analysis was last updated, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ.
+        /// </param>
+        /// <param name="completedAt">
+        /// The date and time at which the variant analysis was completed, in ISO 8601 format':' YYYY-MM-DDTHH:MM:SSZ. Will be null if the variant analysis has not yet completed or this information is not available.
+        /// </param>
+        /// <param name="status"></param>
+        /// <param name="actionsWorkflowRunId">
+        /// The GitHub Actions workflow run used to execute this variant analysis. This is only available if the workflow run has started.
+        /// </param>
+        /// <param name="failureReason">
+        /// The reason for a failure of the variant analysis. This is only available if the variant analysis has failed.
+        /// </param>
+        /// <param name="scannedRepositories"></param>
+        /// <param name="skippedRepositories">
+        /// Information about repositories that were skipped from processing. This information is only available to the user that initiated the variant analysis.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CodeScanningVariantAnalysis(
+            int id,
+            global::GitHub.SimpleRepository controllerRepo,
+            global::GitHub.SimpleUser actor,
+            global::GitHub.CodeScanningVariantAnalysisLanguage queryLanguage,
+            string queryPackUrl,
+            global::GitHub.CodeScanningVariantAnalysisStatus2 status,
+            global::System.DateTime? createdAt,
+            global::System.DateTime? updatedAt,
+            global::System.DateTime? completedAt,
+            int? actionsWorkflowRunId,
+            global::GitHub.CodeScanningVariantAnalysisFailureReason? failureReason,
+            global::System.Collections.Generic.IList<global::GitHub.CodeScanningVariantAnalysisScannedRepositorie>? scannedRepositories,
+            global::GitHub.CodeScanningVariantAnalysisSkippedRepositories? skippedRepositories)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.ControllerRepo = controllerRepo ?? throw new global::System.ArgumentNullException(nameof(controllerRepo));
+            this.Actor = actor ?? throw new global::System.ArgumentNullException(nameof(actor));
+            this.QueryLanguage = queryLanguage;
+            this.QueryPackUrl = queryPackUrl ?? throw new global::System.ArgumentNullException(nameof(queryPackUrl));
+            this.Status = status;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.CompletedAt = completedAt;
+            this.ActionsWorkflowRunId = actionsWorkflowRunId;
+            this.FailureReason = failureReason;
+            this.ScannedRepositories = scannedRepositories;
+            this.SkippedRepositories = skippedRepositories;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CodeScanningVariantAnalysis" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CodeScanningVariantAnalysis()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CodeScanningVariantAnalysis? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CodeScanningVariantAnalysis),
-                jsonSerializerContext) as global::GitHub.CodeScanningVariantAnalysis;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CodeScanningVariantAnalysis? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CodeScanningVariantAnalysis>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CodeScanningVariantAnalysis?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CodeScanningVariantAnalysis),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CodeScanningVariantAnalysis;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CodeScanningVariantAnalysis?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CodeScanningVariantAnalysis?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

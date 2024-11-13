@@ -113,91 +113,89 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="PersonalAccessTokenRequest" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// Unique identifier of the request for access via fine-grained personal access token. Used as the `pat_request_id` parameter in the list and review API calls.
+        /// </param>
+        /// <param name="owner">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="permissionsAdded">
+        /// New requested permissions, categorized by type of permission.
+        /// </param>
+        /// <param name="permissionsUpgraded">
+        /// Requested permissions that elevate access for a previously approved request for access, categorized by type of permission.
+        /// </param>
+        /// <param name="permissionsResult">
+        /// Permissions requested, categorized by type of permission. This field incorporates `permissions_added` and `permissions_upgraded`.
+        /// </param>
+        /// <param name="repositorySelection">
+        /// Type of repository selection requested.
+        /// </param>
+        /// <param name="repositoryCount">
+        /// The number of repositories the token is requesting access to. This field is only populated when `repository_selection` is `subset`.
+        /// </param>
+        /// <param name="repositories">
+        /// An array of repository objects the token is requesting access to. This field is only populated when `repository_selection` is `subset`.
+        /// </param>
+        /// <param name="createdAt">
+        /// Date and time when the request for access was created.
+        /// </param>
+        /// <param name="tokenId">
+        /// Unique identifier of the user's token. This field can also be found in audit log events and the organization's settings for their PAT grants.
+        /// </param>
+        /// <param name="tokenName">
+        /// The name given to the user's token. This field can also be found in an organization's settings page for Active Tokens.
+        /// </param>
+        /// <param name="tokenExpired">
+        /// Whether the associated fine-grained personal access token has expired.
+        /// </param>
+        /// <param name="tokenExpiresAt">
+        /// Date and time when the associated fine-grained personal access token expires.
+        /// </param>
+        /// <param name="tokenLastUsedAt">
+        /// Date and time when the associated fine-grained personal access token was last used for authentication.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public PersonalAccessTokenRequest(
+            int id,
+            global::GitHub.SimpleUser owner,
+            global::GitHub.PersonalAccessTokenRequestPermissionsAdded permissionsAdded,
+            global::GitHub.PersonalAccessTokenRequestPermissionsUpgraded permissionsUpgraded,
+            global::GitHub.PersonalAccessTokenRequestPermissionsResult permissionsResult,
+            global::GitHub.PersonalAccessTokenRequestRepositorySelection repositorySelection,
+            int? repositoryCount,
+            global::System.Collections.Generic.IList<global::GitHub.PersonalAccessTokenRequestRepositorie>? repositories,
+            string createdAt,
+            int tokenId,
+            string tokenName,
+            bool tokenExpired,
+            string? tokenExpiresAt,
+            string? tokenLastUsedAt)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
+            this.PermissionsAdded = permissionsAdded ?? throw new global::System.ArgumentNullException(nameof(permissionsAdded));
+            this.PermissionsUpgraded = permissionsUpgraded ?? throw new global::System.ArgumentNullException(nameof(permissionsUpgraded));
+            this.PermissionsResult = permissionsResult ?? throw new global::System.ArgumentNullException(nameof(permissionsResult));
+            this.RepositorySelection = repositorySelection;
+            this.RepositoryCount = repositoryCount;
+            this.Repositories = repositories ?? throw new global::System.ArgumentNullException(nameof(repositories));
+            this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
+            this.TokenId = tokenId;
+            this.TokenName = tokenName ?? throw new global::System.ArgumentNullException(nameof(tokenName));
+            this.TokenExpired = tokenExpired;
+            this.TokenExpiresAt = tokenExpiresAt ?? throw new global::System.ArgumentNullException(nameof(tokenExpiresAt));
+            this.TokenLastUsedAt = tokenLastUsedAt ?? throw new global::System.ArgumentNullException(nameof(tokenLastUsedAt));
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="PersonalAccessTokenRequest" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public PersonalAccessTokenRequest()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.PersonalAccessTokenRequest? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.PersonalAccessTokenRequest),
-                jsonSerializerContext) as global::GitHub.PersonalAccessTokenRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.PersonalAccessTokenRequest? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.PersonalAccessTokenRequest>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.PersonalAccessTokenRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.PersonalAccessTokenRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.PersonalAccessTokenRequest;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.PersonalAccessTokenRequest?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.PersonalAccessTokenRequest?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

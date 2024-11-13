@@ -11,6 +11,7 @@ namespace GitHub
         /// <summary>
         /// Example: 5
         /// </summary>
+        /// <example>5</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
@@ -18,6 +19,7 @@ namespace GitHub
         /// <summary>
         /// Example: MDEwOkNoZWNrU3VpdGU1
         /// </summary>
+        /// <example>MDEwOkNoZWNrU3VpdGU1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string NodeId { get; set; }
@@ -26,6 +28,7 @@ namespace GitHub
         /// The name of the artifact.<br/>
         /// Example: AdventureWorks.Framework
         /// </summary>
+        /// <example>AdventureWorks.Framework</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -34,6 +37,7 @@ namespace GitHub
         /// The size in bytes of the artifact.<br/>
         /// Example: 12345
         /// </summary>
+        /// <example>12345</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("size_in_bytes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int SizeInBytes { get; set; }
@@ -41,6 +45,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/repos/github/hello-world/actions/artifacts/5
         /// </summary>
+        /// <example>https://api.github.com/repos/github/hello-world/actions/artifacts/5</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -48,6 +53,7 @@ namespace GitHub
         /// <summary>
         /// Example: https://api.github.com/repos/github/hello-world/actions/artifacts/5/zip
         /// </summary>
+        /// <example>https://api.github.com/repos/github/hello-world/actions/artifacts/5/zip</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("archive_download_url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ArchiveDownloadUrl { get; set; }
@@ -92,91 +98,68 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="Artifact" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="id">
+        /// Example: 5
+        /// </param>
+        /// <param name="nodeId">
+        /// Example: MDEwOkNoZWNrU3VpdGU1
+        /// </param>
+        /// <param name="name">
+        /// The name of the artifact.<br/>
+        /// Example: AdventureWorks.Framework
+        /// </param>
+        /// <param name="sizeInBytes">
+        /// The size in bytes of the artifact.<br/>
+        /// Example: 12345
+        /// </param>
+        /// <param name="url">
+        /// Example: https://api.github.com/repos/github/hello-world/actions/artifacts/5
+        /// </param>
+        /// <param name="archiveDownloadUrl">
+        /// Example: https://api.github.com/repos/github/hello-world/actions/artifacts/5/zip
+        /// </param>
+        /// <param name="expired">
+        /// Whether or not the artifact has expired.
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="expiresAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="workflowRun"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public Artifact(
+            int id,
+            string nodeId,
+            string name,
+            int sizeInBytes,
+            string url,
+            string archiveDownloadUrl,
+            bool expired,
+            global::System.DateTime? createdAt,
+            global::System.DateTime? expiresAt,
+            global::System.DateTime? updatedAt,
+            global::GitHub.ArtifactWorkflowRun? workflowRun)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Id = id;
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.SizeInBytes = sizeInBytes;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.ArchiveDownloadUrl = archiveDownloadUrl ?? throw new global::System.ArgumentNullException(nameof(archiveDownloadUrl));
+            this.Expired = expired;
+            this.CreatedAt = createdAt;
+            this.ExpiresAt = expiresAt;
+            this.UpdatedAt = updatedAt;
+            this.WorkflowRun = workflowRun;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="Artifact" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public Artifact()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.Artifact? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.Artifact),
-                jsonSerializerContext) as global::GitHub.Artifact;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.Artifact? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.Artifact>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.Artifact?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.Artifact),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.Artifact;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.Artifact?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.Artifact?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

@@ -13,8 +13,8 @@ namespace GitHub
         /// <param name="patRequestId"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsReviewPatGrantRequestAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task OrgsReviewPatGrantRequestAsync(
             string org,
             int patRequestId,
             global::GitHub.OrgsReviewPatGrantRequestRequest request,
@@ -35,7 +35,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> OrgsReviewPatGrantRequestAsync(
+        global::System.Threading.Tasks.Task OrgsReviewPatGrantRequestAsync(
             string org,
             int patRequestId,
             global::GitHub.OrgsReviewPatGrantRequestRequestAction action,

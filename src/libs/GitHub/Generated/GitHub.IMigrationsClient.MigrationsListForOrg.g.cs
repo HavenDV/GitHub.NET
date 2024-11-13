@@ -18,7 +18,7 @@ namespace GitHub
         /// </param>
         /// <param name="exclude"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.Migration>> MigrationsListForOrgAsync(
             string org,
             int? perPage = default,

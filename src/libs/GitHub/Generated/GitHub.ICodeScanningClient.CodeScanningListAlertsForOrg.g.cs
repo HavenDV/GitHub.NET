@@ -38,7 +38,7 @@ namespace GitHub
         /// Severity of a code scanning alert.
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CodeScanningOrganizationAlertItems>> CodeScanningListAlertsForOrgAsync(
             string org,
             string? toolName = default,

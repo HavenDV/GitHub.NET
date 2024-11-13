@@ -22,11 +22,6 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessTeamsAddOrUpdateProjectPermissionsInOrgResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
         /// Add or update team project permissions<br/>
         /// Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.<br/>
@@ -38,8 +33,8 @@ namespace GitHub
         /// <param name="projectId"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.TeamsAddOrUpdateProjectPermissionsInOrgResponse> TeamsAddOrUpdateProjectPermissionsInOrgAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task TeamsAddOrUpdateProjectPermissionsInOrgAsync(
             string org,
             string teamSlug,
             int projectId,
@@ -93,30 +88,23 @@ namespace GitHub
             ProcessTeamsAddOrUpdateProjectPermissionsInOrgResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
-
-            var __content = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-
-            ProcessResponseContent(
-                client: HttpClient,
-                response: __response,
-                content: ref __content);
-            ProcessTeamsAddOrUpdateProjectPermissionsInOrgResponseContent(
-                httpClient: HttpClient,
-                httpResponseMessage: __response,
-                content: ref __content);
-
             try
             {
                 __response.EnsureSuccessStatusCode();
             }
             catch (global::System.Net.Http.HttpRequestException __ex)
             {
-                throw new global::System.InvalidOperationException(__content, __ex);
+                throw new global::GitHub.ApiException(
+                    message: __response.ReasonPhrase ?? string.Empty,
+                    innerException: __ex,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
             }
-
-            return
-                global::GitHub.TeamsAddOrUpdateProjectPermissionsInOrgResponse.FromJson(__content, JsonSerializerContext) ??
-                throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
         }
 
         /// <summary>
@@ -133,7 +121,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.TeamsAddOrUpdateProjectPermissionsInOrgResponse> TeamsAddOrUpdateProjectPermissionsInOrgAsync(
+        public async global::System.Threading.Tasks.Task TeamsAddOrUpdateProjectPermissionsInOrgAsync(
             string org,
             string teamSlug,
             int projectId,
@@ -145,7 +133,7 @@ namespace GitHub
                 Permission = permission,
             };
 
-            return await TeamsAddOrUpdateProjectPermissionsInOrgAsync(
+            await TeamsAddOrUpdateProjectPermissionsInOrgAsync(
                 org: org,
                 teamSlug: teamSlug,
                 projectId: projectId,

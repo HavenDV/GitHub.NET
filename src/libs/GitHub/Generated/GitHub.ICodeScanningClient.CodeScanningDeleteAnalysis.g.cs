@@ -63,7 +63,7 @@ namespace GitHub
         /// <param name="analysisId"></param>
         /// <param name="confirmDelete"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.CodeScanningAnalysisDeletion> CodeScanningDeleteAnalysisAsync(
             string owner,
             string repo,

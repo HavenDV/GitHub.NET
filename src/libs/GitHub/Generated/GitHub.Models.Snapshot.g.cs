@@ -26,6 +26,7 @@ namespace GitHub
         /// The commit SHA associated with this dependency snapshot. Maximum length: 40 characters.<br/>
         /// Example: ddc951f4b1293222421f2c8df679786153acf689
         /// </summary>
+        /// <example>ddc951f4b1293222421f2c8df679786153acf689</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("sha")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Sha { get; set; }
@@ -34,6 +35,7 @@ namespace GitHub
         /// The repository branch that triggered this snapshot.<br/>
         /// Example: refs/heads/main
         /// </summary>
+        /// <example>refs/heads/main</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("ref")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Ref { get; set; }
@@ -70,91 +72,59 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="Snapshot" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="version">
+        /// The version of the repository snapshot submission.
+        /// </param>
+        /// <param name="job"></param>
+        /// <param name="sha">
+        /// The commit SHA associated with this dependency snapshot. Maximum length: 40 characters.<br/>
+        /// Example: ddc951f4b1293222421f2c8df679786153acf689
+        /// </param>
+        /// <param name="ref">
+        /// The repository branch that triggered this snapshot.<br/>
+        /// Example: refs/heads/main
+        /// </param>
+        /// <param name="detector">
+        /// A description of the detector used.
+        /// </param>
+        /// <param name="metadata">
+        /// User-defined metadata to store domain-specific information limited to 8 keys with scalar values.
+        /// </param>
+        /// <param name="manifests">
+        /// A collection of package manifests, which are a collection of related dependencies declared in a file or representing a logical group of dependencies.
+        /// </param>
+        /// <param name="scanned">
+        /// The time at which the snapshot was scanned.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public Snapshot(
+            int version,
+            global::GitHub.SnapshotJob job,
+            string sha,
+            string @ref,
+            global::GitHub.SnapshotDetector detector,
+            global::System.DateTime scanned,
+            object? metadata,
+            global::System.Collections.Generic.Dictionary<string, global::GitHub.Manifest>? manifests)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Version = version;
+            this.Job = job ?? throw new global::System.ArgumentNullException(nameof(job));
+            this.Sha = sha ?? throw new global::System.ArgumentNullException(nameof(sha));
+            this.Ref = @ref ?? throw new global::System.ArgumentNullException(nameof(@ref));
+            this.Detector = detector ?? throw new global::System.ArgumentNullException(nameof(detector));
+            this.Scanned = scanned;
+            this.Metadata = metadata;
+            this.Manifests = manifests;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="Snapshot" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public Snapshot()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.Snapshot? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.Snapshot),
-                jsonSerializerContext) as global::GitHub.Snapshot;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.Snapshot? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.Snapshot>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.Snapshot?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.Snapshot),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.Snapshot;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.Snapshot?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.Snapshot?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

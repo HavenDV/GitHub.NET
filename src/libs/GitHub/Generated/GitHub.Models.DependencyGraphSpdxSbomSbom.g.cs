@@ -12,6 +12,7 @@ namespace GitHub
         /// The SPDX identifier for the SPDX document.<br/>
         /// Example: SPDXRef-DOCUMENT
         /// </summary>
+        /// <example>SPDXRef-DOCUMENT</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("SPDXID")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SPDXID { get; set; }
@@ -20,6 +21,7 @@ namespace GitHub
         /// The version of the SPDX specification that this document conforms to.<br/>
         /// Example: SPDX-2.3
         /// </summary>
+        /// <example>SPDX-2.3</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("spdxVersion")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SpdxVersion { get; set; }
@@ -28,6 +30,7 @@ namespace GitHub
         /// An optional comment about the SPDX document.<br/>
         /// Example: Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/
         /// </summary>
+        /// <example>Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("comment")]
         public string? Comment { get; set; }
 
@@ -42,6 +45,7 @@ namespace GitHub
         /// The name of the SPDX document.<br/>
         /// Example: github/github
         /// </summary>
+        /// <example>github/github</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -50,6 +54,7 @@ namespace GitHub
         /// The license under which the SPDX document is licensed.<br/>
         /// Example: CC0-1.0
         /// </summary>
+        /// <example>CC0-1.0</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("dataLicense")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DataLicense { get; set; }
@@ -58,6 +63,7 @@ namespace GitHub
         /// The namespace for the SPDX document.<br/>
         /// Example: https://spdx.org/spdxdocs/protobom/15e41dd2-f961-4f4d-b8dc-f8f57ad70d57
         /// </summary>
+        /// <example>https://spdx.org/spdxdocs/protobom/15e41dd2-f961-4f4d-b8dc-f8f57ad70d57</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("documentNamespace")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DocumentNamespace { get; set; }
@@ -81,91 +87,64 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="DependencyGraphSpdxSbomSbom" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="sPDXID">
+        /// The SPDX identifier for the SPDX document.<br/>
+        /// Example: SPDXRef-DOCUMENT
+        /// </param>
+        /// <param name="spdxVersion">
+        /// The version of the SPDX specification that this document conforms to.<br/>
+        /// Example: SPDX-2.3
+        /// </param>
+        /// <param name="comment">
+        /// An optional comment about the SPDX document.<br/>
+        /// Example: Exact versions could not be resolved for some packages. For more information: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/
+        /// </param>
+        /// <param name="creationInfo"></param>
+        /// <param name="name">
+        /// The name of the SPDX document.<br/>
+        /// Example: github/github
+        /// </param>
+        /// <param name="dataLicense">
+        /// The license under which the SPDX document is licensed.<br/>
+        /// Example: CC0-1.0
+        /// </param>
+        /// <param name="documentNamespace">
+        /// The namespace for the SPDX document.<br/>
+        /// Example: https://spdx.org/spdxdocs/protobom/15e41dd2-f961-4f4d-b8dc-f8f57ad70d57
+        /// </param>
+        /// <param name="packages"></param>
+        /// <param name="relationships"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public DependencyGraphSpdxSbomSbom(
+            string sPDXID,
+            string spdxVersion,
+            global::GitHub.DependencyGraphSpdxSbomSbomCreationInfo creationInfo,
+            string name,
+            string dataLicense,
+            string documentNamespace,
+            global::System.Collections.Generic.IList<global::GitHub.DependencyGraphSpdxSbomSbomPackage> packages,
+            string? comment,
+            global::System.Collections.Generic.IList<global::GitHub.DependencyGraphSpdxSbomSbomRelationship>? relationships)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.SPDXID = sPDXID ?? throw new global::System.ArgumentNullException(nameof(sPDXID));
+            this.SpdxVersion = spdxVersion ?? throw new global::System.ArgumentNullException(nameof(spdxVersion));
+            this.CreationInfo = creationInfo ?? throw new global::System.ArgumentNullException(nameof(creationInfo));
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.DataLicense = dataLicense ?? throw new global::System.ArgumentNullException(nameof(dataLicense));
+            this.DocumentNamespace = documentNamespace ?? throw new global::System.ArgumentNullException(nameof(documentNamespace));
+            this.Packages = packages ?? throw new global::System.ArgumentNullException(nameof(packages));
+            this.Comment = comment;
+            this.Relationships = relationships;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="DependencyGraphSpdxSbomSbom" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public DependencyGraphSpdxSbomSbom()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.DependencyGraphSpdxSbomSbom? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.DependencyGraphSpdxSbomSbom),
-                jsonSerializerContext) as global::GitHub.DependencyGraphSpdxSbomSbom;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.DependencyGraphSpdxSbomSbom? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.DependencyGraphSpdxSbomSbom>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.DependencyGraphSpdxSbomSbom?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.DependencyGraphSpdxSbomSbom),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.DependencyGraphSpdxSbomSbom;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.DependencyGraphSpdxSbomSbom?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.DependencyGraphSpdxSbomSbom?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

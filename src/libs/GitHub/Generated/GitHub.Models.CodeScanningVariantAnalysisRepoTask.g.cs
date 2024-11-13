@@ -65,91 +65,59 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="CodeScanningVariantAnalysisRepoTask" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="repository">
+        /// A GitHub repository.
+        /// </param>
+        /// <param name="analysisStatus">
+        /// The new status of the CodeQL variant analysis repository task.
+        /// </param>
+        /// <param name="artifactSizeInBytes">
+        /// The size of the artifact. This is only available for successful analyses.
+        /// </param>
+        /// <param name="resultCount">
+        /// The number of results in the case of a successful analysis. This is only available for successful analyses.
+        /// </param>
+        /// <param name="failureMessage">
+        /// The reason of the failure of this repo task. This is only available if the repository task has failed.
+        /// </param>
+        /// <param name="databaseCommitSha">
+        /// The SHA of the commit the CodeQL database was built against. This is only available for successful analyses.
+        /// </param>
+        /// <param name="sourceLocationPrefix">
+        /// The source location prefix to use. This is only available for successful analyses.
+        /// </param>
+        /// <param name="artifactUrl">
+        /// The URL of the artifact. This is only available for successful analyses.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public CodeScanningVariantAnalysisRepoTask(
+            global::GitHub.SimpleRepository repository,
+            global::GitHub.CodeScanningVariantAnalysisStatus analysisStatus,
+            int? artifactSizeInBytes,
+            int? resultCount,
+            string? failureMessage,
+            string? databaseCommitSha,
+            string? sourceLocationPrefix,
+            string? artifactUrl)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Repository = repository ?? throw new global::System.ArgumentNullException(nameof(repository));
+            this.AnalysisStatus = analysisStatus;
+            this.ArtifactSizeInBytes = artifactSizeInBytes;
+            this.ResultCount = resultCount;
+            this.FailureMessage = failureMessage;
+            this.DatabaseCommitSha = databaseCommitSha;
+            this.SourceLocationPrefix = sourceLocationPrefix;
+            this.ArtifactUrl = artifactUrl;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="CodeScanningVariantAnalysisRepoTask" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public CodeScanningVariantAnalysisRepoTask()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.CodeScanningVariantAnalysisRepoTask? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.CodeScanningVariantAnalysisRepoTask),
-                jsonSerializerContext) as global::GitHub.CodeScanningVariantAnalysisRepoTask;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.CodeScanningVariantAnalysisRepoTask? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.CodeScanningVariantAnalysisRepoTask>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.CodeScanningVariantAnalysisRepoTask?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.CodeScanningVariantAnalysisRepoTask),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.CodeScanningVariantAnalysisRepoTask;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.CodeScanningVariantAnalysisRepoTask?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.CodeScanningVariantAnalysisRepoTask?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

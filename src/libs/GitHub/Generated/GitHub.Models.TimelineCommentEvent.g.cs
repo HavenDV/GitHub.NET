@@ -26,6 +26,7 @@ namespace GitHub
         /// Unique identifier of the issue comment<br/>
         /// Example: 42
         /// </summary>
+        /// <example>42</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
@@ -41,6 +42,7 @@ namespace GitHub
         /// URL for the issue comment<br/>
         /// Example: https://api.github.com/repositories/42/issues/comments/1
         /// </summary>
+        /// <example>https://api.github.com/repositories/42/issues/comments/1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -49,6 +51,7 @@ namespace GitHub
         /// Contents of the issue comment<br/>
         /// Example: What version of Safari were you using when you observed this bug?
         /// </summary>
+        /// <example>What version of Safari were you using when you observed this bug?</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("body")]
         public string? Body { get; set; }
 
@@ -103,6 +106,7 @@ namespace GitHub
         /// How the author is associated with the repository.<br/>
         /// Example: OWNER
         /// </summary>
+        /// <example>OWNER</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("author_association")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AuthorAssociationJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -126,91 +130,85 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="TimelineCommentEvent" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="event"></param>
+        /// <param name="actor">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="id">
+        /// Unique identifier of the issue comment<br/>
+        /// Example: 42
+        /// </param>
+        /// <param name="nodeId"></param>
+        /// <param name="url">
+        /// URL for the issue comment<br/>
+        /// Example: https://api.github.com/repositories/42/issues/comments/1
+        /// </param>
+        /// <param name="body">
+        /// Contents of the issue comment<br/>
+        /// Example: What version of Safari were you using when you observed this bug?
+        /// </param>
+        /// <param name="bodyText"></param>
+        /// <param name="bodyHtml"></param>
+        /// <param name="htmlUrl"></param>
+        /// <param name="user">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="issueUrl"></param>
+        /// <param name="authorAssociation">
+        /// How the author is associated with the repository.<br/>
+        /// Example: OWNER
+        /// </param>
+        /// <param name="performedViaGithubApp">
+        /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
+        /// </param>
+        /// <param name="reactions"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public TimelineCommentEvent(
+            string @event,
+            global::GitHub.SimpleUser actor,
+            int id,
+            string nodeId,
+            string url,
+            string htmlUrl,
+            global::GitHub.SimpleUser user,
+            global::System.DateTime createdAt,
+            global::System.DateTime updatedAt,
+            string issueUrl,
+            global::GitHub.AuthorAssociation authorAssociation,
+            string? body,
+            string? bodyText,
+            string? bodyHtml,
+            global::GitHub.NullableIntegration? performedViaGithubApp,
+            global::GitHub.ReactionRollup? reactions)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Event = @event ?? throw new global::System.ArgumentNullException(nameof(@event));
+            this.Actor = actor ?? throw new global::System.ArgumentNullException(nameof(actor));
+            this.Id = id;
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
+            this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
+            this.IssueUrl = issueUrl ?? throw new global::System.ArgumentNullException(nameof(issueUrl));
+            this.AuthorAssociation = authorAssociation;
+            this.Body = body;
+            this.BodyText = bodyText;
+            this.BodyHtml = bodyHtml;
+            this.PerformedViaGithubApp = performedViaGithubApp;
+            this.Reactions = reactions;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="TimelineCommentEvent" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public TimelineCommentEvent()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.TimelineCommentEvent? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.TimelineCommentEvent),
-                jsonSerializerContext) as global::GitHub.TimelineCommentEvent;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.TimelineCommentEvent? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.TimelineCommentEvent>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.TimelineCommentEvent?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.TimelineCommentEvent),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.TimelineCommentEvent;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.TimelineCommentEvent?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.TimelineCommentEvent?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

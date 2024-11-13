@@ -17,7 +17,7 @@ namespace GitHub
         /// Included only in responses
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
+        /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.SecretScanningAlert> SecretScanningGetAlertAsync(
             string owner,
             string repo,

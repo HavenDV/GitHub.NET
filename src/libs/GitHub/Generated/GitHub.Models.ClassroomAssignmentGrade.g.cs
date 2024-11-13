@@ -90,91 +90,74 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="ClassroomAssignmentGrade" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="assignmentName">
+        /// Name of the assignment
+        /// </param>
+        /// <param name="assignmentUrl">
+        /// URL of the assignment
+        /// </param>
+        /// <param name="starterCodeUrl">
+        /// URL of the starter code for the assignment
+        /// </param>
+        /// <param name="githubUsername">
+        /// GitHub username of the student
+        /// </param>
+        /// <param name="rosterIdentifier">
+        /// Roster identifier of the student
+        /// </param>
+        /// <param name="studentRepositoryName">
+        /// Name of the student's assignment repository
+        /// </param>
+        /// <param name="studentRepositoryUrl">
+        /// URL of the student's assignment repository
+        /// </param>
+        /// <param name="submissionTimestamp">
+        /// Timestamp of the student's assignment submission
+        /// </param>
+        /// <param name="pointsAwarded">
+        /// Number of points awarded to the student
+        /// </param>
+        /// <param name="pointsAvailable">
+        /// Number of points available for the assignment
+        /// </param>
+        /// <param name="groupName">
+        /// If a group assignment, name of the group the student is in
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public ClassroomAssignmentGrade(
+            string assignmentName,
+            string assignmentUrl,
+            string starterCodeUrl,
+            string githubUsername,
+            string rosterIdentifier,
+            string studentRepositoryName,
+            string studentRepositoryUrl,
+            string submissionTimestamp,
+            int pointsAwarded,
+            int pointsAvailable,
+            string? groupName)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.AssignmentName = assignmentName ?? throw new global::System.ArgumentNullException(nameof(assignmentName));
+            this.AssignmentUrl = assignmentUrl ?? throw new global::System.ArgumentNullException(nameof(assignmentUrl));
+            this.StarterCodeUrl = starterCodeUrl ?? throw new global::System.ArgumentNullException(nameof(starterCodeUrl));
+            this.GithubUsername = githubUsername ?? throw new global::System.ArgumentNullException(nameof(githubUsername));
+            this.RosterIdentifier = rosterIdentifier ?? throw new global::System.ArgumentNullException(nameof(rosterIdentifier));
+            this.StudentRepositoryName = studentRepositoryName ?? throw new global::System.ArgumentNullException(nameof(studentRepositoryName));
+            this.StudentRepositoryUrl = studentRepositoryUrl ?? throw new global::System.ArgumentNullException(nameof(studentRepositoryUrl));
+            this.SubmissionTimestamp = submissionTimestamp ?? throw new global::System.ArgumentNullException(nameof(submissionTimestamp));
+            this.PointsAwarded = pointsAwarded;
+            this.PointsAvailable = pointsAvailable;
+            this.GroupName = groupName;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="ClassroomAssignmentGrade" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public ClassroomAssignmentGrade()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.ClassroomAssignmentGrade? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.ClassroomAssignmentGrade),
-                jsonSerializerContext) as global::GitHub.ClassroomAssignmentGrade;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.ClassroomAssignmentGrade? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.ClassroomAssignmentGrade>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.ClassroomAssignmentGrade?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.ClassroomAssignmentGrade),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.ClassroomAssignmentGrade;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.ClassroomAssignmentGrade?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.ClassroomAssignmentGrade?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

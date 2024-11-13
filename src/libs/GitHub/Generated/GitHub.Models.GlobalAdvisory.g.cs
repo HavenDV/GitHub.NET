@@ -12,6 +12,7 @@ namespace GitHub
         /// The GitHub Security Advisory ID.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("ghsa_id")]
         public string GhsaId { get; set; } = default!;
 
@@ -26,6 +27,7 @@ namespace GitHub
         /// The API URL for the advisory.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         public string Url { get; set; } = default!;
 
@@ -33,6 +35,7 @@ namespace GitHub
         /// The URL for the advisory.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("html_url")]
         public string HtmlUrl { get; set; } = default!;
 
@@ -61,6 +64,7 @@ namespace GitHub
         /// The type of advisory.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.GlobalAdvisoryTypeJsonConverter))]
         public global::GitHub.GlobalAdvisoryType Type { get; set; } = default!;
@@ -97,6 +101,7 @@ namespace GitHub
         /// The date and time of when the advisory was published, in ISO 8601 format.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("published_at")]
         public global::System.DateTime PublishedAt { get; set; } = default!;
 
@@ -104,6 +109,7 @@ namespace GitHub
         /// The date and time of when the advisory was last updated, in ISO 8601 format.<br/>
         /// Included only in responses
         /// </summary>
+        /// <default>default!</default>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
         public global::System.DateTime UpdatedAt { get; set; } = default!;
 
@@ -175,91 +181,137 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="GlobalAdvisory" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="ghsaId">
+        /// The GitHub Security Advisory ID.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="cveId">
+        /// The Common Vulnerabilities and Exposures (CVE) ID.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="url">
+        /// The API URL for the advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="htmlUrl">
+        /// The URL for the advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="repositoryAdvisoryUrl">
+        /// The API URL for the repository advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="summary">
+        /// A short summary of the advisory.
+        /// </param>
+        /// <param name="description">
+        /// A detailed description of what the advisory entails.
+        /// </param>
+        /// <param name="type">
+        /// The type of advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="severity">
+        /// The severity of the advisory.
+        /// </param>
+        /// <param name="sourceCodeLocation">
+        /// The URL of the advisory's source code.
+        /// </param>
+        /// <param name="identifiers">
+        /// Included only in responses
+        /// </param>
+        /// <param name="references"></param>
+        /// <param name="publishedAt">
+        /// The date and time of when the advisory was published, in ISO 8601 format.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="updatedAt">
+        /// The date and time of when the advisory was last updated, in ISO 8601 format.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="githubReviewedAt">
+        /// The date and time of when the advisory was reviewed by GitHub, in ISO 8601 format.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="nvdPublishedAt">
+        /// The date and time when the advisory was published in the National Vulnerability Database, in ISO 8601 format.<br/>
+        /// This field is only populated when the advisory is imported from the National Vulnerability Database.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="withdrawnAt">
+        /// The date and time of when the advisory was withdrawn, in ISO 8601 format.<br/>
+        /// Included only in responses
+        /// </param>
+        /// <param name="vulnerabilities">
+        /// The products and respective version ranges affected by the advisory.
+        /// </param>
+        /// <param name="cvss"></param>
+        /// <param name="cvssSeverities"></param>
+        /// <param name="cwes"></param>
+        /// <param name="epss"></param>
+        /// <param name="credits">
+        /// The users who contributed to the advisory.<br/>
+        /// Included only in responses
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public GlobalAdvisory(
+            string summary,
+            string? description,
+            global::GitHub.GlobalAdvisorySeverity severity,
+            string? sourceCodeLocation,
+            global::System.Collections.Generic.IList<string>? references,
+            global::System.Collections.Generic.IList<global::GitHub.Vulnerability>? vulnerabilities,
+            global::GitHub.GlobalAdvisoryCvss? cvss,
+            global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCwe>? cwes,
+            string? cveId,
+            string? repositoryAdvisoryUrl,
+            global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryIdentifier>? identifiers,
+            global::System.DateTime? githubReviewedAt,
+            global::System.DateTime? nvdPublishedAt,
+            global::System.DateTime? withdrawnAt,
+            global::GitHub.CvssSeverities? cvssSeverities,
+            global::GitHub.GlobalAdvisoryEpss? epss,
+            global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCredit>? credits,
+            string ghsaId = default!,
+            string url = default!,
+            string htmlUrl = default!,
+            global::GitHub.GlobalAdvisoryType type = default!,
+            global::System.DateTime publishedAt = default!,
+            global::System.DateTime updatedAt = default!)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Summary = summary ?? throw new global::System.ArgumentNullException(nameof(summary));
+            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
+            this.Severity = severity;
+            this.SourceCodeLocation = sourceCodeLocation ?? throw new global::System.ArgumentNullException(nameof(sourceCodeLocation));
+            this.References = references ?? throw new global::System.ArgumentNullException(nameof(references));
+            this.Vulnerabilities = vulnerabilities ?? throw new global::System.ArgumentNullException(nameof(vulnerabilities));
+            this.Cvss = cvss ?? throw new global::System.ArgumentNullException(nameof(cvss));
+            this.Cwes = cwes ?? throw new global::System.ArgumentNullException(nameof(cwes));
+            this.GhsaId = ghsaId;
+            this.CveId = cveId;
+            this.Url = url;
+            this.HtmlUrl = htmlUrl;
+            this.RepositoryAdvisoryUrl = repositoryAdvisoryUrl;
+            this.Type = type;
+            this.Identifiers = identifiers;
+            this.PublishedAt = publishedAt;
+            this.UpdatedAt = updatedAt;
+            this.GithubReviewedAt = githubReviewedAt;
+            this.NvdPublishedAt = nvdPublishedAt;
+            this.WithdrawnAt = withdrawnAt;
+            this.CvssSeverities = cvssSeverities;
+            this.Epss = epss;
+            this.Credits = credits;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="GlobalAdvisory" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public GlobalAdvisory()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.GlobalAdvisory? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.GlobalAdvisory),
-                jsonSerializerContext) as global::GitHub.GlobalAdvisory;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.GlobalAdvisory? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.GlobalAdvisory>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.GlobalAdvisory?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.GlobalAdvisory),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.GlobalAdvisory;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.GlobalAdvisory?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.GlobalAdvisory?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

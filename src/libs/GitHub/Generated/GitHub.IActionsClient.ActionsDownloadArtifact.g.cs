@@ -15,8 +15,8 @@ namespace GitHub
         /// <param name="artifactId"></param>
         /// <param name="archiveFormat"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.BasicError> ActionsDownloadArtifactAsync(
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task ActionsDownloadArtifactAsync(
             string owner,
             string repo,
             int artifactId,

@@ -236,91 +236,130 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookPackagePublishedPackagePackageVersionNpmMetadata" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="name"></param>
+        /// <param name="version"></param>
+        /// <param name="npmUser"></param>
+        /// <param name="author"></param>
+        /// <param name="bugs"></param>
+        /// <param name="dependencies"></param>
+        /// <param name="devDependencies"></param>
+        /// <param name="peerDependencies"></param>
+        /// <param name="optionalDependencies"></param>
+        /// <param name="description"></param>
+        /// <param name="dist"></param>
+        /// <param name="gitHead"></param>
+        /// <param name="homepage"></param>
+        /// <param name="license"></param>
+        /// <param name="main"></param>
+        /// <param name="repository"></param>
+        /// <param name="scripts"></param>
+        /// <param name="id"></param>
+        /// <param name="nodeVersion"></param>
+        /// <param name="npmVersion"></param>
+        /// <param name="hasShrinkwrap"></param>
+        /// <param name="maintainers"></param>
+        /// <param name="contributors"></param>
+        /// <param name="engines"></param>
+        /// <param name="keywords"></param>
+        /// <param name="files"></param>
+        /// <param name="bin"></param>
+        /// <param name="man"></param>
+        /// <param name="directories"></param>
+        /// <param name="os"></param>
+        /// <param name="cpu"></param>
+        /// <param name="readme"></param>
+        /// <param name="installationCommand"></param>
+        /// <param name="releaseId"></param>
+        /// <param name="commitOid"></param>
+        /// <param name="publishedViaActions"></param>
+        /// <param name="deletedById"></param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookPackagePublishedPackagePackageVersionNpmMetadata(
+            string? name,
+            string? version,
+            string? npmUser,
+            object? author,
+            object? bugs,
+            object? dependencies,
+            object? devDependencies,
+            object? peerDependencies,
+            object? optionalDependencies,
+            string? description,
+            object? dist,
+            string? gitHead,
+            string? homepage,
+            string? license,
+            string? main,
+            object? repository,
+            object? scripts,
+            string? id,
+            string? nodeVersion,
+            string? npmVersion,
+            bool? hasShrinkwrap,
+            global::System.Collections.Generic.IList<object>? maintainers,
+            global::System.Collections.Generic.IList<object>? contributors,
+            object? engines,
+            global::System.Collections.Generic.IList<string>? keywords,
+            global::System.Collections.Generic.IList<string>? files,
+            object? bin,
+            object? man,
+            object? directories,
+            global::System.Collections.Generic.IList<string>? os,
+            global::System.Collections.Generic.IList<string>? cpu,
+            string? readme,
+            string? installationCommand,
+            int? releaseId,
+            string? commitOid,
+            bool? publishedViaActions,
+            int? deletedById)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.Name = name;
+            this.Version = version;
+            this.NpmUser = npmUser;
+            this.Author = author;
+            this.Bugs = bugs;
+            this.Dependencies = dependencies;
+            this.DevDependencies = devDependencies;
+            this.PeerDependencies = peerDependencies;
+            this.OptionalDependencies = optionalDependencies;
+            this.Description = description;
+            this.Dist = dist;
+            this.GitHead = gitHead;
+            this.Homepage = homepage;
+            this.License = license;
+            this.Main = main;
+            this.Repository = repository;
+            this.Scripts = scripts;
+            this.Id = id;
+            this.NodeVersion = nodeVersion;
+            this.NpmVersion = npmVersion;
+            this.HasShrinkwrap = hasShrinkwrap;
+            this.Maintainers = maintainers;
+            this.Contributors = contributors;
+            this.Engines = engines;
+            this.Keywords = keywords;
+            this.Files = files;
+            this.Bin = bin;
+            this.Man = man;
+            this.Directories = directories;
+            this.Os = os;
+            this.Cpu = cpu;
+            this.Readme = readme;
+            this.InstallationCommand = installationCommand;
+            this.ReleaseId = releaseId;
+            this.CommitOid = commitOid;
+            this.PublishedViaActions = publishedViaActions;
+            this.DeletedById = deletedById;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookPackagePublishedPackagePackageVersionNpmMetadata" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookPackagePublishedPackagePackageVersionNpmMetadata()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata),
-                jsonSerializerContext) as global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookPackagePublishedPackagePackageVersionNpmMetadata?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }

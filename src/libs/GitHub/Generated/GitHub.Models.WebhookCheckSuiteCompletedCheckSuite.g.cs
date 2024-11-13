@@ -140,91 +140,87 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonExtensionData]
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
-
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
+        /// Initializes a new instance of the <see cref="WebhookCheckSuiteCompletedCheckSuite" /> class.
         /// </summary>
-        public string ToJson(
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
+        /// <param name="after"></param>
+        /// <param name="app">
+        /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
+        /// </param>
+        /// <param name="before"></param>
+        /// <param name="checkRunsUrl"></param>
+        /// <param name="conclusion">
+        /// The summary conclusion for all check runs that are part of the check suite. This value will be `null` until the check run has `completed`.
+        /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="headBranch">
+        /// The head branch name the changes are on.
+        /// </param>
+        /// <param name="headCommit"></param>
+        /// <param name="headSha">
+        /// The SHA of the head commit that is being checked.
+        /// </param>
+        /// <param name="id"></param>
+        /// <param name="latestCheckRunsCount"></param>
+        /// <param name="nodeId"></param>
+        /// <param name="pullRequests">
+        /// An array of pull requests that match this check suite. A pull request matches a check suite if they have the same `head_sha` and `head_branch`. When the check suite's `head_branch` is in a forked repository it will be `null` and the `pull_requests` array will be empty.
+        /// </param>
+        /// <param name="rerequestable"></param>
+        /// <param name="runsRerequestable"></param>
+        /// <param name="status">
+        /// The summary status for all check runs that are part of the check suite. Can be `requested`, `in_progress`, or `completed`.
+        /// </param>
+        /// <param name="updatedAt"></param>
+        /// <param name="url">
+        /// URL that points to the check suite API resource.
+        /// </param>
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+        public WebhookCheckSuiteCompletedCheckSuite(
+            string? after,
+            global::GitHub.WebhookCheckSuiteCompletedCheckSuiteApp app,
+            string? before,
+            string checkRunsUrl,
+            global::GitHub.WebhookCheckSuiteCompletedCheckSuiteConclusion? conclusion,
+            global::System.DateTime createdAt,
+            string? headBranch,
+            global::GitHub.WebhookCheckSuiteCompletedCheckSuiteHeadCommit headCommit,
+            string headSha,
+            int id,
+            int latestCheckRunsCount,
+            string nodeId,
+            global::System.Collections.Generic.IList<global::GitHub.WebhookCheckSuiteCompletedCheckSuitePullRequest> pullRequests,
+            global::GitHub.WebhookCheckSuiteCompletedCheckSuiteStatus? status,
+            global::System.DateTime updatedAt,
+            string url,
+            bool? rerequestable,
+            bool? runsRerequestable)
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                this.GetType(),
-                jsonSerializerContext);
+            this.After = after ?? throw new global::System.ArgumentNullException(nameof(after));
+            this.App = app ?? throw new global::System.ArgumentNullException(nameof(app));
+            this.Before = before ?? throw new global::System.ArgumentNullException(nameof(before));
+            this.CheckRunsUrl = checkRunsUrl ?? throw new global::System.ArgumentNullException(nameof(checkRunsUrl));
+            this.Conclusion = conclusion;
+            this.CreatedAt = createdAt;
+            this.HeadBranch = headBranch ?? throw new global::System.ArgumentNullException(nameof(headBranch));
+            this.HeadCommit = headCommit ?? throw new global::System.ArgumentNullException(nameof(headCommit));
+            this.HeadSha = headSha ?? throw new global::System.ArgumentNullException(nameof(headSha));
+            this.Id = id;
+            this.LatestCheckRunsCount = latestCheckRunsCount;
+            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
+            this.PullRequests = pullRequests ?? throw new global::System.ArgumentNullException(nameof(pullRequests));
+            this.Status = status;
+            this.UpdatedAt = updatedAt;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.Rerequestable = rerequestable;
+            this.RunsRerequestable = runsRerequestable;
         }
 
         /// <summary>
-        /// Serializes the current instance to a JSON string using the provided JsonSerializerOptions.
+        /// Initializes a new instance of the <see cref="WebhookCheckSuiteCompletedCheckSuite" /> class.
         /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public string ToJson(
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
+        public WebhookCheckSuiteCompletedCheckSuite()
         {
-            return global::System.Text.Json.JsonSerializer.Serialize(
-                this,
-                jsonSerializerOptions);
         }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerContext.
-        /// </summary>
-        public static global::GitHub.WebhookCheckSuiteCompletedCheckSuite? FromJson(
-            string json,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize(
-                json,
-                typeof(global::GitHub.WebhookCheckSuiteCompletedCheckSuite),
-                jsonSerializerContext) as global::GitHub.WebhookCheckSuiteCompletedCheckSuite;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON string using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::GitHub.WebhookCheckSuiteCompletedCheckSuite? FromJson(
-            string json,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.WebhookCheckSuiteCompletedCheckSuite>(
-                json,
-                jsonSerializerOptions);
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerContext.
-        /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookCheckSuiteCompletedCheckSuite?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
-        {
-            return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
-                jsonStream,
-                typeof(global::GitHub.WebhookCheckSuiteCompletedCheckSuite),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.WebhookCheckSuiteCompletedCheckSuite;
-        }
-
-        /// <summary>
-        /// Deserializes a JSON stream using the provided JsonSerializerOptions.
-        /// </summary>
-#if NET8_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
-        [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
-#endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.WebhookCheckSuiteCompletedCheckSuite?> FromJsonStream(
-            global::System.IO.Stream jsonStream,
-            global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
-        {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.WebhookCheckSuiteCompletedCheckSuite?>(
-                jsonStream,
-                jsonSerializerOptions);
-        }
-
     }
 }
