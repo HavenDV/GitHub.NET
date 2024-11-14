@@ -9,6 +9,15 @@ namespace GitHub
     public sealed partial class TeamRoleAssignment
     {
         /// <summary>
+        /// Determines if the team has a direct, indirect, or mixed relationship to a role<br/>
+        /// Example: direct
+        /// </summary>
+        /// <example>direct</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assignment")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.TeamRoleAssignmentAssignmentJsonConverter))]
+        public global::GitHub.TeamRoleAssignmentAssignment? Assignment { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
@@ -113,6 +122,10 @@ namespace GitHub
         /// <summary>
         /// Initializes a new instance of the <see cref="TeamRoleAssignment" /> class.
         /// </summary>
+        /// <param name="assignment">
+        /// Determines if the team has a direct, indirect, or mixed relationship to a role<br/>
+        /// Example: direct
+        /// </param>
         /// <param name="id"></param>
         /// <param name="nodeId"></param>
         /// <param name="name"></param>
@@ -144,6 +157,7 @@ namespace GitHub
             string membersUrl,
             string repositoriesUrl,
             global::GitHub.NullableTeamSimple? parent,
+            global::GitHub.TeamRoleAssignmentAssignment? assignment,
             string? privacy,
             string? notificationSetting,
             global::GitHub.TeamRoleAssignmentPermissions? permissions)
@@ -159,6 +173,7 @@ namespace GitHub
             this.MembersUrl = membersUrl ?? throw new global::System.ArgumentNullException(nameof(membersUrl));
             this.RepositoriesUrl = repositoriesUrl ?? throw new global::System.ArgumentNullException(nameof(repositoriesUrl));
             this.Parent = parent ?? throw new global::System.ArgumentNullException(nameof(parent));
+            this.Assignment = assignment;
             this.Privacy = privacy;
             this.NotificationSetting = notificationSetting;
             this.Permissions = permissions;

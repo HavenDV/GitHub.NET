@@ -29,7 +29,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("public")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<bool?, global::GitHub.GistsCreateRequestPublic?>))]
         public global::GitHub.OneOf<bool?, global::GitHub.GistsCreateRequestPublic?>? Public { get; set; }
 
         /// <summary>

@@ -45,7 +45,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory3))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<string, int?, global::System.Collections.Generic.IList<string>>))]
         public global::GitHub.OneOf<string, int?, global::System.Collections.Generic.IList<string>>? Value { get; set; }
 
         /// <summary>

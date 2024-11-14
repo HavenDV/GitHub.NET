@@ -27,7 +27,12 @@ namespace GitHub
 
         /// <summary>
         /// Get a release asset<br/>
-        /// To download the asset's binary content, set the `Accept` header of the request to [`application/octet-stream`](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types). The API will either redirect the client to the location, or stream it directly if possible. API clients should handle both a `200` or `302` response.
+        /// To download the asset's binary content:<br/>
+        /// - If within a browser, fetch the location specified in the `browser_download_url` key provided in the response.<br/>
+        /// - Alternatively, set the `Accept` header of the request to <br/>
+        ///   [`application/octet-stream`](https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types). <br/>
+        ///   The API will either redirect the client to the location, or stream it directly if possible.<br/>
+        ///   API clients should handle both a `200` or `302` response.
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
@@ -186,12 +191,10 @@ namespace GitHub
                     };
                 }
 
-                using var __responseStream = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
-
-                var __responseValue = await global::GitHub.ReleaseAsset.FromJsonStreamAsync(__responseStream, JsonSerializerContext).ConfigureAwait(false);
+                using var __content = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
 
                 return
-                    __responseValue ??
+                    await global::GitHub.ReleaseAsset.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                     throw new global::System.InvalidOperationException("Response deserialization failed.");
             }
         }

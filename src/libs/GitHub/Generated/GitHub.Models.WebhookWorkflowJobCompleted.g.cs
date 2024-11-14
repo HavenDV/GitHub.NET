@@ -59,7 +59,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workflow_job")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AllOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AllOfJsonConverter<global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant1, global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2>))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.AllOf<global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant1, global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2> WorkflowJob { get; set; }
 

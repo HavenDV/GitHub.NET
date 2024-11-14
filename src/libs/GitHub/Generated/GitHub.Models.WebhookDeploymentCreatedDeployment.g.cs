@@ -63,7 +63,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("payload")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<object, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.OneOf<object, string> Payload { get; set; }
 
