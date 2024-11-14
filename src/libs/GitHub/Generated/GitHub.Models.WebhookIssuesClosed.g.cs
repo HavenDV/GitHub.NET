@@ -37,7 +37,7 @@ namespace GitHub
         /// The [issue](https://docs.github.com/rest/issues/issues#get-an-issue) itself.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("issue")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AllOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AllOfJsonConverter<global::GitHub.WebhookIssuesClosedIssueVariant1, global::GitHub.WebhookIssuesClosedIssueVariant2>))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.AllOf<global::GitHub.WebhookIssuesClosedIssueVariant1, global::GitHub.WebhookIssuesClosedIssueVariant2> Issue { get; set; }
 

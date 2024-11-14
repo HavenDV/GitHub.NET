@@ -30,7 +30,7 @@ namespace GitHub
         /// Default value of the property
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("default_value")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>))]
         public global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? DefaultValue { get; set; }
 
         /// <summary>

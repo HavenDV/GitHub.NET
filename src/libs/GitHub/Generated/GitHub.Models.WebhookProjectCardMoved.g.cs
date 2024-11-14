@@ -50,7 +50,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_card")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AllOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AllOfJsonConverter<global::GitHub.WebhookProjectCardMovedProjectCardVariant1, global::GitHub.WebhookProjectCardMovedProjectCardVariant2>))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.AllOf<global::GitHub.WebhookProjectCardMovedProjectCardVariant1, global::GitHub.WebhookProjectCardMovedProjectCardVariant2> ProjectCard { get; set; }
 

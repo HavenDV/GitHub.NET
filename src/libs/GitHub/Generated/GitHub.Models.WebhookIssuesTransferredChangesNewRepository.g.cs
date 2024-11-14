@@ -140,7 +140,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<int?, global::System.DateTime?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.OneOf<int?, global::System.DateTime?> CreatedAt { get; set; }
 
@@ -508,7 +508,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pushed_at")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<int?, global::System.DateTime?>))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.OneOf<int?, global::System.DateTime?>? PushedAt { get; set; }
 

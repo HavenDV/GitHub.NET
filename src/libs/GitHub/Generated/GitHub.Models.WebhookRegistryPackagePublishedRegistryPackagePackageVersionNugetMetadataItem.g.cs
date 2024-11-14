@@ -14,7 +14,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory3))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<string, object, int?>))]
         public global::GitHub.OneOf<string, object, int?>? Id { get; set; }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory4))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<bool?, string, int?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNugetMetadataItemValue>))]
         public global::GitHub.OneOf<bool?, string, int?, global::GitHub.WebhookRegistryPackagePublishedRegistryPackagePackageVersionNugetMetadataItemValue>? Value { get; set; }
 
         /// <summary>

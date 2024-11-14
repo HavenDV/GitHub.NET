@@ -22,7 +22,7 @@ namespace GitHub
         /// It includes altered values for text, number, date, single select, and iteration fields, along with the GraphQL node ID of the changed field.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("changes")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<global::GitHub.WebhookProjectsV2ItemEditedChangesVariant1, global::GitHub.WebhookProjectsV2ItemEditedChangesVariant2>))]
         public global::GitHub.OneOf<global::GitHub.WebhookProjectsV2ItemEditedChangesVariant1, global::GitHub.WebhookProjectsV2ItemEditedChangesVariant2>? Changes { get; set; }
 
         /// <summary>

@@ -24,6 +24,15 @@ namespace GitHub
         public string? Url { get; set; }
 
         /// <summary>
+        /// The source type of the property<br/>
+        /// Example: organization
+        /// </summary>
+        /// <example>organization</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source_type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CustomPropertySourceTypeJsonConverter))]
+        public global::GitHub.CustomPropertySourceType? SourceType { get; set; }
+
+        /// <summary>
         /// The type of the value for the property<br/>
         /// Example: single_select
         /// </summary>
@@ -43,7 +52,7 @@ namespace GitHub
         /// Default value of the property
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("default_value")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<string, global::System.Collections.Generic.IList<string>>))]
         public global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? DefaultValue { get; set; }
 
         /// <summary>
@@ -83,6 +92,10 @@ namespace GitHub
         /// <param name="url">
         /// The URL that can be used to fetch, update, or delete info about this property via the API.
         /// </param>
+        /// <param name="sourceType">
+        /// The source type of the property<br/>
+        /// Example: organization
+        /// </param>
         /// <param name="valueType">
         /// The type of the value for the property<br/>
         /// Example: single_select
@@ -109,6 +122,7 @@ namespace GitHub
             string propertyName,
             global::GitHub.CustomPropertyValueType valueType,
             string? url,
+            global::GitHub.CustomPropertySourceType? sourceType,
             bool? required,
             global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? defaultValue,
             string? description,
@@ -118,6 +132,7 @@ namespace GitHub
             this.PropertyName = propertyName ?? throw new global::System.ArgumentNullException(nameof(propertyName));
             this.ValueType = valueType;
             this.Url = url;
+            this.SourceType = sourceType;
             this.Required = required;
             this.DefaultValue = defaultValue;
             this.Description = description;

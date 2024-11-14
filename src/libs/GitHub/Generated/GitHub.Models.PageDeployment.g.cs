@@ -14,7 +14,7 @@ namespace GitHub
         /// The ID of the GitHub Pages deployment. This is the Git SHA of the deployed commit.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<int?, string>))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.OneOf<int?, string> Id { get; set; }
 

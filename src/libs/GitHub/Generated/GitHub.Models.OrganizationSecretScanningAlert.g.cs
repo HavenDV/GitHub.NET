@@ -119,6 +119,24 @@ namespace GitHub
         public global::System.DateTime? PushProtectionBypassedAt { get; set; }
 
         /// <summary>
+        /// A GitHub user.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("push_protection_bypass_request_reviewer")]
+        public global::GitHub.NullableSimpleUser? PushProtectionBypassRequestReviewer { get; set; }
+
+        /// <summary>
+        /// An optional comment when requesting a push protection bypass.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("push_protection_bypass_request_comment")]
+        public string? PushProtectionBypassRequestComment { get; set; }
+
+        /// <summary>
+        /// The URL to a push protection bypass request.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("push_protection_bypass_request_html_url")]
+        public string? PushProtectionBypassRequestHtmlUrl { get; set; }
+
+        /// <summary>
         /// The comment that was optionally added when this alert was closed
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resolution_comment")]
@@ -209,6 +227,15 @@ namespace GitHub
         /// <param name="pushProtectionBypassedAt">
         /// The time that push protection was bypassed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         /// </param>
+        /// <param name="pushProtectionBypassRequestReviewer">
+        /// A GitHub user.
+        /// </param>
+        /// <param name="pushProtectionBypassRequestComment">
+        /// An optional comment when requesting a push protection bypass.
+        /// </param>
+        /// <param name="pushProtectionBypassRequestHtmlUrl">
+        /// The URL to a push protection bypass request.
+        /// </param>
         /// <param name="resolutionComment">
         /// The comment that was optionally added when this alert was closed
         /// </param>
@@ -240,6 +267,9 @@ namespace GitHub
             bool? pushProtectionBypassed,
             global::GitHub.NullableSimpleUser? pushProtectionBypassedBy,
             global::System.DateTime? pushProtectionBypassedAt,
+            global::GitHub.NullableSimpleUser? pushProtectionBypassRequestReviewer,
+            string? pushProtectionBypassRequestComment,
+            string? pushProtectionBypassRequestHtmlUrl,
             string? resolutionComment,
             global::GitHub.OrganizationSecretScanningAlertValidity? validity,
             bool? publiclyLeaked,
@@ -262,6 +292,9 @@ namespace GitHub
             this.PushProtectionBypassed = pushProtectionBypassed;
             this.PushProtectionBypassedBy = pushProtectionBypassedBy;
             this.PushProtectionBypassedAt = pushProtectionBypassedAt;
+            this.PushProtectionBypassRequestReviewer = pushProtectionBypassRequestReviewer;
+            this.PushProtectionBypassRequestComment = pushProtectionBypassRequestComment;
+            this.PushProtectionBypassRequestHtmlUrl = pushProtectionBypassRequestHtmlUrl;
             this.ResolutionComment = resolutionComment;
             this.Validity = validity;
             this.PubliclyLeaked = publiclyLeaked;

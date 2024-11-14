@@ -44,7 +44,7 @@ namespace GitHub
         /// The [issue](https://docs.github.com/rest/issues/issues#get-an-issue) the comment belongs to.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("issue")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AllOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AllOfJsonConverter<global::GitHub.WebhookIssueCommentCreatedIssueVariant1, global::GitHub.WebhookIssueCommentCreatedIssueVariant2>))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.AllOf<global::GitHub.WebhookIssueCommentCreatedIssueVariant1, global::GitHub.WebhookIssueCommentCreatedIssueVariant2> Issue { get; set; }
 

@@ -9,6 +9,21 @@ namespace GitHub
     public sealed partial class UserRoleAssignment
     {
         /// <summary>
+        /// Determines if the user has a direct, indirect, or mixed relationship to a role<br/>
+        /// Example: direct
+        /// </summary>
+        /// <example>direct</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("assignment")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.UserRoleAssignmentAssignmentJsonConverter))]
+        public global::GitHub.UserRoleAssignmentAssignment? Assignment { get; set; }
+
+        /// <summary>
+        /// Team the user has gotten the role through
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("inherited_from")]
+        public global::System.Collections.Generic.IList<global::GitHub.TeamSimple>? InheritedFrom { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -186,6 +201,13 @@ namespace GitHub
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoleAssignment" /> class.
         /// </summary>
+        /// <param name="assignment">
+        /// Determines if the user has a direct, indirect, or mixed relationship to a role<br/>
+        /// Example: direct
+        /// </param>
+        /// <param name="inheritedFrom">
+        /// Team the user has gotten the role through
+        /// </param>
         /// <param name="name"></param>
         /// <param name="email"></param>
         /// <param name="login">
@@ -266,6 +288,8 @@ namespace GitHub
             string receivedEventsUrl,
             string type,
             bool siteAdmin,
+            global::GitHub.UserRoleAssignmentAssignment? assignment,
+            global::System.Collections.Generic.IList<global::GitHub.TeamSimple>? inheritedFrom,
             string? name,
             string? email,
             string? starredAt,
@@ -289,6 +313,8 @@ namespace GitHub
             this.ReceivedEventsUrl = receivedEventsUrl ?? throw new global::System.ArgumentNullException(nameof(receivedEventsUrl));
             this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
             this.SiteAdmin = siteAdmin;
+            this.Assignment = assignment;
+            this.InheritedFrom = inheritedFrom;
             this.Name = name;
             this.Email = email;
             this.StarredAt = starredAt;

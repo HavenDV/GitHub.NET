@@ -61,7 +61,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<global::GitHub.SimpleUser, global::GitHub.EmptyObject>))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.OneOf<global::GitHub.SimpleUser, global::GitHub.EmptyObject>? Author { get; set; }
 
@@ -69,7 +69,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("committer")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverterFactory2))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<global::GitHub.SimpleUser, global::GitHub.EmptyObject>))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.OneOf<global::GitHub.SimpleUser, global::GitHub.EmptyObject>? Committer { get; set; }
 

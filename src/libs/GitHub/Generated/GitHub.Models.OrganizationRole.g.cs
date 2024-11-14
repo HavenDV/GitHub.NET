@@ -29,6 +29,20 @@ namespace GitHub
         public string? Description { get; set; }
 
         /// <summary>
+        /// The system role from which this role inherits permissions.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("base_role")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrganizationRoleBaseRoleJsonConverter))]
+        public global::GitHub.OrganizationRoleBaseRole? BaseRole { get; set; }
+
+        /// <summary>
+        /// Source answers the question, "where did this role come from?"
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrganizationRoleSourceJsonConverter))]
+        public global::GitHub.OrganizationRoleSource? Source { get; set; }
+
+        /// <summary>
         /// A list of permissions included in this role.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("permissions")]
@@ -74,6 +88,12 @@ namespace GitHub
         /// <param name="description">
         /// A short description about who this role is for or what permissions it grants.
         /// </param>
+        /// <param name="baseRole">
+        /// The system role from which this role inherits permissions.
+        /// </param>
+        /// <param name="source">
+        /// Source answers the question, "where did this role come from?"
+        /// </param>
         /// <param name="permissions">
         /// A list of permissions included in this role.
         /// </param>
@@ -94,7 +114,9 @@ namespace GitHub
             global::GitHub.NullableSimpleUser? organization,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
-            string? description)
+            string? description,
+            global::GitHub.OrganizationRoleBaseRole? baseRole,
+            global::GitHub.OrganizationRoleSource? source)
         {
             this.Id = id;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -103,6 +125,8 @@ namespace GitHub
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Description = description;
+            this.BaseRole = baseRole;
+            this.Source = source;
         }
 
         /// <summary>
