@@ -21,8 +21,8 @@ namespace GitHub
             global::GitHub.ApiInsightsGetTimeStatsByActorActorType actorType,
             int actorId,
             string minTimestamp,
-            string maxTimestamp,
             string timestampIncrement,
+            string? maxTimestamp = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

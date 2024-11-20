@@ -10,7 +10,7 @@ namespace GitHub
             ref string org,
             ref string userId,
             ref string minTimestamp,
-            ref string maxTimestamp,
+            ref string? maxTimestamp,
             ref int? page,
             ref int? perPage,
             ref global::GitHub.ApiInsightsGetUserStatsDirection? direction,
@@ -21,7 +21,7 @@ namespace GitHub
             string org,
             string userId,
             string minTimestamp,
-            string maxTimestamp,
+            string? maxTimestamp,
             int? page,
             int? perPage,
             global::GitHub.ApiInsightsGetUserStatsDirection? direction,
@@ -59,7 +59,7 @@ namespace GitHub
             string org,
             string userId,
             string minTimestamp,
-            string maxTimestamp,
+            string? maxTimestamp = default,
             int? page = default,
             int? perPage = default,
             global::GitHub.ApiInsightsGetUserStatsDirection? direction = default,
@@ -84,7 +84,7 @@ namespace GitHub
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
                 .AddRequiredParameter("min_timestamp", minTimestamp) 
-                .AddRequiredParameter("max_timestamp", maxTimestamp) 
+                .AddOptionalParameter("max_timestamp", maxTimestamp) 
                 .AddOptionalParameter("page", page?.ToString()) 
                 .AddOptionalParameter("per_page", perPage?.ToString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 

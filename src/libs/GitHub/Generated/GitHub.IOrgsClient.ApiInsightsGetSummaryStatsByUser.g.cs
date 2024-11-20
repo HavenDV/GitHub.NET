@@ -18,7 +18,7 @@ namespace GitHub
             string org,
             string userId,
             string minTimestamp,
-            string maxTimestamp,
+            string? maxTimestamp = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

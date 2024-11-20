@@ -18,9 +18,9 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.ApiInsightsSummaryStats> ApiInsightsGetSummaryStatsByActorAsync(
             string org,
             string minTimestamp,
-            string maxTimestamp,
             global::GitHub.ApiInsightsGetSummaryStatsByActorActorType actorType,
             int actorId,
+            string? maxTimestamp = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

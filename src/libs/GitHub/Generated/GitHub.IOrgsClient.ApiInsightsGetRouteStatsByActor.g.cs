@@ -30,7 +30,7 @@ namespace GitHub
             global::GitHub.ApiInsightsGetRouteStatsByActorActorType actorType,
             int actorId,
             string minTimestamp,
-            string maxTimestamp,
+            string? maxTimestamp = default,
             int? page = default,
             int? perPage = default,
             global::GitHub.ApiInsightsGetRouteStatsByActorDirection? direction = default,

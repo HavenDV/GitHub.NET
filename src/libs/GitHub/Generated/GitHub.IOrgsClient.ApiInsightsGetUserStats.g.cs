@@ -28,7 +28,7 @@ namespace GitHub
             string org,
             string userId,
             string minTimestamp,
-            string maxTimestamp,
+            string? maxTimestamp = default,
             int? page = default,
             int? perPage = default,
             global::GitHub.ApiInsightsGetUserStatsDirection? direction = default,
