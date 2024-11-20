@@ -9,14 +9,14 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
             ref string minTimestamp,
-            ref string maxTimestamp,
+            ref string? maxTimestamp,
             ref string timestampIncrement);
         partial void PrepareApiInsightsGetTimeStatsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             string minTimestamp,
-            string maxTimestamp,
+            string? maxTimestamp,
             string timestampIncrement);
         partial void ProcessApiInsightsGetTimeStatsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -40,8 +40,8 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ApiInsightsTimeStat>> ApiInsightsGetTimeStatsAsync(
             string org,
             string minTimestamp,
-            string maxTimestamp,
             string timestampIncrement,
+            string? maxTimestamp = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -58,7 +58,7 @@ namespace GitHub
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
                 .AddRequiredParameter("min_timestamp", minTimestamp) 
-                .AddRequiredParameter("max_timestamp", maxTimestamp) 
+                .AddOptionalParameter("max_timestamp", maxTimestamp) 
                 .AddRequiredParameter("timestamp_increment", timestampIncrement) 
                 ; 
             var __path = __pathBuilder.ToString();

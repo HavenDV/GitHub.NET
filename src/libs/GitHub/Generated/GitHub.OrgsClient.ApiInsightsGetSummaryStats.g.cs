@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
             ref string minTimestamp,
-            ref string maxTimestamp);
+            ref string? maxTimestamp);
         partial void PrepareApiInsightsGetSummaryStatsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             string minTimestamp,
-            string maxTimestamp);
+            string? maxTimestamp);
         partial void ProcessApiInsightsGetSummaryStatsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -37,7 +37,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.ApiInsightsSummaryStats> ApiInsightsGetSummaryStatsAsync(
             string org,
             string minTimestamp,
-            string maxTimestamp,
+            string? maxTimestamp = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -53,7 +53,7 @@ namespace GitHub
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
                 .AddRequiredParameter("min_timestamp", minTimestamp) 
-                .AddRequiredParameter("max_timestamp", maxTimestamp) 
+                .AddOptionalParameter("max_timestamp", maxTimestamp) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(

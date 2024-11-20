@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
             ref string minTimestamp,
-            ref string maxTimestamp,
+            ref string? maxTimestamp,
             ref int? page,
             ref int? perPage,
             ref global::GitHub.ApiInsightsGetSubjectStatsDirection? direction,
@@ -19,7 +19,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             string minTimestamp,
-            string maxTimestamp,
+            string? maxTimestamp,
             int? page,
             int? perPage,
             global::GitHub.ApiInsightsGetSubjectStatsDirection? direction,
@@ -55,7 +55,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ApiInsightsSubjectStat>> ApiInsightsGetSubjectStatsAsync(
             string org,
             string minTimestamp,
-            string maxTimestamp,
+            string? maxTimestamp = default,
             int? page = default,
             int? perPage = default,
             global::GitHub.ApiInsightsGetSubjectStatsDirection? direction = default,
@@ -79,7 +79,7 @@ namespace GitHub
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
                 .AddRequiredParameter("min_timestamp", minTimestamp) 
-                .AddRequiredParameter("max_timestamp", maxTimestamp) 
+                .AddOptionalParameter("max_timestamp", maxTimestamp) 
                 .AddOptionalParameter("page", page?.ToString()) 
                 .AddOptionalParameter("per_page", perPage?.ToString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 

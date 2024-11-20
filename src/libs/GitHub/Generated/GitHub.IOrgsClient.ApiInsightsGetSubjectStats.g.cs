@@ -26,7 +26,7 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ApiInsightsSubjectStat>> ApiInsightsGetSubjectStatsAsync(
             string org,
             string minTimestamp,
-            string maxTimestamp,
+            string? maxTimestamp = default,
             int? page = default,
             int? perPage = default,
             global::GitHub.ApiInsightsGetSubjectStatsDirection? direction = default,

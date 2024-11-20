@@ -17,8 +17,8 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ApiInsightsTimeStat>> ApiInsightsGetTimeStatsAsync(
             string org,
             string minTimestamp,
-            string maxTimestamp,
             string timestampIncrement,
+            string? maxTimestamp = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

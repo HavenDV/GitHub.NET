@@ -5882,6 +5882,7 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>, global::System.Collections.Generic.IList<global::GitHub.Stargazer>>),
             typeof(global::GitHub.JsonConverters.AnyOfJsonConverter<global::GitHub.InteractionLimitResponse, global::GitHub.InteractionsGetRestrictionsForAuthenticatedUserResponse2>),
             typeof(global::GitHub.JsonConverters.AnyOfJsonConverter<global::System.Collections.Generic.IList<global::GitHub.StarredRepository>, global::System.Collections.Generic.IList<global::GitHub.Repository>>),
+            typeof(global::GitHub.JsonConverters.UnixTimestampJsonConverter),
         })]
 
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::GitHub.JsonSerializerContextTypes))]
