@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class CopilotIdeChatEditorModel
     {
         /// <summary>
-        /// Name of the language used for Copilot code completion suggestions, for the given editor.
+        /// Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
@@ -60,7 +60,7 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="CopilotIdeChatEditorModel" /> class.
         /// </summary>
         /// <param name="name">
-        /// Name of the language used for Copilot code completion suggestions, for the given editor.
+        /// Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
         /// </param>
         /// <param name="isCustomModel">
         /// Indicates whether a model is custom or default.
