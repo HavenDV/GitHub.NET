@@ -38,6 +38,12 @@ namespace GitHub
         public required bool Verified { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("verified_at")]
+        public string? VerifiedAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -50,17 +56,20 @@ namespace GitHub
         /// <param name="reason"></param>
         /// <param name="signature"></param>
         /// <param name="verified"></param>
+        /// <param name="verifiedAt"></param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public WebhookStatusCommitCommitVerification(
             string? payload,
             global::GitHub.WebhookStatusCommitCommitVerificationReason reason,
             string? signature,
-            bool verified)
+            bool verified,
+            string? verifiedAt)
         {
             this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
             this.Reason = reason;
             this.Signature = signature ?? throw new global::System.ArgumentNullException(nameof(signature));
             this.Verified = verified;
+            this.VerifiedAt = verifiedAt;
         }
 
         /// <summary>

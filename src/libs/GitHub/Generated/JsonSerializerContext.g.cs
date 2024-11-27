@@ -5674,6 +5674,7 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.AllOfJsonConverter<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo>),
             typeof(global::GitHub.JsonConverters.AllOfJsonConverter<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo>),
             typeof(global::GitHub.JsonConverters.OneOfJsonConverter<global::GitHub.SecretScanningLocationCommit, global::GitHub.SecretScanningLocationWikiCommit, global::GitHub.SecretScanningLocationIssueTitle, global::GitHub.SecretScanningLocationIssueBody, global::GitHub.SecretScanningLocationIssueComment, global::GitHub.SecretScanningLocationDiscussionTitle, global::GitHub.SecretScanningLocationDiscussionBody, global::GitHub.SecretScanningLocationDiscussionComment, global::GitHub.SecretScanningLocationPullRequestTitle, global::GitHub.SecretScanningLocationPullRequestBody, global::GitHub.SecretScanningLocationPullRequestComment, global::GitHub.SecretScanningLocationPullRequestReview, global::GitHub.SecretScanningLocationPullRequestReviewComment>),
+            typeof(global::GitHub.JsonConverters.AllOfJsonConverter<global::GitHub.SecretScanningScan, global::GitHub.SecretScanningScanHistoryCustomPatternBackfillScan>),
             typeof(global::GitHub.JsonConverters.OneOfJsonConverter<int?, global::System.DateTime?>),
             typeof(global::GitHub.JsonConverters.OneOfJsonConverter<int?, global::System.DateTime?>),
             typeof(global::GitHub.JsonConverters.OneOfJsonConverter<int?, global::System.DateTime?>),

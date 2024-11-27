@@ -33,6 +33,12 @@ namespace GitHub
         public string? Payload { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("verified_at")]
+        public string? VerifiedAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -45,17 +51,20 @@ namespace GitHub
         /// <param name="reason"></param>
         /// <param name="signature"></param>
         /// <param name="payload"></param>
+        /// <param name="verifiedAt"></param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public FileCommitCommitVerification(
             bool? verified,
             string? reason,
             string? signature,
-            string? payload)
+            string? payload,
+            string? verifiedAt)
         {
             this.Verified = verified;
             this.Reason = reason;
             this.Signature = signature;
             this.Payload = payload;
+            this.VerifiedAt = verifiedAt;
         }
 
         /// <summary>
