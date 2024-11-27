@@ -37,6 +37,12 @@ namespace GitHub
         public required string? Signature { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("verified_at")]
+        public string? VerifiedAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -49,17 +55,20 @@ namespace GitHub
         /// <param name="reason"></param>
         /// <param name="payload"></param>
         /// <param name="signature"></param>
+        /// <param name="verifiedAt"></param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public Verification(
             bool verified,
             string reason,
             string? payload,
-            string? signature)
+            string? signature,
+            string? verifiedAt)
         {
             this.Verified = verified;
             this.Reason = reason ?? throw new global::System.ArgumentNullException(nameof(reason));
             this.Payload = payload ?? throw new global::System.ArgumentNullException(nameof(payload));
             this.Signature = signature ?? throw new global::System.ArgumentNullException(nameof(signature));
+            this.VerifiedAt = verifiedAt;
         }
 
         /// <summary>
