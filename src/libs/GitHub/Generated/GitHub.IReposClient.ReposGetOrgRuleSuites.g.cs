@@ -30,7 +30,7 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RuleSuite>> ReposGetOrgRuleSuitesAsync(
             string org,
             string? @ref = default,
-            int? repositoryName = default,
+            string? repositoryName = default,
             global::GitHub.ReposGetOrgRuleSuitesTimePeriod? timePeriod = default,
             string? actorName = default,
             global::GitHub.ReposGetOrgRuleSuitesRuleSuiteResult? ruleSuiteResult = default,
