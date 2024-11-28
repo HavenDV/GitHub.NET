@@ -9,7 +9,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
             ref string? @ref,
-            ref int? repositoryName,
+            ref string? repositoryName,
             ref global::GitHub.ReposGetOrgRuleSuitesTimePeriod? timePeriod,
             ref string? actorName,
             ref global::GitHub.ReposGetOrgRuleSuitesRuleSuiteResult? ruleSuiteResult,
@@ -20,7 +20,7 @@ namespace GitHub
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             string? @ref,
-            int? repositoryName,
+            string? repositoryName,
             global::GitHub.ReposGetOrgRuleSuitesTimePeriod? timePeriod,
             string? actorName,
             global::GitHub.ReposGetOrgRuleSuitesRuleSuiteResult? ruleSuiteResult,
@@ -61,7 +61,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.RuleSuite>> ReposGetOrgRuleSuitesAsync(
             string org,
             string? @ref = default,
-            int? repositoryName = default,
+            string? repositoryName = default,
             global::GitHub.ReposGetOrgRuleSuitesTimePeriod? timePeriod = default,
             string? actorName = default,
             global::GitHub.ReposGetOrgRuleSuitesRuleSuiteResult? ruleSuiteResult = default,
@@ -87,7 +87,7 @@ namespace GitHub
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
                 .AddOptionalParameter("ref", @ref) 
-                .AddOptionalParameter("repository_name", repositoryName?.ToString()) 
+                .AddOptionalParameter("repository_name", repositoryName) 
                 .AddOptionalParameter("time_period", timePeriod?.ToValueString()) 
                 .AddOptionalParameter("actor_name", actorName) 
                 .AddOptionalParameter("rule_suite_result", ruleSuiteResult?.ToValueString()) 
@@ -98,6 +98,10 @@ namespace GitHub
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+#if NET6_0_OR_GREATER
+            __httpRequest.Version = global::System.Net.HttpVersion.Version11;
+            __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
+#endif
 
             PrepareRequest(
                 client: HttpClient,
