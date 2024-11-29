@@ -167,6 +167,12 @@ namespace GitHub
         public required string RepositoryUrl { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
+        public global::GitHub.WebhookIssuesUnlockedIssueSubIssuesSummary? SubIssuesSummary { get; set; }
+
+        /// <summary>
         /// State of the issue; either 'open' or 'closed'
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
@@ -253,6 +259,7 @@ namespace GitHub
         /// <param name="pullRequest"></param>
         /// <param name="reactions"></param>
         /// <param name="repositoryUrl"></param>
+        /// <param name="subIssuesSummary"></param>
         /// <param name="state">
         /// State of the issue; either 'open' or 'closed'
         /// </param>
@@ -295,6 +302,7 @@ namespace GitHub
             global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesUnlockedIssueLabel>? labels,
             global::GitHub.WebhookIssuesUnlockedIssuePerformedViaGithubApp? performedViaGithubApp,
             global::GitHub.WebhookIssuesUnlockedIssuePullRequest? pullRequest,
+            global::GitHub.WebhookIssuesUnlockedIssueSubIssuesSummary? subIssuesSummary,
             global::GitHub.WebhookIssuesUnlockedIssueState? state,
             string? stateReason,
             string? timelineUrl)
@@ -326,6 +334,7 @@ namespace GitHub
             this.Labels = labels;
             this.PerformedViaGithubApp = performedViaGithubApp;
             this.PullRequest = pullRequest;
+            this.SubIssuesSummary = subIssuesSummary;
             this.State = state;
             this.StateReason = stateReason;
             this.TimelineUrl = timelineUrl;
