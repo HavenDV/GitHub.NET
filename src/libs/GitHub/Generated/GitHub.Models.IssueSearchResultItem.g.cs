@@ -114,6 +114,12 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
+        public global::GitHub.IssueSearchResultItemSubIssuesSummary? SubIssuesSummary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string State { get; set; }
@@ -269,6 +275,7 @@ namespace GitHub
         /// A GitHub user.
         /// </param>
         /// <param name="labels"></param>
+        /// <param name="subIssuesSummary"></param>
         /// <param name="state"></param>
         /// <param name="stateReason"></param>
         /// <param name="assignee">
@@ -326,6 +333,7 @@ namespace GitHub
             global::GitHub.AuthorAssociation authorAssociation,
             string? activeLockReason,
             global::System.Collections.Generic.IList<global::GitHub.SimpleUser>? assignees,
+            global::GitHub.IssueSearchResultItemSubIssuesSummary? subIssuesSummary,
             string? stateReason,
             global::System.Collections.Generic.IList<global::GitHub.SearchResultTextMatche>? textMatches,
             global::GitHub.IssueSearchResultItemPullRequest? pullRequest,
@@ -362,6 +370,7 @@ namespace GitHub
             this.AuthorAssociation = authorAssociation;
             this.ActiveLockReason = activeLockReason;
             this.Assignees = assignees;
+            this.SubIssuesSummary = subIssuesSummary;
             this.StateReason = stateReason;
             this.TextMatches = textMatches;
             this.PullRequest = pullRequest;

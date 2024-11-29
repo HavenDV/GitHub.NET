@@ -254,6 +254,12 @@ namespace GitHub
         public global::GitHub.ReactionRollup? Reactions { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
+        public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -332,6 +338,7 @@ namespace GitHub
         /// Example: OWNER
         /// </param>
         /// <param name="reactions"></param>
+        /// <param name="subIssuesSummary"></param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public NullableIssue(
             long id,
@@ -367,7 +374,8 @@ namespace GitHub
             string? timelineUrl,
             global::GitHub.Repository? repository,
             global::GitHub.NullableIntegration? performedViaGithubApp,
-            global::GitHub.ReactionRollup? reactions)
+            global::GitHub.ReactionRollup? reactions,
+            global::GitHub.SubIssuesSummary? subIssuesSummary)
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
@@ -403,6 +411,7 @@ namespace GitHub
             this.Repository = repository;
             this.PerformedViaGithubApp = performedViaGithubApp;
             this.Reactions = reactions;
+            this.SubIssuesSummary = subIssuesSummary;
         }
 
         /// <summary>
