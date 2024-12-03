@@ -21,7 +21,9 @@ namespace GitHub
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// Delete a repository webhook
+        /// Delete a repository webhook<br/>
+        /// Delete a webhook for an organization.<br/>
+        /// The authenticated user must be a repository owner, or have admin access in the repository, to delete the webhook.
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>
