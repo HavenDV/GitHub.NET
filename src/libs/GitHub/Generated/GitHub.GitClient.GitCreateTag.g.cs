@@ -36,6 +36,7 @@ namespace GitHub
         /// | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |<br/>
         /// | `signature` | `string` | The signature that was extracted from the commit. |<br/>
         /// | `payload` | `string` | The value that was signed. |<br/>
+        /// | `verified_at` | `string` | The date the signature was verified by GitHub. |<br/>
         /// These are the possible values for `reason` in the `verification` object:<br/>
         /// | Value | Description |<br/>
         /// | ----- | ----------- |<br/>
@@ -245,6 +246,7 @@ namespace GitHub
         /// | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |<br/>
         /// | `signature` | `string` | The signature that was extracted from the commit. |<br/>
         /// | `payload` | `string` | The value that was signed. |<br/>
+        /// | `verified_at` | `string` | The date the signature was verified by GitHub. |<br/>
         /// These are the possible values for `reason` in the `verification` object:<br/>
         /// | Value | Description |<br/>
         /// | ----- | ----------- |<br/>
