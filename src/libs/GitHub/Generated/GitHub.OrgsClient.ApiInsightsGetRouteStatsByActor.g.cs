@@ -15,7 +15,8 @@ namespace GitHub
             ref int? page,
             ref int? perPage,
             ref global::GitHub.ApiInsightsGetRouteStatsByActorDirection? direction,
-            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetRouteStatsByActorSortItem>? sort);
+            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetRouteStatsByActorSortItem>? sort,
+            ref string? apiRouteSubstring);
         partial void PrepareApiInsightsGetRouteStatsByActorRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -27,7 +28,8 @@ namespace GitHub
             int? page,
             int? perPage,
             global::GitHub.ApiInsightsGetRouteStatsByActorDirection? direction,
-            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetRouteStatsByActorSortItem>? sort);
+            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetRouteStatsByActorSortItem>? sort,
+            string? apiRouteSubstring);
         partial void ProcessApiInsightsGetRouteStatsByActorResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -56,6 +58,7 @@ namespace GitHub
         /// Default Value: desc
         /// </param>
         /// <param name="sort"></param>
+        /// <param name="apiRouteSubstring"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ApiInsightsRouteStat>> ApiInsightsGetRouteStatsByActorAsync(
@@ -68,6 +71,7 @@ namespace GitHub
             int? perPage = default,
             global::GitHub.ApiInsightsGetRouteStatsByActorDirection? direction = default,
             global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetRouteStatsByActorSortItem>? sort = default,
+            string? apiRouteSubstring = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -82,7 +86,8 @@ namespace GitHub
                 page: ref page,
                 perPage: ref perPage,
                 direction: ref direction,
-                sort: sort);
+                sort: sort,
+                apiRouteSubstring: ref apiRouteSubstring);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/orgs/{org}/insights/api/route-stats/{actorType}/{actorId}",
@@ -93,6 +98,7 @@ namespace GitHub
                 .AddOptionalParameter("page", page?.ToString()) 
                 .AddOptionalParameter("per_page", perPage?.ToString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("api_route_substring", apiRouteSubstring) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -117,7 +123,8 @@ namespace GitHub
                 page: page,
                 perPage: perPage,
                 direction: direction,
-                sort: sort);
+                sort: sort,
+                apiRouteSubstring: apiRouteSubstring);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,

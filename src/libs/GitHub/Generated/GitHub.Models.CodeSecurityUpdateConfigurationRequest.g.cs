@@ -69,6 +69,12 @@ namespace GitHub
         public global::GitHub.CodeSecurityUpdateConfigurationRequestCodeScanningDefaultSetup? CodeScanningDefaultSetup { get; set; }
 
         /// <summary>
+        /// Feature options for code scanning default setup
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_default_setup_options")]
+        public global::GitHub.CodeScanningDefaultSetupOptions? CodeScanningDefaultSetupOptions { get; set; }
+
+        /// <summary>
         /// The enablement status of secret scanning
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning")]
@@ -159,6 +165,9 @@ namespace GitHub
         /// <param name="codeScanningDefaultSetup">
         /// The enablement status of code scanning default setup
         /// </param>
+        /// <param name="codeScanningDefaultSetupOptions">
+        /// Feature options for code scanning default setup
+        /// </param>
         /// <param name="secretScanning">
         /// The enablement status of secret scanning
         /// </param>
@@ -194,6 +203,7 @@ namespace GitHub
             global::GitHub.CodeSecurityUpdateConfigurationRequestDependabotAlerts? dependabotAlerts,
             global::GitHub.CodeSecurityUpdateConfigurationRequestDependabotSecurityUpdates? dependabotSecurityUpdates,
             global::GitHub.CodeSecurityUpdateConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup,
+            global::GitHub.CodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanning? secretScanning,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningPushProtection? secretScanningPushProtection,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypass? secretScanningDelegatedBypass,
@@ -212,6 +222,7 @@ namespace GitHub
             this.DependabotAlerts = dependabotAlerts;
             this.DependabotSecurityUpdates = dependabotSecurityUpdates;
             this.CodeScanningDefaultSetup = codeScanningDefaultSetup;
+            this.CodeScanningDefaultSetupOptions = codeScanningDefaultSetupOptions;
             this.SecretScanning = secretScanning;
             this.SecretScanningPushProtection = secretScanningPushProtection;
             this.SecretScanningDelegatedBypass = secretScanningDelegatedBypass;

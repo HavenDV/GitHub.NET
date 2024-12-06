@@ -15,19 +15,19 @@ namespace GitHub
         public string? Type { get; set; }
 
         /// <summary>
-        /// The state of the scan. Either "completed" or "running"
+        /// The state of the scan. Either "completed", "running", or "pending"
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         public string? Status { get; set; }
 
         /// <summary>
-        /// The time that the scan was completed. Empty if the scan is active
+        /// The time that the scan was completed. Empty if the scan is running
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("completed_at")]
         public global::System.DateTime? CompletedAt { get; set; }
 
         /// <summary>
-        /// The time that the scan was started
+        /// The time that the scan was started. Empty if the scan is pending
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("started_at")]
         public global::System.DateTime? StartedAt { get; set; }
@@ -45,13 +45,13 @@ namespace GitHub
         /// The type of scan
         /// </param>
         /// <param name="status">
-        /// The state of the scan. Either "completed" or "running"
+        /// The state of the scan. Either "completed", "running", or "pending"
         /// </param>
         /// <param name="completedAt">
-        /// The time that the scan was completed. Empty if the scan is active
+        /// The time that the scan was completed. Empty if the scan is running
         /// </param>
         /// <param name="startedAt">
-        /// The time that the scan was started
+        /// The time that the scan was started. Empty if the scan is pending
         /// </param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public SecretScanningScan(
