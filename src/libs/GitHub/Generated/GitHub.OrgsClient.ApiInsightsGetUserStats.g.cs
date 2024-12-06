@@ -14,7 +14,8 @@ namespace GitHub
             ref int? page,
             ref int? perPage,
             ref global::GitHub.ApiInsightsGetUserStatsDirection? direction,
-            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetUserStatsSortItem>? sort);
+            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetUserStatsSortItem>? sort,
+            ref string? actorNameSubstring);
         partial void PrepareApiInsightsGetUserStatsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -25,7 +26,8 @@ namespace GitHub
             int? page,
             int? perPage,
             global::GitHub.ApiInsightsGetUserStatsDirection? direction,
-            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetUserStatsSortItem>? sort);
+            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetUserStatsSortItem>? sort,
+            string? actorNameSubstring);
         partial void ProcessApiInsightsGetUserStatsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -53,6 +55,7 @@ namespace GitHub
         /// Default Value: desc
         /// </param>
         /// <param name="sort"></param>
+        /// <param name="actorNameSubstring"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ApiInsightsUserStat>> ApiInsightsGetUserStatsAsync(
@@ -64,6 +67,7 @@ namespace GitHub
             int? perPage = default,
             global::GitHub.ApiInsightsGetUserStatsDirection? direction = default,
             global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetUserStatsSortItem>? sort = default,
+            string? actorNameSubstring = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -77,7 +81,8 @@ namespace GitHub
                 page: ref page,
                 perPage: ref perPage,
                 direction: ref direction,
-                sort: sort);
+                sort: sort,
+                actorNameSubstring: ref actorNameSubstring);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/orgs/{org}/insights/api/user-stats/{userId}",
@@ -88,6 +93,7 @@ namespace GitHub
                 .AddOptionalParameter("page", page?.ToString()) 
                 .AddOptionalParameter("per_page", perPage?.ToString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("actor_name_substring", actorNameSubstring) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -111,7 +117,8 @@ namespace GitHub
                 page: page,
                 perPage: perPage,
                 direction: direction,
-                sort: sort);
+                sort: sort,
+                actorNameSubstring: actorNameSubstring);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,

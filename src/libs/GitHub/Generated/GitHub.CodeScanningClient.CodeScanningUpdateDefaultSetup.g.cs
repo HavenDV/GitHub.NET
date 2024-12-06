@@ -277,6 +277,13 @@ namespace GitHub
         /// <param name="state">
         /// The desired state of code scanning default setup.
         /// </param>
+        /// <param name="runnerType">
+        /// Runner type to be used.
+        /// </param>
+        /// <param name="runnerLabel">
+        /// Runner label to be used if the runner type is labeled.<br/>
+        /// Example: code-scanning
+        /// </param>
         /// <param name="querySuite">
         /// CodeQL query suite to be used.
         /// </param>
@@ -289,6 +296,8 @@ namespace GitHub
             string owner,
             string repo,
             global::GitHub.CodeScanningDefaultSetupUpdateState? state = default,
+            global::GitHub.CodeScanningDefaultSetupUpdateRunnerType? runnerType = default,
+            string? runnerLabel = default,
             global::GitHub.CodeScanningDefaultSetupUpdateQuerySuite? querySuite = default,
             global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupUpdateLanguage>? languages = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -296,6 +305,8 @@ namespace GitHub
             var __request = new global::GitHub.CodeScanningDefaultSetupUpdate
             {
                 State = state,
+                RunnerType = runnerType,
+                RunnerLabel = runnerLabel,
                 QuerySuite = querySuite,
                 Languages = languages,
             };

@@ -21,6 +21,7 @@ namespace GitHub
         /// Default Value: desc
         /// </param>
         /// <param name="sort"></param>
+        /// <param name="subjectNameSubstring"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ApiInsightsSubjectStat>> ApiInsightsGetSubjectStatsAsync(
@@ -31,6 +32,7 @@ namespace GitHub
             int? perPage = default,
             global::GitHub.ApiInsightsGetSubjectStatsDirection? direction = default,
             global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetSubjectStatsSortItem>? sort = default,
+            string? subjectNameSubstring = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

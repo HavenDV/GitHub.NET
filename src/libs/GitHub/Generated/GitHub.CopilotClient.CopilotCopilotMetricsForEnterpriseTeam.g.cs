@@ -33,6 +33,8 @@ namespace GitHub
 
         /// <summary>
         /// Get Copilot metrics for an enterprise team<br/>
+        /// &gt; [!NOTE]<br/>
+        /// &gt; This endpoint is only applicable to dedicated enterprise accounts for Copilot Business. See "[About enterprise accounts for Copilot Business](https://docs.github.com/admin/copilot-business-only/about-enterprise-accounts-for-copilot-business)."<br/>
         /// Use this endpoint to see a breakdown of aggregated metrics for various GitHub Copilot features. See the response schema tab for detailed metrics definitions.<br/>
         /// The response contains metrics for up to 28 days prior. Metrics are processed once per day for the previous day,<br/>
         /// and the response will only include data up until yesterday. In order for an end user to be counted towards these metrics,<br/>

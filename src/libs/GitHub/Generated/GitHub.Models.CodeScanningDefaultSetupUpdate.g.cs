@@ -16,6 +16,21 @@ namespace GitHub
         public global::GitHub.CodeScanningDefaultSetupUpdateState? State { get; set; }
 
         /// <summary>
+        /// Runner type to be used.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("runner_type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupUpdateRunnerTypeJsonConverter))]
+        public global::GitHub.CodeScanningDefaultSetupUpdateRunnerType? RunnerType { get; set; }
+
+        /// <summary>
+        /// Runner label to be used if the runner type is labeled.<br/>
+        /// Example: code-scanning
+        /// </summary>
+        /// <example>code-scanning</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("runner_label")]
+        public string? RunnerLabel { get; set; }
+
+        /// <summary>
         /// CodeQL query suite to be used.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("query_suite")]
@@ -40,6 +55,13 @@ namespace GitHub
         /// <param name="state">
         /// The desired state of code scanning default setup.
         /// </param>
+        /// <param name="runnerType">
+        /// Runner type to be used.
+        /// </param>
+        /// <param name="runnerLabel">
+        /// Runner label to be used if the runner type is labeled.<br/>
+        /// Example: code-scanning
+        /// </param>
         /// <param name="querySuite">
         /// CodeQL query suite to be used.
         /// </param>
@@ -49,10 +71,14 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public CodeScanningDefaultSetupUpdate(
             global::GitHub.CodeScanningDefaultSetupUpdateState? state,
+            global::GitHub.CodeScanningDefaultSetupUpdateRunnerType? runnerType,
+            string? runnerLabel,
             global::GitHub.CodeScanningDefaultSetupUpdateQuerySuite? querySuite,
             global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupUpdateLanguage>? languages)
         {
             this.State = state;
+            this.RunnerType = runnerType;
+            this.RunnerLabel = runnerLabel;
             this.QuerySuite = querySuite;
             this.Languages = languages;
         }

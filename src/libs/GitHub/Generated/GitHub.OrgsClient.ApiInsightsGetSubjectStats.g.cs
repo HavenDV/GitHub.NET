@@ -13,7 +13,8 @@ namespace GitHub
             ref int? page,
             ref int? perPage,
             ref global::GitHub.ApiInsightsGetSubjectStatsDirection? direction,
-            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetSubjectStatsSortItem>? sort);
+            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetSubjectStatsSortItem>? sort,
+            ref string? subjectNameSubstring);
         partial void PrepareApiInsightsGetSubjectStatsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -23,7 +24,8 @@ namespace GitHub
             int? page,
             int? perPage,
             global::GitHub.ApiInsightsGetSubjectStatsDirection? direction,
-            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetSubjectStatsSortItem>? sort);
+            global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetSubjectStatsSortItem>? sort,
+            string? subjectNameSubstring);
         partial void ProcessApiInsightsGetSubjectStatsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -50,6 +52,7 @@ namespace GitHub
         /// Default Value: desc
         /// </param>
         /// <param name="sort"></param>
+        /// <param name="subjectNameSubstring"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ApiInsightsSubjectStat>> ApiInsightsGetSubjectStatsAsync(
@@ -60,6 +63,7 @@ namespace GitHub
             int? perPage = default,
             global::GitHub.ApiInsightsGetSubjectStatsDirection? direction = default,
             global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetSubjectStatsSortItem>? sort = default,
+            string? subjectNameSubstring = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -72,7 +76,8 @@ namespace GitHub
                 page: ref page,
                 perPage: ref perPage,
                 direction: ref direction,
-                sort: sort);
+                sort: sort,
+                subjectNameSubstring: ref subjectNameSubstring);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/orgs/{org}/insights/api/subject-stats",
@@ -83,6 +88,7 @@ namespace GitHub
                 .AddOptionalParameter("page", page?.ToString()) 
                 .AddOptionalParameter("per_page", perPage?.ToString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("subject_name_substring", subjectNameSubstring) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -105,7 +111,8 @@ namespace GitHub
                 page: page,
                 perPage: perPage,
                 direction: direction,
-                sort: sort);
+                sort: sort,
+                subjectNameSubstring: subjectNameSubstring);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,

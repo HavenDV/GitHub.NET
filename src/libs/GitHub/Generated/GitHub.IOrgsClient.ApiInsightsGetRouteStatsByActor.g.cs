@@ -23,6 +23,7 @@ namespace GitHub
         /// Default Value: desc
         /// </param>
         /// <param name="sort"></param>
+        /// <param name="apiRouteSubstring"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ApiInsightsRouteStat>> ApiInsightsGetRouteStatsByActorAsync(
@@ -35,6 +36,7 @@ namespace GitHub
             int? perPage = default,
             global::GitHub.ApiInsightsGetRouteStatsByActorDirection? direction = default,
             global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetRouteStatsByActorSortItem>? sort = default,
+            string? apiRouteSubstring = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
