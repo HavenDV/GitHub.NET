@@ -11,23 +11,23 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        Installations,
+        Installation,
         /// <summary>
         /// 
         /// </summary>
-        ClassicPats,
+        ClassicPat,
         /// <summary>
         /// 
         /// </summary>
-        FineGrainedPats,
+        FineGrainedPat,
         /// <summary>
         /// 
         /// </summary>
-        OauthApps,
+        OauthApp,
         /// <summary>
         /// 
         /// </summary>
-        GithubAppsUserToServer,
+        GithubAppUserToServer,
     }
 
     /// <summary>
@@ -42,11 +42,11 @@ namespace GitHub
         {
             return value switch
             {
-                ApiInsightsGetTimeStatsByActorActorType.Installations => "installations",
-                ApiInsightsGetTimeStatsByActorActorType.ClassicPats => "classic_pats",
-                ApiInsightsGetTimeStatsByActorActorType.FineGrainedPats => "fine_grained_pats",
-                ApiInsightsGetTimeStatsByActorActorType.OauthApps => "oauth_apps",
-                ApiInsightsGetTimeStatsByActorActorType.GithubAppsUserToServer => "github_apps_user_to_server",
+                ApiInsightsGetTimeStatsByActorActorType.Installation => "installation",
+                ApiInsightsGetTimeStatsByActorActorType.ClassicPat => "classic_pat",
+                ApiInsightsGetTimeStatsByActorActorType.FineGrainedPat => "fine_grained_pat",
+                ApiInsightsGetTimeStatsByActorActorType.OauthApp => "oauth_app",
+                ApiInsightsGetTimeStatsByActorActorType.GithubAppUserToServer => "github_app_user_to_server",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -57,11 +57,11 @@ namespace GitHub
         {
             return value switch
             {
-                "installations" => ApiInsightsGetTimeStatsByActorActorType.Installations,
-                "classic_pats" => ApiInsightsGetTimeStatsByActorActorType.ClassicPats,
-                "fine_grained_pats" => ApiInsightsGetTimeStatsByActorActorType.FineGrainedPats,
-                "oauth_apps" => ApiInsightsGetTimeStatsByActorActorType.OauthApps,
-                "github_apps_user_to_server" => ApiInsightsGetTimeStatsByActorActorType.GithubAppsUserToServer,
+                "installation" => ApiInsightsGetTimeStatsByActorActorType.Installation,
+                "classic_pat" => ApiInsightsGetTimeStatsByActorActorType.ClassicPat,
+                "fine_grained_pat" => ApiInsightsGetTimeStatsByActorActorType.FineGrainedPat,
+                "oauth_app" => ApiInsightsGetTimeStatsByActorActorType.OauthApp,
+                "github_app_user_to_server" => ApiInsightsGetTimeStatsByActorActorType.GithubAppUserToServer,
                 _ => null,
             };
         }

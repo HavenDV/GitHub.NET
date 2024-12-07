@@ -56,9 +56,10 @@ namespace GitHub
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// Timestamp of when the assignee's GitHub Copilot access was last updated, in ISO 8601 format.
+        /// **Closing down notice:** This field is no longer relevant and is closing down. Use the `created_at` field to determine when the assignee was last granted access to GitHub Copilot. Timestamp of when the assignee's GitHub Copilot access was last updated, in ISO 8601 format.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public global::System.DateTime? UpdatedAt { get; set; }
 
         /// <summary>
@@ -98,9 +99,6 @@ namespace GitHub
         /// <param name="createdAt">
         /// Timestamp of when the assignee was last granted access to GitHub Copilot, in ISO 8601 format.
         /// </param>
-        /// <param name="updatedAt">
-        /// Timestamp of when the assignee's GitHub Copilot access was last updated, in ISO 8601 format.
-        /// </param>
         /// <param name="planType">
         /// The Copilot plan of the organization, or the parent enterprise, when applicable.
         /// </param>
@@ -113,7 +111,6 @@ namespace GitHub
             global::System.DateTime? pendingCancellationDate,
             global::System.DateTime? lastActivityAt,
             string? lastActivityEditor,
-            global::System.DateTime? updatedAt,
             global::GitHub.CopilotSeatDetailsPlanType? planType)
         {
             this.Assignee = assignee ?? throw new global::System.ArgumentNullException(nameof(assignee));
@@ -123,7 +120,6 @@ namespace GitHub
             this.PendingCancellationDate = pendingCancellationDate;
             this.LastActivityAt = lastActivityAt;
             this.LastActivityEditor = lastActivityEditor;
-            this.UpdatedAt = updatedAt;
             this.PlanType = planType;
         }
 
