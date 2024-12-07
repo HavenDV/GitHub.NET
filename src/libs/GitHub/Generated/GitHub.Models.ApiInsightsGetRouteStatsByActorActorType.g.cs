@@ -11,23 +11,23 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        Installations,
+        Installation,
         /// <summary>
         /// 
         /// </summary>
-        ClassicPats,
+        ClassicPat,
         /// <summary>
         /// 
         /// </summary>
-        FineGrainedPats,
+        FineGrainedPat,
         /// <summary>
         /// 
         /// </summary>
-        OauthApps,
+        OauthApp,
         /// <summary>
         /// 
         /// </summary>
-        GithubAppsUserToServer,
+        GithubAppUserToServer,
     }
 
     /// <summary>
@@ -42,11 +42,11 @@ namespace GitHub
         {
             return value switch
             {
-                ApiInsightsGetRouteStatsByActorActorType.Installations => "installations",
-                ApiInsightsGetRouteStatsByActorActorType.ClassicPats => "classic_pats",
-                ApiInsightsGetRouteStatsByActorActorType.FineGrainedPats => "fine_grained_pats",
-                ApiInsightsGetRouteStatsByActorActorType.OauthApps => "oauth_apps",
-                ApiInsightsGetRouteStatsByActorActorType.GithubAppsUserToServer => "github_apps_user_to_server",
+                ApiInsightsGetRouteStatsByActorActorType.Installation => "installation",
+                ApiInsightsGetRouteStatsByActorActorType.ClassicPat => "classic_pat",
+                ApiInsightsGetRouteStatsByActorActorType.FineGrainedPat => "fine_grained_pat",
+                ApiInsightsGetRouteStatsByActorActorType.OauthApp => "oauth_app",
+                ApiInsightsGetRouteStatsByActorActorType.GithubAppUserToServer => "github_app_user_to_server",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -57,11 +57,11 @@ namespace GitHub
         {
             return value switch
             {
-                "installations" => ApiInsightsGetRouteStatsByActorActorType.Installations,
-                "classic_pats" => ApiInsightsGetRouteStatsByActorActorType.ClassicPats,
-                "fine_grained_pats" => ApiInsightsGetRouteStatsByActorActorType.FineGrainedPats,
-                "oauth_apps" => ApiInsightsGetRouteStatsByActorActorType.OauthApps,
-                "github_apps_user_to_server" => ApiInsightsGetRouteStatsByActorActorType.GithubAppsUserToServer,
+                "installation" => ApiInsightsGetRouteStatsByActorActorType.Installation,
+                "classic_pat" => ApiInsightsGetRouteStatsByActorActorType.ClassicPat,
+                "fine_grained_pat" => ApiInsightsGetRouteStatsByActorActorType.FineGrainedPat,
+                "oauth_app" => ApiInsightsGetRouteStatsByActorActorType.OauthApp,
+                "github_app_user_to_server" => ApiInsightsGetRouteStatsByActorActorType.GithubAppUserToServer,
                 _ => null,
             };
         }
