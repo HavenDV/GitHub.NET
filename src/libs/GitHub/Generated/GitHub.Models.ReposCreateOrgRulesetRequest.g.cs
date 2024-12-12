@@ -40,7 +40,8 @@ namespace GitHub
         /// <summary>
         /// Conditions for an organization ruleset.<br/>
         /// The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties.<br/>
-        /// The push rulesets conditions object does not require the `ref_name` property.
+        /// The push rulesets conditions object does not require the `ref_name` property.<br/>
+        /// For repository policy rulesets, the conditions object should only contain the `repository_name`, the `repository_id`, or the `repository_property`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrgRulesetConditionsJsonConverter))]
@@ -77,7 +78,8 @@ namespace GitHub
         /// <param name="conditions">
         /// Conditions for an organization ruleset.<br/>
         /// The branch and tag rulesets conditions object should contain both `repository_name` and `ref_name` properties, or both `repository_id` and `ref_name` properties, or both `repository_property` and `ref_name` properties.<br/>
-        /// The push rulesets conditions object does not require the `ref_name` property.
+        /// The push rulesets conditions object does not require the `ref_name` property.<br/>
+        /// For repository policy rulesets, the conditions object should only contain the `repository_name`, the `repository_id`, or the `repository_property`.
         /// </param>
         /// <param name="rules">
         /// An array of rules within the ruleset.

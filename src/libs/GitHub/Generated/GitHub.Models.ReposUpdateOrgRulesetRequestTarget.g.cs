@@ -20,6 +20,10 @@ namespace GitHub
         /// 
         /// </summary>
         Push,
+        /// <summary>
+        /// 
+        /// </summary>
+        Repository,
     }
 
     /// <summary>
@@ -37,6 +41,7 @@ namespace GitHub
                 ReposUpdateOrgRulesetRequestTarget.Branch => "branch",
                 ReposUpdateOrgRulesetRequestTarget.Tag => "tag",
                 ReposUpdateOrgRulesetRequestTarget.Push => "push",
+                ReposUpdateOrgRulesetRequestTarget.Repository => "repository",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -50,6 +55,7 @@ namespace GitHub
                 "branch" => ReposUpdateOrgRulesetRequestTarget.Branch,
                 "tag" => ReposUpdateOrgRulesetRequestTarget.Tag,
                 "push" => ReposUpdateOrgRulesetRequestTarget.Push,
+                "repository" => ReposUpdateOrgRulesetRequestTarget.Repository,
                 _ => null,
             };
         }

@@ -22,6 +22,12 @@ namespace GitHub
         public int? RepositoryId { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bundle_url")]
+        public string? BundleUrl { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -35,13 +41,16 @@ namespace GitHub
         /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
         /// </param>
         /// <param name="repositoryId"></param>
+        /// <param name="bundleUrl"></param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public OrgsListAttestationsResponseAttestation(
             global::GitHub.OrgsListAttestationsResponseAttestationBundle? bundle,
-            int? repositoryId)
+            int? repositoryId,
+            string? bundleUrl)
         {
             this.Bundle = bundle;
             this.RepositoryId = repositoryId;
+            this.BundleUrl = bundleUrl;
         }
 
         /// <summary>

@@ -21,6 +21,12 @@ namespace GitHub
         public int? RepositoryId { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("bundle_url")]
+        public string? BundleUrl { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -33,13 +39,16 @@ namespace GitHub
         /// Sigstore Bundle v0.1
         /// </param>
         /// <param name="repositoryId"></param>
+        /// <param name="bundleUrl"></param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public UsersListAttestationsResponseAttestation(
             global::GitHub.SigstoreBundle0? bundle,
-            int? repositoryId)
+            int? repositoryId,
+            string? bundleUrl)
         {
             this.Bundle = bundle;
             this.RepositoryId = repositoryId;
+            this.BundleUrl = bundleUrl;
         }
 
         /// <summary>
