@@ -125,6 +125,12 @@ namespace GitHub
         public global::GitHub.NullableSimpleUser? PushProtectionBypassRequestReviewer { get; set; }
 
         /// <summary>
+        /// An optional comment when reviewing a push protection bypass.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("push_protection_bypass_request_reviewer_comment")]
+        public string? PushProtectionBypassRequestReviewerComment { get; set; }
+
+        /// <summary>
         /// An optional comment when requesting a push protection bypass.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("push_protection_bypass_request_comment")]
@@ -224,6 +230,9 @@ namespace GitHub
         /// <param name="pushProtectionBypassRequestReviewer">
         /// A GitHub user.
         /// </param>
+        /// <param name="pushProtectionBypassRequestReviewerComment">
+        /// An optional comment when reviewing a push protection bypass.
+        /// </param>
         /// <param name="pushProtectionBypassRequestComment">
         /// An optional comment when requesting a push protection bypass.
         /// </param>
@@ -259,6 +268,7 @@ namespace GitHub
             global::GitHub.NullableSimpleUser? pushProtectionBypassedBy,
             global::System.DateTime? pushProtectionBypassedAt,
             global::GitHub.NullableSimpleUser? pushProtectionBypassRequestReviewer,
+            string? pushProtectionBypassRequestReviewerComment,
             string? pushProtectionBypassRequestComment,
             string? pushProtectionBypassRequestHtmlUrl,
             global::GitHub.SecretScanningAlertValidity? validity,
@@ -283,6 +293,7 @@ namespace GitHub
             this.PushProtectionBypassedBy = pushProtectionBypassedBy;
             this.PushProtectionBypassedAt = pushProtectionBypassedAt;
             this.PushProtectionBypassRequestReviewer = pushProtectionBypassRequestReviewer;
+            this.PushProtectionBypassRequestReviewerComment = pushProtectionBypassRequestReviewerComment;
             this.PushProtectionBypassRequestComment = pushProtectionBypassRequestComment;
             this.PushProtectionBypassRequestHtmlUrl = pushProtectionBypassRequestHtmlUrl;
             this.Validity = validity;

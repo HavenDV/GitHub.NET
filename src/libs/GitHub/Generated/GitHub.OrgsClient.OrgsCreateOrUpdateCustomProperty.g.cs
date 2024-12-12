@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
             ref string customPropertyName,
-            global::GitHub.OrgsCreateOrUpdateCustomPropertyRequest request);
+            global::GitHub.CustomPropertySetPayload request);
         partial void PrepareOrgsCreateOrUpdateCustomPropertyRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
             string customPropertyName,
-            global::GitHub.OrgsCreateOrUpdateCustomPropertyRequest request);
+            global::GitHub.CustomPropertySetPayload request);
         partial void ProcessOrgsCreateOrUpdateCustomPropertyResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -40,7 +40,7 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsCreateOrUpdateCustomPropertyAsync(
             string org,
             string customPropertyName,
-            global::GitHub.OrgsCreateOrUpdateCustomPropertyRequest request,
+            global::GitHub.CustomPropertySetPayload request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
@@ -244,14 +244,14 @@ namespace GitHub
         public async global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsCreateOrUpdateCustomPropertyAsync(
             string org,
             string customPropertyName,
-            global::GitHub.OrgsCreateOrUpdateCustomPropertyRequestValueType valueType,
+            global::GitHub.CustomPropertySetPayloadValueType valueType,
             bool? required = default,
             global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? defaultValue = default,
             string? description = default,
             global::System.Collections.Generic.IList<string>? allowedValues = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::GitHub.OrgsCreateOrUpdateCustomPropertyRequest
+            var __request = new global::GitHub.CustomPropertySetPayload
             {
                 ValueType = valueType,
                 Required = required,

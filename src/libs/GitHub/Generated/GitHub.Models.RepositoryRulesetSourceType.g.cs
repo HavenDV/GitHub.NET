@@ -16,6 +16,10 @@ namespace GitHub
         /// 
         /// </summary>
         Organization,
+        /// <summary>
+        /// 
+        /// </summary>
+        Enterprise,
     }
 
     /// <summary>
@@ -32,6 +36,7 @@ namespace GitHub
             {
                 RepositoryRulesetSourceType.Repository => "Repository",
                 RepositoryRulesetSourceType.Organization => "Organization",
+                RepositoryRulesetSourceType.Enterprise => "Enterprise",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +49,7 @@ namespace GitHub
             {
                 "Repository" => RepositoryRulesetSourceType.Repository,
                 "Organization" => RepositoryRulesetSourceType.Organization,
+                "Enterprise" => RepositoryRulesetSourceType.Enterprise,
                 _ => null,
             };
         }

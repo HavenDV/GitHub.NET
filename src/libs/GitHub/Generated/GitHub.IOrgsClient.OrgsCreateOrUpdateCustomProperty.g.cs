@@ -19,7 +19,7 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsCreateOrUpdateCustomPropertyAsync(
             string org,
             string customPropertyName,
-            global::GitHub.OrgsCreateOrUpdateCustomPropertyRequest request,
+            global::GitHub.CustomPropertySetPayload request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsCreateOrUpdateCustomPropertyAsync(
             string org,
             string customPropertyName,
-            global::GitHub.OrgsCreateOrUpdateCustomPropertyRequestValueType valueType,
+            global::GitHub.CustomPropertySetPayloadValueType valueType,
             bool? required = default,
             global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? defaultValue = default,
             string? description = default,

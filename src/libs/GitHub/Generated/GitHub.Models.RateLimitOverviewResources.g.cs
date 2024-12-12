@@ -71,6 +71,12 @@ namespace GitHub
         public global::GitHub.RateLimit? DependencySnapshots { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_autofix")]
+        public global::GitHub.RateLimit? CodeScanningAutofix { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -89,6 +95,7 @@ namespace GitHub
         /// <param name="actionsRunnerRegistration"></param>
         /// <param name="scim"></param>
         /// <param name="dependencySnapshots"></param>
+        /// <param name="codeScanningAutofix"></param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public RateLimitOverviewResources(
             global::GitHub.RateLimit core,
@@ -100,7 +107,8 @@ namespace GitHub
             global::GitHub.RateLimit? codeScanningUpload,
             global::GitHub.RateLimit? actionsRunnerRegistration,
             global::GitHub.RateLimit? scim,
-            global::GitHub.RateLimit? dependencySnapshots)
+            global::GitHub.RateLimit? dependencySnapshots,
+            global::GitHub.RateLimit? codeScanningAutofix)
         {
             this.Core = core ?? throw new global::System.ArgumentNullException(nameof(core));
             this.Search = search ?? throw new global::System.ArgumentNullException(nameof(search));
@@ -112,6 +120,7 @@ namespace GitHub
             this.ActionsRunnerRegistration = actionsRunnerRegistration;
             this.Scim = scim;
             this.DependencySnapshots = dependencySnapshots;
+            this.CodeScanningAutofix = codeScanningAutofix;
         }
 
         /// <summary>

@@ -9,6 +9,12 @@ namespace GitHub
     public sealed partial class RepositoryRulePullRequestParameters
     {
         /// <summary>
+        /// When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("allowed_merge_methods")]
+        public global::System.Collections.Generic.IList<string>? AllowedMergeMethods { get; set; }
+
+        /// <summary>
         /// New, reviewable commits pushed will dismiss previous pull request review approvals.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dismiss_stale_reviews_on_push")]
@@ -52,6 +58,9 @@ namespace GitHub
         /// <summary>
         /// Initializes a new instance of the <see cref="RepositoryRulePullRequestParameters" /> class.
         /// </summary>
+        /// <param name="allowedMergeMethods">
+        /// When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled.
+        /// </param>
         /// <param name="dismissStaleReviewsOnPush">
         /// New, reviewable commits pushed will dismiss previous pull request review approvals.
         /// </param>
@@ -73,13 +82,15 @@ namespace GitHub
             bool requireCodeOwnerReview,
             bool requireLastPushApproval,
             int requiredApprovingReviewCount,
-            bool requiredReviewThreadResolution)
+            bool requiredReviewThreadResolution,
+            global::System.Collections.Generic.IList<string>? allowedMergeMethods)
         {
             this.DismissStaleReviewsOnPush = dismissStaleReviewsOnPush;
             this.RequireCodeOwnerReview = requireCodeOwnerReview;
             this.RequireLastPushApproval = requireLastPushApproval;
             this.RequiredApprovingReviewCount = requiredApprovingReviewCount;
             this.RequiredReviewThreadResolution = requiredReviewThreadResolution;
+            this.AllowedMergeMethods = allowedMergeMethods;
         }
 
         /// <summary>
