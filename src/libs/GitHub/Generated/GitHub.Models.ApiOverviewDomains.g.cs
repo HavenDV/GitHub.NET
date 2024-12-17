@@ -41,6 +41,12 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("actions_inbound")]
+        public global::GitHub.ApiOverviewDomainsActionsInbound? ActionsInbound { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("artifact_attestations")]
         public global::GitHub.ApiOverviewDomainsArtifactAttestations? ArtifactAttestations { get; set; }
 
@@ -58,6 +64,7 @@ namespace GitHub
         /// <param name="copilot"></param>
         /// <param name="packages"></param>
         /// <param name="actions"></param>
+        /// <param name="actionsInbound"></param>
         /// <param name="artifactAttestations"></param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public ApiOverviewDomains(
@@ -66,6 +73,7 @@ namespace GitHub
             global::System.Collections.Generic.IList<string>? copilot,
             global::System.Collections.Generic.IList<string>? packages,
             global::System.Collections.Generic.IList<string>? actions,
+            global::GitHub.ApiOverviewDomainsActionsInbound? actionsInbound,
             global::GitHub.ApiOverviewDomainsArtifactAttestations? artifactAttestations)
         {
             this.Website = website;
@@ -73,6 +81,7 @@ namespace GitHub
             this.Copilot = copilot;
             this.Packages = packages;
             this.Actions = actions;
+            this.ActionsInbound = actionsInbound;
             this.ArtifactAttestations = artifactAttestations;
         }
 
