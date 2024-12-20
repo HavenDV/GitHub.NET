@@ -11,6 +11,10 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        Actions,
+        /// <summary>
+        /// 
+        /// </summary>
         CCpp,
         /// <summary>
         /// 
@@ -62,6 +66,7 @@ namespace GitHub
         {
             return value switch
             {
+                CodeScanningDefaultSetupLanguage.Actions => "actions",
                 CodeScanningDefaultSetupLanguage.CCpp => "c-cpp",
                 CodeScanningDefaultSetupLanguage.Csharp => "csharp",
                 CodeScanningDefaultSetupLanguage.Go => "go",
@@ -82,6 +87,7 @@ namespace GitHub
         {
             return value switch
             {
+                "actions" => CodeScanningDefaultSetupLanguage.Actions,
                 "c-cpp" => CodeScanningDefaultSetupLanguage.CCpp,
                 "csharp" => CodeScanningDefaultSetupLanguage.Csharp,
                 "go" => CodeScanningDefaultSetupLanguage.Go,
