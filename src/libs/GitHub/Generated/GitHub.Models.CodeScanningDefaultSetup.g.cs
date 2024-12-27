@@ -22,6 +22,21 @@ namespace GitHub
         public global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupLanguage>? Languages { get; set; }
 
         /// <summary>
+        /// Runner type to be used.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("runner_type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupRunnerTypeJsonConverter))]
+        public global::GitHub.CodeScanningDefaultSetupRunnerType? RunnerType { get; set; }
+
+        /// <summary>
+        /// Runner label to be used if the runner type is labeled.<br/>
+        /// Example: code-scanning
+        /// </summary>
+        /// <example>code-scanning</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("runner_label")]
+        public string? RunnerLabel { get; set; }
+
+        /// <summary>
         /// CodeQL query suite to be used.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("query_suite")]
@@ -56,6 +71,13 @@ namespace GitHub
         /// <param name="languages">
         /// Languages to be analyzed.
         /// </param>
+        /// <param name="runnerType">
+        /// Runner type to be used.
+        /// </param>
+        /// <param name="runnerLabel">
+        /// Runner label to be used if the runner type is labeled.<br/>
+        /// Example: code-scanning
+        /// </param>
         /// <param name="querySuite">
         /// CodeQL query suite to be used.
         /// </param>
@@ -69,12 +91,16 @@ namespace GitHub
         public CodeScanningDefaultSetup(
             global::GitHub.CodeScanningDefaultSetupState? state,
             global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupLanguage>? languages,
+            global::GitHub.CodeScanningDefaultSetupRunnerType? runnerType,
+            string? runnerLabel,
             global::GitHub.CodeScanningDefaultSetupQuerySuite? querySuite,
             global::System.DateTime? updatedAt,
             global::GitHub.CodeScanningDefaultSetupSchedule? schedule)
         {
             this.State = state;
             this.Languages = languages;
+            this.RunnerType = runnerType;
+            this.RunnerLabel = runnerLabel;
             this.QuerySuite = querySuite;
             this.UpdatedAt = updatedAt;
             this.Schedule = schedule;
