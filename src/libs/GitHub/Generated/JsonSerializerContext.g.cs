@@ -479,6 +479,8 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupStateNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupLanguageJsonConverter),
             typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupLanguageNullableJsonConverter),
+            typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupRunnerTypeJsonConverter),
+            typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupRunnerTypeNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupQuerySuiteJsonConverter),
             typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupQuerySuiteNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupScheduleJsonConverter),
