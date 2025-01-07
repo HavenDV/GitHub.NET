@@ -115,6 +115,12 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("comments_enabled")]
+        public bool? CommentsEnabled { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         public string? User { get; set; }
 
@@ -162,6 +168,7 @@ namespace GitHub
         /// <param name="updatedAt"></param>
         /// <param name="description"></param>
         /// <param name="comments"></param>
+        /// <param name="commentsEnabled"></param>
         /// <param name="user"></param>
         /// <param name="commentsUrl"></param>
         /// <param name="owner">
@@ -185,6 +192,7 @@ namespace GitHub
             string? updatedAt,
             string? description,
             int? comments,
+            bool? commentsEnabled,
             string? user,
             string? commentsUrl,
             global::GitHub.SimpleUser? owner,
@@ -205,6 +213,7 @@ namespace GitHub
             this.UpdatedAt = updatedAt;
             this.Description = description;
             this.Comments = comments;
+            this.CommentsEnabled = commentsEnabled;
             this.User = user;
             this.CommentsUrl = commentsUrl;
             this.Owner = owner;
