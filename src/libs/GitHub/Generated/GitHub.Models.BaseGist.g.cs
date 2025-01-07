@@ -107,6 +107,12 @@ namespace GitHub
         public required int Comments { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("comments_enabled")]
+        public bool? CommentsEnabled { get; set; }
+
+        /// <summary>
         /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
@@ -167,6 +173,7 @@ namespace GitHub
         /// <param name="updatedAt"></param>
         /// <param name="description"></param>
         /// <param name="comments"></param>
+        /// <param name="commentsEnabled"></param>
         /// <param name="user">
         /// A GitHub user.
         /// </param>
@@ -195,6 +202,7 @@ namespace GitHub
             int comments,
             global::GitHub.NullableSimpleUser? user,
             string commentsUrl,
+            bool? commentsEnabled,
             global::GitHub.SimpleUser? owner,
             bool? truncated,
             global::System.Collections.Generic.IList<object>? forks,
@@ -216,6 +224,7 @@ namespace GitHub
             this.Comments = comments;
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
             this.CommentsUrl = commentsUrl ?? throw new global::System.ArgumentNullException(nameof(commentsUrl));
+            this.CommentsEnabled = commentsEnabled;
             this.Owner = owner;
             this.Truncated = truncated;
             this.Forks = forks;
