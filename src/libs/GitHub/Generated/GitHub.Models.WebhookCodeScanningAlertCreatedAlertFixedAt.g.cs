@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// 
+    /// The time that the alert was fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
     /// </summary>
     public sealed partial class WebhookCodeScanningAlertCreatedAlertFixedAt
     {

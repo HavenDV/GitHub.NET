@@ -43,7 +43,7 @@ namespace GitHub
         public required object? DismissedReason { get; set; }
 
         /// <summary>
-        /// 
+        /// The time that the alert was fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fixed_at")]
         public object? FixedAt { get; set; }
@@ -82,7 +82,7 @@ namespace GitHub
         public required global::GitHub.WebhookCodeScanningAlertCreatedAlertRule Rule { get; set; }
 
         /// <summary>
-        /// State of a code scanning alert.
+        /// State of a code scanning alert. Events for alerts found outside the default branch will return a `null` value until they are dismissed or fixed.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertCreatedAlertStateJsonConverter))]
@@ -131,7 +131,9 @@ namespace GitHub
         /// <param name="dismissedReason">
         /// The reason for dismissing or closing the alert. Can be one of: `false positive`, `won't fix`, and `used in tests`.
         /// </param>
-        /// <param name="fixedAt"></param>
+        /// <param name="fixedAt">
+        /// The time that the alert was fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        /// </param>
         /// <param name="htmlUrl">
         /// The GitHub URL of the alert resource.
         /// </param>
@@ -142,7 +144,7 @@ namespace GitHub
         /// </param>
         /// <param name="rule"></param>
         /// <param name="state">
-        /// State of a code scanning alert.
+        /// State of a code scanning alert. Events for alerts found outside the default branch will return a `null` value until they are dismissed or fixed.
         /// </param>
         /// <param name="tool"></param>
         /// <param name="updatedAt"></param>
