@@ -30,12 +30,24 @@ namespace GitHub
         public required global::GitHub.WebhookCodeScanningAlertAppearedInBranchAlertDismissedBy? DismissedBy { get; set; }
 
         /// <summary>
+        /// The dismissal comment associated with the dismissal of the alert.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dismissed_comment")]
+        public string? DismissedComment { get; set; }
+
+        /// <summary>
         /// The reason for dismissing or closing the alert.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dismissed_reason")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertAppearedInBranchAlertDismissedReasonJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhookCodeScanningAlertAppearedInBranchAlertDismissedReason? DismissedReason { get; set; }
+
+        /// <summary>
+        /// The time that the alert was fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_at")]
+        public object? FixedAt { get; set; }
 
         /// <summary>
         /// The GitHub URL of the alert resource.
@@ -65,12 +77,12 @@ namespace GitHub
         public required global::GitHub.WebhookCodeScanningAlertAppearedInBranchAlertRule Rule { get; set; }
 
         /// <summary>
-        /// State of a code scanning alert.
+        /// State of a code scanning alert. Events for alerts found outside the default branch will return a `null` value until they are dismissed or fixed.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertAppearedInBranchAlertStateJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookCodeScanningAlertAppearedInBranchAlertState State { get; set; }
+        public required global::GitHub.WebhookCodeScanningAlertAppearedInBranchAlertState? State { get; set; }
 
         /// <summary>
         /// 
@@ -102,8 +114,14 @@ namespace GitHub
         /// The time that the alert was dismissed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         /// </param>
         /// <param name="dismissedBy"></param>
+        /// <param name="dismissedComment">
+        /// The dismissal comment associated with the dismissal of the alert.
+        /// </param>
         /// <param name="dismissedReason">
         /// The reason for dismissing or closing the alert.
+        /// </param>
+        /// <param name="fixedAt">
+        /// The time that the alert was fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         /// </param>
         /// <param name="htmlUrl">
         /// The GitHub URL of the alert resource.
@@ -114,7 +132,7 @@ namespace GitHub
         /// </param>
         /// <param name="rule"></param>
         /// <param name="state">
-        /// State of a code scanning alert.
+        /// State of a code scanning alert. Events for alerts found outside the default branch will return a `null` value until they are dismissed or fixed.
         /// </param>
         /// <param name="tool"></param>
         /// <param name="url"></param>
@@ -127,9 +145,11 @@ namespace GitHub
             string htmlUrl,
             int number,
             global::GitHub.WebhookCodeScanningAlertAppearedInBranchAlertRule rule,
-            global::GitHub.WebhookCodeScanningAlertAppearedInBranchAlertState state,
+            global::GitHub.WebhookCodeScanningAlertAppearedInBranchAlertState? state,
             global::GitHub.WebhookCodeScanningAlertAppearedInBranchAlertTool tool,
             string url,
+            string? dismissedComment,
+            object? fixedAt,
             global::GitHub.WebhookCodeScanningAlertAppearedInBranchAlertMostRecentInstance? mostRecentInstance)
         {
             this.CreatedAt = createdAt;
@@ -142,6 +162,8 @@ namespace GitHub
             this.State = state;
             this.Tool = tool ?? throw new global::System.ArgumentNullException(nameof(tool));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.DismissedComment = dismissedComment;
+            this.FixedAt = fixedAt;
             this.MostRecentInstance = mostRecentInstance;
         }
 

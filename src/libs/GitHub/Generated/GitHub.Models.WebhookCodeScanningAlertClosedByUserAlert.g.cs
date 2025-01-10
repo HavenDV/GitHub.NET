@@ -30,12 +30,24 @@ namespace GitHub
         public required global::GitHub.WebhookCodeScanningAlertClosedByUserAlertDismissedBy? DismissedBy { get; set; }
 
         /// <summary>
+        /// The dismissal comment associated with the dismissal of the alert.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dismissed_comment")]
+        public string? DismissedComment { get; set; }
+
+        /// <summary>
         /// The reason for dismissing or closing the alert.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dismissed_reason")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertClosedByUserAlertDismissedReasonJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhookCodeScanningAlertClosedByUserAlertDismissedReason? DismissedReason { get; set; }
+
+        /// <summary>
+        /// The time that the alert was fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fixed_at")]
+        public object? FixedAt { get; set; }
 
         /// <summary>
         /// The GitHub URL of the alert resource.
@@ -102,8 +114,14 @@ namespace GitHub
         /// The time that the alert was dismissed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         /// </param>
         /// <param name="dismissedBy"></param>
+        /// <param name="dismissedComment">
+        /// The dismissal comment associated with the dismissal of the alert.
+        /// </param>
         /// <param name="dismissedReason">
         /// The reason for dismissing or closing the alert.
+        /// </param>
+        /// <param name="fixedAt">
+        /// The time that the alert was fixed in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.
         /// </param>
         /// <param name="htmlUrl">
         /// The GitHub URL of the alert resource.
@@ -130,6 +148,8 @@ namespace GitHub
             global::GitHub.WebhookCodeScanningAlertClosedByUserAlertState state,
             global::GitHub.WebhookCodeScanningAlertClosedByUserAlertTool tool,
             string url,
+            string? dismissedComment,
+            object? fixedAt,
             global::GitHub.WebhookCodeScanningAlertClosedByUserAlertMostRecentInstance? mostRecentInstance)
         {
             this.CreatedAt = createdAt;
@@ -142,6 +162,8 @@ namespace GitHub
             this.State = state;
             this.Tool = tool ?? throw new global::System.ArgumentNullException(nameof(tool));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.DismissedComment = dismissedComment;
+            this.FixedAt = fixedAt;
             this.MostRecentInstance = mostRecentInstance;
         }
 

@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// State of a code scanning alert.
+    /// State of a code scanning alert. Events for alerts found outside the default branch will return a `null` value until they are dismissed or fixed.
     /// </summary>
     public enum WebhookCodeScanningAlertCreatedAlertState
     {
