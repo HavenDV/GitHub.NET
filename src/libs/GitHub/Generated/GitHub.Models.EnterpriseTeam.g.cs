@@ -52,6 +52,13 @@ namespace GitHub
         public string? GroupId { get; set; }
 
         /// <summary>
+        /// Example: Justice League
+        /// </summary>
+        /// <example>Justice League</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("group_name")]
+        public string? GroupName { get; set; }
+
+        /// <summary>
         /// Example: https://github.com/enterprises/dc/teams/justice-league
         /// </summary>
         /// <example>https://github.com/enterprises/dc/teams/justice-league</example>
@@ -99,6 +106,9 @@ namespace GitHub
         /// <param name="groupId">
         /// Example: 62ab9291-fae2-468e-974b-7e45096d5021
         /// </param>
+        /// <param name="groupName">
+        /// Example: Justice League
+        /// </param>
         /// <param name="htmlUrl">
         /// Example: https://github.com/enterprises/dc/teams/justice-league
         /// </param>
@@ -116,7 +126,8 @@ namespace GitHub
             string membersUrl,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
-            string? groupId)
+            string? groupId,
+            string? groupName)
         {
             this.Id = id;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -128,6 +139,7 @@ namespace GitHub
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.GroupId = groupId;
+            this.GroupName = groupName;
         }
 
         /// <summary>
