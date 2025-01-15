@@ -19,8 +19,8 @@ namespace GitHub
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// Enable automated security fixes<br/>
-        /// Enables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see "[Configuring automated security fixes](https://docs.github.com/articles/configuring-automated-security-fixes)".
+        /// Enable Dependabot security updates<br/>
+        /// Enables Dependabot security updates for a repository. The authenticated user must have admin access to the repository. For more information, see "[Configuring Dependabot security updates](https://docs.github.com/articles/configuring-automated-security-fixes)".
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>

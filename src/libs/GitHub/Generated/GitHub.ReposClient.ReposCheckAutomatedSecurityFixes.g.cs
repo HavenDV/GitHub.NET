@@ -24,8 +24,8 @@ namespace GitHub
             ref string content);
 
         /// <summary>
-        /// Check if automated security fixes are enabled for a repository<br/>
-        /// Shows whether automated security fixes are enabled, disabled or paused for a repository. The authenticated user must have admin read access to the repository. For more information, see "[Configuring automated security fixes](https://docs.github.com/articles/configuring-automated-security-fixes)".
+        /// Check if Dependabot security updates are enabled for a repository<br/>
+        /// Shows whether Dependabot security updates are enabled, disabled or paused for a repository. The authenticated user must have admin read access to the repository. For more information, see "[Configuring Dependabot security updates](https://docs.github.com/articles/configuring-automated-security-fixes)".
         /// </summary>
         /// <param name="owner"></param>
         /// <param name="repo"></param>

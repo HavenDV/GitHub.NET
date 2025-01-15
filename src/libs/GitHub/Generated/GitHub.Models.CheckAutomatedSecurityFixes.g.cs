@@ -4,12 +4,12 @@
 namespace GitHub
 {
     /// <summary>
-    /// Check Automated Security Fixes
+    /// Check Dependabot security updates
     /// </summary>
     public sealed partial class CheckAutomatedSecurityFixes
     {
         /// <summary>
-        /// Whether automated security fixes are enabled for the repository.<br/>
+        /// Whether Dependabot security updates are enabled for the repository.<br/>
         /// Example: true
         /// </summary>
         /// <example>true</example>
@@ -18,7 +18,7 @@ namespace GitHub
         public required bool Enabled { get; set; }
 
         /// <summary>
-        /// Whether automated security fixes are paused for the repository.<br/>
+        /// Whether Dependabot security updates are paused for the repository.<br/>
         /// Example: false
         /// </summary>
         /// <example>false</example>
@@ -36,11 +36,11 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="CheckAutomatedSecurityFixes" /> class.
         /// </summary>
         /// <param name="enabled">
-        /// Whether automated security fixes are enabled for the repository.<br/>
+        /// Whether Dependabot security updates are enabled for the repository.<br/>
         /// Example: true
         /// </param>
         /// <param name="paused">
-        /// Whether automated security fixes are paused for the repository.<br/>
+        /// Whether Dependabot security updates are paused for the repository.<br/>
         /// Example: false
         /// </param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
