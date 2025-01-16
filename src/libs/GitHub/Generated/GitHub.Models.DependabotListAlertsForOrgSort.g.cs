@@ -16,6 +16,10 @@ namespace GitHub
         /// 
         /// </summary>
         Updated,
+        /// <summary>
+        /// 
+        /// </summary>
+        EpssPercentage,
     }
 
     /// <summary>
@@ -32,6 +36,7 @@ namespace GitHub
             {
                 DependabotListAlertsForOrgSort.Created => "created",
                 DependabotListAlertsForOrgSort.Updated => "updated",
+                DependabotListAlertsForOrgSort.EpssPercentage => "epss_percentage",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +49,7 @@ namespace GitHub
             {
                 "created" => DependabotListAlertsForOrgSort.Created,
                 "updated" => DependabotListAlertsForOrgSort.Updated,
+                "epss_percentage" => DependabotListAlertsForOrgSort.EpssPercentage,
                 _ => null,
             };
         }
