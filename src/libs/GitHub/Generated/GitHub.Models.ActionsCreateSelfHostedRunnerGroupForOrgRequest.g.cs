@@ -56,6 +56,12 @@ namespace GitHub
         public global::System.Collections.Generic.IList<string>? SelectedWorkflows { get; set; }
 
         /// <summary>
+        /// The identifier of a hosted compute network configuration.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("network_configuration_id")]
+        public string? NetworkConfigurationId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -88,6 +94,9 @@ namespace GitHub
         /// <param name="selectedWorkflows">
         /// List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
         /// </param>
+        /// <param name="networkConfigurationId">
+        /// The identifier of a hosted compute network configuration.
+        /// </param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public ActionsCreateSelfHostedRunnerGroupForOrgRequest(
             string name,
@@ -96,7 +105,8 @@ namespace GitHub
             global::System.Collections.Generic.IList<int>? runners,
             bool? allowsPublicRepositories,
             bool? restrictedToWorkflows,
-            global::System.Collections.Generic.IList<string>? selectedWorkflows)
+            global::System.Collections.Generic.IList<string>? selectedWorkflows,
+            string? networkConfigurationId)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Visibility = visibility;
@@ -105,6 +115,7 @@ namespace GitHub
             this.AllowsPublicRepositories = allowsPublicRepositories;
             this.RestrictedToWorkflows = restrictedToWorkflows;
             this.SelectedWorkflows = selectedWorkflows;
+            this.NetworkConfigurationId = networkConfigurationId;
         }
 
         /// <summary>

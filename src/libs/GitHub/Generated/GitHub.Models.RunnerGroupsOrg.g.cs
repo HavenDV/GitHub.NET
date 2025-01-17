@@ -56,6 +56,12 @@ namespace GitHub
         public string? HostedRunnersUrl { get; set; }
 
         /// <summary>
+        /// The identifier of a hosted compute network configuration.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("network_configuration_id")]
+        public string? NetworkConfigurationId { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("inherited")]
@@ -113,6 +119,9 @@ namespace GitHub
         /// </param>
         /// <param name="runnersUrl"></param>
         /// <param name="hostedRunnersUrl"></param>
+        /// <param name="networkConfigurationId">
+        /// The identifier of a hosted compute network configuration.
+        /// </param>
         /// <param name="inherited"></param>
         /// <param name="inheritedAllowsPublicRepositories"></param>
         /// <param name="allowsPublicRepositories"></param>
@@ -138,6 +147,7 @@ namespace GitHub
             bool allowsPublicRepositories,
             string? selectedRepositoriesUrl,
             string? hostedRunnersUrl,
+            string? networkConfigurationId,
             bool? inheritedAllowsPublicRepositories,
             bool? workflowRestrictionsReadOnly,
             bool? restrictedToWorkflows,
@@ -152,6 +162,7 @@ namespace GitHub
             this.AllowsPublicRepositories = allowsPublicRepositories;
             this.SelectedRepositoriesUrl = selectedRepositoriesUrl;
             this.HostedRunnersUrl = hostedRunnersUrl;
+            this.NetworkConfigurationId = networkConfigurationId;
             this.InheritedAllowsPublicRepositories = inheritedAllowsPublicRepositories;
             this.WorkflowRestrictionsReadOnly = workflowRestrictionsReadOnly;
             this.RestrictedToWorkflows = restrictedToWorkflows;

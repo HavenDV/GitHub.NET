@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace GitHub
@@ -41,11 +43,12 @@ namespace GitHub
         public string? ClientId { get; set; }
 
         /// <summary>
-        /// A GitHub user.
+        /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OneOfJsonConverter<global::GitHub.SimpleUser, global::GitHub.Enterprise>))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.NullableSimpleUser? Owner { get; set; }
+        public required global::GitHub.OneOf<global::GitHub.SimpleUser, global::GitHub.Enterprise> Owner { get; set; }
 
         /// <summary>
         /// The name of the GitHub app<br/>
@@ -162,9 +165,7 @@ namespace GitHub
         /// <param name="clientId">
         /// Example: "Iv1.25b5d1e65ffc4022"
         /// </param>
-        /// <param name="owner">
-        /// A GitHub user.
-        /// </param>
+        /// <param name="owner"></param>
         /// <param name="name">
         /// The name of the GitHub app<br/>
         /// Example: Probot Owners
@@ -204,7 +205,7 @@ namespace GitHub
         public NullableIntegration(
             int id,
             string nodeId,
-            global::GitHub.NullableSimpleUser? owner,
+            global::GitHub.OneOf<global::GitHub.SimpleUser, global::GitHub.Enterprise> owner,
             string name,
             string? description,
             string externalUrl,
@@ -222,7 +223,7 @@ namespace GitHub
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
-            this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
+            this.Owner = owner;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
             this.ExternalUrl = externalUrl ?? throw new global::System.ArgumentNullException(nameof(externalUrl));
