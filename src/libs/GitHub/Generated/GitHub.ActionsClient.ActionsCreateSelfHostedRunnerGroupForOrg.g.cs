@@ -179,6 +179,9 @@ namespace GitHub
         /// <param name="selectedWorkflows">
         /// List of workflows the runner group should be allowed to run. This setting will be ignored unless `restricted_to_workflows` is set to `true`.
         /// </param>
+        /// <param name="networkConfigurationId">
+        /// The identifier of a hosted compute network configuration.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.RunnerGroupsOrg> ActionsCreateSelfHostedRunnerGroupForOrgAsync(
@@ -190,6 +193,7 @@ namespace GitHub
             bool? allowsPublicRepositories = default,
             bool? restrictedToWorkflows = default,
             global::System.Collections.Generic.IList<string>? selectedWorkflows = default,
+            string? networkConfigurationId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.ActionsCreateSelfHostedRunnerGroupForOrgRequest
@@ -201,6 +205,7 @@ namespace GitHub
                 AllowsPublicRepositories = allowsPublicRepositories,
                 RestrictedToWorkflows = restrictedToWorkflows,
                 SelectedWorkflows = selectedWorkflows,
+                NetworkConfigurationId = networkConfigurationId,
             };
 
             return await ActionsCreateSelfHostedRunnerGroupForOrgAsync(
