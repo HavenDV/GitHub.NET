@@ -14,6 +14,7 @@ namespace GitHub
             ref string? ecosystem,
             ref string? package,
             ref string? manifest,
+            ref string? epssPercentage,
             ref global::GitHub.DependabotListAlertsForRepoScope? scope,
             ref global::GitHub.DependabotListAlertsForRepoSort? sort,
             ref global::GitHub.DependabotListAlertsForRepoDirection? direction,
@@ -33,6 +34,7 @@ namespace GitHub
             string? ecosystem,
             string? package,
             string? manifest,
+            string? epssPercentage,
             global::GitHub.DependabotListAlertsForRepoScope? scope,
             global::GitHub.DependabotListAlertsForRepoSort? sort,
             global::GitHub.DependabotListAlertsForRepoDirection? direction,
@@ -62,6 +64,7 @@ namespace GitHub
         /// <param name="ecosystem"></param>
         /// <param name="package"></param>
         /// <param name="manifest"></param>
+        /// <param name="epssPercentage"></param>
         /// <param name="scope"></param>
         /// <param name="sort">
         /// Default Value: created
@@ -91,6 +94,7 @@ namespace GitHub
             string? ecosystem = default,
             string? package = default,
             string? manifest = default,
+            string? epssPercentage = default,
             global::GitHub.DependabotListAlertsForRepoScope? scope = default,
             global::GitHub.DependabotListAlertsForRepoSort? sort = default,
             global::GitHub.DependabotListAlertsForRepoDirection? direction = default,
@@ -113,6 +117,7 @@ namespace GitHub
                 ecosystem: ref ecosystem,
                 package: ref package,
                 manifest: ref manifest,
+                epssPercentage: ref epssPercentage,
                 scope: ref scope,
                 sort: ref sort,
                 direction: ref direction,
@@ -132,6 +137,7 @@ namespace GitHub
                 .AddOptionalParameter("ecosystem", ecosystem) 
                 .AddOptionalParameter("package", package) 
                 .AddOptionalParameter("manifest", manifest) 
+                .AddOptionalParameter("epss_percentage", epssPercentage) 
                 .AddOptionalParameter("scope", scope?.ToValueString()) 
                 .AddOptionalParameter("sort", sort?.ToValueString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 
@@ -164,6 +170,7 @@ namespace GitHub
                 ecosystem: ecosystem,
                 package: package,
                 manifest: manifest,
+                epssPercentage: epssPercentage,
                 scope: scope,
                 sort: sort,
                 direction: direction,

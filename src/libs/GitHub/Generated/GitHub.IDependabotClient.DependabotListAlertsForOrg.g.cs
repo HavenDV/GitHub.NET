@@ -15,6 +15,7 @@ namespace GitHub
         /// <param name="severity"></param>
         /// <param name="ecosystem"></param>
         /// <param name="package"></param>
+        /// <param name="epssPercentage"></param>
         /// <param name="scope"></param>
         /// <param name="sort">
         /// Default Value: created
@@ -39,6 +40,7 @@ namespace GitHub
             string? severity = default,
             string? ecosystem = default,
             string? package = default,
+            string? epssPercentage = default,
             global::GitHub.DependabotListAlertsForOrgScope? scope = default,
             global::GitHub.DependabotListAlertsForOrgSort? sort = default,
             global::GitHub.DependabotListAlertsForOrgDirection? direction = default,

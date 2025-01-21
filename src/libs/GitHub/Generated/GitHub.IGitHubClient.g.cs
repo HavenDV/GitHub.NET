@@ -237,5 +237,10 @@ namespace GitHub
         /// </summary>
         public PrivateRegistriesClient PrivateRegistries { get; }
 
+        /// <summary>
+        /// Manage hosted compute networking resources.
+        /// </summary>
+        public HostedComputeClient HostedCompute { get; }
+
     }
 }
