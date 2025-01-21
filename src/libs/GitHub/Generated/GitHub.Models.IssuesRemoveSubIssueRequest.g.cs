@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class IssuesRemoveSubIssueRequest
     {
         /// <summary>
-        /// The sub-issue to remove
+        /// The id of the sub-issue to remove
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_issue_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -25,7 +25,7 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="IssuesRemoveSubIssueRequest" /> class.
         /// </summary>
         /// <param name="subIssueId">
-        /// The sub-issue to remove
+        /// The id of the sub-issue to remove
         /// </param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public IssuesRemoveSubIssueRequest(

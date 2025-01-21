@@ -45,7 +45,7 @@ namespace GitHub
         /// <param name="repo"></param>
         /// <param name="issueNumber"></param>
         /// <param name="subIssueId">
-        /// The sub-issue to add
+        /// The id of the sub-issue to add. The sub-issue must belong to the same repository as the parent issue
         /// </param>
         /// <param name="replaceParent">
         /// Option that, when true, instructs the operation to replace the sub-issues current parent issue

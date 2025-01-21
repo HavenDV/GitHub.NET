@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class IssuesAddSubIssueRequest
     {
         /// <summary>
-        /// The sub-issue to add
+        /// The id of the sub-issue to add. The sub-issue must belong to the same repository as the parent issue
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_issue_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -31,7 +31,7 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="IssuesAddSubIssueRequest" /> class.
         /// </summary>
         /// <param name="subIssueId">
-        /// The sub-issue to add
+        /// The id of the sub-issue to add. The sub-issue must belong to the same repository as the parent issue
         /// </param>
         /// <param name="replaceParent">
         /// Option that, when true, instructs the operation to replace the sub-issues current parent issue

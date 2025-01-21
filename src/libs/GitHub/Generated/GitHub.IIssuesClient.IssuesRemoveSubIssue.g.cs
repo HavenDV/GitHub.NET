@@ -45,7 +45,7 @@ namespace GitHub
         /// <param name="repo"></param>
         /// <param name="issueNumber"></param>
         /// <param name="subIssueId">
-        /// The sub-issue to remove
+        /// The id of the sub-issue to remove
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>

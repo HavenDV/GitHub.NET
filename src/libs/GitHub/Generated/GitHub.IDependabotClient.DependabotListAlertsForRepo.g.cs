@@ -15,6 +15,7 @@ namespace GitHub
         /// <param name="ecosystem"></param>
         /// <param name="package"></param>
         /// <param name="manifest"></param>
+        /// <param name="epssPercentage"></param>
         /// <param name="scope"></param>
         /// <param name="sort">
         /// Default Value: created
@@ -44,6 +45,7 @@ namespace GitHub
             string? ecosystem = default,
             string? package = default,
             string? manifest = default,
+            string? epssPercentage = default,
             global::GitHub.DependabotListAlertsForRepoScope? scope = default,
             global::GitHub.DependabotListAlertsForRepoSort? sort = default,
             global::GitHub.DependabotListAlertsForRepoDirection? direction = default,

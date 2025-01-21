@@ -12,6 +12,7 @@ namespace GitHub
             ref string? severity,
             ref string? ecosystem,
             ref string? package,
+            ref string? epssPercentage,
             ref global::GitHub.DependabotListAlertsForEnterpriseScope? scope,
             ref global::GitHub.DependabotListAlertsForEnterpriseSort? sort,
             ref global::GitHub.DependabotListAlertsForEnterpriseDirection? direction,
@@ -28,6 +29,7 @@ namespace GitHub
             string? severity,
             string? ecosystem,
             string? package,
+            string? epssPercentage,
             global::GitHub.DependabotListAlertsForEnterpriseScope? scope,
             global::GitHub.DependabotListAlertsForEnterpriseSort? sort,
             global::GitHub.DependabotListAlertsForEnterpriseDirection? direction,
@@ -57,6 +59,7 @@ namespace GitHub
         /// <param name="severity"></param>
         /// <param name="ecosystem"></param>
         /// <param name="package"></param>
+        /// <param name="epssPercentage"></param>
         /// <param name="scope"></param>
         /// <param name="sort">
         /// Default Value: created
@@ -81,6 +84,7 @@ namespace GitHub
             string? severity = default,
             string? ecosystem = default,
             string? package = default,
+            string? epssPercentage = default,
             global::GitHub.DependabotListAlertsForEnterpriseScope? scope = default,
             global::GitHub.DependabotListAlertsForEnterpriseSort? sort = default,
             global::GitHub.DependabotListAlertsForEnterpriseDirection? direction = default,
@@ -100,6 +104,7 @@ namespace GitHub
                 severity: ref severity,
                 ecosystem: ref ecosystem,
                 package: ref package,
+                epssPercentage: ref epssPercentage,
                 scope: ref scope,
                 sort: ref sort,
                 direction: ref direction,
@@ -117,6 +122,7 @@ namespace GitHub
                 .AddOptionalParameter("severity", severity) 
                 .AddOptionalParameter("ecosystem", ecosystem) 
                 .AddOptionalParameter("package", package) 
+                .AddOptionalParameter("epss_percentage", epssPercentage) 
                 .AddOptionalParameter("scope", scope?.ToValueString()) 
                 .AddOptionalParameter("sort", sort?.ToValueString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 
@@ -146,6 +152,7 @@ namespace GitHub
                 severity: severity,
                 ecosystem: ecosystem,
                 package: package,
+                epssPercentage: epssPercentage,
                 scope: scope,
                 sort: sort,
                 direction: direction,
