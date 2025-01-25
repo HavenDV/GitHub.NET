@@ -72,6 +72,13 @@ namespace GitHub
         public global::GitHub.CvssSeverities? CvssSeverities { get; set; }
 
         /// <summary>
+        /// The EPSS scores as calculated by the [Exploit Prediction Scoring System](https://www.first.org/epss).<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("epss")]
+        public global::GitHub.SecurityAdvisoryEpss? Epss { get; set; }
+
+        /// <summary>
         /// Details for the advisory pertaining to Common Weakness Enumeration.<br/>
         /// Included only in responses
         /// </summary>
@@ -156,6 +163,10 @@ namespace GitHub
         /// Included only in responses
         /// </param>
         /// <param name="cvssSeverities"></param>
+        /// <param name="epss">
+        /// The EPSS scores as calculated by the [Exploit Prediction Scoring System](https://www.first.org/epss).<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="cwes">
         /// Details for the advisory pertaining to Common Weakness Enumeration.<br/>
         /// Included only in responses
@@ -184,6 +195,7 @@ namespace GitHub
         public DependabotAlertSecurityAdvisory(
             string? cveId,
             global::GitHub.CvssSeverities? cvssSeverities,
+            global::GitHub.SecurityAdvisoryEpss? epss,
             global::System.DateTime? withdrawnAt,
             string ghsaId = default!,
             string summary = default!,
@@ -205,6 +217,7 @@ namespace GitHub
             this.Severity = severity;
             this.Cvss = cvss;
             this.CvssSeverities = cvssSeverities;
+            this.Epss = epss;
             this.Cwes = cwes;
             this.Identifiers = identifiers;
             this.References = references;

@@ -156,17 +156,18 @@ namespace GitHub
         public global::GitHub.CvssSeverities? CvssSeverities { get; set; }
 
         /// <summary>
+        /// The EPSS scores as calculated by the [Exploit Prediction Scoring System](https://www.first.org/epss).<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("epss")]
+        public global::GitHub.SecurityAdvisoryEpss? Epss { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cwes")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCwe>? Cwes { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("epss")]
-        public global::GitHub.GlobalAdvisoryEpss? Epss { get; set; }
 
         /// <summary>
         /// The users who contributed to the advisory.<br/>
@@ -250,8 +251,11 @@ namespace GitHub
         /// </param>
         /// <param name="cvss"></param>
         /// <param name="cvssSeverities"></param>
+        /// <param name="epss">
+        /// The EPSS scores as calculated by the [Exploit Prediction Scoring System](https://www.first.org/epss).<br/>
+        /// Included only in responses
+        /// </param>
         /// <param name="cwes"></param>
-        /// <param name="epss"></param>
         /// <param name="credits">
         /// The users who contributed to the advisory.<br/>
         /// Included only in responses
@@ -273,7 +277,7 @@ namespace GitHub
             global::System.DateTime? nvdPublishedAt,
             global::System.DateTime? withdrawnAt,
             global::GitHub.CvssSeverities? cvssSeverities,
-            global::GitHub.GlobalAdvisoryEpss? epss,
+            global::GitHub.SecurityAdvisoryEpss? epss,
             global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCredit>? credits,
             string ghsaId = default!,
             string url = default!,

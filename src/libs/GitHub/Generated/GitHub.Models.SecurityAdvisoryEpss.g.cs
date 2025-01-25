@@ -4,9 +4,10 @@
 namespace GitHub
 {
     /// <summary>
-    /// 
+    /// The EPSS scores as calculated by the [Exploit Prediction Scoring System](https://www.first.org/epss).<br/>
+    /// Included only in responses
     /// </summary>
-    public sealed partial class GlobalAdvisoryEpss
+    public sealed partial class SecurityAdvisoryEpss
     {
         /// <summary>
         /// 
@@ -27,12 +28,12 @@ namespace GitHub
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GlobalAdvisoryEpss" /> class.
+        /// Initializes a new instance of the <see cref="SecurityAdvisoryEpss" /> class.
         /// </summary>
         /// <param name="percentage"></param>
         /// <param name="percentile"></param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
-        public GlobalAdvisoryEpss(
+        public SecurityAdvisoryEpss(
             double? percentage,
             double? percentile)
         {
@@ -41,9 +42,9 @@ namespace GitHub
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GlobalAdvisoryEpss" /> class.
+        /// Initializes a new instance of the <see cref="SecurityAdvisoryEpss" /> class.
         /// </summary>
-        public GlobalAdvisoryEpss()
+        public SecurityAdvisoryEpss()
         {
         }
     }

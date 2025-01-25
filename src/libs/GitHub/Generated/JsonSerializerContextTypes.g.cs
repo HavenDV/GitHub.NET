@@ -66,67 +66,67 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SimpleUser? Type10 { get; set; }
+        public global::GitHub.SecurityAdvisoryEpss? Type10 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public long? Type11 { get; set; }
+        public global::GitHub.SimpleUser? Type11 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public bool? Type12 { get; set; }
+        public long? Type12 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoryCreditTypes? Type13 { get; set; }
+        public bool? Type13 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GlobalAdvisory? Type14 { get; set; }
+        public global::GitHub.SecurityAdvisoryCreditTypes? Type14 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GlobalAdvisoryType? Type15 { get; set; }
+        public global::GitHub.GlobalAdvisory? Type15 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GlobalAdvisorySeverity? Type16 { get; set; }
+        public global::GitHub.GlobalAdvisoryType? Type16 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryIdentifier>? Type17 { get; set; }
+        public global::GitHub.GlobalAdvisorySeverity? Type17 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GlobalAdvisoryIdentifier? Type18 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryIdentifier>? Type18 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GlobalAdvisoryIdentifierType? Type19 { get; set; }
+        public global::GitHub.GlobalAdvisoryIdentifier? Type19 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.DateTime? Type20 { get; set; }
+        public global::GitHub.GlobalAdvisoryIdentifierType? Type20 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Vulnerability>? Type21 { get; set; }
+        public global::System.DateTime? Type21 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GlobalAdvisoryCvss? Type22 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Vulnerability>? Type22 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCwe>? Type23 { get; set; }
+        public global::GitHub.GlobalAdvisoryCvss? Type23 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GlobalAdvisoryCwe? Type24 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisoryCwe>? Type24 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GlobalAdvisoryEpss? Type25 { get; set; }
+        public global::GitHub.GlobalAdvisoryCwe? Type25 { get; set; }
         /// <summary>
         /// 
         /// </summary>
