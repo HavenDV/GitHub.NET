@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// Usage metrics for Copilot Chat in github.com
+    /// Usage metrics for Copilot Chat in GitHub.com
     /// </summary>
     public sealed partial class CopilotDotcomChat
     {

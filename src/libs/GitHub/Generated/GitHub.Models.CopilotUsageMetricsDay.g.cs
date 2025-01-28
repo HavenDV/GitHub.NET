@@ -40,7 +40,7 @@ namespace GitHub
         public global::GitHub.CopilotIdeChat? CopilotIdeChat { get; set; }
 
         /// <summary>
-        /// Usage metrics for Copilot Chat in github.com
+        /// Usage metrics for Copilot Chat in GitHub.com
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("copilot_dotcom_chat")]
         public global::GitHub.CopilotDotcomChat? CopilotDotcomChat { get; set; }
@@ -76,7 +76,7 @@ namespace GitHub
         /// Usage metrics for Copilot Chat in the IDE.
         /// </param>
         /// <param name="copilotDotcomChat">
-        /// Usage metrics for Copilot Chat in github.com
+        /// Usage metrics for Copilot Chat in GitHub.com
         /// </param>
         /// <param name="copilotDotcomPullRequests">
         /// Usage metrics for Copilot for pull requests.
