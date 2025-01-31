@@ -185,8 +185,8 @@ namespace GitHub
             string owner,
             string repo,
             string secretName,
-            string? encryptedValue = default,
-            string? keyId = default,
+            string encryptedValue,
+            string keyId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.ActionsCreateOrUpdateRepoSecretRequest

@@ -48,9 +48,9 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.EmptyObject> ActionsCreateOrUpdateOrgSecretAsync(
             string org,
             string secretName,
+            string encryptedValue,
+            string keyId,
             global::GitHub.ActionsCreateOrUpdateOrgSecretRequestVisibility visibility,
-            string? encryptedValue = default,
-            string? keyId = default,
             global::System.Collections.Generic.IList<int>? selectedRepositoryIds = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
