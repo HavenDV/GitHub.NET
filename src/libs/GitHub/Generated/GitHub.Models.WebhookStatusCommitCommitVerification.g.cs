@@ -41,7 +41,8 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("verified_at")]
-        public string? VerifiedAt { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string? VerifiedAt { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -69,7 +70,7 @@ namespace GitHub
             this.Reason = reason;
             this.Signature = signature ?? throw new global::System.ArgumentNullException(nameof(signature));
             this.Verified = verified;
-            this.VerifiedAt = verifiedAt;
+            this.VerifiedAt = verifiedAt ?? throw new global::System.ArgumentNullException(nameof(verifiedAt));
         }
 
         /// <summary>

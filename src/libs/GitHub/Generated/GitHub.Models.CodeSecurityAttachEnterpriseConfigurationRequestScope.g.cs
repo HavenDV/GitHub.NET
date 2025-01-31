@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The type of repositories to attach the configuration to. `selected` means the configuration will be attached to only the repositories specified by `selected_repository_ids`
+    /// The type of repositories to attach the configuration to.
     /// </summary>
     public enum CodeSecurityAttachEnterpriseConfigurationRequestScope
     {

@@ -247,7 +247,7 @@ namespace GitHub
         /// <param name="enterprise"></param>
         /// <param name="configurationId"></param>
         /// <param name="scope">
-        /// The type of repositories to attach the configuration to. `selected` means the configuration will be attached to only the repositories specified by `selected_repository_ids`
+        /// The type of repositories to attach the configuration to.
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
