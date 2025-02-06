@@ -67,6 +67,12 @@ namespace GitHub
         public required global::System.Collections.Generic.IList<global::GitHub.RunnerLabel> Labels { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ephemeral")]
+        public bool? Ephemeral { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -97,6 +103,7 @@ namespace GitHub
         /// </param>
         /// <param name="busy"></param>
         /// <param name="labels"></param>
+        /// <param name="ephemeral"></param>
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
         public Runner(
             int id,
@@ -105,7 +112,8 @@ namespace GitHub
             string status,
             bool busy,
             global::System.Collections.Generic.IList<global::GitHub.RunnerLabel> labels,
-            int? runnerGroupId)
+            int? runnerGroupId,
+            bool? ephemeral)
         {
             this.Id = id;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -114,6 +122,7 @@ namespace GitHub
             this.Busy = busy;
             this.Labels = labels ?? throw new global::System.ArgumentNullException(nameof(labels));
             this.RunnerGroupId = runnerGroupId;
+            this.Ephemeral = ephemeral;
         }
 
         /// <summary>
