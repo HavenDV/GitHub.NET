@@ -34,7 +34,7 @@ namespace GitHub
         /// <summary>
         /// Get a summary of Copilot usage for a team<br/>
         /// &gt; [!NOTE]<br/>
-        /// &gt; This endpoint is in public preview and is subject to change.<br/>
+        /// &gt; This endpoint is closing down. It will be accessible throughout February 2025, but will not return any new data after February 1st.<br/>
         /// You can use this endpoint to see a daily breakdown of aggregated usage metrics for Copilot completions and Copilot Chat in the IDE<br/>
         /// for users within a team, with a further breakdown of suggestions, acceptances, and number of active users by editor and language for each day.<br/>
         /// See the response schema tab for detailed metrics definitions.<br/>
