@@ -111,7 +111,9 @@ namespace GitHub
         /// <param name="sender">
         /// A GitHub user.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookIssuesEdited(
             global::GitHub.WebhookIssuesEditedChanges changes,
             global::GitHub.WebhookIssuesEditedIssue issue,

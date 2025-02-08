@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookDiscussionCommentEditedChanges" /> class.
         /// </summary>
         /// <param name="body"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookDiscussionCommentEditedChanges(
             global::GitHub.WebhookDiscussionCommentEditedChangesBody body)
         {

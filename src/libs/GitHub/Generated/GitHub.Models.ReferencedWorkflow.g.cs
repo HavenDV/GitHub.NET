@@ -40,7 +40,9 @@ namespace GitHub
         /// <param name="path"></param>
         /// <param name="sha"></param>
         /// <param name="ref"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReferencedWorkflow(
             string path,
             string sha,

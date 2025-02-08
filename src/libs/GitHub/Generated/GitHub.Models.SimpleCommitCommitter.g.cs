@@ -43,7 +43,9 @@ namespace GitHub
         /// Git email address of the commit's committer<br/>
         /// Example: monalisa.octocat@example.com
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SimpleCommitCommitter(
             string name,
             string email)

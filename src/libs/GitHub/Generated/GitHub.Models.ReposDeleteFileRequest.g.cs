@@ -64,7 +64,9 @@ namespace GitHub
         /// <param name="author">
         /// object containing information about the author.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposDeleteFileRequest(
             string message,
             string sha,

@@ -94,7 +94,9 @@ namespace GitHub
         /// <param name="addedBy"></param>
         /// <param name="lastUsed"></param>
         /// <param name="enabled"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public DeployKey(
             int id,
             string key,

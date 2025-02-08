@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="resources"></param>
         /// <param name="rate"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RateLimitOverview(
             global::GitHub.RateLimitOverviewResources resources,
             global::GitHub.RateLimit rate)

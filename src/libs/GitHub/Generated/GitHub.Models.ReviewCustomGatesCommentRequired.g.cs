@@ -37,7 +37,9 @@ namespace GitHub
         /// <param name="comment">
         /// Comment associated with the pending deployment protection rule. **Required when state is not provided.**
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReviewCustomGatesCommentRequired(
             string environmentName,
             string comment)

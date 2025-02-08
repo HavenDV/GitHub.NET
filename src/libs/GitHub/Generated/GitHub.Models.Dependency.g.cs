@@ -76,7 +76,9 @@ namespace GitHub
         /// Array of package-url (PURLs) of direct child dependencies.<br/>
         /// Example: @actions/http-client
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Dependency(
             string? packageUrl,
             object? metadata,

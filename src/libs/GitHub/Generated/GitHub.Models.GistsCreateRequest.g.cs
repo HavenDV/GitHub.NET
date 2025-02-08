@@ -49,7 +49,9 @@ namespace GitHub
         /// Names and content for the files that make up the gist
         /// </param>
         /// <param name="public"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GistsCreateRequest(
             global::System.Collections.Generic.Dictionary<string, global::GitHub.GistsCreateRequestFiles2> files,
             string? description,

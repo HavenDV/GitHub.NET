@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="from">
         /// The previous permissions of the collaborator if the action was edited.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookMemberEditedChangesOldPermission(
             string from)
         {

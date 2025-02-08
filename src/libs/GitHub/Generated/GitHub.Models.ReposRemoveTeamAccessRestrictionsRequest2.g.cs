@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="teams">
         /// The slug values for teams
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposRemoveTeamAccessRestrictionsRequest2(
             global::System.Collections.Generic.IList<string> teams)
         {

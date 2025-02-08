@@ -32,7 +32,9 @@ namespace GitHub
         /// </summary>
         /// <param name="percentage"></param>
         /// <param name="percentile"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SecurityAdvisoryEpss(
             double? percentage,
             double? percentile)

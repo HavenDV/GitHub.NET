@@ -173,7 +173,9 @@ namespace GitHub
         /// <param name="email"></param>
         /// <param name="name"></param>
         /// <param name="userViewType"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Contributor(
             string type,
             int contributions,

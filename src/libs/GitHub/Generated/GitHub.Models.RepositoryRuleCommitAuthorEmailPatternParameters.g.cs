@@ -56,7 +56,9 @@ namespace GitHub
         /// <param name="pattern">
         /// The pattern to match with.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleCommitAuthorEmailPatternParameters(
             global::GitHub.RepositoryRuleCommitAuthorEmailPatternParametersOperator @operator,
             string pattern,

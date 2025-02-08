@@ -35,7 +35,9 @@ namespace GitHub
         /// <param name="models">
         /// List of model metrics for a custom models and the default model.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotDotcomChat(
             int? totalEngagedUsers,
             global::System.Collections.Generic.IList<global::GitHub.CopilotDotcomChatModel>? models)

@@ -84,7 +84,9 @@ namespace GitHub
         /// <param name="selectedRepositoriesUrl">
         /// Example: https://api.github.com/organizations/org/variables/USERNAME/repositories
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrganizationActionsVariable(
             string name,
             string value,

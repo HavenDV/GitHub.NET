@@ -52,7 +52,9 @@ namespace GitHub
         /// <param name="property"></param>
         /// <param name="fragment"></param>
         /// <param name="matches"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SearchResultTextMatche(
             string? objectUrl,
             string? objectType,

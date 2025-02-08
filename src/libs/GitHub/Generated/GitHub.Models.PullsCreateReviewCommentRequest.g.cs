@@ -114,7 +114,9 @@ namespace GitHub
         /// <param name="subjectType">
         /// The level at which the comment is targeted.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PullsCreateReviewCommentRequest(
             string body,
             string commitId,

@@ -76,7 +76,9 @@ namespace GitHub
         /// <param name="repositorySelection">
         /// Describe whether all repositories have been selected or there's a selection involved
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public AuthenticationToken(
             string token,
             global::System.DateTime expiresAt,

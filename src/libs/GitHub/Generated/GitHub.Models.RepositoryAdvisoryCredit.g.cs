@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="state">
         /// The state of the user's acceptance of the credit.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryAdvisoryCredit(
             global::GitHub.SimpleUser user,
             global::GitHub.SecurityAdvisoryCreditTypes type,

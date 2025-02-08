@@ -272,7 +272,9 @@ namespace GitHub
         /// URL for the issue
         /// </param>
         /// <param name="user"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookIssuesClosedIssueVariant1(
             global::GitHub.WebhookIssuesClosedIssueVariant1ActiveLockReason? activeLockReason,
             global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesClosedIssueVariant1Assignee2> assignees,

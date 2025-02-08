@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="date">
         /// Example: "2007-10-29T02:42:39.000-07:00"
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public NullableGitUser(
             string? name,
             string? email,

@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="timestamp"></param>
         /// <param name="totalRequestCount"></param>
         /// <param name="rateLimitedRequestCount"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ApiInsightsTimeStat(
             string? timestamp,
             long? totalRequestCount,

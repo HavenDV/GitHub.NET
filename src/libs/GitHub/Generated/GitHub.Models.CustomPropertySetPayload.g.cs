@@ -72,7 +72,9 @@ namespace GitHub
         /// An ordered list of the allowed values of the property.<br/>
         /// The property can have up to 200 allowed values.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CustomPropertySetPayload(
             global::GitHub.CustomPropertySetPayloadValueType valueType,
             bool? required,

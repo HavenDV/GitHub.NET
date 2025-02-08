@@ -53,7 +53,9 @@ namespace GitHub
         /// <param name="startedAt">
         /// The time that the scan was started. Empty if the scan is pending
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SecretScanningScan(
             string? type,
             string? status,

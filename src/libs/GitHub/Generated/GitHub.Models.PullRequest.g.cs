@@ -512,7 +512,9 @@ namespace GitHub
         /// <param name="changedFiles">
         /// Example: 5
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PullRequest(
             string url,
             long id,

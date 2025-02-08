@@ -122,7 +122,9 @@ namespace GitHub
         /// <param name="updatedAt"></param>
         /// <param name="deletedAt"></param>
         /// <param name="metadata"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PackageVersion(
             int id,
             string name,

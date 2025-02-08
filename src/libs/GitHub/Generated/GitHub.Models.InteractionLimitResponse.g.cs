@@ -50,7 +50,9 @@ namespace GitHub
         /// Example: repository
         /// </param>
         /// <param name="expiresAt"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public InteractionLimitResponse(
             global::GitHub.InteractionGroup limit,
             string origin,

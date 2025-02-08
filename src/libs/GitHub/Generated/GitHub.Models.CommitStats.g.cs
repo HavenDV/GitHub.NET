@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="additions"></param>
         /// <param name="deletions"></param>
         /// <param name="total"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CommitStats(
             int? additions,
             int? deletions,

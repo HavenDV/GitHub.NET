@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="ReposListAttestationsResponse" /> class.
         /// </summary>
         /// <param name="attestations"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposListAttestationsResponse(
             global::System.Collections.Generic.IList<global::GitHub.ReposListAttestationsResponseAttestation>? attestations)
         {

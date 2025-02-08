@@ -44,7 +44,9 @@ namespace GitHub
         /// <param name="version">
         /// The version of the tool used to detect the alert.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookCodeScanningAlertReopenedAlertTool(
             string name,
             string? version,

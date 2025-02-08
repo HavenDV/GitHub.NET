@@ -104,7 +104,9 @@ namespace GitHub
         /// <param name="rawDetails">
         /// Details about this annotation. The maximum size is 64 KB.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ChecksUpdateRequestOutputAnnotation(
             string path,
             int startLine,

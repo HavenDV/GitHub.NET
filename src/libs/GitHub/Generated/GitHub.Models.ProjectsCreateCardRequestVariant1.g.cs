@@ -30,7 +30,9 @@ namespace GitHub
         /// The project card's note<br/>
         /// Example: Update all gems
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ProjectsCreateCardRequestVariant1(
             string? note)
         {

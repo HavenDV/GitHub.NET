@@ -81,7 +81,9 @@ namespace GitHub
         /// The location of the subnet this network settings resource is configured for.<br/>
         /// Example: eastus
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public NetworkSettings(
             string id,
             string name,

@@ -297,7 +297,9 @@ namespace GitHub
         /// <param name="teamDiscussions"></param>
         /// <param name="vulnerabilityAlerts"></param>
         /// <param name="workflows"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissions(
             global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsActions? actions,
             global::GitHub.WebhookIssueCommentEditedIssueVariant1PerformedViaGithubAppPermissionsAdministration? administration,

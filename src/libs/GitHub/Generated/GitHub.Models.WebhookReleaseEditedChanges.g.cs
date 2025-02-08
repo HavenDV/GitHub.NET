@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="body"></param>
         /// <param name="name"></param>
         /// <param name="makeLatest"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookReleaseEditedChanges(
             global::GitHub.WebhookReleaseEditedChangesBody? body,
             global::GitHub.WebhookReleaseEditedChangesName? name,

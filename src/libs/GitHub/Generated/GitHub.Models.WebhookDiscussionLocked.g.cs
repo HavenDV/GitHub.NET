@@ -94,7 +94,9 @@ namespace GitHub
         /// <param name="sender">
         /// A GitHub user.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookDiscussionLocked(
             global::GitHub.Discussion discussion,
             global::GitHub.RepositoryWebhooks repository,

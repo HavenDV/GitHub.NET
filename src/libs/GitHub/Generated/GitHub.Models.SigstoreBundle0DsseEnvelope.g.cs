@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="payload"></param>
         /// <param name="payloadType"></param>
         /// <param name="signatures"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SigstoreBundle0DsseEnvelope(
             string? payload,
             string? payloadType,

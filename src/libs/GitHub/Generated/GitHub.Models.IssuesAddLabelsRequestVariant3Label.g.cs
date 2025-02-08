@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="IssuesAddLabelsRequestVariant3Label" /> class.
         /// </summary>
         /// <param name="name"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public IssuesAddLabelsRequestVariant3Label(
             string name)
         {

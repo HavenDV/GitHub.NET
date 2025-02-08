@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="relatedSpdxElement">
         /// The SPDX identifier of the package that is the target of the relationship.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public DependencyGraphSpdxSbomSbomRelationship(
             string? relationshipType,
             string? spdxElementId,

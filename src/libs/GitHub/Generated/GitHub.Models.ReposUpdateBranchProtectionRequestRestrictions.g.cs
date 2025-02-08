@@ -46,7 +46,9 @@ namespace GitHub
         /// <param name="apps">
         /// The list of app `slug`s with push access
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposUpdateBranchProtectionRequestRestrictions(
             global::System.Collections.Generic.IList<string> users,
             global::System.Collections.Generic.IList<string> teams,

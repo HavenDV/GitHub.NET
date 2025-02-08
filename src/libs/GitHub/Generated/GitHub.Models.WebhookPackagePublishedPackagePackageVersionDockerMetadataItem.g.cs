@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookPackagePublishedPackagePackageVersionDockerMetadataItem" /> class.
         /// </summary>
         /// <param name="tags"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPackagePublishedPackagePackageVersionDockerMetadataItem(
             global::System.Collections.Generic.IList<string>? tags)
         {

@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="notFoundRepos"></param>
         /// <param name="noCodeqlDbRepos"></param>
         /// <param name="overLimitRepos"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningVariantAnalysisSkippedRepositories(
             global::GitHub.CodeScanningVariantAnalysisSkippedRepoGroup accessMismatchRepos,
             global::GitHub.CodeScanningVariantAnalysisSkippedRepositoriesNotFoundRepos notFoundRepos,

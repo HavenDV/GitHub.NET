@@ -106,7 +106,9 @@ namespace GitHub
         /// Classifications that have been applied to the file that triggered the alert.<br/>
         /// For example identifying it as documentation, or a generated file.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningAlertInstance(
             string? @ref,
             string? analysisKey,

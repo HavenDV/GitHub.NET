@@ -36,7 +36,9 @@ namespace GitHub
         /// Example: continuous-integration/travis-ci
         /// </param>
         /// <param name="appId"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public StatusCheckPolicyCheck(
             string context,
             int? appId)

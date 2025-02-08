@@ -108,7 +108,9 @@ namespace GitHub
         /// <param name="productionEnvironment">
         /// Specifies if the given environment is one that end-users directly interact with. Default: `true` when `environment` is `production` and `false` otherwise.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposCreateDeploymentRequest(
             string @ref,
             string? task,

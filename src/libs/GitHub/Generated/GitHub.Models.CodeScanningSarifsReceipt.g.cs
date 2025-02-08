@@ -40,7 +40,9 @@ namespace GitHub
         /// The REST API URL for checking the status of the upload.<br/>
         /// Included only in responses
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningSarifsReceipt(
             string? id,
             string? url)

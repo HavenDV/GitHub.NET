@@ -77,7 +77,9 @@ namespace GitHub
         /// <param name="readme"></param>
         /// <param name="issueTemplate"></param>
         /// <param name="pullRequestTemplate"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CommunityProfileFiles(
             global::GitHub.NullableCodeOfConductSimple? codeOfConduct,
             global::GitHub.NullableCommunityHealthFile? codeOfConductFile,

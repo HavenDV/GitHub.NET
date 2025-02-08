@@ -41,7 +41,9 @@ namespace GitHub
         /// <param name="total"></param>
         /// <param name="completed"></param>
         /// <param name="percentCompleted"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SubIssuesSummary(
             int total,
             int completed,

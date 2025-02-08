@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="labels"></param>
         /// <param name="manifest"></param>
         /// <param name="tag"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRegistryPackagePublishedRegistryPackagePackageVersionContainerMetadata(
             object? labels,
             object? manifest,

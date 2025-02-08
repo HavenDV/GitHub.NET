@@ -75,7 +75,9 @@ namespace GitHub
         /// <param name="createdOn">
         /// The time at which the network configuration was created, in ISO 8601 format.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public NetworkConfiguration(
             string id,
             string name,

@@ -69,7 +69,9 @@ namespace GitHub
         /// The available SSD storage for the machine spec.<br/>
         /// Example: 300
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsHostedRunnerMachineSpec(
             string id,
             int cpuCores,

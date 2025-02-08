@@ -83,7 +83,9 @@ namespace GitHub
         /// <param name="repositoryUrl">
         /// Example: https://api.github.com/repos/1
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ThreadSubscription(
             bool subscribed,
             bool ignored,

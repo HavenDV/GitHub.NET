@@ -77,7 +77,9 @@ namespace GitHub
         /// <param name="tree"></param>
         /// <param name="url"></param>
         /// <param name="verification"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookStatusCommitCommit(
             global::GitHub.AllOf<global::GitHub.WebhookStatusCommitCommitAuthorVariant1, global::GitHub.WebhookStatusCommitCommitAuthorVariant2> author,
             int commentCount,

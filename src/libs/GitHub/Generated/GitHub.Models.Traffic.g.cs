@@ -41,7 +41,9 @@ namespace GitHub
         /// <param name="timestamp"></param>
         /// <param name="uniques"></param>
         /// <param name="count"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Traffic(
             global::System.DateTime timestamp,
             int uniques,

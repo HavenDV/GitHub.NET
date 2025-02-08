@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="reviewerId">
         /// Node ID of the team which must review changes to matching files.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleParamsRequiredReviewerConfiguration(
             global::System.Collections.Generic.IList<string> filePatterns,
             int minimumApprovals,

@@ -55,7 +55,9 @@ namespace GitHub
         /// <param name="privateRepos"></param>
         /// <param name="filledSeats"></param>
         /// <param name="seats"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TeamOrganizationPlan(
             string name,
             int space,

@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="uBUNTU"></param>
         /// <param name="mACOS"></param>
         /// <param name="wINDOWS"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WorkflowRunUsageBillable(
             global::GitHub.WorkflowRunUsageBillableUBUNTU? uBUNTU,
             global::GitHub.WorkflowRunUsageBillableMACOS? mACOS,

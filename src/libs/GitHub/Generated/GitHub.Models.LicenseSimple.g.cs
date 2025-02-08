@@ -79,7 +79,9 @@ namespace GitHub
         /// Example: MDc6TGljZW5zZW1pdA==
         /// </param>
         /// <param name="htmlUrl"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public LicenseSimple(
             string key,
             string name,

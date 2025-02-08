@@ -343,7 +343,9 @@ namespace GitHub
         /// <param name="collaborators">
         /// Example: 3
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PublicUser(
             string login,
             long id,

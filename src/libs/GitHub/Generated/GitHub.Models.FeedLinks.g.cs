@@ -107,7 +107,9 @@ namespace GitHub
         /// <param name="repositoryDiscussionsCategory">
         /// Hypermedia Link with Type
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public FeedLinks(
             global::GitHub.LinkWithType timeline,
             global::GitHub.LinkWithType user,

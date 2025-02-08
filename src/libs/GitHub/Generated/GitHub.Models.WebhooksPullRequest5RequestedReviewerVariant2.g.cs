@@ -121,7 +121,9 @@ namespace GitHub
         /// <param name="url">
         /// URL for the team
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhooksPullRequest5RequestedReviewerVariant2(
             int id,
             string name,

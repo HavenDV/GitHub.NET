@@ -69,7 +69,9 @@ namespace GitHub
         /// <param name="message"></param>
         /// <param name="timestamp"></param>
         /// <param name="treeId"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookWorkflowRunCompletedWorkflowRunHeadCommit(
             global::GitHub.WebhookWorkflowRunCompletedWorkflowRunHeadCommitAuthor author,
             global::GitHub.WebhookWorkflowRunCompletedWorkflowRunHeadCommitCommitter committer,

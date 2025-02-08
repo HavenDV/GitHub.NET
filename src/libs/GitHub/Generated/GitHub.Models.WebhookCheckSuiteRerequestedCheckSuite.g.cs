@@ -175,7 +175,9 @@ namespace GitHub
         /// <param name="url">
         /// URL that points to the check suite API resource.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookCheckSuiteRerequestedCheckSuite(
             string? after,
             global::GitHub.WebhookCheckSuiteRerequestedCheckSuiteApp app,

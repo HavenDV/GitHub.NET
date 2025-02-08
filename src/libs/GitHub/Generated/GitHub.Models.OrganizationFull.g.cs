@@ -621,7 +621,9 @@ namespace GitHub
         /// Controls whether or not deploy keys may be added and used for repositories in the organization.<br/>
         /// Example: false
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrganizationFull(
             string login,
             int id,

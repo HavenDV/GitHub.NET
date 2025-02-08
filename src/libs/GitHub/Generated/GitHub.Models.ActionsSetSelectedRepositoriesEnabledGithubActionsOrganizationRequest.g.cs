@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="selectedRepositoryIds">
         /// List of repository IDs to enable for GitHub Actions.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest(
             global::System.Collections.Generic.IList<int> selectedRepositoryIds)
         {

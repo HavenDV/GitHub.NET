@@ -54,7 +54,9 @@ namespace GitHub
         /// <param name="vulnerableFunctions">
         /// The functions in the package that are affected.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryAdvisoryCreateVulnerabilitie(
             global::GitHub.RepositoryAdvisoryCreateVulnerabilitiePackage package,
             string? vulnerableVersionRange,

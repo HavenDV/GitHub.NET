@@ -62,7 +62,9 @@ namespace GitHub
         /// <param name="imageVersion">
         /// The version of the runner image to deploy. This is relevant only for runners using custom images.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsUpdateHostedRunnerForOrgRequest(
             string? name,
             int? runnerGroupId,

@@ -58,7 +58,9 @@ namespace GitHub
         /// <param name="commitMessage">
         /// Commit message for the merge commit.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public AutoMerge(
             global::GitHub.SimpleUser enabledBy,
             global::GitHub.AutoMergeMergeMethod mergeMethod,

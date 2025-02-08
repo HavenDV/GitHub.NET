@@ -39,7 +39,9 @@ namespace GitHub
         /// <param name="enabled">
         /// Example: true
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public BranchProtectionRequiredSignatures(
             string url,
             bool enabled)

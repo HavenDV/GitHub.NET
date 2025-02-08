@@ -65,7 +65,9 @@ namespace GitHub
         /// A short lived bearer token used to download the runner, if needed.
         /// </param>
         /// <param name="sha256Checksum"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RunnerApplication(
             string os,
             string architecture,

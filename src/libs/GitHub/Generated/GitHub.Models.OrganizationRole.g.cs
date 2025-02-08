@@ -106,7 +106,9 @@ namespace GitHub
         /// <param name="updatedAt">
         /// The date and time the role was last updated.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrganizationRole(
             long id,
             string name,

@@ -40,7 +40,9 @@ namespace GitHub
         /// <param name="totalMs"></param>
         /// <param name="jobs"></param>
         /// <param name="jobRuns"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WorkflowRunUsageBillableWINDOWS(
             int totalMs,
             int jobs,

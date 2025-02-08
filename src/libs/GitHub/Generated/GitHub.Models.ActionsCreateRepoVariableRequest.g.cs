@@ -37,7 +37,9 @@ namespace GitHub
         /// <param name="value">
         /// The value of the variable.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsCreateRepoVariableRequest(
             string name,
             string value)

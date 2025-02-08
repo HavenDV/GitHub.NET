@@ -145,7 +145,11 @@ namespace GitHub
 
             if (ReadResponseAsString)
             {
-                var __content = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                var __content = await __response.Content.ReadAsStringAsync(
+#if NET5_0_OR_GREATER
+                    cancellationToken
+#endif
+                ).ConfigureAwait(false);
 
                 ProcessResponseContent(
                     client: HttpClient,
@@ -199,7 +203,11 @@ namespace GitHub
                     };
                 }
 
-                using var __content = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                using var __content = await __response.Content.ReadAsStreamAsync(
+#if NET5_0_OR_GREATER
+                    cancellationToken
+#endif
+                ).ConfigureAwait(false);
 
                 return
                     await global::GitHub.ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??

@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="publicIps">
         /// Provides details of static public IP limits for GitHub-hosted Hosted Runners
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsHostedRunnerLimits(
             global::GitHub.ActionsHostedRunnerLimitsPublicIps publicIps)
         {

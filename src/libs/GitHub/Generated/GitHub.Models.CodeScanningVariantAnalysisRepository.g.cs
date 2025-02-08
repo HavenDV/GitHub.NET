@@ -85,7 +85,9 @@ namespace GitHub
         /// Example: 80
         /// </param>
         /// <param name="updatedAt"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningVariantAnalysisRepository(
             int id,
             string name,

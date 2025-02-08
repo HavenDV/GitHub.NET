@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="name"></param>
         /// <param name="color"></param>
         /// <param name="description"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ProjectsV2SingleSelectOption(
             string id,
             string name,

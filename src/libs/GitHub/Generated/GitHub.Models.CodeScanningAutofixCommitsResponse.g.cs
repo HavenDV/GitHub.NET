@@ -35,7 +35,9 @@ namespace GitHub
         /// <param name="sha">
         /// SHA of commit with autofix.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningAutofixCommitsResponse(
             string? targetRef,
             string? sha)

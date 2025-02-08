@@ -116,7 +116,9 @@ namespace GitHub
         /// <param name="commitOid">
         /// The commit SHA of the repository at the time the CodeQL database was created.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningCodeqlDatabase(
             int id,
             string name,

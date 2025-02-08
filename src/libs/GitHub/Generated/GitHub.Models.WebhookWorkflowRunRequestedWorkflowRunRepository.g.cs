@@ -391,7 +391,9 @@ namespace GitHub
         /// <param name="teamsUrl"></param>
         /// <param name="treesUrl"></param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookWorkflowRunRequestedWorkflowRunRepository(
             string archiveUrl,
             string assigneesUrl,

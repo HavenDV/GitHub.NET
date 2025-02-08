@@ -107,7 +107,9 @@ namespace GitHub
         /// <param name="bio">
         /// The new short biography of the user.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public UsersUpdateAuthenticatedRequest(
             string? name,
             string? email,

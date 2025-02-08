@@ -73,7 +73,9 @@ namespace GitHub
         /// <param name="selectedRepositoryIds">
         /// An array of repository IDs that can access the organization private registry. You can only provide a list of repository IDs when `visibility` is set to `selected`. This field should be omitted if `visibility` is set to `all` or `private`.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PrivateRegistriesUpdateOrgPrivateRegistryRequest(
             global::GitHub.PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType? registryType,
             string? username,

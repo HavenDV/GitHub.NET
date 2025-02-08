@@ -45,7 +45,9 @@ namespace GitHub
         /// <param name="sHA256DSA"></param>
         /// <param name="sHA256ECDSA"></param>
         /// <param name="sHA256ED25519"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ApiOverviewSshKeyFingerprints(
             string? sHA256RSA,
             string? sHA256DSA,

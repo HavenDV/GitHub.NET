@@ -55,7 +55,9 @@ namespace GitHub
         /// <param name="push"></param>
         /// <param name="triage"></param>
         /// <param name="pull"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepoSearchResultItemPermissions(
             bool admin,
             bool push,

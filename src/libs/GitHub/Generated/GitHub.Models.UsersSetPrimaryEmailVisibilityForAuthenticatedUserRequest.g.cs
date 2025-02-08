@@ -28,7 +28,9 @@ namespace GitHub
         /// <param name="visibility">
         /// Denotes whether an email is publicly visible.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequest(
             global::GitHub.UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequestVisibility visibility)
         {

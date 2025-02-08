@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookRepositoryRenamedChanges" /> class.
         /// </summary>
         /// <param name="repository"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRepositoryRenamedChanges(
             global::GitHub.WebhookRepositoryRenamedChangesRepository repository)
         {

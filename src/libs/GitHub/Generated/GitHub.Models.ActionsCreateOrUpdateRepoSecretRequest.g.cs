@@ -37,7 +37,9 @@ namespace GitHub
         /// <param name="keyId">
         /// ID of the key you used to encrypt the secret.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsCreateOrUpdateRepoSecretRequest(
             string encryptedValue,
             string keyId)

@@ -1105,7 +1105,9 @@ namespace GitHub
         /// <param name="customProperties">
         /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public FullRepository(
             long id,
             string nodeId,

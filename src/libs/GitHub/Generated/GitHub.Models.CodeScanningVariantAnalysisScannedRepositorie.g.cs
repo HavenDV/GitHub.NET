@@ -65,7 +65,9 @@ namespace GitHub
         /// <param name="failureMessage">
         /// The reason of the failure of this repo task. This is only available if the repository task has failed.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningVariantAnalysisScannedRepositorie(
             global::GitHub.CodeScanningVariantAnalysisRepository repository,
             global::GitHub.CodeScanningVariantAnalysisStatus analysisStatus,

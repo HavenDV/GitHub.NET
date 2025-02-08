@@ -147,7 +147,9 @@ namespace GitHub
         /// <param name="number"></param>
         /// <param name="severity"></param>
         /// <param name="state"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhooksAlert(
             string affectedPackageName,
             string affectedRange,

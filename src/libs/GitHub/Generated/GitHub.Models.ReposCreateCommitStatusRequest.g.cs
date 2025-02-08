@@ -61,7 +61,9 @@ namespace GitHub
         /// A string label to differentiate this status from the status of other systems. This field is case-insensitive.<br/>
         /// Default Value: default
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposCreateCommitStatusRequest(
             global::GitHub.ReposCreateCommitStatusRequestState state,
             string? targetUrl,

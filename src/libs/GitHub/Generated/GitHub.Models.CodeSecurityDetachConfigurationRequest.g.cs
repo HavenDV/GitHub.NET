@@ -26,7 +26,9 @@ namespace GitHub
         /// <param name="selectedRepositoryIds">
         /// An array of repository IDs to detach from configurations.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeSecurityDetachConfigurationRequest(
             global::System.Collections.Generic.IList<int>? selectedRepositoryIds)
         {

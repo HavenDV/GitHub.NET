@@ -35,7 +35,9 @@ namespace GitHub
         /// <param name="repository">
         /// Minimal Repository
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CheckSuitePreference(
             global::GitHub.CheckSuitePreferencePreferences preferences,
             global::GitHub.MinimalRepository repository)

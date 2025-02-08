@@ -76,7 +76,9 @@ namespace GitHub
         /// <param name="title">
         /// The current page title.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookGollumPage(
             global::GitHub.WebhookGollumPageAction action,
             string htmlUrl,

@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="payload">
         /// A URL-encoded string of the ping JSON payload. The decoded payload is a JSON object.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPingFormEncoded(
             string payload)
         {

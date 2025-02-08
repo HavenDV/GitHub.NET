@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookBranchProtectionRuleEditedChangesAuthorizedActorNames" /> class.
         /// </summary>
         /// <param name="from"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookBranchProtectionRuleEditedChangesAuthorizedActorNames(
             global::System.Collections.Generic.IList<string> from)
         {

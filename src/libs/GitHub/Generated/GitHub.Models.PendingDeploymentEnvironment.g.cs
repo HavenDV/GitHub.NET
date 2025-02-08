@@ -71,7 +71,9 @@ namespace GitHub
         /// <param name="htmlUrl">
         /// Example: https://github.com/github/hello-world/deployments/activity_log?environments_filter=staging
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PendingDeploymentEnvironment(
             long? id,
             string? nodeId,

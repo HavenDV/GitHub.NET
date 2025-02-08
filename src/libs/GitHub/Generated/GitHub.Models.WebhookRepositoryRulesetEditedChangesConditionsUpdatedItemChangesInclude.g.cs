@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookRepositoryRulesetEditedChangesConditionsUpdatedItemChangesInclude" /> class.
         /// </summary>
         /// <param name="from"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRepositoryRulesetEditedChangesConditionsUpdatedItemChangesInclude(
             global::System.Collections.Generic.IList<string>? from)
         {

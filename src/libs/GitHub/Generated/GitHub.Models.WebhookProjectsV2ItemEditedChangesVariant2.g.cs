@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookProjectsV2ItemEditedChangesVariant2" /> class.
         /// </summary>
         /// <param name="body"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookProjectsV2ItemEditedChangesVariant2(
             global::GitHub.WebhookProjectsV2ItemEditedChangesVariant2Body body)
         {

@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="package"></param>
         /// <param name="severity"></param>
         /// <param name="vulnerableVersionRange"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhooksSecurityAdvisoryVulnerabilitie(
             global::GitHub.WebhooksSecurityAdvisoryVulnerabilitieFirstPatchedVersion? firstPatchedVersion,
             global::GitHub.WebhooksSecurityAdvisoryVulnerabilitiePackage package,

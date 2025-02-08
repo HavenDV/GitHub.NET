@@ -74,7 +74,9 @@ namespace GitHub
         /// <param name="tree"></param>
         /// <param name="url"></param>
         /// <param name="verification"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CommitSearchResultItemCommit(
             global::GitHub.CommitSearchResultItemCommitAuthor author,
             global::GitHub.NullableGitUser? committer,

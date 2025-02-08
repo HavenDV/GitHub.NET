@@ -39,7 +39,9 @@ namespace GitHub
         /// <param name="key">
         /// The public SSH key to add to your GitHub account.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public UsersCreatePublicSshKeyForAuthenticatedUserRequest(
             string key,
             string? title)

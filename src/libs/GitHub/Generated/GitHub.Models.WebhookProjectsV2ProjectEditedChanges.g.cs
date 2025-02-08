@@ -45,7 +45,9 @@ namespace GitHub
         /// <param name="public"></param>
         /// <param name="shortDescription"></param>
         /// <param name="title"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookProjectsV2ProjectEditedChanges(
             global::GitHub.WebhookProjectsV2ProjectEditedChangesDescription? description,
             global::GitHub.WebhookProjectsV2ProjectEditedChangesPublic? @public,

@@ -41,7 +41,9 @@ namespace GitHub
         /// <param name="name"></param>
         /// <param name="email"></param>
         /// <param name="date"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CommitSearchResultItemCommitAuthor(
             string name,
             string email,

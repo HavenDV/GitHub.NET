@@ -54,7 +54,9 @@ namespace GitHub
         /// <param name="line">
         /// **Closing down notice**. Use **position** parameter instead. Line number in the file to comment on.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposCreateCommitCommentRequest(
             string body,
             string? path,

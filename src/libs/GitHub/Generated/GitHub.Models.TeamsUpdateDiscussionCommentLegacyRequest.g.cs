@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="body">
         /// The discussion comment's body text.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TeamsUpdateDiscussionCommentLegacyRequest(
             string body)
         {

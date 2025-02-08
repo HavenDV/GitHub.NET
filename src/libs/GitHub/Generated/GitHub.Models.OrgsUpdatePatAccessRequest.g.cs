@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="action">
         /// Action to apply to the fine-grained personal access token.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrgsUpdatePatAccessRequest(
             global::GitHub.OrgsUpdatePatAccessRequestAction action)
         {

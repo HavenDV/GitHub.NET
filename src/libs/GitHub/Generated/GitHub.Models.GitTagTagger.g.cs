@@ -41,7 +41,9 @@ namespace GitHub
         /// <param name="date"></param>
         /// <param name="email"></param>
         /// <param name="name"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GitTagTagger(
             string date,
             string email,

@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="state">
         /// The state that the membership should be in. Only `"active"` will be accepted.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrgsUpdateMembershipForAuthenticatedUserRequest(
             global::GitHub.OrgsUpdateMembershipForAuthenticatedUserRequestState state)
         {

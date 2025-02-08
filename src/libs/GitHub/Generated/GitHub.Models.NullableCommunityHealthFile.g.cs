@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="url"></param>
         /// <param name="htmlUrl"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public NullableCommunityHealthFile(
             string url,
             string htmlUrl)

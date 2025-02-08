@@ -64,7 +64,9 @@ namespace GitHub
         /// <param name="teamIds">
         /// Specify IDs for the teams you want to invite new members to.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrgsCreateInvitationRequest(
             int? inviteeId,
             string? email,

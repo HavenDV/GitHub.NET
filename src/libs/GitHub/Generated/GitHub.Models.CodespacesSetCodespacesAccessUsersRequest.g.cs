@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="selectedUsernames">
         /// The usernames of the organization members whose codespaces be billed to the organization.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodespacesSetCodespacesAccessUsersRequest(
             global::System.Collections.Generic.IList<string> selectedUsernames)
         {

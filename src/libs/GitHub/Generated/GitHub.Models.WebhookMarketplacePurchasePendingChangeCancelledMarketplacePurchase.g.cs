@@ -73,7 +73,9 @@ namespace GitHub
         /// <param name="onFreeTrial"></param>
         /// <param name="plan"></param>
         /// <param name="unitCount"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookMarketplacePurchasePendingChangeCancelledMarketplacePurchase(
             global::GitHub.WebhookMarketplacePurchasePendingChangeCancelledMarketplacePurchaseAccount account,
             string billingCycle,

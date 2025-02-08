@@ -46,7 +46,9 @@ namespace GitHub
         /// Example: 7638417db6d59f3c431d3e1f261cc637155684cd
         /// </param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GitRefObject(
             string type,
             string sha,

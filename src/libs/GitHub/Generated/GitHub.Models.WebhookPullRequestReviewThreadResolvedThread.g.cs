@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="comments"></param>
         /// <param name="nodeId"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestReviewThreadResolvedThread(
             global::System.Collections.Generic.IList<global::GitHub.WebhookPullRequestReviewThreadResolvedThreadComment> comments,
             string nodeId)

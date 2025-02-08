@@ -36,7 +36,9 @@ namespace GitHub
         /// <param name="integrationId">
         /// The optional integration ID that this status check must originate from.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleParamsStatusCheckConfiguration(
             string context,
             int? integrationId)

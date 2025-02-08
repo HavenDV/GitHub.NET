@@ -40,7 +40,9 @@ namespace GitHub
         /// <param name="creators">
         /// The tools that were used to generate the SPDX document.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public DependencyGraphSpdxSbomSbomCreationInfo(
             string created,
             global::System.Collections.Generic.IList<string> creators)

@@ -86,7 +86,9 @@ namespace GitHub
         /// <param name="startSide">
         /// Example: LEFT
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PullsCreateReviewRequestComment(
             string path,
             string body,

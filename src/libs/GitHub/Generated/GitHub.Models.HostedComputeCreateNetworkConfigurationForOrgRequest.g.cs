@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="networkSettingsIds">
         /// The identifier of the network settings to use for the network configuration. Exactly one network settings must be specified.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public HostedComputeCreateNetworkConfigurationForOrgRequest(
             string name,
             global::System.Collections.Generic.IList<string> networkSettingsIds,

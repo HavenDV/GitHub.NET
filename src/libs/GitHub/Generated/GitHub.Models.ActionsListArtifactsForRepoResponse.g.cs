@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="totalCount"></param>
         /// <param name="artifacts"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsListArtifactsForRepoResponse(
             int totalCount,
             global::System.Collections.Generic.IList<global::GitHub.Artifact> artifacts)

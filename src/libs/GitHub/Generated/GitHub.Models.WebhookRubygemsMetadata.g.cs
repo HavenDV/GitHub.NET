@@ -87,7 +87,9 @@ namespace GitHub
         /// <param name="repo"></param>
         /// <param name="dependencies"></param>
         /// <param name="commitOid"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRubygemsMetadata(
             string? name,
             string? description,

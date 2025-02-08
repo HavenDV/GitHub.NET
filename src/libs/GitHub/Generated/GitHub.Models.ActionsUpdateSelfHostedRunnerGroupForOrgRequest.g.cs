@@ -77,7 +77,9 @@ namespace GitHub
         /// <param name="networkConfigurationId">
         /// The identifier of a hosted compute network configuration.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsUpdateSelfHostedRunnerGroupForOrgRequest(
             string name,
             global::GitHub.ActionsUpdateSelfHostedRunnerGroupForOrgRequestVisibility? visibility,

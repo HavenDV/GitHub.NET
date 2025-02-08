@@ -159,7 +159,9 @@ namespace GitHub
         /// Whether https is enabled on the domain<br/>
         /// Example: true
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Page(
             string url,
             global::GitHub.PageStatus? status,

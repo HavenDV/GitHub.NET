@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="ProtectedBranchAllowDeletions" /> class.
         /// </summary>
         /// <param name="enabled"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ProtectedBranchAllowDeletions(
             bool enabled)
         {

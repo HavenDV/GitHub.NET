@@ -41,7 +41,9 @@ namespace GitHub
         /// <param name="ref"></param>
         /// <param name="repo"></param>
         /// <param name="sha"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookDeploymentReviewRejectedWorkflowRunPullRequestHead(
             string @ref,
             global::GitHub.WebhookDeploymentReviewRejectedWorkflowRunPullRequestHeadRepo repo,

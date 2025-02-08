@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="source">
         /// The source of the repository property. Defaults to 'custom' if not specified.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRulesetConditionsRepositoryPropertySpec(
             string name,
             global::System.Collections.Generic.IList<string> propertyValues,

@@ -62,7 +62,9 @@ namespace GitHub
         /// <param name="details">
         /// The detailed failure message for the rule. Null if the rule passed.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RuleSuiteRuleEvaluation(
             global::GitHub.RuleSuiteRuleEvaluationRuleSource? ruleSource,
             global::GitHub.RuleSuiteRuleEvaluationEnforcement? enforcement,

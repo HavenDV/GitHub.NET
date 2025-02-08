@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="newName">
         /// The new name of the branch.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposRenameBranchRequest(
             string newName)
         {

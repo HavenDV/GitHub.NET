@@ -67,7 +67,9 @@ namespace GitHub
         /// <param name="selectedRepositoriesUrl">
         /// Example: https://api.github.com/organizations/org/dependabot/secrets/my_secret/repositories
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrganizationDependabotSecret(
             string name,
             global::System.DateTime createdAt,

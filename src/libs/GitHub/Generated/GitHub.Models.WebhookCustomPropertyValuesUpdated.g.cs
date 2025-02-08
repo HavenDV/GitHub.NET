@@ -104,7 +104,9 @@ namespace GitHub
         /// <param name="oldPropertyValues">
         /// The old custom property values for the repository.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookCustomPropertyValuesUpdated(
             global::GitHub.RepositoryWebhooks repository,
             global::GitHub.OrganizationSimpleWebhooks organization,

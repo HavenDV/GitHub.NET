@@ -107,7 +107,9 @@ namespace GitHub
         /// A GitHub user.
         /// </param>
         /// <param name="targetType"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookInstallationTargetRenamed(
             global::GitHub.WebhookInstallationTargetRenamedAccount account,
             global::GitHub.WebhookInstallationTargetRenamedChanges changes,

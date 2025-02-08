@@ -166,7 +166,9 @@ namespace GitHub
         /// <param name="throttledAt">
         /// Time when the webhook delivery was throttled.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public HookDeliveryItem(
             int id,
             string guid,

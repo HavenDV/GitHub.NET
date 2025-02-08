@@ -32,7 +32,9 @@ namespace GitHub
         /// </summary>
         /// <param name="type"></param>
         /// <param name="parameters"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleCommitMessagePattern(
             global::GitHub.RepositoryRuleCommitMessagePatternType type,
             global::GitHub.RepositoryRuleCommitMessagePatternParameters? parameters)

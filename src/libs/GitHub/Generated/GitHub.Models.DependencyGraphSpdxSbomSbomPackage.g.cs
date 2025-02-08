@@ -140,7 +140,9 @@ namespace GitHub
         /// Example: Copyright (c) 1985 GitHub.com
         /// </param>
         /// <param name="externalRefs"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public DependencyGraphSpdxSbomSbomPackage(
             string? sPDXID,
             string? name,

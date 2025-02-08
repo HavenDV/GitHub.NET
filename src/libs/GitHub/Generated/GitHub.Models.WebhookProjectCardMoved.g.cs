@@ -101,7 +101,9 @@ namespace GitHub
         /// <param name="sender">
         /// A GitHub user.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookProjectCardMoved(
             global::GitHub.AllOf<global::GitHub.WebhookProjectCardMovedProjectCardVariant1, global::GitHub.WebhookProjectCardMovedProjectCardVariant2> projectCard,
             global::GitHub.SimpleUser sender,

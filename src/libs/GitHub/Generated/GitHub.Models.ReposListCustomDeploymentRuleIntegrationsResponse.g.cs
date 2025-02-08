@@ -36,7 +36,9 @@ namespace GitHub
         /// Example: 35
         /// </param>
         /// <param name="availableCustomDeploymentProtectionRuleIntegrations"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposListCustomDeploymentRuleIntegrationsResponse(
             int? totalCount,
             global::System.Collections.Generic.IList<global::GitHub.CustomDeploymentRuleApp>? availableCustomDeploymentProtectionRuleIntegrations)

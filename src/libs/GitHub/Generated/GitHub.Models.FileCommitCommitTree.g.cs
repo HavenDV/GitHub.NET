@@ -31,7 +31,9 @@ namespace GitHub
         /// </summary>
         /// <param name="url"></param>
         /// <param name="sha"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public FileCommitCommitTree(
             string? url,
             string? sha)

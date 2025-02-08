@@ -410,7 +410,9 @@ namespace GitHub
         /// <param name="updatedAt"></param>
         /// <param name="url"></param>
         /// <param name="user"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestReviewRequestedVariant1PullRequest(
             global::GitHub.WebhookPullRequestReviewRequestedVariant1PullRequestLinks links,
             global::GitHub.WebhookPullRequestReviewRequestedVariant1PullRequestActiveLockReason? activeLockReason,

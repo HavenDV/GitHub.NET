@@ -425,7 +425,9 @@ namespace GitHub
         /// The event-specific title associated with the run or the run-name if set, or the value of `run-name` if it is set in the workflow.<br/>
         /// Example: Simple Workflow
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WorkflowRun(
             int id,
             string nodeId,

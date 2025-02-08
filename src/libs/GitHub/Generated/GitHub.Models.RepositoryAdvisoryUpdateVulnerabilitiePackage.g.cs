@@ -37,7 +37,9 @@ namespace GitHub
         /// <param name="name">
         /// The unique package name within its ecosystem.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryAdvisoryUpdateVulnerabilitiePackage(
             global::GitHub.SecurityAdvisoryEcosystems ecosystem,
             string? name)

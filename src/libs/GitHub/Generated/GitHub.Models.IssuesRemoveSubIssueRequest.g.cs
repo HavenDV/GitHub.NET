@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="subIssueId">
         /// The id of the sub-issue to remove
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public IssuesRemoveSubIssueRequest(
             int subIssueId)
         {

@@ -80,7 +80,9 @@ namespace GitHub
         /// The image version of the hosted runner pool.<br/>
         /// Example: latest
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public NullableActionsHostedRunnerPoolImage(
             string id,
             int sizeGb,

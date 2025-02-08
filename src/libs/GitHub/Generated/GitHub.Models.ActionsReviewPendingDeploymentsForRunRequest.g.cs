@@ -57,7 +57,9 @@ namespace GitHub
         /// A comment to accompany the deployment review<br/>
         /// Example: Ship it!
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsReviewPendingDeploymentsForRunRequest(
             global::System.Collections.Generic.IList<int> environmentIds,
             global::GitHub.ActionsReviewPendingDeploymentsForRunRequestState state,

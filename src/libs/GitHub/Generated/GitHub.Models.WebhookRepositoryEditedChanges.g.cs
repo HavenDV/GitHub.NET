@@ -45,7 +45,9 @@ namespace GitHub
         /// <param name="description"></param>
         /// <param name="homepage"></param>
         /// <param name="topics"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRepositoryEditedChanges(
             global::GitHub.WebhookRepositoryEditedChangesDefaultBranch? defaultBranch,
             global::GitHub.WebhookRepositoryEditedChangesDescription? description,

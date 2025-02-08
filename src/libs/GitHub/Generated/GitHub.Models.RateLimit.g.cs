@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="remaining"></param>
         /// <param name="reset"></param>
         /// <param name="used"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RateLimit(
             int limit,
             int remaining,

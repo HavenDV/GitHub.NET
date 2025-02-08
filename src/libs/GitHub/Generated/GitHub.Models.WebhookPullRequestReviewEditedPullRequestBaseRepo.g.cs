@@ -776,7 +776,9 @@ namespace GitHub
         /// <param name="visibility"></param>
         /// <param name="watchers"></param>
         /// <param name="watchersCount"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestReviewEditedPullRequestBaseRepo(
             string archiveUrl,
             bool archived,

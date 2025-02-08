@@ -100,7 +100,9 @@ namespace GitHub
         /// A GitHub user.
         /// </param>
         /// <param name="workflow"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookWorkflowDispatch(
             object? inputs,
             string @ref,

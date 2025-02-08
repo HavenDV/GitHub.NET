@@ -71,7 +71,9 @@ namespace GitHub
         /// <param name="inactiveThisCycle">
         /// The number of seats that have not used Copilot during the current billing cycle.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotSeatBreakdown(
             int? total,
             int? addedThisCycle,

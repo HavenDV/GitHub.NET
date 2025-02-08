@@ -97,7 +97,9 @@ namespace GitHub
         /// <param name="self">
         /// Hypermedia Link
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PullRequestLinks(
             global::GitHub.Link comments,
             global::GitHub.Link commits,

@@ -1080,7 +1080,9 @@ namespace GitHub
         /// <param name="anonymousAccessEnabled">
         /// Whether anonymous git access is enabled for this repository
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public NullableRepository(
             long id,
             string nodeId,

@@ -37,7 +37,9 @@ namespace GitHub
         /// <param name="allowedActions">
         /// The permissions policy that controls the actions and reusable workflows that are allowed to run.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsSetGithubActionsPermissionsRepositoryRequest(
             bool enabled,
             global::GitHub.AllowedActions? allowedActions)

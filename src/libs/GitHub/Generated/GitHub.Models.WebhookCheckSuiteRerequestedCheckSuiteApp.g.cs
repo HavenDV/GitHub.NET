@@ -129,7 +129,9 @@ namespace GitHub
         /// The slug name of the GitHub app
         /// </param>
         /// <param name="updatedAt"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookCheckSuiteRerequestedCheckSuiteApp(
             global::System.DateTime? createdAt,
             string? description,

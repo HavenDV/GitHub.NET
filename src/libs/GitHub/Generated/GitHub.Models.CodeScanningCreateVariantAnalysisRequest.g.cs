@@ -65,7 +65,9 @@ namespace GitHub
         /// <param name="repositoryOwners">
         /// List of organization or user names whose repositories the query should be run against. Precisely one property from `repositories`, `repository_lists` and `repository_owners` is required.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningCreateVariantAnalysisRequest(
             global::GitHub.CodeScanningVariantAnalysisLanguage language,
             string queryPack,

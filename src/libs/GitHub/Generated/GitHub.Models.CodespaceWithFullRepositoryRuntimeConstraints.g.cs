@@ -26,7 +26,9 @@ namespace GitHub
         /// <param name="allowedPortPrivacySettings">
         /// The privacy settings a user can select from when forwarding a port.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodespaceWithFullRepositoryRuntimeConstraints(
             global::System.Collections.Generic.IList<string>? allowedPortPrivacySettings)
         {

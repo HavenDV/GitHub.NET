@@ -57,7 +57,9 @@ namespace GitHub
         /// <param name="message">
         /// A message providing further details about the result, such as why the dependencies were not updated.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public DependencyGraphCreateRepositorySnapshotResponse(
             int id,
             string createdAt,

@@ -47,7 +47,9 @@ namespace GitHub
         /// Example: 3782
         /// </param>
         /// <param name="views"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ViewTraffic(
             int count,
             int uniques,

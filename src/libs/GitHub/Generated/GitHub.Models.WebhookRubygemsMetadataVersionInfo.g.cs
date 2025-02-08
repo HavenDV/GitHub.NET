@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookRubygemsMetadataVersionInfo" /> class.
         /// </summary>
         /// <param name="version"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRubygemsMetadataVersionInfo(
             string? version)
         {

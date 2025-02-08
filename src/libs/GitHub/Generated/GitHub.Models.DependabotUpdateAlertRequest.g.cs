@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="dismissedComment">
         /// An optional comment associated with dismissing the alert.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public DependabotUpdateAlertRequest(
             global::GitHub.DependabotUpdateAlertRequestState state,
             global::GitHub.DependabotUpdateAlertRequestDismissedReason? dismissedReason,

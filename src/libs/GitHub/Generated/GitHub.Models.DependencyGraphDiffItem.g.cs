@@ -122,7 +122,9 @@ namespace GitHub
         /// <param name="scope">
         /// Where the dependency is utilized. `development` means that the dependency is only utilized in the development environment. `runtime` means that the dependency is utilized at runtime and in the development environment.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public DependencyGraphDiffItem(
             global::GitHub.DependencyGraphDiffItemChangeType changeType,
             string manifest,

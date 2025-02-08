@@ -869,7 +869,9 @@ namespace GitHub
         /// <param name="webCommitSignoffRequired">
         /// Whether to require contributors to sign off on web-based commits
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestReviewSubmittedPullRequestBaseRepo(
             string archiveUrl,
             bool archived,

@@ -49,7 +49,9 @@ namespace GitHub
         /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets.<br/>
         /// Default Value: always
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRulesetBypassActor(
             global::GitHub.RepositoryRulesetBypassActorActorType actorType,
             int? actorId,

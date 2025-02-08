@@ -45,7 +45,9 @@ namespace GitHub
         /// <param name="target"></param>
         /// <param name="include"></param>
         /// <param name="exclude"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRepositoryRulesetEditedChangesConditionsUpdatedItemChanges(
             global::GitHub.WebhookRepositoryRulesetEditedChangesConditionsUpdatedItemChangesConditionType? conditionType,
             global::GitHub.WebhookRepositoryRulesetEditedChangesConditionsUpdatedItemChangesTarget? target,

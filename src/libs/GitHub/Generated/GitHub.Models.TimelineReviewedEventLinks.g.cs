@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="html"></param>
         /// <param name="pullRequest"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TimelineReviewedEventLinks(
             global::GitHub.TimelineReviewedEventLinksHtml html,
             global::GitHub.TimelineReviewedEventLinksPullRequest pullRequest)

@@ -66,7 +66,9 @@ namespace GitHub
         /// <param name="rateLimitedRequestCount"></param>
         /// <param name="lastRateLimitedTimestamp"></param>
         /// <param name="lastRequestTimestamp"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ApiInsightsSubjectStat(
             string? subjectType,
             string? subjectName,

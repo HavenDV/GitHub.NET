@@ -33,7 +33,9 @@ namespace GitHub
         /// Total number of users who prompted Copilot Chat in the IDE.
         /// </param>
         /// <param name="editors"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotIdeChat(
             int? totalEngagedUsers,
             global::System.Collections.Generic.IList<global::GitHub.CopilotIdeChatEditor>? editors)

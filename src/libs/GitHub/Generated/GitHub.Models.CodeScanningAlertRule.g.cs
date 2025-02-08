@@ -100,7 +100,9 @@ namespace GitHub
         /// <param name="helpUri">
         /// A link to the documentation for the rule used to detect the alert.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningAlertRule(
             string? id,
             string? name,

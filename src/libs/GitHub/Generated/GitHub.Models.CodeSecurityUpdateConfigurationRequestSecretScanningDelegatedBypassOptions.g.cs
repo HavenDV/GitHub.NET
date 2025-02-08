@@ -26,7 +26,9 @@ namespace GitHub
         /// <param name="reviewers">
         /// The bypass reviewers for secret scanning delegated bypass
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptions(
             global::System.Collections.Generic.IList<global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewer>? reviewers)
         {

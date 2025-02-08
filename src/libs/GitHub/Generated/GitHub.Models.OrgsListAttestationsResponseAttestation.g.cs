@@ -42,7 +42,9 @@ namespace GitHub
         /// </param>
         /// <param name="repositoryId"></param>
         /// <param name="bundleUrl"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrgsListAttestationsResponseAttestation(
             global::GitHub.OrgsListAttestationsResponseAttestationBundle? bundle,
             int? repositoryId,

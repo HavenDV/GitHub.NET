@@ -26,7 +26,9 @@ namespace GitHub
         /// <param name="status">
         /// Can be `enabled` or `disabled`.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposUpdateRequestSecurityAndAnalysisSecretScanningPushProtection(
             string? status)
         {

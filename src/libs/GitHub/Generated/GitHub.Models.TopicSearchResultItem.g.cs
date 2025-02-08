@@ -140,7 +140,9 @@ namespace GitHub
         /// <param name="textMatches"></param>
         /// <param name="related"></param>
         /// <param name="aliases"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TopicSearchResultItem(
             string name,
             string? displayName,

@@ -254,7 +254,9 @@ namespace GitHub
         /// <param name="signatureRequirementEnforcementLevel"></param>
         /// <param name="strictRequiredStatusChecksPolicy"></param>
         /// <param name="updatedAt"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhooksRule(
             bool adminEnforced,
             global::GitHub.WebhooksRuleAllowDeletionsEnforcementLevel allowDeletionsEnforcementLevel,

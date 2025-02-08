@@ -192,7 +192,9 @@ namespace GitHub
         /// <param name="enforcement">
         /// The enforcement status for a security configuration
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeSecurityUpdateConfigurationRequest(
             string? name,
             string? description,

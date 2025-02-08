@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="from"></param>
         /// <param name="to"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookProjectsV2StatusUpdateEditedChangesStatus(
             global::GitHub.WebhookProjectsV2StatusUpdateEditedChangesStatusFrom? from,
             global::GitHub.WebhookProjectsV2StatusUpdateEditedChangesStatusTo? to)

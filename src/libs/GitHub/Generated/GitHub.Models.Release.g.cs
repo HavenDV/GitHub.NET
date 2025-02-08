@@ -219,7 +219,9 @@ namespace GitHub
         /// The URL of the release discussion.
         /// </param>
         /// <param name="reactions"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Release(
             string url,
             string htmlUrl,

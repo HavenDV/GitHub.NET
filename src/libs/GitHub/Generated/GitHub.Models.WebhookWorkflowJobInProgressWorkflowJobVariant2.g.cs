@@ -187,7 +187,9 @@ namespace GitHub
         /// </param>
         /// <param name="steps"></param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookWorkflowJobInProgressWorkflowJobVariant2(
             global::GitHub.WebhookWorkflowJobInProgressWorkflowJobVariant2Status status,
             global::System.Collections.Generic.IList<global::GitHub.WebhookWorkflowJobInProgressWorkflowJobVariant2Step> steps,

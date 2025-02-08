@@ -126,7 +126,9 @@ namespace GitHub
         /// <param name="groupName">
         /// If a group assignment, name of the group the student is in
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ClassroomAssignmentGrade(
             string assignmentName,
             string assignmentUrl,

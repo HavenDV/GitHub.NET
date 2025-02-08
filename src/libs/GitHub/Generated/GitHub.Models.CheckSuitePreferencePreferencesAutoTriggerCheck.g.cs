@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="appId"></param>
         /// <param name="setting"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CheckSuitePreferencePreferencesAutoTriggerCheck(
             int appId,
             bool setting)

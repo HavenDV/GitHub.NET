@@ -57,7 +57,9 @@ namespace GitHub
         /// <param name="signature"></param>
         /// <param name="payload"></param>
         /// <param name="verifiedAt"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TimelineCommittedEventVerification(
             bool verified,
             string reason,

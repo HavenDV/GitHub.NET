@@ -36,7 +36,9 @@ namespace GitHub
         /// Example: 5
         /// </param>
         /// <param name="environments"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposGetAllEnvironmentsResponse(
             int? totalCount,
             global::System.Collections.Generic.IList<global::GitHub.Environment>? environments)

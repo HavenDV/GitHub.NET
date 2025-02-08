@@ -58,7 +58,9 @@ namespace GitHub
         /// <param name="name">
         /// Example: "web"
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrgsUpdateWebhookRequest(
             global::GitHub.OrgsUpdateWebhookRequestConfig? config,
             global::System.Collections.Generic.IList<string>? events,

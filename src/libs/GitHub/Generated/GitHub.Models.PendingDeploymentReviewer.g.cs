@@ -40,7 +40,9 @@ namespace GitHub
         /// Example: User
         /// </param>
         /// <param name="reviewer"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PendingDeploymentReviewer(
             global::GitHub.DeploymentReviewerType? type,
             global::GitHub.AnyOf<global::GitHub.SimpleUser, global::GitHub.Team>? reviewer)

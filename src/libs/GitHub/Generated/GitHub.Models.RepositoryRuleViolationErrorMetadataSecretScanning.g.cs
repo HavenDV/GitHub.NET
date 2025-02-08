@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="RepositoryRuleViolationErrorMetadataSecretScanning" /> class.
         /// </summary>
         /// <param name="bypassPlaceholders"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleViolationErrorMetadataSecretScanning(
             global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleViolationErrorMetadataSecretScanningBypassPlaceholder>? bypassPlaceholders)
         {

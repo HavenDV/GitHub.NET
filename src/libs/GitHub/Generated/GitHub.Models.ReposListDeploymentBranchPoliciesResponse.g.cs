@@ -38,7 +38,9 @@ namespace GitHub
         /// Example: 2
         /// </param>
         /// <param name="branchPolicies"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposListDeploymentBranchPoliciesResponse(
             int totalCount,
             global::System.Collections.Generic.IList<global::GitHub.DeploymentBranchPolicy> branchPolicies)

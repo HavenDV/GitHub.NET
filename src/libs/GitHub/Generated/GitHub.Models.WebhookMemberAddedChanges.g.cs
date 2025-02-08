@@ -41,7 +41,9 @@ namespace GitHub
         /// <param name="roleName">
         /// The role assigned to the collaborator.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookMemberAddedChanges(
             global::GitHub.WebhookMemberAddedChangesPermission? permission,
             global::GitHub.WebhookMemberAddedChangesRoleName? roleName)

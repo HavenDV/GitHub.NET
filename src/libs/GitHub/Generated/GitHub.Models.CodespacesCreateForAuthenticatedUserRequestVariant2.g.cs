@@ -82,7 +82,9 @@ namespace GitHub
         /// <param name="idleTimeoutMinutes">
         /// Time in minutes before codespace stops from inactivity
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodespacesCreateForAuthenticatedUserRequestVariant2(
             global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2PullRequest pullRequest,
             string? location,

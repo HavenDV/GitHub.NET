@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="placeholderId">
         /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SecretScanningCreatePushProtectionBypassRequest(
             global::GitHub.SecretScanningPushProtectionBypassReason reason,
             string placeholderId)

@@ -46,7 +46,9 @@ namespace GitHub
         /// <param name="checks">
         /// The list of status checks to require in order to merge into this branch.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposUpdateBranchProtectionRequestRequiredStatusChecks(
             bool strict,
             global::System.Collections.Generic.IList<string> contexts,

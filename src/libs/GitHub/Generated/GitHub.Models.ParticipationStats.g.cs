@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="all"></param>
         /// <param name="owner"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ParticipationStats(
             global::System.Collections.Generic.IList<int> all,
             global::System.Collections.Generic.IList<int> owner)

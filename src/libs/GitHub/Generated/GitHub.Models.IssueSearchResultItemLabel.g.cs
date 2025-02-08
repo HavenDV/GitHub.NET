@@ -66,7 +66,9 @@ namespace GitHub
         /// <param name="color"></param>
         /// <param name="default"></param>
         /// <param name="description"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public IssueSearchResultItemLabel(
             long? id,
             string? nodeId,

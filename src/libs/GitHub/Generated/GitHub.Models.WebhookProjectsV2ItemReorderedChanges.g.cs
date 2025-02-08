@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookProjectsV2ItemReorderedChanges" /> class.
         /// </summary>
         /// <param name="previousProjectsV2ItemNodeId"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookProjectsV2ItemReorderedChanges(
             global::GitHub.WebhookProjectsV2ItemReorderedChangesPreviousProjectsV2ItemNodeId? previousProjectsV2ItemNodeId)
         {

@@ -46,7 +46,9 @@ namespace GitHub
         /// <param name="strictRequiredStatusChecksPolicy">
         /// Whether pull requests targeting a matching branch must be tested with the latest code. This setting will not take effect unless at least one status check is enabled.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleRequiredStatusChecksParameters(
             global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleParamsStatusCheckConfiguration> requiredStatusChecks,
             bool strictRequiredStatusChecksPolicy,

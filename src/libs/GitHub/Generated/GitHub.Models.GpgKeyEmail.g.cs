@@ -31,7 +31,9 @@ namespace GitHub
         /// </summary>
         /// <param name="email"></param>
         /// <param name="verified"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GpgKeyEmail(
             string? email,
             bool? verified)

@@ -57,7 +57,9 @@ namespace GitHub
         /// <param name="text"></param>
         /// <param name="annotationsCount"></param>
         /// <param name="annotationsUrl"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CheckRunOutput(
             string? title,
             string? summary,

@@ -36,7 +36,9 @@ namespace GitHub
         /// <param name="runnerLabel">
         /// The label of the runner to use for code scanning default setup when runner_type is 'labeled'.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningDefaultSetupOptions(
             global::GitHub.CodeScanningDefaultSetupOptionsRunnerType? runnerType,
             string? runnerLabel)

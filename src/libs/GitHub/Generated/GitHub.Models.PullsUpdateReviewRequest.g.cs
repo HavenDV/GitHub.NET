@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="body">
         /// The body text of the pull request review.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PullsUpdateReviewRequest(
             string body)
         {

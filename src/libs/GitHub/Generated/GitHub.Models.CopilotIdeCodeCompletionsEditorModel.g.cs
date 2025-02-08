@@ -62,7 +62,9 @@ namespace GitHub
         /// <param name="languages">
         /// Code completion metrics for active languages, for the given editor.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotIdeCodeCompletionsEditorModel(
             string? name,
             bool? isCustomModel,

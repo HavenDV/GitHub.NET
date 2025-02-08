@@ -152,7 +152,9 @@ namespace GitHub
         /// <param name="total">
         /// Total minutes used on all runner machines.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsBillingUsageMinutesUsedBreakdown(
             int? uBUNTU,
             int? mACOS,

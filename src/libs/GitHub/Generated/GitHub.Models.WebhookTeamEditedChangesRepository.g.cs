@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookTeamEditedChangesRepository" /> class.
         /// </summary>
         /// <param name="permissions"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookTeamEditedChangesRepository(
             global::GitHub.WebhookTeamEditedChangesRepositoryPermissions permissions)
         {

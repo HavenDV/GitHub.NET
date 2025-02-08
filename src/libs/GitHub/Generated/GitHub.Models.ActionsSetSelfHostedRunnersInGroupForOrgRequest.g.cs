@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="runners">
         /// List of runner IDs to add to the runner group.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsSetSelfHostedRunnersInGroupForOrgRequest(
             global::System.Collections.Generic.IList<int> runners)
         {

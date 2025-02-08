@@ -86,7 +86,9 @@ namespace GitHub
         /// <param name="autoInactive">
         /// Adds a new `inactive` status to all prior non-transient, non-production environment deployments with the same repository and `environment` name as the created status's deployment. An `inactive` status is only added to deployments that had a `success` state. Default: `true`
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposCreateDeploymentStatusRequest(
             global::GitHub.ReposCreateDeploymentStatusRequestState state,
             string? targetUrl,

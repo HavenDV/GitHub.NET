@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="IssuesAddLabelsRequestVariant3" /> class.
         /// </summary>
         /// <param name="labels"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public IssuesAddLabelsRequestVariant3(
             global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant3Label>? labels)
         {

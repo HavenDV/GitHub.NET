@@ -115,7 +115,9 @@ namespace GitHub
         /// <param name="state"></param>
         /// <param name="submittedAt"></param>
         /// <param name="user"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestReviewDismissedReview(
             global::GitHub.WebhookPullRequestReviewDismissedReviewLinks links,
             global::GitHub.WebhookPullRequestReviewDismissedReviewAuthorAssociation authorAssociation,

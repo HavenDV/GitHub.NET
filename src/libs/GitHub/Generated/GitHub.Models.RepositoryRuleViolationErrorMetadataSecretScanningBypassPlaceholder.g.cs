@@ -33,7 +33,9 @@ namespace GitHub
         /// The ID of the push protection bypass placeholder. This value is returned on any push protected routes.
         /// </param>
         /// <param name="tokenType"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleViolationErrorMetadataSecretScanningBypassPlaceholder(
             string? placeholderId,
             string? tokenType)

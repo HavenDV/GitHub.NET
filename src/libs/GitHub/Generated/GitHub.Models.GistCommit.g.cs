@@ -65,7 +65,9 @@ namespace GitHub
         /// </param>
         /// <param name="changeStatus"></param>
         /// <param name="committedAt"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GistCommit(
             string url,
             string version,

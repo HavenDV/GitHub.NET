@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// Prevent commits that exceed a specified file size limit from being pushed to the commit.
+    /// Prevent commits that exceed a specified file size limit from being pushed to the commit graph.
     /// </summary>
     public sealed partial class RepositoryRuleVariant19
     {
@@ -32,7 +32,9 @@ namespace GitHub
         /// </summary>
         /// <param name="type"></param>
         /// <param name="parameters"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleVariant19(
             global::GitHub.RepositoryRuleVariant19Type type,
             global::GitHub.RepositoryRuleVariant19Parameters? parameters)

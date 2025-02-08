@@ -32,7 +32,9 @@ namespace GitHub
         /// </summary>
         /// <param name="billable"></param>
         /// <param name="runDurationMs"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WorkflowRunUsage(
             global::GitHub.WorkflowRunUsageBillable billable,
             int? runDurationMs)

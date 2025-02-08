@@ -120,7 +120,9 @@ namespace GitHub
         /// <param name="url">
         /// URL that points to the commit API resource.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPushHeadCommit(
             global::GitHub.WebhookPushHeadCommitAuthor author,
             global::GitHub.WebhookPushHeadCommitCommitter committer,

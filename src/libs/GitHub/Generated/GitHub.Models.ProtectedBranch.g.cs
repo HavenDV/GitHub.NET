@@ -117,7 +117,9 @@ namespace GitHub
         /// <param name="allowForkSyncing">
         /// Whether users can pull changes from upstream when the branch is locked. Set to `true` to allow fork syncing. Set to `false` to prevent fork syncing.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ProtectedBranch(
             string url,
             global::GitHub.StatusCheckPolicy? requiredStatusChecks,

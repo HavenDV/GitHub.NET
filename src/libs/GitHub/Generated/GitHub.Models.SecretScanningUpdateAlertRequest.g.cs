@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="resolutionComment">
         /// An optional comment when closing an alert. Cannot be updated or deleted. Must be `null` when changing `state` to `open`.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SecretScanningUpdateAlertRequest(
             global::GitHub.SecretScanningAlertState state,
             global::GitHub.SecretScanningAlertResolution? resolution,

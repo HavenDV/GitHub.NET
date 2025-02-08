@@ -52,7 +52,9 @@ namespace GitHub
         /// <param name="endLine"></param>
         /// <param name="startColumn"></param>
         /// <param name="endColumn"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningAlertLocation(
             string? path,
             int? startLine,

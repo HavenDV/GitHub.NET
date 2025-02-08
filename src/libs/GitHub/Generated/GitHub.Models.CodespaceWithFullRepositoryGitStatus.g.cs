@@ -71,7 +71,9 @@ namespace GitHub
         /// The current branch (or SHA if in detached HEAD state) of the local repository.<br/>
         /// Example: main
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodespaceWithFullRepositoryGitStatus(
             int? ahead,
             int? behind,

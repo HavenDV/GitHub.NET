@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="SigstoreBundle0VerificationMaterialTlogEntrieInclusionPromise" /> class.
         /// </summary>
         /// <param name="signedEntryTimestamp"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SigstoreBundle0VerificationMaterialTlogEntrieInclusionPromise(
             string? signedEntryTimestamp)
         {

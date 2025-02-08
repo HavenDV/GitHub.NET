@@ -46,7 +46,9 @@ namespace GitHub
         /// <param name="user">
         /// Collaborator
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryCollaboratorPermission(
             string permission,
             string roleName,

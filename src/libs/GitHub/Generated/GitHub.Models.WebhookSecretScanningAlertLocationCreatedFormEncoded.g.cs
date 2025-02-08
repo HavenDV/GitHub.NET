@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="payload">
         /// A URL-encoded string of the secret_scanning_alert_location.created JSON payload. The decoded payload is a JSON object.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookSecretScanningAlertLocationCreatedFormEncoded(
             string payload)
         {

@@ -40,7 +40,9 @@ namespace GitHub
         /// Example: commit
         /// </param>
         /// <param name="details"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SecretScanningLocation(
             global::GitHub.SecretScanningLocationType? type,
             global::GitHub.OneOf<global::GitHub.SecretScanningLocationCommit, global::GitHub.SecretScanningLocationWikiCommit, global::GitHub.SecretScanningLocationIssueTitle, global::GitHub.SecretScanningLocationIssueBody, global::GitHub.SecretScanningLocationIssueComment, global::GitHub.SecretScanningLocationDiscussionTitle, global::GitHub.SecretScanningLocationDiscussionBody, global::GitHub.SecretScanningLocationDiscussionComment, global::GitHub.SecretScanningLocationPullRequestTitle, global::GitHub.SecretScanningLocationPullRequestBody, global::GitHub.SecretScanningLocationPullRequestComment, global::GitHub.SecretScanningLocationPullRequestReview, global::GitHub.SecretScanningLocationPullRequestReviewComment>? details)

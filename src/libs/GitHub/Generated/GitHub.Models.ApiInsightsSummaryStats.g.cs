@@ -35,7 +35,9 @@ namespace GitHub
         /// <param name="rateLimitedRequestCount">
         /// The total number of requests that were rate limited within the queried time period
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ApiInsightsSummaryStats(
             long? totalRequestCount,
             long? rateLimitedRequestCount)

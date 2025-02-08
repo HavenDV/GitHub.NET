@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="names">
         /// An array of topics to add to the repository. Pass one or more topics to _replace_ the set of existing topics. Send an empty array (`[]`) to clear all topics from the repository. **Note:** Topic `names` will be saved as lowercase.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposReplaceAllTopicsRequest(
             global::System.Collections.Generic.IList<string> names)
         {

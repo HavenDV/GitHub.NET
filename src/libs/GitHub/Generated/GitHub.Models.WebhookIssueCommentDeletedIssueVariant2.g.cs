@@ -213,7 +213,9 @@ namespace GitHub
         /// <param name="updatedAt"></param>
         /// <param name="url"></param>
         /// <param name="user"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookIssueCommentDeletedIssueVariant2(
             global::GitHub.WebhookIssueCommentDeletedIssueVariant2Assignee? assignee,
             global::System.Collections.Generic.IList<global::GitHub.WebhookIssueCommentDeletedIssueVariant2Label> labels,

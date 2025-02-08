@@ -41,7 +41,9 @@ namespace GitHub
         /// <param name="sha"></param>
         /// <param name="merged"></param>
         /// <param name="message"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PullRequestMergeResult(
             string sha,
             bool merged,

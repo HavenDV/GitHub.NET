@@ -99,7 +99,9 @@ namespace GitHub
         /// A GitHub user.
         /// </param>
         /// <param name="thread"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestReviewThreadResolved(
             global::GitHub.WebhookPullRequestReviewThreadResolvedPullRequest pullRequest,
             global::GitHub.RepositoryWebhooks repository,

@@ -221,7 +221,9 @@ namespace GitHub
         /// <param name="contactEmail">
         /// Example: "test_13f1e99741e3e004@d7e1eb0bc0a1ba12.com"
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Installation(
             int id,
             global::GitHub.AnyOf<global::GitHub.SimpleUser, global::GitHub.Enterprise>? account,

@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="type"></param>
         /// <param name="value"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhooksSecurityAdvisoryIdentifier(
             string type,
             string value)

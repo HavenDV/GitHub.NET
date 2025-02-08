@@ -188,7 +188,9 @@ namespace GitHub
         /// <param name="authorsUrl"></param>
         /// <param name="repositoryUrl"></param>
         /// <param name="svnRoot"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Import(
             string? vcs,
             string vcsUrl,

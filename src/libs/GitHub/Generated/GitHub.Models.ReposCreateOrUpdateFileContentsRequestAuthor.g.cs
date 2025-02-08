@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="date">
         /// Example: "2013-01-15T17:13:22+05:00"
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposCreateOrUpdateFileContentsRequestAuthor(
             string name,
             string email,

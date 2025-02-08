@@ -124,7 +124,9 @@ namespace GitHub
         /// URL for the issue comment
         /// </param>
         /// <param name="user"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookIssueCommentCreatedComment(
             global::GitHub.WebhookIssueCommentCreatedCommentAuthorAssociation authorAssociation,
             string body,

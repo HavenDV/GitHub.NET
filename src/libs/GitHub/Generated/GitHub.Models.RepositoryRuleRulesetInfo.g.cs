@@ -45,7 +45,9 @@ namespace GitHub
         /// <param name="rulesetId">
         /// The ID of the ruleset that includes this rule.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleRulesetInfo(
             global::GitHub.RepositoryRuleRulesetInfoRulesetSourceType? rulesetSourceType,
             string? rulesetSource,

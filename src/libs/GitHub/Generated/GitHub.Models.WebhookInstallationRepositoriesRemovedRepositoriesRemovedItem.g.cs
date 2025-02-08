@@ -63,7 +63,9 @@ namespace GitHub
         /// <param name="private">
         /// Whether the repository is private or public.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookInstallationRepositoriesRemovedRepositoriesRemovedItem(
             string fullName,
             int id,

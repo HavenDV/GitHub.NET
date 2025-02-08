@@ -46,7 +46,9 @@ namespace GitHub
         /// <param name="selectedActionsUrl">
         /// The API URL to use to get or set the actions and reusable workflows that are allowed to run, when `allowed_actions` is set to `selected`.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsRepositoryPermissions(
             bool enabled,
             global::GitHub.AllowedActions? allowedActions,
