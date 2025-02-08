@@ -82,7 +82,9 @@ namespace GitHub
         /// <param name="password">
         /// Example: "password"
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrgsCreateWebhookRequestConfig(
             string url,
             string? contentType,

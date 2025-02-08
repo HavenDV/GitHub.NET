@@ -77,7 +77,9 @@ namespace GitHub
         /// The encoding used for `content`. Currently, `"utf-8"` and `"base64"` are supported.<br/>
         /// Default Value: utf-8
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GistSimpleFiles2(
             string? filename,
             string? type,

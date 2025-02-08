@@ -35,7 +35,9 @@ namespace GitHub
         /// <param name="patternScope">
         /// Level at which the custom pattern is defined, one of "repository", "organization", or "enterprise"
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SecretScanningScanHistoryCustomPatternBackfillScan(
             string? patternName,
             string? patternScope)

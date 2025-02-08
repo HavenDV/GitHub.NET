@@ -75,7 +75,9 @@ namespace GitHub
         /// <param name="enableStaticIp">
         /// Whether this runner should be created with a static public IP. Note limit on account. To list limits on account, use `GET actions/hosted-runners/limits`
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsCreateHostedRunnerForOrgRequest(
             string name,
             global::GitHub.ActionsCreateHostedRunnerForOrgRequestImage image,

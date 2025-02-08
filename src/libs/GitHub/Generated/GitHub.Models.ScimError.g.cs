@@ -59,7 +59,9 @@ namespace GitHub
         /// <param name="status"></param>
         /// <param name="scimType"></param>
         /// <param name="schemas"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ScimError(
             string? message,
             string? documentationUrl,

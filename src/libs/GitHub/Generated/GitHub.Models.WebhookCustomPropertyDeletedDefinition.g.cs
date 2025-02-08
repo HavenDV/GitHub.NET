@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="propertyName">
         /// The name of the property that was deleted.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookCustomPropertyDeletedDefinition(
             string propertyName)
         {

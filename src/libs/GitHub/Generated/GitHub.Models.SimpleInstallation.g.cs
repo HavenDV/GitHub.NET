@@ -45,7 +45,9 @@ namespace GitHub
         /// The global node ID of the installation.<br/>
         /// Example: MDQ6VXNlcjU4MzIzMQ==
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SimpleInstallation(
             int id,
             string nodeId)

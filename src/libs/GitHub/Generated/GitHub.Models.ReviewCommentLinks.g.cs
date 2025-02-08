@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="pullRequest">
         /// Hypermedia Link
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReviewCommentLinks(
             global::GitHub.Link self,
             global::GitHub.Link html,

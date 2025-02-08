@@ -43,7 +43,9 @@ namespace GitHub
         /// <param name="repositorySelection">
         /// Example: selected
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public AppsListReposAccessibleToInstallationResponse(
             int totalCount,
             global::System.Collections.Generic.IList<global::GitHub.Repository> repositories,

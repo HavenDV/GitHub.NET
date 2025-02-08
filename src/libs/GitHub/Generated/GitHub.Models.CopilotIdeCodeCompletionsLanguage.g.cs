@@ -35,7 +35,9 @@ namespace GitHub
         /// <param name="totalEngagedUsers">
         /// Number of users who accepted at least one Copilot code completion suggestion for the given language. Includes both full and partial acceptances.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotIdeCodeCompletionsLanguage(
             string? name,
             int? totalEngagedUsers)

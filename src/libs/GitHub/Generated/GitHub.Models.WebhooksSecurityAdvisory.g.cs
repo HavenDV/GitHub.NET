@@ -120,7 +120,9 @@ namespace GitHub
         /// <param name="updatedAt"></param>
         /// <param name="vulnerabilities"></param>
         /// <param name="withdrawnAt"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhooksSecurityAdvisory(
             global::GitHub.WebhooksSecurityAdvisoryCvss cvss,
             global::System.Collections.Generic.IList<global::GitHub.WebhooksSecurityAdvisoryCwe> cwes,

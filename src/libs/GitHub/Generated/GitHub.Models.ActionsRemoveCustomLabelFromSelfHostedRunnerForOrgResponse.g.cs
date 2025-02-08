@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="totalCount"></param>
         /// <param name="labels"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse(
             int totalCount,
             global::System.Collections.Generic.IList<global::GitHub.RunnerLabel> labels)

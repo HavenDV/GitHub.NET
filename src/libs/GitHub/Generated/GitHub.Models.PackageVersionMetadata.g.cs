@@ -43,7 +43,9 @@ namespace GitHub
         /// </param>
         /// <param name="container"></param>
         /// <param name="docker"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PackageVersionMetadata(
             global::GitHub.PackageVersionMetadataPackageType packageType,
             global::GitHub.PackageVersionMetadataContainer? container,

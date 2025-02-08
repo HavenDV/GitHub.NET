@@ -83,7 +83,9 @@ namespace GitHub
         /// for and sent to a GitHub App. For more information,<br/>
         /// see "[Using webhooks with GitHub Apps](https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps)."
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPersonalAccessTokenRequestCreated(
             global::GitHub.PersonalAccessTokenRequest personalAccessTokenRequest,
             global::GitHub.OrganizationSimpleWebhooks organization,

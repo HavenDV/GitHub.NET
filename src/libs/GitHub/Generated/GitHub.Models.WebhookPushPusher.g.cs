@@ -48,7 +48,9 @@ namespace GitHub
         /// The git author's name.
         /// </param>
         /// <param name="username"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPushPusher(
             string name,
             global::System.DateTime? date,

@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="CheckRunCheckSuite" /> class.
         /// </summary>
         /// <param name="id"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CheckRunCheckSuite(
             int id)
         {

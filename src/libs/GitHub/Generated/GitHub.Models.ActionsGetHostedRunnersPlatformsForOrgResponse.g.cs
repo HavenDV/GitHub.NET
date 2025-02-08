@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="totalCount"></param>
         /// <param name="platforms"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsGetHostedRunnersPlatformsForOrgResponse(
             int totalCount,
             global::System.Collections.Generic.IList<string> platforms)

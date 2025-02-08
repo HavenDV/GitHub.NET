@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="labels">
         /// The names of the custom labels to set for the runner. You can pass an empty array to remove all custom labels.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest(
             global::System.Collections.Generic.IList<string> labels)
         {

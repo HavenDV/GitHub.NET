@@ -43,7 +43,9 @@ namespace GitHub
         /// The current number of static public IP addresses in use by Hosted Runners.<br/>
         /// Example: 17
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsHostedRunnerLimitsPublicIps(
             int maximum,
             int currentUsage)

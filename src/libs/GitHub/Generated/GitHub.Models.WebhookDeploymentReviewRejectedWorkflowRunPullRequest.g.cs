@@ -57,7 +57,9 @@ namespace GitHub
         /// <param name="id"></param>
         /// <param name="number"></param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookDeploymentReviewRejectedWorkflowRunPullRequest(
             global::GitHub.WebhookDeploymentReviewRejectedWorkflowRunPullRequestBase @base,
             global::GitHub.WebhookDeploymentReviewRejectedWorkflowRunPullRequestHead head,

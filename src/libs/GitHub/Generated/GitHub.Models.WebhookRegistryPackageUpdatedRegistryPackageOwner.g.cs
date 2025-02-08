@@ -168,7 +168,9 @@ namespace GitHub
         /// <param name="type"></param>
         /// <param name="url"></param>
         /// <param name="userViewType"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRegistryPackageUpdatedRegistryPackageOwner(
             string avatarUrl,
             string eventsUrl,

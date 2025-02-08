@@ -40,7 +40,9 @@ namespace GitHub
         /// <param name="repositories">
         /// A list of repositories that were skipped. This list may not include all repositories that were skipped. This is only available when the repository was found and the user has access to it.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningVariantAnalysisSkippedRepoGroup(
             int repositoryCount,
             global::System.Collections.Generic.IList<global::GitHub.CodeScanningVariantAnalysisRepository> repositories)

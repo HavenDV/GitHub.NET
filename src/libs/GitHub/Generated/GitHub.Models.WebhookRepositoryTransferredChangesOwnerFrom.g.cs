@@ -31,7 +31,9 @@ namespace GitHub
         /// </summary>
         /// <param name="organization"></param>
         /// <param name="user"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRepositoryTransferredChangesOwnerFrom(
             global::GitHub.WebhookRepositoryTransferredChangesOwnerFromOrganization? organization,
             global::GitHub.WebhookRepositoryTransferredChangesOwnerFromUser? user)

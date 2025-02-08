@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="ChecksCreateRequestVariant1" /> class.
         /// </summary>
         /// <param name="status"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ChecksCreateRequestVariant1(
             global::GitHub.ChecksCreateRequestVariant1Status status)
         {

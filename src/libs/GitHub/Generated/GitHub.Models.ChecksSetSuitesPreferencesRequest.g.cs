@@ -26,7 +26,9 @@ namespace GitHub
         /// <param name="autoTriggerChecks">
         /// Enables or disables automatic creation of CheckSuite events upon pushes to the repository. Enabled by default.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ChecksSetSuitesPreferencesRequest(
             global::System.Collections.Generic.IList<global::GitHub.ChecksSetSuitesPreferencesRequestAutoTriggerCheck>? autoTriggerChecks)
         {

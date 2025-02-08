@@ -283,7 +283,9 @@ namespace GitHub
         /// <param name="commitOid"></param>
         /// <param name="publishedViaActions"></param>
         /// <param name="deletedById"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRegistryPackagePublishedRegistryPackagePackageVersionNpmMetadata(
             string? name,
             string? version,

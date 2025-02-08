@@ -64,7 +64,9 @@ namespace GitHub
         /// The comment submitted with the deployment review<br/>
         /// Example: Ship it!
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public EnvironmentApprovals(
             global::System.Collections.Generic.IList<global::GitHub.EnvironmentApprovalsEnvironment> environments,
             global::GitHub.EnvironmentApprovalsState state,

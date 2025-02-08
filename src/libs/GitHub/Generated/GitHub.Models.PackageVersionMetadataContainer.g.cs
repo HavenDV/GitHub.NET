@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="PackageVersionMetadataContainer" /> class.
         /// </summary>
         /// <param name="tags"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PackageVersionMetadataContainer(
             global::System.Collections.Generic.IList<string> tags)
         {

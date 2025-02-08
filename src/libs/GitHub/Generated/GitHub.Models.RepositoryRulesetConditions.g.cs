@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="RepositoryRulesetConditions" /> class.
         /// </summary>
         /// <param name="refName"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRulesetConditions(
             global::GitHub.RepositoryRulesetConditionsRefName? refName)
         {

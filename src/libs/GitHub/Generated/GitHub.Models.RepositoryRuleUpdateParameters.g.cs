@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="updateAllowsFetchAndMerge">
         /// Branch can pull changes from its upstream repository
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleUpdateParameters(
             bool updateAllowsFetchAndMerge)
         {

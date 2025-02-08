@@ -133,7 +133,9 @@ namespace GitHub
         /// <param name="submoduleGitUrl">
         /// Example: "git://example.com/defunkt/dotjs.git"
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ContentFile(
             string encoding,
             int size,

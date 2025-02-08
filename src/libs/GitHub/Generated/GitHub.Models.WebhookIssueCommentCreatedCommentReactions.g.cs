@@ -97,7 +97,9 @@ namespace GitHub
         /// <param name="rocket"></param>
         /// <param name="totalCount"></param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookIssueCommentCreatedCommentReactions(
             int plus1,
             int minus1,

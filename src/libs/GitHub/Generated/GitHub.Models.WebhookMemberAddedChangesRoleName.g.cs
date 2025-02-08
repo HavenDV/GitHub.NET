@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookMemberAddedChangesRoleName" /> class.
         /// </summary>
         /// <param name="to"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookMemberAddedChangesRoleName(
             string to)
         {

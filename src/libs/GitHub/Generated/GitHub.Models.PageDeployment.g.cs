@@ -68,7 +68,9 @@ namespace GitHub
         /// The URI to the deployed GitHub Pages preview.<br/>
         /// Example: monalisa-1231a2312sa32-23sda74.drafts.github.io
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PageDeployment(
             global::GitHub.OneOf<int?, string> id,
             string statusUrl,

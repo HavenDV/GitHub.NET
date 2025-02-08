@@ -35,7 +35,9 @@ namespace GitHub
         /// <param name="message">
         /// Commit message to be used.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningAutofixCommits(
             string? targetRef,
             string? message)

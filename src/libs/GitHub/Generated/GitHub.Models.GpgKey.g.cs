@@ -163,7 +163,9 @@ namespace GitHub
         /// Example: true
         /// </param>
         /// <param name="rawKey"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GpgKey(
             long id,
             int? primaryKeyId,

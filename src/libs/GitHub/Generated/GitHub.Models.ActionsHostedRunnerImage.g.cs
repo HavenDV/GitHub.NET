@@ -80,7 +80,9 @@ namespace GitHub
         /// <param name="source">
         /// The image provider.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsHostedRunnerImage(
             string id,
             string platform,

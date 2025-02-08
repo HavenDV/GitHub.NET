@@ -35,7 +35,9 @@ namespace GitHub
         ///  * `resolved`  <br/>
         ///  * `spam`
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public IssuesLockRequest(
             global::GitHub.IssuesLockRequestLockReason? lockReason)
         {

@@ -40,7 +40,9 @@ namespace GitHub
         /// <param name="totalCount"></param>
         /// <param name="repositorySelection"></param>
         /// <param name="repositories"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public AppsListInstallationReposForAuthenticatedUserResponse(
             int totalCount,
             global::System.Collections.Generic.IList<global::GitHub.Repository> repositories,

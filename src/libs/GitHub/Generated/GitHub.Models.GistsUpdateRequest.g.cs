@@ -44,7 +44,9 @@ namespace GitHub
         /// To delete a file, set the whole file to null. For example: `hello.py : null`. The file will also be<br/>
         /// deleted if the specified object does not contain at least one of `content` or `filename`.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GistsUpdateRequest(
             string? description,
             global::System.Collections.Generic.Dictionary<string, global::GitHub.GistsUpdateRequestFiles2?>? files)

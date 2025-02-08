@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="insecureSsl"></param>
         /// <param name="secret"></param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookMetaDeletedHookConfig(
             global::GitHub.WebhookMetaDeletedHookConfigContentType contentType,
             string insecureSsl,

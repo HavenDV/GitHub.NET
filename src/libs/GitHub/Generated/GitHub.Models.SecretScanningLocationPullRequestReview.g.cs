@@ -30,7 +30,9 @@ namespace GitHub
         /// The API URL to get the pull request review where the secret was detected.<br/>
         /// Example: https://api.github.com/repos/octocat/Hello-World/pulls/2846/reviews/80
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SecretScanningLocationPullRequestReview(
             string pullRequestReviewUrl)
         {

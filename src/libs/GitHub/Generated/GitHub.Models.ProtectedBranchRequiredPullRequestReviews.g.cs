@@ -71,7 +71,9 @@ namespace GitHub
         /// </param>
         /// <param name="dismissalRestrictions"></param>
         /// <param name="bypassPullRequestAllowances"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ProtectedBranchRequiredPullRequestReviews(
             string url,
             bool? dismissStaleReviews,

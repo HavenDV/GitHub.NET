@@ -37,7 +37,9 @@ namespace GitHub
         /// <param name="oldRepository">
         /// A git repository
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookIssuesOpenedChanges(
             global::GitHub.WebhookIssuesOpenedChangesOldIssue? oldIssue,
             global::GitHub.WebhookIssuesOpenedChangesOldRepository oldRepository)

@@ -36,7 +36,9 @@ namespace GitHub
         /// <param name="clientPayload">
         /// JSON payload with extra information about the webhook event that your action or workflow may use. The maximum number of top-level properties is 10. The total size of the JSON payload must be less than 64KB.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposCreateDispatchEventRequest(
             string eventType,
             object? clientPayload)

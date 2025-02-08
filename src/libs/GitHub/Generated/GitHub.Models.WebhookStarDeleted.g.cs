@@ -94,7 +94,9 @@ namespace GitHub
         /// <param name="starredAt">
         /// The time the star was created. This is a timestamp in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`. Will be `null` for the `deleted` action.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookStarDeleted(
             global::GitHub.RepositoryWebhooks repository,
             global::GitHub.SimpleUser sender,

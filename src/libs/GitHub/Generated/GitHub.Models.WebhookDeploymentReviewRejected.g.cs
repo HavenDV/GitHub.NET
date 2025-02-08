@@ -136,7 +136,9 @@ namespace GitHub
         /// <param name="workflowJobRun"></param>
         /// <param name="workflowJobRuns"></param>
         /// <param name="workflowRun"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookDeploymentReviewRejected(
             global::GitHub.OrganizationSimpleWebhooks organization,
             global::GitHub.RepositoryWebhooks repository,

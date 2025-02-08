@@ -122,7 +122,9 @@ namespace GitHub
         /// <param name="parents"></param>
         /// <param name="stats"></param>
         /// <param name="files"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Commit(
             string url,
             string sha,

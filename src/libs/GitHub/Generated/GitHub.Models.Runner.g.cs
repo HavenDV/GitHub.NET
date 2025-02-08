@@ -104,7 +104,9 @@ namespace GitHub
         /// <param name="busy"></param>
         /// <param name="labels"></param>
         /// <param name="ephemeral"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Runner(
             int id,
             string name,

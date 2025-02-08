@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="permissions">
         /// The permissions that the associated user will have on the repository. Valid values are `read`, `write`, `maintain`, `triage`, and `admin`.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposUpdateInvitationRequest(
             global::GitHub.ReposUpdateInvitationRequestPermissions? permissions)
         {

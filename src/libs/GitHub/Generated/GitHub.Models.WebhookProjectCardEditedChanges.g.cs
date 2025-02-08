@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookProjectCardEditedChanges" /> class.
         /// </summary>
         /// <param name="note"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookProjectCardEditedChanges(
             global::GitHub.WebhookProjectCardEditedChangesNote note)
         {

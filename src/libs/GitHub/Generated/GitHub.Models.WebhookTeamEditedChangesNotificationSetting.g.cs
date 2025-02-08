@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="from">
         /// The previous version of the team's notification setting if the action was `edited`.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookTeamEditedChangesNotificationSetting(
             string from)
         {

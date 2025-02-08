@@ -61,7 +61,9 @@ namespace GitHub
         /// <param name="visibility">
         /// Example: public
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Email(
             string email1,
             bool primary,

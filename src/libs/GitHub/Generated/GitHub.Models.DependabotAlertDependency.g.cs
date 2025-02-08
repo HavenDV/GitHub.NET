@@ -52,7 +52,9 @@ namespace GitHub
         /// The execution scope of the vulnerable dependency.<br/>
         /// Included only in responses
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public DependabotAlertDependency(
             global::GitHub.DependabotAlertPackage? package,
             string? manifestPath,

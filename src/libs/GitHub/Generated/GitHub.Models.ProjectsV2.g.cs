@@ -135,7 +135,9 @@ namespace GitHub
         /// <param name="deletedBy">
         /// A GitHub user.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ProjectsV2(
             double id,
             string nodeId,

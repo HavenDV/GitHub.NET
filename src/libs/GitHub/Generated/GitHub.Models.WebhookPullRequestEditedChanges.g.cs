@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="base"></param>
         /// <param name="body"></param>
         /// <param name="title"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestEditedChanges(
             global::GitHub.WebhookPullRequestEditedChangesBase? @base,
             global::GitHub.WebhookPullRequestEditedChangesBody? body,

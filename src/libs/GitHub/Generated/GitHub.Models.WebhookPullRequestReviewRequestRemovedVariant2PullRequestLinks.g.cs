@@ -81,7 +81,9 @@ namespace GitHub
         /// <param name="reviewComments"></param>
         /// <param name="self"></param>
         /// <param name="statuses"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestReviewRequestRemovedVariant2PullRequestLinks(
             global::GitHub.WebhookPullRequestReviewRequestRemovedVariant2PullRequestLinksComments comments,
             global::GitHub.WebhookPullRequestReviewRequestRemovedVariant2PullRequestLinksCommits commits,

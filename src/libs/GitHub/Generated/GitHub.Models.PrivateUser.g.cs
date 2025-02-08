@@ -460,7 +460,9 @@ namespace GitHub
         /// <param name="plan"></param>
         /// <param name="businessPlus"></param>
         /// <param name="ldapDn"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PrivateUser(
             string login,
             long id,

@@ -123,7 +123,9 @@ namespace GitHub
         /// Example: [repositories]
         /// </param>
         /// <param name="repositories"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public MigrationsStartForAuthenticatedUserRequest(
             global::System.Collections.Generic.IList<string> repositories,
             bool? lockRepositories,

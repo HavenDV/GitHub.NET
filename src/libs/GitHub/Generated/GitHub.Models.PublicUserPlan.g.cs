@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="name"></param>
         /// <param name="space"></param>
         /// <param name="privateRepos"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PublicUserPlan(
             int collaborators,
             string name,

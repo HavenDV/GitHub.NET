@@ -152,7 +152,9 @@ namespace GitHub
         /// Example: https://api.github.com/organizations/1/team/2403582/discussions/1/comments/1
         /// </param>
         /// <param name="reactions"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TeamDiscussionComment(
             global::GitHub.NullableSimpleUser? author,
             string body,

@@ -32,7 +32,9 @@ namespace GitHub
         /// repository.<br/>
         /// `none` means the access is only possible from workflows in this repository. `user` level access allows sharing across user owned private repositories only. `organization` level access allows sharing across the organization.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsWorkflowAccessToRepository(
             global::GitHub.ActionsWorkflowAccessToRepositoryAccessLevel accessLevel)
         {

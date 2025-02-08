@@ -45,7 +45,9 @@ namespace GitHub
         /// <param name="beforeId">
         /// The id of the sub-issue to be prioritized before (either positional argument after OR before should be specified).
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public IssuesReprioritizeSubIssueRequest(
             int subIssueId,
             int? afterId,

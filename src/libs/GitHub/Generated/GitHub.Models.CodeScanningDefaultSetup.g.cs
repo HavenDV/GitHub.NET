@@ -87,7 +87,9 @@ namespace GitHub
         /// <param name="schedule">
         /// The frequency of the periodic analysis.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningDefaultSetup(
             global::GitHub.CodeScanningDefaultSetupState? state,
             global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupLanguage>? languages,

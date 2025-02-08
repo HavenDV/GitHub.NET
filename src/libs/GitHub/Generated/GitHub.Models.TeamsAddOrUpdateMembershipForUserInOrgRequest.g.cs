@@ -29,7 +29,9 @@ namespace GitHub
         /// The role that this user should have in the team.<br/>
         /// Default Value: member
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TeamsAddOrUpdateMembershipForUserInOrgRequest(
             global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequestRole? role)
         {

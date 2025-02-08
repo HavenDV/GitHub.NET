@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="permissions">
         /// The permissions granted to the user access token.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public AppsCreateInstallationAccessTokenRequest(
             global::System.Collections.Generic.IList<string>? repositories,
             global::System.Collections.Generic.IList<int>? repositoryIds,

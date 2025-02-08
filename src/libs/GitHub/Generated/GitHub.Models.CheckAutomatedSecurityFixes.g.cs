@@ -43,7 +43,9 @@ namespace GitHub
         /// Whether Dependabot security updates are paused for the repository.<br/>
         /// Example: false
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CheckAutomatedSecurityFixes(
             bool enabled,
             bool paused)

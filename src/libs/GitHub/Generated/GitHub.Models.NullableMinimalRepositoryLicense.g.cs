@@ -52,7 +52,9 @@ namespace GitHub
         /// <param name="spdxId"></param>
         /// <param name="url"></param>
         /// <param name="nodeId"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public NullableMinimalRepositoryLicense(
             string? key,
             string? name,

@@ -161,7 +161,9 @@ namespace GitHub
         /// How the author is associated with the repository.<br/>
         /// Example: OWNER
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TimelineReviewedEvent(
             string @event,
             int id,

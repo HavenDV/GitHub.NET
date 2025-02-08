@@ -94,7 +94,9 @@ namespace GitHub
         /// <param name="subscriptionUrl">
         /// Example: https://api.github.com/notifications/threads/2/subscription
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Thread(
             string id,
             global::GitHub.MinimalRepository repository,

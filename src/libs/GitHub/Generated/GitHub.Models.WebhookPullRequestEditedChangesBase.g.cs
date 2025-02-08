@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="ref"></param>
         /// <param name="sha"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestEditedChangesBase(
             global::GitHub.WebhookPullRequestEditedChangesBaseRef @ref,
             global::GitHub.WebhookPullRequestEditedChangesBaseSha sha)

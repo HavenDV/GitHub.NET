@@ -658,7 +658,9 @@ namespace GitHub
         /// <param name="allowMergeCommit"></param>
         /// <param name="subscribersCount"></param>
         /// <param name="networkCount"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryWebhooksTemplateRepository(
             int? id,
             string? nodeId,

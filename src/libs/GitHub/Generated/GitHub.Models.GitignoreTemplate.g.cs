@@ -80,7 +80,9 @@ namespace GitHub
         /// *.out<br/>
         /// *.app
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GitignoreTemplate(
             string name,
             string source)

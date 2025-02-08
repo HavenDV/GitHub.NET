@@ -37,7 +37,9 @@ namespace GitHub
         /// <param name="newRepository">
         /// A git repository
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookIssuesTransferredChanges(
             global::GitHub.WebhookIssuesTransferredChangesNewIssue newIssue,
             global::GitHub.WebhookIssuesTransferredChangesNewRepository newRepository)

@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="selectedUsernames">
         /// The usernames of the organization members for which to revoke access to GitHub Copilot.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotCancelCopilotSeatAssignmentForUsersRequest(
             global::System.Collections.Generic.IList<string> selectedUsernames)
         {

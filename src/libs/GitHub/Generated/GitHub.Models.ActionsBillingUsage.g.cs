@@ -55,7 +55,9 @@ namespace GitHub
         /// The amount of free GitHub Actions minutes available.
         /// </param>
         /// <param name="minutesUsedBreakdown"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsBillingUsage(
             int totalMinutesUsed,
             int totalPaidMinutesUsed,

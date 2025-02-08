@@ -191,7 +191,9 @@ namespace GitHub
         /// The time that the advisory was withdrawn in ISO 8601 format: `YYYY-MM-DDTHH:MM:SSZ`.<br/>
         /// Included only in responses
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public DependabotAlertSecurityAdvisory(
             string? cveId,
             global::GitHub.CvssSeverities? cvssSeverities,

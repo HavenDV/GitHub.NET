@@ -68,7 +68,9 @@ namespace GitHub
         /// <param name="languages">
         /// CodeQL languages to be analyzed.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningDefaultSetupUpdate(
             global::GitHub.CodeScanningDefaultSetupUpdateState? state,
             global::GitHub.CodeScanningDefaultSetupUpdateRunnerType? runnerType,

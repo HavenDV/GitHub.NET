@@ -118,7 +118,9 @@ namespace GitHub
         /// <param name="parents"></param>
         /// <param name="verification"></param>
         /// <param name="htmlUrl"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TimelineCommittedEvent(
             string sha,
             string nodeId,

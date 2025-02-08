@@ -44,7 +44,9 @@ namespace GitHub
         /// <param name="models">
         /// List of model metrics for custom models and the default model.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotDotcomPullRequestsRepositorie(
             string? name,
             int? totalEngagedUsers,

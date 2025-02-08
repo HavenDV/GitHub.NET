@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="CheckSuitePreferencePreferences" /> class.
         /// </summary>
         /// <param name="autoTriggerChecks"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CheckSuitePreferencePreferences(
             global::System.Collections.Generic.IList<global::GitHub.CheckSuitePreferencePreferencesAutoTriggerCheck>? autoTriggerChecks)
         {

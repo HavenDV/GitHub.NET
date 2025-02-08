@@ -290,7 +290,9 @@ namespace GitHub
         /// <param name="url"></param>
         /// <param name="workflowId"></param>
         /// <param name="workflowUrl"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookWorkflowRunInProgressWorkflowRun(
             global::GitHub.WebhookWorkflowRunInProgressWorkflowRunActor? actor,
             string artifactsUrl,

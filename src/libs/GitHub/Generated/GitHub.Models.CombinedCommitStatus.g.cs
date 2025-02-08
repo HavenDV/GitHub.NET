@@ -75,7 +75,9 @@ namespace GitHub
         /// </param>
         /// <param name="commitUrl"></param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CombinedCommitStatus(
             string state,
             global::System.Collections.Generic.IList<global::GitHub.SimpleCommitStatus> statuses,

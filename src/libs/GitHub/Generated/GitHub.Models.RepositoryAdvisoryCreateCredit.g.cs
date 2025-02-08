@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="type">
         /// The type of credit the user is receiving.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryAdvisoryCreateCredit(
             string login,
             global::GitHub.SecurityAdvisoryCreditTypes type)

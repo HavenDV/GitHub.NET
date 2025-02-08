@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="name"></param>
         /// <param name="color"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public LabeledIssueEventLabel(
             string name,
             string color)

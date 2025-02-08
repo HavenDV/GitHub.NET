@@ -174,7 +174,9 @@ namespace GitHub
         /// <param name="type"></param>
         /// <param name="userViewType"></param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestReviewCommentEditedPullRequestUser(
             long id,
             string login,

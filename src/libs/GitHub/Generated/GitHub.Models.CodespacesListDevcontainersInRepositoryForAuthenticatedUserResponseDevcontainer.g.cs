@@ -39,7 +39,9 @@ namespace GitHub
         /// <param name="path"></param>
         /// <param name="name"></param>
         /// <param name="displayName"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponseDevcontainer(
             string path,
             string? name,

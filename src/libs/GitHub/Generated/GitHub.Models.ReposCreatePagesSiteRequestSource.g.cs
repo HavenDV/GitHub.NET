@@ -39,7 +39,9 @@ namespace GitHub
         /// The repository directory that includes the source files for the Pages site. Allowed paths are `/` or `/docs`. Default: `/`<br/>
         /// Default Value: /
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposCreatePagesSiteRequestSource(
             string branch,
             global::GitHub.ReposCreatePagesSiteRequestSourcePath? path)

@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="tool">
         /// The name of a code scanning tool
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleParamsCodeScanningTool(
             global::GitHub.RepositoryRuleParamsCodeScanningToolAlertsThreshold alertsThreshold,
             global::GitHub.RepositoryRuleParamsCodeScanningToolSecurityAlertsThreshold securityAlertsThreshold,

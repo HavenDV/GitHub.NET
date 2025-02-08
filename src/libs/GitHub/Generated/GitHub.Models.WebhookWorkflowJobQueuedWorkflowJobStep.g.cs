@@ -67,7 +67,9 @@ namespace GitHub
         /// <param name="number"></param>
         /// <param name="startedAt"></param>
         /// <param name="status"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookWorkflowJobQueuedWorkflowJobStep(
             string? completedAt,
             global::GitHub.WebhookWorkflowJobQueuedWorkflowJobStepConclusion? conclusion,

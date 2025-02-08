@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="comment">
         /// Optional comment to include with the review.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReviewCustomGatesStateRequired(
             string environmentName,
             global::GitHub.ReviewCustomGatesStateRequiredState state,

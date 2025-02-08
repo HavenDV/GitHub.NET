@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="clientSecret"></param>
         /// <param name="webhookSecret"></param>
         /// <param name="pem"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public AppsCreateFromManifestResponse2(
             string clientId,
             string clientSecret,

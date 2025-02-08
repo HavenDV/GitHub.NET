@@ -78,7 +78,9 @@ namespace GitHub
         /// <param name="sender">
         /// A GitHub user.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookProjectsV2ProjectEdited(
             global::GitHub.WebhookProjectsV2ProjectEditedChanges changes,
             global::GitHub.OrganizationSimpleWebhooks organization,

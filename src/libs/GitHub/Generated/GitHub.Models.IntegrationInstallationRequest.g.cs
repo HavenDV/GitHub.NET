@@ -69,7 +69,9 @@ namespace GitHub
         /// A GitHub user.
         /// </param>
         /// <param name="createdAt"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public IntegrationInstallationRequest(
             int id,
             global::GitHub.AnyOf<global::GitHub.SimpleUser, global::GitHub.Enterprise> account,

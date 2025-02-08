@@ -165,7 +165,9 @@ namespace GitHub
         /// <param name="subscriptionsUrl"></param>
         /// <param name="type"></param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookStatusCommitCommitter(
             string? avatarUrl,
             bool? deleted,

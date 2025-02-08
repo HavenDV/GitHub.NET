@@ -89,7 +89,9 @@ namespace GitHub
         /// <param name="parents"></param>
         /// <param name="sha"></param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookStatusCommit(
             global::GitHub.WebhookStatusCommitAuthor? author,
             string commentsUrl,

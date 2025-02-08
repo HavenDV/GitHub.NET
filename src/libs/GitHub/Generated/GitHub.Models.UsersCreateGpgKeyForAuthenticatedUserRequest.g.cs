@@ -36,7 +36,9 @@ namespace GitHub
         /// <param name="armoredPublicKey">
         /// A GPG key in ASCII-armored format.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public UsersCreateGpgKeyForAuthenticatedUserRequest(
             string armoredPublicKey,
             string? name)

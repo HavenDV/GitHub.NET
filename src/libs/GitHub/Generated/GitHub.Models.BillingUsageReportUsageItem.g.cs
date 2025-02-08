@@ -126,7 +126,9 @@ namespace GitHub
         /// <param name="repositoryName">
         /// Name of the repository.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public BillingUsageReportUsageItem(
             string date,
             string product,

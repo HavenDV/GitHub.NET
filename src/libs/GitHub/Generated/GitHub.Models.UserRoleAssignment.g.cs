@@ -268,7 +268,9 @@ namespace GitHub
         /// <param name="userViewType">
         /// Example: public
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public UserRoleAssignment(
             string login,
             int id,

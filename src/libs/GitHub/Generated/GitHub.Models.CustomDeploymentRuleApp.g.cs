@@ -69,7 +69,9 @@ namespace GitHub
         /// The node ID for the deployment protection rule integration.<br/>
         /// Example: MDQ6R2F0ZTM1MTU=
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CustomDeploymentRuleApp(
             int id,
             string slug,

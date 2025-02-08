@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="to">
         /// Whether this release was explicitly `edited` to be the latest.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookReleaseEditedChangesMakeLatest(
             bool to)
         {

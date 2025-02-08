@@ -56,7 +56,9 @@ namespace GitHub
         /// <param name="mergeMethod">
         /// The merge method to use.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestDequeuedPullRequestAutoMerge(
             string? commitMessage,
             string? commitTitle,

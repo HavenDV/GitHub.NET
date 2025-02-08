@@ -41,7 +41,9 @@ namespace GitHub
         /// <param name="html"></param>
         /// <param name="pullRequest"></param>
         /// <param name="self"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhooksReviewCommentLinks(
             global::GitHub.WebhooksReviewCommentLinksHtml html,
             global::GitHub.WebhooksReviewCommentLinksPullRequest pullRequest,

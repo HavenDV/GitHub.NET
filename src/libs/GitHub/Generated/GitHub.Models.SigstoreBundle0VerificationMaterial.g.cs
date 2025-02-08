@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="x509CertificateChain"></param>
         /// <param name="tlogEntries"></param>
         /// <param name="timestampVerificationData"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SigstoreBundle0VerificationMaterial(
             global::GitHub.SigstoreBundle0VerificationMaterialX509CertificateChain? x509CertificateChain,
             global::System.Collections.Generic.IList<global::GitHub.SigstoreBundle0VerificationMaterialTlogEntrie>? tlogEntries,

@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="from">
         /// The previous version of the body if the action was `edited`.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookReleaseEditedChangesBody(
             string from)
         {

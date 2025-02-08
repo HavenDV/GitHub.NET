@@ -26,7 +26,9 @@ namespace GitHub
         /// <param name="enabled">
         /// Default Value: false
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public BranchProtectionLockBranch(
             bool? enabled)
         {

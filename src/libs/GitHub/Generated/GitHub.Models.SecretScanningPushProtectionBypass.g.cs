@@ -45,7 +45,9 @@ namespace GitHub
         /// <param name="tokenType">
         /// The token type this bypass is for.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SecretScanningPushProtectionBypass(
             global::GitHub.SecretScanningPushProtectionBypassReason? reason,
             global::System.DateTime? expireAt,

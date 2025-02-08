@@ -26,7 +26,9 @@ namespace GitHub
         /// <param name="href">
         /// The html URL of the ruleset
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRulesetLinksHtml(
             string? href)
         {

@@ -53,7 +53,9 @@ namespace GitHub
         /// Name of the git user<br/>
         /// Example: Monalisa Octocat
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GitCommitAuthor(
             global::System.DateTime date,
             string email,

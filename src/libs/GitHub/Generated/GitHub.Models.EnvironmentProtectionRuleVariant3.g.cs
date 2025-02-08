@@ -50,7 +50,9 @@ namespace GitHub
         /// <param name="type">
         /// Example: branch_policy
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public EnvironmentProtectionRuleVariant3(
             int id,
             string nodeId,

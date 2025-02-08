@@ -72,7 +72,9 @@ namespace GitHub
         /// <param name="size"></param>
         /// <param name="nodeId"></param>
         /// <param name="highlightedContent"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Blob(
             string content,
             string encoding,

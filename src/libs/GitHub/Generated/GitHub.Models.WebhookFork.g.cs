@@ -89,7 +89,9 @@ namespace GitHub
         /// <param name="sender">
         /// A GitHub user.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookFork(
             global::GitHub.AllOf<global::GitHub.WebhookForkForkeeVariant1, global::GitHub.WebhookForkForkeeVariant2> forkee,
             global::GitHub.RepositoryWebhooks repository,

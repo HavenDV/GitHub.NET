@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class CopilotIdeChatEditorModel
     {
         /// <summary>
-        /// Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
+        /// Name of the model used for Copilot Chat. If the default model is used will appear as 'default'.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
@@ -60,7 +60,7 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="CopilotIdeChatEditorModel" /> class.
         /// </summary>
         /// <param name="name">
-        /// Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
+        /// Name of the model used for Copilot Chat. If the default model is used will appear as 'default'.
         /// </param>
         /// <param name="isCustomModel">
         /// Indicates whether a model is custom or default.
@@ -80,7 +80,9 @@ namespace GitHub
         /// <param name="totalChatCopyEvents">
         /// The number of times users copied a code suggestion from Copilot Chat using the keyboard, or the 'Copy' UI element, for the given editor.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotIdeChatEditorModel(
             string? name,
             bool? isCustomModel,

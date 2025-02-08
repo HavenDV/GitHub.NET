@@ -28,7 +28,9 @@ namespace GitHub
         /// <param name="content">
         /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the commit comment.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReactionsCreateForCommitCommentRequest(
             global::GitHub.ReactionsCreateForCommitCommentRequestContent content)
         {

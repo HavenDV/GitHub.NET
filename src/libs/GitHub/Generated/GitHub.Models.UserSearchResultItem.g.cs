@@ -281,7 +281,9 @@ namespace GitHub
         /// <param name="company"></param>
         /// <param name="suspendedAt"></param>
         /// <param name="userViewType"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public UserSearchResultItem(
             string login,
             long id,

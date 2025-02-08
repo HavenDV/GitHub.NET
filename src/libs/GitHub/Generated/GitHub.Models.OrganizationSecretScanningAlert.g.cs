@@ -257,7 +257,9 @@ namespace GitHub
         /// <param name="multiRepo">
         /// Whether the detected secret was found in multiple repositories in the same organization or enterprise.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrganizationSecretScanningAlert(
             int? number,
             global::System.DateTime? createdAt,

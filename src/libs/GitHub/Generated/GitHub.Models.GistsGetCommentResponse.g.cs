@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="block"></param>
         /// <param name="message"></param>
         /// <param name="documentationUrl"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GistsGetCommentResponse(
             global::GitHub.GistsGetCommentResponseBlock? block,
             string? message,

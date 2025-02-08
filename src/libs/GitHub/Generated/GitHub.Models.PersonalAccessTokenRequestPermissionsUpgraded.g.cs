@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="organization"></param>
         /// <param name="repository"></param>
         /// <param name="other"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PersonalAccessTokenRequestPermissionsUpgraded(
             global::System.Collections.Generic.Dictionary<string, string>? organization,
             global::System.Collections.Generic.Dictionary<string, string>? repository,

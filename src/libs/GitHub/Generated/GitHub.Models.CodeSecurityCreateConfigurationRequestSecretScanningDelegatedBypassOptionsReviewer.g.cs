@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="reviewerType">
         /// The type of the bypass reviewer
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewer(
             int reviewerId,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewerReviewerType reviewerType)

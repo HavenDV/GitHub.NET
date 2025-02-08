@@ -85,7 +85,9 @@ namespace GitHub
         /// </param>
         /// <param name="tree"></param>
         /// <param name="verification"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CommitCommit1(
             string url,
             global::GitHub.NullableGitUser? author,

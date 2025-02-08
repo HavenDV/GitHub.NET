@@ -51,7 +51,9 @@ namespace GitHub
         /// <param name="context">
         /// The repository context to use when creating references in `gfm` mode.  For example, setting `context` to `octo-org/octo-repo` will change the text `#42` into an HTML link to issue 42 in the `octo-org/octo-repo` repository.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public MarkdownRenderRequest(
             string text,
             global::GitHub.MarkdownRenderRequestMode? mode,

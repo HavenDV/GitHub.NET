@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="code"></param>
         /// <param name="message"></param>
         /// <param name="documentationUrl"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodespacesCreateForAuthenticatedUserResponse(
             string? code,
             string? message,

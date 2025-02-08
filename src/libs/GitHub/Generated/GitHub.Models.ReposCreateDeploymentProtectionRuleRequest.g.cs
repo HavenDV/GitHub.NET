@@ -26,7 +26,9 @@ namespace GitHub
         /// <param name="integrationId">
         /// The ID of the custom app that will be enabled on the environment.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposCreateDeploymentProtectionRuleRequest(
             int? integrationId)
         {

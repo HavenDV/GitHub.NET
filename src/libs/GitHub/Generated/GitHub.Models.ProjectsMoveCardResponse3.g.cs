@@ -45,7 +45,9 @@ namespace GitHub
         /// <param name="message"></param>
         /// <param name="documentationUrl"></param>
         /// <param name="errors"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ProjectsMoveCardResponse3(
             string? code,
             string? message,

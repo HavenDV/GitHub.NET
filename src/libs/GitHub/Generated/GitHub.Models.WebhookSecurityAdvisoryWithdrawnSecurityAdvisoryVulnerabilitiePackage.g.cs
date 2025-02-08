@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="ecosystem"></param>
         /// <param name="name"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookSecurityAdvisoryWithdrawnSecurityAdvisoryVulnerabilitiePackage(
             string ecosystem,
             string name)

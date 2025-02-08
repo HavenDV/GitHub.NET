@@ -44,7 +44,9 @@ namespace GitHub
         /// <param name="guid">
         /// The GUID of the tool used to generate the code scanning analysis, if provided in the uploaded SARIF data.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningAnalysisTool(
             string? name,
             string? version,

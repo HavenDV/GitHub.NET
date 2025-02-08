@@ -55,7 +55,9 @@ namespace GitHub
         /// The url for the job.<br/>
         /// Example: http://example.com/build
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SnapshotJob(
             string id,
             string correlator,

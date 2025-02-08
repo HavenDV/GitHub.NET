@@ -35,7 +35,9 @@ namespace GitHub
         /// <param name="repositories">
         /// Repositories in which users used Copilot for Pull Requests to generate pull request summaries
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotDotcomPullRequests(
             int? totalEngagedUsers,
             global::System.Collections.Generic.IList<global::GitHub.CopilotDotcomPullRequestsRepositorie>? repositories)

@@ -34,7 +34,9 @@ namespace GitHub
         /// A repository rule.
         /// </param>
         /// <param name="changes"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRepositoryRulesetEditedChangesRulesUpdatedItem(
             global::GitHub.RepositoryRule? rule,
             global::GitHub.WebhookRepositoryRulesetEditedChangesRulesUpdatedItemChanges? changes)

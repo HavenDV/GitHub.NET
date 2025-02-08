@@ -208,7 +208,9 @@ namespace GitHub
         /// <param name="status"></param>
         /// <param name="steps"></param>
         /// <param name="url"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookWorkflowJobWaitingWorkflowJob(
             string checkRunUrl,
             string? completedAt,

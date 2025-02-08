@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="url"></param>
         /// <param name="latestCommentUrl"></param>
         /// <param name="type"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ThreadSubject(
             string title,
             string url,

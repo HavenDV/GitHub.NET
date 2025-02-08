@@ -36,7 +36,9 @@ namespace GitHub
         /// <param name="replaceParent">
         /// Option that, when true, instructs the operation to replace the sub-issues current parent issue
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public IssuesAddSubIssueRequest(
             int subIssueId,
             bool? replaceParent)

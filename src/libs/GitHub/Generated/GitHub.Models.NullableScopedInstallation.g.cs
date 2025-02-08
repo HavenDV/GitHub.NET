@@ -90,7 +90,9 @@ namespace GitHub
         /// <param name="account">
         /// A GitHub user.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public NullableScopedInstallation(
             global::GitHub.AppPermissions permissions,
             global::GitHub.NullableScopedInstallationRepositorySelection repositorySelection,

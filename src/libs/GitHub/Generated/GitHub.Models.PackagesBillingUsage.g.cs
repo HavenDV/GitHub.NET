@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="includedGigabytesBandwidth">
         /// Free storage space (GB) for GitHub Packages.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PackagesBillingUsage(
             int totalGigabytesBandwidthUsed,
             int totalPaidGigabytesBandwidthUsed,

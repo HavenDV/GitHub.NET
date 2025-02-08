@@ -182,7 +182,9 @@ namespace GitHub
         /// Example: [192.0.2.1]
         /// </param>
         /// <param name="domains"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ApiOverview(
             bool verifiablePasswordAuthentication,
             global::GitHub.ApiOverviewSshKeyFingerprints? sshKeyFingerprints,

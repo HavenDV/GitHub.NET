@@ -81,7 +81,9 @@ namespace GitHub
         /// <param name="copilotDotcomPullRequests">
         /// Usage metrics for Copilot for pull requests.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotUsageMetricsDay(
             global::System.DateTime date,
             int? totalActiveUsers,

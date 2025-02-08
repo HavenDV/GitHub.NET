@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="content">
         /// Content of the file
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public GistsCreateRequestFiles2(
             string content)
         {

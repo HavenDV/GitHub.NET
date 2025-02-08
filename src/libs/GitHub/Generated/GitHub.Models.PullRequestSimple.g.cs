@@ -376,7 +376,9 @@ namespace GitHub
         /// Indicates whether or not the pull request is a draft.<br/>
         /// Example: false
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PullRequestSimple(
             string url,
             long id,

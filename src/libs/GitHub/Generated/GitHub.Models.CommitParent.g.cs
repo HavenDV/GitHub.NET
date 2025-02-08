@@ -49,7 +49,9 @@ namespace GitHub
         /// <param name="htmlUrl">
         /// Example: https://github.com/octocat/Hello-World/commit/7638417db6d59f3c431d3e1f261cc637155684cd
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CommitParent(
             string sha,
             string url,

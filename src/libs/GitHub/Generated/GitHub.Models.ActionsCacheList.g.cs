@@ -40,7 +40,9 @@ namespace GitHub
         /// <param name="actionsCaches">
         /// Array of caches
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsCacheList(
             int totalCount,
             global::System.Collections.Generic.IList<global::GitHub.ActionsCacheListActionsCache> actionsCaches)

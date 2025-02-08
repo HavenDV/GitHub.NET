@@ -33,7 +33,9 @@ namespace GitHub
         /// </summary>
         /// <param name="jobId"></param>
         /// <param name="durationMs"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WorkflowRunUsageBillableUBUNTUJobRun(
             int jobId,
             int durationMs)

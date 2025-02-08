@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="Hovercard" /> class.
         /// </summary>
         /// <param name="contexts"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Hovercard(
             global::System.Collections.Generic.IList<global::GitHub.HovercardContext> contexts)
         {

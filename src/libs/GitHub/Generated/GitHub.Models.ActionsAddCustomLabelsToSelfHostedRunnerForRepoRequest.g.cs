@@ -27,7 +27,9 @@ namespace GitHub
         /// <param name="labels">
         /// The names of the custom labels to add to the runner.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest(
             global::System.Collections.Generic.IList<string> labels)
         {

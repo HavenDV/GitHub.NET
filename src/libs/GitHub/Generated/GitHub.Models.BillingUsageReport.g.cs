@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="BillingUsageReport" /> class.
         /// </summary>
         /// <param name="usageItems"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public BillingUsageReport(
             global::System.Collections.Generic.IList<global::GitHub.BillingUsageReportUsageItem>? usageItems)
         {

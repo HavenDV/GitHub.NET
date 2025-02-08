@@ -120,7 +120,9 @@ namespace GitHub
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
         /// <param name="avatarUrl"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Enterprise(
             string htmlUrl,
             int id,

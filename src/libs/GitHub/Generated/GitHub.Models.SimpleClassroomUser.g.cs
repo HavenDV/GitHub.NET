@@ -61,7 +61,9 @@ namespace GitHub
         /// <param name="htmlUrl">
         /// Example: https://github.com/octocat
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SimpleClassroomUser(
             int id,
             string login,

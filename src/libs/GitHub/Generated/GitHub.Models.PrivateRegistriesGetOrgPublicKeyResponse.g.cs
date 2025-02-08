@@ -43,7 +43,9 @@ namespace GitHub
         /// The Base64 encoded public key.<br/>
         /// Example: 2Sg8iYjAxxmI2LvUXpJjkYrMxURPc8r+dB7TJyvv1234
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PrivateRegistriesGetOrgPublicKeyResponse(
             string keyId,
             string key)

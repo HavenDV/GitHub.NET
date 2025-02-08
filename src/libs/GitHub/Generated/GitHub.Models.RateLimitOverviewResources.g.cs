@@ -96,7 +96,9 @@ namespace GitHub
         /// <param name="scim"></param>
         /// <param name="dependencySnapshots"></param>
         /// <param name="codeScanningAutofix"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RateLimitOverviewResources(
             global::GitHub.RateLimit core,
             global::GitHub.RateLimit search,

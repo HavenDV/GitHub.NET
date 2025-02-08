@@ -42,7 +42,9 @@ namespace GitHub
         /// The id of the user or team who can review the deployment<br/>
         /// Example: 4532992
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReposCreateOrUpdateEnvironmentRequestReviewer(
             global::GitHub.DeploymentReviewerType? type,
             int? id)

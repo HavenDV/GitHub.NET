@@ -42,7 +42,9 @@ namespace GitHub
         /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="value"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookRegistryPackagePublishedRegistryPackagePackageVersionNugetMetadataItem(
             global::GitHub.OneOf<string, object, int?>? id,
             string? name,

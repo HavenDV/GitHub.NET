@@ -45,7 +45,9 @@ namespace GitHub
         /// <param name="status"></param>
         /// <param name="startDate"></param>
         /// <param name="targetDate"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookProjectsV2StatusUpdateEditedChanges(
             global::GitHub.WebhookProjectsV2StatusUpdateEditedChangesBody? body,
             global::GitHub.WebhookProjectsV2StatusUpdateEditedChangesStatus? status,

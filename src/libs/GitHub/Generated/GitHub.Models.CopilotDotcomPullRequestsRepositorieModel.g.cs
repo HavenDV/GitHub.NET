@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class CopilotDotcomPullRequestsRepositorieModel
     {
         /// <summary>
-        /// Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
+        /// Name of the model used for Copilot pull request summaries. If the default model is used will appear as 'default'.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
@@ -48,7 +48,7 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="CopilotDotcomPullRequestsRepositorieModel" /> class.
         /// </summary>
         /// <param name="name">
-        /// Name of the model used for Copilot code completion suggestions. If the default model is used will appear as 'default'.
+        /// Name of the model used for Copilot pull request summaries. If the default model is used will appear as 'default'.
         /// </param>
         /// <param name="isCustomModel">
         /// Indicates whether a model is custom or default.
@@ -62,7 +62,9 @@ namespace GitHub
         /// <param name="totalEngagedUsers">
         /// The number of users who generated pull request summaries using Copilot for Pull Requests in the given repository and model.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotDotcomPullRequestsRepositorieModel(
             string? name,
             bool? isCustomModel,

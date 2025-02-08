@@ -39,7 +39,9 @@ namespace GitHub
         /// Next deletable analysis in chain, with last analysis deletion confirmation<br/>
         /// Included only in responses
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeScanningAnalysisDeletion(
             string? nextAnalysisUrl,
             string? confirmDeleteUrl)

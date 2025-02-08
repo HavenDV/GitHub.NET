@@ -71,7 +71,9 @@ namespace GitHub
         /// <param name="totalCodeLinesAccepted">
         /// The number of lines of code accepted from Copilot code suggestions for the given editor, for the given language.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CopilotIdeCodeCompletionsEditorModelLanguage(
             string? name,
             int? totalEngagedUsers,

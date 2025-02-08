@@ -31,7 +31,9 @@ namespace GitHub
         /// </summary>
         /// <param name="sig"></param>
         /// <param name="keyid"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SigstoreBundle0DsseEnvelopeSignature(
             string? sig,
             string? keyid)

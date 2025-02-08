@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="PackageVersionMetadataDocker" /> class.
         /// </summary>
         /// <param name="tag"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PackageVersionMetadataDocker(
             global::System.Collections.Generic.IList<string>? tag)
         {

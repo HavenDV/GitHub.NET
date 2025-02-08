@@ -99,7 +99,9 @@ namespace GitHub
         /// <param name="scanned">
         /// The time at which the snapshot was scanned.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public Snapshot(
             int version,
             global::GitHub.SnapshotJob job,

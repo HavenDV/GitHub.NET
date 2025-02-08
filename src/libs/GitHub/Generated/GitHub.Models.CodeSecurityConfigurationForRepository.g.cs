@@ -36,7 +36,9 @@ namespace GitHub
         /// <param name="configuration">
         /// A code security configuration
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodeSecurityConfigurationForRepository(
             global::GitHub.CodeSecurityConfigurationForRepositoryStatus? status,
             global::GitHub.CodeSecurityConfiguration? configuration)

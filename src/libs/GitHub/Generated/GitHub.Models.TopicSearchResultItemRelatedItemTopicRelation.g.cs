@@ -45,7 +45,9 @@ namespace GitHub
         /// <param name="name"></param>
         /// <param name="topicId"></param>
         /// <param name="relationType"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TopicSearchResultItemRelatedItemTopicRelation(
             int? id,
             string? name,

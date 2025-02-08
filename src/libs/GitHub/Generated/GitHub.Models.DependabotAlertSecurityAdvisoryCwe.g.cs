@@ -42,7 +42,9 @@ namespace GitHub
         /// The short, plain text name of the CWE.<br/>
         /// Included only in responses
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public DependabotAlertSecurityAdvisoryCwe(
             string cweId = default!,
             string name = default!)

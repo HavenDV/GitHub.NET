@@ -147,7 +147,9 @@ namespace GitHub
         /// <param name="lastActiveOn">
         /// The time at which the runner was last used, in ISO 8601 format.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ActionsHostedRunner(
             int id,
             string name,

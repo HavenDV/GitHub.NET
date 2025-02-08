@@ -131,7 +131,9 @@ namespace GitHub
         /// <param name="uploader">
         /// A GitHub user.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ReleaseAsset(
             string url,
             string browserDownloadUrl,

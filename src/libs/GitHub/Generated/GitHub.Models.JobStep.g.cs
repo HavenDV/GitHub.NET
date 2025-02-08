@@ -86,7 +86,9 @@ namespace GitHub
         /// <param name="completedAt">
         /// The time that the job finished, in ISO 8601 format.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public JobStep(
             global::GitHub.JobStepStatus status,
             string? conclusion,

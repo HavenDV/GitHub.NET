@@ -143,7 +143,9 @@ namespace GitHub
         /// <param name="receivedEventsUrl"></param>
         /// <param name="type"></param>
         /// <param name="siteAdmin"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public NullableRepositoryWebhooksTemplateRepositoryOwner(
             string? login,
             int? id,

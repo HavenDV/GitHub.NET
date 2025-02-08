@@ -41,7 +41,9 @@ namespace GitHub
         /// <param name="totalCount"></param>
         /// <param name="incompleteResults"></param>
         /// <param name="items"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SearchCommitsResponse(
             int totalCount,
             bool incompleteResults,

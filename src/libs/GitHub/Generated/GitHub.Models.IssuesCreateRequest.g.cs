@@ -74,7 +74,9 @@ namespace GitHub
         /// <param name="assignees">
         /// Logins for Users to assign to this issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public IssuesCreateRequest(
             global::GitHub.OneOf<string, int?> title,
             string? body,

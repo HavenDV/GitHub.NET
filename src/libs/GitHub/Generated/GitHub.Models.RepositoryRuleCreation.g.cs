@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="RepositoryRuleCreation" /> class.
         /// </summary>
         /// <param name="type"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryRuleCreation(
             global::GitHub.RepositoryRuleCreationType type)
         {

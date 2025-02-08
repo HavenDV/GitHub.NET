@@ -57,7 +57,9 @@ namespace GitHub
         /// Branch Protection
         /// </param>
         /// <param name="protectionUrl"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ShortBranch(
             string name,
             global::GitHub.ShortBranchCommit commit,

@@ -110,7 +110,9 @@ namespace GitHub
         /// <param name="assignment">
         /// A GitHub Classroom assignment
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public ClassroomAcceptedAssignment(
             int id,
             bool submitted,

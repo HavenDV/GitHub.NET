@@ -47,7 +47,9 @@ namespace GitHub
         /// <param name="patternUpdateScans"></param>
         /// <param name="backfillScans"></param>
         /// <param name="customPatternBackfillScans"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public SecretScanningScanHistory(
             global::System.Collections.Generic.IList<global::GitHub.SecretScanningScan>? incrementalScans,
             global::System.Collections.Generic.IList<global::GitHub.SecretScanningScan>? patternUpdateScans,

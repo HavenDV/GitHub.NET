@@ -89,7 +89,9 @@ namespace GitHub
         /// <param name="updatedAt">
         /// The time that the environment was last updated, in ISO 8601 format.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public EnvironmentApprovalsEnvironment(
             int? id,
             string? nodeId,

@@ -25,7 +25,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="WebhookPullRequestAssignedPullRequestLinksReviewComments" /> class.
         /// </summary>
         /// <param name="href"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public WebhookPullRequestAssignedPullRequestLinksReviewComments(
             string href)
         {

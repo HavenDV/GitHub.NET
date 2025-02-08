@@ -53,7 +53,9 @@ namespace GitHub
         /// The length of the IP prefix.<br/>
         /// Example: 28
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PublicIp(
             bool? enabled,
             string? prefix,

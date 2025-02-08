@@ -31,7 +31,9 @@ namespace GitHub
         /// </summary>
         /// <param name="domain"></param>
         /// <param name="altDomain"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public PagesHealthCheck(
             global::GitHub.PagesHealthCheckDomain? domain,
             global::GitHub.PagesHealthCheckAltDomain? altDomain)

@@ -37,7 +37,9 @@ namespace GitHub
         /// <param name="reason">
         /// Reason for approving or denying the request. Max 1024 characters.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public OrgsReviewPatGrantRequestRequest(
             global::GitHub.OrgsReviewPatGrantRequestRequestAction action,
             string? reason)

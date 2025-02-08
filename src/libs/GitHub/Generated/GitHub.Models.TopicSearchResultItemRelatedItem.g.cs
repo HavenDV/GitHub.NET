@@ -24,7 +24,9 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="TopicSearchResultItemRelatedItem" /> class.
         /// </summary>
         /// <param name="topicRelation"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public TopicSearchResultItemRelatedItem(
             global::GitHub.TopicSearchResultItemRelatedItemTopicRelation? topicRelation)
         {

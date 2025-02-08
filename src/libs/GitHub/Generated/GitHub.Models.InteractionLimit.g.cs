@@ -44,7 +44,9 @@ namespace GitHub
         /// The duration of the interaction restriction. Default: `one_day`.<br/>
         /// Example: one_month
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public InteractionLimit(
             global::GitHub.InteractionGroup limit,
             global::GitHub.InteractionExpiry? expiry)

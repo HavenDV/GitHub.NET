@@ -41,7 +41,9 @@ namespace GitHub
         /// <param name="code"></param>
         /// <param name="status"></param>
         /// <param name="message"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public HookResponse(
             int? code,
             string? status,

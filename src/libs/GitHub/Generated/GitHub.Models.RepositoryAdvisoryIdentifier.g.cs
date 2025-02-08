@@ -38,7 +38,9 @@ namespace GitHub
         /// <param name="value">
         /// The identifier value.
         /// </param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public RepositoryAdvisoryIdentifier(
             global::GitHub.RepositoryAdvisoryIdentifierType type,
             string value)

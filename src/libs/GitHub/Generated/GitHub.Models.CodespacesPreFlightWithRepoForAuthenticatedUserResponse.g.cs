@@ -33,7 +33,9 @@ namespace GitHub
         /// A GitHub user.
         /// </param>
         /// <param name="defaults"></param>
+#if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
         public CodespacesPreFlightWithRepoForAuthenticatedUserResponse(
             global::GitHub.SimpleUser? billableOwner,
             global::GitHub.CodespacesPreFlightWithRepoForAuthenticatedUserResponseDefaults? defaults)
