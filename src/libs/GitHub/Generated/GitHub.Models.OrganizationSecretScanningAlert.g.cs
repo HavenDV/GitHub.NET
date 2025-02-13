@@ -168,6 +168,12 @@ namespace GitHub
         public bool? MultiRepo { get; set; }
 
         /// <summary>
+        /// A boolean value representing whether or not alert is base64 encoded
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_base64_encoded")]
+        public bool? IsBase64Encoded { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -257,6 +263,9 @@ namespace GitHub
         /// <param name="multiRepo">
         /// Whether the detected secret was found in multiple repositories in the same organization or enterprise.
         /// </param>
+        /// <param name="isBase64Encoded">
+        /// A boolean value representing whether or not alert is base64 encoded
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -285,7 +294,8 @@ namespace GitHub
             string? resolutionComment,
             global::GitHub.OrganizationSecretScanningAlertValidity? validity,
             bool? publiclyLeaked,
-            bool? multiRepo)
+            bool? multiRepo,
+            bool? isBase64Encoded)
         {
             this.Number = number;
             this.CreatedAt = createdAt;
@@ -312,6 +322,7 @@ namespace GitHub
             this.Validity = validity;
             this.PubliclyLeaked = publiclyLeaked;
             this.MultiRepo = multiRepo;
+            this.IsBase64Encoded = isBase64Encoded;
         }
 
         /// <summary>
