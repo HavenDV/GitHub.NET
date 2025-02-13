@@ -1305,6 +1305,8 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertClosedByUserAlertRuleSeverityNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertClosedByUserAlertStateJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertClosedByUserAlertStateNullableJsonConverter),
+            typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertClosedByUserAlertDismissalApprovedByTypeJsonConverter),
+            typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertClosedByUserAlertDismissalApprovedByTypeNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertCreatedActionJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertCreatedActionNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookCodeScanningAlertCreatedAlertMostRecentInstanceStateJsonConverter),

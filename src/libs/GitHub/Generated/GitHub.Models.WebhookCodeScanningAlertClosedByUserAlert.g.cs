@@ -99,6 +99,12 @@ namespace GitHub
         public required string Url { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dismissal_approved_by")]
+        public global::GitHub.WebhookCodeScanningAlertClosedByUserAlertDismissalApprovedBy? DismissalApprovedBy { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -136,6 +142,7 @@ namespace GitHub
         /// </param>
         /// <param name="tool"></param>
         /// <param name="url"></param>
+        /// <param name="dismissalApprovedBy"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -152,7 +159,8 @@ namespace GitHub
             string url,
             string? dismissedComment,
             object? fixedAt,
-            global::GitHub.WebhookCodeScanningAlertClosedByUserAlertMostRecentInstance? mostRecentInstance)
+            global::GitHub.WebhookCodeScanningAlertClosedByUserAlertMostRecentInstance? mostRecentInstance,
+            global::GitHub.WebhookCodeScanningAlertClosedByUserAlertDismissalApprovedBy? dismissalApprovedBy)
         {
             this.CreatedAt = createdAt;
             this.DismissedAt = dismissedAt;
@@ -167,6 +175,7 @@ namespace GitHub
             this.DismissedComment = dismissedComment;
             this.FixedAt = fixedAt;
             this.MostRecentInstance = mostRecentInstance;
+            this.DismissalApprovedBy = dismissalApprovedBy;
         }
 
         /// <summary>

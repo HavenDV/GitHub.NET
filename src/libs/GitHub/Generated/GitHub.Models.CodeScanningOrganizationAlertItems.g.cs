@@ -127,6 +127,12 @@ namespace GitHub
         public required global::GitHub.SimpleRepository Repository { get; set; }
 
         /// <summary>
+        /// A GitHub user.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dismissal_approved_by")]
+        public global::GitHub.NullableSimpleUser? DismissalApprovedBy { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -185,6 +191,9 @@ namespace GitHub
         /// <param name="repository">
         /// A GitHub repository.
         /// </param>
+        /// <param name="dismissalApprovedBy">
+        /// A GitHub user.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -200,6 +209,7 @@ namespace GitHub
             global::System.DateTime? fixedAt,
             global::System.DateTime? dismissedAt,
             string? dismissedComment,
+            global::GitHub.NullableSimpleUser? dismissalApprovedBy,
             int number = default!,
             global::System.DateTime createdAt = default!,
             string url = default!,
@@ -222,6 +232,7 @@ namespace GitHub
             this.FixedAt = fixedAt;
             this.DismissedAt = dismissedAt;
             this.DismissedComment = dismissedComment;
+            this.DismissalApprovedBy = dismissalApprovedBy;
         }
 
         /// <summary>
