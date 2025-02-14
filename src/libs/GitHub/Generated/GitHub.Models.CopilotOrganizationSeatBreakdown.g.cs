@@ -6,7 +6,7 @@ namespace GitHub
     /// <summary>
     /// The breakdown of Copilot Business seats for the organization.
     /// </summary>
-    public sealed partial class CopilotSeatBreakdown
+    public sealed partial class CopilotOrganizationSeatBreakdown
     {
         /// <summary>
         /// The total number of seats being billed for the organization as of the current billing cycle.
@@ -27,7 +27,7 @@ namespace GitHub
         public int? PendingCancellation { get; set; }
 
         /// <summary>
-        /// The number of seats that have been assigned to users that have not yet accepted an invitation to this organization.
+        /// The number of users who have been invited to receive a Copilot seat through this organization.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pending_invitation")]
         public int? PendingInvitation { get; set; }
@@ -51,7 +51,7 @@ namespace GitHub
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CopilotSeatBreakdown" /> class.
+        /// Initializes a new instance of the <see cref="CopilotOrganizationSeatBreakdown" /> class.
         /// </summary>
         /// <param name="total">
         /// The total number of seats being billed for the organization as of the current billing cycle.
@@ -63,7 +63,7 @@ namespace GitHub
         /// The number of seats that are pending cancellation at the end of the current billing cycle.
         /// </param>
         /// <param name="pendingInvitation">
-        /// The number of seats that have been assigned to users that have not yet accepted an invitation to this organization.
+        /// The number of users who have been invited to receive a Copilot seat through this organization.
         /// </param>
         /// <param name="activeThisCycle">
         /// The number of seats that have used Copilot during the current billing cycle.
@@ -74,7 +74,7 @@ namespace GitHub
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public CopilotSeatBreakdown(
+        public CopilotOrganizationSeatBreakdown(
             int? total,
             int? addedThisCycle,
             int? pendingCancellation,
@@ -91,9 +91,9 @@ namespace GitHub
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="CopilotSeatBreakdown" /> class.
+        /// Initializes a new instance of the <see cref="CopilotOrganizationSeatBreakdown" /> class.
         /// </summary>
-        public CopilotSeatBreakdown()
+        public CopilotOrganizationSeatBreakdown()
         {
         }
     }

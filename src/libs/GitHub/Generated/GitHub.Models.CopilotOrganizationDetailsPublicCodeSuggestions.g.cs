@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The organization policy for allowing or disallowing Copilot to make suggestions that match public code.
+    /// The organization policy for allowing or blocking suggestions matching public code (duplication detection filter).
     /// </summary>
     public enum CopilotOrganizationDetailsPublicCodeSuggestions
     {
@@ -20,10 +20,6 @@ namespace GitHub
         /// 
         /// </summary>
         Unconfigured,
-        /// <summary>
-        /// 
-        /// </summary>
-        Unknown,
     }
 
     /// <summary>
@@ -41,7 +37,6 @@ namespace GitHub
                 CopilotOrganizationDetailsPublicCodeSuggestions.Allow => "allow",
                 CopilotOrganizationDetailsPublicCodeSuggestions.Block => "block",
                 CopilotOrganizationDetailsPublicCodeSuggestions.Unconfigured => "unconfigured",
-                CopilotOrganizationDetailsPublicCodeSuggestions.Unknown => "unknown",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -55,7 +50,6 @@ namespace GitHub
                 "allow" => CopilotOrganizationDetailsPublicCodeSuggestions.Allow,
                 "block" => CopilotOrganizationDetailsPublicCodeSuggestions.Block,
                 "unconfigured" => CopilotOrganizationDetailsPublicCodeSuggestions.Unconfigured,
-                "unknown" => CopilotOrganizationDetailsPublicCodeSuggestions.Unknown,
                 _ => null,
             };
         }

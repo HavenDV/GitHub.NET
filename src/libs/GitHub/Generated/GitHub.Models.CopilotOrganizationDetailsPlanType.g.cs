@@ -16,10 +16,6 @@ namespace GitHub
         /// 
         /// </summary>
         Enterprise,
-        /// <summary>
-        /// 
-        /// </summary>
-        Unknown,
     }
 
     /// <summary>
@@ -36,7 +32,6 @@ namespace GitHub
             {
                 CopilotOrganizationDetailsPlanType.Business => "business",
                 CopilotOrganizationDetailsPlanType.Enterprise => "enterprise",
-                CopilotOrganizationDetailsPlanType.Unknown => "unknown",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -49,7 +44,6 @@ namespace GitHub
             {
                 "business" => CopilotOrganizationDetailsPlanType.Business,
                 "enterprise" => CopilotOrganizationDetailsPlanType.Enterprise,
-                "unknown" => CopilotOrganizationDetailsPlanType.Unknown,
                 _ => null,
             };
         }

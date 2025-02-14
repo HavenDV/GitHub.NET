@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
+    /// The organization policy for allowing or disallowing Copilot features on GitHub.com.
     /// </summary>
     public enum CopilotOrganizationDetailsPlatformChat
     {

@@ -13,10 +13,10 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("seat_breakdown")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.CopilotSeatBreakdown SeatBreakdown { get; set; }
+        public required global::GitHub.CopilotOrganizationSeatBreakdown SeatBreakdown { get; set; }
 
         /// <summary>
-        /// The organization policy for allowing or disallowing Copilot to make suggestions that match public code.
+        /// The organization policy for allowing or blocking suggestions matching public code (duplication detection filter).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("public_code_suggestions")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CopilotOrganizationDetailsPublicCodeSuggestionsJsonConverter))]
@@ -24,21 +24,21 @@ namespace GitHub
         public required global::GitHub.CopilotOrganizationDetailsPublicCodeSuggestions PublicCodeSuggestions { get; set; }
 
         /// <summary>
-        /// The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
+        /// The organization policy for allowing or disallowing Copilot Chat in the IDE.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ide_chat")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CopilotOrganizationDetailsIdeChatJsonConverter))]
         public global::GitHub.CopilotOrganizationDetailsIdeChat? IdeChat { get; set; }
 
         /// <summary>
-        /// The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
+        /// The organization policy for allowing or disallowing Copilot features on GitHub.com.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("platform_chat")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CopilotOrganizationDetailsPlatformChatJsonConverter))]
         public global::GitHub.CopilotOrganizationDetailsPlatformChat? PlatformChat { get; set; }
 
         /// <summary>
-        /// The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
+        /// The organization policy for allowing or disallowing Copilot in the CLI.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cli")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CopilotOrganizationDetailsCliJsonConverter))]
@@ -72,16 +72,16 @@ namespace GitHub
         /// The breakdown of Copilot Business seats for the organization.
         /// </param>
         /// <param name="publicCodeSuggestions">
-        /// The organization policy for allowing or disallowing Copilot to make suggestions that match public code.
+        /// The organization policy for allowing or blocking suggestions matching public code (duplication detection filter).
         /// </param>
         /// <param name="ideChat">
-        /// The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
+        /// The organization policy for allowing or disallowing Copilot Chat in the IDE.
         /// </param>
         /// <param name="platformChat">
-        /// The organization policy for allowing or disallowing organization members to use Copilot features within github.com.
+        /// The organization policy for allowing or disallowing Copilot features on GitHub.com.
         /// </param>
         /// <param name="cli">
-        /// The organization policy for allowing or disallowing organization members to use Copilot within their CLI.
+        /// The organization policy for allowing or disallowing Copilot in the CLI.
         /// </param>
         /// <param name="seatManagementSetting">
         /// The mode of assigning new seats.
@@ -93,7 +93,7 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CopilotOrganizationDetails(
-            global::GitHub.CopilotSeatBreakdown seatBreakdown,
+            global::GitHub.CopilotOrganizationSeatBreakdown seatBreakdown,
             global::GitHub.CopilotOrganizationDetailsPublicCodeSuggestions publicCodeSuggestions,
             global::GitHub.CopilotOrganizationDetailsSeatManagementSetting seatManagementSetting,
             global::GitHub.CopilotOrganizationDetailsIdeChat? ideChat,

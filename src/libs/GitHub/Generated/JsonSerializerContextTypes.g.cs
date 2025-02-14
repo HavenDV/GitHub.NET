@@ -1322,7 +1322,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CopilotSeatBreakdown? Type324 { get; set; }
+        public global::GitHub.CopilotOrganizationSeatBreakdown? Type324 { get; set; }
         /// <summary>
         /// 
         /// </summary>
