@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The organization policy for allowing or disallowing organization members to use Copilot Chat within their editor.
+    /// The organization policy for allowing or disallowing Copilot Chat in the IDE.
     /// </summary>
     public enum CopilotOrganizationDetailsIdeChat
     {
