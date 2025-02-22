@@ -87,6 +87,14 @@ namespace GitHub
         public required global::System.DateTime? UpdatedAt { get; set; }
 
         /// <summary>
+        /// The SHA256 digest of the artifact. This field will only be populated on artifacts uploaded with upload-artifact v4 or newer. For older versions, this field will be null.<br/>
+        /// Example: sha256:cfc3236bdad15b5898bca8408945c9e19e1917da8704adc20eaa618444290a8c
+        /// </summary>
+        /// <example>sha256:cfc3236bdad15b5898bca8408945c9e19e1917da8704adc20eaa618444290a8c</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("digest")]
+        public string? Digest { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("workflow_run")]
@@ -127,6 +135,10 @@ namespace GitHub
         /// <param name="createdAt"></param>
         /// <param name="expiresAt"></param>
         /// <param name="updatedAt"></param>
+        /// <param name="digest">
+        /// The SHA256 digest of the artifact. This field will only be populated on artifacts uploaded with upload-artifact v4 or newer. For older versions, this field will be null.<br/>
+        /// Example: sha256:cfc3236bdad15b5898bca8408945c9e19e1917da8704adc20eaa618444290a8c
+        /// </param>
         /// <param name="workflowRun"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -142,6 +154,7 @@ namespace GitHub
             global::System.DateTime? createdAt,
             global::System.DateTime? expiresAt,
             global::System.DateTime? updatedAt,
+            string? digest,
             global::GitHub.ArtifactWorkflowRun? workflowRun)
         {
             this.Id = id;
@@ -154,6 +167,7 @@ namespace GitHub
             this.CreatedAt = createdAt;
             this.ExpiresAt = expiresAt;
             this.UpdatedAt = updatedAt;
+            this.Digest = digest;
             this.WorkflowRun = workflowRun;
         }
 
