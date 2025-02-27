@@ -30,7 +30,7 @@ namespace GitHub
         /// <summary>
         /// Commit an autofix for a code scanning alert<br/>
         /// Commits an autofix for a code scanning alert.<br/>
-        /// If an autofix is commited as a result of this request, then this endpoint will return a 201 Created response.<br/>
+        /// If an autofix is committed as a result of this request, then this endpoint will return a 201 Created response.<br/>
         /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
         /// </summary>
         /// <param name="owner"></param>
@@ -312,7 +312,7 @@ namespace GitHub
         /// <summary>
         /// Commit an autofix for a code scanning alert<br/>
         /// Commits an autofix for a code scanning alert.<br/>
-        /// If an autofix is commited as a result of this request, then this endpoint will return a 201 Created response.<br/>
+        /// If an autofix is committed as a result of this request, then this endpoint will return a 201 Created response.<br/>
         /// OAuth app tokens and personal access tokens (classic) need the `repo` scope to use this endpoint with private or public repositories, or the `public_repo` scope to use this endpoint with only public repositories.
         /// </summary>
         /// <param name="owner"></param>

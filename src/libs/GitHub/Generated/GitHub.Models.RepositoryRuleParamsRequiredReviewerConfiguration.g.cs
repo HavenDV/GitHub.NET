@@ -23,11 +23,10 @@ namespace GitHub
         public required int MinimumApprovals { get; set; }
 
         /// <summary>
-        /// Node ID of the team which must review changes to matching files.
+        /// A required reviewing team
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("reviewer_id")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string ReviewerId { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("reviewer")]
+        public global::GitHub.RepositoryRuleParamsReviewer? Reviewer { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -44,8 +43,8 @@ namespace GitHub
         /// <param name="minimumApprovals">
         /// Minimum number of approvals required from the specified team. If set to zero, the team will be added to the pull request but approval is optional.
         /// </param>
-        /// <param name="reviewerId">
-        /// Node ID of the team which must review changes to matching files.
+        /// <param name="reviewer">
+        /// A required reviewing team
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -53,11 +52,11 @@ namespace GitHub
         public RepositoryRuleParamsRequiredReviewerConfiguration(
             global::System.Collections.Generic.IList<string> filePatterns,
             int minimumApprovals,
-            string reviewerId)
+            global::GitHub.RepositoryRuleParamsReviewer? reviewer)
         {
             this.FilePatterns = filePatterns ?? throw new global::System.ArgumentNullException(nameof(filePatterns));
             this.MinimumApprovals = minimumApprovals;
-            this.ReviewerId = reviewerId ?? throw new global::System.ArgumentNullException(nameof(reviewerId));
+            this.Reviewer = reviewer;
         }
 
         /// <summary>

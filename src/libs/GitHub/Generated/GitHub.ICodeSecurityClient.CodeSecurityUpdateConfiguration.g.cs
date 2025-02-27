@@ -77,6 +77,9 @@ namespace GitHub
         /// <param name="secretScanningNonProviderPatterns">
         /// The enablement status of secret scanning non-provider patterns
         /// </param>
+        /// <param name="secretScanningDelegatedAlertDismissal">
+        /// The enablement status of secret scanning delegated alert dismissal
+        /// </param>
         /// <param name="privateVulnerabilityReporting">
         /// The enablement status of private vulnerability reporting
         /// </param>
@@ -104,6 +107,7 @@ namespace GitHub
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptions? secretScanningDelegatedBypassOptions = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns = default,
+            global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedAlertDismissal? secretScanningDelegatedAlertDismissal = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting = default,
             global::GitHub.CodeSecurityUpdateConfigurationRequestEnforcement? enforcement = default,
             global::System.Threading.CancellationToken cancellationToken = default);
