@@ -9,10 +9,11 @@ namespace GitHub
     public sealed partial class UsersListAttestationsResponseAttestation
     {
         /// <summary>
-        /// Sigstore Bundle v0.1
+        /// The attestation's Sigstore Bundle.<br/>
+        /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bundle")]
-        public global::GitHub.SigstoreBundle0? Bundle { get; set; }
+        public global::GitHub.UsersListAttestationsResponseAttestationBundle? Bundle { get; set; }
 
         /// <summary>
         /// 
@@ -36,7 +37,8 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="UsersListAttestationsResponseAttestation" /> class.
         /// </summary>
         /// <param name="bundle">
-        /// Sigstore Bundle v0.1
+        /// The attestation's Sigstore Bundle.<br/>
+        /// Refer to the [Sigstore Bundle Specification](https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto) for more information.
         /// </param>
         /// <param name="repositoryId"></param>
         /// <param name="bundleUrl"></param>
@@ -44,7 +46,7 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UsersListAttestationsResponseAttestation(
-            global::GitHub.SigstoreBundle0? bundle,
+            global::GitHub.UsersListAttestationsResponseAttestationBundle? bundle,
             int? repositoryId,
             string? bundleUrl)
         {

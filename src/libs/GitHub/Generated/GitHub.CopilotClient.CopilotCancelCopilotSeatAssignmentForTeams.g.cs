@@ -107,7 +107,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_500,
@@ -135,7 +135,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_401,
@@ -163,7 +163,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_403,
@@ -191,7 +191,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_404,
@@ -216,7 +216,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_422,

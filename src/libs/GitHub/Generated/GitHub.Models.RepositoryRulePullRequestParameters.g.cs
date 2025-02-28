@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class RepositoryRulePullRequestParameters
     {
         /// <summary>
-        /// When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled.
+        /// Array of allowed merge methods. Allowed values include `merge`, `squash`, and `rebase`. At least one option must be enabled.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allowed_merge_methods")]
         public global::System.Collections.Generic.IList<string>? AllowedMergeMethods { get; set; }
@@ -59,7 +59,7 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="RepositoryRulePullRequestParameters" /> class.
         /// </summary>
         /// <param name="allowedMergeMethods">
-        /// When merging pull requests, you can allow any combination of merge commits, squashing, or rebasing. At least one option must be enabled.
+        /// Array of allowed merge methods. Allowed values include `merge`, `squash`, and `rebase`. At least one option must be enabled.
         /// </param>
         /// <param name="dismissStaleReviewsOnPush">
         /// New, reviewable commits pushed will dismiss previous pull request review approvals.

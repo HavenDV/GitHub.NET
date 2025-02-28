@@ -18,6 +18,7 @@ namespace GitHub
         /// <param name="before"></param>
         /// <param name="after"></param>
         /// <param name="subjectDigest"></param>
+        /// <param name="predicateType"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.ReposListAttestationsResponse> ReposListAttestationsAsync(
@@ -27,6 +28,7 @@ namespace GitHub
             int? perPage = default,
             string? before = default,
             string? after = default,
+            string? predicateType = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

@@ -12,7 +12,8 @@ namespace GitHub
             ref int? perPage,
             ref string? before,
             ref string? after,
-            ref string subjectDigest);
+            ref string subjectDigest,
+            ref string? predicateType);
         partial void PrepareReposListAttestationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -21,7 +22,8 @@ namespace GitHub
             int? perPage,
             string? before,
             string? after,
-            string subjectDigest);
+            string subjectDigest,
+            string? predicateType);
         partial void ProcessReposListAttestationsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -45,6 +47,7 @@ namespace GitHub
         /// <param name="before"></param>
         /// <param name="after"></param>
         /// <param name="subjectDigest"></param>
+        /// <param name="predicateType"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ReposListAttestationsResponse> ReposListAttestationsAsync(
@@ -54,6 +57,7 @@ namespace GitHub
             int? perPage = default,
             string? before = default,
             string? after = default,
+            string? predicateType = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -65,7 +69,8 @@ namespace GitHub
                 perPage: ref perPage,
                 before: ref before,
                 after: ref after,
-                subjectDigest: ref subjectDigest);
+                subjectDigest: ref subjectDigest,
+                predicateType: ref predicateType);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/repos/{owner}/{repo}/attestations/{subjectDigest}",
@@ -74,6 +79,7 @@ namespace GitHub
                 .AddOptionalParameter("per_page", perPage?.ToString()) 
                 .AddOptionalParameter("before", before) 
                 .AddOptionalParameter("after", after) 
+                .AddOptionalParameter("predicate_type", predicateType) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -95,7 +101,8 @@ namespace GitHub
                 perPage: perPage,
                 before: before,
                 after: after,
-                subjectDigest: subjectDigest);
+                subjectDigest: subjectDigest,
+                predicateType: predicateType);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
