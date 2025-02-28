@@ -138,7 +138,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_400,
@@ -166,7 +166,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_404,

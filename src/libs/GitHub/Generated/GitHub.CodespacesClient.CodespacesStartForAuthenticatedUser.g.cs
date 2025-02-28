@@ -84,7 +84,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_304 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_304,
@@ -111,7 +111,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_500,
@@ -139,7 +139,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_400,
@@ -167,7 +167,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_401,
@@ -195,7 +195,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_402 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_402,
@@ -223,7 +223,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_403,
@@ -251,7 +251,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_404,
@@ -279,7 +279,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_409,

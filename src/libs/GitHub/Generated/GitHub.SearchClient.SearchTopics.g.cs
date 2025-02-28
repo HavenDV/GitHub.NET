@@ -108,7 +108,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_304 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_304,

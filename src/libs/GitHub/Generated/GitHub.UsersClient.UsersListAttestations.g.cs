@@ -11,7 +11,8 @@ namespace GitHub
             ref string? before,
             ref string? after,
             ref string username,
-            ref string subjectDigest);
+            ref string subjectDigest,
+            ref string? predicateType);
         partial void PrepareUsersListAttestationsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -19,7 +20,8 @@ namespace GitHub
             string? before,
             string? after,
             string username,
-            string subjectDigest);
+            string subjectDigest,
+            string? predicateType);
         partial void ProcessUsersListAttestationsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -42,6 +44,7 @@ namespace GitHub
         /// <param name="after"></param>
         /// <param name="username"></param>
         /// <param name="subjectDigest"></param>
+        /// <param name="predicateType"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.UsersListAttestationsResponse> UsersListAttestationsAsync(
@@ -50,6 +53,7 @@ namespace GitHub
             int? perPage = default,
             string? before = default,
             string? after = default,
+            string? predicateType = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -60,7 +64,8 @@ namespace GitHub
                 before: ref before,
                 after: ref after,
                 username: ref username,
-                subjectDigest: ref subjectDigest);
+                subjectDigest: ref subjectDigest,
+                predicateType: ref predicateType);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/users/{username}/attestations/{subjectDigest}",
@@ -69,6 +74,7 @@ namespace GitHub
                 .AddOptionalParameter("per_page", perPage?.ToString()) 
                 .AddOptionalParameter("before", before) 
                 .AddOptionalParameter("after", after) 
+                .AddOptionalParameter("predicate_type", predicateType) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -89,7 +95,8 @@ namespace GitHub
                 before: before,
                 after: after,
                 username: username,
-                subjectDigest: subjectDigest);
+                subjectDigest: subjectDigest,
+                predicateType: predicateType);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
@@ -119,7 +126,7 @@ namespace GitHub
                 }
 
                 throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __response.ReasonPhrase ?? string.Empty,
+                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_404,
