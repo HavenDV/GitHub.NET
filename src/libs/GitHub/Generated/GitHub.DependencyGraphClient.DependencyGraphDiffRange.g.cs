@@ -118,7 +118,7 @@ namespace GitHub
                         h => h.Value),
                 };
             }
-            // Response if GitHub Advanced Security is not enabled for this repository
+            // Response for a private repository when GitHub Advanced Security is not enabled, or if used against a fork
             if ((int)__response.StatusCode == 403)
             {
                 string? __content_403 = null;
