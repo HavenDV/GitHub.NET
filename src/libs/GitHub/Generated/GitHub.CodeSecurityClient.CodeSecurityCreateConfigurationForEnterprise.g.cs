@@ -301,6 +301,10 @@ namespace GitHub
         /// The enablement status of secret scanning non provider patterns<br/>
         /// Default Value: disabled
         /// </param>
+        /// <param name="secretScanningGenericSecrets">
+        /// The enablement status of Copilot secret scanning<br/>
+        /// Default Value: disabled
+        /// </param>
         /// <param name="privateVulnerabilityReporting">
         /// The enablement status of private vulnerability reporting<br/>
         /// Default Value: disabled
@@ -327,6 +331,7 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestSecretScanningPushProtection? secretScanningPushProtection = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestSecretScanningValidityChecks? secretScanningValidityChecks = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns = default,
+            global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestSecretScanningGenericSecrets? secretScanningGenericSecrets = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestEnforcement? enforcement = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -347,6 +352,7 @@ namespace GitHub
                 SecretScanningPushProtection = secretScanningPushProtection,
                 SecretScanningValidityChecks = secretScanningValidityChecks,
                 SecretScanningNonProviderPatterns = secretScanningNonProviderPatterns,
+                SecretScanningGenericSecrets = secretScanningGenericSecrets,
                 PrivateVulnerabilityReporting = privateVulnerabilityReporting,
                 Enforcement = enforcement,
             };
