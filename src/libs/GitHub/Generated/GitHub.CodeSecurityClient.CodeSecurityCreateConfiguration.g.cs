@@ -224,6 +224,10 @@ namespace GitHub
         /// The enablement status of secret scanning non provider patterns<br/>
         /// Default Value: disabled
         /// </param>
+        /// <param name="secretScanningGenericSecrets">
+        /// The enablement status of Copilot secret scanning<br/>
+        /// Default Value: disabled
+        /// </param>
         /// <param name="secretScanningDelegatedAlertDismissal">
         /// The enablement status of secret scanning delegated alert dismissal
         /// </param>
@@ -255,6 +259,7 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptions? secretScanningDelegatedBypassOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns = default,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningGenericSecrets? secretScanningGenericSecrets = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedAlertDismissal? secretScanningDelegatedAlertDismissal = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement? enforcement = default,
@@ -278,6 +283,7 @@ namespace GitHub
                 SecretScanningDelegatedBypassOptions = secretScanningDelegatedBypassOptions,
                 SecretScanningValidityChecks = secretScanningValidityChecks,
                 SecretScanningNonProviderPatterns = secretScanningNonProviderPatterns,
+                SecretScanningGenericSecrets = secretScanningGenericSecrets,
                 SecretScanningDelegatedAlertDismissal = secretScanningDelegatedAlertDismissal,
                 PrivateVulnerabilityReporting = privateVulnerabilityReporting,
                 Enforcement = enforcement,

@@ -23,6 +23,12 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tag_name")]
+        public global::GitHub.WebhookReleaseEditedChangesTagName? TagName { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("make_latest")]
         public global::GitHub.WebhookReleaseEditedChangesMakeLatest? MakeLatest { get; set; }
 
@@ -37,6 +43,7 @@ namespace GitHub
         /// </summary>
         /// <param name="body"></param>
         /// <param name="name"></param>
+        /// <param name="tagName"></param>
         /// <param name="makeLatest"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,10 +51,12 @@ namespace GitHub
         public WebhookReleaseEditedChanges(
             global::GitHub.WebhookReleaseEditedChangesBody? body,
             global::GitHub.WebhookReleaseEditedChangesName? name,
+            global::GitHub.WebhookReleaseEditedChangesTagName? tagName,
             global::GitHub.WebhookReleaseEditedChangesMakeLatest? makeLatest)
         {
             this.Body = body;
             this.Name = name;
+            this.TagName = tagName;
             this.MakeLatest = makeLatest;
         }
 
