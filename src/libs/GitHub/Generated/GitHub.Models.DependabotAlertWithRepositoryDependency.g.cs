@@ -32,6 +32,16 @@ namespace GitHub
         public global::GitHub.DependabotAlertWithRepositoryDependencyScope? Scope { get; set; }
 
         /// <summary>
+        /// The vulnerable dependency's relationship to your project.<br/>
+        /// &gt; [!NOTE]<br/>
+        /// &gt; We are rolling out support for dependency relationship across ecosystems. This value will be "unknown" for all dependencies in unsupported ecosystems.<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("relationship")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.DependabotAlertWithRepositoryDependencyRelationshipJsonConverter))]
+        public global::GitHub.DependabotAlertWithRepositoryDependencyRelationship? Relationship { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -52,17 +62,25 @@ namespace GitHub
         /// The execution scope of the vulnerable dependency.<br/>
         /// Included only in responses
         /// </param>
+        /// <param name="relationship">
+        /// The vulnerable dependency's relationship to your project.<br/>
+        /// &gt; [!NOTE]<br/>
+        /// &gt; We are rolling out support for dependency relationship across ecosystems. This value will be "unknown" for all dependencies in unsupported ecosystems.<br/>
+        /// Included only in responses
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public DependabotAlertWithRepositoryDependency(
             global::GitHub.DependabotAlertPackage? package,
             string? manifestPath,
-            global::GitHub.DependabotAlertWithRepositoryDependencyScope? scope)
+            global::GitHub.DependabotAlertWithRepositoryDependencyScope? scope,
+            global::GitHub.DependabotAlertWithRepositoryDependencyRelationship? relationship)
         {
             this.Package = package;
             this.ManifestPath = manifestPath;
             this.Scope = scope;
+            this.Relationship = relationship;
         }
 
         /// <summary>
