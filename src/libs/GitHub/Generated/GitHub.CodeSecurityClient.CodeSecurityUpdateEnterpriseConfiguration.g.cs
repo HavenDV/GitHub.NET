@@ -326,6 +326,10 @@ namespace GitHub
         /// The enablement status of Copilot secret scanning<br/>
         /// Default Value: disabled
         /// </param>
+        /// <param name="secretScanningDelegatedAlertDismissal">
+        /// The enablement status of secret scanning delegated alert dismissal<br/>
+        /// Default Value: disabled
+        /// </param>
         /// <param name="privateVulnerabilityReporting">
         /// The enablement status of private vulnerability reporting
         /// </param>
@@ -352,6 +356,7 @@ namespace GitHub
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks = default,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns = default,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningGenericSecrets? secretScanningGenericSecrets = default,
+            global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningDelegatedAlertDismissal? secretScanningDelegatedAlertDismissal = default,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting = default,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestEnforcement? enforcement = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -373,6 +378,7 @@ namespace GitHub
                 SecretScanningValidityChecks = secretScanningValidityChecks,
                 SecretScanningNonProviderPatterns = secretScanningNonProviderPatterns,
                 SecretScanningGenericSecrets = secretScanningGenericSecrets,
+                SecretScanningDelegatedAlertDismissal = secretScanningDelegatedAlertDismissal,
                 PrivateVulnerabilityReporting = privateVulnerabilityReporting,
                 Enforcement = enforcement,
             };

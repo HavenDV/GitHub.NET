@@ -111,6 +111,14 @@ namespace GitHub
         public global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningGenericSecrets? SecretScanningGenericSecrets { get; set; }
 
         /// <summary>
+        /// The enablement status of secret scanning delegated alert dismissal<br/>
+        /// Default Value: disabled
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning_delegated_alert_dismissal")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningDelegatedAlertDismissalJsonConverter))]
+        public global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningDelegatedAlertDismissal? SecretScanningDelegatedAlertDismissal { get; set; }
+
+        /// <summary>
         /// The enablement status of private vulnerability reporting
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("private_vulnerability_reporting")]
@@ -179,6 +187,10 @@ namespace GitHub
         /// The enablement status of Copilot secret scanning<br/>
         /// Default Value: disabled
         /// </param>
+        /// <param name="secretScanningDelegatedAlertDismissal">
+        /// The enablement status of secret scanning delegated alert dismissal<br/>
+        /// Default Value: disabled
+        /// </param>
         /// <param name="privateVulnerabilityReporting">
         /// The enablement status of private vulnerability reporting
         /// </param>
@@ -204,6 +216,7 @@ namespace GitHub
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningGenericSecrets? secretScanningGenericSecrets,
+            global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningDelegatedAlertDismissal? secretScanningDelegatedAlertDismissal,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestPrivateVulnerabilityReporting? privateVulnerabilityReporting,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestEnforcement? enforcement)
         {
@@ -222,6 +235,7 @@ namespace GitHub
             this.SecretScanningValidityChecks = secretScanningValidityChecks;
             this.SecretScanningNonProviderPatterns = secretScanningNonProviderPatterns;
             this.SecretScanningGenericSecrets = secretScanningGenericSecrets;
+            this.SecretScanningDelegatedAlertDismissal = secretScanningDelegatedAlertDismissal;
             this.PrivateVulnerabilityReporting = privateVulnerabilityReporting;
             this.Enforcement = enforcement;
         }
