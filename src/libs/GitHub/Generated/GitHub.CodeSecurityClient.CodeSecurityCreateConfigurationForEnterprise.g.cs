@@ -285,6 +285,10 @@ namespace GitHub
         /// <param name="codeScanningDefaultSetupOptions">
         /// Feature options for code scanning default setup
         /// </param>
+        /// <param name="codeScanningDelegatedAlertDismissal">
+        /// The enablement status of code scanning delegated alert dismissal<br/>
+        /// Default Value: disabled
+        /// </param>
         /// <param name="secretScanning">
         /// The enablement status of secret scanning<br/>
         /// Default Value: disabled
@@ -331,6 +335,7 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestDependabotSecurityUpdates? dependabotSecurityUpdates = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestCodeScanningDefaultSetup? codeScanningDefaultSetup = default,
             global::GitHub.CodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions = default,
+            global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestSecretScanning? secretScanning = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestSecretScanningPushProtection? secretScanningPushProtection = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestSecretScanningValidityChecks? secretScanningValidityChecks = default,
@@ -353,6 +358,7 @@ namespace GitHub
                 DependabotSecurityUpdates = dependabotSecurityUpdates,
                 CodeScanningDefaultSetup = codeScanningDefaultSetup,
                 CodeScanningDefaultSetupOptions = codeScanningDefaultSetupOptions,
+                CodeScanningDelegatedAlertDismissal = codeScanningDelegatedAlertDismissal,
                 SecretScanning = secretScanning,
                 SecretScanningPushProtection = secretScanningPushProtection,
                 SecretScanningValidityChecks = secretScanningValidityChecks,

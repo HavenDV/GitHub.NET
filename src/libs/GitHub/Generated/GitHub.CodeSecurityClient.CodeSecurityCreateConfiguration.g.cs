@@ -201,6 +201,10 @@ namespace GitHub
         /// <param name="codeScanningDefaultSetupOptions">
         /// Feature options for code scanning default setup
         /// </param>
+        /// <param name="codeScanningDelegatedAlertDismissal">
+        /// The enablement status of code scanning delegated alert dismissal<br/>
+        /// Default Value: not_set
+        /// </param>
         /// <param name="secretScanning">
         /// The enablement status of secret scanning<br/>
         /// Default Value: disabled
@@ -253,6 +257,7 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates? dependabotSecurityUpdates = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup = default,
             global::GitHub.CodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions = default,
+            global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? secretScanning = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? secretScanningPushProtection = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass? secretScanningDelegatedBypass = default,
@@ -277,6 +282,7 @@ namespace GitHub
                 DependabotSecurityUpdates = dependabotSecurityUpdates,
                 CodeScanningDefaultSetup = codeScanningDefaultSetup,
                 CodeScanningDefaultSetupOptions = codeScanningDefaultSetupOptions,
+                CodeScanningDelegatedAlertDismissal = codeScanningDelegatedAlertDismissal,
                 SecretScanning = secretScanning,
                 SecretScanningPushProtection = secretScanningPushProtection,
                 SecretScanningDelegatedBypass = secretScanningDelegatedBypass,
