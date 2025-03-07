@@ -88,6 +88,13 @@ namespace GitHub
         public global::GitHub.CodeSecurityConfigurationCodeScanningDefaultSetupOptions? CodeScanningDefaultSetupOptions { get; set; }
 
         /// <summary>
+        /// The enablement status of code scanning delegated alert dismissal
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_delegated_alert_dismissal")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityConfigurationCodeScanningDelegatedAlertDismissalJsonConverter))]
+        public global::GitHub.CodeSecurityConfigurationCodeScanningDelegatedAlertDismissal? CodeScanningDelegatedAlertDismissal { get; set; }
+
+        /// <summary>
         /// The enablement status of secret scanning
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning")]
@@ -225,6 +232,9 @@ namespace GitHub
         /// <param name="codeScanningDefaultSetupOptions">
         /// Feature options for code scanning default setup
         /// </param>
+        /// <param name="codeScanningDelegatedAlertDismissal">
+        /// The enablement status of code scanning delegated alert dismissal
+        /// </param>
         /// <param name="secretScanning">
         /// The enablement status of secret scanning
         /// </param>
@@ -279,6 +289,7 @@ namespace GitHub
             global::GitHub.CodeSecurityConfigurationDependabotSecurityUpdates? dependabotSecurityUpdates,
             global::GitHub.CodeSecurityConfigurationCodeScanningDefaultSetup? codeScanningDefaultSetup,
             global::GitHub.CodeSecurityConfigurationCodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions,
+            global::GitHub.CodeSecurityConfigurationCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal,
             global::GitHub.CodeSecurityConfigurationSecretScanning? secretScanning,
             global::GitHub.CodeSecurityConfigurationSecretScanningPushProtection? secretScanningPushProtection,
             global::GitHub.CodeSecurityConfigurationSecretScanningDelegatedBypass? secretScanningDelegatedBypass,
@@ -306,6 +317,7 @@ namespace GitHub
             this.DependabotSecurityUpdates = dependabotSecurityUpdates;
             this.CodeScanningDefaultSetup = codeScanningDefaultSetup;
             this.CodeScanningDefaultSetupOptions = codeScanningDefaultSetupOptions;
+            this.CodeScanningDelegatedAlertDismissal = codeScanningDelegatedAlertDismissal;
             this.SecretScanning = secretScanning;
             this.SecretScanningPushProtection = secretScanningPushProtection;
             this.SecretScanningDelegatedBypass = secretScanningDelegatedBypass;

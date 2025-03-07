@@ -83,6 +83,14 @@ namespace GitHub
         public global::GitHub.CodeScanningDefaultSetupOptions? CodeScanningDefaultSetupOptions { get; set; }
 
         /// <summary>
+        /// The enablement status of code scanning delegated alert dismissal<br/>
+        /// Default Value: disabled
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_delegated_alert_dismissal")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityCreateConfigurationForEnterpriseRequestCodeScanningDelegatedAlertDismissalJsonConverter))]
+        public global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestCodeScanningDelegatedAlertDismissal? CodeScanningDelegatedAlertDismissal { get; set; }
+
+        /// <summary>
         /// The enablement status of secret scanning<br/>
         /// Default Value: disabled
         /// </summary>
@@ -191,6 +199,10 @@ namespace GitHub
         /// <param name="codeScanningDefaultSetupOptions">
         /// Feature options for code scanning default setup
         /// </param>
+        /// <param name="codeScanningDelegatedAlertDismissal">
+        /// The enablement status of code scanning delegated alert dismissal<br/>
+        /// Default Value: disabled
+        /// </param>
         /// <param name="secretScanning">
         /// The enablement status of secret scanning<br/>
         /// Default Value: disabled
@@ -237,6 +249,7 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestDependabotSecurityUpdates? dependabotSecurityUpdates,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestCodeScanningDefaultSetup? codeScanningDefaultSetup,
             global::GitHub.CodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions,
+            global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestSecretScanning? secretScanning,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestSecretScanningPushProtection? secretScanningPushProtection,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestSecretScanningValidityChecks? secretScanningValidityChecks,
@@ -256,6 +269,7 @@ namespace GitHub
             this.DependabotSecurityUpdates = dependabotSecurityUpdates;
             this.CodeScanningDefaultSetup = codeScanningDefaultSetup;
             this.CodeScanningDefaultSetupOptions = codeScanningDefaultSetupOptions;
+            this.CodeScanningDelegatedAlertDismissal = codeScanningDelegatedAlertDismissal;
             this.SecretScanning = secretScanning;
             this.SecretScanningPushProtection = secretScanningPushProtection;
             this.SecretScanningValidityChecks = secretScanningValidityChecks;
