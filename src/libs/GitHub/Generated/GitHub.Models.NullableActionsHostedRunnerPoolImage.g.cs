@@ -44,15 +44,6 @@ namespace GitHub
         public required global::GitHub.NullableActionsHostedRunnerPoolImageSource Source { get; set; }
 
         /// <summary>
-        /// The image version of the hosted runner pool.<br/>
-        /// Example: latest
-        /// </summary>
-        /// <example>latest</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Version { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -76,10 +67,6 @@ namespace GitHub
         /// <param name="source">
         /// The image provider.
         /// </param>
-        /// <param name="version">
-        /// The image version of the hosted runner pool.<br/>
-        /// Example: latest
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -87,14 +74,12 @@ namespace GitHub
             string id,
             int sizeGb,
             string displayName,
-            global::GitHub.NullableActionsHostedRunnerPoolImageSource source,
-            string version)
+            global::GitHub.NullableActionsHostedRunnerPoolImageSource source)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.SizeGb = sizeGb;
             this.DisplayName = displayName ?? throw new global::System.ArgumentNullException(nameof(displayName));
             this.Source = source;
-            this.Version = version ?? throw new global::System.ArgumentNullException(nameof(version));
         }
 
         /// <summary>
