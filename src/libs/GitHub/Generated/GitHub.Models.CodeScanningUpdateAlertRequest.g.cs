@@ -30,6 +30,12 @@ namespace GitHub
         public string? DismissedComment { get; set; }
 
         /// <summary>
+        /// If `true`, attempt to create an alert dismissal request.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("create_request")]
+        public bool? CreateRequest { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -47,17 +53,22 @@ namespace GitHub
         /// <param name="dismissedComment">
         /// The dismissal comment associated with the dismissal of the alert.
         /// </param>
+        /// <param name="createRequest">
+        /// If `true`, attempt to create an alert dismissal request.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CodeScanningUpdateAlertRequest(
             global::GitHub.CodeScanningAlertSetState state,
             global::GitHub.CodeScanningAlertDismissedReason? dismissedReason,
-            string? dismissedComment)
+            string? dismissedComment,
+            bool? createRequest)
         {
             this.State = state;
             this.DismissedReason = dismissedReason;
             this.DismissedComment = dismissedComment;
+            this.CreateRequest = createRequest;
         }
 
         /// <summary>

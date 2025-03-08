@@ -33,12 +33,6 @@ namespace GitHub
         public bool? EnableStaticIp { get; set; }
 
         /// <summary>
-        /// The version of the runner image to deploy. This is relevant only for runners using custom images.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("image_version")]
-        public string? ImageVersion { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -59,9 +53,6 @@ namespace GitHub
         /// <param name="enableStaticIp">
         /// Whether this runner should be updated with a static public IP. Note limit on account. To list limits on account, use `GET actions/hosted-runners/limits`
         /// </param>
-        /// <param name="imageVersion">
-        /// The version of the runner image to deploy. This is relevant only for runners using custom images.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -69,14 +60,12 @@ namespace GitHub
             string? name,
             int? runnerGroupId,
             int? maximumRunners,
-            bool? enableStaticIp,
-            string? imageVersion)
+            bool? enableStaticIp)
         {
             this.Name = name;
             this.RunnerGroupId = runnerGroupId;
             this.MaximumRunners = maximumRunners;
             this.EnableStaticIp = enableStaticIp;
-            this.ImageVersion = imageVersion;
         }
 
         /// <summary>

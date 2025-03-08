@@ -182,9 +182,6 @@ namespace GitHub
         /// <param name="enableStaticIp">
         /// Whether this runner should be updated with a static public IP. Note limit on account. To list limits on account, use `GET actions/hosted-runners/limits`
         /// </param>
-        /// <param name="imageVersion">
-        /// The version of the runner image to deploy. This is relevant only for runners using custom images.
-        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ActionsHostedRunner> ActionsUpdateHostedRunnerForOrgAsync(
@@ -194,7 +191,6 @@ namespace GitHub
             int? runnerGroupId = default,
             int? maximumRunners = default,
             bool? enableStaticIp = default,
-            string? imageVersion = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.ActionsUpdateHostedRunnerForOrgRequest
@@ -203,7 +199,6 @@ namespace GitHub
                 RunnerGroupId = runnerGroupId,
                 MaximumRunners = maximumRunners,
                 EnableStaticIp = enableStaticIp,
-                ImageVersion = imageVersion,
             };
 
             return await ActionsUpdateHostedRunnerForOrgAsync(

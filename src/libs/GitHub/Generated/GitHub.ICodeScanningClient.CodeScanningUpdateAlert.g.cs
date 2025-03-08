@@ -45,6 +45,9 @@ namespace GitHub
         /// <param name="dismissedComment">
         /// The dismissal comment associated with the dismissal of the alert.
         /// </param>
+        /// <param name="createRequest">
+        /// If `true`, attempt to create an alert dismissal request.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.CodeScanningAlert> CodeScanningUpdateAlertAsync(
@@ -54,6 +57,7 @@ namespace GitHub
             global::GitHub.CodeScanningAlertSetState state,
             global::GitHub.CodeScanningAlertDismissedReason? dismissedReason = default,
             string? dismissedComment = default,
+            bool? createRequest = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

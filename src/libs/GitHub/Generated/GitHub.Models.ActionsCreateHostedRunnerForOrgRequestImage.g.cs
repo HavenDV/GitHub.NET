@@ -22,12 +22,6 @@ namespace GitHub
         public global::GitHub.ActionsCreateHostedRunnerForOrgRequestImageSource? Source { get; set; }
 
         /// <summary>
-        /// The version of the runner image to deploy. This is relevant only for runners using custom images.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
-        public string? Version { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -42,20 +36,15 @@ namespace GitHub
         /// <param name="source">
         /// The source of the runner image.
         /// </param>
-        /// <param name="version">
-        /// The version of the runner image to deploy. This is relevant only for runners using custom images.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ActionsCreateHostedRunnerForOrgRequestImage(
             string? id,
-            global::GitHub.ActionsCreateHostedRunnerForOrgRequestImageSource? source,
-            string? version)
+            global::GitHub.ActionsCreateHostedRunnerForOrgRequestImageSource? source)
         {
             this.Id = id;
             this.Source = source;
-            this.Version = version;
         }
 
         /// <summary>

@@ -99,6 +99,34 @@ namespace GitHub
             ProcessCodeScanningUpdateAlertResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
+            // Bad Request
+            if ((int)__response.StatusCode == 400)
+            {
+                string? __content_400 = null;
+                global::GitHub.BasicError? __value_400 = null;
+                if (ReadResponseAsString)
+                {
+                    __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                    __value_400 = global::GitHub.BasicError.FromJson(__content_400, JsonSerializerContext);
+                }
+                else
+                {
+                    var __contentStream_400 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                    __value_400 = await global::GitHub.BasicError.FromJsonStreamAsync(__contentStream_400, JsonSerializerContext).ConfigureAwait(false);
+                }
+
+                throw new global::GitHub.ApiException<global::GitHub.BasicError>(
+                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_400,
+                    ResponseObject = __value_400,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
             // Response if the repository is archived or if GitHub Advanced Security is not enabled for this repository
             if ((int)__response.StatusCode == 403)
             {
@@ -276,6 +304,9 @@ namespace GitHub
         /// <param name="dismissedComment">
         /// The dismissal comment associated with the dismissal of the alert.
         /// </param>
+        /// <param name="createRequest">
+        /// If `true`, attempt to create an alert dismissal request.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.CodeScanningAlert> CodeScanningUpdateAlertAsync(
@@ -285,6 +316,7 @@ namespace GitHub
             global::GitHub.CodeScanningAlertSetState state,
             global::GitHub.CodeScanningAlertDismissedReason? dismissedReason = default,
             string? dismissedComment = default,
+            bool? createRequest = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.CodeScanningUpdateAlertRequest
@@ -292,6 +324,7 @@ namespace GitHub
                 State = state,
                 DismissedReason = dismissedReason,
                 DismissedComment = dismissedComment,
+                CreateRequest = createRequest,
             };
 
             return await CodeScanningUpdateAlertAsync(
