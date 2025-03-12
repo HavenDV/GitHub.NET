@@ -33,6 +33,9 @@ namespace GitHub
         /// </param>
         /// <param name="lastUsedBefore"></param>
         /// <param name="lastUsedAfter"></param>
+        /// <param name="tokenId">
+        /// Example: token_id[]=1,token_id[]=2
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrganizationProgrammaticAccessGrant>> OrgsListPatGrantsAsync(
@@ -46,6 +49,7 @@ namespace GitHub
             string? permission = default,
             global::System.DateTime? lastUsedBefore = default,
             global::System.DateTime? lastUsedAfter = default,
+            global::System.Collections.Generic.IList<string>? tokenId = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
