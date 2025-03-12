@@ -10,12 +10,12 @@ namespace GitHub
     {
         /// <summary>
         /// Unique identifier of the webhook delivery.<br/>
-        /// Example: 42
+        /// Example: 42L
         /// </summary>
-        /// <example>42</example>
+        /// <example>42L</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required int Id { get; set; }
+        public required long Id { get; set; }
 
         /// <summary>
         /// Unique identifier for the event (shared with all deliveries for all webhooks that subscribe to this event).<br/>
@@ -89,21 +89,21 @@ namespace GitHub
 
         /// <summary>
         /// The id of the GitHub App installation associated with this event.<br/>
-        /// Example: 123
+        /// Example: 123L
         /// </summary>
-        /// <example>123</example>
+        /// <example>123L</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("installation_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required int? InstallationId { get; set; }
+        public required long? InstallationId { get; set; }
 
         /// <summary>
         /// The id of the repository associated with this event.<br/>
-        /// Example: 123
+        /// Example: 123L
         /// </summary>
-        /// <example>123</example>
+        /// <example>123L</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required int? RepositoryId { get; set; }
+        public required long? RepositoryId { get; set; }
 
         /// <summary>
         /// Time when the webhook delivery was throttled.
@@ -122,7 +122,7 @@ namespace GitHub
         /// </summary>
         /// <param name="id">
         /// Unique identifier of the webhook delivery.<br/>
-        /// Example: 42
+        /// Example: 42L
         /// </param>
         /// <param name="guid">
         /// Unique identifier for the event (shared with all deliveries for all webhooks that subscribe to this event).<br/>
@@ -157,11 +157,11 @@ namespace GitHub
         /// </param>
         /// <param name="installationId">
         /// The id of the GitHub App installation associated with this event.<br/>
-        /// Example: 123
+        /// Example: 123L
         /// </param>
         /// <param name="repositoryId">
         /// The id of the repository associated with this event.<br/>
-        /// Example: 123
+        /// Example: 123L
         /// </param>
         /// <param name="throttledAt">
         /// Time when the webhook delivery was throttled.
@@ -170,7 +170,7 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public HookDeliveryItem(
-            int id,
+            long id,
             string guid,
             global::System.DateTime deliveredAt,
             bool redelivery,
@@ -179,8 +179,8 @@ namespace GitHub
             int statusCode,
             string @event,
             string? action,
-            int? installationId,
-            int? repositoryId,
+            long? installationId,
+            long? repositoryId,
             global::System.DateTime? throttledAt)
         {
             this.Id = id;

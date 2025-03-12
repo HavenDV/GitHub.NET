@@ -16,7 +16,8 @@ namespace GitHub
             ref string? repository,
             ref string? permission,
             ref global::System.DateTime? lastUsedBefore,
-            ref global::System.DateTime? lastUsedAfter);
+            ref global::System.DateTime? lastUsedAfter,
+            global::System.Collections.Generic.IList<string>? tokenId);
         partial void PrepareOrgsListPatGrantsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -29,7 +30,8 @@ namespace GitHub
             string? repository,
             string? permission,
             global::System.DateTime? lastUsedBefore,
-            global::System.DateTime? lastUsedAfter);
+            global::System.DateTime? lastUsedAfter,
+            global::System.Collections.Generic.IList<string>? tokenId);
         partial void ProcessOrgsListPatGrantsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -68,6 +70,9 @@ namespace GitHub
         /// </param>
         /// <param name="lastUsedBefore"></param>
         /// <param name="lastUsedAfter"></param>
+        /// <param name="tokenId">
+        /// Example: token_id[]=1,token_id[]=2
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrganizationProgrammaticAccessGrant>> OrgsListPatGrantsAsync(
@@ -81,6 +86,7 @@ namespace GitHub
             string? permission = default,
             global::System.DateTime? lastUsedBefore = default,
             global::System.DateTime? lastUsedAfter = default,
+            global::System.Collections.Generic.IList<string>? tokenId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -96,7 +102,8 @@ namespace GitHub
                 repository: ref repository,
                 permission: ref permission,
                 lastUsedBefore: ref lastUsedBefore,
-                lastUsedAfter: ref lastUsedAfter);
+                lastUsedAfter: ref lastUsedAfter,
+                tokenId: tokenId);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/orgs/{org}/personal-access-tokens",
@@ -111,6 +118,7 @@ namespace GitHub
                 .AddOptionalParameter("permission", permission) 
                 .AddOptionalParameter("last_used_before", lastUsedBefore?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
                 .AddOptionalParameter("last_used_after", lastUsedAfter?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
+                .AddOptionalParameter("token_id", tokenId, delimiter: ",", explode: true) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -136,7 +144,8 @@ namespace GitHub
                 repository: repository,
                 permission: permission,
                 lastUsedBefore: lastUsedBefore,
-                lastUsedAfter: lastUsedAfter);
+                lastUsedAfter: lastUsedAfter,
+                tokenId: tokenId);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
