@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class Runner
     {
         /// <summary>
-        /// The id of the runner.<br/>
+        /// The ID of the runner.<br/>
         /// Example: 5
         /// </summary>
         /// <example>5</example>
@@ -18,7 +18,7 @@ namespace GitHub
         public required int Id { get; set; }
 
         /// <summary>
-        /// The id of the runner group.<br/>
+        /// The ID of the runner group.<br/>
         /// Example: 1
         /// </summary>
         /// <example>1</example>
@@ -82,11 +82,11 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="Runner" /> class.
         /// </summary>
         /// <param name="id">
-        /// The id of the runner.<br/>
+        /// The ID of the runner.<br/>
         /// Example: 5
         /// </param>
         /// <param name="runnerGroupId">
-        /// The id of the runner group.<br/>
+        /// The ID of the runner group.<br/>
         /// Example: 1
         /// </param>
         /// <param name="name">
