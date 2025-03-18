@@ -238,6 +238,12 @@ namespace GitHub
         public string? TimelineUrl { get; set; }
 
         /// <summary>
+        /// The type of issue.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public global::GitHub.IssueType? Type { get; set; }
+
+        /// <summary>
         /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("performed_via_github_app")]
@@ -303,6 +309,9 @@ namespace GitHub
         /// <param name="bodyHtml"></param>
         /// <param name="bodyText"></param>
         /// <param name="timelineUrl"></param>
+        /// <param name="type">
+        /// The type of issue.
+        /// </param>
         /// <param name="performedViaGithubApp">
         /// GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.
         /// </param>
@@ -345,6 +354,7 @@ namespace GitHub
             string? bodyHtml,
             string? bodyText,
             string? timelineUrl,
+            global::GitHub.IssueType? type,
             global::GitHub.NullableIntegration? performedViaGithubApp,
             global::GitHub.ReactionRollup? reactions)
         {
@@ -382,6 +392,7 @@ namespace GitHub
             this.BodyHtml = bodyHtml;
             this.BodyText = bodyText;
             this.TimelineUrl = timelineUrl;
+            this.Type = type;
             this.PerformedViaGithubApp = performedViaGithubApp;
             this.Reactions = reactions;
         }

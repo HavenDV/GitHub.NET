@@ -226,6 +226,12 @@ namespace GitHub
         public string? TimelineUrl { get; set; }
 
         /// <summary>
+        /// The type of issue.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public global::GitHub.IssueType? Type { get; set; }
+
+        /// <summary>
         /// A repository on GitHub.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository")]
@@ -327,6 +333,9 @@ namespace GitHub
         /// <param name="bodyHtml"></param>
         /// <param name="bodyText"></param>
         /// <param name="timelineUrl"></param>
+        /// <param name="type">
+        /// The type of issue.
+        /// </param>
         /// <param name="repository">
         /// A repository on GitHub.
         /// </param>
@@ -374,6 +383,7 @@ namespace GitHub
             string? bodyHtml,
             string? bodyText,
             string? timelineUrl,
+            global::GitHub.IssueType? type,
             global::GitHub.Repository? repository,
             global::GitHub.NullableIntegration? performedViaGithubApp,
             global::GitHub.ReactionRollup? reactions,
@@ -410,6 +420,7 @@ namespace GitHub
             this.BodyHtml = bodyHtml;
             this.BodyText = bodyText;
             this.TimelineUrl = timelineUrl;
+            this.Type = type;
             this.Repository = repository;
             this.PerformedViaGithubApp = performedViaGithubApp;
             this.Reactions = reactions;

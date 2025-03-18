@@ -50,6 +50,14 @@ namespace GitHub
         public global::System.Collections.Generic.IList<string>? Assignees { get; set; }
 
         /// <summary>
+        /// The name of the issue type to associate with this issue.<br/>
+        /// Example: Epic
+        /// </summary>
+        /// <example>Epic</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public string? Type { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -74,6 +82,10 @@ namespace GitHub
         /// <param name="assignees">
         /// Logins for Users to assign to this issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
         /// </param>
+        /// <param name="type">
+        /// The name of the issue type to associate with this issue.<br/>
+        /// Example: Epic
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -83,7 +95,8 @@ namespace GitHub
             string? assignee,
             global::GitHub.OneOf<string, int?>? milestone,
             global::System.Collections.Generic.IList<global::GitHub.OneOf<string, global::GitHub.IssuesCreateRequestLabel>>? labels,
-            global::System.Collections.Generic.IList<string>? assignees)
+            global::System.Collections.Generic.IList<string>? assignees,
+            string? type)
         {
             this.Title = title;
             this.Body = body;
@@ -91,6 +104,7 @@ namespace GitHub
             this.Milestone = milestone;
             this.Labels = labels;
             this.Assignees = assignees;
+            this.Type = type;
         }
 
         /// <summary>

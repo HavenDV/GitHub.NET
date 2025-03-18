@@ -11,6 +11,7 @@ namespace GitHub
             ref global::GitHub.IssuesListForOrgFilter? filter,
             ref global::GitHub.IssuesListForOrgState? state,
             ref string? labels,
+            ref string? type,
             ref global::GitHub.IssuesListForOrgSort? sort,
             ref global::GitHub.IssuesListForOrgDirection? direction,
             ref global::System.DateTime? since,
@@ -23,6 +24,7 @@ namespace GitHub
             global::GitHub.IssuesListForOrgFilter? filter,
             global::GitHub.IssuesListForOrgState? state,
             string? labels,
+            string? type,
             global::GitHub.IssuesListForOrgSort? sort,
             global::GitHub.IssuesListForOrgDirection? direction,
             global::System.DateTime? since,
@@ -56,6 +58,7 @@ namespace GitHub
         /// Default Value: open
         /// </param>
         /// <param name="labels"></param>
+        /// <param name="type"></param>
         /// <param name="sort">
         /// Default Value: created
         /// </param>
@@ -76,6 +79,7 @@ namespace GitHub
             global::GitHub.IssuesListForOrgFilter? filter = default,
             global::GitHub.IssuesListForOrgState? state = default,
             string? labels = default,
+            string? type = default,
             global::GitHub.IssuesListForOrgSort? sort = default,
             global::GitHub.IssuesListForOrgDirection? direction = default,
             global::System.DateTime? since = default,
@@ -91,6 +95,7 @@ namespace GitHub
                 filter: ref filter,
                 state: ref state,
                 labels: ref labels,
+                type: ref type,
                 sort: ref sort,
                 direction: ref direction,
                 since: ref since,
@@ -104,6 +109,7 @@ namespace GitHub
                 .AddOptionalParameter("filter", filter?.ToValueString()) 
                 .AddOptionalParameter("state", state?.ToValueString()) 
                 .AddOptionalParameter("labels", labels) 
+                .AddOptionalParameter("type", type) 
                 .AddOptionalParameter("sort", sort?.ToValueString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 
                 .AddOptionalParameter("since", since?.ToString("yyyy-MM-ddTHH:mm:ssZ")) 
@@ -129,6 +135,7 @@ namespace GitHub
                 filter: filter,
                 state: state,
                 labels: labels,
+                type: type,
                 sort: sort,
                 direction: direction,
                 since: since,

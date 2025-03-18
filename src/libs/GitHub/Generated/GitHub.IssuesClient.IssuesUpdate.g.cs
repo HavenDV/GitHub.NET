@@ -376,6 +376,10 @@ namespace GitHub
         /// <param name="assignees">
         /// Usernames to assign to this issue. Pass one or more user logins to _replace_ the set of assignees on this issue. Send an empty array (`[]`) to clear all assignees from the issue. Only users with push access can set assignees for new issues. Without push access to the repository, assignee changes are silently dropped.
         /// </param>
+        /// <param name="type">
+        /// The name of the issue type to associate with this issue or use `null` to remove the current issue type.<br/>
+        /// Example: Epic
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.Issue> IssuesUpdateAsync(
@@ -390,6 +394,7 @@ namespace GitHub
             global::GitHub.OneOf<string, int?>? milestone = default,
             global::System.Collections.Generic.IList<global::GitHub.OneOf<string, global::GitHub.IssuesUpdateRequestLabel>>? labels = default,
             global::System.Collections.Generic.IList<string>? assignees = default,
+            string? type = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.IssuesUpdateRequest
@@ -402,6 +407,7 @@ namespace GitHub
                 Milestone = milestone,
                 Labels = labels,
                 Assignees = assignees,
+                Type = type,
             };
 
             return await IssuesUpdateAsync(

@@ -220,6 +220,12 @@ namespace GitHub
         public required global::GitHub.WebhookIssuesReopenedIssueUser? User { get; set; }
 
         /// <summary>
+        /// The type of issue.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public global::GitHub.IssueType? Type { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -273,6 +279,9 @@ namespace GitHub
         /// URL for the issue
         /// </param>
         /// <param name="user"></param>
+        /// <param name="type">
+        /// The type of issue.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -307,7 +316,8 @@ namespace GitHub
             global::GitHub.WebhookIssuesReopenedIssuePullRequest? pullRequest,
             global::GitHub.WebhookIssuesReopenedIssueSubIssuesSummary? subIssuesSummary,
             string? stateReason,
-            string? timelineUrl)
+            string? timelineUrl,
+            global::GitHub.IssueType? type)
         {
             this.ActiveLockReason = activeLockReason;
             this.Assignees = assignees ?? throw new global::System.ArgumentNullException(nameof(assignees));
@@ -340,6 +350,7 @@ namespace GitHub
             this.SubIssuesSummary = subIssuesSummary;
             this.StateReason = stateReason;
             this.TimelineUrl = timelineUrl;
+            this.Type = type;
         }
 
         /// <summary>

@@ -191,6 +191,12 @@ namespace GitHub
         public string? TimelineUrl { get; set; }
 
         /// <summary>
+        /// The type of issue.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public global::GitHub.IssueType? Type { get; set; }
+
+        /// <summary>
         /// Title of the issue
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("title")]
@@ -264,6 +270,9 @@ namespace GitHub
         /// </param>
         /// <param name="stateReason"></param>
         /// <param name="timelineUrl"></param>
+        /// <param name="type">
+        /// The type of issue.
+        /// </param>
         /// <param name="title">
         /// Title of the issue
         /// </param>
@@ -306,7 +315,8 @@ namespace GitHub
             global::GitHub.WebhookIssuesEditedIssueSubIssuesSummary? subIssuesSummary,
             global::GitHub.WebhookIssuesEditedIssueState? state,
             string? stateReason,
-            string? timelineUrl)
+            string? timelineUrl,
+            global::GitHub.IssueType? type)
         {
             this.ActiveLockReason = activeLockReason;
             this.Assignees = assignees ?? throw new global::System.ArgumentNullException(nameof(assignees));
@@ -339,6 +349,7 @@ namespace GitHub
             this.State = state;
             this.StateReason = stateReason;
             this.TimelineUrl = timelineUrl;
+            this.Type = type;
         }
 
         /// <summary>

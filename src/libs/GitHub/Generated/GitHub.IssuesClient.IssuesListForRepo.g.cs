@@ -12,6 +12,7 @@ namespace GitHub
             ref string? milestone,
             ref global::GitHub.IssuesListForRepoState? state,
             ref string? assignee,
+            ref string? type,
             ref string? creator,
             ref string? mentioned,
             ref string? labels,
@@ -28,6 +29,7 @@ namespace GitHub
             string? milestone,
             global::GitHub.IssuesListForRepoState? state,
             string? assignee,
+            string? type,
             string? creator,
             string? mentioned,
             string? labels,
@@ -63,6 +65,7 @@ namespace GitHub
         /// Default Value: open
         /// </param>
         /// <param name="assignee"></param>
+        /// <param name="type"></param>
         /// <param name="creator"></param>
         /// <param name="mentioned"></param>
         /// <param name="labels"></param>
@@ -87,6 +90,7 @@ namespace GitHub
             string? milestone = default,
             global::GitHub.IssuesListForRepoState? state = default,
             string? assignee = default,
+            string? type = default,
             string? creator = default,
             string? mentioned = default,
             string? labels = default,
@@ -106,6 +110,7 @@ namespace GitHub
                 milestone: ref milestone,
                 state: ref state,
                 assignee: ref assignee,
+                type: ref type,
                 creator: ref creator,
                 mentioned: ref mentioned,
                 labels: ref labels,
@@ -122,6 +127,7 @@ namespace GitHub
                 .AddOptionalParameter("milestone", milestone) 
                 .AddOptionalParameter("state", state?.ToValueString()) 
                 .AddOptionalParameter("assignee", assignee) 
+                .AddOptionalParameter("type", type) 
                 .AddOptionalParameter("creator", creator) 
                 .AddOptionalParameter("mentioned", mentioned) 
                 .AddOptionalParameter("labels", labels) 
@@ -151,6 +157,7 @@ namespace GitHub
                 milestone: milestone,
                 state: state,
                 assignee: assignee,
+                type: type,
                 creator: creator,
                 mentioned: mentioned,
                 labels: labels,

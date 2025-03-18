@@ -55,6 +55,10 @@ namespace GitHub
         /// <param name="assignees">
         /// Logins for Users to assign to this issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
         /// </param>
+        /// <param name="type">
+        /// The name of the issue type to associate with this issue.<br/>
+        /// Example: Epic
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.Issue> IssuesCreateAsync(
@@ -66,6 +70,7 @@ namespace GitHub
             global::GitHub.OneOf<string, int?>? milestone = default,
             global::System.Collections.Generic.IList<global::GitHub.OneOf<string, global::GitHub.IssuesCreateRequestLabel>>? labels = default,
             global::System.Collections.Generic.IList<string>? assignees = default,
+            string? type = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
