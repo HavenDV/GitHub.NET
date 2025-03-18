@@ -44,7 +44,7 @@ namespace GitHub
         public global::GitHub.AppPermissionsContents? Contents { get; set; }
 
         /// <summary>
-        /// The leve of permission to grant the access token to manage Dependabot secrets.
+        /// The level of permission to grant the access token to manage Dependabot secrets.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependabot_secrets")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AppPermissionsDependabotSecretsJsonConverter))]
@@ -369,7 +369,7 @@ namespace GitHub
         /// The level of permission to grant the access token for repository contents, commits, branches, downloads, releases, and merges.
         /// </param>
         /// <param name="dependabotSecrets">
-        /// The leve of permission to grant the access token to manage Dependabot secrets.
+        /// The level of permission to grant the access token to manage Dependabot secrets.
         /// </param>
         /// <param name="deployments">
         /// The level of permission to grant the access token for deployments and deployment statuses.

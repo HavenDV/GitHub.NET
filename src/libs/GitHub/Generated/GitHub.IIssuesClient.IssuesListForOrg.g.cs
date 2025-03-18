@@ -23,6 +23,7 @@ namespace GitHub
         /// Default Value: open
         /// </param>
         /// <param name="labels"></param>
+        /// <param name="type"></param>
         /// <param name="sort">
         /// Default Value: created
         /// </param>
@@ -43,6 +44,7 @@ namespace GitHub
             global::GitHub.IssuesListForOrgFilter? filter = default,
             global::GitHub.IssuesListForOrgState? state = default,
             string? labels = default,
+            string? type = default,
             global::GitHub.IssuesListForOrgSort? sort = default,
             global::GitHub.IssuesListForOrgDirection? direction = default,
             global::System.DateTime? since = default,

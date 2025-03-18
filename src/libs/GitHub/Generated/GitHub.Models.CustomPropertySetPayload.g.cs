@@ -47,6 +47,15 @@ namespace GitHub
         public global::System.Collections.Generic.IList<string>? AllowedValues { get; set; }
 
         /// <summary>
+        /// Who can edit the values of the property<br/>
+        /// Example: org_actors
+        /// </summary>
+        /// <example>org_actors</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("values_editable_by")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CustomPropertySetPayloadValuesEditableByJsonConverter))]
+        public global::GitHub.CustomPropertySetPayloadValuesEditableBy? ValuesEditableBy { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -72,6 +81,10 @@ namespace GitHub
         /// An ordered list of the allowed values of the property.<br/>
         /// The property can have up to 200 allowed values.
         /// </param>
+        /// <param name="valuesEditableBy">
+        /// Who can edit the values of the property<br/>
+        /// Example: org_actors
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -80,13 +93,15 @@ namespace GitHub
             bool? required,
             global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? defaultValue,
             string? description,
-            global::System.Collections.Generic.IList<string>? allowedValues)
+            global::System.Collections.Generic.IList<string>? allowedValues,
+            global::GitHub.CustomPropertySetPayloadValuesEditableBy? valuesEditableBy)
         {
             this.ValueType = valueType;
             this.Required = required;
             this.DefaultValue = defaultValue;
             this.Description = description;
             this.AllowedValues = allowedValues;
+            this.ValuesEditableBy = valuesEditableBy;
         }
 
         /// <summary>

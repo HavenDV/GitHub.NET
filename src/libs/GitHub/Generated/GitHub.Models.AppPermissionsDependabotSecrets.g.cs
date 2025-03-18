@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The leve of permission to grant the access token to manage Dependabot secrets.
+    /// The level of permission to grant the access token to manage Dependabot secrets.
     /// </summary>
     public enum AppPermissionsDependabotSecrets
     {

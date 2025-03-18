@@ -198,6 +198,12 @@ namespace GitHub
         public required string Title { get; set; }
 
         /// <summary>
+        /// The type of issue.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public global::GitHub.IssueType? Type { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
@@ -267,6 +273,9 @@ namespace GitHub
         /// <param name="title">
         /// Title of the issue
         /// </param>
+        /// <param name="type">
+        /// The type of issue.
+        /// </param>
         /// <param name="updatedAt"></param>
         /// <param name="url">
         /// URL for the issue
@@ -306,7 +315,8 @@ namespace GitHub
             global::GitHub.WebhookIssueCommentCreatedIssueVariant1SubIssuesSummary? subIssuesSummary,
             global::GitHub.WebhookIssueCommentCreatedIssueVariant1State? state,
             string? stateReason,
-            string? timelineUrl)
+            string? timelineUrl,
+            global::GitHub.IssueType? type)
         {
             this.ActiveLockReason = activeLockReason;
             this.Assignees = assignees ?? throw new global::System.ArgumentNullException(nameof(assignees));
@@ -339,6 +349,7 @@ namespace GitHub
             this.State = state;
             this.StateReason = stateReason;
             this.TimelineUrl = timelineUrl;
+            this.Type = type;
         }
 
         /// <summary>

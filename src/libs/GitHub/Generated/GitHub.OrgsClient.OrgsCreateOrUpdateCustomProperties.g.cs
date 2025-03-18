@@ -26,6 +26,9 @@ namespace GitHub
         /// <summary>
         /// Create or update custom properties for an organization<br/>
         /// Creates new or updates existing custom properties defined for an organization in a batch.<br/>
+        /// If the property already exists, the existing property will be replaced with the new values.<br/>
+        /// Missing optional values will fall back to default values, previous values will be overwritten.<br/>
+        /// E.g. if a property exists with `values_editable_by: org_and_repo_actors` and it's updated without specifying `values_editable_by`, it will be updated to default value `org_actors`.<br/>
         /// To use this endpoint, the authenticated user must be one of:<br/>
         ///   - An administrator for the organization.<br/>
         ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
@@ -218,6 +221,9 @@ namespace GitHub
         /// <summary>
         /// Create or update custom properties for an organization<br/>
         /// Creates new or updates existing custom properties defined for an organization in a batch.<br/>
+        /// If the property already exists, the existing property will be replaced with the new values.<br/>
+        /// Missing optional values will fall back to default values, previous values will be overwritten.<br/>
+        /// E.g. if a property exists with `values_editable_by: org_and_repo_actors` and it's updated without specifying `values_editable_by`, it will be updated to default value `org_actors`.<br/>
         /// To use this endpoint, the authenticated user must be one of:<br/>
         ///   - An administrator for the organization.<br/>
         ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.

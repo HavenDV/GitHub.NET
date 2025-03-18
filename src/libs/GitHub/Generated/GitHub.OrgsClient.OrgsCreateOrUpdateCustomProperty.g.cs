@@ -247,6 +247,10 @@ namespace GitHub
         /// An ordered list of the allowed values of the property.<br/>
         /// The property can have up to 200 allowed values.
         /// </param>
+        /// <param name="valuesEditableBy">
+        /// Who can edit the values of the property<br/>
+        /// Example: org_actors
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsCreateOrUpdateCustomPropertyAsync(
@@ -257,6 +261,7 @@ namespace GitHub
             global::GitHub.OneOf<string, global::System.Collections.Generic.IList<string>>? defaultValue = default,
             string? description = default,
             global::System.Collections.Generic.IList<string>? allowedValues = default,
+            global::GitHub.CustomPropertySetPayloadValuesEditableBy? valuesEditableBy = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.CustomPropertySetPayload
@@ -266,6 +271,7 @@ namespace GitHub
                 DefaultValue = defaultValue,
                 Description = description,
                 AllowedValues = allowedValues,
+                ValuesEditableBy = valuesEditableBy,
             };
 
             return await OrgsCreateOrUpdateCustomPropertyAsync(

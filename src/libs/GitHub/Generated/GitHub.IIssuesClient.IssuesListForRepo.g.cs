@@ -22,6 +22,7 @@ namespace GitHub
         /// Default Value: open
         /// </param>
         /// <param name="assignee"></param>
+        /// <param name="type"></param>
         /// <param name="creator"></param>
         /// <param name="mentioned"></param>
         /// <param name="labels"></param>
@@ -46,6 +47,7 @@ namespace GitHub
             string? milestone = default,
             global::GitHub.IssuesListForRepoState? state = default,
             string? assignee = default,
+            string? type = default,
             string? creator = default,
             string? mentioned = default,
             string? labels = default,
