@@ -12,7 +12,7 @@ namespace GitHub
         /// Array of allowed merge methods. Allowed values include `merge`, `squash`, and `rebase`. At least one option must be enabled.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("allowed_merge_methods")]
-        public global::System.Collections.Generic.IList<string>? AllowedMergeMethods { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.RepositoryRulePullRequestParametersAllowedMergeMethod>? AllowedMergeMethods { get; set; }
 
         /// <summary>
         /// New, reviewable commits pushed will dismiss previous pull request review approvals.
@@ -85,7 +85,7 @@ namespace GitHub
             bool requireLastPushApproval,
             int requiredApprovingReviewCount,
             bool requiredReviewThreadResolution,
-            global::System.Collections.Generic.IList<string>? allowedMergeMethods)
+            global::System.Collections.Generic.IList<global::GitHub.RepositoryRulePullRequestParametersAllowedMergeMethod>? allowedMergeMethods)
         {
             this.DismissStaleReviewsOnPush = dismissStaleReviewsOnPush;
             this.RequireCodeOwnerReview = requireCodeOwnerReview;
