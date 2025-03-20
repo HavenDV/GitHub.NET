@@ -126,32 +126,32 @@ namespace GitHub.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::GitHub.RepositoryRuleTagNamePattern)}");
                 tagNamePattern = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-            global::GitHub.RepositoryRuleVariant16? filePathRestriction = default;
+            global::GitHub.RepositoryRuleFilePathRestriction? filePathRestriction = default;
             if (discriminator?.Type == global::GitHub.RepositoryRuleDiscriminatorType.FilePathRestriction)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant16), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant16> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::GitHub.RepositoryRuleVariant16)}");
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleFilePathRestriction), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleFilePathRestriction> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::GitHub.RepositoryRuleFilePathRestriction)}");
                 filePathRestriction = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-            global::GitHub.RepositoryRuleVariant17? maxFilePathLength = default;
+            global::GitHub.RepositoryRuleMaxFilePathLength? maxFilePathLength = default;
             if (discriminator?.Type == global::GitHub.RepositoryRuleDiscriminatorType.MaxFilePathLength)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant17), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant17> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::GitHub.RepositoryRuleVariant17)}");
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleMaxFilePathLength), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleMaxFilePathLength> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::GitHub.RepositoryRuleMaxFilePathLength)}");
                 maxFilePathLength = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-            global::GitHub.RepositoryRuleVariant18? fileExtensionRestriction = default;
+            global::GitHub.RepositoryRuleFileExtensionRestriction? fileExtensionRestriction = default;
             if (discriminator?.Type == global::GitHub.RepositoryRuleDiscriminatorType.FileExtensionRestriction)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant18), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant18> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::GitHub.RepositoryRuleVariant18)}");
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleFileExtensionRestriction), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleFileExtensionRestriction> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::GitHub.RepositoryRuleFileExtensionRestriction)}");
                 fileExtensionRestriction = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
-            global::GitHub.RepositoryRuleVariant19? maxFileSize = default;
+            global::GitHub.RepositoryRuleMaxFileSize? maxFileSize = default;
             if (discriminator?.Type == global::GitHub.RepositoryRuleDiscriminatorType.MaxFileSize)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant19), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant19> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::GitHub.RepositoryRuleVariant19)}");
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleMaxFileSize), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleMaxFileSize> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::GitHub.RepositoryRuleMaxFileSize)}");
                 maxFileSize = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
             global::GitHub.RepositoryRuleWorkflows? workflows = default;
@@ -298,26 +298,26 @@ namespace GitHub.JsonConverters
             }
             else if (value.IsFilePathRestriction)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant16), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant16?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant16).Name}");
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleFilePathRestriction), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleFilePathRestriction?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleFilePathRestriction).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.FilePathRestriction, typeInfo);
             }
             else if (value.IsMaxFilePathLength)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant17), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant17?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant17).Name}");
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleMaxFilePathLength), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleMaxFilePathLength?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleMaxFilePathLength).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.MaxFilePathLength, typeInfo);
             }
             else if (value.IsFileExtensionRestriction)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant18), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant18?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant18).Name}");
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleFileExtensionRestriction), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleFileExtensionRestriction?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleFileExtensionRestriction).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.FileExtensionRestriction, typeInfo);
             }
             else if (value.IsMaxFileSize)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleVariant19), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleVariant19?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleVariant19).Name}");
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleMaxFileSize), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleMaxFileSize?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleMaxFileSize).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.MaxFileSize, typeInfo);
             }
             else if (value.IsWorkflows)

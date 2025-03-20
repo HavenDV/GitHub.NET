@@ -543,9 +543,9 @@ namespace GitHub
         /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleVariant16? FilePathRestriction { get; init; }
+        public global::GitHub.RepositoryRuleFilePathRestriction? FilePathRestriction { get; init; }
 #else
-        public global::GitHub.RepositoryRuleVariant16? FilePathRestriction { get; }
+        public global::GitHub.RepositoryRuleFilePathRestriction? FilePathRestriction { get; }
 #endif
 
         /// <summary>
@@ -559,17 +559,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleVariant16 value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleFilePathRestriction value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleVariant16?(RepositoryRule @this) => @this.FilePathRestriction;
+        public static implicit operator global::GitHub.RepositoryRuleFilePathRestriction?(RepositoryRule @this) => @this.FilePathRestriction;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleVariant16? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleFilePathRestriction? value)
         {
             FilePathRestriction = value;
         }
@@ -578,9 +578,9 @@ namespace GitHub
         /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleVariant17? MaxFilePathLength { get; init; }
+        public global::GitHub.RepositoryRuleMaxFilePathLength? MaxFilePathLength { get; init; }
 #else
-        public global::GitHub.RepositoryRuleVariant17? MaxFilePathLength { get; }
+        public global::GitHub.RepositoryRuleMaxFilePathLength? MaxFilePathLength { get; }
 #endif
 
         /// <summary>
@@ -594,17 +594,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleVariant17 value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleMaxFilePathLength value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleVariant17?(RepositoryRule @this) => @this.MaxFilePathLength;
+        public static implicit operator global::GitHub.RepositoryRuleMaxFilePathLength?(RepositoryRule @this) => @this.MaxFilePathLength;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleVariant17? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleMaxFilePathLength? value)
         {
             MaxFilePathLength = value;
         }
@@ -613,9 +613,9 @@ namespace GitHub
         /// Prevent commits that include files with specified file extensions from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleVariant18? FileExtensionRestriction { get; init; }
+        public global::GitHub.RepositoryRuleFileExtensionRestriction? FileExtensionRestriction { get; init; }
 #else
-        public global::GitHub.RepositoryRuleVariant18? FileExtensionRestriction { get; }
+        public global::GitHub.RepositoryRuleFileExtensionRestriction? FileExtensionRestriction { get; }
 #endif
 
         /// <summary>
@@ -629,17 +629,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleVariant18 value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleFileExtensionRestriction value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleVariant18?(RepositoryRule @this) => @this.FileExtensionRestriction;
+        public static implicit operator global::GitHub.RepositoryRuleFileExtensionRestriction?(RepositoryRule @this) => @this.FileExtensionRestriction;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleVariant18? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleFileExtensionRestriction? value)
         {
             FileExtensionRestriction = value;
         }
@@ -648,9 +648,9 @@ namespace GitHub
         /// Prevent commits that exceed a specified file size limit from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::GitHub.RepositoryRuleVariant19? MaxFileSize { get; init; }
+        public global::GitHub.RepositoryRuleMaxFileSize? MaxFileSize { get; init; }
 #else
-        public global::GitHub.RepositoryRuleVariant19? MaxFileSize { get; }
+        public global::GitHub.RepositoryRuleMaxFileSize? MaxFileSize { get; }
 #endif
 
         /// <summary>
@@ -664,17 +664,17 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleVariant19 value) => new RepositoryRule(value);
+        public static implicit operator RepositoryRule(global::GitHub.RepositoryRuleMaxFileSize value) => new RepositoryRule(value);
 
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::GitHub.RepositoryRuleVariant19?(RepositoryRule @this) => @this.MaxFileSize;
+        public static implicit operator global::GitHub.RepositoryRuleMaxFileSize?(RepositoryRule @this) => @this.MaxFileSize;
 
         /// <summary>
         /// 
         /// </summary>
-        public RepositoryRule(global::GitHub.RepositoryRuleVariant19? value)
+        public RepositoryRule(global::GitHub.RepositoryRuleMaxFileSize? value)
         {
             MaxFileSize = value;
         }
@@ -769,10 +769,10 @@ namespace GitHub
             global::GitHub.RepositoryRuleCommitterEmailPattern? committerEmailPattern,
             global::GitHub.RepositoryRuleBranchNamePattern? branchNamePattern,
             global::GitHub.RepositoryRuleTagNamePattern? tagNamePattern,
-            global::GitHub.RepositoryRuleVariant16? filePathRestriction,
-            global::GitHub.RepositoryRuleVariant17? maxFilePathLength,
-            global::GitHub.RepositoryRuleVariant18? fileExtensionRestriction,
-            global::GitHub.RepositoryRuleVariant19? maxFileSize,
+            global::GitHub.RepositoryRuleFilePathRestriction? filePathRestriction,
+            global::GitHub.RepositoryRuleMaxFilePathLength? maxFilePathLength,
+            global::GitHub.RepositoryRuleFileExtensionRestriction? fileExtensionRestriction,
+            global::GitHub.RepositoryRuleMaxFileSize? maxFileSize,
             global::GitHub.RepositoryRuleWorkflows? workflows,
             global::GitHub.RepositoryRuleCodeScanning? codeScanning
             )
@@ -856,10 +856,10 @@ namespace GitHub
             global::System.Func<global::GitHub.RepositoryRuleCommitterEmailPattern?, TResult>? committerEmailPattern = null,
             global::System.Func<global::GitHub.RepositoryRuleBranchNamePattern?, TResult>? branchNamePattern = null,
             global::System.Func<global::GitHub.RepositoryRuleTagNamePattern?, TResult>? tagNamePattern = null,
-            global::System.Func<global::GitHub.RepositoryRuleVariant16?, TResult>? filePathRestriction = null,
-            global::System.Func<global::GitHub.RepositoryRuleVariant17?, TResult>? maxFilePathLength = null,
-            global::System.Func<global::GitHub.RepositoryRuleVariant18?, TResult>? fileExtensionRestriction = null,
-            global::System.Func<global::GitHub.RepositoryRuleVariant19?, TResult>? maxFileSize = null,
+            global::System.Func<global::GitHub.RepositoryRuleFilePathRestriction?, TResult>? filePathRestriction = null,
+            global::System.Func<global::GitHub.RepositoryRuleMaxFilePathLength?, TResult>? maxFilePathLength = null,
+            global::System.Func<global::GitHub.RepositoryRuleFileExtensionRestriction?, TResult>? fileExtensionRestriction = null,
+            global::System.Func<global::GitHub.RepositoryRuleMaxFileSize?, TResult>? maxFileSize = null,
             global::System.Func<global::GitHub.RepositoryRuleWorkflows?, TResult>? workflows = null,
             global::System.Func<global::GitHub.RepositoryRuleCodeScanning?, TResult>? codeScanning = null,
             bool validate = true)
@@ -976,10 +976,10 @@ namespace GitHub
             global::System.Action<global::GitHub.RepositoryRuleCommitterEmailPattern?>? committerEmailPattern = null,
             global::System.Action<global::GitHub.RepositoryRuleBranchNamePattern?>? branchNamePattern = null,
             global::System.Action<global::GitHub.RepositoryRuleTagNamePattern?>? tagNamePattern = null,
-            global::System.Action<global::GitHub.RepositoryRuleVariant16?>? filePathRestriction = null,
-            global::System.Action<global::GitHub.RepositoryRuleVariant17?>? maxFilePathLength = null,
-            global::System.Action<global::GitHub.RepositoryRuleVariant18?>? fileExtensionRestriction = null,
-            global::System.Action<global::GitHub.RepositoryRuleVariant19?>? maxFileSize = null,
+            global::System.Action<global::GitHub.RepositoryRuleFilePathRestriction?>? filePathRestriction = null,
+            global::System.Action<global::GitHub.RepositoryRuleMaxFilePathLength?>? maxFilePathLength = null,
+            global::System.Action<global::GitHub.RepositoryRuleFileExtensionRestriction?>? fileExtensionRestriction = null,
+            global::System.Action<global::GitHub.RepositoryRuleMaxFileSize?>? maxFileSize = null,
             global::System.Action<global::GitHub.RepositoryRuleWorkflows?>? workflows = null,
             global::System.Action<global::GitHub.RepositoryRuleCodeScanning?>? codeScanning = null,
             bool validate = true)
@@ -1113,13 +1113,13 @@ namespace GitHub
                 TagNamePattern,
                 typeof(global::GitHub.RepositoryRuleTagNamePattern),
                 FilePathRestriction,
-                typeof(global::GitHub.RepositoryRuleVariant16),
+                typeof(global::GitHub.RepositoryRuleFilePathRestriction),
                 MaxFilePathLength,
-                typeof(global::GitHub.RepositoryRuleVariant17),
+                typeof(global::GitHub.RepositoryRuleMaxFilePathLength),
                 FileExtensionRestriction,
-                typeof(global::GitHub.RepositoryRuleVariant18),
+                typeof(global::GitHub.RepositoryRuleFileExtensionRestriction),
                 MaxFileSize,
-                typeof(global::GitHub.RepositoryRuleVariant19),
+                typeof(global::GitHub.RepositoryRuleMaxFileSize),
                 Workflows,
                 typeof(global::GitHub.RepositoryRuleWorkflows),
                 CodeScanning,
@@ -1155,10 +1155,10 @@ namespace GitHub
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCommitterEmailPattern?>.Default.Equals(CommitterEmailPattern, other.CommitterEmailPattern) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleBranchNamePattern?>.Default.Equals(BranchNamePattern, other.BranchNamePattern) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleTagNamePattern?>.Default.Equals(TagNamePattern, other.TagNamePattern) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant16?>.Default.Equals(FilePathRestriction, other.FilePathRestriction) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant17?>.Default.Equals(MaxFilePathLength, other.MaxFilePathLength) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant18?>.Default.Equals(FileExtensionRestriction, other.FileExtensionRestriction) &&
-                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleVariant19?>.Default.Equals(MaxFileSize, other.MaxFileSize) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleFilePathRestriction?>.Default.Equals(FilePathRestriction, other.FilePathRestriction) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleMaxFilePathLength?>.Default.Equals(MaxFilePathLength, other.MaxFilePathLength) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleFileExtensionRestriction?>.Default.Equals(FileExtensionRestriction, other.FileExtensionRestriction) &&
+                global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleMaxFileSize?>.Default.Equals(MaxFileSize, other.MaxFileSize) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleWorkflows?>.Default.Equals(Workflows, other.Workflows) &&
                 global::System.Collections.Generic.EqualityComparer<global::GitHub.RepositoryRuleCodeScanning?>.Default.Equals(CodeScanning, other.CodeScanning) 
                 ;
