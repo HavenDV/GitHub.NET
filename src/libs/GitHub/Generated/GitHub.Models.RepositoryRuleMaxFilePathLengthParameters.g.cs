@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class RepositoryRuleMaxFilePathLengthParameters
     {
         /// <summary>
-        /// The maximum amount of characters allowed in file paths
+        /// The maximum amount of characters allowed in file paths.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("max_file_path_length")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -25,7 +25,7 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="RepositoryRuleMaxFilePathLengthParameters" /> class.
         /// </summary>
         /// <param name="maxFilePathLength">
-        /// The maximum amount of characters allowed in file paths
+        /// The maximum amount of characters allowed in file paths.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

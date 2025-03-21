@@ -6,7 +6,7 @@ namespace GitHub
     {
         /// <summary>
         /// List issue types for an organization<br/>
-        /// Lists all issue types for an organization.
+        /// Lists all issue types for an organization. OAuth app tokens and personal access tokens (classic) need the read:org scope to use this endpoint.
         /// </summary>
         /// <param name="org"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

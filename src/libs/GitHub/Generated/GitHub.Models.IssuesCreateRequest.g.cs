@@ -50,7 +50,7 @@ namespace GitHub
         public global::System.Collections.Generic.IList<string>? Assignees { get; set; }
 
         /// <summary>
-        /// The name of the issue type to associate with this issue.<br/>
+        /// The name of the issue type to associate with this issue. _NOTE: Only users with push access can set the type for new issues. The type is silently dropped otherwise._<br/>
         /// Example: Epic
         /// </summary>
         /// <example>Epic</example>
@@ -83,7 +83,7 @@ namespace GitHub
         /// Logins for Users to assign to this issue. _NOTE: Only users with push access can set assignees for new issues. Assignees are silently dropped otherwise._
         /// </param>
         /// <param name="type">
-        /// The name of the issue type to associate with this issue.<br/>
+        /// The name of the issue type to associate with this issue. _NOTE: Only users with push access can set the type for new issues. The type is silently dropped otherwise._<br/>
         /// Example: Epic
         /// </param>
 #if NET7_0_OR_GREATER
