@@ -419,8 +419,6 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.RepositoryRuleParamsCodeScanningToolSecurityAlertsThresholdNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.RepositoryRuleCodeScanningTypeJsonConverter),
             typeof(global::GitHub.JsonConverters.RepositoryRuleCodeScanningTypeNullableJsonConverter),
-            typeof(global::GitHub.JsonConverters.RepositoryRuleDiscriminatorTypeJsonConverter),
-            typeof(global::GitHub.JsonConverters.RepositoryRuleDiscriminatorTypeNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.RepositoryRulesetTargetJsonConverter),
             typeof(global::GitHub.JsonConverters.RepositoryRulesetTargetNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.RepositoryRulesetSourceTypeJsonConverter),

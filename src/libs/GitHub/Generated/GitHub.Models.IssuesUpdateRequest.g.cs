@@ -65,7 +65,7 @@ namespace GitHub
         public global::System.Collections.Generic.IList<string>? Assignees { get; set; }
 
         /// <summary>
-        /// The name of the issue type to associate with this issue or use `null` to remove the current issue type.<br/>
+        /// The name of the issue type to associate with this issue or use `null` to remove the current issue type. Only users with push access can set the type for issues. Without push access to the repository, type changes are silently dropped.<br/>
         /// Example: Epic
         /// </summary>
         /// <example>Epic</example>
@@ -105,7 +105,7 @@ namespace GitHub
         /// Usernames to assign to this issue. Pass one or more user logins to _replace_ the set of assignees on this issue. Send an empty array (`[]`) to clear all assignees from the issue. Only users with push access can set assignees for new issues. Without push access to the repository, assignee changes are silently dropped.
         /// </param>
         /// <param name="type">
-        /// The name of the issue type to associate with this issue or use `null` to remove the current issue type.<br/>
+        /// The name of the issue type to associate with this issue or use `null` to remove the current issue type. Only users with push access can set the type for issues. Without push access to the repository, type changes are silently dropped.<br/>
         /// Example: Epic
         /// </param>
 #if NET7_0_OR_GREATER

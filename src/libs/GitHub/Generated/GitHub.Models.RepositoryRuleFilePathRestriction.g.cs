@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
+    /// Prevent commits that include changes in specified file and folder paths from being pushed to the commit graph. This includes absolute paths that contain file names.
     /// </summary>
     public sealed partial class RepositoryRuleFilePathRestriction
     {

@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
+    /// Prevent commits that include file paths that exceed the specified character limit from being pushed to the commit graph.
     /// </summary>
     public sealed partial class RepositoryRuleMaxFilePathLength
     {

@@ -10,11 +10,6 @@ namespace GitHub
     public readonly partial struct RepositoryRule : global::System.IEquatable<RepositoryRule>
     {
         /// <summary>
-        /// 
-        /// </summary>
-        public global::GitHub.RepositoryRuleDiscriminatorType? Type { get; }
-
-        /// <summary>
         /// Only allow users with bypass permission to create matching refs.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -540,7 +535,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// Prevent commits that include changes in specified file paths from being pushed to the commit graph.
+        /// Prevent commits that include changes in specified file and folder paths from being pushed to the commit graph. This includes absolute paths that contain file names.
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.RepositoryRuleFilePathRestriction? FilePathRestriction { get; init; }
@@ -575,7 +570,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// Prevent commits that include file paths that exceed a specified character limit from being pushed to the commit graph.
+        /// Prevent commits that include file paths that exceed the specified character limit from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.RepositoryRuleMaxFilePathLength? MaxFilePathLength { get; init; }
@@ -645,7 +640,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// Prevent commits that exceed a specified file size limit from being pushed to the commit graph.
+        /// Prevent commits with individual files that exceed the specified limit from being pushed to the commit graph.
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::GitHub.RepositoryRuleMaxFileSize? MaxFileSize { get; init; }
@@ -753,7 +748,6 @@ namespace GitHub
         /// 
         /// </summary>
         public RepositoryRule(
-            global::GitHub.RepositoryRuleDiscriminatorType? type,
             global::GitHub.RepositoryRuleCreation? creation,
             global::GitHub.RepositoryRuleUpdate? update,
             global::GitHub.RepositoryRuleDeletion? deletion,
@@ -777,8 +771,6 @@ namespace GitHub
             global::GitHub.RepositoryRuleCodeScanning? codeScanning
             )
         {
-            Type = type;
-
             Creation = creation;
             Update = update;
             Deletion = deletion;
