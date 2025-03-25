@@ -1375,6 +1375,8 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.WebhookCustomPropertyCreatedActionNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookCustomPropertyDeletedActionJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookCustomPropertyDeletedActionNullableJsonConverter),
+            typeof(global::GitHub.JsonConverters.WebhookCustomPropertyPromotedToEnterpriseActionJsonConverter),
+            typeof(global::GitHub.JsonConverters.WebhookCustomPropertyPromotedToEnterpriseActionNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookCustomPropertyUpdatedActionJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookCustomPropertyUpdatedActionNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.WebhookCustomPropertyValuesUpdatedActionJsonConverter),
