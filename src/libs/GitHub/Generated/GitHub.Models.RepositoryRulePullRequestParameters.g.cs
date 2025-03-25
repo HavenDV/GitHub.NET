@@ -15,6 +15,14 @@ namespace GitHub
         public global::System.Collections.Generic.IList<global::GitHub.RepositoryRulePullRequestParametersAllowedMergeMethod>? AllowedMergeMethods { get; set; }
 
         /// <summary>
+        /// &gt; [!NOTE]<br/>
+        /// &gt; `automatic_copilot_code_review_enabled` is in beta and subject to change.<br/>
+        /// Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("automatic_copilot_code_review_enabled")]
+        public bool? AutomaticCopilotCodeReviewEnabled { get; set; }
+
+        /// <summary>
         /// New, reviewable commits pushed will dismiss previous pull request review approvals.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dismiss_stale_reviews_on_push")]
@@ -61,6 +69,11 @@ namespace GitHub
         /// <param name="allowedMergeMethods">
         /// Array of allowed merge methods. Allowed values include `merge`, `squash`, and `rebase`. At least one option must be enabled.
         /// </param>
+        /// <param name="automaticCopilotCodeReviewEnabled">
+        /// &gt; [!NOTE]<br/>
+        /// &gt; `automatic_copilot_code_review_enabled` is in beta and subject to change.<br/>
+        /// Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
+        /// </param>
         /// <param name="dismissStaleReviewsOnPush">
         /// New, reviewable commits pushed will dismiss previous pull request review approvals.
         /// </param>
@@ -85,7 +98,8 @@ namespace GitHub
             bool requireLastPushApproval,
             int requiredApprovingReviewCount,
             bool requiredReviewThreadResolution,
-            global::System.Collections.Generic.IList<global::GitHub.RepositoryRulePullRequestParametersAllowedMergeMethod>? allowedMergeMethods)
+            global::System.Collections.Generic.IList<global::GitHub.RepositoryRulePullRequestParametersAllowedMergeMethod>? allowedMergeMethods,
+            bool? automaticCopilotCodeReviewEnabled)
         {
             this.DismissStaleReviewsOnPush = dismissStaleReviewsOnPush;
             this.RequireCodeOwnerReview = requireCodeOwnerReview;
@@ -93,6 +107,7 @@ namespace GitHub
             this.RequiredApprovingReviewCount = requiredApprovingReviewCount;
             this.RequiredReviewThreadResolution = requiredReviewThreadResolution;
             this.AllowedMergeMethods = allowedMergeMethods;
+            this.AutomaticCopilotCodeReviewEnabled = automaticCopilotCodeReviewEnabled;
         }
 
         /// <summary>
