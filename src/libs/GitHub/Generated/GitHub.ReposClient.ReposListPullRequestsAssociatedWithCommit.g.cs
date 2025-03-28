@@ -31,7 +31,7 @@ namespace GitHub
 
         /// <summary>
         /// List pull requests associated with a commit<br/>
-        /// Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, will only return open pull requests associated with the commit.<br/>
+        /// Lists the merged pull request that introduced the commit to the repository. If the commit is not present in the default branch, it will return merged and open pull requests associated with the commit.<br/>
         /// To list the open or merged pull requests associated with a branch, you can set the `commit_sha` parameter to the branch name.
         /// </summary>
         /// <param name="owner"></param>
