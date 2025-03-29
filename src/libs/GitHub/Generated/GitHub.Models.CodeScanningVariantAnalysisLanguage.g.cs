@@ -39,6 +39,10 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        Rust,
+        /// <summary>
+        /// 
+        /// </summary>
         Swift,
     }
 
@@ -61,6 +65,7 @@ namespace GitHub
                 CodeScanningVariantAnalysisLanguage.Javascript => "javascript",
                 CodeScanningVariantAnalysisLanguage.Python => "python",
                 CodeScanningVariantAnalysisLanguage.Ruby => "ruby",
+                CodeScanningVariantAnalysisLanguage.Rust => "rust",
                 CodeScanningVariantAnalysisLanguage.Swift => "swift",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -79,6 +84,7 @@ namespace GitHub
                 "javascript" => CodeScanningVariantAnalysisLanguage.Javascript,
                 "python" => CodeScanningVariantAnalysisLanguage.Python,
                 "ruby" => CodeScanningVariantAnalysisLanguage.Ruby,
+                "rust" => CodeScanningVariantAnalysisLanguage.Rust,
                 "swift" => CodeScanningVariantAnalysisLanguage.Swift,
                 _ => null,
             };
