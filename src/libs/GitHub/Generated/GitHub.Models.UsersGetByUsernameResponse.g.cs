@@ -102,6 +102,14 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        public override string? ToString() =>
+            PrivateUser?.ToString() ??
+            PublicUser?.ToString() 
+            ;
+
+        /// <summary>
+        /// 
+        /// </summary>
         public bool Validate()
         {
             return IsPrivateUser && !IsPublicUser || !IsPrivateUser && IsPublicUser;
