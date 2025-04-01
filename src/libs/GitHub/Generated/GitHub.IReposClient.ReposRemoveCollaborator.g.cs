@@ -9,8 +9,8 @@ namespace GitHub
         /// Removes a collaborator from a repository.<br/>
         /// To use this endpoint, the authenticated user must either be an administrator of the repository or target themselves for removal.<br/>
         /// This endpoint also:<br/>
-        /// - Cancels any outstanding invitations<br/>
-        /// - Unasigns the user from any issues<br/>
+        /// - Cancels any outstanding invitations sent by the collaborator<br/>
+        /// - Unassigns the user from any issues<br/>
         /// - Removes access to organization projects if the user is not an organization member and is not a collaborator on any other organization repositories.<br/>
         /// - Unstars the repository<br/>
         /// - Updates access permissions to packages<br/>
