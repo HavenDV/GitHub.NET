@@ -19,6 +19,12 @@ namespace GitHub
         public global::GitHub.ReposUpdateRequestSecurityAndAnalysisAdvancedSecurity? AdvancedSecurity { get; set; }
 
         /// <summary>
+        /// Use the `status` property to enable or disable GitHub Code Security for this repository.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code_security")]
+        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisCodeSecurity? CodeSecurity { get; set; }
+
+        /// <summary>
         /// Use the `status` property to enable or disable secret scanning for this repository. For more information, see "[About secret scanning](/code-security/secret-security/about-secret-scanning)."
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("secret_scanning")]
@@ -54,6 +60,9 @@ namespace GitHub
         /// <param name="advancedSecurity">
         /// Use the `status` property to enable or disable GitHub Advanced Security for this repository. For more information, see "[About GitHub Advanced Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security)."
         /// </param>
+        /// <param name="codeSecurity">
+        /// Use the `status` property to enable or disable GitHub Code Security for this repository.
+        /// </param>
         /// <param name="secretScanning">
         /// Use the `status` property to enable or disable secret scanning for this repository. For more information, see "[About secret scanning](/code-security/secret-security/about-secret-scanning)."
         /// </param>
@@ -71,12 +80,14 @@ namespace GitHub
 #endif
         public ReposUpdateRequestSecurityAndAnalysis(
             global::GitHub.ReposUpdateRequestSecurityAndAnalysisAdvancedSecurity? advancedSecurity,
+            global::GitHub.ReposUpdateRequestSecurityAndAnalysisCodeSecurity? codeSecurity,
             global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanning? secretScanning,
             global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningPushProtection? secretScanningPushProtection,
             global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningAiDetection? secretScanningAiDetection,
             global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningNonProviderPatterns? secretScanningNonProviderPatterns)
         {
             this.AdvancedSecurity = advancedSecurity;
+            this.CodeSecurity = codeSecurity;
             this.SecretScanning = secretScanning;
             this.SecretScanningPushProtection = secretScanningPushProtection;
             this.SecretScanningAiDetection = secretScanningAiDetection;

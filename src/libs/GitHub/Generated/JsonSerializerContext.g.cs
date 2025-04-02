@@ -213,6 +213,8 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.MarketplaceListingPlanPriceModelNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.SecurityAndAnalysisAdvancedSecurityStatusJsonConverter),
             typeof(global::GitHub.JsonConverters.SecurityAndAnalysisAdvancedSecurityStatusNullableJsonConverter),
+            typeof(global::GitHub.JsonConverters.SecurityAndAnalysisCodeSecurityStatusJsonConverter),
+            typeof(global::GitHub.JsonConverters.SecurityAndAnalysisCodeSecurityStatusNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.SecurityAndAnalysisDependabotSecurityUpdatesStatusJsonConverter),
             typeof(global::GitHub.JsonConverters.SecurityAndAnalysisDependabotSecurityUpdatesStatusNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.SecurityAndAnalysisSecretScanningStatusJsonConverter),
