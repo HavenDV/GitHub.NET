@@ -26,7 +26,8 @@ namespace GitHub
         /// A required reviewing team
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reviewer")]
-        public global::GitHub.RepositoryRuleParamsReviewer? Reviewer { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::GitHub.RepositoryRuleParamsReviewer Reviewer { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -52,11 +53,11 @@ namespace GitHub
         public RepositoryRuleParamsRequiredReviewerConfiguration(
             global::System.Collections.Generic.IList<string> filePatterns,
             int minimumApprovals,
-            global::GitHub.RepositoryRuleParamsReviewer? reviewer)
+            global::GitHub.RepositoryRuleParamsReviewer reviewer)
         {
             this.FilePatterns = filePatterns ?? throw new global::System.ArgumentNullException(nameof(filePatterns));
             this.MinimumApprovals = minimumApprovals;
-            this.Reviewer = reviewer;
+            this.Reviewer = reviewer ?? throw new global::System.ArgumentNullException(nameof(reviewer));
         }
 
         /// <summary>

@@ -15,6 +15,12 @@ namespace GitHub
         public global::GitHub.SecurityAndAnalysisAdvancedSecurity? AdvancedSecurity { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code_security")]
+        public global::GitHub.SecurityAndAnalysisCodeSecurity? CodeSecurity { get; set; }
+
+        /// <summary>
         /// Enable or disable Dependabot security updates for the repository.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dependabot_security_updates")]
@@ -54,6 +60,7 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="SecurityAndAnalysis" /> class.
         /// </summary>
         /// <param name="advancedSecurity"></param>
+        /// <param name="codeSecurity"></param>
         /// <param name="dependabotSecurityUpdates">
         /// Enable or disable Dependabot security updates for the repository.
         /// </param>
@@ -66,6 +73,7 @@ namespace GitHub
 #endif
         public SecurityAndAnalysis(
             global::GitHub.SecurityAndAnalysisAdvancedSecurity? advancedSecurity,
+            global::GitHub.SecurityAndAnalysisCodeSecurity? codeSecurity,
             global::GitHub.SecurityAndAnalysisDependabotSecurityUpdates? dependabotSecurityUpdates,
             global::GitHub.SecurityAndAnalysisSecretScanning? secretScanning,
             global::GitHub.SecurityAndAnalysisSecretScanningPushProtection? secretScanningPushProtection,
@@ -73,6 +81,7 @@ namespace GitHub
             global::GitHub.SecurityAndAnalysisSecretScanningAiDetection? secretScanningAiDetection)
         {
             this.AdvancedSecurity = advancedSecurity;
+            this.CodeSecurity = codeSecurity;
             this.DependabotSecurityUpdates = dependabotSecurityUpdates;
             this.SecretScanning = secretScanning;
             this.SecretScanningPushProtection = secretScanningPushProtection;
