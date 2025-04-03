@@ -34,9 +34,6 @@ namespace GitHub
         /// <param name="isEnabled">
         /// Whether or not the issue type is enabled at the organization level.
         /// </param>
-        /// <param name="isPrivate">
-        /// Whether or not the issue type is restricted to issues in private repositories.
-        /// </param>
         /// <param name="description">
         /// Description of the issue type.
         /// </param>
@@ -49,7 +46,6 @@ namespace GitHub
             string org,
             string name,
             bool isEnabled,
-            bool? isPrivate = default,
             string? description = default,
             global::GitHub.OrganizationCreateIssueTypeColor? color = default,
             global::System.Threading.CancellationToken cancellationToken = default);

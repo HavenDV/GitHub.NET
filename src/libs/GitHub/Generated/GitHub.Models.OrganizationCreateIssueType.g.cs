@@ -23,12 +23,6 @@ namespace GitHub
         public required bool IsEnabled { get; set; }
 
         /// <summary>
-        /// Whether or not the issue type is restricted to issues in private repositories.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("is_private")]
-        public bool? IsPrivate { get; set; }
-
-        /// <summary>
         /// Description of the issue type.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
@@ -56,9 +50,6 @@ namespace GitHub
         /// <param name="isEnabled">
         /// Whether or not the issue type is enabled at the organization level.
         /// </param>
-        /// <param name="isPrivate">
-        /// Whether or not the issue type is restricted to issues in private repositories.
-        /// </param>
         /// <param name="description">
         /// Description of the issue type.
         /// </param>
@@ -71,13 +62,11 @@ namespace GitHub
         public OrganizationCreateIssueType(
             string name,
             bool isEnabled,
-            bool? isPrivate,
             string? description,
             global::GitHub.OrganizationCreateIssueTypeColor? color)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.IsEnabled = isEnabled;
-            this.IsPrivate = isPrivate;
             this.Description = description;
             this.Color = color;
         }
