@@ -86,6 +86,12 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("encoding")]
+        public string? Encoding { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("_links")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.ContentTreeLinks Links { get; set; }
@@ -110,6 +116,7 @@ namespace GitHub
         /// <param name="htmlUrl"></param>
         /// <param name="downloadUrl"></param>
         /// <param name="entries"></param>
+        /// <param name="encoding"></param>
         /// <param name="links"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -126,7 +133,8 @@ namespace GitHub
             string? downloadUrl,
             global::GitHub.ContentTreeLinks links,
             string? content,
-            global::System.Collections.Generic.IList<global::GitHub.ContentTreeEntrie>? entries)
+            global::System.Collections.Generic.IList<global::GitHub.ContentTreeEntrie>? entries,
+            string? encoding)
         {
             this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
             this.Size = size;
@@ -140,6 +148,7 @@ namespace GitHub
             this.Links = links ?? throw new global::System.ArgumentNullException(nameof(links));
             this.Content = content;
             this.Entries = entries;
+            this.Encoding = encoding;
         }
 
         /// <summary>
