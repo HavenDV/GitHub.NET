@@ -13,28 +13,32 @@ namespace GitHub
         /// </summary>
         /// <example>test/file.rb</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("path")]
-        public string? Path { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Path { get; set; }
 
         /// <summary>
         /// Example: 040000
         /// </summary>
         /// <example>040000</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
-        public string? Mode { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Mode { get; set; }
 
         /// <summary>
         /// Example: tree
         /// </summary>
         /// <example>tree</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        public string? Type { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Type { get; set; }
 
         /// <summary>
         /// Example: 23f6827669e43831def8a7ad935069c8bd418261
         /// </summary>
         /// <example>23f6827669e43831def8a7ad935069c8bd418261</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("sha")]
-        public string? Sha { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Sha { get; set; }
 
         /// <summary>
         /// Example: 12
@@ -81,17 +85,17 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GitTreeTreeItem(
-            string? path,
-            string? mode,
-            string? type,
-            string? sha,
+            string path,
+            string mode,
+            string type,
+            string sha,
             int? size,
             string? url)
         {
-            this.Path = path;
-            this.Mode = mode;
-            this.Type = type;
-            this.Sha = sha;
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
+            this.Mode = mode ?? throw new global::System.ArgumentNullException(nameof(mode));
+            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
+            this.Sha = sha ?? throw new global::System.ArgumentNullException(nameof(sha));
             this.Size = size;
             this.Url = url;
         }
