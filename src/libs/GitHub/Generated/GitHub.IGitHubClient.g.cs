@@ -242,5 +242,10 @@ namespace GitHub
         /// </summary>
         public HostedComputeClient HostedCompute { get; }
 
+        /// <summary>
+        /// Endpoints to manage campaigns via the REST API.
+        /// </summary>
+        public CampaignsClient Campaigns { get; }
+
     }
 }

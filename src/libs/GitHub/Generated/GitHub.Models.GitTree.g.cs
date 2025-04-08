@@ -19,8 +19,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Url { get; set; }
+        public string? Url { get; set; }
 
         /// <summary>
         /// 
@@ -59,14 +58,14 @@ namespace GitHub
 #endif
         public GitTree(
             string sha,
-            string url,
             bool truncated,
-            global::System.Collections.Generic.IList<global::GitHub.GitTreeTreeItem> tree)
+            global::System.Collections.Generic.IList<global::GitHub.GitTreeTreeItem> tree,
+            string? url)
         {
             this.Sha = sha ?? throw new global::System.ArgumentNullException(nameof(sha));
-            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Truncated = truncated;
             this.Tree = tree ?? throw new global::System.ArgumentNullException(nameof(tree));
+            this.Url = url;
         }
 
         /// <summary>
