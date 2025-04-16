@@ -179,7 +179,7 @@ namespace GitHub
         /// A description of the code security configuration
         /// </param>
         /// <param name="advancedSecurity">
-        /// The enablement status of GitHub Advanced Security
+        /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.
         /// </param>
         /// <param name="dependencyGraph">
         /// The enablement status of Dependency Graph

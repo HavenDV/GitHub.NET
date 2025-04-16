@@ -23,7 +23,7 @@ namespace GitHub
         public required string Description { get; set; }
 
         /// <summary>
-        /// The enablement status of GitHub Advanced Security<br/>
+        /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.<br/>
         /// Default Value: disabled
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("advanced_security")]
@@ -183,7 +183,7 @@ namespace GitHub
         /// A description of the code security configuration
         /// </param>
         /// <param name="advancedSecurity">
-        /// The enablement status of GitHub Advanced Security<br/>
+        /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.<br/>
         /// Default Value: disabled
         /// </param>
         /// <param name="dependencyGraph">

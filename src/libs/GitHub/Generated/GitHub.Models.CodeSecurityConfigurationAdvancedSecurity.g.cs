@@ -16,6 +16,14 @@ namespace GitHub
         /// 
         /// </summary>
         Disabled,
+        /// <summary>
+        /// 
+        /// </summary>
+        CodeSecurity,
+        /// <summary>
+        /// 
+        /// </summary>
+        SecretProtection,
     }
 
     /// <summary>
@@ -32,6 +40,8 @@ namespace GitHub
             {
                 CodeSecurityConfigurationAdvancedSecurity.Enabled => "enabled",
                 CodeSecurityConfigurationAdvancedSecurity.Disabled => "disabled",
+                CodeSecurityConfigurationAdvancedSecurity.CodeSecurity => "code_security",
+                CodeSecurityConfigurationAdvancedSecurity.SecretProtection => "secret_protection",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +54,8 @@ namespace GitHub
             {
                 "enabled" => CodeSecurityConfigurationAdvancedSecurity.Enabled,
                 "disabled" => CodeSecurityConfigurationAdvancedSecurity.Disabled,
+                "code_security" => CodeSecurityConfigurationAdvancedSecurity.CodeSecurity,
+                "secret_protection" => CodeSecurityConfigurationAdvancedSecurity.SecretProtection,
                 _ => null,
             };
         }

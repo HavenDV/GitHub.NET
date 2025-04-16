@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The enablement status of GitHub Advanced Security
+    /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.
     /// </summary>
     public enum CodeSecurityUpdateConfigurationRequestAdvancedSecurity
     {
@@ -16,6 +16,14 @@ namespace GitHub
         /// 
         /// </summary>
         Disabled,
+        /// <summary>
+        /// 
+        /// </summary>
+        CodeSecurity,
+        /// <summary>
+        /// 
+        /// </summary>
+        SecretProtection,
     }
 
     /// <summary>
@@ -32,6 +40,8 @@ namespace GitHub
             {
                 CodeSecurityUpdateConfigurationRequestAdvancedSecurity.Enabled => "enabled",
                 CodeSecurityUpdateConfigurationRequestAdvancedSecurity.Disabled => "disabled",
+                CodeSecurityUpdateConfigurationRequestAdvancedSecurity.CodeSecurity => "code_security",
+                CodeSecurityUpdateConfigurationRequestAdvancedSecurity.SecretProtection => "secret_protection",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +54,8 @@ namespace GitHub
             {
                 "enabled" => CodeSecurityUpdateConfigurationRequestAdvancedSecurity.Enabled,
                 "disabled" => CodeSecurityUpdateConfigurationRequestAdvancedSecurity.Disabled,
+                "code_security" => CodeSecurityUpdateConfigurationRequestAdvancedSecurity.CodeSecurity,
+                "secret_protection" => CodeSecurityUpdateConfigurationRequestAdvancedSecurity.SecretProtection,
                 _ => null,
             };
         }
