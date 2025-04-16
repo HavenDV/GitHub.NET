@@ -14,8 +14,7 @@ namespace GitHub
         /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignee")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.SimpleUser Assignee { get; set; }
+        public global::GitHub.NullableSimpleUser? Assignee { get; set; }
 
         /// <summary>
         /// A GitHub organization.
@@ -106,8 +105,8 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CopilotSeatDetails(
-            global::GitHub.SimpleUser assignee,
             global::System.DateTime createdAt,
+            global::GitHub.NullableSimpleUser? assignee,
             global::GitHub.NullableOrganizationSimple? organization,
             global::GitHub.OneOf<global::GitHub.Team, global::GitHub.EnterpriseTeam>? assigningTeam,
             global::System.DateTime? pendingCancellationDate,
@@ -115,8 +114,8 @@ namespace GitHub
             string? lastActivityEditor,
             global::GitHub.CopilotSeatDetailsPlanType? planType)
         {
-            this.Assignee = assignee ?? throw new global::System.ArgumentNullException(nameof(assignee));
             this.CreatedAt = createdAt;
+            this.Assignee = assignee;
             this.Organization = organization;
             this.AssigningTeam = assigningTeam;
             this.PendingCancellationDate = pendingCancellationDate;
