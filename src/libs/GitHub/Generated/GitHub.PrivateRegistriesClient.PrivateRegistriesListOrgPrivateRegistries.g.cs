@@ -27,8 +27,6 @@ namespace GitHub
 
         /// <summary>
         /// List private registries for an organization<br/>
-        /// &gt; [!NOTE]<br/>
-        /// &gt; This endpoint is in public preview and is subject to change.<br/>
         /// Lists all private registry configurations available at the organization-level without revealing their encrypted<br/>
         /// values.<br/>
         /// OAuth app tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
