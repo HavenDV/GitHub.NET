@@ -23,8 +23,6 @@ namespace GitHub
 
         /// <summary>
         /// Get private registries public key for an organization<br/>
-        /// &gt; [!NOTE]<br/>
-        /// &gt; This endpoint is in public preview and is subject to change.<br/>
         /// Gets the org public key, which is needed to encrypt private registry secrets. You need to encrypt a secret before you can create or update secrets.<br/>
         /// OAuth tokens and personal access tokens (classic) need the `admin:org` scope to use this endpoint.
         /// </summary>
