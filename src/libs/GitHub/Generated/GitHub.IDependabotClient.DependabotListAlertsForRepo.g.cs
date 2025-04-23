@@ -16,6 +16,7 @@ namespace GitHub
         /// <param name="package"></param>
         /// <param name="manifest"></param>
         /// <param name="epssPercentage"></param>
+        /// <param name="has"></param>
         /// <param name="scope"></param>
         /// <param name="sort">
         /// Default Value: created
@@ -46,6 +47,7 @@ namespace GitHub
             string? package = default,
             string? manifest = default,
             string? epssPercentage = default,
+            global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForRepoHasVariant2Item>>? has = default,
             global::GitHub.DependabotListAlertsForRepoScope? scope = default,
             global::GitHub.DependabotListAlertsForRepoSort? sort = default,
             global::GitHub.DependabotListAlertsForRepoDirection? direction = default,

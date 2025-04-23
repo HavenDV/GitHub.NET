@@ -17,6 +17,7 @@ namespace GitHub
         /// <param name="ecosystem"></param>
         /// <param name="package"></param>
         /// <param name="epssPercentage"></param>
+        /// <param name="has"></param>
         /// <param name="scope"></param>
         /// <param name="sort">
         /// Default Value: created
@@ -42,6 +43,7 @@ namespace GitHub
             string? ecosystem = default,
             string? package = default,
             string? epssPercentage = default,
+            global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForEnterpriseHasVariant2Item>>? has = default,
             global::GitHub.DependabotListAlertsForEnterpriseScope? scope = default,
             global::GitHub.DependabotListAlertsForEnterpriseSort? sort = default,
             global::GitHub.DependabotListAlertsForEnterpriseDirection? direction = default,

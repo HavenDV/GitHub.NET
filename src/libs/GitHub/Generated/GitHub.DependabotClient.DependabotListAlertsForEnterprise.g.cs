@@ -13,6 +13,7 @@ namespace GitHub
             ref string? ecosystem,
             ref string? package,
             ref string? epssPercentage,
+            ref global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForEnterpriseHasVariant2Item>>? has,
             ref global::GitHub.DependabotListAlertsForEnterpriseScope? scope,
             ref global::GitHub.DependabotListAlertsForEnterpriseSort? sort,
             ref global::GitHub.DependabotListAlertsForEnterpriseDirection? direction,
@@ -30,6 +31,7 @@ namespace GitHub
             string? ecosystem,
             string? package,
             string? epssPercentage,
+            global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForEnterpriseHasVariant2Item>>? has,
             global::GitHub.DependabotListAlertsForEnterpriseScope? scope,
             global::GitHub.DependabotListAlertsForEnterpriseSort? sort,
             global::GitHub.DependabotListAlertsForEnterpriseDirection? direction,
@@ -60,6 +62,7 @@ namespace GitHub
         /// <param name="ecosystem"></param>
         /// <param name="package"></param>
         /// <param name="epssPercentage"></param>
+        /// <param name="has"></param>
         /// <param name="scope"></param>
         /// <param name="sort">
         /// Default Value: created
@@ -85,6 +88,7 @@ namespace GitHub
             string? ecosystem = default,
             string? package = default,
             string? epssPercentage = default,
+            global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForEnterpriseHasVariant2Item>>? has = default,
             global::GitHub.DependabotListAlertsForEnterpriseScope? scope = default,
             global::GitHub.DependabotListAlertsForEnterpriseSort? sort = default,
             global::GitHub.DependabotListAlertsForEnterpriseDirection? direction = default,
@@ -105,6 +109,7 @@ namespace GitHub
                 ecosystem: ref ecosystem,
                 package: ref package,
                 epssPercentage: ref epssPercentage,
+                has: ref has,
                 scope: ref scope,
                 sort: ref sort,
                 direction: ref direction,
@@ -123,6 +128,7 @@ namespace GitHub
                 .AddOptionalParameter("ecosystem", ecosystem) 
                 .AddOptionalParameter("package", package) 
                 .AddOptionalParameter("epss_percentage", epssPercentage) 
+                .AddOptionalParameter("has", has?.ToString() ?? string.Empty) 
                 .AddOptionalParameter("scope", scope?.ToValueString()) 
                 .AddOptionalParameter("sort", sort?.ToValueString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 
@@ -153,6 +159,7 @@ namespace GitHub
                 ecosystem: ecosystem,
                 package: package,
                 epssPercentage: epssPercentage,
+                has: has,
                 scope: scope,
                 sort: sort,
                 direction: direction,
