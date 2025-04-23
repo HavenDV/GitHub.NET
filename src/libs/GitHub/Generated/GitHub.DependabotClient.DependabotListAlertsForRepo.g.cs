@@ -15,6 +15,7 @@ namespace GitHub
             ref string? package,
             ref string? manifest,
             ref string? epssPercentage,
+            ref global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForRepoHasVariant2Item>>? has,
             ref global::GitHub.DependabotListAlertsForRepoScope? scope,
             ref global::GitHub.DependabotListAlertsForRepoSort? sort,
             ref global::GitHub.DependabotListAlertsForRepoDirection? direction,
@@ -35,6 +36,7 @@ namespace GitHub
             string? package,
             string? manifest,
             string? epssPercentage,
+            global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForRepoHasVariant2Item>>? has,
             global::GitHub.DependabotListAlertsForRepoScope? scope,
             global::GitHub.DependabotListAlertsForRepoSort? sort,
             global::GitHub.DependabotListAlertsForRepoDirection? direction,
@@ -65,6 +67,7 @@ namespace GitHub
         /// <param name="package"></param>
         /// <param name="manifest"></param>
         /// <param name="epssPercentage"></param>
+        /// <param name="has"></param>
         /// <param name="scope"></param>
         /// <param name="sort">
         /// Default Value: created
@@ -95,6 +98,7 @@ namespace GitHub
             string? package = default,
             string? manifest = default,
             string? epssPercentage = default,
+            global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForRepoHasVariant2Item>>? has = default,
             global::GitHub.DependabotListAlertsForRepoScope? scope = default,
             global::GitHub.DependabotListAlertsForRepoSort? sort = default,
             global::GitHub.DependabotListAlertsForRepoDirection? direction = default,
@@ -118,6 +122,7 @@ namespace GitHub
                 package: ref package,
                 manifest: ref manifest,
                 epssPercentage: ref epssPercentage,
+                has: ref has,
                 scope: ref scope,
                 sort: ref sort,
                 direction: ref direction,
@@ -138,6 +143,7 @@ namespace GitHub
                 .AddOptionalParameter("package", package) 
                 .AddOptionalParameter("manifest", manifest) 
                 .AddOptionalParameter("epss_percentage", epssPercentage) 
+                .AddOptionalParameter("has", has?.ToString() ?? string.Empty) 
                 .AddOptionalParameter("scope", scope?.ToValueString()) 
                 .AddOptionalParameter("sort", sort?.ToValueString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 
@@ -171,6 +177,7 @@ namespace GitHub
                 package: package,
                 manifest: manifest,
                 epssPercentage: epssPercentage,
+                has: has,
                 scope: scope,
                 sort: sort,
                 direction: direction,
