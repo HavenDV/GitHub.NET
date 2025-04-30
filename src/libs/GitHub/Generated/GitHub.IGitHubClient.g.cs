@@ -243,6 +243,11 @@ namespace GitHub
         public HostedComputeClient HostedCompute { get; }
 
         /// <summary>
+        /// Revoke compromised or leaked GitHub credentials.
+        /// </summary>
+        public CredentialsClient Credentials { get; }
+
+        /// <summary>
         /// Endpoints to manage campaigns via the REST API.
         /// </summary>
         public CampaignsClient Campaigns { get; }

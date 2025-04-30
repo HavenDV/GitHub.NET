@@ -407,6 +407,15 @@ namespace GitHub
         };
 
         /// <summary>
+        /// Revoke compromised or leaked GitHub credentials.
+        /// </summary>
+        public CredentialsClient Credentials => new CredentialsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Endpoints to manage campaigns via the REST API.
         /// </summary>
         public CampaignsClient Campaigns => new CampaignsClient(HttpClient, authorizations: Authorizations)
