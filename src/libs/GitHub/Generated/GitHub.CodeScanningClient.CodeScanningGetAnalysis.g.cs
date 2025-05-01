@@ -148,6 +148,34 @@ namespace GitHub
                         h => h.Value),
                 };
             }
+            // Response if analysis could not be processed
+            if ((int)__response.StatusCode == 422)
+            {
+                string? __content_422 = null;
+                global::GitHub.BasicError? __value_422 = null;
+                if (ReadResponseAsString)
+                {
+                    __content_422 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                    __value_422 = global::GitHub.BasicError.FromJson(__content_422, JsonSerializerContext);
+                }
+                else
+                {
+                    var __contentStream_422 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                    __value_422 = await global::GitHub.BasicError.FromJsonStreamAsync(__contentStream_422, JsonSerializerContext).ConfigureAwait(false);
+                }
+
+                throw new global::GitHub.ApiException<global::GitHub.BasicError>(
+                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_422,
+                    ResponseObject = __value_422,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
             // Service unavailable
             if ((int)__response.StatusCode == 503)
             {
