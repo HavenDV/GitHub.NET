@@ -24,7 +24,7 @@ namespace GitHub
         public global::GitHub.SecretScanningAlertResolution? Resolution { get; set; }
 
         /// <summary>
-        /// An optional comment when closing an alert. Cannot be updated or deleted. Must be `null` when changing `state` to `open`.
+        /// An optional comment when closing or reopening an alert. Cannot be updated or deleted.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("resolution_comment")]
         public string? ResolutionComment { get; set; }
@@ -45,7 +45,7 @@ namespace GitHub
         /// **Required when the `state` is `resolved`.** The reason for resolving the alert.
         /// </param>
         /// <param name="resolutionComment">
-        /// An optional comment when closing an alert. Cannot be updated or deleted. Must be `null` when changing `state` to `open`.
+        /// An optional comment when closing or reopening an alert. Cannot be updated or deleted.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

@@ -292,7 +292,7 @@ namespace GitHub
         /// **Required when the `state` is `resolved`.** The reason for resolving the alert.
         /// </param>
         /// <param name="resolutionComment">
-        /// An optional comment when closing an alert. Cannot be updated or deleted. Must be `null` when changing `state` to `open`.
+        /// An optional comment when closing or reopening an alert. Cannot be updated or deleted.
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
