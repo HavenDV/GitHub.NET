@@ -138,6 +138,12 @@ namespace GitHub
         public string? Url { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("user_view_type")]
+        public string? UserViewType { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -167,6 +173,7 @@ namespace GitHub
         /// <param name="subscriptionsUrl"></param>
         /// <param name="type"></param>
         /// <param name="url"></param>
+        /// <param name="userViewType"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -191,7 +198,8 @@ namespace GitHub
             string? starredUrl,
             string? subscriptionsUrl,
             global::GitHub.WebhookIssuesDeletedIssueAssigneeType2? type,
-            string? url)
+            string? url,
+            string? userViewType)
         {
             this.Id = id;
             this.Login = login ?? throw new global::System.ArgumentNullException(nameof(login));
@@ -214,6 +222,7 @@ namespace GitHub
             this.SubscriptionsUrl = subscriptionsUrl;
             this.Type = type;
             this.Url = url;
+            this.UserViewType = userViewType;
         }
 
         /// <summary>
