@@ -13,8 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("active_lock_reason")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhookIssuesOpenedChangesOldIssueActiveLockReasonJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookIssuesOpenedChangesOldIssueActiveLockReason? ActiveLockReason { get; set; }
+        public global::GitHub.WebhookIssuesOpenedChangesOldIssueActiveLockReason? ActiveLockReason { get; set; }
 
         /// <summary>
         /// 
@@ -26,51 +25,44 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("assignees")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesOpenedChangesOldIssueAssignee2> Assignees { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesOpenedChangesOldIssueAssignee2>? Assignees { get; set; }
 
         /// <summary>
         /// How the author is associated with the repository.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author_association")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhookIssuesOpenedChangesOldIssueAuthorAssociationJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookIssuesOpenedChangesOldIssueAuthorAssociation AuthorAssociation { get; set; }
+        public global::GitHub.WebhookIssuesOpenedChangesOldIssueAuthorAssociation? AuthorAssociation { get; set; }
 
         /// <summary>
         /// Contents of the issue
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("body")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string? Body { get; set; }
+        public string? Body { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("closed_at")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime? ClosedAt { get; set; }
+        public global::System.DateTime? ClosedAt { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("comments")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required int Comments { get; set; }
+        public int? Comments { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("comments_url")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string CommentsUrl { get; set; }
+        public string? CommentsUrl { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime CreatedAt { get; set; }
+        public global::System.DateTime? CreatedAt { get; set; }
 
         /// <summary>
         /// 
@@ -82,15 +74,13 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("events_url")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string EventsUrl { get; set; }
+        public string? EventsUrl { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("html_url")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string HtmlUrl { get; set; }
+        public string? HtmlUrl { get; set; }
 
         /// <summary>
         /// 
@@ -109,8 +99,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("labels_url")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string LabelsUrl { get; set; }
+        public string? LabelsUrl { get; set; }
 
         /// <summary>
         /// 
@@ -122,15 +111,13 @@ namespace GitHub
         /// A collection of related issues and pull requests.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("milestone")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookIssuesOpenedChangesOldIssueMilestone? Milestone { get; set; }
+        public global::GitHub.WebhookIssuesOpenedChangesOldIssueMilestone? Milestone { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_id")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string NodeId { get; set; }
+        public string? NodeId { get; set; }
 
         /// <summary>
         /// 
@@ -155,15 +142,13 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reactions")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookIssuesOpenedChangesOldIssueReactions Reactions { get; set; }
+        public global::GitHub.WebhookIssuesOpenedChangesOldIssueReactions? Reactions { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository_url")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string RepositoryUrl { get; set; }
+        public string? RepositoryUrl { get; set; }
 
         /// <summary>
         /// 
@@ -194,29 +179,31 @@ namespace GitHub
         /// Title of the issue
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("title")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Title { get; set; }
+        public string? Title { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTime UpdatedAt { get; set; }
+        public global::System.DateTime? UpdatedAt { get; set; }
 
         /// <summary>
         /// URL for the issue
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Url { get; set; }
+        public string? Url { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.WebhookIssuesOpenedChangesOldIssueUser? User { get; set; }
+        public global::GitHub.WebhookIssuesOpenedChangesOldIssueUser? User { get; set; }
+
+        /// <summary>
+        /// The type of issue.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        public global::GitHub.IssueType? Type { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -272,73 +259,78 @@ namespace GitHub
         /// URL for the issue
         /// </param>
         /// <param name="user"></param>
+        /// <param name="type">
+        /// The type of issue.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public WebhookIssuesOpenedChangesOldIssue(
+            long id,
+            int number,
             global::GitHub.WebhookIssuesOpenedChangesOldIssueActiveLockReason? activeLockReason,
-            global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesOpenedChangesOldIssueAssignee2> assignees,
-            global::GitHub.WebhookIssuesOpenedChangesOldIssueAuthorAssociation authorAssociation,
+            global::GitHub.WebhookIssuesOpenedChangesOldIssueAssignee? assignee,
+            global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesOpenedChangesOldIssueAssignee2>? assignees,
+            global::GitHub.WebhookIssuesOpenedChangesOldIssueAuthorAssociation? authorAssociation,
             string? body,
             global::System.DateTime? closedAt,
-            int comments,
-            string commentsUrl,
-            global::System.DateTime createdAt,
-            string eventsUrl,
-            string htmlUrl,
-            long id,
-            string labelsUrl,
-            global::GitHub.WebhookIssuesOpenedChangesOldIssueMilestone? milestone,
-            string nodeId,
-            int number,
-            global::GitHub.WebhookIssuesOpenedChangesOldIssueReactions reactions,
-            string repositoryUrl,
-            string title,
-            global::System.DateTime updatedAt,
-            string url,
-            global::GitHub.WebhookIssuesOpenedChangesOldIssueUser? user,
-            global::GitHub.WebhookIssuesOpenedChangesOldIssueAssignee? assignee,
+            int? comments,
+            string? commentsUrl,
+            global::System.DateTime? createdAt,
             bool? draft,
+            string? eventsUrl,
+            string? htmlUrl,
             global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesOpenedChangesOldIssueLabel>? labels,
+            string? labelsUrl,
             bool? locked,
+            global::GitHub.WebhookIssuesOpenedChangesOldIssueMilestone? milestone,
+            string? nodeId,
             global::GitHub.WebhookIssuesOpenedChangesOldIssuePerformedViaGithubApp? performedViaGithubApp,
             global::GitHub.WebhookIssuesOpenedChangesOldIssuePullRequest? pullRequest,
+            global::GitHub.WebhookIssuesOpenedChangesOldIssueReactions? reactions,
+            string? repositoryUrl,
             global::GitHub.WebhookIssuesOpenedChangesOldIssueSubIssuesSummary? subIssuesSummary,
             global::GitHub.WebhookIssuesOpenedChangesOldIssueState? state,
             string? stateReason,
-            string? timelineUrl)
+            string? timelineUrl,
+            string? title,
+            global::System.DateTime? updatedAt,
+            string? url,
+            global::GitHub.WebhookIssuesOpenedChangesOldIssueUser? user,
+            global::GitHub.IssueType? type)
         {
+            this.Id = id;
+            this.Number = number;
             this.ActiveLockReason = activeLockReason;
-            this.Assignees = assignees ?? throw new global::System.ArgumentNullException(nameof(assignees));
+            this.Assignee = assignee;
+            this.Assignees = assignees;
             this.AuthorAssociation = authorAssociation;
-            this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
+            this.Body = body;
             this.ClosedAt = closedAt;
             this.Comments = comments;
-            this.CommentsUrl = commentsUrl ?? throw new global::System.ArgumentNullException(nameof(commentsUrl));
+            this.CommentsUrl = commentsUrl;
             this.CreatedAt = createdAt;
-            this.EventsUrl = eventsUrl ?? throw new global::System.ArgumentNullException(nameof(eventsUrl));
-            this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
-            this.Id = id;
-            this.LabelsUrl = labelsUrl ?? throw new global::System.ArgumentNullException(nameof(labelsUrl));
-            this.Milestone = milestone ?? throw new global::System.ArgumentNullException(nameof(milestone));
-            this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
-            this.Number = number;
-            this.Reactions = reactions ?? throw new global::System.ArgumentNullException(nameof(reactions));
-            this.RepositoryUrl = repositoryUrl ?? throw new global::System.ArgumentNullException(nameof(repositoryUrl));
-            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
-            this.UpdatedAt = updatedAt;
-            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
-            this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
-            this.Assignee = assignee;
             this.Draft = draft;
+            this.EventsUrl = eventsUrl;
+            this.HtmlUrl = htmlUrl;
             this.Labels = labels;
+            this.LabelsUrl = labelsUrl;
             this.Locked = locked;
+            this.Milestone = milestone;
+            this.NodeId = nodeId;
             this.PerformedViaGithubApp = performedViaGithubApp;
             this.PullRequest = pullRequest;
+            this.Reactions = reactions;
+            this.RepositoryUrl = repositoryUrl;
             this.SubIssuesSummary = subIssuesSummary;
             this.State = state;
             this.StateReason = stateReason;
             this.TimelineUrl = timelineUrl;
+            this.Title = title;
+            this.UpdatedAt = updatedAt;
+            this.Url = url;
+            this.User = user;
+            this.Type = type;
         }
 
         /// <summary>
