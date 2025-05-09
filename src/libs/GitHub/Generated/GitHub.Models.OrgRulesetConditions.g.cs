@@ -32,7 +32,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator OrgRulesetConditions(global::GitHub.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget> value) => new OrgRulesetConditions(value);
+        public static implicit operator OrgRulesetConditions(global::GitHub.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget> value) => new OrgRulesetConditions((global::GitHub.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryNameTarget>?)value);
 
         /// <summary>
         /// 
@@ -67,7 +67,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator OrgRulesetConditions(global::GitHub.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget> value) => new OrgRulesetConditions(value);
+        public static implicit operator OrgRulesetConditions(global::GitHub.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget> value) => new OrgRulesetConditions((global::GitHub.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryIdTarget>?)value);
 
         /// <summary>
         /// 
@@ -102,7 +102,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator OrgRulesetConditions(global::GitHub.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget> value) => new OrgRulesetConditions(value);
+        public static implicit operator OrgRulesetConditions(global::GitHub.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget> value) => new OrgRulesetConditions((global::GitHub.AllOf<global::GitHub.RepositoryRulesetConditions, global::GitHub.RepositoryRulesetConditionsRepositoryPropertyTarget>?)value);
 
         /// <summary>
         /// 

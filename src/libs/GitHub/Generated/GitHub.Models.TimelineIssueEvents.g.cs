@@ -29,7 +29,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.LabeledIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.LabeledIssueEvent value) => new TimelineIssueEvents((global::GitHub.LabeledIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -64,7 +64,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.UnlabeledIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.UnlabeledIssueEvent value) => new TimelineIssueEvents((global::GitHub.UnlabeledIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -99,7 +99,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.MilestonedIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.MilestonedIssueEvent value) => new TimelineIssueEvents((global::GitHub.MilestonedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -134,7 +134,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.DemilestonedIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.DemilestonedIssueEvent value) => new TimelineIssueEvents((global::GitHub.DemilestonedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -169,7 +169,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.RenamedIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.RenamedIssueEvent value) => new TimelineIssueEvents((global::GitHub.RenamedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -204,7 +204,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.ReviewRequestedIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.ReviewRequestedIssueEvent value) => new TimelineIssueEvents((global::GitHub.ReviewRequestedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -239,7 +239,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.ReviewRequestRemovedIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.ReviewRequestRemovedIssueEvent value) => new TimelineIssueEvents((global::GitHub.ReviewRequestRemovedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -274,7 +274,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.ReviewDismissedIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.ReviewDismissedIssueEvent value) => new TimelineIssueEvents((global::GitHub.ReviewDismissedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -309,7 +309,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.LockedIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.LockedIssueEvent value) => new TimelineIssueEvents((global::GitHub.LockedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -344,7 +344,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.AddedToProjectIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.AddedToProjectIssueEvent value) => new TimelineIssueEvents((global::GitHub.AddedToProjectIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -379,7 +379,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.MovedColumnInProjectIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.MovedColumnInProjectIssueEvent value) => new TimelineIssueEvents((global::GitHub.MovedColumnInProjectIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -414,7 +414,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.RemovedFromProjectIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.RemovedFromProjectIssueEvent value) => new TimelineIssueEvents((global::GitHub.RemovedFromProjectIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -449,7 +449,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.ConvertedNoteToIssueIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.ConvertedNoteToIssueIssueEvent value) => new TimelineIssueEvents((global::GitHub.ConvertedNoteToIssueIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -484,7 +484,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineCommentEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineCommentEvent value) => new TimelineIssueEvents((global::GitHub.TimelineCommentEvent?)value);
 
         /// <summary>
         /// 
@@ -519,7 +519,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineCrossReferencedEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineCrossReferencedEvent value) => new TimelineIssueEvents((global::GitHub.TimelineCrossReferencedEvent?)value);
 
         /// <summary>
         /// 
@@ -554,7 +554,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineCommittedEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineCommittedEvent value) => new TimelineIssueEvents((global::GitHub.TimelineCommittedEvent?)value);
 
         /// <summary>
         /// 
@@ -589,7 +589,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineReviewedEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineReviewedEvent value) => new TimelineIssueEvents((global::GitHub.TimelineReviewedEvent?)value);
 
         /// <summary>
         /// 
@@ -624,7 +624,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineLineCommentedEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineLineCommentedEvent value) => new TimelineIssueEvents((global::GitHub.TimelineLineCommentedEvent?)value);
 
         /// <summary>
         /// 
@@ -659,7 +659,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineCommitCommentedEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineCommitCommentedEvent value) => new TimelineIssueEvents((global::GitHub.TimelineCommitCommentedEvent?)value);
 
         /// <summary>
         /// 
@@ -694,7 +694,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineAssignedIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineAssignedIssueEvent value) => new TimelineIssueEvents((global::GitHub.TimelineAssignedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -729,7 +729,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineUnassignedIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.TimelineUnassignedIssueEvent value) => new TimelineIssueEvents((global::GitHub.TimelineUnassignedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -764,7 +764,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator TimelineIssueEvents(global::GitHub.StateChangeIssueEvent value) => new TimelineIssueEvents(value);
+        public static implicit operator TimelineIssueEvents(global::GitHub.StateChangeIssueEvent value) => new TimelineIssueEvents((global::GitHub.StateChangeIssueEvent?)value);
 
         /// <summary>
         /// 

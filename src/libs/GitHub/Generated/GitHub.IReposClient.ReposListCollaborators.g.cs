@@ -7,9 +7,10 @@ namespace GitHub
         /// <summary>
         /// List repository collaborators<br/>
         /// For organization-owned repositories, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners.<br/>
-        /// Organization members with write, maintain, or admin privileges on the organization-owned repository can use this endpoint.<br/>
+        /// The `permissions` hash returned in the response contains the base role permissions of the collaborator. The `role_name` is the highest role assigned to the collaborator after considering all sources of grants, including: repo, teams, organization, and enterprise.<br/>
+        /// There is presently not a way to differentiate between an organization level grant and a repository level grant from this endpoint response.<br/>
         /// Team members will include the members of child teams.<br/>
-        /// The authenticated user must have push access to the repository to use this endpoint.<br/>
+        /// The authenticated user must have write, maintain, or admin privileges on the repository to use this endpoint. For organization-owned repositories, the authenticated user needs to be a member of the organization.<br/>
         /// OAuth app tokens and personal access tokens (classic) need the `read:org` and `repo` scopes to use this endpoint.
         /// </summary>
         /// <param name="owner"></param>

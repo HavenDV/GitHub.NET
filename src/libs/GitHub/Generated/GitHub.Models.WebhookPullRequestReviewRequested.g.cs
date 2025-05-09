@@ -29,7 +29,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator WebhookPullRequestReviewRequested(global::GitHub.WebhookPullRequestReviewRequestedVariant1 value) => new WebhookPullRequestReviewRequested(value);
+        public static implicit operator WebhookPullRequestReviewRequested(global::GitHub.WebhookPullRequestReviewRequestedVariant1 value) => new WebhookPullRequestReviewRequested((global::GitHub.WebhookPullRequestReviewRequestedVariant1?)value);
 
         /// <summary>
         /// 
@@ -64,7 +64,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator WebhookPullRequestReviewRequested(global::GitHub.WebhookPullRequestReviewRequestedVariant2 value) => new WebhookPullRequestReviewRequested(value);
+        public static implicit operator WebhookPullRequestReviewRequested(global::GitHub.WebhookPullRequestReviewRequestedVariant2 value) => new WebhookPullRequestReviewRequested((global::GitHub.WebhookPullRequestReviewRequestedVariant2?)value);
 
         /// <summary>
         /// 

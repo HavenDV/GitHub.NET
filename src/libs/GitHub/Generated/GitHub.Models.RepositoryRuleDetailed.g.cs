@@ -29,7 +29,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleCreation, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -64,7 +64,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleUpdate, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -99,7 +99,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleDeletion, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -134,7 +134,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredLinearHistory, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -169,7 +169,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleMergeQueue, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -204,7 +204,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredDeployments, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -239,7 +239,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredSignatures, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -274,7 +274,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRulePullRequest, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -309,7 +309,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleRequiredStatusChecks, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -344,7 +344,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleNonFastForward, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -379,7 +379,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleCommitMessagePattern, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -414,7 +414,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleCommitAuthorEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -449,7 +449,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleCommitterEmailPattern, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -484,7 +484,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleBranchNamePattern, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -519,7 +519,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleTagNamePattern, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -554,7 +554,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleFilePathRestriction, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleFilePathRestriction, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleFilePathRestriction, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -589,7 +589,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleMaxFilePathLength, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleMaxFilePathLength, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleMaxFilePathLength, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -624,7 +624,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleFileExtensionRestriction, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleFileExtensionRestriction, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleFileExtensionRestriction, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -659,7 +659,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleMaxFileSize, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleMaxFileSize, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleMaxFileSize, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -694,7 +694,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleWorkflows, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 
@@ -729,7 +729,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed(value);
+        public static implicit operator RepositoryRuleDetailed(global::GitHub.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo> value) => new RepositoryRuleDetailed((global::GitHub.AllOf<global::GitHub.RepositoryRuleCodeScanning, global::GitHub.RepositoryRuleRulesetInfo>?)value);
 
         /// <summary>
         /// 

@@ -29,7 +29,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RulesetVersionWithState(global::GitHub.RulesetVersion value) => new RulesetVersionWithState(value);
+        public static implicit operator RulesetVersionWithState(global::GitHub.RulesetVersion value) => new RulesetVersionWithState((global::GitHub.RulesetVersion?)value);
 
         /// <summary>
         /// 
@@ -64,7 +64,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator RulesetVersionWithState(global::GitHub.RulesetVersionWithStateVariant2 value) => new RulesetVersionWithState(value);
+        public static implicit operator RulesetVersionWithState(global::GitHub.RulesetVersionWithStateVariant2 value) => new RulesetVersionWithState((global::GitHub.RulesetVersionWithStateVariant2?)value);
 
         /// <summary>
         /// 
