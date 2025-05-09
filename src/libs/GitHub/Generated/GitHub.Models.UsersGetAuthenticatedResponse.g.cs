@@ -29,7 +29,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator UsersGetAuthenticatedResponse(global::GitHub.PrivateUser value) => new UsersGetAuthenticatedResponse(value);
+        public static implicit operator UsersGetAuthenticatedResponse(global::GitHub.PrivateUser value) => new UsersGetAuthenticatedResponse((global::GitHub.PrivateUser?)value);
 
         /// <summary>
         /// 
@@ -64,7 +64,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator UsersGetAuthenticatedResponse(global::GitHub.PublicUser value) => new UsersGetAuthenticatedResponse(value);
+        public static implicit operator UsersGetAuthenticatedResponse(global::GitHub.PublicUser value) => new UsersGetAuthenticatedResponse((global::GitHub.PublicUser?)value);
 
         /// <summary>
         /// 

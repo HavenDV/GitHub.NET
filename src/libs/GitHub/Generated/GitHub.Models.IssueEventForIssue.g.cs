@@ -29,7 +29,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.LabeledIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.LabeledIssueEvent value) => new IssueEventForIssue((global::GitHub.LabeledIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -64,7 +64,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.UnlabeledIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.UnlabeledIssueEvent value) => new IssueEventForIssue((global::GitHub.UnlabeledIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -99,7 +99,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.AssignedIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.AssignedIssueEvent value) => new IssueEventForIssue((global::GitHub.AssignedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -134,7 +134,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.UnassignedIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.UnassignedIssueEvent value) => new IssueEventForIssue((global::GitHub.UnassignedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -169,7 +169,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.MilestonedIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.MilestonedIssueEvent value) => new IssueEventForIssue((global::GitHub.MilestonedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -204,7 +204,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.DemilestonedIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.DemilestonedIssueEvent value) => new IssueEventForIssue((global::GitHub.DemilestonedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -239,7 +239,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.RenamedIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.RenamedIssueEvent value) => new IssueEventForIssue((global::GitHub.RenamedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -274,7 +274,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.ReviewRequestedIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.ReviewRequestedIssueEvent value) => new IssueEventForIssue((global::GitHub.ReviewRequestedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -309,7 +309,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.ReviewRequestRemovedIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.ReviewRequestRemovedIssueEvent value) => new IssueEventForIssue((global::GitHub.ReviewRequestRemovedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -344,7 +344,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.ReviewDismissedIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.ReviewDismissedIssueEvent value) => new IssueEventForIssue((global::GitHub.ReviewDismissedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -379,7 +379,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.LockedIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.LockedIssueEvent value) => new IssueEventForIssue((global::GitHub.LockedIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -414,7 +414,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.AddedToProjectIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.AddedToProjectIssueEvent value) => new IssueEventForIssue((global::GitHub.AddedToProjectIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -449,7 +449,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.MovedColumnInProjectIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.MovedColumnInProjectIssueEvent value) => new IssueEventForIssue((global::GitHub.MovedColumnInProjectIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -484,7 +484,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.RemovedFromProjectIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.RemovedFromProjectIssueEvent value) => new IssueEventForIssue((global::GitHub.RemovedFromProjectIssueEvent?)value);
 
         /// <summary>
         /// 
@@ -519,7 +519,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator IssueEventForIssue(global::GitHub.ConvertedNoteToIssueIssueEvent value) => new IssueEventForIssue(value);
+        public static implicit operator IssueEventForIssue(global::GitHub.ConvertedNoteToIssueIssueEvent value) => new IssueEventForIssue((global::GitHub.ConvertedNoteToIssueIssueEvent?)value);
 
         /// <summary>
         /// 

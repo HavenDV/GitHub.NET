@@ -54,7 +54,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator ReposGetContentResponse(global::GitHub.ContentFile value) => new ReposGetContentResponse(value);
+        public static implicit operator ReposGetContentResponse(global::GitHub.ContentFile value) => new ReposGetContentResponse((global::GitHub.ContentFile?)value);
 
         /// <summary>
         /// 
@@ -89,7 +89,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator ReposGetContentResponse(global::GitHub.ContentSymlink value) => new ReposGetContentResponse(value);
+        public static implicit operator ReposGetContentResponse(global::GitHub.ContentSymlink value) => new ReposGetContentResponse((global::GitHub.ContentSymlink?)value);
 
         /// <summary>
         /// 
@@ -124,7 +124,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator ReposGetContentResponse(global::GitHub.ContentSubmodule value) => new ReposGetContentResponse(value);
+        public static implicit operator ReposGetContentResponse(global::GitHub.ContentSubmodule value) => new ReposGetContentResponse((global::GitHub.ContentSubmodule?)value);
 
         /// <summary>
         /// 
