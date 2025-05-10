@@ -22,7 +22,7 @@ namespace GitHub
         public string? Description { get; set; }
 
         /// <summary>
-        /// List GitHub IDs for organization members who will become team maintainers.
+        /// List GitHub usernames for organization members who will become team maintainers.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maintainers")]
         public global::System.Collections.Generic.IList<string>? Maintainers { get; set; }
@@ -87,7 +87,7 @@ namespace GitHub
         /// The description of the team.
         /// </param>
         /// <param name="maintainers">
-        /// List GitHub IDs for organization members who will become team maintainers.
+        /// List GitHub usernames for organization members who will become team maintainers.
         /// </param>
         /// <param name="repoNames">
         /// The full name (e.g., "organization-name/repository-name") of repositories to add the team to.
