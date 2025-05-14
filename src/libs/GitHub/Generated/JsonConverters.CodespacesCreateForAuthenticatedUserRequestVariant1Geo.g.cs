@@ -28,6 +28,10 @@ namespace GitHub.JsonConverters
                     var numValue = reader.GetInt32();
                     return (global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1Geo)numValue;
                 }
+                case global::System.Text.Json.JsonTokenType.Null:
+                {
+                    return default(global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1Geo);
+                }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
             }

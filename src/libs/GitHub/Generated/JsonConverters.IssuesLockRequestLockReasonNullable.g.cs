@@ -28,6 +28,10 @@ namespace GitHub.JsonConverters
                     var numValue = reader.GetInt32();
                     return (global::GitHub.IssuesLockRequestLockReason)numValue;
                 }
+                case global::System.Text.Json.JsonTokenType.Null:
+                {
+                    return default(global::GitHub.IssuesLockRequestLockReason?);
+                }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
             }

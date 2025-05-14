@@ -28,6 +28,10 @@ namespace GitHub.JsonConverters
                     var numValue = reader.GetInt32();
                     return (global::GitHub.WebhookIssueCommentCreatedIssueVariant1PerformedViaGithubAppPermissionsOrganizationAdministration)numValue;
                 }
+                case global::System.Text.Json.JsonTokenType.Null:
+                {
+                    return default(global::GitHub.WebhookIssueCommentCreatedIssueVariant1PerformedViaGithubAppPermissionsOrganizationAdministration?);
+                }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
             }
