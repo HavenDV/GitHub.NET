@@ -157,6 +157,34 @@ namespace GitHub
                         h => h.Value),
                 };
             }
+            // Conflict
+            if ((int)__response.StatusCode == 409)
+            {
+                string? __content_409 = null;
+                global::GitHub.BasicError? __value_409 = null;
+                if (ReadResponseAsString)
+                {
+                    __content_409 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                    __value_409 = global::GitHub.BasicError.FromJson(__content_409, JsonSerializerContext);
+                }
+                else
+                {
+                    var __contentStream_409 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                    __value_409 = await global::GitHub.BasicError.FromJsonStreamAsync(__contentStream_409, JsonSerializerContext).ConfigureAwait(false);
+                }
+
+                throw new global::GitHub.ApiException<global::GitHub.BasicError>(
+                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_409,
+                    ResponseObject = __value_409,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
 
             if (ReadResponseAsString)
             {

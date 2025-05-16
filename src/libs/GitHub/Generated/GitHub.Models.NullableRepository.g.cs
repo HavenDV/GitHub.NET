@@ -774,6 +774,12 @@ namespace GitHub
         public bool? AnonymousAccessEnabled { get; set; }
 
         /// <summary>
+        /// The status of the code search index for this repository
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code_search_index_status")]
+        public global::GitHub.NullableRepositoryCodeSearchIndexStatus? CodeSearchIndexStatus { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -1080,6 +1086,9 @@ namespace GitHub
         /// <param name="anonymousAccessEnabled">
         /// Whether anonymous git access is enabled for this repository
         /// </param>
+        /// <param name="codeSearchIndexStatus">
+        /// The status of the code search index for this repository
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -1177,7 +1186,8 @@ namespace GitHub
             bool? webCommitSignoffRequired,
             string? masterBranch,
             string? starredAt,
-            bool? anonymousAccessEnabled)
+            bool? anonymousAccessEnabled,
+            global::GitHub.NullableRepositoryCodeSearchIndexStatus? codeSearchIndexStatus)
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
@@ -1273,6 +1283,7 @@ namespace GitHub
             this.MasterBranch = masterBranch;
             this.StarredAt = starredAt;
             this.AnonymousAccessEnabled = anonymousAccessEnabled;
+            this.CodeSearchIndexStatus = codeSearchIndexStatus;
         }
 
         /// <summary>
