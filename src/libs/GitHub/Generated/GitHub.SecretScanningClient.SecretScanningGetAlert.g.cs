@@ -9,13 +9,15 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref string owner,
             ref string repo,
-            ref int alertNumber);
+            ref int alertNumber,
+            ref bool? hideSecret);
         partial void PrepareSecretScanningGetAlertRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string owner,
             string repo,
-            int alertNumber);
+            int alertNumber,
+            bool? hideSecret);
         partial void ProcessSecretScanningGetAlertResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -37,12 +39,16 @@ namespace GitHub
         /// The security alert number.<br/>
         /// Included only in responses
         /// </param>
+        /// <param name="hideSecret">
+        /// Default Value: false
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.SecretScanningAlert> SecretScanningGetAlertAsync(
             string owner,
             string repo,
             int alertNumber,
+            bool? hideSecret = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -51,11 +57,15 @@ namespace GitHub
                 httpClient: HttpClient,
                 owner: ref owner,
                 repo: ref repo,
-                alertNumber: ref alertNumber);
+                alertNumber: ref alertNumber,
+                hideSecret: ref hideSecret);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/repos/{owner}/{repo}/secret-scanning/alerts/{alertNumber}",
                 baseUri: HttpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("hide_secret", hideSecret?.ToString()) 
+                ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -73,7 +83,8 @@ namespace GitHub
                 httpRequestMessage: __httpRequest,
                 owner: owner,
                 repo: repo,
-                alertNumber: alertNumber);
+                alertNumber: alertNumber,
+                hideSecret: hideSecret);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,

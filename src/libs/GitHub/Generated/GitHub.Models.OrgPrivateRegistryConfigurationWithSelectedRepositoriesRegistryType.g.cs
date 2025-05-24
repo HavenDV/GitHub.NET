@@ -12,6 +12,14 @@ namespace GitHub
         /// 
         /// </summary>
         MavenRepository,
+        /// <summary>
+        /// 
+        /// </summary>
+        NugetFeed,
+        /// <summary>
+        /// 
+        /// </summary>
+        GoproxyServer,
     }
 
     /// <summary>
@@ -27,6 +35,8 @@ namespace GitHub
             return value switch
             {
                 OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryType.MavenRepository => "maven_repository",
+                OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryType.NugetFeed => "nuget_feed",
+                OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryType.GoproxyServer => "goproxy_server",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -38,6 +48,8 @@ namespace GitHub
             return value switch
             {
                 "maven_repository" => OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryType.MavenRepository,
+                "nuget_feed" => OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryType.NugetFeed,
+                "goproxy_server" => OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryType.GoproxyServer,
                 _ => null,
             };
         }

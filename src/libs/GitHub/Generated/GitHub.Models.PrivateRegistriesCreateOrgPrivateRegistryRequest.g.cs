@@ -13,7 +13,8 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("registry_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryTypeJsonConverter))]
-        public global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType RegistryType { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType RegistryType { get; set; }
 
         /// <summary>
         /// The username to use when authenticating with the private registry. This field should be omitted if the private registry does not require a username for authentication.
@@ -80,17 +81,17 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PrivateRegistriesCreateOrgPrivateRegistryRequest(
+            global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType registryType,
             string encryptedValue,
             string keyId,
             global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestVisibility visibility,
-            global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType registryType,
             string? username,
             global::System.Collections.Generic.IList<int>? selectedRepositoryIds)
         {
+            this.RegistryType = registryType;
             this.EncryptedValue = encryptedValue ?? throw new global::System.ArgumentNullException(nameof(encryptedValue));
             this.KeyId = keyId ?? throw new global::System.ArgumentNullException(nameof(keyId));
             this.Visibility = visibility;
-            this.RegistryType = registryType;
             this.Username = username;
             this.SelectedRepositoryIds = selectedRepositoryIds;
         }

@@ -241,10 +241,10 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.OrgPrivateRegistryConfigurationWithSelectedRepositories> PrivateRegistriesCreateOrgPrivateRegistryAsync(
             string org,
+            global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType registryType,
             string encryptedValue,
             string keyId,
             global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestVisibility visibility,
-            global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType registryType = default,
             string? username = default,
             global::System.Collections.Generic.IList<int>? selectedRepositoryIds = default,
             global::System.Threading.CancellationToken cancellationToken = default)

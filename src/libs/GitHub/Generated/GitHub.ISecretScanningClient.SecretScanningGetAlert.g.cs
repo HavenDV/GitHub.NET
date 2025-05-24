@@ -16,12 +16,16 @@ namespace GitHub
         /// The security alert number.<br/>
         /// Included only in responses
         /// </param>
+        /// <param name="hideSecret">
+        /// Default Value: false
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.SecretScanningAlert> SecretScanningGetAlertAsync(
             string owner,
             string repo,
             int alertNumber,
+            bool? hideSecret = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
