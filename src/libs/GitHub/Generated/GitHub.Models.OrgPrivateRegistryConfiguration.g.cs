@@ -22,7 +22,8 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("registry_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrgPrivateRegistryConfigurationRegistryTypeJsonConverter))]
-        public global::GitHub.OrgPrivateRegistryConfigurationRegistryType RegistryType { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::GitHub.OrgPrivateRegistryConfigurationRegistryType RegistryType { get; set; }
 
         /// <summary>
         /// The username to use when authenticating with the private registry.<br/>
@@ -84,17 +85,17 @@ namespace GitHub
 #endif
         public OrgPrivateRegistryConfiguration(
             string name,
+            global::GitHub.OrgPrivateRegistryConfigurationRegistryType registryType,
             global::GitHub.OrgPrivateRegistryConfigurationVisibility visibility,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
-            global::GitHub.OrgPrivateRegistryConfigurationRegistryType registryType,
             string? username)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.RegistryType = registryType;
             this.Visibility = visibility;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.RegistryType = registryType;
             this.Username = username;
         }
 

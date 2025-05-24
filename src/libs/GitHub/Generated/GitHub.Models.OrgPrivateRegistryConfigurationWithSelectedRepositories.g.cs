@@ -22,7 +22,8 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("registry_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryTypeJsonConverter))]
-        public global::GitHub.OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryType RegistryType { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::GitHub.OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryType RegistryType { get; set; }
 
         /// <summary>
         /// The username to use when authenticating with the private registry.<br/>
@@ -93,18 +94,18 @@ namespace GitHub
 #endif
         public OrgPrivateRegistryConfigurationWithSelectedRepositories(
             string name,
+            global::GitHub.OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryType registryType,
             global::GitHub.OrgPrivateRegistryConfigurationWithSelectedRepositoriesVisibility visibility,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
-            global::GitHub.OrgPrivateRegistryConfigurationWithSelectedRepositoriesRegistryType registryType,
             string? username,
             global::System.Collections.Generic.IList<int>? selectedRepositoryIds)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.RegistryType = registryType;
             this.Visibility = visibility;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.RegistryType = registryType;
             this.Username = username;
             this.SelectedRepositoryIds = selectedRepositoryIds;
         }

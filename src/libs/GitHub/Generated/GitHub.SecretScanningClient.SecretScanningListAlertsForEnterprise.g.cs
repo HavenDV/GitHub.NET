@@ -18,7 +18,8 @@ namespace GitHub
             ref string? after,
             ref string? validity,
             ref bool? isPubliclyLeaked,
-            ref bool? isMultiRepo);
+            ref bool? isMultiRepo,
+            ref bool? hideSecret);
         partial void PrepareSecretScanningListAlertsForEnterpriseRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -33,7 +34,8 @@ namespace GitHub
             string? after,
             string? validity,
             bool? isPubliclyLeaked,
-            bool? isMultiRepo);
+            bool? isMultiRepo,
+            bool? hideSecret);
         partial void ProcessSecretScanningListAlertsForEnterpriseResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -72,6 +74,9 @@ namespace GitHub
         /// <param name="isMultiRepo">
         /// Default Value: false
         /// </param>
+        /// <param name="hideSecret">
+        /// Default Value: false
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.OrganizationSecretScanningAlert>> SecretScanningListAlertsForEnterpriseAsync(
@@ -87,6 +92,7 @@ namespace GitHub
             string? validity = default,
             bool? isPubliclyLeaked = default,
             bool? isMultiRepo = default,
+            bool? hideSecret = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -104,7 +110,8 @@ namespace GitHub
                 after: ref after,
                 validity: ref validity,
                 isPubliclyLeaked: ref isPubliclyLeaked,
-                isMultiRepo: ref isMultiRepo);
+                isMultiRepo: ref isMultiRepo,
+                hideSecret: ref hideSecret);
 
             var __pathBuilder = new PathBuilder(
                 path: $"/enterprises/{enterprise}/secret-scanning/alerts",
@@ -121,6 +128,7 @@ namespace GitHub
                 .AddOptionalParameter("validity", validity) 
                 .AddOptionalParameter("is_publicly_leaked", isPubliclyLeaked?.ToString()) 
                 .AddOptionalParameter("is_multi_repo", isMultiRepo?.ToString()) 
+                .AddOptionalParameter("hide_secret", hideSecret?.ToString()) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -148,7 +156,8 @@ namespace GitHub
                 after: after,
                 validity: validity,
                 isPubliclyLeaked: isPubliclyLeaked,
-                isMultiRepo: isMultiRepo);
+                isMultiRepo: isMultiRepo,
+                hideSecret: hideSecret);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
