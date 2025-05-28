@@ -72,6 +72,13 @@ namespace GitHub
         public required int Size { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("digest")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string? Digest { get; set; }
+
+        /// <summary>
         /// State of the release asset.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
@@ -118,6 +125,7 @@ namespace GitHub
         /// </param>
         /// <param name="nodeId"></param>
         /// <param name="size"></param>
+        /// <param name="digest"></param>
         /// <param name="state">
         /// State of the release asset.
         /// </param>
@@ -137,6 +145,7 @@ namespace GitHub
             string name,
             string nodeId,
             int size,
+            string? digest,
             global::System.DateTime updatedAt,
             string url,
             global::GitHub.WebhookReleasePrereleasedReleaseAssetState state,
@@ -151,6 +160,7 @@ namespace GitHub
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
             this.Size = size;
+            this.Digest = digest ?? throw new global::System.ArgumentNullException(nameof(digest));
             this.UpdatedAt = updatedAt;
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.State = state;

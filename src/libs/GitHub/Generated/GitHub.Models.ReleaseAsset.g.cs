@@ -77,6 +77,13 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("digest")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string? Digest { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("download_count")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int DownloadCount { get; set; }
@@ -125,6 +132,7 @@ namespace GitHub
         /// </param>
         /// <param name="contentType"></param>
         /// <param name="size"></param>
+        /// <param name="digest"></param>
         /// <param name="downloadCount"></param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
@@ -144,6 +152,7 @@ namespace GitHub
             global::GitHub.ReleaseAssetState state,
             string contentType,
             int size,
+            string? digest,
             int downloadCount,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
@@ -158,6 +167,7 @@ namespace GitHub
             this.State = state;
             this.ContentType = contentType ?? throw new global::System.ArgumentNullException(nameof(contentType));
             this.Size = size;
+            this.Digest = digest ?? throw new global::System.ArgumentNullException(nameof(digest));
             this.DownloadCount = downloadCount;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
