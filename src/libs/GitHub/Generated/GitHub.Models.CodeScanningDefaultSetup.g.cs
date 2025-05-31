@@ -44,6 +44,13 @@ namespace GitHub
         public global::GitHub.CodeScanningDefaultSetupQuerySuite? QuerySuite { get; set; }
 
         /// <summary>
+        /// Threat model to be used for code scanning analysis. Use `remote` to analyze only network sources and `remote_and_local` to include local sources like filesystem access, command-line arguments, database reads, environment variable and standard input.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("threat_model")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupThreatModelJsonConverter))]
+        public global::GitHub.CodeScanningDefaultSetupThreatModel? ThreatModel { get; set; }
+
+        /// <summary>
         /// Timestamp of latest configuration update.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
@@ -81,6 +88,9 @@ namespace GitHub
         /// <param name="querySuite">
         /// CodeQL query suite to be used.
         /// </param>
+        /// <param name="threatModel">
+        /// Threat model to be used for code scanning analysis. Use `remote` to analyze only network sources and `remote_and_local` to include local sources like filesystem access, command-line arguments, database reads, environment variable and standard input.
+        /// </param>
         /// <param name="updatedAt">
         /// Timestamp of latest configuration update.
         /// </param>
@@ -96,6 +106,7 @@ namespace GitHub
             global::GitHub.CodeScanningDefaultSetupRunnerType? runnerType,
             string? runnerLabel,
             global::GitHub.CodeScanningDefaultSetupQuerySuite? querySuite,
+            global::GitHub.CodeScanningDefaultSetupThreatModel? threatModel,
             global::System.DateTime? updatedAt,
             global::GitHub.CodeScanningDefaultSetupSchedule? schedule)
         {
@@ -104,6 +115,7 @@ namespace GitHub
             this.RunnerType = runnerType;
             this.RunnerLabel = runnerLabel;
             this.QuerySuite = querySuite;
+            this.ThreatModel = threatModel;
             this.UpdatedAt = updatedAt;
             this.Schedule = schedule;
         }

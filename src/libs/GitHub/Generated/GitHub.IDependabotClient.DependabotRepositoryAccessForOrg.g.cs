@@ -1,0 +1,20 @@
+#nullable enable
+
+namespace GitHub
+{
+    public partial interface IDependabotClient
+    {
+        /// <summary>
+        /// Lists repositories that organization admins have allowed Dependabot to access when updating dependencies.<br/>
+        /// &gt; [!NOTE]<br/>
+        /// &gt;    This operation supports both server-to-server and user-to-server access.<br/>
+        /// Unauthorized users will not see the existence of this endpoint.
+        /// </summary>
+        /// <param name="org"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::GitHub.DependabotRepositoryAccessDetails> DependabotRepositoryAccessForOrgAsync(
+            string org,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}
