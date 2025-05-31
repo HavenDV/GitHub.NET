@@ -38,6 +38,13 @@ namespace GitHub
         public global::GitHub.CodeScanningDefaultSetupUpdateQuerySuite? QuerySuite { get; set; }
 
         /// <summary>
+        /// Threat model to be used for code scanning analysis. Use `remote` to analyze only network sources and `remote_and_local` to include local sources like filesystem access, command-line arguments, database reads, environment variable and standard input.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("threat_model")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeScanningDefaultSetupUpdateThreatModelJsonConverter))]
+        public global::GitHub.CodeScanningDefaultSetupUpdateThreatModel? ThreatModel { get; set; }
+
+        /// <summary>
         /// CodeQL languages to be analyzed.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("languages")]
@@ -65,6 +72,9 @@ namespace GitHub
         /// <param name="querySuite">
         /// CodeQL query suite to be used.
         /// </param>
+        /// <param name="threatModel">
+        /// Threat model to be used for code scanning analysis. Use `remote` to analyze only network sources and `remote_and_local` to include local sources like filesystem access, command-line arguments, database reads, environment variable and standard input.
+        /// </param>
         /// <param name="languages">
         /// CodeQL languages to be analyzed.
         /// </param>
@@ -76,12 +86,14 @@ namespace GitHub
             global::GitHub.CodeScanningDefaultSetupUpdateRunnerType? runnerType,
             string? runnerLabel,
             global::GitHub.CodeScanningDefaultSetupUpdateQuerySuite? querySuite,
+            global::GitHub.CodeScanningDefaultSetupUpdateThreatModel? threatModel,
             global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupUpdateLanguage>? languages)
         {
             this.State = state;
             this.RunnerType = runnerType;
             this.RunnerLabel = runnerLabel;
             this.QuerySuite = querySuite;
+            this.ThreatModel = threatModel;
             this.Languages = languages;
         }
 

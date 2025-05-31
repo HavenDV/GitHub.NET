@@ -40,6 +40,9 @@ namespace GitHub
         /// <param name="querySuite">
         /// CodeQL query suite to be used.
         /// </param>
+        /// <param name="threatModel">
+        /// Threat model to be used for code scanning analysis. Use `remote` to analyze only network sources and `remote_and_local` to include local sources like filesystem access, command-line arguments, database reads, environment variable and standard input.
+        /// </param>
         /// <param name="languages">
         /// CodeQL languages to be analyzed.
         /// </param>
@@ -52,6 +55,7 @@ namespace GitHub
             global::GitHub.CodeScanningDefaultSetupUpdateRunnerType? runnerType = default,
             string? runnerLabel = default,
             global::GitHub.CodeScanningDefaultSetupUpdateQuerySuite? querySuite = default,
+            global::GitHub.CodeScanningDefaultSetupUpdateThreatModel? threatModel = default,
             global::System.Collections.Generic.IList<global::GitHub.CodeScanningDefaultSetupUpdateLanguage>? languages = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
