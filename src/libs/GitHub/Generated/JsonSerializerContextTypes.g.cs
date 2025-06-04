@@ -23182,4230 +23182,4234 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotSetRepositoryAccessDefaultLevelRequest? Type5789 { get; set; }
+        public global::GitHub.DependabotUpdateRepositoryAccessForOrgRequest? Type5789 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotSetRepositoryAccessDefaultLevelRequestDefaultLevel? Type5790 { get; set; }
+        public global::GitHub.DependabotSetRepositoryAccessDefaultLevelRequest? Type5790 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdateRequest? Type5791 { get; set; }
+        public global::GitHub.DependabotSetRepositoryAccessDefaultLevelRequestDefaultLevel? Type5791 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdateRequestDefaultRepositoryPermission? Type5792 { get; set; }
+        public global::GitHub.OrgsUpdateRequest? Type5792 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdateRequestMembersAllowedRepositoryCreationType? Type5793 { get; set; }
+        public global::GitHub.OrgsUpdateRequestDefaultRepositoryPermission? Type5793 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateHostedRunnerForOrgRequest? Type5794 { get; set; }
+        public global::GitHub.OrgsUpdateRequestMembersAllowedRepositoryCreationType? Type5794 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateHostedRunnerForOrgRequestImage? Type5795 { get; set; }
+        public global::GitHub.ActionsCreateHostedRunnerForOrgRequest? Type5795 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateHostedRunnerForOrgRequestImageSource? Type5796 { get; set; }
+        public global::GitHub.ActionsCreateHostedRunnerForOrgRequestImage? Type5796 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsUpdateHostedRunnerForOrgRequest? Type5797 { get; set; }
+        public global::GitHub.ActionsCreateHostedRunnerForOrgRequestImageSource? Type5797 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetGithubActionsPermissionsOrganizationRequest? Type5798 { get; set; }
+        public global::GitHub.ActionsUpdateHostedRunnerForOrgRequest? Type5798 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest? Type5799 { get; set; }
+        public global::GitHub.ActionsSetGithubActionsPermissionsOrganizationRequest? Type5799 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateSelfHostedRunnerGroupForOrgRequest? Type5800 { get; set; }
+        public global::GitHub.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest? Type5800 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateSelfHostedRunnerGroupForOrgRequestVisibility? Type5801 { get; set; }
+        public global::GitHub.ActionsCreateSelfHostedRunnerGroupForOrgRequest? Type5801 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsUpdateSelfHostedRunnerGroupForOrgRequest? Type5802 { get; set; }
+        public global::GitHub.ActionsCreateSelfHostedRunnerGroupForOrgRequestVisibility? Type5802 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsUpdateSelfHostedRunnerGroupForOrgRequestVisibility? Type5803 { get; set; }
+        public global::GitHub.ActionsUpdateSelfHostedRunnerGroupForOrgRequest? Type5803 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequest? Type5804 { get; set; }
+        public global::GitHub.ActionsUpdateSelfHostedRunnerGroupForOrgRequestVisibility? Type5804 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetSelfHostedRunnersInGroupForOrgRequest? Type5805 { get; set; }
+        public global::GitHub.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequest? Type5805 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGenerateRunnerJitconfigForOrgRequest? Type5806 { get; set; }
+        public global::GitHub.ActionsSetSelfHostedRunnersInGroupForOrgRequest? Type5806 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest? Type5807 { get; set; }
+        public global::GitHub.ActionsGenerateRunnerJitconfigForOrgRequest? Type5807 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetCustomLabelsForSelfHostedRunnerForOrgRequest? Type5808 { get; set; }
+        public global::GitHub.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest? Type5808 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateOrUpdateOrgSecretRequest? Type5809 { get; set; }
+        public global::GitHub.ActionsSetCustomLabelsForSelfHostedRunnerForOrgRequest? Type5809 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateOrUpdateOrgSecretRequestVisibility? Type5810 { get; set; }
+        public global::GitHub.ActionsCreateOrUpdateOrgSecretRequest? Type5810 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetSelectedReposForOrgSecretRequest? Type5811 { get; set; }
+        public global::GitHub.ActionsCreateOrUpdateOrgSecretRequestVisibility? Type5811 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateOrgVariableRequest? Type5812 { get; set; }
+        public global::GitHub.ActionsSetSelectedReposForOrgSecretRequest? Type5812 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateOrgVariableRequestVisibility? Type5813 { get; set; }
+        public global::GitHub.ActionsCreateOrgVariableRequest? Type5813 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsUpdateOrgVariableRequest? Type5814 { get; set; }
+        public global::GitHub.ActionsCreateOrgVariableRequestVisibility? Type5814 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsUpdateOrgVariableRequestVisibility? Type5815 { get; set; }
+        public global::GitHub.ActionsUpdateOrgVariableRequest? Type5815 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetSelectedReposForOrgVariableRequest? Type5816 { get; set; }
+        public global::GitHub.ActionsUpdateOrgVariableRequestVisibility? Type5816 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CampaignsCreateCampaignRequest? Type5817 { get; set; }
+        public global::GitHub.ActionsSetSelectedReposForOrgVariableRequest? Type5817 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CampaignsCreateCampaignRequestCodeScanningAlert>? Type5818 { get; set; }
+        public global::GitHub.CampaignsCreateCampaignRequest? Type5818 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CampaignsCreateCampaignRequestCodeScanningAlert? Type5819 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CampaignsCreateCampaignRequestCodeScanningAlert>? Type5819 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CampaignsUpdateCampaignRequest? Type5820 { get; set; }
+        public global::GitHub.CampaignsCreateCampaignRequestCodeScanningAlert? Type5820 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequest? Type5821 { get; set; }
+        public global::GitHub.CampaignsUpdateCampaignRequest? Type5821 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity? Type5822 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequest? Type5822 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph? Type5823 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity? Type5823 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction? Type5824 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph? Type5824 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionOptions? Type5825 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction? Type5825 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts? Type5826 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionOptions? Type5826 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates? Type5827 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts? Type5827 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? Type5828 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates? Type5828 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDelegatedAlertDismissal? Type5829 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? Type5829 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? Type5830 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDelegatedAlertDismissal? Type5830 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? Type5831 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? Type5831 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass? Type5832 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? Type5832 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptions? Type5833 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass? Type5833 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewer>? Type5834 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptions? Type5834 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewer? Type5835 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewer>? Type5835 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewerReviewerType? Type5836 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewer? Type5836 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? Type5837 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewerReviewerType? Type5837 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? Type5838 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningValidityChecks? Type5838 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningGenericSecrets? Type5839 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningNonProviderPatterns? Type5839 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedAlertDismissal? Type5840 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningGenericSecrets? Type5840 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? Type5841 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedAlertDismissal? Type5841 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement? Type5842 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestPrivateVulnerabilityReporting? Type5842 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityDetachConfigurationRequest? Type5843 { get; set; }
+        public global::GitHub.CodeSecurityCreateConfigurationRequestEnforcement? Type5843 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequest? Type5844 { get; set; }
+        public global::GitHub.CodeSecurityDetachConfigurationRequest? Type5844 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestAdvancedSecurity? Type5845 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequest? Type5845 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestDependencyGraph? Type5846 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestAdvancedSecurity? Type5846 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestDependencyGraphAutosubmitAction? Type5847 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestDependencyGraph? Type5847 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestDependencyGraphAutosubmitActionOptions? Type5848 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestDependencyGraphAutosubmitAction? Type5848 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestDependabotAlerts? Type5849 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestDependencyGraphAutosubmitActionOptions? Type5849 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestDependabotSecurityUpdates? Type5850 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestDependabotAlerts? Type5850 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestCodeScanningDefaultSetup? Type5851 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestDependabotSecurityUpdates? Type5851 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestCodeScanningDelegatedAlertDismissal? Type5852 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestCodeScanningDefaultSetup? Type5852 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanning? Type5853 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestCodeScanningDelegatedAlertDismissal? Type5853 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningPushProtection? Type5854 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanning? Type5854 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypass? Type5855 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningPushProtection? Type5855 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptions? Type5856 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypass? Type5856 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewer>? Type5857 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptions? Type5857 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewer? Type5858 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewer>? Type5858 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewerReviewerType? Type5859 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewer? Type5859 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningValidityChecks? Type5860 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedBypassOptionsReviewerReviewerType? Type5860 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningNonProviderPatterns? Type5861 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningValidityChecks? Type5861 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningGenericSecrets? Type5862 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningNonProviderPatterns? Type5862 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedAlertDismissal? Type5863 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningGenericSecrets? Type5863 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestPrivateVulnerabilityReporting? Type5864 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestSecretScanningDelegatedAlertDismissal? Type5864 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityUpdateConfigurationRequestEnforcement? Type5865 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestPrivateVulnerabilityReporting? Type5865 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityAttachConfigurationRequest? Type5866 { get; set; }
+        public global::GitHub.CodeSecurityUpdateConfigurationRequestEnforcement? Type5866 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityAttachConfigurationRequestScope? Type5867 { get; set; }
+        public global::GitHub.CodeSecurityAttachConfigurationRequest? Type5867 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecuritySetConfigurationAsDefaultRequest? Type5868 { get; set; }
+        public global::GitHub.CodeSecurityAttachConfigurationRequestScope? Type5868 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecuritySetConfigurationAsDefaultRequestDefaultForNewRepos? Type5869 { get; set; }
+        public global::GitHub.CodeSecuritySetConfigurationAsDefaultRequest? Type5869 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesSetCodespacesAccessRequest? Type5870 { get; set; }
+        public global::GitHub.CodeSecuritySetConfigurationAsDefaultRequestDefaultForNewRepos? Type5870 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesSetCodespacesAccessRequestVisibility? Type5871 { get; set; }
+        public global::GitHub.CodespacesSetCodespacesAccessRequest? Type5871 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesSetCodespacesAccessUsersRequest? Type5872 { get; set; }
+        public global::GitHub.CodespacesSetCodespacesAccessRequestVisibility? Type5872 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesDeleteCodespacesAccessUsersRequest? Type5873 { get; set; }
+        public global::GitHub.CodespacesSetCodespacesAccessUsersRequest? Type5873 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateOrUpdateOrgSecretRequest? Type5874 { get; set; }
+        public global::GitHub.CodespacesDeleteCodespacesAccessUsersRequest? Type5874 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateOrUpdateOrgSecretRequestVisibility? Type5875 { get; set; }
+        public global::GitHub.CodespacesCreateOrUpdateOrgSecretRequest? Type5875 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesSetSelectedReposForOrgSecretRequest? Type5876 { get; set; }
+        public global::GitHub.CodespacesCreateOrUpdateOrgSecretRequestVisibility? Type5876 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CopilotAddCopilotSeatsForTeamsRequest? Type5877 { get; set; }
+        public global::GitHub.CodespacesSetSelectedReposForOrgSecretRequest? Type5877 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CopilotCancelCopilotSeatAssignmentForTeamsRequest? Type5878 { get; set; }
+        public global::GitHub.CopilotAddCopilotSeatsForTeamsRequest? Type5878 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CopilotAddCopilotSeatsForUsersRequest? Type5879 { get; set; }
+        public global::GitHub.CopilotCancelCopilotSeatAssignmentForTeamsRequest? Type5879 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CopilotCancelCopilotSeatAssignmentForUsersRequest? Type5880 { get; set; }
+        public global::GitHub.CopilotAddCopilotSeatsForUsersRequest? Type5880 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotCreateOrUpdateOrgSecretRequest? Type5881 { get; set; }
+        public global::GitHub.CopilotCancelCopilotSeatAssignmentForUsersRequest? Type5881 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotCreateOrUpdateOrgSecretRequestVisibility? Type5882 { get; set; }
+        public global::GitHub.DependabotCreateOrUpdateOrgSecretRequest? Type5882 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotSetSelectedReposForOrgSecretRequest? Type5883 { get; set; }
+        public global::GitHub.DependabotCreateOrUpdateOrgSecretRequestVisibility? Type5883 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsCreateWebhookRequest? Type5884 { get; set; }
+        public global::GitHub.DependabotSetSelectedReposForOrgSecretRequest? Type5884 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsCreateWebhookRequestConfig? Type5885 { get; set; }
+        public global::GitHub.OrgsCreateWebhookRequest? Type5885 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdateWebhookRequest? Type5886 { get; set; }
+        public global::GitHub.OrgsCreateWebhookRequestConfig? Type5886 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdateWebhookRequestConfig? Type5887 { get; set; }
+        public global::GitHub.OrgsUpdateWebhookRequest? Type5887 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdateWebhookConfigForOrgRequest? Type5888 { get; set; }
+        public global::GitHub.OrgsUpdateWebhookRequestConfig? Type5888 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsCreateInvitationRequest? Type5889 { get; set; }
+        public global::GitHub.OrgsUpdateWebhookConfigForOrgRequest? Type5889 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsCreateInvitationRequestRole? Type5890 { get; set; }
+        public global::GitHub.OrgsCreateInvitationRequest? Type5890 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsSetMembershipForUserRequest? Type5891 { get; set; }
+        public global::GitHub.OrgsCreateInvitationRequestRole? Type5891 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsSetMembershipForUserRequestRole? Type5892 { get; set; }
+        public global::GitHub.OrgsSetMembershipForUserRequest? Type5892 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsStartForOrgRequest? Type5893 { get; set; }
+        public global::GitHub.OrgsSetMembershipForUserRequestRole? Type5893 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForOrgRequestExcludeItem>? Type5894 { get; set; }
+        public global::GitHub.MigrationsStartForOrgRequest? Type5894 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsStartForOrgRequestExcludeItem? Type5895 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForOrgRequestExcludeItem>? Type5895 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsConvertMemberToOutsideCollaboratorRequest? Type5896 { get; set; }
+        public global::GitHub.MigrationsStartForOrgRequestExcludeItem? Type5896 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsReviewPatGrantRequestsInBulkRequest? Type5897 { get; set; }
+        public global::GitHub.OrgsConvertMemberToOutsideCollaboratorRequest? Type5897 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsReviewPatGrantRequestsInBulkRequestAction? Type5898 { get; set; }
+        public global::GitHub.OrgsReviewPatGrantRequestsInBulkRequest? Type5898 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsReviewPatGrantRequestRequest? Type5899 { get; set; }
+        public global::GitHub.OrgsReviewPatGrantRequestsInBulkRequestAction? Type5899 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsReviewPatGrantRequestRequestAction? Type5900 { get; set; }
+        public global::GitHub.OrgsReviewPatGrantRequestRequest? Type5900 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdatePatAccessesRequest? Type5901 { get; set; }
+        public global::GitHub.OrgsReviewPatGrantRequestRequestAction? Type5901 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdatePatAccessesRequestAction? Type5902 { get; set; }
+        public global::GitHub.OrgsUpdatePatAccessesRequest? Type5902 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdatePatAccessRequest? Type5903 { get; set; }
+        public global::GitHub.OrgsUpdatePatAccessesRequestAction? Type5903 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdatePatAccessRequestAction? Type5904 { get; set; }
+        public global::GitHub.OrgsUpdatePatAccessRequest? Type5904 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequest? Type5905 { get; set; }
+        public global::GitHub.OrgsUpdatePatAccessRequestAction? Type5905 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType? Type5906 { get; set; }
+        public global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequest? Type5906 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestVisibility? Type5907 { get; set; }
+        public global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType? Type5907 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PrivateRegistriesUpdateOrgPrivateRegistryRequest? Type5908 { get; set; }
+        public global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestVisibility? Type5908 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType? Type5909 { get; set; }
+        public global::GitHub.PrivateRegistriesUpdateOrgPrivateRegistryRequest? Type5909 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PrivateRegistriesUpdateOrgPrivateRegistryRequestVisibility? Type5910 { get; set; }
+        public global::GitHub.PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType? Type5910 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateForOrgRequest? Type5911 { get; set; }
+        public global::GitHub.PrivateRegistriesUpdateOrgPrivateRegistryRequestVisibility? Type5911 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsCreateOrUpdateCustomPropertiesRequest? Type5912 { get; set; }
+        public global::GitHub.ProjectsCreateForOrgRequest? Type5912 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CustomProperty>? Type5913 { get; set; }
+        public global::GitHub.OrgsCreateOrUpdateCustomPropertiesRequest? Type5913 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsCreateOrUpdateCustomPropertiesValuesForReposRequest? Type5914 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CustomProperty>? Type5914 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateInOrgRequest? Type5915 { get; set; }
+        public global::GitHub.OrgsCreateOrUpdateCustomPropertiesValuesForReposRequest? Type5915 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateInOrgRequestVisibility? Type5916 { get; set; }
+        public global::GitHub.ReposCreateInOrgRequest? Type5916 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateInOrgRequestSquashMergeCommitTitle? Type5917 { get; set; }
+        public global::GitHub.ReposCreateInOrgRequestVisibility? Type5917 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateInOrgRequestSquashMergeCommitMessage? Type5918 { get; set; }
+        public global::GitHub.ReposCreateInOrgRequestSquashMergeCommitTitle? Type5918 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateInOrgRequestMergeCommitTitle? Type5919 { get; set; }
+        public global::GitHub.ReposCreateInOrgRequestSquashMergeCommitMessage? Type5919 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateInOrgRequestMergeCommitMessage? Type5920 { get; set; }
+        public global::GitHub.ReposCreateInOrgRequestMergeCommitTitle? Type5920 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateOrgRulesetRequest? Type5921 { get; set; }
+        public global::GitHub.ReposCreateInOrgRequestMergeCommitMessage? Type5921 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateOrgRulesetRequestTarget? Type5922 { get; set; }
+        public global::GitHub.ReposCreateOrgRulesetRequest? Type5922 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateOrgRulesetRequest? Type5923 { get; set; }
+        public global::GitHub.ReposCreateOrgRulesetRequestTarget? Type5923 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateOrgRulesetRequestTarget? Type5924 { get; set; }
+        public global::GitHub.ReposUpdateOrgRulesetRequest? Type5924 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.HostedComputeCreateNetworkConfigurationForOrgRequest? Type5925 { get; set; }
+        public global::GitHub.ReposUpdateOrgRulesetRequestTarget? Type5925 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.HostedComputeCreateNetworkConfigurationForOrgRequestComputeService? Type5926 { get; set; }
+        public global::GitHub.HostedComputeCreateNetworkConfigurationForOrgRequest? Type5926 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.HostedComputeUpdateNetworkConfigurationForOrgRequest? Type5927 { get; set; }
+        public global::GitHub.HostedComputeCreateNetworkConfigurationForOrgRequestComputeService? Type5927 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.HostedComputeUpdateNetworkConfigurationForOrgRequestComputeService? Type5928 { get; set; }
+        public global::GitHub.HostedComputeUpdateNetworkConfigurationForOrgRequest? Type5928 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsCreateRequest? Type5929 { get; set; }
+        public global::GitHub.HostedComputeUpdateNetworkConfigurationForOrgRequestComputeService? Type5929 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsCreateRequestPrivacy? Type5930 { get; set; }
+        public global::GitHub.TeamsCreateRequest? Type5930 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsCreateRequestNotificationSetting? Type5931 { get; set; }
+        public global::GitHub.TeamsCreateRequestPrivacy? Type5931 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsCreateRequestPermission? Type5932 { get; set; }
+        public global::GitHub.TeamsCreateRequestNotificationSetting? Type5932 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateInOrgRequest? Type5933 { get; set; }
+        public global::GitHub.TeamsCreateRequestPermission? Type5933 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateInOrgRequestPrivacy? Type5934 { get; set; }
+        public global::GitHub.TeamsUpdateInOrgRequest? Type5934 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateInOrgRequestNotificationSetting? Type5935 { get; set; }
+        public global::GitHub.TeamsUpdateInOrgRequestPrivacy? Type5935 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateInOrgRequestPermission? Type5936 { get; set; }
+        public global::GitHub.TeamsUpdateInOrgRequestNotificationSetting? Type5936 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsCreateDiscussionInOrgRequest? Type5937 { get; set; }
+        public global::GitHub.TeamsUpdateInOrgRequestPermission? Type5937 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateDiscussionInOrgRequest? Type5938 { get; set; }
+        public global::GitHub.TeamsCreateDiscussionInOrgRequest? Type5938 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsCreateDiscussionCommentInOrgRequest? Type5939 { get; set; }
+        public global::GitHub.TeamsUpdateDiscussionInOrgRequest? Type5939 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateDiscussionCommentInOrgRequest? Type5940 { get; set; }
+        public global::GitHub.TeamsCreateDiscussionCommentInOrgRequest? Type5940 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForTeamDiscussionCommentInOrgRequest? Type5941 { get; set; }
+        public global::GitHub.TeamsUpdateDiscussionCommentInOrgRequest? Type5941 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForTeamDiscussionCommentInOrgRequestContent? Type5942 { get; set; }
+        public global::GitHub.ReactionsCreateForTeamDiscussionCommentInOrgRequest? Type5942 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForTeamDiscussionInOrgRequest? Type5943 { get; set; }
+        public global::GitHub.ReactionsCreateForTeamDiscussionCommentInOrgRequestContent? Type5943 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForTeamDiscussionInOrgRequestContent? Type5944 { get; set; }
+        public global::GitHub.ReactionsCreateForTeamDiscussionInOrgRequest? Type5944 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequest? Type5945 { get; set; }
+        public global::GitHub.ReactionsCreateForTeamDiscussionInOrgRequestContent? Type5945 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequestRole? Type5946 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequest? Type5946 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateProjectPermissionsInOrgRequest? Type5947 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateMembershipForUserInOrgRequestRole? Type5947 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateProjectPermissionsInOrgRequestPermission? Type5948 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateProjectPermissionsInOrgRequest? Type5948 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateRepoPermissionsInOrgRequest? Type5949 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateProjectPermissionsInOrgRequestPermission? Type5949 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposRequest? Type5950 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateRepoPermissionsInOrgRequest? Type5950 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposRequestQuerySuite? Type5951 { get; set; }
+        public global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposRequest? Type5951 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsUpdateCardRequest? Type5952 { get; set; }
+        public global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposRequestQuerySuite? Type5952 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardRequest? Type5953 { get; set; }
+        public global::GitHub.ProjectsUpdateCardRequest? Type5953 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsUpdateColumnRequest? Type5954 { get; set; }
+        public global::GitHub.ProjectsMoveCardRequest? Type5954 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1, global::GitHub.ProjectsCreateCardRequestVariant2>? Type5955 { get; set; }
+        public global::GitHub.ProjectsUpdateColumnRequest? Type5955 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateCardRequestVariant1? Type5956 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1, global::GitHub.ProjectsCreateCardRequestVariant2>? Type5956 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateCardRequestVariant2? Type5957 { get; set; }
+        public global::GitHub.ProjectsCreateCardRequestVariant1? Type5957 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveColumnRequest? Type5958 { get; set; }
+        public global::GitHub.ProjectsCreateCardRequestVariant2? Type5958 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsUpdateRequest? Type5959 { get; set; }
+        public global::GitHub.ProjectsMoveColumnRequest? Type5959 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsUpdateRequestOrganizationPermission? Type5960 { get; set; }
+        public global::GitHub.ProjectsUpdateRequest? Type5960 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsAddCollaboratorRequest? Type5961 { get; set; }
+        public global::GitHub.ProjectsUpdateRequestOrganizationPermission? Type5961 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsAddCollaboratorRequestPermission? Type5962 { get; set; }
+        public global::GitHub.ProjectsAddCollaboratorRequest? Type5962 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateColumnRequest? Type5963 { get; set; }
+        public global::GitHub.ProjectsAddCollaboratorRequestPermission? Type5963 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequest? Type5964 { get; set; }
+        public global::GitHub.ProjectsCreateColumnRequest? Type5964 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestVisibility? Type5965 { get; set; }
+        public global::GitHub.ReposUpdateRequest? Type5965 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestSecurityAndAnalysis? Type5966 { get; set; }
+        public global::GitHub.ReposUpdateRequestVisibility? Type5966 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisAdvancedSecurity? Type5967 { get; set; }
+        public global::GitHub.ReposUpdateRequestSecurityAndAnalysis? Type5967 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisCodeSecurity? Type5968 { get; set; }
+        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisAdvancedSecurity? Type5968 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanning? Type5969 { get; set; }
+        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisCodeSecurity? Type5969 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningPushProtection? Type5970 { get; set; }
+        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanning? Type5970 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningAiDetection? Type5971 { get; set; }
+        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningPushProtection? Type5971 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningNonProviderPatterns? Type5972 { get; set; }
+        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningAiDetection? Type5972 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestSquashMergeCommitTitle? Type5973 { get; set; }
+        public global::GitHub.ReposUpdateRequestSecurityAndAnalysisSecretScanningNonProviderPatterns? Type5973 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestSquashMergeCommitMessage? Type5974 { get; set; }
+        public global::GitHub.ReposUpdateRequestSquashMergeCommitTitle? Type5974 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestMergeCommitTitle? Type5975 { get; set; }
+        public global::GitHub.ReposUpdateRequestSquashMergeCommitMessage? Type5975 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRequestMergeCommitMessage? Type5976 { get; set; }
+        public global::GitHub.ReposUpdateRequestMergeCommitTitle? Type5976 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsReRunJobForWorkflowRunRequest? Type5977 { get; set; }
+        public global::GitHub.ReposUpdateRequestMergeCommitMessage? Type5977 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetCustomOidcSubClaimForRepoRequest? Type5978 { get; set; }
+        public global::GitHub.ActionsReRunJobForWorkflowRunRequest? Type5978 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetGithubActionsPermissionsRepositoryRequest? Type5979 { get; set; }
+        public global::GitHub.ActionsSetCustomOidcSubClaimForRepoRequest? Type5979 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGenerateRunnerJitconfigForRepoRequest? Type5980 { get; set; }
+        public global::GitHub.ActionsSetGithubActionsPermissionsRepositoryRequest? Type5980 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest? Type5981 { get; set; }
+        public global::GitHub.ActionsGenerateRunnerJitconfigForRepoRequest? Type5981 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest? Type5982 { get; set; }
+        public global::GitHub.ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest? Type5982 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AnyOf<global::GitHub.ReviewCustomGatesCommentRequired, global::GitHub.ReviewCustomGatesStateRequired>? Type5983 { get; set; }
+        public global::GitHub.ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest? Type5983 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsReviewPendingDeploymentsForRunRequest? Type5984 { get; set; }
+        public global::GitHub.AnyOf<global::GitHub.ReviewCustomGatesCommentRequired, global::GitHub.ReviewCustomGatesStateRequired>? Type5984 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsReviewPendingDeploymentsForRunRequestState? Type5985 { get; set; }
+        public global::GitHub.ActionsReviewPendingDeploymentsForRunRequest? Type5985 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsReRunWorkflowRequest? Type5986 { get; set; }
+        public global::GitHub.ActionsReviewPendingDeploymentsForRunRequestState? Type5986 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsReRunWorkflowFailedJobsRequest? Type5987 { get; set; }
+        public global::GitHub.ActionsReRunWorkflowRequest? Type5987 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateOrUpdateRepoSecretRequest? Type5988 { get; set; }
+        public global::GitHub.ActionsReRunWorkflowFailedJobsRequest? Type5988 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateRepoVariableRequest? Type5989 { get; set; }
+        public global::GitHub.ActionsCreateOrUpdateRepoSecretRequest? Type5989 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsUpdateRepoVariableRequest? Type5990 { get; set; }
+        public global::GitHub.ActionsCreateRepoVariableRequest? Type5990 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateWorkflowDispatchRequest? Type5991 { get; set; }
+        public global::GitHub.ActionsUpdateRepoVariableRequest? Type5991 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateAttestationRequest? Type5992 { get; set; }
+        public global::GitHub.ActionsCreateWorkflowDispatchRequest? Type5992 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateAttestationRequestBundle? Type5993 { get; set; }
+        public global::GitHub.ReposCreateAttestationRequest? Type5993 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateAutolinkRequest? Type5994 { get; set; }
+        public global::GitHub.ReposCreateAttestationRequestBundle? Type5994 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateBranchProtectionRequest? Type5995 { get; set; }
+        public global::GitHub.ReposCreateAutolinkRequest? Type5995 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateBranchProtectionRequestRequiredStatusChecks? Type5996 { get; set; }
+        public global::GitHub.ReposUpdateBranchProtectionRequest? Type5996 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ReposUpdateBranchProtectionRequestRequiredStatusChecksCheck>? Type5997 { get; set; }
+        public global::GitHub.ReposUpdateBranchProtectionRequestRequiredStatusChecks? Type5997 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateBranchProtectionRequestRequiredStatusChecksCheck? Type5998 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ReposUpdateBranchProtectionRequestRequiredStatusChecksCheck>? Type5998 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateBranchProtectionRequestRequiredPullRequestReviews? Type5999 { get; set; }
+        public global::GitHub.ReposUpdateBranchProtectionRequestRequiredStatusChecksCheck? Type5999 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateBranchProtectionRequestRequiredPullRequestReviewsDismissalRestrictions? Type6000 { get; set; }
+        public global::GitHub.ReposUpdateBranchProtectionRequestRequiredPullRequestReviews? Type6000 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateBranchProtectionRequestRequiredPullRequestReviewsBypassPullRequestAllowances? Type6001 { get; set; }
+        public global::GitHub.ReposUpdateBranchProtectionRequestRequiredPullRequestReviewsDismissalRestrictions? Type6001 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateBranchProtectionRequestRestrictions? Type6002 { get; set; }
+        public global::GitHub.ReposUpdateBranchProtectionRequestRequiredPullRequestReviewsBypassPullRequestAllowances? Type6002 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdatePullRequestReviewProtectionRequest? Type6003 { get; set; }
+        public global::GitHub.ReposUpdateBranchProtectionRequestRestrictions? Type6003 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdatePullRequestReviewProtectionRequestDismissalRestrictions? Type6004 { get; set; }
+        public global::GitHub.ReposUpdatePullRequestReviewProtectionRequest? Type6004 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdatePullRequestReviewProtectionRequestBypassPullRequestAllowances? Type6005 { get; set; }
+        public global::GitHub.ReposUpdatePullRequestReviewProtectionRequestDismissalRestrictions? Type6005 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateStatusCheckProtectionRequest? Type6006 { get; set; }
+        public global::GitHub.ReposUpdatePullRequestReviewProtectionRequestBypassPullRequestAllowances? Type6006 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ReposUpdateStatusCheckProtectionRequestCheck>? Type6007 { get; set; }
+        public global::GitHub.ReposUpdateStatusCheckProtectionRequest? Type6007 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateStatusCheckProtectionRequestCheck? Type6008 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ReposUpdateStatusCheckProtectionRequestCheck>? Type6008 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.ReposAddStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>>? Type6009 { get; set; }
+        public global::GitHub.ReposUpdateStatusCheckProtectionRequestCheck? Type6009 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposAddStatusCheckContextsRequest2? Type6010 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.ReposAddStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>>? Type6010 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.ReposSetStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>>? Type6011 { get; set; }
+        public global::GitHub.ReposAddStatusCheckContextsRequest2? Type6011 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposSetStatusCheckContextsRequest2? Type6012 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.ReposSetStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>>? Type6012 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.ReposRemoveStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>>? Type6013 { get; set; }
+        public global::GitHub.ReposSetStatusCheckContextsRequest2? Type6013 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposRemoveStatusCheckContextsRequest2? Type6014 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.ReposRemoveStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>>? Type6014 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposAddAppAccessRestrictionsRequest? Type6015 { get; set; }
+        public global::GitHub.ReposRemoveStatusCheckContextsRequest2? Type6015 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposSetAppAccessRestrictionsRequest? Type6016 { get; set; }
+        public global::GitHub.ReposAddAppAccessRestrictionsRequest? Type6016 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposRemoveAppAccessRestrictionsRequest? Type6017 { get; set; }
+        public global::GitHub.ReposSetAppAccessRestrictionsRequest? Type6017 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.ReposAddTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>>? Type6018 { get; set; }
+        public global::GitHub.ReposRemoveAppAccessRestrictionsRequest? Type6018 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposAddTeamAccessRestrictionsRequest2? Type6019 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.ReposAddTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>>? Type6019 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.ReposSetTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>>? Type6020 { get; set; }
+        public global::GitHub.ReposAddTeamAccessRestrictionsRequest2? Type6020 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposSetTeamAccessRestrictionsRequest2? Type6021 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.ReposSetTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>>? Type6021 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.ReposRemoveTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>>? Type6022 { get; set; }
+        public global::GitHub.ReposSetTeamAccessRestrictionsRequest2? Type6022 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposRemoveTeamAccessRestrictionsRequest2? Type6023 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.ReposRemoveTeamAccessRestrictionsRequest2, global::System.Collections.Generic.IList<string>>? Type6023 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposAddUserAccessRestrictionsRequest? Type6024 { get; set; }
+        public global::GitHub.ReposRemoveTeamAccessRestrictionsRequest2? Type6024 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposSetUserAccessRestrictionsRequest? Type6025 { get; set; }
+        public global::GitHub.ReposAddUserAccessRestrictionsRequest? Type6025 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposRemoveUserAccessRestrictionsRequest? Type6026 { get; set; }
+        public global::GitHub.ReposSetUserAccessRestrictionsRequest? Type6026 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposRenameBranchRequest? Type6027 { get; set; }
+        public global::GitHub.ReposRemoveUserAccessRestrictionsRequest? Type6027 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequest? Type6028 { get; set; }
+        public global::GitHub.ReposRenameBranchRequest? Type6028 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestStatus? Type6029 { get; set; }
+        public global::GitHub.ChecksCreateRequest? Type6029 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestConclusion? Type6030 { get; set; }
+        public global::GitHub.ChecksCreateRequestStatus? Type6030 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestOutput? Type6031 { get; set; }
+        public global::GitHub.ChecksCreateRequestConclusion? Type6031 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ChecksCreateRequestOutputAnnotation>? Type6032 { get; set; }
+        public global::GitHub.ChecksCreateRequestOutput? Type6032 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestOutputAnnotation? Type6033 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ChecksCreateRequestOutputAnnotation>? Type6033 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestOutputAnnotationAnnotationLevel? Type6034 { get; set; }
+        public global::GitHub.ChecksCreateRequestOutputAnnotation? Type6034 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ChecksCreateRequestOutputImage>? Type6035 { get; set; }
+        public global::GitHub.ChecksCreateRequestOutputAnnotationAnnotationLevel? Type6035 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestOutputImage? Type6036 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ChecksCreateRequestOutputImage>? Type6036 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ChecksCreateRequestAction>? Type6037 { get; set; }
+        public global::GitHub.ChecksCreateRequestOutputImage? Type6037 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestAction? Type6038 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ChecksCreateRequestAction>? Type6038 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestVariant1? Type6039 { get; set; }
+        public global::GitHub.ChecksCreateRequestAction? Type6039 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestVariant1Status? Type6040 { get; set; }
+        public global::GitHub.ChecksCreateRequestVariant1? Type6040 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestVariant2? Type6041 { get; set; }
+        public global::GitHub.ChecksCreateRequestVariant1Status? Type6041 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestVariant2Status? Type6042 { get; set; }
+        public global::GitHub.ChecksCreateRequestVariant2? Type6042 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateRequestDiscriminator? Type6043 { get; set; }
+        public global::GitHub.ChecksCreateRequestVariant2Status? Type6043 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequest? Type6044 { get; set; }
+        public global::GitHub.ChecksCreateRequestDiscriminator? Type6044 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestStatus? Type6045 { get; set; }
+        public global::GitHub.ChecksUpdateRequest? Type6045 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestConclusion? Type6046 { get; set; }
+        public global::GitHub.ChecksUpdateRequestStatus? Type6046 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestOutput? Type6047 { get; set; }
+        public global::GitHub.ChecksUpdateRequestConclusion? Type6047 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ChecksUpdateRequestOutputAnnotation>? Type6048 { get; set; }
+        public global::GitHub.ChecksUpdateRequestOutput? Type6048 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestOutputAnnotation? Type6049 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ChecksUpdateRequestOutputAnnotation>? Type6049 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestOutputAnnotationAnnotationLevel? Type6050 { get; set; }
+        public global::GitHub.ChecksUpdateRequestOutputAnnotation? Type6050 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ChecksUpdateRequestOutputImage>? Type6051 { get; set; }
+        public global::GitHub.ChecksUpdateRequestOutputAnnotationAnnotationLevel? Type6051 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestOutputImage? Type6052 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ChecksUpdateRequestOutputImage>? Type6052 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ChecksUpdateRequestAction>? Type6053 { get; set; }
+        public global::GitHub.ChecksUpdateRequestOutputImage? Type6053 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestAction? Type6054 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ChecksUpdateRequestAction>? Type6054 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestVariant1? Type6055 { get; set; }
+        public global::GitHub.ChecksUpdateRequestAction? Type6055 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestVariant1Status? Type6056 { get; set; }
+        public global::GitHub.ChecksUpdateRequestVariant1? Type6056 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestVariant2? Type6057 { get; set; }
+        public global::GitHub.ChecksUpdateRequestVariant1Status? Type6057 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksUpdateRequestVariant2Status? Type6058 { get; set; }
+        public global::GitHub.ChecksUpdateRequestVariant2? Type6058 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksCreateSuiteRequest? Type6059 { get; set; }
+        public global::GitHub.ChecksUpdateRequestVariant2Status? Type6059 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksSetSuitesPreferencesRequest? Type6060 { get; set; }
+        public global::GitHub.ChecksCreateSuiteRequest? Type6060 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ChecksSetSuitesPreferencesRequestAutoTriggerCheck>? Type6061 { get; set; }
+        public global::GitHub.ChecksSetSuitesPreferencesRequest? Type6061 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksSetSuitesPreferencesRequestAutoTriggerCheck? Type6062 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ChecksSetSuitesPreferencesRequestAutoTriggerCheck>? Type6062 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningUpdateAlertRequest? Type6063 { get; set; }
+        public global::GitHub.ChecksSetSuitesPreferencesRequestAutoTriggerCheck? Type6063 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningCreateVariantAnalysisRequest? Type6064 { get; set; }
+        public global::GitHub.CodeScanningUpdateAlertRequest? Type6064 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningUploadSarifRequest? Type6065 { get; set; }
+        public global::GitHub.CodeScanningCreateVariantAnalysisRequest? Type6065 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateWithRepoForAuthenticatedUserRequest? Type6066 { get; set; }
+        public global::GitHub.CodeScanningUploadSarifRequest? Type6066 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateWithRepoForAuthenticatedUserRequestGeo? Type6067 { get; set; }
+        public global::GitHub.CodespacesCreateWithRepoForAuthenticatedUserRequest? Type6067 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateOrUpdateRepoSecretRequest? Type6068 { get; set; }
+        public global::GitHub.CodespacesCreateWithRepoForAuthenticatedUserRequestGeo? Type6068 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposAddCollaboratorRequest? Type6069 { get; set; }
+        public global::GitHub.CodespacesCreateOrUpdateRepoSecretRequest? Type6069 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateCommitCommentRequest? Type6070 { get; set; }
+        public global::GitHub.ReposAddCollaboratorRequest? Type6070 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForCommitCommentRequest? Type6071 { get; set; }
+        public global::GitHub.ReposUpdateCommitCommentRequest? Type6071 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForCommitCommentRequestContent? Type6072 { get; set; }
+        public global::GitHub.ReactionsCreateForCommitCommentRequest? Type6072 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateCommitCommentRequest? Type6073 { get; set; }
+        public global::GitHub.ReactionsCreateForCommitCommentRequestContent? Type6073 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateOrUpdateFileContentsRequest? Type6074 { get; set; }
+        public global::GitHub.ReposCreateCommitCommentRequest? Type6074 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateOrUpdateFileContentsRequestCommitter? Type6075 { get; set; }
+        public global::GitHub.ReposCreateOrUpdateFileContentsRequest? Type6075 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateOrUpdateFileContentsRequestAuthor? Type6076 { get; set; }
+        public global::GitHub.ReposCreateOrUpdateFileContentsRequestCommitter? Type6076 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposDeleteFileRequest? Type6077 { get; set; }
+        public global::GitHub.ReposCreateOrUpdateFileContentsRequestAuthor? Type6077 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposDeleteFileRequestCommitter? Type6078 { get; set; }
+        public global::GitHub.ReposDeleteFileRequest? Type6078 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposDeleteFileRequestAuthor? Type6079 { get; set; }
+        public global::GitHub.ReposDeleteFileRequestCommitter? Type6079 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotUpdateAlertRequest? Type6080 { get; set; }
+        public global::GitHub.ReposDeleteFileRequestAuthor? Type6080 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotUpdateAlertRequestState? Type6081 { get; set; }
+        public global::GitHub.DependabotUpdateAlertRequest? Type6081 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotUpdateAlertRequestDismissedReason? Type6082 { get; set; }
+        public global::GitHub.DependabotUpdateAlertRequestState? Type6082 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotCreateOrUpdateRepoSecretRequest? Type6083 { get; set; }
+        public global::GitHub.DependabotUpdateAlertRequestDismissedReason? Type6083 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateDeploymentRequest? Type6084 { get; set; }
+        public global::GitHub.DependabotCreateOrUpdateRepoSecretRequest? Type6084 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateDeploymentStatusRequest? Type6085 { get; set; }
+        public global::GitHub.ReposCreateDeploymentRequest? Type6085 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateDeploymentStatusRequestState? Type6086 { get; set; }
+        public global::GitHub.ReposCreateDeploymentStatusRequest? Type6086 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateDispatchEventRequest? Type6087 { get; set; }
+        public global::GitHub.ReposCreateDeploymentStatusRequestState? Type6087 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateOrUpdateEnvironmentRequest? Type6088 { get; set; }
+        public global::GitHub.ReposCreateDispatchEventRequest? Type6088 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ReposCreateOrUpdateEnvironmentRequestReviewer>? Type6089 { get; set; }
+        public global::GitHub.ReposCreateOrUpdateEnvironmentRequest? Type6089 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateOrUpdateEnvironmentRequestReviewer? Type6090 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ReposCreateOrUpdateEnvironmentRequestReviewer>? Type6090 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateDeploymentProtectionRuleRequest? Type6091 { get; set; }
+        public global::GitHub.ReposCreateOrUpdateEnvironmentRequestReviewer? Type6091 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateOrUpdateEnvironmentSecretRequest? Type6092 { get; set; }
+        public global::GitHub.ReposCreateDeploymentProtectionRuleRequest? Type6092 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsCreateEnvironmentVariableRequest? Type6093 { get; set; }
+        public global::GitHub.ActionsCreateOrUpdateEnvironmentSecretRequest? Type6093 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsUpdateEnvironmentVariableRequest? Type6094 { get; set; }
+        public global::GitHub.ActionsCreateEnvironmentVariableRequest? Type6094 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateForkRequest? Type6095 { get; set; }
+        public global::GitHub.ActionsUpdateEnvironmentVariableRequest? Type6095 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateBlobRequest? Type6096 { get; set; }
+        public global::GitHub.ReposCreateForkRequest? Type6096 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateCommitRequest? Type6097 { get; set; }
+        public global::GitHub.GitCreateBlobRequest? Type6097 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateCommitRequestAuthor? Type6098 { get; set; }
+        public global::GitHub.GitCreateCommitRequest? Type6098 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateCommitRequestCommitter? Type6099 { get; set; }
+        public global::GitHub.GitCreateCommitRequestAuthor? Type6099 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateRefRequest? Type6100 { get; set; }
+        public global::GitHub.GitCreateCommitRequestCommitter? Type6100 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitUpdateRefRequest? Type6101 { get; set; }
+        public global::GitHub.GitCreateRefRequest? Type6101 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateTagRequest? Type6102 { get; set; }
+        public global::GitHub.GitUpdateRefRequest? Type6102 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateTagRequestType? Type6103 { get; set; }
+        public global::GitHub.GitCreateTagRequest? Type6103 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateTagRequestTagger? Type6104 { get; set; }
+        public global::GitHub.GitCreateTagRequestType? Type6104 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateTreeRequest? Type6105 { get; set; }
+        public global::GitHub.GitCreateTagRequestTagger? Type6105 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.GitCreateTreeRequestTreeItem>? Type6106 { get; set; }
+        public global::GitHub.GitCreateTreeRequest? Type6106 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateTreeRequestTreeItem? Type6107 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GitCreateTreeRequestTreeItem>? Type6107 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateTreeRequestTreeItemMode? Type6108 { get; set; }
+        public global::GitHub.GitCreateTreeRequestTreeItem? Type6108 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GitCreateTreeRequestTreeItemType? Type6109 { get; set; }
+        public global::GitHub.GitCreateTreeRequestTreeItemMode? Type6109 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateWebhookRequest? Type6110 { get; set; }
+        public global::GitHub.GitCreateTreeRequestTreeItemType? Type6110 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateWebhookRequestConfig? Type6111 { get; set; }
+        public global::GitHub.ReposCreateWebhookRequest? Type6111 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateWebhookRequest? Type6112 { get; set; }
+        public global::GitHub.ReposCreateWebhookRequestConfig? Type6112 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateWebhookConfigForRepoRequest? Type6113 { get; set; }
+        public global::GitHub.ReposUpdateWebhookRequest? Type6113 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsStartImportRequest? Type6114 { get; set; }
+        public global::GitHub.ReposUpdateWebhookConfigForRepoRequest? Type6114 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsStartImportRequestVcs? Type6115 { get; set; }
+        public global::GitHub.MigrationsStartImportRequest? Type6115 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsUpdateImportRequest? Type6116 { get; set; }
+        public global::GitHub.MigrationsStartImportRequestVcs? Type6116 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsUpdateImportRequestVcs? Type6117 { get; set; }
+        public global::GitHub.MigrationsUpdateImportRequest? Type6117 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsMapCommitAuthorRequest? Type6118 { get; set; }
+        public global::GitHub.MigrationsUpdateImportRequestVcs? Type6118 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsSetLfsPreferenceRequest? Type6119 { get; set; }
+        public global::GitHub.MigrationsMapCommitAuthorRequest? Type6119 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsSetLfsPreferenceRequestUseLfs? Type6120 { get; set; }
+        public global::GitHub.MigrationsSetLfsPreferenceRequest? Type6120 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateInvitationRequest? Type6121 { get; set; }
+        public global::GitHub.MigrationsSetLfsPreferenceRequestUseLfs? Type6121 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateInvitationRequestPermissions? Type6122 { get; set; }
+        public global::GitHub.ReposUpdateInvitationRequest? Type6122 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesCreateRequest? Type6123 { get; set; }
+        public global::GitHub.ReposUpdateInvitationRequestPermissions? Type6123 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<string, int?>? Type6124 { get; set; }
+        public global::GitHub.IssuesCreateRequest? Type6124 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OneOf<string, global::GitHub.IssuesCreateRequestLabel>>? Type6125 { get; set; }
+        public global::GitHub.OneOf<string, int?>? Type6125 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<string, global::GitHub.IssuesCreateRequestLabel>? Type6126 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OneOf<string, global::GitHub.IssuesCreateRequestLabel>>? Type6126 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesCreateRequestLabel? Type6127 { get; set; }
+        public global::GitHub.OneOf<string, global::GitHub.IssuesCreateRequestLabel>? Type6127 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesUpdateCommentRequest? Type6128 { get; set; }
+        public global::GitHub.IssuesCreateRequestLabel? Type6128 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForIssueCommentRequest? Type6129 { get; set; }
+        public global::GitHub.IssuesUpdateCommentRequest? Type6129 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForIssueCommentRequestContent? Type6130 { get; set; }
+        public global::GitHub.ReactionsCreateForIssueCommentRequest? Type6130 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesUpdateRequest? Type6131 { get; set; }
+        public global::GitHub.ReactionsCreateForIssueCommentRequestContent? Type6131 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesUpdateRequestState? Type6132 { get; set; }
+        public global::GitHub.IssuesUpdateRequest? Type6132 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesUpdateRequestStateReason? Type6133 { get; set; }
+        public global::GitHub.IssuesUpdateRequestState? Type6133 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OneOf<string, global::GitHub.IssuesUpdateRequestLabel>>? Type6134 { get; set; }
+        public global::GitHub.IssuesUpdateRequestStateReason? Type6134 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<string, global::GitHub.IssuesUpdateRequestLabel>? Type6135 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OneOf<string, global::GitHub.IssuesUpdateRequestLabel>>? Type6135 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesUpdateRequestLabel? Type6136 { get; set; }
+        public global::GitHub.OneOf<string, global::GitHub.IssuesUpdateRequestLabel>? Type6136 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesAddAssigneesRequest? Type6137 { get; set; }
+        public global::GitHub.IssuesUpdateRequestLabel? Type6137 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesRemoveAssigneesRequest? Type6138 { get; set; }
+        public global::GitHub.IssuesAddAssigneesRequest? Type6138 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesCreateCommentRequest? Type6139 { get; set; }
+        public global::GitHub.IssuesRemoveAssigneesRequest? Type6139 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesAddLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>, string>? Type6140 { get; set; }
+        public global::GitHub.IssuesCreateCommentRequest? Type6140 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesAddLabelsRequestVariant1? Type6141 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.IssuesAddLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesAddLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>, string>? Type6141 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesAddLabelsRequestVariant3? Type6142 { get; set; }
+        public global::GitHub.IssuesAddLabelsRequestVariant1? Type6142 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant3Label>? Type6143 { get; set; }
+        public global::GitHub.IssuesAddLabelsRequestVariant3? Type6143 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesAddLabelsRequestVariant3Label? Type6144 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant3Label>? Type6144 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>? Type6145 { get; set; }
+        public global::GitHub.IssuesAddLabelsRequestVariant3Label? Type6145 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesAddLabelsRequestVariant4Item? Type6146 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.IssuesAddLabelsRequestVariant4Item>? Type6146 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.IssuesSetLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesSetLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesSetLabelsRequestVariant4Item>, string>? Type6147 { get; set; }
+        public global::GitHub.IssuesAddLabelsRequestVariant4Item? Type6147 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesSetLabelsRequestVariant1? Type6148 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.IssuesSetLabelsRequestVariant1, global::System.Collections.Generic.IList<string>, global::GitHub.IssuesSetLabelsRequestVariant3, global::System.Collections.Generic.IList<global::GitHub.IssuesSetLabelsRequestVariant4Item>, string>? Type6148 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesSetLabelsRequestVariant3? Type6149 { get; set; }
+        public global::GitHub.IssuesSetLabelsRequestVariant1? Type6149 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.IssuesSetLabelsRequestVariant3Label>? Type6150 { get; set; }
+        public global::GitHub.IssuesSetLabelsRequestVariant3? Type6150 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesSetLabelsRequestVariant3Label? Type6151 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.IssuesSetLabelsRequestVariant3Label>? Type6151 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.IssuesSetLabelsRequestVariant4Item>? Type6152 { get; set; }
+        public global::GitHub.IssuesSetLabelsRequestVariant3Label? Type6152 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesSetLabelsRequestVariant4Item? Type6153 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.IssuesSetLabelsRequestVariant4Item>? Type6153 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesLockRequest? Type6154 { get; set; }
+        public global::GitHub.IssuesSetLabelsRequestVariant4Item? Type6154 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesLockRequestLockReason? Type6155 { get; set; }
+        public global::GitHub.IssuesLockRequest? Type6155 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForIssueRequest? Type6156 { get; set; }
+        public global::GitHub.IssuesLockRequestLockReason? Type6156 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForIssueRequestContent? Type6157 { get; set; }
+        public global::GitHub.ReactionsCreateForIssueRequest? Type6157 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesRemoveSubIssueRequest? Type6158 { get; set; }
+        public global::GitHub.ReactionsCreateForIssueRequestContent? Type6158 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesAddSubIssueRequest? Type6159 { get; set; }
+        public global::GitHub.IssuesRemoveSubIssueRequest? Type6159 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesReprioritizeSubIssueRequest? Type6160 { get; set; }
+        public global::GitHub.IssuesAddSubIssueRequest? Type6160 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateDeployKeyRequest? Type6161 { get; set; }
+        public global::GitHub.IssuesReprioritizeSubIssueRequest? Type6161 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesCreateLabelRequest? Type6162 { get; set; }
+        public global::GitHub.ReposCreateDeployKeyRequest? Type6162 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesUpdateLabelRequest? Type6163 { get; set; }
+        public global::GitHub.IssuesCreateLabelRequest? Type6163 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposMergeUpstreamRequest? Type6164 { get; set; }
+        public global::GitHub.IssuesUpdateLabelRequest? Type6164 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposMergeRequest? Type6165 { get; set; }
+        public global::GitHub.ReposMergeUpstreamRequest? Type6165 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesCreateMilestoneRequest? Type6166 { get; set; }
+        public global::GitHub.ReposMergeRequest? Type6166 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesCreateMilestoneRequestState? Type6167 { get; set; }
+        public global::GitHub.IssuesCreateMilestoneRequest? Type6167 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesUpdateMilestoneRequest? Type6168 { get; set; }
+        public global::GitHub.IssuesCreateMilestoneRequestState? Type6168 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesUpdateMilestoneRequestState? Type6169 { get; set; }
+        public global::GitHub.IssuesUpdateMilestoneRequest? Type6169 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActivityMarkRepoNotificationsAsReadRequest? Type6170 { get; set; }
+        public global::GitHub.IssuesUpdateMilestoneRequestState? Type6170 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreatePagesSiteRequest? Type6171 { get; set; }
+        public global::GitHub.ActivityMarkRepoNotificationsAsReadRequest? Type6171 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreatePagesSiteRequestBuildType? Type6172 { get; set; }
+        public global::GitHub.ReposCreatePagesSiteRequest? Type6172 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreatePagesSiteRequestSource? Type6173 { get; set; }
+        public global::GitHub.ReposCreatePagesSiteRequestBuildType? Type6173 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreatePagesSiteRequestSourcePath? Type6174 { get; set; }
+        public global::GitHub.ReposCreatePagesSiteRequestSource? Type6174 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateInformationAboutPagesSiteRequest? Type6175 { get; set; }
+        public global::GitHub.ReposCreatePagesSiteRequestSourcePath? Type6175 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateInformationAboutPagesSiteRequestBuildType? Type6176 { get; set; }
+        public global::GitHub.ReposUpdateInformationAboutPagesSiteRequest? Type6176 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AnyOf<global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum?, global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum2>? Type6177 { get; set; }
+        public global::GitHub.ReposUpdateInformationAboutPagesSiteRequestBuildType? Type6177 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum? Type6178 { get; set; }
+        public global::GitHub.AnyOf<global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum?, global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum2>? Type6178 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum2? Type6179 { get; set; }
+        public global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum? Type6179 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath? Type6180 { get; set; }
+        public global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnum2? Type6180 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreatePagesDeploymentRequest? Type6181 { get; set; }
+        public global::GitHub.ReposUpdateInformationAboutPagesSiteRequestSourceEnumPath? Type6181 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateForRepoRequest? Type6182 { get; set; }
+        public global::GitHub.ReposCreatePagesDeploymentRequest? Type6182 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateOrUpdateCustomPropertiesValuesRequest? Type6183 { get; set; }
+        public global::GitHub.ProjectsCreateForRepoRequest? Type6183 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsCreateRequest? Type6184 { get; set; }
+        public global::GitHub.ReposCreateOrUpdateCustomPropertiesValuesRequest? Type6184 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsUpdateReviewCommentRequest? Type6185 { get; set; }
+        public global::GitHub.PullsCreateRequest? Type6185 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForPullRequestReviewCommentRequest? Type6186 { get; set; }
+        public global::GitHub.PullsUpdateReviewCommentRequest? Type6186 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForPullRequestReviewCommentRequestContent? Type6187 { get; set; }
+        public global::GitHub.ReactionsCreateForPullRequestReviewCommentRequest? Type6187 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsUpdateRequest? Type6188 { get; set; }
+        public global::GitHub.ReactionsCreateForPullRequestReviewCommentRequestContent? Type6188 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsUpdateRequestState? Type6189 { get; set; }
+        public global::GitHub.PullsUpdateRequest? Type6189 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateWithPrForAuthenticatedUserRequest? Type6190 { get; set; }
+        public global::GitHub.PullsUpdateRequestState? Type6190 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateWithPrForAuthenticatedUserRequestGeo? Type6191 { get; set; }
+        public global::GitHub.CodespacesCreateWithPrForAuthenticatedUserRequest? Type6191 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsCreateReviewCommentRequest? Type6192 { get; set; }
+        public global::GitHub.CodespacesCreateWithPrForAuthenticatedUserRequestGeo? Type6192 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsCreateReviewCommentRequestSide? Type6193 { get; set; }
+        public global::GitHub.PullsCreateReviewCommentRequest? Type6193 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsCreateReviewCommentRequestStartSide? Type6194 { get; set; }
+        public global::GitHub.PullsCreateReviewCommentRequestSide? Type6194 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsCreateReviewCommentRequestSubjectType? Type6195 { get; set; }
+        public global::GitHub.PullsCreateReviewCommentRequestStartSide? Type6195 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsCreateReplyForReviewCommentRequest? Type6196 { get; set; }
+        public global::GitHub.PullsCreateReviewCommentRequestSubjectType? Type6196 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsMergeRequest? Type6197 { get; set; }
+        public global::GitHub.PullsCreateReplyForReviewCommentRequest? Type6197 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsMergeRequestMergeMethod? Type6198 { get; set; }
+        public global::GitHub.PullsMergeRequest? Type6198 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsRequestReviewersRequest? Type6199 { get; set; }
+        public global::GitHub.PullsMergeRequestMergeMethod? Type6199 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsRemoveRequestedReviewersRequest? Type6200 { get; set; }
+        public global::GitHub.PullsRequestReviewersRequest? Type6200 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsCreateReviewRequest? Type6201 { get; set; }
+        public global::GitHub.PullsRemoveRequestedReviewersRequest? Type6201 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsCreateReviewRequestEvent? Type6202 { get; set; }
+        public global::GitHub.PullsCreateReviewRequest? Type6202 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.PullsCreateReviewRequestComment>? Type6203 { get; set; }
+        public global::GitHub.PullsCreateReviewRequestEvent? Type6203 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsCreateReviewRequestComment? Type6204 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.PullsCreateReviewRequestComment>? Type6204 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsUpdateReviewRequest? Type6205 { get; set; }
+        public global::GitHub.PullsCreateReviewRequestComment? Type6205 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsDismissReviewRequest? Type6206 { get; set; }
+        public global::GitHub.PullsUpdateReviewRequest? Type6206 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsDismissReviewRequestEvent? Type6207 { get; set; }
+        public global::GitHub.PullsDismissReviewRequest? Type6207 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsSubmitReviewRequest? Type6208 { get; set; }
+        public global::GitHub.PullsDismissReviewRequestEvent? Type6208 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsSubmitReviewRequestEvent? Type6209 { get; set; }
+        public global::GitHub.PullsSubmitReviewRequest? Type6209 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsUpdateBranchRequest? Type6210 { get; set; }
+        public global::GitHub.PullsSubmitReviewRequestEvent? Type6210 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateReleaseRequest? Type6211 { get; set; }
+        public global::GitHub.PullsUpdateBranchRequest? Type6211 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateReleaseRequestMakeLatest? Type6212 { get; set; }
+        public global::GitHub.ReposCreateReleaseRequest? Type6212 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateReleaseAssetRequest? Type6213 { get; set; }
+        public global::GitHub.ReposCreateReleaseRequestMakeLatest? Type6213 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGenerateReleaseNotesRequest? Type6214 { get; set; }
+        public global::GitHub.ReposUpdateReleaseAssetRequest? Type6214 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateReleaseRequest? Type6215 { get; set; }
+        public global::GitHub.ReposGenerateReleaseNotesRequest? Type6215 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateReleaseRequestMakeLatest? Type6216 { get; set; }
+        public global::GitHub.ReposUpdateReleaseRequest? Type6216 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public byte[]? Type6217 { get; set; }
+        public global::GitHub.ReposUpdateReleaseRequestMakeLatest? Type6217 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForReleaseRequest? Type6218 { get; set; }
+        public byte[]? Type6218 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForReleaseRequestContent? Type6219 { get; set; }
+        public global::GitHub.ReactionsCreateForReleaseRequest? Type6219 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateRepoRulesetRequest? Type6220 { get; set; }
+        public global::GitHub.ReactionsCreateForReleaseRequestContent? Type6220 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateRepoRulesetRequestTarget? Type6221 { get; set; }
+        public global::GitHub.ReposCreateRepoRulesetRequest? Type6221 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRepoRulesetRequest? Type6222 { get; set; }
+        public global::GitHub.ReposCreateRepoRulesetRequestTarget? Type6222 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposUpdateRepoRulesetRequestTarget? Type6223 { get; set; }
+        public global::GitHub.ReposUpdateRepoRulesetRequest? Type6223 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningUpdateAlertRequest? Type6224 { get; set; }
+        public global::GitHub.ReposUpdateRepoRulesetRequestTarget? Type6224 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningCreatePushProtectionBypassRequest? Type6225 { get; set; }
+        public global::GitHub.SecretScanningUpdateAlertRequest? Type6225 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateCommitStatusRequest? Type6226 { get; set; }
+        public global::GitHub.SecretScanningCreatePushProtectionBypassRequest? Type6226 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateCommitStatusRequestState? Type6227 { get; set; }
+        public global::GitHub.ReposCreateCommitStatusRequest? Type6227 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActivitySetRepoSubscriptionRequest? Type6228 { get; set; }
+        public global::GitHub.ReposCreateCommitStatusRequestState? Type6228 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateTagProtectionRequest? Type6229 { get; set; }
+        public global::GitHub.ActivitySetRepoSubscriptionRequest? Type6229 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposReplaceAllTopicsRequest? Type6230 { get; set; }
+        public global::GitHub.ReposCreateTagProtectionRequest? Type6230 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposTransferRequest? Type6231 { get; set; }
+        public global::GitHub.ReposReplaceAllTopicsRequest? Type6231 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateUsingTemplateRequest? Type6232 { get; set; }
+        public global::GitHub.ReposTransferRequest? Type6232 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateLegacyRequest? Type6233 { get; set; }
+        public global::GitHub.ReposCreateUsingTemplateRequest? Type6233 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateLegacyRequestPrivacy? Type6234 { get; set; }
+        public global::GitHub.TeamsUpdateLegacyRequest? Type6234 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateLegacyRequestNotificationSetting? Type6235 { get; set; }
+        public global::GitHub.TeamsUpdateLegacyRequestPrivacy? Type6235 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateLegacyRequestPermission? Type6236 { get; set; }
+        public global::GitHub.TeamsUpdateLegacyRequestNotificationSetting? Type6236 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsCreateDiscussionLegacyRequest? Type6237 { get; set; }
+        public global::GitHub.TeamsUpdateLegacyRequestPermission? Type6237 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateDiscussionLegacyRequest? Type6238 { get; set; }
+        public global::GitHub.TeamsCreateDiscussionLegacyRequest? Type6238 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsCreateDiscussionCommentLegacyRequest? Type6239 { get; set; }
+        public global::GitHub.TeamsUpdateDiscussionLegacyRequest? Type6239 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsUpdateDiscussionCommentLegacyRequest? Type6240 { get; set; }
+        public global::GitHub.TeamsCreateDiscussionCommentLegacyRequest? Type6240 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForTeamDiscussionCommentLegacyRequest? Type6241 { get; set; }
+        public global::GitHub.TeamsUpdateDiscussionCommentLegacyRequest? Type6241 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForTeamDiscussionCommentLegacyRequestContent? Type6242 { get; set; }
+        public global::GitHub.ReactionsCreateForTeamDiscussionCommentLegacyRequest? Type6242 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForTeamDiscussionLegacyRequest? Type6243 { get; set; }
+        public global::GitHub.ReactionsCreateForTeamDiscussionCommentLegacyRequestContent? Type6243 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsCreateForTeamDiscussionLegacyRequestContent? Type6244 { get; set; }
+        public global::GitHub.ReactionsCreateForTeamDiscussionLegacyRequest? Type6244 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateMembershipForUserLegacyRequest? Type6245 { get; set; }
+        public global::GitHub.ReactionsCreateForTeamDiscussionLegacyRequestContent? Type6245 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateMembershipForUserLegacyRequestRole? Type6246 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateMembershipForUserLegacyRequest? Type6246 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateProjectPermissionsLegacyRequest? Type6247 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateMembershipForUserLegacyRequestRole? Type6247 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateProjectPermissionsLegacyRequestPermission? Type6248 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateProjectPermissionsLegacyRequest? Type6248 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateRepoPermissionsLegacyRequest? Type6249 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateProjectPermissionsLegacyRequestPermission? Type6249 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateRepoPermissionsLegacyRequestPermission? Type6250 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateRepoPermissionsLegacyRequest? Type6250 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersUpdateAuthenticatedRequest? Type6251 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateRepoPermissionsLegacyRequestPermission? Type6251 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1, global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2>? Type6252 { get; set; }
+        public global::GitHub.UsersUpdateAuthenticatedRequest? Type6252 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1? Type6253 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1, global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2>? Type6253 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1Geo? Type6254 { get; set; }
+        public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1? Type6254 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2? Type6255 { get; set; }
+        public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant1Geo? Type6255 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2PullRequest? Type6256 { get; set; }
+        public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2? Type6256 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2Geo? Type6257 { get; set; }
+        public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2PullRequest? Type6257 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest? Type6258 { get; set; }
+        public global::GitHub.CodespacesCreateForAuthenticatedUserRequestVariant2Geo? Type6258 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.AnyOf<int?, string>>? Type6259 { get; set; }
+        public global::GitHub.CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest? Type6259 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AnyOf<int?, string>? Type6260 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.AnyOf<int?, string>>? Type6260 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesSetRepositoriesForSecretForAuthenticatedUserRequest? Type6261 { get; set; }
+        public global::GitHub.AnyOf<int?, string>? Type6261 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesUpdateForAuthenticatedUserRequest? Type6262 { get; set; }
+        public global::GitHub.CodespacesSetRepositoriesForSecretForAuthenticatedUserRequest? Type6262 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesPublishForAuthenticatedUserRequest? Type6263 { get; set; }
+        public global::GitHub.CodespacesUpdateForAuthenticatedUserRequest? Type6263 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequest? Type6264 { get; set; }
+        public global::GitHub.CodespacesPublishForAuthenticatedUserRequest? Type6264 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequestVisibility? Type6265 { get; set; }
+        public global::GitHub.UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequest? Type6265 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest2, global::System.Collections.Generic.IList<string>, string>? Type6266 { get; set; }
+        public global::GitHub.UsersSetPrimaryEmailVisibilityForAuthenticatedUserRequestVisibility? Type6266 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersAddEmailForAuthenticatedUserRequest2? Type6267 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.UsersAddEmailForAuthenticatedUserRequest2, global::System.Collections.Generic.IList<string>, string>? Type6267 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.UsersDeleteEmailForAuthenticatedUserRequest2, global::System.Collections.Generic.IList<string>, string>? Type6268 { get; set; }
+        public global::GitHub.UsersAddEmailForAuthenticatedUserRequest2? Type6268 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersDeleteEmailForAuthenticatedUserRequest2? Type6269 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.UsersDeleteEmailForAuthenticatedUserRequest2, global::System.Collections.Generic.IList<string>, string>? Type6269 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersCreateGpgKeyForAuthenticatedUserRequest? Type6270 { get; set; }
+        public global::GitHub.UsersDeleteEmailForAuthenticatedUserRequest2? Type6270 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersCreatePublicSshKeyForAuthenticatedUserRequest? Type6271 { get; set; }
+        public global::GitHub.UsersCreateGpgKeyForAuthenticatedUserRequest? Type6271 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdateMembershipForAuthenticatedUserRequest? Type6272 { get; set; }
+        public global::GitHub.UsersCreatePublicSshKeyForAuthenticatedUserRequest? Type6272 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsUpdateMembershipForAuthenticatedUserRequestState? Type6273 { get; set; }
+        public global::GitHub.OrgsUpdateMembershipForAuthenticatedUserRequest? Type6273 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsStartForAuthenticatedUserRequest? Type6274 { get; set; }
+        public global::GitHub.OrgsUpdateMembershipForAuthenticatedUserRequestState? Type6274 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForAuthenticatedUserRequestExcludeItem>? Type6275 { get; set; }
+        public global::GitHub.MigrationsStartForAuthenticatedUserRequest? Type6275 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsStartForAuthenticatedUserRequestExcludeItem? Type6276 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.MigrationsStartForAuthenticatedUserRequestExcludeItem>? Type6276 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateForAuthenticatedUserRequest? Type6277 { get; set; }
+        public global::GitHub.MigrationsStartForAuthenticatedUserRequestExcludeItem? Type6277 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateForAuthenticatedUserRequest? Type6278 { get; set; }
+        public global::GitHub.ProjectsCreateForAuthenticatedUserRequest? Type6278 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateForAuthenticatedUserRequestSquashMergeCommitTitle? Type6279 { get; set; }
+        public global::GitHub.ReposCreateForAuthenticatedUserRequest? Type6279 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateForAuthenticatedUserRequestSquashMergeCommitMessage? Type6280 { get; set; }
+        public global::GitHub.ReposCreateForAuthenticatedUserRequestSquashMergeCommitTitle? Type6280 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateForAuthenticatedUserRequestMergeCommitTitle? Type6281 { get; set; }
+        public global::GitHub.ReposCreateForAuthenticatedUserRequestSquashMergeCommitMessage? Type6281 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateForAuthenticatedUserRequestMergeCommitMessage? Type6282 { get; set; }
+        public global::GitHub.ReposCreateForAuthenticatedUserRequestMergeCommitTitle? Type6282 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersAddSocialAccountForAuthenticatedUserRequest? Type6283 { get; set; }
+        public global::GitHub.ReposCreateForAuthenticatedUserRequestMergeCommitMessage? Type6283 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersDeleteSocialAccountForAuthenticatedUserRequest? Type6284 { get; set; }
+        public global::GitHub.UsersAddSocialAccountForAuthenticatedUserRequest? Type6284 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersCreateSshSigningKeyForAuthenticatedUserRequest? Type6285 { get; set; }
+        public global::GitHub.UsersDeleteSocialAccountForAuthenticatedUserRequest? Type6285 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesType? Type6286 { get; set; }
+        public global::GitHub.UsersCreateSshSigningKeyForAuthenticatedUserRequest? Type6286 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSeverity? Type6287 { get; set; }
+        public global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesType? Type6287 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? Type6288 { get; set; }
+        public global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSeverity? Type6288 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort? Type6289 { get; set; }
+        public global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesDirection? Type6289 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForEnterpriseHasVariant2Item>>? Type6290 { get; set; }
+        public global::GitHub.SecurityAdvisoriesListGlobalAdvisoriesSort? Type6290 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForEnterpriseHasVariant2Item>? Type6291 { get; set; }
+        public global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForEnterpriseHasVariant2Item>>? Type6291 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForEnterpriseHasVariant2Item? Type6292 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForEnterpriseHasVariant2Item>? Type6292 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForEnterpriseScope? Type6293 { get; set; }
+        public global::GitHub.DependabotListAlertsForEnterpriseHasVariant2Item? Type6293 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForEnterpriseSort? Type6294 { get; set; }
+        public global::GitHub.DependabotListAlertsForEnterpriseScope? Type6294 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForEnterpriseDirection? Type6295 { get; set; }
+        public global::GitHub.DependabotListAlertsForEnterpriseSort? Type6295 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForEnterpriseState? Type6296 { get; set; }
+        public global::GitHub.DependabotListAlertsForEnterpriseDirection? Type6296 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForEnterpriseSort? Type6297 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForEnterpriseState? Type6297 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForEnterpriseDirection? Type6298 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForEnterpriseSort? Type6298 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListFilter? Type6299 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForEnterpriseDirection? Type6299 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListState? Type6300 { get; set; }
+        public global::GitHub.IssuesListFilter? Type6300 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListSort? Type6301 { get; set; }
+        public global::GitHub.IssuesListState? Type6301 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListDirection? Type6302 { get; set; }
+        public global::GitHub.IssuesListSort? Type6302 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AppsListAccountsForPlanSort? Type6303 { get; set; }
+        public global::GitHub.IssuesListDirection? Type6303 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AppsListAccountsForPlanDirection? Type6304 { get; set; }
+        public global::GitHub.AppsListAccountsForPlanSort? Type6304 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AppsListAccountsForPlanStubbedSort? Type6305 { get; set; }
+        public global::GitHub.AppsListAccountsForPlanDirection? Type6305 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AppsListAccountsForPlanStubbedDirection? Type6306 { get; set; }
+        public global::GitHub.AppsListAccountsForPlanStubbedSort? Type6306 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CampaignsListOrgCampaignsDirection? Type6307 { get; set; }
+        public global::GitHub.AppsListAccountsForPlanStubbedDirection? Type6307 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CampaignsListOrgCampaignsSort? Type6308 { get; set; }
+        public global::GitHub.CampaignsListOrgCampaignsDirection? Type6308 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListAlertsForOrgDirection? Type6309 { get; set; }
+        public global::GitHub.CampaignsListOrgCampaignsSort? Type6309 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListAlertsForOrgSort? Type6310 { get; set; }
+        public global::GitHub.CodeScanningListAlertsForOrgDirection? Type6310 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType? Type6311 { get; set; }
+        public global::GitHub.CodeScanningListAlertsForOrgSort? Type6311 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForOrgHasVariant2Item>>? Type6312 { get; set; }
+        public global::GitHub.CodeSecurityGetConfigurationsForOrgTargetType? Type6312 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForOrgHasVariant2Item>? Type6313 { get; set; }
+        public global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForOrgHasVariant2Item>>? Type6313 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForOrgHasVariant2Item? Type6314 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForOrgHasVariant2Item>? Type6314 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForOrgScope? Type6315 { get; set; }
+        public global::GitHub.DependabotListAlertsForOrgHasVariant2Item? Type6315 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForOrgSort? Type6316 { get; set; }
+        public global::GitHub.DependabotListAlertsForOrgScope? Type6316 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForOrgDirection? Type6317 { get; set; }
+        public global::GitHub.DependabotListAlertsForOrgSort? Type6317 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ApiInsightsGetRouteStatsByActorActorType? Type6318 { get; set; }
+        public global::GitHub.DependabotListAlertsForOrgDirection? Type6318 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ApiInsightsGetRouteStatsByActorDirection? Type6319 { get; set; }
+        public global::GitHub.ApiInsightsGetRouteStatsByActorActorType? Type6319 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetRouteStatsByActorSortItem>? Type6320 { get; set; }
+        public global::GitHub.ApiInsightsGetRouteStatsByActorDirection? Type6320 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ApiInsightsGetRouteStatsByActorSortItem? Type6321 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetRouteStatsByActorSortItem>? Type6321 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ApiInsightsGetSubjectStatsDirection? Type6322 { get; set; }
+        public global::GitHub.ApiInsightsGetRouteStatsByActorSortItem? Type6322 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetSubjectStatsSortItem>? Type6323 { get; set; }
+        public global::GitHub.ApiInsightsGetSubjectStatsDirection? Type6323 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ApiInsightsGetSubjectStatsSortItem? Type6324 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetSubjectStatsSortItem>? Type6324 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ApiInsightsGetSummaryStatsByActorActorType? Type6325 { get; set; }
+        public global::GitHub.ApiInsightsGetSubjectStatsSortItem? Type6325 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ApiInsightsGetTimeStatsByActorActorType? Type6326 { get; set; }
+        public global::GitHub.ApiInsightsGetSummaryStatsByActorActorType? Type6326 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ApiInsightsGetUserStatsDirection? Type6327 { get; set; }
+        public global::GitHub.ApiInsightsGetTimeStatsByActorActorType? Type6327 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetUserStatsSortItem>? Type6328 { get; set; }
+        public global::GitHub.ApiInsightsGetUserStatsDirection? Type6328 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ApiInsightsGetUserStatsSortItem? Type6329 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ApiInsightsGetUserStatsSortItem>? Type6329 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListPendingInvitationsRole? Type6330 { get; set; }
+        public global::GitHub.ApiInsightsGetUserStatsSortItem? Type6330 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListPendingInvitationsInvitationSource? Type6331 { get; set; }
+        public global::GitHub.OrgsListPendingInvitationsRole? Type6331 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForOrgFilter? Type6332 { get; set; }
+        public global::GitHub.OrgsListPendingInvitationsInvitationSource? Type6332 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForOrgState? Type6333 { get; set; }
+        public global::GitHub.IssuesListForOrgFilter? Type6333 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForOrgSort? Type6334 { get; set; }
+        public global::GitHub.IssuesListForOrgState? Type6334 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForOrgDirection? Type6335 { get; set; }
+        public global::GitHub.IssuesListForOrgSort? Type6335 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListMembersFilter? Type6336 { get; set; }
+        public global::GitHub.IssuesListForOrgDirection? Type6336 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListMembersRole? Type6337 { get; set; }
+        public global::GitHub.OrgsListMembersFilter? Type6337 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExcludeItem>? Type6338 { get; set; }
+        public global::GitHub.OrgsListMembersRole? Type6338 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsListForOrgExcludeItem? Type6339 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.MigrationsListForOrgExcludeItem>? Type6339 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.MigrationsGetStatusForOrgExcludeItem>? Type6340 { get; set; }
+        public global::GitHub.MigrationsListForOrgExcludeItem? Type6340 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.MigrationsGetStatusForOrgExcludeItem? Type6341 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.MigrationsGetStatusForOrgExcludeItem>? Type6341 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListOutsideCollaboratorsFilter? Type6342 { get; set; }
+        public global::GitHub.MigrationsGetStatusForOrgExcludeItem? Type6342 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesListPackagesForOrganizationPackageType? Type6343 { get; set; }
+        public global::GitHub.OrgsListOutsideCollaboratorsFilter? Type6343 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesListPackagesForOrganizationVisibility? Type6344 { get; set; }
+        public global::GitHub.PackagesListPackagesForOrganizationPackageType? Type6344 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetPackageForOrganizationPackageType? Type6345 { get; set; }
+        public global::GitHub.PackagesListPackagesForOrganizationVisibility? Type6345 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesDeletePackageForOrgPackageType? Type6346 { get; set; }
+        public global::GitHub.PackagesGetPackageForOrganizationPackageType? Type6346 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesRestorePackageForOrgPackageType? Type6347 { get; set; }
+        public global::GitHub.PackagesDeletePackageForOrgPackageType? Type6347 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgPackageType? Type6348 { get; set; }
+        public global::GitHub.PackagesRestorePackageForOrgPackageType? Type6348 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState? Type6349 { get; set; }
+        public global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgPackageType? Type6349 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetPackageVersionForOrganizationPackageType? Type6350 { get; set; }
+        public global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByOrgState? Type6350 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesDeletePackageVersionForOrgPackageType? Type6351 { get; set; }
+        public global::GitHub.PackagesGetPackageVersionForOrganizationPackageType? Type6351 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesRestorePackageVersionForOrgPackageType? Type6352 { get; set; }
+        public global::GitHub.PackagesDeletePackageVersionForOrgPackageType? Type6352 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListPatGrantRequestsSort? Type6353 { get; set; }
+        public global::GitHub.PackagesRestorePackageVersionForOrgPackageType? Type6353 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListPatGrantRequestsDirection? Type6354 { get; set; }
+        public global::GitHub.OrgsListPatGrantRequestsSort? Type6354 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListPatGrantsSort? Type6355 { get; set; }
+        public global::GitHub.OrgsListPatGrantRequestsDirection? Type6355 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListPatGrantsDirection? Type6356 { get; set; }
+        public global::GitHub.OrgsListPatGrantsSort? Type6356 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsListForOrgState? Type6357 { get; set; }
+        public global::GitHub.OrgsListPatGrantsDirection? Type6357 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForOrgType? Type6358 { get; set; }
+        public global::GitHub.ProjectsListForOrgState? Type6358 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForOrgSort? Type6359 { get; set; }
+        public global::GitHub.ReposListForOrgType? Type6359 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForOrgDirection? Type6360 { get; set; }
+        public global::GitHub.ReposListForOrgSort? Type6360 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetOrgRuleSuitesTimePeriod? Type6361 { get; set; }
+        public global::GitHub.ReposListForOrgDirection? Type6361 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetOrgRuleSuitesRuleSuiteResult? Type6362 { get; set; }
+        public global::GitHub.ReposGetOrgRuleSuitesTimePeriod? Type6362 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForOrgState? Type6363 { get; set; }
+        public global::GitHub.ReposGetOrgRuleSuitesRuleSuiteResult? Type6363 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForOrgSort? Type6364 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForOrgState? Type6364 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForOrgDirection? Type6365 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForOrgSort? Type6365 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesDirection? Type6366 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForOrgDirection? Type6366 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort? Type6367 { get; set; }
+        public global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesDirection? Type6367 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesState? Type6368 { get; set; }
+        public global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesSort? Type6368 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsListDiscussionsInOrgDirection? Type6369 { get; set; }
+        public global::GitHub.SecurityAdvisoriesListOrgRepositoryAdvisoriesState? Type6369 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsListDiscussionCommentsInOrgDirection? Type6370 { get; set; }
+        public global::GitHub.TeamsListDiscussionsInOrgDirection? Type6370 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsListForTeamDiscussionCommentInOrgContent? Type6371 { get; set; }
+        public global::GitHub.TeamsListDiscussionCommentsInOrgDirection? Type6371 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsListForTeamDiscussionInOrgContent? Type6372 { get; set; }
+        public global::GitHub.ReactionsListForTeamDiscussionCommentInOrgContent? Type6372 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsListMembersInOrgRole? Type6373 { get; set; }
+        public global::GitHub.ReactionsListForTeamDiscussionInOrgContent? Type6373 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposSecurityProduct? Type6374 { get; set; }
+        public global::GitHub.TeamsListMembersInOrgRole? Type6374 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposEnablement? Type6375 { get; set; }
+        public global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposSecurityProduct? Type6375 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsListCardsArchivedState? Type6376 { get; set; }
+        public global::GitHub.OrgsEnableOrDisableSecurityProductOnAllOrgReposEnablement? Type6376 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsListCollaboratorsAffiliation? Type6377 { get; set; }
+        public global::GitHub.ProjectsListCardsArchivedState? Type6377 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGetActionsCacheListSort? Type6378 { get; set; }
+        public global::GitHub.ProjectsListCollaboratorsAffiliation? Type6378 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGetActionsCacheListDirection? Type6379 { get; set; }
+        public global::GitHub.ActionsGetActionsCacheListSort? Type6379 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListWorkflowRunsForRepoStatus? Type6380 { get; set; }
+        public global::GitHub.ActionsGetActionsCacheListDirection? Type6380 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListJobsForWorkflowRunFilter? Type6381 { get; set; }
+        public global::GitHub.ActionsListWorkflowRunsForRepoStatus? Type6381 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListWorkflowRunsStatus? Type6382 { get; set; }
+        public global::GitHub.ActionsListJobsForWorkflowRunFilter? Type6382 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListActivitiesDirection? Type6383 { get; set; }
+        public global::GitHub.ActionsListWorkflowRunsStatus? Type6383 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListActivitiesTimePeriod? Type6384 { get; set; }
+        public global::GitHub.ReposListActivitiesDirection? Type6384 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListActivitiesActivityType? Type6385 { get; set; }
+        public global::GitHub.ReposListActivitiesTimePeriod? Type6385 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksListForSuiteStatus? Type6386 { get; set; }
+        public global::GitHub.ReposListActivitiesActivityType? Type6386 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksListForSuiteFilter? Type6387 { get; set; }
+        public global::GitHub.ChecksListForSuiteStatus? Type6387 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListAlertsForRepoDirection? Type6388 { get; set; }
+        public global::GitHub.ChecksListForSuiteFilter? Type6388 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListAlertsForRepoSort? Type6389 { get; set; }
+        public global::GitHub.CodeScanningListAlertsForRepoDirection? Type6389 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListRecentAnalysesDirection? Type6390 { get; set; }
+        public global::GitHub.CodeScanningListAlertsForRepoSort? Type6390 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListRecentAnalysesSort? Type6391 { get; set; }
+        public global::GitHub.CodeScanningListRecentAnalysesDirection? Type6391 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListCollaboratorsAffiliation? Type6392 { get; set; }
+        public global::GitHub.CodeScanningListRecentAnalysesSort? Type6392 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListCollaboratorsPermission? Type6393 { get; set; }
+        public global::GitHub.ReposListCollaboratorsAffiliation? Type6393 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsListForCommitCommentContent? Type6394 { get; set; }
+        public global::GitHub.ReposListCollaboratorsPermission? Type6394 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksListForRefStatus? Type6395 { get; set; }
+        public global::GitHub.ReactionsListForCommitCommentContent? Type6395 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksListForRefFilter? Type6396 { get; set; }
+        public global::GitHub.ChecksListForRefStatus? Type6396 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForRepoHasVariant2Item>>? Type6397 { get; set; }
+        public global::GitHub.ChecksListForRefFilter? Type6397 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForRepoHasVariant2Item>? Type6398 { get; set; }
+        public global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForRepoHasVariant2Item>>? Type6398 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForRepoHasVariant2Item? Type6399 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForRepoHasVariant2Item>? Type6399 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForRepoScope? Type6400 { get; set; }
+        public global::GitHub.DependabotListAlertsForRepoHasVariant2Item? Type6400 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForRepoSort? Type6401 { get; set; }
+        public global::GitHub.DependabotListAlertsForRepoScope? Type6401 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListAlertsForRepoDirection? Type6402 { get; set; }
+        public global::GitHub.DependabotListAlertsForRepoSort? Type6402 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForksSort? Type6403 { get; set; }
+        public global::GitHub.DependabotListAlertsForRepoDirection? Type6403 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForRepoState? Type6404 { get; set; }
+        public global::GitHub.ReposListForksSort? Type6404 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForRepoSort? Type6405 { get; set; }
+        public global::GitHub.IssuesListForRepoState? Type6405 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForRepoDirection? Type6406 { get; set; }
+        public global::GitHub.IssuesListForRepoSort? Type6406 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListCommentsForRepoSort? Type6407 { get; set; }
+        public global::GitHub.IssuesListForRepoDirection? Type6407 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListCommentsForRepoDirection? Type6408 { get; set; }
+        public global::GitHub.IssuesListCommentsForRepoSort? Type6408 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsListForIssueCommentContent? Type6409 { get; set; }
+        public global::GitHub.IssuesListCommentsForRepoDirection? Type6409 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsListForIssueContent? Type6410 { get; set; }
+        public global::GitHub.ReactionsListForIssueCommentContent? Type6410 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListMilestonesState? Type6411 { get; set; }
+        public global::GitHub.ReactionsListForIssueContent? Type6411 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListMilestonesSort? Type6412 { get; set; }
+        public global::GitHub.IssuesListMilestonesState? Type6412 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListMilestonesDirection? Type6413 { get; set; }
+        public global::GitHub.IssuesListMilestonesSort? Type6413 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsListForRepoState? Type6414 { get; set; }
+        public global::GitHub.IssuesListMilestonesDirection? Type6414 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsListState? Type6415 { get; set; }
+        public global::GitHub.ProjectsListForRepoState? Type6415 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsListSort? Type6416 { get; set; }
+        public global::GitHub.PullsListState? Type6416 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsListDirection? Type6417 { get; set; }
+        public global::GitHub.PullsListSort? Type6417 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsListReviewCommentsForRepoSort? Type6418 { get; set; }
+        public global::GitHub.PullsListDirection? Type6418 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsListReviewCommentsForRepoDirection? Type6419 { get; set; }
+        public global::GitHub.PullsListReviewCommentsForRepoSort? Type6419 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsListForPullRequestReviewCommentContent? Type6420 { get; set; }
+        public global::GitHub.PullsListReviewCommentsForRepoDirection? Type6420 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsListReviewCommentsSort? Type6421 { get; set; }
+        public global::GitHub.ReactionsListForPullRequestReviewCommentContent? Type6421 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsListReviewCommentsDirection? Type6422 { get; set; }
+        public global::GitHub.PullsListReviewCommentsSort? Type6422 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsListForReleaseContent? Type6423 { get; set; }
+        public global::GitHub.PullsListReviewCommentsDirection? Type6423 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetRepoRuleSuitesTimePeriod? Type6424 { get; set; }
+        public global::GitHub.ReactionsListForReleaseContent? Type6424 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult? Type6425 { get; set; }
+        public global::GitHub.ReposGetRepoRuleSuitesTimePeriod? Type6425 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForRepoState? Type6426 { get; set; }
+        public global::GitHub.ReposGetRepoRuleSuitesRuleSuiteResult? Type6426 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForRepoSort? Type6427 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForRepoState? Type6427 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForRepoDirection? Type6428 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForRepoSort? Type6428 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection? Type6429 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForRepoDirection? Type6429 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort? Type6430 { get; set; }
+        public global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesDirection? Type6430 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesState? Type6431 { get; set; }
+        public global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesSort? Type6431 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetClonesPer? Type6432 { get; set; }
+        public global::GitHub.SecurityAdvisoriesListRepositoryAdvisoriesState? Type6432 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetViewsPer? Type6433 { get; set; }
+        public global::GitHub.ReposGetClonesPer? Type6433 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchCodeSort? Type6434 { get; set; }
+        public global::GitHub.ReposGetViewsPer? Type6434 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchCodeOrder? Type6435 { get; set; }
+        public global::GitHub.SearchCodeSort? Type6435 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchCommitsSort? Type6436 { get; set; }
+        public global::GitHub.SearchCodeOrder? Type6436 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchCommitsOrder? Type6437 { get; set; }
+        public global::GitHub.SearchCommitsSort? Type6437 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchIssuesAndPullRequestsSort? Type6438 { get; set; }
+        public global::GitHub.SearchCommitsOrder? Type6438 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchIssuesAndPullRequestsOrder? Type6439 { get; set; }
+        public global::GitHub.SearchIssuesAndPullRequestsSort? Type6439 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchLabelsSort? Type6440 { get; set; }
+        public global::GitHub.SearchIssuesAndPullRequestsOrder? Type6440 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchLabelsOrder? Type6441 { get; set; }
+        public global::GitHub.SearchLabelsSort? Type6441 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchReposSort? Type6442 { get; set; }
+        public global::GitHub.SearchLabelsOrder? Type6442 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchReposOrder? Type6443 { get; set; }
+        public global::GitHub.SearchReposSort? Type6443 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchUsersSort? Type6444 { get; set; }
+        public global::GitHub.SearchReposOrder? Type6444 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchUsersOrder? Type6445 { get; set; }
+        public global::GitHub.SearchUsersSort? Type6445 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsListDiscussionsLegacyDirection? Type6446 { get; set; }
+        public global::GitHub.SearchUsersOrder? Type6446 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsListDiscussionCommentsLegacyDirection? Type6447 { get; set; }
+        public global::GitHub.TeamsListDiscussionsLegacyDirection? Type6447 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsListForTeamDiscussionCommentLegacyContent? Type6448 { get; set; }
+        public global::GitHub.TeamsListDiscussionCommentsLegacyDirection? Type6448 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReactionsListForTeamDiscussionLegacyContent? Type6449 { get; set; }
+        public global::GitHub.ReactionsListForTeamDiscussionCommentLegacyContent? Type6449 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsListMembersLegacyRole? Type6450 { get; set; }
+        public global::GitHub.ReactionsListForTeamDiscussionLegacyContent? Type6450 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForAuthenticatedUserFilter? Type6451 { get; set; }
+        public global::GitHub.TeamsListMembersLegacyRole? Type6451 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForAuthenticatedUserState? Type6452 { get; set; }
+        public global::GitHub.IssuesListForAuthenticatedUserFilter? Type6452 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForAuthenticatedUserSort? Type6453 { get; set; }
+        public global::GitHub.IssuesListForAuthenticatedUserState? Type6453 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesListForAuthenticatedUserDirection? Type6454 { get; set; }
+        public global::GitHub.IssuesListForAuthenticatedUserSort? Type6454 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListMembershipsForAuthenticatedUserState? Type6455 { get; set; }
+        public global::GitHub.IssuesListForAuthenticatedUserDirection? Type6455 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesListPackagesForAuthenticatedUserPackageType? Type6456 { get; set; }
+        public global::GitHub.OrgsListMembershipsForAuthenticatedUserState? Type6456 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? Type6457 { get; set; }
+        public global::GitHub.PackagesListPackagesForAuthenticatedUserPackageType? Type6457 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetPackageForAuthenticatedUserPackageType? Type6458 { get; set; }
+        public global::GitHub.PackagesListPackagesForAuthenticatedUserVisibility? Type6458 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesDeletePackageForAuthenticatedUserPackageType? Type6459 { get; set; }
+        public global::GitHub.PackagesGetPackageForAuthenticatedUserPackageType? Type6459 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesRestorePackageForAuthenticatedUserPackageType? Type6460 { get; set; }
+        public global::GitHub.PackagesDeletePackageForAuthenticatedUserPackageType? Type6460 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserPackageType? Type6461 { get; set; }
+        public global::GitHub.PackagesRestorePackageForAuthenticatedUserPackageType? Type6461 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState? Type6462 { get; set; }
+        public global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserPackageType? Type6462 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetPackageVersionForAuthenticatedUserPackageType? Type6463 { get; set; }
+        public global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserState? Type6463 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesDeletePackageVersionForAuthenticatedUserPackageType? Type6464 { get; set; }
+        public global::GitHub.PackagesGetPackageVersionForAuthenticatedUserPackageType? Type6464 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesRestorePackageVersionForAuthenticatedUserPackageType? Type6465 { get; set; }
+        public global::GitHub.PackagesDeletePackageVersionForAuthenticatedUserPackageType? Type6465 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForAuthenticatedUserVisibility? Type6466 { get; set; }
+        public global::GitHub.PackagesRestorePackageVersionForAuthenticatedUserPackageType? Type6466 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForAuthenticatedUserType? Type6467 { get; set; }
+        public global::GitHub.ReposListForAuthenticatedUserVisibility? Type6467 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForAuthenticatedUserSort? Type6468 { get; set; }
+        public global::GitHub.ReposListForAuthenticatedUserType? Type6468 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForAuthenticatedUserDirection? Type6469 { get; set; }
+        public global::GitHub.ReposListForAuthenticatedUserSort? Type6469 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActivityListReposStarredByAuthenticatedUserSort? Type6470 { get; set; }
+        public global::GitHub.ReposListForAuthenticatedUserDirection? Type6470 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection? Type6471 { get; set; }
+        public global::GitHub.ActivityListReposStarredByAuthenticatedUserSort? Type6471 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersGetContextForUserSubjectType? Type6472 { get; set; }
+        public global::GitHub.ActivityListReposStarredByAuthenticatedUserDirection? Type6472 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesListPackagesForUserPackageType? Type6473 { get; set; }
+        public global::GitHub.UsersGetContextForUserSubjectType? Type6473 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesListPackagesForUserVisibility? Type6474 { get; set; }
+        public global::GitHub.PackagesListPackagesForUserPackageType? Type6474 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetPackageForUserPackageType? Type6475 { get; set; }
+        public global::GitHub.PackagesListPackagesForUserVisibility? Type6475 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesDeletePackageForUserPackageType? Type6476 { get; set; }
+        public global::GitHub.PackagesGetPackageForUserPackageType? Type6476 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesRestorePackageForUserPackageType? Type6477 { get; set; }
+        public global::GitHub.PackagesDeletePackageForUserPackageType? Type6477 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByUserPackageType? Type6478 { get; set; }
+        public global::GitHub.PackagesRestorePackageForUserPackageType? Type6478 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesGetPackageVersionForUserPackageType? Type6479 { get; set; }
+        public global::GitHub.PackagesGetAllPackageVersionsForPackageOwnedByUserPackageType? Type6479 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesDeletePackageVersionForUserPackageType? Type6480 { get; set; }
+        public global::GitHub.PackagesGetPackageVersionForUserPackageType? Type6480 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PackagesRestorePackageVersionForUserPackageType? Type6481 { get; set; }
+        public global::GitHub.PackagesDeletePackageVersionForUserPackageType? Type6481 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsListForUserState? Type6482 { get; set; }
+        public global::GitHub.PackagesRestorePackageVersionForUserPackageType? Type6482 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForUserType? Type6483 { get; set; }
+        public global::GitHub.ProjectsListForUserState? Type6483 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForUserSort? Type6484 { get; set; }
+        public global::GitHub.ReposListForUserType? Type6484 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListForUserDirection? Type6485 { get; set; }
+        public global::GitHub.ReposListForUserSort? Type6485 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActivityListReposStarredByUserSort? Type6486 { get; set; }
+        public global::GitHub.ReposListForUserDirection? Type6486 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActivityListReposStarredByUserDirection? Type6487 { get; set; }
+        public global::GitHub.ActivityListReposStarredByUserSort? Type6487 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisory>? Type6488 { get; set; }
+        public global::GitHub.ActivityListReposStarredByUserDirection? Type6488 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AllOf<global::GitHub.Integration, global::GitHub.AppsCreateFromManifestResponse2>? Type6489 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GlobalAdvisory>? Type6489 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AppsCreateFromManifestResponse2? Type6490 { get; set; }
+        public global::GitHub.AllOf<global::GitHub.Integration, global::GitHub.AppsCreateFromManifestResponse2>? Type6490 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.HookDeliveryItem>? Type6491 { get; set; }
+        public global::GitHub.AppsCreateFromManifestResponse2? Type6491 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.IntegrationInstallationRequest>? Type6492 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.HookDeliveryItem>? Type6492 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Installation>? Type6493 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.IntegrationInstallationRequest>? Type6493 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ClassroomAcceptedAssignment>? Type6494 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Installation>? Type6494 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ClassroomAssignmentGrade>? Type6495 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ClassroomAcceptedAssignment>? Type6495 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.SimpleClassroom>? Type6496 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ClassroomAssignmentGrade>? Type6496 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.SimpleClassroomAssignment>? Type6497 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SimpleClassroom>? Type6497 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeOfConduct>? Type6498 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SimpleClassroomAssignment>? Type6498 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfiguration>? Type6499 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeOfConduct>? Type6499 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecuritySetConfigurationAsDefaultForEnterpriseResponse? Type6500 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfiguration>? Type6500 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecuritySetConfigurationAsDefaultForEnterpriseResponseDefaultForNewRepos? Type6501 { get; set; }
+        public global::GitHub.CodeSecuritySetConfigurationAsDefaultForEnterpriseResponse? Type6501 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfigurationRepositories>? Type6502 { get; set; }
+        public global::GitHub.CodeSecuritySetConfigurationAsDefaultForEnterpriseResponseDefaultForNewRepos? Type6502 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.DependabotAlertWithRepository>? Type6503 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeSecurityConfigurationRepositories>? Type6503 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrganizationSecretScanningAlert>? Type6504 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.DependabotAlertWithRepository>? Type6504 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForEnterpriseResponse? Type6505 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrganizationSecretScanningAlert>? Type6505 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Event>? Type6506 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForEnterpriseResponse? Type6506 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActivityListPublicEventsResponse? Type6507 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Event>? Type6507 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.BaseGist>? Type6508 { get; set; }
+        public global::GitHub.ActivityListPublicEventsResponse? Type6508 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GistsGetResponse? Type6509 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.BaseGist>? Type6509 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GistsGetResponseBlock? Type6510 { get; set; }
+        public global::GitHub.GistsGetResponse? Type6510 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.GistComment>? Type6511 { get; set; }
+        public global::GitHub.GistsGetResponseBlock? Type6511 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GistsGetCommentResponse? Type6512 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GistComment>? Type6512 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GistsGetCommentResponseBlock? Type6513 { get; set; }
+        public global::GitHub.GistsGetCommentResponse? Type6513 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.GistCommit>? Type6514 { get; set; }
+        public global::GitHub.GistsGetCommentResponseBlock? Type6514 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.GistSimple>? Type6515 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GistCommit>? Type6515 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.GistsCheckIsStarredResponse? Type6516 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GistSimple>? Type6516 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AppsListReposAccessibleToInstallationResponse? Type6517 { get; set; }
+        public global::GitHub.GistsCheckIsStarredResponse? Type6517 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Issue>? Type6518 { get; set; }
+        public global::GitHub.AppsListReposAccessibleToInstallationResponse? Type6518 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.LicenseSimple>? Type6519 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Issue>? Type6519 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.MarketplaceListingPlan>? Type6520 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.LicenseSimple>? Type6520 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.MarketplacePurchase>? Type6521 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.MarketplaceListingPlan>? Type6521 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Thread>? Type6522 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.MarketplacePurchase>? Type6522 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActivityMarkNotificationsAsReadResponse? Type6523 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Thread>? Type6523 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrganizationSimple>? Type6524 { get; set; }
+        public global::GitHub.ActivityMarkNotificationsAsReadResponse? Type6524 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.BillingGetGithubBillingUsageReportOrgResponse? Type6525 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrganizationSimple>? Type6525 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.ValidationError, global::GitHub.ValidationErrorSimple>? Type6526 { get; set; }
+        public global::GitHub.BillingGetGithubBillingUsageReportOrgResponse? Type6526 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGetActionsCacheUsageByRepoForOrgResponse? Type6527 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.ValidationError, global::GitHub.ValidationErrorSimple>? Type6527 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ActionsCacheUsageByRepository>? Type6528 { get; set; }
+        public global::GitHub.ActionsGetActionsCacheUsageByRepoForOrgResponse? Type6528 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListHostedRunnersForOrgResponse? Type6529 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ActionsCacheUsageByRepository>? Type6529 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ActionsHostedRunner>? Type6530 { get; set; }
+        public global::GitHub.ActionsListHostedRunnersForOrgResponse? Type6530 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGetHostedRunnersGithubOwnedImagesForOrgResponse? Type6531 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ActionsHostedRunner>? Type6531 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ActionsHostedRunnerImage>? Type6532 { get; set; }
+        public global::GitHub.ActionsGetHostedRunnersGithubOwnedImagesForOrgResponse? Type6532 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGetHostedRunnersPartnerImagesForOrgResponse? Type6533 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ActionsHostedRunnerImage>? Type6533 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGetHostedRunnersMachineSpecsForOrgResponse? Type6534 { get; set; }
+        public global::GitHub.ActionsGetHostedRunnersPartnerImagesForOrgResponse? Type6534 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ActionsHostedRunnerMachineSpec>? Type6535 { get; set; }
+        public global::GitHub.ActionsGetHostedRunnersMachineSpecsForOrgResponse? Type6535 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGetHostedRunnersPlatformsForOrgResponse? Type6536 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ActionsHostedRunnerMachineSpec>? Type6536 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse? Type6537 { get; set; }
+        public global::GitHub.ActionsGetHostedRunnersPlatformsForOrgResponse? Type6537 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListSelfHostedRunnerGroupsForOrgResponse? Type6538 { get; set; }
+        public global::GitHub.ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse? Type6538 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.RunnerGroupsOrg>? Type6539 { get; set; }
+        public global::GitHub.ActionsListSelfHostedRunnerGroupsForOrgResponse? Type6539 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListGithubHostedRunnersInGroupForOrgResponse? Type6540 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.RunnerGroupsOrg>? Type6540 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse? Type6541 { get; set; }
+        public global::GitHub.ActionsListGithubHostedRunnersInGroupForOrgResponse? Type6541 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.MinimalRepository>? Type6542 { get; set; }
+        public global::GitHub.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse? Type6542 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListSelfHostedRunnersInGroupForOrgResponse? Type6543 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.MinimalRepository>? Type6543 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Runner>? Type6544 { get; set; }
+        public global::GitHub.ActionsListSelfHostedRunnersInGroupForOrgResponse? Type6544 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListSelfHostedRunnersForOrgResponse? Type6545 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Runner>? Type6545 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.RunnerApplication>? Type6546 { get; set; }
+        public global::GitHub.ActionsListSelfHostedRunnersForOrgResponse? Type6546 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGenerateRunnerJitconfigForOrgResponse? Type6547 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.RunnerApplication>? Type6547 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListLabelsForSelfHostedRunnerForOrgResponse? Type6548 { get; set; }
+        public global::GitHub.ActionsGenerateRunnerJitconfigForOrgResponse? Type6548 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsAddCustomLabelsToSelfHostedRunnerForOrgResponse? Type6549 { get; set; }
+        public global::GitHub.ActionsListLabelsForSelfHostedRunnerForOrgResponse? Type6549 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetCustomLabelsForSelfHostedRunnerForOrgResponse? Type6550 { get; set; }
+        public global::GitHub.ActionsAddCustomLabelsToSelfHostedRunnerForOrgResponse? Type6550 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse? Type6551 { get; set; }
+        public global::GitHub.ActionsSetCustomLabelsForSelfHostedRunnerForOrgResponse? Type6551 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse? Type6552 { get; set; }
+        public global::GitHub.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse? Type6552 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListOrgSecretsResponse? Type6553 { get; set; }
+        public global::GitHub.ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse? Type6553 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrganizationActionsSecret>? Type6554 { get; set; }
+        public global::GitHub.ActionsListOrgSecretsResponse? Type6554 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListSelectedReposForOrgSecretResponse? Type6555 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrganizationActionsSecret>? Type6555 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListOrgVariablesResponse? Type6556 { get; set; }
+        public global::GitHub.ActionsListSelectedReposForOrgSecretResponse? Type6556 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrganizationActionsVariable>? Type6557 { get; set; }
+        public global::GitHub.ActionsListOrgVariablesResponse? Type6557 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListSelectedReposForOrgVariableResponse? Type6558 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrganizationActionsVariable>? Type6558 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListAttestationsResponse? Type6559 { get; set; }
+        public global::GitHub.ActionsListSelectedReposForOrgVariableResponse? Type6559 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrgsListAttestationsResponseAttestation>? Type6560 { get; set; }
+        public global::GitHub.OrgsListAttestationsResponse? Type6560 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListAttestationsResponseAttestation? Type6561 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrgsListAttestationsResponseAttestation>? Type6561 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListAttestationsResponseAttestationBundle? Type6562 { get; set; }
+        public global::GitHub.OrgsListAttestationsResponseAttestation? Type6562 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CampaignSummary>? Type6563 { get; set; }
+        public global::GitHub.OrgsListAttestationsResponseAttestationBundle? Type6563 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CampaignsListOrgCampaignsResponse? Type6564 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CampaignSummary>? Type6564 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CampaignsCreateCampaignResponse? Type6565 { get; set; }
+        public global::GitHub.CampaignsListOrgCampaignsResponse? Type6565 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CampaignsGetCampaignSummaryResponse? Type6566 { get; set; }
+        public global::GitHub.CampaignsCreateCampaignResponse? Type6566 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CampaignsUpdateCampaignResponse? Type6567 { get; set; }
+        public global::GitHub.CampaignsGetCampaignSummaryResponse? Type6567 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CampaignsDeleteCampaignResponse? Type6568 { get; set; }
+        public global::GitHub.CampaignsUpdateCampaignResponse? Type6568 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningOrganizationAlertItems>? Type6569 { get; set; }
+        public global::GitHub.CampaignsDeleteCampaignResponse? Type6569 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListAlertsForOrgResponse? Type6570 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningOrganizationAlertItems>? Type6570 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecuritySetConfigurationAsDefaultResponse? Type6571 { get; set; }
+        public global::GitHub.CodeScanningListAlertsForOrgResponse? Type6571 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeSecuritySetConfigurationAsDefaultResponseDefaultForNewRepos? Type6572 { get; set; }
+        public global::GitHub.CodeSecuritySetConfigurationAsDefaultResponse? Type6572 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesListInOrganizationResponse? Type6573 { get; set; }
+        public global::GitHub.CodeSecuritySetConfigurationAsDefaultResponseDefaultForNewRepos? Type6573 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Codespace>? Type6574 { get; set; }
+        public global::GitHub.CodespacesListInOrganizationResponse? Type6574 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesListOrgSecretsResponse? Type6575 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Codespace>? Type6575 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodespacesOrgSecret>? Type6576 { get; set; }
+        public global::GitHub.CodespacesListOrgSecretsResponse? Type6576 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesListSelectedReposForOrgSecretResponse? Type6577 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodespacesOrgSecret>? Type6577 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CopilotListCopilotSeatsResponse? Type6578 { get; set; }
+        public global::GitHub.CodespacesListSelectedReposForOrgSecretResponse? Type6578 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CopilotSeatDetails>? Type6579 { get; set; }
+        public global::GitHub.CopilotListCopilotSeatsResponse? Type6579 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CopilotAddCopilotSeatsForTeamsResponse? Type6580 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CopilotSeatDetails>? Type6580 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CopilotCancelCopilotSeatAssignmentForTeamsResponse? Type6581 { get; set; }
+        public global::GitHub.CopilotAddCopilotSeatsForTeamsResponse? Type6581 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CopilotAddCopilotSeatsForUsersResponse? Type6582 { get; set; }
+        public global::GitHub.CopilotCancelCopilotSeatAssignmentForTeamsResponse? Type6582 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CopilotCancelCopilotSeatAssignmentForUsersResponse? Type6583 { get; set; }
+        public global::GitHub.CopilotAddCopilotSeatsForUsersResponse? Type6583 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CopilotUsageMetricsDay>? Type6584 { get; set; }
+        public global::GitHub.CopilotCancelCopilotSeatAssignmentForUsersResponse? Type6584 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListOrgSecretsResponse? Type6585 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CopilotUsageMetricsDay>? Type6585 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrganizationDependabotSecret>? Type6586 { get; set; }
+        public global::GitHub.DependabotListOrgSecretsResponse? Type6586 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListSelectedReposForOrgSecretResponse? Type6587 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrganizationDependabotSecret>? Type6587 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Package>? Type6588 { get; set; }
+        public global::GitHub.DependabotListSelectedReposForOrgSecretResponse? Type6588 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrganizationInvitation>? Type6589 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Package>? Type6589 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrgHook>? Type6590 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrganizationInvitation>? Type6590 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListAppInstallationsResponse? Type6591 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrgHook>? Type6591 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AnyOf<global::GitHub.InteractionLimitResponse, global::GitHub.InteractionsGetRestrictionsForOrgResponse2>? Type6592 { get; set; }
+        public global::GitHub.OrgsListAppInstallationsResponse? Type6592 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.InteractionsGetRestrictionsForOrgResponse2? Type6593 { get; set; }
+        public global::GitHub.AnyOf<global::GitHub.InteractionLimitResponse, global::GitHub.InteractionsGetRestrictionsForOrgResponse2>? Type6593 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.IssueType>? Type6594 { get; set; }
+        public global::GitHub.InteractionsGetRestrictionsForOrgResponse2? Type6594 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesGetCodespacesForUserInOrgResponse? Type6595 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.IssueType>? Type6595 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Migration>? Type6596 { get; set; }
+        public global::GitHub.CodespacesGetCodespacesForUserInOrgResponse? Type6596 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsListOrgRolesResponse? Type6597 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Migration>? Type6597 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrganizationRole>? Type6598 { get; set; }
+        public global::GitHub.OrgsListOrgRolesResponse? Type6598 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.TeamRoleAssignment>? Type6599 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrganizationRole>? Type6599 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.UserRoleAssignment>? Type6600 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.TeamRoleAssignment>? Type6600 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsConvertMemberToOutsideCollaboratorResponse? Type6601 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.UserRoleAssignment>? Type6601 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsRemoveOutsideCollaboratorResponse? Type6602 { get; set; }
+        public global::GitHub.OrgsConvertMemberToOutsideCollaboratorResponse? Type6602 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.PackageVersion>? Type6603 { get; set; }
+        public global::GitHub.OrgsRemoveOutsideCollaboratorResponse? Type6603 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrganizationProgrammaticAccessGrantRequest>? Type6604 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.PackageVersion>? Type6604 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrganizationProgrammaticAccessGrant>? Type6605 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrganizationProgrammaticAccessGrantRequest>? Type6605 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PrivateRegistriesListOrgPrivateRegistriesResponse? Type6606 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrganizationProgrammaticAccessGrant>? Type6606 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrgPrivateRegistryConfiguration>? Type6607 { get; set; }
+        public global::GitHub.PrivateRegistriesListOrgPrivateRegistriesResponse? Type6607 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PrivateRegistriesGetOrgPublicKeyResponse? Type6608 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrgPrivateRegistryConfiguration>? Type6608 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Project>? Type6609 { get; set; }
+        public global::GitHub.PrivateRegistriesGetOrgPublicKeyResponse? Type6609 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrgRepoCustomPropertyValues>? Type6610 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Project>? Type6610 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset>? Type6611 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrgRepoCustomPropertyValues>? Type6611 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.RulesetVersion>? Type6612 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleset>? Type6612 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForOrgResponse? Type6613 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.RulesetVersion>? Type6613 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisory>? Type6614 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForOrgResponse? Type6614 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.HostedComputeListNetworkConfigurationsForOrgResponse? Type6615 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.RepositoryAdvisory>? Type6615 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.NetworkConfiguration>? Type6616 { get; set; }
+        public global::GitHub.HostedComputeListNetworkConfigurationsForOrgResponse? Type6616 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.TeamDiscussion>? Type6617 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.NetworkConfiguration>? Type6617 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.TeamDiscussionComment>? Type6618 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.TeamDiscussion>? Type6618 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Reaction>? Type6619 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.TeamDiscussionComment>? Type6619 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.TeamProject>? Type6620 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Reaction>? Type6620 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateProjectPermissionsInOrgResponse? Type6621 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.TeamProject>? Type6621 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsDeleteCardResponse? Type6622 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateProjectPermissionsInOrgResponse? Type6622 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardResponse? Type6623 { get; set; }
+        public global::GitHub.ProjectsDeleteCardResponse? Type6623 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardResponse2? Type6624 { get; set; }
+        public global::GitHub.ProjectsMoveCardResponse? Type6624 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ProjectsMoveCardResponseError>? Type6625 { get; set; }
+        public global::GitHub.ProjectsMoveCardResponse2? Type6625 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardResponseError? Type6626 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ProjectsMoveCardResponseError>? Type6626 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardResponse3? Type6627 { get; set; }
+        public global::GitHub.ProjectsMoveCardResponseError? Type6627 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ProjectsMoveCardResponseError2>? Type6628 { get; set; }
+        public global::GitHub.ProjectsMoveCardResponse3? Type6628 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardResponseError2? Type6629 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ProjectsMoveCardResponseError2>? Type6629 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ProjectCard>? Type6630 { get; set; }
+        public global::GitHub.ProjectsMoveCardResponseError2? Type6630 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateCardResponse2? Type6631 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ProjectCard>? Type6631 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ProjectsCreateCardResponseError>? Type6632 { get; set; }
+        public global::GitHub.ProjectsCreateCardResponse2? Type6632 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateCardResponseError? Type6633 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ProjectsCreateCardResponseError>? Type6633 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveColumnResponse? Type6634 { get; set; }
+        public global::GitHub.ProjectsCreateCardResponseError? Type6634 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsUpdateResponse? Type6635 { get; set; }
+        public global::GitHub.ProjectsMoveColumnResponse? Type6635 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsDeleteResponse? Type6636 { get; set; }
+        public global::GitHub.ProjectsUpdateResponse? Type6636 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ProjectColumn>? Type6637 { get; set; }
+        public global::GitHub.ProjectsDeleteResponse? Type6637 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposDeleteResponse? Type6638 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ProjectColumn>? Type6638 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListArtifactsForRepoResponse? Type6639 { get; set; }
+        public global::GitHub.ReposDeleteResponse? Type6639 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Artifact>? Type6640 { get; set; }
+        public global::GitHub.ActionsListArtifactsForRepoResponse? Type6640 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListRepoOrganizationSecretsResponse? Type6641 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Artifact>? Type6641 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ActionsSecret>? Type6642 { get; set; }
+        public global::GitHub.ActionsListRepoOrganizationSecretsResponse? Type6642 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListRepoOrganizationVariablesResponse? Type6643 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ActionsSecret>? Type6643 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ActionsVariable>? Type6644 { get; set; }
+        public global::GitHub.ActionsListRepoOrganizationVariablesResponse? Type6644 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListSelfHostedRunnersForRepoResponse? Type6645 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ActionsVariable>? Type6645 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsGenerateRunnerJitconfigForRepoResponse? Type6646 { get; set; }
+        public global::GitHub.ActionsListSelfHostedRunnersForRepoResponse? Type6646 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListLabelsForSelfHostedRunnerForRepoResponse? Type6647 { get; set; }
+        public global::GitHub.ActionsGenerateRunnerJitconfigForRepoResponse? Type6647 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsAddCustomLabelsToSelfHostedRunnerForRepoResponse? Type6648 { get; set; }
+        public global::GitHub.ActionsListLabelsForSelfHostedRunnerForRepoResponse? Type6648 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse? Type6649 { get; set; }
+        public global::GitHub.ActionsAddCustomLabelsToSelfHostedRunnerForRepoResponse? Type6649 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse? Type6650 { get; set; }
+        public global::GitHub.ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse? Type6650 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoResponse? Type6651 { get; set; }
+        public global::GitHub.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse? Type6651 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListWorkflowRunsForRepoResponse? Type6652 { get; set; }
+        public global::GitHub.ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoResponse? Type6652 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.WorkflowRun>? Type6653 { get; set; }
+        public global::GitHub.ActionsListWorkflowRunsForRepoResponse? Type6653 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.EnvironmentApprovals>? Type6654 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.WorkflowRun>? Type6654 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListWorkflowRunArtifactsResponse? Type6655 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.EnvironmentApprovals>? Type6655 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListJobsForWorkflowRunAttemptResponse? Type6656 { get; set; }
+        public global::GitHub.ActionsListWorkflowRunArtifactsResponse? Type6656 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Job>? Type6657 { get; set; }
+        public global::GitHub.ActionsListJobsForWorkflowRunAttemptResponse? Type6657 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListJobsForWorkflowRunResponse? Type6658 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Job>? Type6658 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.PendingDeployment>? Type6659 { get; set; }
+        public global::GitHub.ActionsListJobsForWorkflowRunResponse? Type6659 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Deployment>? Type6660 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.PendingDeployment>? Type6660 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListRepoSecretsResponse? Type6661 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Deployment>? Type6661 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListRepoVariablesResponse? Type6662 { get; set; }
+        public global::GitHub.ActionsListRepoSecretsResponse? Type6662 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListRepoWorkflowsResponse? Type6663 { get; set; }
+        public global::GitHub.ActionsListRepoVariablesResponse? Type6663 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Workflow>? Type6664 { get; set; }
+        public global::GitHub.ActionsListRepoWorkflowsResponse? Type6664 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListWorkflowRunsResponse? Type6665 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Workflow>? Type6665 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Activity>? Type6666 { get; set; }
+        public global::GitHub.ActionsListWorkflowRunsResponse? Type6666 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateAttestationResponse? Type6667 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Activity>? Type6667 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListAttestationsResponse? Type6668 { get; set; }
+        public global::GitHub.ReposCreateAttestationResponse? Type6668 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ReposListAttestationsResponseAttestation>? Type6669 { get; set; }
+        public global::GitHub.ReposListAttestationsResponse? Type6669 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListAttestationsResponseAttestation? Type6670 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ReposListAttestationsResponseAttestation>? Type6670 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListAttestationsResponseAttestationBundle? Type6671 { get; set; }
+        public global::GitHub.ReposListAttestationsResponseAttestation? Type6671 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Autolink>? Type6672 { get; set; }
+        public global::GitHub.ReposListAttestationsResponseAttestationBundle? Type6672 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ShortBranch>? Type6673 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Autolink>? Type6673 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CheckAnnotation>? Type6674 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ShortBranch>? Type6674 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksListForSuiteResponse? Type6675 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CheckAnnotation>? Type6675 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CheckRun>? Type6676 { get; set; }
+        public global::GitHub.ChecksListForSuiteResponse? Type6676 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningAlertItems>? Type6677 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CheckRun>? Type6677 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListAlertsForRepoResponse? Type6678 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningAlertItems>? Type6678 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningGetAlertResponse? Type6679 { get; set; }
+        public global::GitHub.CodeScanningListAlertsForRepoResponse? Type6679 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningUpdateAlertResponse? Type6680 { get; set; }
+        public global::GitHub.CodeScanningGetAlertResponse? Type6680 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningGetAutofixResponse? Type6681 { get; set; }
+        public global::GitHub.CodeScanningUpdateAlertResponse? Type6681 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningCreateAutofixResponse? Type6682 { get; set; }
+        public global::GitHub.CodeScanningGetAutofixResponse? Type6682 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningCommitAutofixResponse? Type6683 { get; set; }
+        public global::GitHub.CodeScanningCreateAutofixResponse? Type6683 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningAlertInstance>? Type6684 { get; set; }
+        public global::GitHub.CodeScanningCommitAutofixResponse? Type6684 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListAlertInstancesResponse? Type6685 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningAlertInstance>? Type6685 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningAnalysis>? Type6686 { get; set; }
+        public global::GitHub.CodeScanningListAlertInstancesResponse? Type6686 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListRecentAnalysesResponse? Type6687 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningAnalysis>? Type6687 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningGetAnalysisResponse2? Type6688 { get; set; }
+        public global::GitHub.CodeScanningListRecentAnalysesResponse? Type6688 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningDeleteAnalysisResponse? Type6689 { get; set; }
+        public global::GitHub.CodeScanningGetAnalysisResponse2? Type6689 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningCodeqlDatabase>? Type6690 { get; set; }
+        public global::GitHub.CodeScanningDeleteAnalysisResponse? Type6690 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningListCodeqlDatabasesResponse? Type6691 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeScanningCodeqlDatabase>? Type6691 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningGetCodeqlDatabaseResponse? Type6692 { get; set; }
+        public global::GitHub.CodeScanningListCodeqlDatabasesResponse? Type6692 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningDeleteCodeqlDatabaseResponse? Type6693 { get; set; }
+        public global::GitHub.CodeScanningGetCodeqlDatabaseResponse? Type6693 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningCreateVariantAnalysisResponse? Type6694 { get; set; }
+        public global::GitHub.CodeScanningDeleteCodeqlDatabaseResponse? Type6694 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningGetVariantAnalysisResponse? Type6695 { get; set; }
+        public global::GitHub.CodeScanningCreateVariantAnalysisResponse? Type6695 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningGetVariantAnalysisRepoTaskResponse? Type6696 { get; set; }
+        public global::GitHub.CodeScanningGetVariantAnalysisResponse? Type6696 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningGetDefaultSetupResponse? Type6697 { get; set; }
+        public global::GitHub.CodeScanningGetVariantAnalysisRepoTaskResponse? Type6697 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningUpdateDefaultSetupResponse? Type6698 { get; set; }
+        public global::GitHub.CodeScanningGetDefaultSetupResponse? Type6698 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningUploadSarifResponse? Type6699 { get; set; }
+        public global::GitHub.CodeScanningUpdateDefaultSetupResponse? Type6699 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodeScanningGetSarifResponse? Type6700 { get; set; }
+        public global::GitHub.CodeScanningUploadSarifResponse? Type6700 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesListInRepositoryForAuthenticatedUserResponse? Type6701 { get; set; }
+        public global::GitHub.CodeScanningGetSarifResponse? Type6701 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateWithRepoForAuthenticatedUserResponse? Type6702 { get; set; }
+        public global::GitHub.CodespacesListInRepositoryForAuthenticatedUserResponse? Type6702 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponse? Type6703 { get; set; }
+        public global::GitHub.CodespacesCreateWithRepoForAuthenticatedUserResponse? Type6703 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponseDevcontainer>? Type6704 { get; set; }
+        public global::GitHub.CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponse? Type6704 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponseDevcontainer? Type6705 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponseDevcontainer>? Type6705 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesRepoMachinesForAuthenticatedUserResponse? Type6706 { get; set; }
+        public global::GitHub.CodespacesListDevcontainersInRepositoryForAuthenticatedUserResponseDevcontainer? Type6706 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodespaceMachine>? Type6707 { get; set; }
+        public global::GitHub.CodespacesRepoMachinesForAuthenticatedUserResponse? Type6707 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesPreFlightWithRepoForAuthenticatedUserResponse? Type6708 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodespaceMachine>? Type6708 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesPreFlightWithRepoForAuthenticatedUserResponseDefaults? Type6709 { get; set; }
+        public global::GitHub.CodespacesPreFlightWithRepoForAuthenticatedUserResponse? Type6709 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCheckPermissionsForDevcontainerResponse? Type6710 { get; set; }
+        public global::GitHub.CodespacesPreFlightWithRepoForAuthenticatedUserResponseDefaults? Type6710 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesListRepoSecretsResponse? Type6711 { get; set; }
+        public global::GitHub.CodespacesCheckPermissionsForDevcontainerResponse? Type6711 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.RepoCodespacesSecret>? Type6712 { get; set; }
+        public global::GitHub.CodespacesListRepoSecretsResponse? Type6712 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Collaborator>? Type6713 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.RepoCodespacesSecret>? Type6713 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.BranchShort>? Type6714 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Collaborator>? Type6714 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.PullRequestSimple>? Type6715 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.BranchShort>? Type6715 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetCommitResponse? Type6716 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.PullRequestSimple>? Type6716 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksListForRefResponse? Type6717 { get; set; }
+        public global::GitHub.ReposGetCommitResponse? Type6717 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ChecksListSuitesForRefResponse? Type6718 { get; set; }
+        public global::GitHub.ChecksListForRefResponse? Type6718 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CheckSuite>? Type6719 { get; set; }
+        public global::GitHub.ChecksListSuitesForRefResponse? Type6719 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Status>? Type6720 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CheckSuite>? Type6720 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCompareCommitsResponse? Type6721 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Status>? Type6721 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetContentResponse? Type6722 { get; set; }
+        public global::GitHub.ReposCompareCommitsResponse? Type6722 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetContentResponseDiscriminator? Type6723 { get; set; }
+        public global::GitHub.ReposGetContentResponse? Type6723 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetContentResponseDiscriminatorType? Type6724 { get; set; }
+        public global::GitHub.ReposGetContentResponseDiscriminator? Type6724 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.BasicError, global::GitHub.RepositoryRuleViolationError>? Type6725 { get; set; }
+        public global::GitHub.ReposGetContentResponseDiscriminatorType? Type6725 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposDeleteFileResponse? Type6726 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.BasicError, global::GitHub.RepositoryRuleViolationError>? Type6726 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Contributor>? Type6727 { get; set; }
+        public global::GitHub.ReposDeleteFileResponse? Type6727 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.DependabotAlert>? Type6728 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Contributor>? Type6728 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependabotListRepoSecretsResponse? Type6729 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.DependabotAlert>? Type6729 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.DependabotSecret>? Type6730 { get; set; }
+        public global::GitHub.DependabotListRepoSecretsResponse? Type6730 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.DependencyGraphCreateRepositorySnapshotResponse? Type6731 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.DependabotSecret>? Type6731 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCreateDeploymentResponse? Type6732 { get; set; }
+        public global::GitHub.DependencyGraphCreateRepositorySnapshotResponse? Type6732 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.DeploymentStatus>? Type6733 { get; set; }
+        public global::GitHub.ReposCreateDeploymentResponse? Type6733 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetAllEnvironmentsResponse? Type6734 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.DeploymentStatus>? Type6734 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Environment>? Type6735 { get; set; }
+        public global::GitHub.ReposGetAllEnvironmentsResponse? Type6735 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListDeploymentBranchPoliciesResponse? Type6736 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Environment>? Type6736 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.DeploymentBranchPolicy>? Type6737 { get; set; }
+        public global::GitHub.ReposListDeploymentBranchPoliciesResponse? Type6737 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposGetAllDeploymentProtectionRulesResponse? Type6738 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.DeploymentBranchPolicy>? Type6738 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.DeploymentProtectionRule>? Type6739 { get; set; }
+        public global::GitHub.ReposGetAllDeploymentProtectionRulesResponse? Type6739 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposListCustomDeploymentRuleIntegrationsResponse? Type6740 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.DeploymentProtectionRule>? Type6740 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CustomDeploymentRuleApp>? Type6741 { get; set; }
+        public global::GitHub.ReposListCustomDeploymentRuleIntegrationsResponse? Type6741 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListEnvironmentSecretsResponse? Type6742 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CustomDeploymentRuleApp>? Type6742 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActionsListEnvironmentVariablesResponse? Type6743 { get; set; }
+        public global::GitHub.ActionsListEnvironmentSecretsResponse? Type6743 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.ValidationError, global::GitHub.RepositoryRuleViolationError>? Type6744 { get; set; }
+        public global::GitHub.ActionsListEnvironmentVariablesResponse? Type6744 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.GitRef>? Type6745 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.ValidationError, global::GitHub.RepositoryRuleViolationError>? Type6745 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Hook>? Type6746 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GitRef>? Type6746 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.PorterAuthor>? Type6747 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Hook>? Type6747 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.PorterLargeFile>? Type6748 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.PorterAuthor>? Type6748 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AnyOf<global::GitHub.InteractionLimitResponse, global::GitHub.InteractionsGetRestrictionsForRepoResponse2>? Type6749 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.PorterLargeFile>? Type6749 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.InteractionsGetRestrictionsForRepoResponse2? Type6750 { get; set; }
+        public global::GitHub.AnyOf<global::GitHub.InteractionLimitResponse, global::GitHub.InteractionsGetRestrictionsForRepoResponse2>? Type6750 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.RepositoryInvitation>? Type6751 { get; set; }
+        public global::GitHub.InteractionsGetRestrictionsForRepoResponse2? Type6751 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesCreateResponse? Type6752 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.RepositoryInvitation>? Type6752 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.IssueComment>? Type6753 { get; set; }
+        public global::GitHub.IssuesCreateResponse? Type6753 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.IssueEvent>? Type6754 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.IssueComment>? Type6754 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesUpdateResponse? Type6755 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.IssueEvent>? Type6755 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.IssueEventForIssue>? Type6756 { get; set; }
+        public global::GitHub.IssuesUpdateResponse? Type6756 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.IssuesReprioritizeSubIssueResponse? Type6757 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.IssueEventForIssue>? Type6757 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.TimelineIssueEvents>? Type6758 { get; set; }
+        public global::GitHub.IssuesReprioritizeSubIssueResponse? Type6758 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.DeployKey>? Type6759 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.TimelineIssueEvents>? Type6759 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Milestone>? Type6760 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.DeployKey>? Type6760 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ActivityMarkRepoNotificationsAsReadResponse? Type6761 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Milestone>? Type6761 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.PageBuild>? Type6762 { get; set; }
+        public global::GitHub.ActivityMarkRepoNotificationsAsReadResponse? Type6762 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ReposCheckPrivateVulnerabilityReportingResponse? Type6763 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.PageBuild>? Type6763 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsGetResponse? Type6764 { get; set; }
+        public global::GitHub.ReposCheckPrivateVulnerabilityReportingResponse? Type6764 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateWithPrForAuthenticatedUserResponse? Type6765 { get; set; }
+        public global::GitHub.PullsGetResponse? Type6765 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsListFilesResponse? Type6766 { get; set; }
+        public global::GitHub.CodespacesCreateWithPrForAuthenticatedUserResponse? Type6766 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsMergeResponse? Type6767 { get; set; }
+        public global::GitHub.PullsListFilesResponse? Type6767 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsMergeResponse2? Type6768 { get; set; }
+        public global::GitHub.PullsMergeResponse? Type6768 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.PullRequestReview>? Type6769 { get; set; }
+        public global::GitHub.PullsMergeResponse2? Type6769 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ReviewComment>? Type6770 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.PullRequestReview>? Type6770 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.PullsUpdateBranchResponse? Type6771 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ReviewComment>? Type6771 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Release>? Type6772 { get; set; }
+        public global::GitHub.PullsUpdateBranchResponse? Type6772 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleDetailed>? Type6773 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Release>? Type6773 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.SecretScanningAlert>? Type6774 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.RepositoryRuleDetailed>? Type6774 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListAlertsForRepoResponse? Type6775 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SecretScanningAlert>? Type6775 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningGetAlertResponse? Type6776 { get; set; }
+        public global::GitHub.SecretScanningListAlertsForRepoResponse? Type6776 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningUpdateAlertResponse? Type6777 { get; set; }
+        public global::GitHub.SecretScanningGetAlertResponse? Type6777 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.SecretScanningLocation>? Type6778 { get; set; }
+        public global::GitHub.SecretScanningUpdateAlertResponse? Type6778 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningListLocationsForAlertResponse? Type6779 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SecretScanningLocation>? Type6779 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningCreatePushProtectionBypassResponse? Type6780 { get; set; }
+        public global::GitHub.SecretScanningListLocationsForAlertResponse? Type6780 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SecretScanningGetScanHistoryResponse? Type6781 { get; set; }
+        public global::GitHub.SecretScanningCreatePushProtectionBypassResponse? Type6781 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AnyOf<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>, global::System.Collections.Generic.IList<global::GitHub.Stargazer>>? Type6782 { get; set; }
+        public global::GitHub.SecretScanningGetScanHistoryResponse? Type6782 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Stargazer>? Type6783 { get; set; }
+        public global::GitHub.AnyOf<global::System.Collections.Generic.IList<global::GitHub.SimpleUser>, global::System.Collections.Generic.IList<global::GitHub.Stargazer>>? Type6783 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>? Type6784 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Stargazer>? Type6784 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CommitActivity>? Type6785 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<int>>? Type6785 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ContributorActivity>? Type6786 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CommitActivity>? Type6786 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Tag>? Type6787 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ContributorActivity>? Type6787 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.TagProtection>? Type6788 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Tag>? Type6788 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ContentTraffic>? Type6789 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.TagProtection>? Type6789 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ReferrerTraffic>? Type6790 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ContentTraffic>? Type6790 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchCodeResponse? Type6791 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ReferrerTraffic>? Type6791 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodeSearchResultItem>? Type6792 { get; set; }
+        public global::GitHub.SearchCodeResponse? Type6792 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchCodeResponse2? Type6793 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodeSearchResultItem>? Type6793 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchCommitsResponse? Type6794 { get; set; }
+        public global::GitHub.SearchCodeResponse2? Type6794 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CommitSearchResultItem>? Type6795 { get; set; }
+        public global::GitHub.SearchCommitsResponse? Type6795 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchIssuesAndPullRequestsResponse? Type6796 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CommitSearchResultItem>? Type6796 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.IssueSearchResultItem>? Type6797 { get; set; }
+        public global::GitHub.SearchIssuesAndPullRequestsResponse? Type6797 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchIssuesAndPullRequestsResponse2? Type6798 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.IssueSearchResultItem>? Type6798 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchLabelsResponse? Type6799 { get; set; }
+        public global::GitHub.SearchIssuesAndPullRequestsResponse2? Type6799 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.LabelSearchResultItem>? Type6800 { get; set; }
+        public global::GitHub.SearchLabelsResponse? Type6800 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchReposResponse? Type6801 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.LabelSearchResultItem>? Type6801 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.RepoSearchResultItem>? Type6802 { get; set; }
+        public global::GitHub.SearchReposResponse? Type6802 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchReposResponse2? Type6803 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.RepoSearchResultItem>? Type6803 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchTopicsResponse? Type6804 { get; set; }
+        public global::GitHub.SearchReposResponse2? Type6804 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.TopicSearchResultItem>? Type6805 { get; set; }
+        public global::GitHub.SearchTopicsResponse? Type6805 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchUsersResponse? Type6806 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.TopicSearchResultItem>? Type6806 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.UserSearchResultItem>? Type6807 { get; set; }
+        public global::GitHub.SearchUsersResponse? Type6807 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.SearchUsersResponse2? Type6808 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.UserSearchResultItem>? Type6808 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.TeamsAddOrUpdateProjectPermissionsLegacyResponse? Type6809 { get; set; }
+        public global::GitHub.SearchUsersResponse2? Type6809 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersGetAuthenticatedResponse? Type6810 { get; set; }
+        public global::GitHub.TeamsAddOrUpdateProjectPermissionsLegacyResponse? Type6810 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersGetAuthenticatedResponseDiscriminator? Type6811 { get; set; }
+        public global::GitHub.UsersGetAuthenticatedResponse? Type6811 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersGetAuthenticatedResponseDiscriminatorUserViewType? Type6812 { get; set; }
+        public global::GitHub.UsersGetAuthenticatedResponseDiscriminator? Type6812 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesListForAuthenticatedUserResponse? Type6813 { get; set; }
+        public global::GitHub.UsersGetAuthenticatedResponseDiscriminatorUserViewType? Type6813 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCreateForAuthenticatedUserResponse? Type6814 { get; set; }
+        public global::GitHub.CodespacesListForAuthenticatedUserResponse? Type6814 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesListSecretsForAuthenticatedUserResponse? Type6815 { get; set; }
+        public global::GitHub.CodespacesCreateForAuthenticatedUserResponse? Type6815 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.CodespacesSecret>? Type6816 { get; set; }
+        public global::GitHub.CodespacesListSecretsForAuthenticatedUserResponse? Type6816 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesListRepositoriesForSecretForAuthenticatedUserResponse? Type6817 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.CodespacesSecret>? Type6817 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.CodespacesCodespaceMachinesForAuthenticatedUserResponse? Type6818 { get; set; }
+        public global::GitHub.CodespacesListRepositoriesForSecretForAuthenticatedUserResponse? Type6818 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Email>? Type6819 { get; set; }
+        public global::GitHub.CodespacesCodespaceMachinesForAuthenticatedUserResponse? Type6819 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.GpgKey>? Type6820 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Email>? Type6820 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AppsListInstallationsForAuthenticatedUserResponse? Type6821 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.GpgKey>? Type6821 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AppsListInstallationReposForAuthenticatedUserResponse? Type6822 { get; set; }
+        public global::GitHub.AppsListInstallationsForAuthenticatedUserResponse? Type6822 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AnyOf<global::GitHub.InteractionLimitResponse, global::GitHub.InteractionsGetRestrictionsForAuthenticatedUserResponse2>? Type6823 { get; set; }
+        public global::GitHub.AppsListInstallationReposForAuthenticatedUserResponse? Type6823 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.InteractionsGetRestrictionsForAuthenticatedUserResponse2? Type6824 { get; set; }
+        public global::GitHub.AnyOf<global::GitHub.InteractionLimitResponse, global::GitHub.InteractionsGetRestrictionsForAuthenticatedUserResponse2>? Type6824 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.Key>? Type6825 { get; set; }
+        public global::GitHub.InteractionsGetRestrictionsForAuthenticatedUserResponse2? Type6825 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.UserMarketplacePurchase>? Type6826 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.Key>? Type6826 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrgMembership>? Type6827 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.UserMarketplacePurchase>? Type6827 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.SocialAccount>? Type6828 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrgMembership>? Type6828 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.SshSigningKey>? Type6829 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SocialAccount>? Type6829 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.StarredRepository>? Type6830 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.SshSigningKey>? Type6830 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.TeamFull>? Type6831 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.StarredRepository>? Type6831 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersGetByIdResponse? Type6832 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.TeamFull>? Type6832 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersGetByIdResponseDiscriminator? Type6833 { get; set; }
+        public global::GitHub.UsersGetByIdResponse? Type6833 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersGetByIdResponseDiscriminatorUserViewType? Type6834 { get; set; }
+        public global::GitHub.UsersGetByIdResponseDiscriminator? Type6834 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersGetByUsernameResponse? Type6835 { get; set; }
+        public global::GitHub.UsersGetByIdResponseDiscriminatorUserViewType? Type6835 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersGetByUsernameResponseDiscriminator? Type6836 { get; set; }
+        public global::GitHub.UsersGetByUsernameResponse? Type6836 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersGetByUsernameResponseDiscriminatorUserViewType? Type6837 { get; set; }
+        public global::GitHub.UsersGetByUsernameResponseDiscriminator? Type6837 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersListAttestationsResponse? Type6838 { get; set; }
+        public global::GitHub.UsersGetByUsernameResponseDiscriminatorUserViewType? Type6838 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.UsersListAttestationsResponseAttestation>? Type6839 { get; set; }
+        public global::GitHub.UsersListAttestationsResponse? Type6839 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersListAttestationsResponseAttestation? Type6840 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.UsersListAttestationsResponseAttestation>? Type6840 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.UsersListAttestationsResponseAttestationBundle? Type6841 { get; set; }
+        public global::GitHub.UsersListAttestationsResponseAttestation? Type6841 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.KeySimple>? Type6842 { get; set; }
+        public global::GitHub.UsersListAttestationsResponseAttestationBundle? Type6842 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.BillingGetGithubBillingUsageReportUserResponse? Type6843 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.KeySimple>? Type6843 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.AnyOf<global::System.Collections.Generic.IList<global::GitHub.StarredRepository>, global::System.Collections.Generic.IList<global::GitHub.Repository>>? Type6844 { get; set; }
+        public global::GitHub.BillingGetGithubBillingUsageReportUserResponse? Type6844 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.DateTime>? Type6845 { get; set; }
+        public global::GitHub.AnyOf<global::System.Collections.Generic.IList<global::GitHub.StarredRepository>, global::System.Collections.Generic.IList<global::GitHub.Repository>>? Type6845 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::System.DateTime>? Type6846 { get; set; }
     }
 }
