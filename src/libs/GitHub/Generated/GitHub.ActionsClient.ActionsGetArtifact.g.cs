@@ -50,7 +50,7 @@ namespace GitHub
                 repo: ref repo,
                 artifactId: ref artifactId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/actions/artifacts/{artifactId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

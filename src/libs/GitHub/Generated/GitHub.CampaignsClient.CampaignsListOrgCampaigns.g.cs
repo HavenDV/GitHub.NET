@@ -75,7 +75,7 @@ namespace GitHub
                 state: ref state,
                 sort: ref sort);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/campaigns",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

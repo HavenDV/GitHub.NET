@@ -34,7 +34,7 @@ namespace GitHub
             PreparePackagesListDockerMigrationConflictingPackagesForAuthenticatedUserArguments(
                 httpClient: HttpClient);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/user/docker/conflicts",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

@@ -69,7 +69,7 @@ namespace GitHub
                 after: ref after,
                 status: ref status);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/code-security/configurations/{configurationId}/repositories",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

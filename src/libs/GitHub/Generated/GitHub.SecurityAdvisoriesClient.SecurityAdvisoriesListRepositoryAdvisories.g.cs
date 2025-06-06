@@ -81,7 +81,7 @@ namespace GitHub
                 perPage: ref perPage,
                 state: ref state);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/security-advisories",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

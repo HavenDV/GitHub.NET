@@ -45,7 +45,7 @@ namespace GitHub
                 repo: ref repo,
                 runId: ref runId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/actions/runs/{runId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

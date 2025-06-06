@@ -134,7 +134,7 @@ namespace GitHub
                 perPage: ref perPage,
                 sort: ref sort);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/advisories",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

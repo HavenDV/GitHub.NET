@@ -53,7 +53,7 @@ namespace GitHub
                 issueTypeId: ref issueTypeId,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/issue-types/{issueTypeId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

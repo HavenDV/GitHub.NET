@@ -38,7 +38,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 license: ref license);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/licenses/{license}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

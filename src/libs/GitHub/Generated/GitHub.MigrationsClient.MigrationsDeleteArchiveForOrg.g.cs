@@ -38,7 +38,7 @@ namespace GitHub
                 org: ref org,
                 migrationId: ref migrationId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/migrations/{migrationId}/archive",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

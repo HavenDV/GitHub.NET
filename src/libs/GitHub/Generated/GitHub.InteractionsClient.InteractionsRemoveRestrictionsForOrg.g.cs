@@ -33,7 +33,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 org: ref org);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/interaction-limits",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

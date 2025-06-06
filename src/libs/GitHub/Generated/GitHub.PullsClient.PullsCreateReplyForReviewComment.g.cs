@@ -67,7 +67,7 @@ namespace GitHub
                 commentId: ref commentId,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/pulls/{pullNumber}/comments/{commentId}/replies",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

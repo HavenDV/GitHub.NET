@@ -59,7 +59,7 @@ namespace GitHub
                 discussionNumber: ref discussionNumber,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/teams/{teamSlug}/discussions/{discussionNumber}/comments",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

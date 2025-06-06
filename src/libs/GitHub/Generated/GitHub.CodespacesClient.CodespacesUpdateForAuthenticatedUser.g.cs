@@ -47,7 +47,7 @@ namespace GitHub
                 codespaceName: ref codespaceName,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/user/codespaces/{codespaceName}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

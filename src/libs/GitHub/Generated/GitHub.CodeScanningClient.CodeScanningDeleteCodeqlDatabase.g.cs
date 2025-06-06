@@ -44,7 +44,7 @@ namespace GitHub
                 repo: ref repo,
                 language: ref language);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

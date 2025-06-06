@@ -39,7 +39,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 deliveryId: ref deliveryId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/app/hook/deliveries/{deliveryId}/attempts",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

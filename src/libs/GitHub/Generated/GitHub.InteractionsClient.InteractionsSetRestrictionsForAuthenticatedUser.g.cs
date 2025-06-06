@@ -40,7 +40,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/user/interaction-limits",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

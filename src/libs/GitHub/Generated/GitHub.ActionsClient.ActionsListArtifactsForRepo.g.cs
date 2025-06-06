@@ -64,7 +64,7 @@ namespace GitHub
                 page: ref page,
                 name: ref name);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/actions/artifacts",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

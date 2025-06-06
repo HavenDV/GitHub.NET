@@ -93,7 +93,7 @@ namespace GitHub
                 perPage: ref perPage,
                 @ref: ref @ref);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/commits/{@ref}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

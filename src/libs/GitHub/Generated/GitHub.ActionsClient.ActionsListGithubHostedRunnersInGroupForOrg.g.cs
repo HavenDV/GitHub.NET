@@ -58,7 +58,7 @@ namespace GitHub
                 perPage: ref perPage,
                 page: ref page);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/actions/runner-groups/{runnerGroupId}/hosted-runners",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

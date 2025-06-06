@@ -50,7 +50,7 @@ namespace GitHub
                 subjectType: ref subjectType,
                 subjectId: ref subjectId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/users/{username}/hovercard",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

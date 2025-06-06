@@ -40,7 +40,7 @@ namespace GitHub
                 clientId: ref clientId,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/applications/{clientId}/token",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

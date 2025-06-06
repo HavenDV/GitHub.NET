@@ -53,7 +53,7 @@ namespace GitHub
                 page: ref page,
                 org: ref org);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/codespaces",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

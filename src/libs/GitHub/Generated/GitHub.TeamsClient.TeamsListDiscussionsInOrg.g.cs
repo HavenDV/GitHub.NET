@@ -72,7 +72,7 @@ namespace GitHub
                 page: ref page,
                 pinned: ref pinned);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/teams/{teamSlug}/discussions",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

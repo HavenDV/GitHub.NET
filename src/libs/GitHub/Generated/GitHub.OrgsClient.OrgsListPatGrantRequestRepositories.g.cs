@@ -58,7 +58,7 @@ namespace GitHub
                 perPage: ref perPage,
                 page: ref page);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/personal-access-token-requests/{patRequestId}/repositories",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

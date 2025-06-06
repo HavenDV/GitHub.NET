@@ -54,7 +54,7 @@ namespace GitHub
                 repo: ref repo,
                 @ref: ref @ref);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/license",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

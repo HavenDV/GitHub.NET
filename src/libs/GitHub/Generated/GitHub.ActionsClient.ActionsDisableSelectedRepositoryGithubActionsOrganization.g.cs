@@ -39,7 +39,7 @@ namespace GitHub
                 org: ref org,
                 repositoryId: ref repositoryId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/actions/permissions/repositories/{repositoryId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

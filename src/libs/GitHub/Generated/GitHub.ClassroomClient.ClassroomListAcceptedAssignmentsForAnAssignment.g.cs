@@ -52,7 +52,7 @@ namespace GitHub
                 page: ref page,
                 perPage: ref perPage);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/assignments/{assignmentId}/accepted_assignments",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

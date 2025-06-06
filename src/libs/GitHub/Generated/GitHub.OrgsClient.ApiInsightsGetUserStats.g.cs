@@ -84,7 +84,7 @@ namespace GitHub
                 sort: sort,
                 actorNameSubstring: ref actorNameSubstring);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/insights/api/user-stats/{userId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

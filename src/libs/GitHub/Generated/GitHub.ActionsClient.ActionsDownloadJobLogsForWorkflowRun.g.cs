@@ -46,7 +46,7 @@ namespace GitHub
                 repo: ref repo,
                 jobId: ref jobId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/actions/jobs/{jobId}/logs",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

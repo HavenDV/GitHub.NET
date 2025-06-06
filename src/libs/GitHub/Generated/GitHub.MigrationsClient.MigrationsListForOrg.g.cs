@@ -58,7 +58,7 @@ namespace GitHub
                 page: ref page,
                 exclude: exclude);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/migrations",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

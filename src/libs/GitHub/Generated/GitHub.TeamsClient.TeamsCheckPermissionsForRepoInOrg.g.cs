@@ -58,7 +58,7 @@ namespace GitHub
                 owner: ref owner,
                 repo: ref repo);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/teams/{teamSlug}/repos/{owner}/{repo}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

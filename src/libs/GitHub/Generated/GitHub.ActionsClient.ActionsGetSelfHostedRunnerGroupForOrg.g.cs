@@ -44,7 +44,7 @@ namespace GitHub
                 org: ref org,
                 runnerGroupId: ref runnerGroupId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/actions/runner-groups/{runnerGroupId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

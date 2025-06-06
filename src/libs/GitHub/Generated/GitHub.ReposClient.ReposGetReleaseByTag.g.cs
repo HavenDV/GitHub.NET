@@ -48,7 +48,7 @@ namespace GitHub
                 repo: ref repo,
                 tag: ref tag);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/releases/tags/{tag}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

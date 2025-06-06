@@ -38,7 +38,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 assignmentId: ref assignmentId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/assignments/{assignmentId}/grades",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

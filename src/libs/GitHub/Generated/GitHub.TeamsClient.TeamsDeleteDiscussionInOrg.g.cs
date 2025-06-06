@@ -46,7 +46,7 @@ namespace GitHub
                 teamSlug: ref teamSlug,
                 discussionNumber: ref discussionNumber);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/teams/{teamSlug}/discussions/{discussionNumber}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

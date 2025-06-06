@@ -53,7 +53,7 @@ namespace GitHub
                 basehead: ref basehead,
                 name: ref name);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/dependency-graph/compare/{basehead}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

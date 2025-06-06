@@ -33,7 +33,7 @@ namespace GitHub
             PrepareCodesOfConductGetAllCodesOfConductArguments(
                 httpClient: HttpClient);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/codes_of_conduct",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

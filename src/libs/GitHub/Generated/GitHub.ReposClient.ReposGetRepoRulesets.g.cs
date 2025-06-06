@@ -71,7 +71,7 @@ namespace GitHub
                 includesParents: ref includesParents,
                 targets: ref targets);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/rulesets",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

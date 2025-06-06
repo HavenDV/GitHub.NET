@@ -79,7 +79,7 @@ namespace GitHub
                 @ref: ref @ref,
                 pr: ref pr);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/code-scanning/alerts/{alertNumber}/instances",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

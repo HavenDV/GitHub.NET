@@ -41,7 +41,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 since: ref since);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/repositories",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

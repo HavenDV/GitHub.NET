@@ -59,7 +59,7 @@ namespace GitHub
                 day: ref day,
                 hour: ref hour);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/organizations/{org}/settings/billing/usage",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

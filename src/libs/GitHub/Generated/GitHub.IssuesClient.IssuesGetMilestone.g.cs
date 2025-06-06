@@ -48,7 +48,7 @@ namespace GitHub
                 repo: ref repo,
                 milestoneNumber: ref milestoneNumber);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/milestones/{milestoneNumber}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

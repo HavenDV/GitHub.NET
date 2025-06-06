@@ -42,7 +42,7 @@ namespace GitHub
                 org: ref org,
                 configurationId: ref configurationId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/code-security/configurations/{configurationId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

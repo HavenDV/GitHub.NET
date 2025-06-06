@@ -89,7 +89,7 @@ namespace GitHub
                 timePeriod: ref timePeriod,
                 activityType: ref activityType);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/activity",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

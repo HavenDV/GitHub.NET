@@ -48,7 +48,7 @@ namespace GitHub
                 repo: ref repo,
                 eventId: ref eventId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/issues/events/{eventId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

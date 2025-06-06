@@ -40,7 +40,7 @@ namespace GitHub
                 org: ref org,
                 campaignNumber: ref campaignNumber);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/campaigns/{campaignNumber}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

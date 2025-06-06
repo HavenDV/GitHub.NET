@@ -56,7 +56,7 @@ namespace GitHub
                 treeSha: ref treeSha,
                 recursive: ref recursive);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/git/trees/{treeSha}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

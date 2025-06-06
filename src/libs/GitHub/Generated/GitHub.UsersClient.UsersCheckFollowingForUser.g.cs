@@ -37,7 +37,7 @@ namespace GitHub
                 username: ref username,
                 targetUser: ref targetUser);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/users/{username}/following/{targetUser}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

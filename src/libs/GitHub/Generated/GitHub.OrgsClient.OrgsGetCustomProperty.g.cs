@@ -44,7 +44,7 @@ namespace GitHub
                 org: ref org,
                 customPropertyName: ref customPropertyName);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/properties/schema/{customPropertyName}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

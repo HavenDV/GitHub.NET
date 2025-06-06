@@ -105,7 +105,7 @@ namespace GitHub
                 lastUsedAfter: ref lastUsedAfter,
                 tokenId: tokenId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/personal-access-token-requests",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

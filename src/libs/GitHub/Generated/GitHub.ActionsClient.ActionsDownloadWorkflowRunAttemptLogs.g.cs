@@ -51,7 +51,7 @@ namespace GitHub
                 runId: ref runId,
                 attemptNumber: ref attemptNumber);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/actions/runs/{runId}/attempts/{attemptNumber}/logs",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

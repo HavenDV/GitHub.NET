@@ -48,7 +48,7 @@ namespace GitHub
                 repo: ref repo,
                 checkSuiteId: ref checkSuiteId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/check-suites/{checkSuiteId}/rerequest",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

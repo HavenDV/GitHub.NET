@@ -69,7 +69,7 @@ namespace GitHub
                 role: ref role,
                 invitationSource: ref invitationSource);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/invitations",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

@@ -52,7 +52,7 @@ namespace GitHub
                 perPage: ref perPage,
                 page: ref page);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/teams",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

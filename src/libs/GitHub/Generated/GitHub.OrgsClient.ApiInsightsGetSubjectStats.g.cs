@@ -79,7 +79,7 @@ namespace GitHub
                 sort: sort,
                 subjectNameSubstring: ref subjectNameSubstring);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/insights/api/subject-stats",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
