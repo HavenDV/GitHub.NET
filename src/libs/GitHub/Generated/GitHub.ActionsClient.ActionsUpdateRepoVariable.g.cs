@@ -52,7 +52,7 @@ namespace GitHub
                 name: ref name,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/actions/variables/{name}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

@@ -47,7 +47,7 @@ namespace GitHub
                 repo: ref repo,
                 deploymentId: ref deploymentId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/deployments/{deploymentId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

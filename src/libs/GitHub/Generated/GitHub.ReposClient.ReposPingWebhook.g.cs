@@ -43,7 +43,7 @@ namespace GitHub
                 repo: ref repo,
                 hookId: ref hookId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/hooks/{hookId}/pings",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

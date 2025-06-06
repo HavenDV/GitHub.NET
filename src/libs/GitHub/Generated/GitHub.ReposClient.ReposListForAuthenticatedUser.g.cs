@@ -91,7 +91,7 @@ namespace GitHub
                 since: ref since,
                 before: ref before);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/user/repos",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

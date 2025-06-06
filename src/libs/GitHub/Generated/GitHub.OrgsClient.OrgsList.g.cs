@@ -47,7 +47,7 @@ namespace GitHub
                 since: ref since,
                 perPage: ref perPage);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/organizations",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

@@ -45,7 +45,7 @@ namespace GitHub
                 username: ref username,
                 roleId: ref roleId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/organization-roles/users/{username}/{roleId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

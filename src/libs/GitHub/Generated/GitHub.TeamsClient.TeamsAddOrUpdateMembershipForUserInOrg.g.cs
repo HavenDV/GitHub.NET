@@ -62,7 +62,7 @@ namespace GitHub
                 username: ref username,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/teams/{teamSlug}/memberships/{username}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

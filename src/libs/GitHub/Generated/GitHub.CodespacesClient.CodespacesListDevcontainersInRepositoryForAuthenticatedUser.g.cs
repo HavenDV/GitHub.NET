@@ -59,7 +59,7 @@ namespace GitHub
                 owner: ref owner,
                 repo: ref repo);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/codespaces/devcontainers",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

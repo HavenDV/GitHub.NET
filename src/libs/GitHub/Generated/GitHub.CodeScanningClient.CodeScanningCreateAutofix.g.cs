@@ -54,7 +54,7 @@ namespace GitHub
                 repo: ref repo,
                 alertNumber: ref alertNumber);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/code-scanning/alerts/{alertNumber}/autofix",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

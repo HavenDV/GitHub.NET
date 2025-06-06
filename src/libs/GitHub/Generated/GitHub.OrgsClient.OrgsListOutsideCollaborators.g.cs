@@ -59,7 +59,7 @@ namespace GitHub
                 perPage: ref perPage,
                 page: ref page);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/outside_collaborators",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

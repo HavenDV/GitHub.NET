@@ -67,7 +67,7 @@ namespace GitHub
                 subjectDigest: ref subjectDigest,
                 predicateType: ref predicateType);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/attestations/{subjectDigest}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

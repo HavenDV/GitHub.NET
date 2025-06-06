@@ -59,7 +59,7 @@ namespace GitHub
                 page: ref page,
                 perPage: ref perPage);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/dependabot/secrets/{secretName}/repositories",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

@@ -44,7 +44,7 @@ namespace GitHub
                 org: ref org,
                 networkConfigurationId: ref networkConfigurationId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/settings/network-configurations/{networkConfigurationId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

@@ -54,7 +54,7 @@ namespace GitHub
                 perPage: ref perPage,
                 page: ref page);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/actions/variables",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

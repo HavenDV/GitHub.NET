@@ -62,7 +62,7 @@ namespace GitHub
                 attemptNumber: ref attemptNumber,
                 excludePullRequests: ref excludePullRequests);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/actions/runs/{runId}/attempts/{attemptNumber}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

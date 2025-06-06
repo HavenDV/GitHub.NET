@@ -47,7 +47,7 @@ namespace GitHub
                 threadId: ref threadId,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/notifications/threads/{threadId}/subscription",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

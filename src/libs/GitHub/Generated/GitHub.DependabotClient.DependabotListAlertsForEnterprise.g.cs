@@ -119,7 +119,7 @@ namespace GitHub
                 last: ref last,
                 perPage: ref perPage);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/enterprises/{enterprise}/dependabot/alerts",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

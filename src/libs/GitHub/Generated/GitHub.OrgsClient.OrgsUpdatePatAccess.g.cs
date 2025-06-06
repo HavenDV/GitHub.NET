@@ -46,7 +46,7 @@ namespace GitHub
                 patId: ref patId,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/personal-access-tokens/{patId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

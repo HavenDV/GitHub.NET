@@ -57,7 +57,7 @@ namespace GitHub
                 page: ref page,
                 rulesetId: ref rulesetId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/rulesets/{rulesetId}/history",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

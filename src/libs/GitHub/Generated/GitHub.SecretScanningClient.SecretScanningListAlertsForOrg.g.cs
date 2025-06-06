@@ -119,7 +119,7 @@ namespace GitHub
                 isMultiRepo: ref isMultiRepo,
                 hideSecret: ref hideSecret);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/secret-scanning/alerts",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

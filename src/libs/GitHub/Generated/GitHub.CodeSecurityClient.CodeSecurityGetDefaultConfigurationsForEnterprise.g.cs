@@ -40,7 +40,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 enterprise: ref enterprise);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/enterprises/{enterprise}/code-security/configurations/defaults",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

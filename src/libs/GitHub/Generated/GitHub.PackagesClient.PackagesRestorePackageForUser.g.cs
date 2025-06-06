@@ -53,7 +53,7 @@ namespace GitHub
                 username: ref username,
                 token: ref token);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/users/{username}/packages/{packageType}/{packageName}/restore",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

@@ -48,7 +48,7 @@ namespace GitHub
                 repo: ref repo,
                 pullNumber: ref pullNumber);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/pulls/{pullNumber}/requested_reviewers",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

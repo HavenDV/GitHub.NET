@@ -58,7 +58,7 @@ namespace GitHub
                 @ref: ref @ref,
                 clientIp: ref clientIp);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/codespaces/new",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

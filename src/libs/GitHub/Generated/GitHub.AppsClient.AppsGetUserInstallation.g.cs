@@ -39,7 +39,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 username: ref username);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/users/{username}/installation",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

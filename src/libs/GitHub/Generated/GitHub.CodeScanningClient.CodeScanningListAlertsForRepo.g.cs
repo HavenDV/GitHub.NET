@@ -126,7 +126,7 @@ namespace GitHub
                 state: ref state,
                 severity: ref severity);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/code-scanning/alerts",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

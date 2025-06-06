@@ -43,7 +43,7 @@ namespace GitHub
             PrepareActivityGetFeedsArguments(
                 httpClient: HttpClient);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/feeds",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

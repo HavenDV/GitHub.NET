@@ -50,7 +50,7 @@ namespace GitHub
                 owner: ref owner,
                 protectionRuleId: ref protectionRuleId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/environments/{environmentName}/deployment_protection_rules/{protectionRuleId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

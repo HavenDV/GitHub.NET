@@ -60,7 +60,7 @@ namespace GitHub
                 perPage: ref perPage,
                 cursor: ref cursor);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/hooks/{hookId}/deliveries",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

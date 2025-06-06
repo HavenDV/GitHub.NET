@@ -52,7 +52,7 @@ namespace GitHub
                 repo: ref repo,
                 fileSha: ref fileSha);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/git/blobs/{fileSha}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

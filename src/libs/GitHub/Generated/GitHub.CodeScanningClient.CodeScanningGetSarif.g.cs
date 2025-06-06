@@ -49,7 +49,7 @@ namespace GitHub
                 repo: ref repo,
                 sarifId: ref sarifId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/code-scanning/sarifs/{sarifId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

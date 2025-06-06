@@ -60,7 +60,7 @@ namespace GitHub
                 alertNumber: ref alertNumber,
                 hideSecret: ref hideSecret);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/secret-scanning/alerts/{alertNumber}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

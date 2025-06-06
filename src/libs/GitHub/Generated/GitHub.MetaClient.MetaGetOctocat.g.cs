@@ -38,7 +38,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 s: ref s);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/octocat",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

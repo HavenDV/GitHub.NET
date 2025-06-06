@@ -56,7 +56,7 @@ namespace GitHub
                 jobId: ref jobId,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/actions/jobs/{jobId}/rerun",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

@@ -49,7 +49,7 @@ namespace GitHub
                 repo: ref repo,
                 checkRunId: ref checkRunId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/check-runs/{checkRunId}/rerequest",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

@@ -52,7 +52,7 @@ namespace GitHub
                 workflowId: ref workflowId,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/actions/workflows/{workflowId}/dispatches",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

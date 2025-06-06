@@ -48,7 +48,7 @@ namespace GitHub
                 perPage: ref perPage,
                 page: ref page);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/user/keys",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

@@ -48,7 +48,7 @@ namespace GitHub
                 minTimestamp: ref minTimestamp,
                 maxTimestamp: ref maxTimestamp);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/insights/api/summary-stats",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

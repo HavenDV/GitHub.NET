@@ -70,7 +70,7 @@ namespace GitHub
                 path: ref path,
                 @ref: ref @ref);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/contents/{path}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

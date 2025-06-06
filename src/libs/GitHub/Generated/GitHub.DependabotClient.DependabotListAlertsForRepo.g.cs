@@ -133,7 +133,7 @@ namespace GitHub
                 first: ref first,
                 last: ref last);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/dependabot/alerts",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

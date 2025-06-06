@@ -43,7 +43,7 @@ namespace GitHub
                 org: ref org,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/code-security/configurations/detach",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

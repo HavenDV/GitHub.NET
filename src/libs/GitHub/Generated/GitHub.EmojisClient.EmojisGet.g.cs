@@ -33,7 +33,7 @@ namespace GitHub
             PrepareEmojisGetArguments(
                 httpClient: HttpClient);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: "/emojis",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

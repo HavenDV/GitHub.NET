@@ -39,7 +39,7 @@ namespace GitHub
                 org: ref org,
                 invitationId: ref invitationId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/invitations/{invitationId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

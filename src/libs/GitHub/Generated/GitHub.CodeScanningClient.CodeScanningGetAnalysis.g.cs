@@ -59,7 +59,7 @@ namespace GitHub
                 repo: ref repo,
                 analysisId: ref analysisId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/code-scanning/analyses/{analysisId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

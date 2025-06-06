@@ -89,7 +89,7 @@ namespace GitHub
                 sort: sort,
                 apiRouteSubstring: ref apiRouteSubstring);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/insights/api/route-stats/{actorType}/{actorId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

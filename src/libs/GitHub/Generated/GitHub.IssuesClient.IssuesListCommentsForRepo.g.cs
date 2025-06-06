@@ -80,7 +80,7 @@ namespace GitHub
                 perPage: ref perPage,
                 page: ref page);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/issues/comments",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

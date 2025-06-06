@@ -50,7 +50,7 @@ namespace GitHub
                 rulesetId: ref rulesetId,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/rulesets/{rulesetId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

@@ -51,7 +51,7 @@ namespace GitHub
                 repo: ref repo,
                 ghsaId: ref ghsaId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/security-advisories/{ghsaId}/cve",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

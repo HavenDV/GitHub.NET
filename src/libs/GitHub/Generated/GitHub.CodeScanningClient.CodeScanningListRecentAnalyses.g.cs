@@ -117,7 +117,7 @@ namespace GitHub
                 direction: ref direction,
                 sort: ref sort);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/code-scanning/analyses",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

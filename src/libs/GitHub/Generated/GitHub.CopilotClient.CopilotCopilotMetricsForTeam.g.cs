@@ -75,7 +75,7 @@ namespace GitHub
                 page: ref page,
                 perPage: ref perPage);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/team/{teamSlug}/copilot/metrics",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 

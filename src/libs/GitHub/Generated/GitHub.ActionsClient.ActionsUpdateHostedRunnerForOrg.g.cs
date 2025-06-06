@@ -51,7 +51,7 @@ namespace GitHub
                 hostedRunnerId: ref hostedRunnerId,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/actions/hosted-runners/{hostedRunnerId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

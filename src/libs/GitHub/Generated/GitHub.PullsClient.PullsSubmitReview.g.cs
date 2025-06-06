@@ -65,7 +65,7 @@ namespace GitHub
                 reviewId: ref reviewId,
                 request: request);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/pulls/{pullNumber}/reviews/{reviewId}/events",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

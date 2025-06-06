@@ -59,7 +59,7 @@ namespace GitHub
                 repoOwner: ref repoOwner,
                 repoName: ref repoName);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeqlVariantAnalysisId}/repos/{repoOwner}/{repoName}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

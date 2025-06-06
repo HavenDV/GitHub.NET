@@ -33,7 +33,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 threadId: ref threadId);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/notifications/threads/{threadId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

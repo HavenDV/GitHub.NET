@@ -38,7 +38,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 key: ref key);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/codes_of_conduct/{key}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();

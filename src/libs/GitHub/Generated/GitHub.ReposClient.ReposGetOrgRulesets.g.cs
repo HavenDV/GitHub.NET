@@ -59,7 +59,7 @@ namespace GitHub
                 page: ref page,
                 targets: ref targets);
 
-            var __pathBuilder = new PathBuilder(
+            var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/orgs/{org}/rulesets",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
