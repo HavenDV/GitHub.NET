@@ -25,6 +25,12 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("slug")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Slug { get; set; }
@@ -41,8 +47,14 @@ namespace GitHub
         /// </summary>
         /// <example>disabled | all</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("sync_to_organizations")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string SyncToOrganizations { get; set; }
+        public string? SyncToOrganizations { get; set; }
+
+        /// <summary>
+        /// Example: disabled | all
+        /// </summary>
+        /// <example>disabled | all</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("organization_selection_type")]
+        public string? OrganizationSelectionType { get; set; }
 
         /// <summary>
         /// Example: 62ab9291-fae2-468e-974b-7e45096d5021
@@ -98,9 +110,13 @@ namespace GitHub
         /// </summary>
         /// <param name="id"></param>
         /// <param name="name"></param>
+        /// <param name="description"></param>
         /// <param name="slug"></param>
         /// <param name="url"></param>
         /// <param name="syncToOrganizations">
+        /// Example: disabled | all
+        /// </param>
+        /// <param name="organizationSelectionType">
         /// Example: disabled | all
         /// </param>
         /// <param name="groupId">
@@ -123,11 +139,13 @@ namespace GitHub
             string name,
             string slug,
             string url,
-            string syncToOrganizations,
             string htmlUrl,
             string membersUrl,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
+            string? description,
+            string? syncToOrganizations,
+            string? organizationSelectionType,
             string? groupId,
             string? groupName)
         {
@@ -135,11 +153,13 @@ namespace GitHub
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
-            this.SyncToOrganizations = syncToOrganizations ?? throw new global::System.ArgumentNullException(nameof(syncToOrganizations));
             this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
             this.MembersUrl = membersUrl ?? throw new global::System.ArgumentNullException(nameof(membersUrl));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
+            this.Description = description;
+            this.SyncToOrganizations = syncToOrganizations;
+            this.OrganizationSelectionType = organizationSelectionType;
             this.GroupId = groupId;
             this.GroupName = groupName;
         }

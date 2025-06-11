@@ -7,11 +7,15 @@ namespace GitHub
     {
         partial void PrepareDependabotRepositoryAccessForOrgArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string org);
+            ref string org,
+            ref int? page,
+            ref int? perPage);
         partial void PrepareDependabotRepositoryAccessForOrgRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string org);
+            string org,
+            int? page,
+            int? perPage);
         partial void ProcessDependabotRepositoryAccessForOrgResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -28,21 +32,35 @@ namespace GitHub
         /// Unauthorized users will not see the existence of this endpoint.
         /// </summary>
         /// <param name="org"></param>
+        /// <param name="page">
+        /// Default Value: 1
+        /// </param>
+        /// <param name="perPage">
+        /// Default Value: 30
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.DependabotRepositoryAccessDetails> DependabotRepositoryAccessForOrgAsync(
             string org,
+            int? page = default,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
             PrepareDependabotRepositoryAccessForOrgArguments(
                 httpClient: HttpClient,
-                org: ref org);
+                org: ref org,
+                page: ref page,
+                perPage: ref perPage);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
                 path: $"/organizations/{org}/dependabot/repository-access",
                 baseUri: HttpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("page", page?.ToString()) 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -58,7 +76,9 @@ namespace GitHub
             PrepareDependabotRepositoryAccessForOrgRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
-                org: org);
+                org: org,
+                page: page,
+                perPage: perPage);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,

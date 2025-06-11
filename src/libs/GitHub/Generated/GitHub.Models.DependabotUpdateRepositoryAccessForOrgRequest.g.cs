@@ -9,13 +9,13 @@ namespace GitHub
     public sealed partial class DependabotUpdateRepositoryAccessForOrgRequest
     {
         /// <summary>
-        /// 
+        /// List of repository IDs to add.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository_ids_to_add")]
         public global::System.Collections.Generic.IList<int>? RepositoryIdsToAdd { get; set; }
 
         /// <summary>
-        /// 
+        /// List of repository IDs to remove.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("repository_ids_to_remove")]
         public global::System.Collections.Generic.IList<int>? RepositoryIdsToRemove { get; set; }
@@ -29,8 +29,12 @@ namespace GitHub
         /// <summary>
         /// Initializes a new instance of the <see cref="DependabotUpdateRepositoryAccessForOrgRequest" /> class.
         /// </summary>
-        /// <param name="repositoryIdsToAdd"></param>
-        /// <param name="repositoryIdsToRemove"></param>
+        /// <param name="repositoryIdsToAdd">
+        /// List of repository IDs to add.
+        /// </param>
+        /// <param name="repositoryIdsToRemove">
+        /// List of repository IDs to remove.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif

@@ -21,7 +21,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accessible_repositories")]
-        public global::System.Collections.Generic.IList<global::GitHub.SimpleRepository>? AccessibleRepositories { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.NullableSimpleRepository>? AccessibleRepositories { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -42,7 +42,7 @@ namespace GitHub
 #endif
         public DependabotRepositoryAccessDetails(
             global::GitHub.DependabotRepositoryAccessDetailsDefaultLevel? defaultLevel,
-            global::System.Collections.Generic.IList<global::GitHub.SimpleRepository>? accessibleRepositories)
+            global::System.Collections.Generic.IList<global::GitHub.NullableSimpleRepository>? accessibleRepositories)
         {
             this.DefaultLevel = defaultLevel;
             this.AccessibleRepositories = accessibleRepositories;

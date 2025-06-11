@@ -11,10 +11,18 @@ namespace GitHub
         /// Unauthorized users will not see the existence of this endpoint.
         /// </summary>
         /// <param name="org"></param>
+        /// <param name="page">
+        /// Default Value: 1
+        /// </param>
+        /// <param name="perPage">
+        /// Default Value: 30
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.DependabotRepositoryAccessDetails> DependabotRepositoryAccessForOrgAsync(
             string org,
+            int? page = default,
+            int? perPage = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
