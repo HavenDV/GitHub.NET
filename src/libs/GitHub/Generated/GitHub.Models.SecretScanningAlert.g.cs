@@ -168,6 +168,19 @@ namespace GitHub
         public bool? IsBase64Encoded { get; set; }
 
         /// <summary>
+        /// Details on the location where the token was initially detected. This can be a commit, wiki commit, issue, discussion, pull request.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("first_location_detected")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.NullableSecretScanningFirstDetectedLocationJsonConverter))]
+        public global::GitHub.NullableSecretScanningFirstDetectedLocation? FirstLocationDetected { get; set; }
+
+        /// <summary>
+        /// A boolean value representing whether or not the token in the alert was detected in more than one location.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("has_more_locations")]
+        public bool? HasMoreLocations { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -257,6 +270,12 @@ namespace GitHub
         /// <param name="isBase64Encoded">
         /// A boolean value representing whether or not alert is base64 encoded
         /// </param>
+        /// <param name="firstLocationDetected">
+        /// Details on the location where the token was initially detected. This can be a commit, wiki commit, issue, discussion, pull request.
+        /// </param>
+        /// <param name="hasMoreLocations">
+        /// A boolean value representing whether or not the token in the alert was detected in more than one location.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -285,7 +304,9 @@ namespace GitHub
             global::GitHub.SecretScanningAlertValidity? validity,
             bool? publiclyLeaked,
             bool? multiRepo,
-            bool? isBase64Encoded)
+            bool? isBase64Encoded,
+            global::GitHub.NullableSecretScanningFirstDetectedLocation? firstLocationDetected,
+            bool? hasMoreLocations)
         {
             this.Number = number;
             this.CreatedAt = createdAt;
@@ -312,6 +333,8 @@ namespace GitHub
             this.PubliclyLeaked = publiclyLeaked;
             this.MultiRepo = multiRepo;
             this.IsBase64Encoded = isBase64Encoded;
+            this.FirstLocationDetected = firstLocationDetected;
+            this.HasMoreLocations = hasMoreLocations;
         }
 
         /// <summary>

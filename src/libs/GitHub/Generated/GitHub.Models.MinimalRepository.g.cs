@@ -625,6 +625,12 @@ namespace GitHub
         public global::GitHub.SecurityAndAnalysis? SecurityAndAnalysis { get; set; }
 
         /// <summary>
+        /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("custom_properties")]
+        public object? CustomProperties { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -822,6 +828,9 @@ namespace GitHub
         /// Example: false
         /// </param>
         /// <param name="securityAndAnalysis"></param>
+        /// <param name="customProperties">
+        /// The custom properties that were defined for the repository. The keys are the custom property names, and the values are the corresponding custom property values.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -912,7 +921,8 @@ namespace GitHub
             int? watchers,
             bool? allowForking,
             bool? webCommitSignoffRequired,
-            global::GitHub.SecurityAndAnalysis? securityAndAnalysis)
+            global::GitHub.SecurityAndAnalysis? securityAndAnalysis,
+            object? customProperties)
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
@@ -1001,6 +1011,7 @@ namespace GitHub
             this.AllowForking = allowForking;
             this.WebCommitSignoffRequired = webCommitSignoffRequired;
             this.SecurityAndAnalysis = securityAndAnalysis;
+            this.CustomProperties = customProperties;
         }
 
         /// <summary>

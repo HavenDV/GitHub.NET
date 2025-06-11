@@ -274,6 +274,14 @@ namespace GitHub
         public string? DefaultRepositoryPermission { get; set; }
 
         /// <summary>
+        /// The default branch for repositories created in this organization.<br/>
+        /// Example: main
+        /// </summary>
+        /// <example>main</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("default_repository_branch")]
+        public string? DefaultRepositoryBranch { get; set; }
+
+        /// <summary>
         /// Example: true
         /// </summary>
         /// <example>true</example>
@@ -335,6 +343,62 @@ namespace GitHub
         /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("members_can_create_private_pages")]
         public bool? MembersCanCreatePrivatePages { get; set; }
+
+        /// <summary>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("members_can_delete_repositories")]
+        public bool? MembersCanDeleteRepositories { get; set; }
+
+        /// <summary>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("members_can_change_repo_visibility")]
+        public bool? MembersCanChangeRepoVisibility { get; set; }
+
+        /// <summary>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("members_can_invite_outside_collaborators")]
+        public bool? MembersCanInviteOutsideCollaborators { get; set; }
+
+        /// <summary>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("members_can_delete_issues")]
+        public bool? MembersCanDeleteIssues { get; set; }
+
+        /// <summary>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("display_commenter_full_name_setting_enabled")]
+        public bool? DisplayCommenterFullNameSettingEnabled { get; set; }
+
+        /// <summary>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("readers_can_create_discussions")]
+        public bool? ReadersCanCreateDiscussions { get; set; }
+
+        /// <summary>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("members_can_create_teams")]
+        public bool? MembersCanCreateTeams { get; set; }
+
+        /// <summary>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("members_can_view_dependency_insights")]
+        public bool? MembersCanViewDependencyInsights { get; set; }
 
         /// <summary>
         /// Example: false
@@ -573,6 +637,10 @@ namespace GitHub
         /// </param>
         /// <param name="plan"></param>
         /// <param name="defaultRepositoryPermission"></param>
+        /// <param name="defaultRepositoryBranch">
+        /// The default branch for repositories created in this organization.<br/>
+        /// Example: main
+        /// </param>
         /// <param name="membersCanCreateRepositories">
         /// Example: true
         /// </param>
@@ -598,6 +666,30 @@ namespace GitHub
         /// Example: true
         /// </param>
         /// <param name="membersCanCreatePrivatePages">
+        /// Example: true
+        /// </param>
+        /// <param name="membersCanDeleteRepositories">
+        /// Example: true
+        /// </param>
+        /// <param name="membersCanChangeRepoVisibility">
+        /// Example: true
+        /// </param>
+        /// <param name="membersCanInviteOutsideCollaborators">
+        /// Example: true
+        /// </param>
+        /// <param name="membersCanDeleteIssues">
+        /// Example: true
+        /// </param>
+        /// <param name="displayCommenterFullNameSettingEnabled">
+        /// Example: true
+        /// </param>
+        /// <param name="readersCanCreateDiscussions">
+        /// Example: true
+        /// </param>
+        /// <param name="membersCanCreateTeams">
+        /// Example: true
+        /// </param>
+        /// <param name="membersCanViewDependencyInsights">
         /// Example: true
         /// </param>
         /// <param name="membersCanForkPrivateRepositories">
@@ -663,6 +755,7 @@ namespace GitHub
             string? billingEmail,
             global::GitHub.OrganizationFullPlan? plan,
             string? defaultRepositoryPermission,
+            string? defaultRepositoryBranch,
             bool? membersCanCreateRepositories,
             bool? twoFactorRequirementEnabled,
             string? membersAllowedRepositoryCreationType,
@@ -672,6 +765,14 @@ namespace GitHub
             bool? membersCanCreatePages,
             bool? membersCanCreatePublicPages,
             bool? membersCanCreatePrivatePages,
+            bool? membersCanDeleteRepositories,
+            bool? membersCanChangeRepoVisibility,
+            bool? membersCanInviteOutsideCollaborators,
+            bool? membersCanDeleteIssues,
+            bool? displayCommenterFullNameSettingEnabled,
+            bool? readersCanCreateDiscussions,
+            bool? membersCanCreateTeams,
+            bool? membersCanViewDependencyInsights,
             bool? membersCanForkPrivateRepositories,
             bool? webCommitSignoffRequired,
             bool? secretScanningPushProtectionCustomLinkEnabled,
@@ -716,6 +817,7 @@ namespace GitHub
             this.BillingEmail = billingEmail;
             this.Plan = plan;
             this.DefaultRepositoryPermission = defaultRepositoryPermission;
+            this.DefaultRepositoryBranch = defaultRepositoryBranch;
             this.MembersCanCreateRepositories = membersCanCreateRepositories;
             this.TwoFactorRequirementEnabled = twoFactorRequirementEnabled;
             this.MembersAllowedRepositoryCreationType = membersAllowedRepositoryCreationType;
@@ -725,6 +827,14 @@ namespace GitHub
             this.MembersCanCreatePages = membersCanCreatePages;
             this.MembersCanCreatePublicPages = membersCanCreatePublicPages;
             this.MembersCanCreatePrivatePages = membersCanCreatePrivatePages;
+            this.MembersCanDeleteRepositories = membersCanDeleteRepositories;
+            this.MembersCanChangeRepoVisibility = membersCanChangeRepoVisibility;
+            this.MembersCanInviteOutsideCollaborators = membersCanInviteOutsideCollaborators;
+            this.MembersCanDeleteIssues = membersCanDeleteIssues;
+            this.DisplayCommenterFullNameSettingEnabled = displayCommenterFullNameSettingEnabled;
+            this.ReadersCanCreateDiscussions = readersCanCreateDiscussions;
+            this.MembersCanCreateTeams = membersCanCreateTeams;
+            this.MembersCanViewDependencyInsights = membersCanViewDependencyInsights;
             this.MembersCanForkPrivateRepositories = membersCanForkPrivateRepositories;
             this.WebCommitSignoffRequired = webCommitSignoffRequired;
             this.SecretScanningPushProtectionCustomLinkEnabled = secretScanningPushProtectionCustomLinkEnabled;
