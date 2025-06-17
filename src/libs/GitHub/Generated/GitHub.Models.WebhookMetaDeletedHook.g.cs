@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// The modified webhook. This will contain different keys based on the type of webhook it is: repository, organization, business, app, or GitHub Marketplace.
+    /// The deleted webhook. This will contain different keys based on the type of webhook it is: repository, organization, business, app, or GitHub Marketplace.
     /// </summary>
     public sealed partial class WebhookMetaDeletedHook
     {
