@@ -22,7 +22,8 @@ namespace GitHub
             ref string content);
 
         /// <summary>
-        /// Render a Markdown document
+        /// Render a Markdown document<br/>
+        /// Depending on what is rendered in the Markdown, you may need to provide additional token scopes for labels, such as `issues:read` or `pull_requests:read`.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -170,7 +171,8 @@ namespace GitHub
         }
 
         /// <summary>
-        /// Render a Markdown document
+        /// Render a Markdown document<br/>
+        /// Depending on what is rendered in the Markdown, you may need to provide additional token scopes for labels, such as `issues:read` or `pull_requests:read`.
         /// </summary>
         /// <param name="text">
         /// The Markdown text to render in HTML.

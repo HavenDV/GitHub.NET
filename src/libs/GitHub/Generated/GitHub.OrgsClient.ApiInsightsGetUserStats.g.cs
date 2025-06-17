@@ -93,6 +93,7 @@ namespace GitHub
                 .AddOptionalParameter("page", page?.ToString()) 
                 .AddOptionalParameter("per_page", perPage?.ToString()) 
                 .AddOptionalParameter("direction", direction?.ToValueString()) 
+                .AddOptionalParameter("sort", sort, selector: static x => x.ToValueString(), delimiter: ",", explode: true) 
                 .AddOptionalParameter("actor_name_substring", actorNameSubstring) 
                 ; 
             var __path = __pathBuilder.ToString();

@@ -224,6 +224,13 @@ namespace GitHub
         public int? OriginalStartLine { get; set; }
 
         /// <summary>
+        /// The level at which the comment is targeted, can be a diff line or a file.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subject_type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.ReviewCommentSubjectTypeJsonConverter))]
+        public global::GitHub.ReviewCommentSubjectType? SubjectType { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -311,6 +318,9 @@ namespace GitHub
         /// The original first line of the range for a multi-line comment.<br/>
         /// Example: 2
         /// </param>
+        /// <param name="subjectType">
+        /// The level at which the comment is targeted, can be a diff line or a file.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -342,7 +352,8 @@ namespace GitHub
             int? line,
             int? originalLine,
             int? startLine,
-            int? originalStartLine)
+            int? originalStartLine,
+            global::GitHub.ReviewCommentSubjectType? subjectType)
         {
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.PullRequestReviewId = pullRequestReviewId;
@@ -372,6 +383,7 @@ namespace GitHub
             this.OriginalLine = originalLine;
             this.StartLine = startLine;
             this.OriginalStartLine = originalStartLine;
+            this.SubjectType = subjectType;
         }
 
         /// <summary>

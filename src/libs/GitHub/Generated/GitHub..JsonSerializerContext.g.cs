@@ -601,6 +601,8 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.ReviewCommentSideNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.ReviewCommentStartSideJsonConverter),
             typeof(global::GitHub.JsonConverters.ReviewCommentStartSideNullableJsonConverter),
+            typeof(global::GitHub.JsonConverters.ReviewCommentSubjectTypeJsonConverter),
+            typeof(global::GitHub.JsonConverters.ReviewCommentSubjectTypeNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.ReleaseAssetStateJsonConverter),
             typeof(global::GitHub.JsonConverters.ReleaseAssetStateNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.RepositoryRuleRulesetInfoRulesetSourceTypeJsonConverter),

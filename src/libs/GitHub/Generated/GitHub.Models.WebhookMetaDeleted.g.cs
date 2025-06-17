@@ -24,7 +24,7 @@ namespace GitHub
         public global::GitHub.EnterpriseWebhooks? Enterprise { get; set; }
 
         /// <summary>
-        /// The modified webhook. This will contain different keys based on the type of webhook it is: repository, organization, business, app, or GitHub Marketplace.
+        /// The deleted webhook. This will contain different keys based on the type of webhook it is: repository, organization, business, app, or GitHub Marketplace.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("hook")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -81,7 +81,7 @@ namespace GitHub
         /// see "[About enterprise accounts](https://docs.github.com/admin/overview/about-enterprise-accounts)."
         /// </param>
         /// <param name="hook">
-        /// The modified webhook. This will contain different keys based on the type of webhook it is: repository, organization, business, app, or GitHub Marketplace.
+        /// The deleted webhook. This will contain different keys based on the type of webhook it is: repository, organization, business, app, or GitHub Marketplace.
         /// </param>
         /// <param name="hookId">
         /// The id of the modified webhook.
