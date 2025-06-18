@@ -96,8 +96,12 @@ namespace GitHub
                 try
                 {
                     __response.EnsureSuccessStatusCode();
+
+                    return
+                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.Dictionary<string, int>), JsonSerializerContext) as global::System.Collections.Generic.Dictionary<string, int> ??
+                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
-                catch (global::System.Net.Http.HttpRequestException __ex)
+                catch (global::System.Exception __ex)
                 {
                     throw new global::GitHub.ApiException(
                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
@@ -111,18 +115,24 @@ namespace GitHub
                             h => h.Value),
                     };
                 }
-
-                return
-                    global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.Dictionary<string, int>), JsonSerializerContext) as global::System.Collections.Generic.Dictionary<string, int> ??
-                    throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
             }
             else
             {
                 try
                 {
                     __response.EnsureSuccessStatusCode();
+
+                    using var __content = await __response.Content.ReadAsStreamAsync(
+#if NET5_0_OR_GREATER
+                        cancellationToken
+#endif
+                    ).ConfigureAwait(false);
+
+                    return
+                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.Dictionary<string, int>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.Dictionary<string, int> ??
+                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
-                catch (global::System.Net.Http.HttpRequestException __ex)
+                catch (global::System.Exception __ex)
                 {
                     throw new global::GitHub.ApiException(
                         message: __response.ReasonPhrase ?? string.Empty,
@@ -135,16 +145,6 @@ namespace GitHub
                             h => h.Value),
                     };
                 }
-
-                using var __content = await __response.Content.ReadAsStreamAsync(
-#if NET5_0_OR_GREATER
-                    cancellationToken
-#endif
-                ).ConfigureAwait(false);
-
-                return
-                    await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.Dictionary<string, int>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.Dictionary<string, int> ??
-                    throw new global::System.InvalidOperationException("Response deserialization failed.");
             }
         }
     }
