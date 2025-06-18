@@ -85,17 +85,26 @@ namespace GitHub
             if ((int)__response.StatusCode == 403)
             {
                 string? __content_403 = null;
-                if (ReadResponseAsString)
+                global::System.Exception? __exception_403 = null;
+                try
                 {
-                    __content_403 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                    if (ReadResponseAsString)
+                    {
+                        __content_403 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                    }
+                    else
+                    {
+                        var __contentStream_403 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                    }
                 }
-                else
+                catch (global::System.Exception __ex)
                 {
-                    var __contentStream_403 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                    __exception_403 = __ex;
                 }
 
                 throw new global::GitHub.ApiException(
                     message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                    innerException: __exception_403,
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_403,
@@ -122,8 +131,9 @@ namespace GitHub
                 try
                 {
                     __response.EnsureSuccessStatusCode();
+
                 }
-                catch (global::System.Net.Http.HttpRequestException __ex)
+                catch (global::System.Exception __ex)
                 {
                     throw new global::GitHub.ApiException(
                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
@@ -137,15 +147,21 @@ namespace GitHub
                             h => h.Value),
                     };
                 }
-
             }
             else
             {
                 try
                 {
                     __response.EnsureSuccessStatusCode();
+
+                    using var __content = await __response.Content.ReadAsStreamAsync(
+#if NET5_0_OR_GREATER
+                        cancellationToken
+#endif
+                    ).ConfigureAwait(false);
+
                 }
-                catch (global::System.Net.Http.HttpRequestException __ex)
+                catch (global::System.Exception __ex)
                 {
                     throw new global::GitHub.ApiException(
                         message: __response.ReasonPhrase ?? string.Empty,
@@ -158,13 +174,6 @@ namespace GitHub
                             h => h.Value),
                     };
                 }
-
-                using var __content = await __response.Content.ReadAsStreamAsync(
-#if NET5_0_OR_GREATER
-                    cancellationToken
-#endif
-                ).ConfigureAwait(false);
-
             }
         }
     }
