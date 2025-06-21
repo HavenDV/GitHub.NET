@@ -73,6 +73,12 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dependency_sbom")]
+        public global::GitHub.RateLimit? DependencySbom { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_autofix")]
         public global::GitHub.RateLimit? CodeScanningAutofix { get; set; }
 
@@ -95,6 +101,7 @@ namespace GitHub
         /// <param name="actionsRunnerRegistration"></param>
         /// <param name="scim"></param>
         /// <param name="dependencySnapshots"></param>
+        /// <param name="dependencySbom"></param>
         /// <param name="codeScanningAutofix"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -110,6 +117,7 @@ namespace GitHub
             global::GitHub.RateLimit? actionsRunnerRegistration,
             global::GitHub.RateLimit? scim,
             global::GitHub.RateLimit? dependencySnapshots,
+            global::GitHub.RateLimit? dependencySbom,
             global::GitHub.RateLimit? codeScanningAutofix)
         {
             this.Core = core ?? throw new global::System.ArgumentNullException(nameof(core));
@@ -122,6 +130,7 @@ namespace GitHub
             this.ActionsRunnerRegistration = actionsRunnerRegistration;
             this.Scim = scim;
             this.DependencySnapshots = dependencySnapshots;
+            this.DependencySbom = dependencySbom;
             this.CodeScanningAutofix = codeScanningAutofix;
         }
 

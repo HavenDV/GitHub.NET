@@ -13,7 +13,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("app")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.NullableIntegration? App { get; set; }
+        public required global::GitHub.Integration? App { get; set; }
 
         /// <summary>
         /// A suite of checks performed on the code of a given code change
@@ -202,7 +202,7 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CheckRunWithSimpleCheckSuite(
-            global::GitHub.NullableIntegration? app,
+            global::GitHub.Integration? app,
             global::GitHub.SimpleCheckSuite checkSuite,
             global::System.DateTime? completedAt,
             global::GitHub.CheckRunWithSimpleCheckSuiteConclusion? conclusion,
