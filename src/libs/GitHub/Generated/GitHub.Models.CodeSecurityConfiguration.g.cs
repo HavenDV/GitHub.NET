@@ -75,6 +75,12 @@ namespace GitHub
         public global::GitHub.CodeSecurityConfigurationDependabotSecurityUpdates? DependabotSecurityUpdates { get; set; }
 
         /// <summary>
+        /// Feature options for code scanning
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_options")]
+        public object? CodeScanningOptions { get; set; }
+
+        /// <summary>
         /// The enablement status of code scanning default setup
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_default_setup")]
@@ -226,6 +232,9 @@ namespace GitHub
         /// <param name="dependabotSecurityUpdates">
         /// The enablement status of Dependabot security updates
         /// </param>
+        /// <param name="codeScanningOptions">
+        /// Feature options for code scanning
+        /// </param>
         /// <param name="codeScanningDefaultSetup">
         /// The enablement status of code scanning default setup
         /// </param>
@@ -287,6 +296,7 @@ namespace GitHub
             global::GitHub.CodeSecurityConfigurationDependencyGraphAutosubmitActionOptions? dependencyGraphAutosubmitActionOptions,
             global::GitHub.CodeSecurityConfigurationDependabotAlerts? dependabotAlerts,
             global::GitHub.CodeSecurityConfigurationDependabotSecurityUpdates? dependabotSecurityUpdates,
+            object? codeScanningOptions,
             global::GitHub.CodeSecurityConfigurationCodeScanningDefaultSetup? codeScanningDefaultSetup,
             global::GitHub.CodeSecurityConfigurationCodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions,
             global::GitHub.CodeSecurityConfigurationCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal,
@@ -315,6 +325,7 @@ namespace GitHub
             this.DependencyGraphAutosubmitActionOptions = dependencyGraphAutosubmitActionOptions;
             this.DependabotAlerts = dependabotAlerts;
             this.DependabotSecurityUpdates = dependabotSecurityUpdates;
+            this.CodeScanningOptions = codeScanningOptions;
             this.CodeScanningDefaultSetup = codeScanningDefaultSetup;
             this.CodeScanningDefaultSetupOptions = codeScanningDefaultSetupOptions;
             this.CodeScanningDelegatedAlertDismissal = codeScanningDelegatedAlertDismissal;
