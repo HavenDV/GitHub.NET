@@ -6027,6 +6027,7 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.AllOfJsonConverter<global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant1, global::GitHub.WebhookWorkflowJobCompletedWorkflowJobVariant2>),
             typeof(global::GitHub.JsonConverters.AllOfJsonConverter<global::GitHub.WebhookWorkflowJobInProgressWorkflowJobVariant1, global::GitHub.WebhookWorkflowJobInProgressWorkflowJobVariant2>),
             typeof(global::GitHub.JsonConverters.OneOfJsonConverter<bool?, global::GitHub.GistsCreateRequestPublic?>),
+            typeof(global::GitHub.JsonConverters.OneOfJsonConverter<global::GitHub.OrgsDeleteAttestationsBulkRequestVariant1, global::GitHub.OrgsDeleteAttestationsBulkRequestVariant2>),
             typeof(global::GitHub.JsonConverters.OneOfJsonConverter<global::GitHub.ProjectsCreateCardRequestVariant1, global::GitHub.ProjectsCreateCardRequestVariant2>),
             typeof(global::GitHub.JsonConverters.AnyOfJsonConverter<global::GitHub.ReviewCustomGatesCommentRequired, global::GitHub.ReviewCustomGatesStateRequired>),
             typeof(global::GitHub.JsonConverters.OneOfJsonConverter<global::GitHub.ReposAddStatusCheckContextsRequest2, global::System.Collections.Generic.IList<string>>),
