@@ -27,6 +27,9 @@ namespace GitHub
         /// <param name="registryType">
         /// The registry type.
         /// </param>
+        /// <param name="url">
+        /// The URL of the private registry.
+        /// </param>
         /// <param name="username">
         /// The username to use when authenticating with the private registry. This field should be omitted if the private registry does not require a username for authentication.
         /// </param>
@@ -47,6 +50,7 @@ namespace GitHub
         global::System.Threading.Tasks.Task<global::GitHub.OrgPrivateRegistryConfigurationWithSelectedRepositories> PrivateRegistriesCreateOrgPrivateRegistryAsync(
             string org,
             global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType registryType,
+            string url,
             string encryptedValue,
             string keyId,
             global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestVisibility visibility,
