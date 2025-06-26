@@ -17,6 +17,13 @@ namespace GitHub
         public required global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType RegistryType { get; set; }
 
         /// <summary>
+        /// The URL of the private registry.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("url")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Url { get; set; }
+
+        /// <summary>
         /// The username to use when authenticating with the private registry. This field should be omitted if the private registry does not require a username for authentication.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("username")]
@@ -62,6 +69,9 @@ namespace GitHub
         /// <param name="registryType">
         /// The registry type.
         /// </param>
+        /// <param name="url">
+        /// The URL of the private registry.
+        /// </param>
         /// <param name="username">
         /// The username to use when authenticating with the private registry. This field should be omitted if the private registry does not require a username for authentication.
         /// </param>
@@ -82,6 +92,7 @@ namespace GitHub
 #endif
         public PrivateRegistriesCreateOrgPrivateRegistryRequest(
             global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType registryType,
+            string url,
             string encryptedValue,
             string keyId,
             global::GitHub.PrivateRegistriesCreateOrgPrivateRegistryRequestVisibility visibility,
@@ -89,6 +100,7 @@ namespace GitHub
             global::System.Collections.Generic.IList<int>? selectedRepositoryIds)
         {
             this.RegistryType = registryType;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.EncryptedValue = encryptedValue ?? throw new global::System.ArgumentNullException(nameof(encryptedValue));
             this.KeyId = keyId ?? throw new global::System.ArgumentNullException(nameof(keyId));
             this.Visibility = visibility;
