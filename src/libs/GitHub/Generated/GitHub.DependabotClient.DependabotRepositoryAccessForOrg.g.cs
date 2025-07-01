@@ -26,6 +26,7 @@ namespace GitHub
             ref string content);
 
         /// <summary>
+        /// Lists the repositories Dependabot can access in an organization<br/>
         /// Lists repositories that organization admins have allowed Dependabot to access when updating dependencies.<br/>
         /// &gt; [!NOTE]<br/>
         /// &gt;    This operation supports both server-to-server and user-to-server access.<br/>

@@ -19,7 +19,8 @@ namespace GitHub
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// Updates repositories to the list of repositories that organization admins have allowed Dependabot to access when updating dependencies.<br/>
+        /// Updates Dependabot's repository access list for an organization<br/>
+        /// Updates repositories according to the list of repositories that organization admins have given Dependabot access to when they've updated dependencies.<br/>
         /// &gt; [!NOTE]<br/>
         /// &gt;    This operation supports both server-to-server and user-to-server access.<br/>
         /// Unauthorized users will not see the existence of this endpoint.<br/>
@@ -225,7 +226,8 @@ namespace GitHub
         }
 
         /// <summary>
-        /// Updates repositories to the list of repositories that organization admins have allowed Dependabot to access when updating dependencies.<br/>
+        /// Updates Dependabot's repository access list for an organization<br/>
+        /// Updates repositories according to the list of repositories that organization admins have given Dependabot access to when they've updated dependencies.<br/>
         /// &gt; [!NOTE]<br/>
         /// &gt;    This operation supports both server-to-server and user-to-server access.<br/>
         /// Unauthorized users will not see the existence of this endpoint.<br/>
