@@ -6,12 +6,11 @@ namespace GitHub
     {
         /// <summary>
         /// Set the default repository access level for Dependabot<br/>
-        /// &gt; [!NOTE]<br/>
-        /// &gt;    This operation supports both server-to-server and user-to-server access.<br/>
         /// Sets the default level of repository access Dependabot will have while performing an update.  Available values are:<br/>
         /// - 'public' - Dependabot will only have access to public repositories, unless access is explicitly granted to non-public repositories.<br/>
         /// - 'internal' - Dependabot will only have access to public and internal repositories, unless access is explicitly granted to private repositories.<br/>
-        /// Unauthorized users will not see the existence of this endpoint.
+        /// Unauthorized users will not see the existence of this endpoint.<br/>
+        /// This operation supports both server-to-server and user-to-server access.
         /// </summary>
         /// <param name="org"></param>
         /// <param name="request"></param>
@@ -24,12 +23,11 @@ namespace GitHub
 
         /// <summary>
         /// Set the default repository access level for Dependabot<br/>
-        /// &gt; [!NOTE]<br/>
-        /// &gt;    This operation supports both server-to-server and user-to-server access.<br/>
         /// Sets the default level of repository access Dependabot will have while performing an update.  Available values are:<br/>
         /// - 'public' - Dependabot will only have access to public repositories, unless access is explicitly granted to non-public repositories.<br/>
         /// - 'internal' - Dependabot will only have access to public and internal repositories, unless access is explicitly granted to private repositories.<br/>
-        /// Unauthorized users will not see the existence of this endpoint.
+        /// Unauthorized users will not see the existence of this endpoint.<br/>
+        /// This operation supports both server-to-server and user-to-server access.
         /// </summary>
         /// <param name="org"></param>
         /// <param name="defaultLevel">
