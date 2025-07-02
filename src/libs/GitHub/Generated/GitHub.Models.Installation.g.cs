@@ -68,6 +68,13 @@ namespace GitHub
         public required int AppId { get; set; }
 
         /// <summary>
+        /// Example: Iv1.ab1112223334445c
+        /// </summary>
+        /// <example>Iv1.ab1112223334445c</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("client_id")]
+        public string? ClientId { get; set; }
+
+        /// <summary>
         /// The ID of the user or organization this token is being scoped to.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("target_id")]
@@ -190,6 +197,9 @@ namespace GitHub
         /// <param name="appId">
         /// Example: 1
         /// </param>
+        /// <param name="clientId">
+        /// Example: Iv1.ab1112223334445c
+        /// </param>
         /// <param name="targetId">
         /// The ID of the user or organization this token is being scoped to.
         /// </param>
@@ -242,6 +252,7 @@ namespace GitHub
             string appSlug,
             global::GitHub.NullableSimpleUser? suspendedBy,
             global::System.DateTime? suspendedAt,
+            string? clientId,
             bool? hasMultipleSingleFiles,
             global::System.Collections.Generic.IList<string>? singleFilePaths,
             string? contactEmail)
@@ -263,6 +274,7 @@ namespace GitHub
             this.AppSlug = appSlug ?? throw new global::System.ArgumentNullException(nameof(appSlug));
             this.SuspendedBy = suspendedBy ?? throw new global::System.ArgumentNullException(nameof(suspendedBy));
             this.SuspendedAt = suspendedAt;
+            this.ClientId = clientId;
             this.HasMultipleSingleFiles = hasMultipleSingleFiles;
             this.SingleFilePaths = singleFilePaths;
             this.ContactEmail = contactEmail;
