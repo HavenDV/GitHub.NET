@@ -20,6 +20,34 @@ namespace GitHub
         /// 
         /// </summary>
         GoproxyServer,
+        /// <summary>
+        /// 
+        /// </summary>
+        NpmRegistry,
+        /// <summary>
+        /// 
+        /// </summary>
+        RubygemsServer,
+        /// <summary>
+        /// 
+        /// </summary>
+        CargoRegistry,
+        /// <summary>
+        /// 
+        /// </summary>
+        ComposerRepository,
+        /// <summary>
+        /// 
+        /// </summary>
+        DockerRegistry,
+        /// <summary>
+        /// 
+        /// </summary>
+        GitSource,
+        /// <summary>
+        /// 
+        /// </summary>
+        HelmRegistry,
     }
 
     /// <summary>
@@ -37,6 +65,13 @@ namespace GitHub
                 PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.MavenRepository => "maven_repository",
                 PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.NugetFeed => "nuget_feed",
                 PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.GoproxyServer => "goproxy_server",
+                PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.NpmRegistry => "npm_registry",
+                PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.RubygemsServer => "rubygems_server",
+                PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.CargoRegistry => "cargo_registry",
+                PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.ComposerRepository => "composer_repository",
+                PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.DockerRegistry => "docker_registry",
+                PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.GitSource => "git_source",
+                PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.HelmRegistry => "helm_registry",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -50,6 +85,13 @@ namespace GitHub
                 "maven_repository" => PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.MavenRepository,
                 "nuget_feed" => PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.NugetFeed,
                 "goproxy_server" => PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.GoproxyServer,
+                "npm_registry" => PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.NpmRegistry,
+                "rubygems_server" => PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.RubygemsServer,
+                "cargo_registry" => PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.CargoRegistry,
+                "composer_repository" => PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.ComposerRepository,
+                "docker_registry" => PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.DockerRegistry,
+                "git_source" => PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.GitSource,
+                "helm_registry" => PrivateRegistriesCreateOrgPrivateRegistryRequestRegistryType.HelmRegistry,
                 _ => null,
             };
         }

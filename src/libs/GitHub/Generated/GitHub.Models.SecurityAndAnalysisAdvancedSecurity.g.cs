@@ -4,7 +4,8 @@
 namespace GitHub
 {
     /// <summary>
-    /// 
+    /// Enable or disable GitHub Advanced Security for the repository.<br/>
+    /// For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
     /// </summary>
     public sealed partial class SecurityAndAnalysisAdvancedSecurity
     {

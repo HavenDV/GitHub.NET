@@ -5,6 +5,8 @@ namespace GitHub
 {
     /// <summary>
     /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.<br/>
+    /// &gt; [!WARNING]<br/>
+    /// &gt; `code_security` and `secret_protection` are deprecated values for this field. Prefer the individual `code_security` and `secret_protection` fields to set the status of these features.<br/>
     /// Default Value: disabled
     /// </summary>
     public enum CodeSecurityCreateConfigurationRequestAdvancedSecurity

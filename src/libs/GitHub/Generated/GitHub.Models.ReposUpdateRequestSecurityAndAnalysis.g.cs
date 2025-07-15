@@ -13,7 +13,10 @@ namespace GitHub
     public sealed partial class ReposUpdateRequestSecurityAndAnalysis
     {
         /// <summary>
-        /// Use the `status` property to enable or disable GitHub Advanced Security for this repository. For more information, see "[About GitHub Advanced Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security)."
+        /// Use the `status` property to enable or disable GitHub Advanced Security for this repository.<br/>
+        /// For more information, see "[About GitHub Advanced<br/>
+        /// Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security)."<br/>
+        /// For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("advanced_security")]
         public global::GitHub.ReposUpdateRequestSecurityAndAnalysisAdvancedSecurity? AdvancedSecurity { get; set; }
@@ -58,7 +61,10 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="ReposUpdateRequestSecurityAndAnalysis" /> class.
         /// </summary>
         /// <param name="advancedSecurity">
-        /// Use the `status` property to enable or disable GitHub Advanced Security for this repository. For more information, see "[About GitHub Advanced Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security)."
+        /// Use the `status` property to enable or disable GitHub Advanced Security for this repository.<br/>
+        /// For more information, see "[About GitHub Advanced<br/>
+        /// Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security)."<br/>
+        /// For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
         /// </param>
         /// <param name="codeSecurity">
         /// Use the `status` property to enable or disable GitHub Code Security for this repository.

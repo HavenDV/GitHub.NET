@@ -9,7 +9,8 @@ namespace GitHub
     public sealed partial class SecurityAndAnalysis
     {
         /// <summary>
-        /// 
+        /// Enable or disable GitHub Advanced Security for the repository.<br/>
+        /// For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("advanced_security")]
         public global::GitHub.SecurityAndAnalysisAdvancedSecurity? AdvancedSecurity { get; set; }
@@ -59,7 +60,10 @@ namespace GitHub
         /// <summary>
         /// Initializes a new instance of the <see cref="SecurityAndAnalysis" /> class.
         /// </summary>
-        /// <param name="advancedSecurity"></param>
+        /// <param name="advancedSecurity">
+        /// Enable or disable GitHub Advanced Security for the repository.<br/>
+        /// For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
+        /// </param>
         /// <param name="codeSecurity"></param>
         /// <param name="dependabotSecurityUpdates">
         /// Enable or disable Dependabot security updates for the repository.

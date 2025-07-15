@@ -173,7 +173,12 @@ namespace GitHub
         /// </param>
         /// <param name="advancedSecurity">
         /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.<br/>
+        /// &gt; [!WARNING]<br/>
+        /// &gt; `code_security` and `secret_protection` are deprecated values for this field. Prefer the individual `code_security` and `secret_protection` fields to set the status of these features.<br/>
         /// Default Value: disabled
+        /// </param>
+        /// <param name="codeSecurity">
+        /// The enablement status of GitHub Code Security features.
         /// </param>
         /// <param name="dependencyGraph">
         /// The enablement status of Dependency Graph<br/>
@@ -204,6 +209,9 @@ namespace GitHub
         /// <param name="codeScanningDelegatedAlertDismissal">
         /// The enablement status of code scanning delegated alert dismissal<br/>
         /// Default Value: not_set
+        /// </param>
+        /// <param name="secretProtection">
+        /// The enablement status of GitHub Secret Protection features.
         /// </param>
         /// <param name="secretScanning">
         /// The enablement status of secret scanning<br/>
@@ -250,6 +258,7 @@ namespace GitHub
             string name,
             string description,
             global::GitHub.CodeSecurityCreateConfigurationRequestAdvancedSecurity? advancedSecurity = default,
+            global::GitHub.CodeSecurityCreateConfigurationRequestCodeSecurity? codeSecurity = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraph? dependencyGraph = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitAction? dependencyGraphAutosubmitAction = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionOptions? dependencyGraphAutosubmitActionOptions = default,
@@ -258,6 +267,7 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup = default,
             global::GitHub.CodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal = default,
+            global::GitHub.CodeSecurityCreateConfigurationRequestSecretProtection? secretProtection = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanning? secretScanning = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningPushProtection? secretScanningPushProtection = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestSecretScanningDelegatedBypass? secretScanningDelegatedBypass = default,
@@ -275,6 +285,7 @@ namespace GitHub
                 Name = name,
                 Description = description,
                 AdvancedSecurity = advancedSecurity,
+                CodeSecurity = codeSecurity,
                 DependencyGraph = dependencyGraph,
                 DependencyGraphAutosubmitAction = dependencyGraphAutosubmitAction,
                 DependencyGraphAutosubmitActionOptions = dependencyGraphAutosubmitActionOptions,
@@ -283,6 +294,7 @@ namespace GitHub
                 CodeScanningDefaultSetup = codeScanningDefaultSetup,
                 CodeScanningDefaultSetupOptions = codeScanningDefaultSetupOptions,
                 CodeScanningDelegatedAlertDismissal = codeScanningDelegatedAlertDismissal,
+                SecretProtection = secretProtection,
                 SecretScanning = secretScanning,
                 SecretScanningPushProtection = secretScanningPushProtection,
                 SecretScanningDelegatedBypass = secretScanningDelegatedBypass,
