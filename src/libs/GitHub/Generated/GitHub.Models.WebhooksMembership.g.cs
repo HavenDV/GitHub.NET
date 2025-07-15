@@ -23,6 +23,23 @@ namespace GitHub
         public required string Role { get; set; }
 
         /// <summary>
+        /// Whether the user has direct membership in the organization.<br/>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("direct_membership")]
+        public bool? DirectMembership { get; set; }
+
+        /// <summary>
+        /// The slugs of the enterprise teams providing the user with indirect membership in the organization.<br/>
+        /// A limit of 100 enterprise team slugs is returned.<br/>
+        /// Example: [ent:team-one, ent:team-two]
+        /// </summary>
+        /// <example>[ent:team-one, ent:team-two]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enterprise_teams_providing_indirect_membership")]
+        public global::System.Collections.Generic.IList<string>? EnterpriseTeamsProvidingIndirectMembership { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
@@ -54,6 +71,15 @@ namespace GitHub
         /// </summary>
         /// <param name="organizationUrl"></param>
         /// <param name="role"></param>
+        /// <param name="directMembership">
+        /// Whether the user has direct membership in the organization.<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="enterpriseTeamsProvidingIndirectMembership">
+        /// The slugs of the enterprise teams providing the user with indirect membership in the organization.<br/>
+        /// A limit of 100 enterprise team slugs is returned.<br/>
+        /// Example: [ent:team-one, ent:team-two]
+        /// </param>
         /// <param name="state"></param>
         /// <param name="url"></param>
         /// <param name="user"></param>
@@ -65,13 +91,17 @@ namespace GitHub
             string role,
             string state,
             string url,
-            global::GitHub.WebhooksMembershipUser? user)
+            global::GitHub.WebhooksMembershipUser? user,
+            bool? directMembership,
+            global::System.Collections.Generic.IList<string>? enterpriseTeamsProvidingIndirectMembership)
         {
             this.OrganizationUrl = organizationUrl ?? throw new global::System.ArgumentNullException(nameof(organizationUrl));
             this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
             this.State = state ?? throw new global::System.ArgumentNullException(nameof(state));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.DirectMembership = directMembership;
+            this.EnterpriseTeamsProvidingIndirectMembership = enterpriseTeamsProvidingIndirectMembership;
         }
 
         /// <summary>

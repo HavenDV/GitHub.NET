@@ -4,7 +4,10 @@
 namespace GitHub
 {
     /// <summary>
-    /// Use the `status` property to enable or disable GitHub Advanced Security for this repository. For more information, see "[About GitHub Advanced Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security)."
+    /// Use the `status` property to enable or disable GitHub Advanced Security for this repository.<br/>
+    /// For more information, see "[About GitHub Advanced<br/>
+    /// Security](/github/getting-started-with-github/learning-about-github/about-github-advanced-security)."<br/>
+    /// For standalone Code Scanning or Secret Protection products, this parameter cannot be used.
     /// </summary>
     public sealed partial class ReposUpdateRequestSecurityAndAnalysisAdvancedSecurity
     {

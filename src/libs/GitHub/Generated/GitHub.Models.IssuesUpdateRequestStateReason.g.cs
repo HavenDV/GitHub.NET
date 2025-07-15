@@ -20,6 +20,10 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        Duplicate,
+        /// <summary>
+        /// 
+        /// </summary>
         Reopened,
     }
 
@@ -37,6 +41,7 @@ namespace GitHub
             {
                 IssuesUpdateRequestStateReason.Completed => "completed",
                 IssuesUpdateRequestStateReason.NotPlanned => "not_planned",
+                IssuesUpdateRequestStateReason.Duplicate => "duplicate",
                 IssuesUpdateRequestStateReason.Reopened => "reopened",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -50,6 +55,7 @@ namespace GitHub
             {
                 "completed" => IssuesUpdateRequestStateReason.Completed,
                 "not_planned" => IssuesUpdateRequestStateReason.NotPlanned,
+                "duplicate" => IssuesUpdateRequestStateReason.Duplicate,
                 "reopened" => IssuesUpdateRequestStateReason.Reopened,
                 _ => null,
             };

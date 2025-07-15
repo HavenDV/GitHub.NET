@@ -37,6 +37,23 @@ namespace GitHub
         public required global::GitHub.OrgMembershipRole Role { get; set; }
 
         /// <summary>
+        /// Whether the user has direct membership in the organization.<br/>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("direct_membership")]
+        public bool? DirectMembership { get; set; }
+
+        /// <summary>
+        /// The slugs of the enterprise teams providing the user with indirect membership in the organization.<br/>
+        /// A limit of 100 enterprise team slugs is returned.<br/>
+        /// Example: [ent:team-one, ent:team-two]
+        /// </summary>
+        /// <example>[ent:team-one, ent:team-two]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enterprise_teams_providing_indirect_membership")]
+        public global::System.Collections.Generic.IList<string>? EnterpriseTeamsProvidingIndirectMembership { get; set; }
+
+        /// <summary>
         /// Example: https://api.github.com/orgs/octocat
         /// </summary>
         /// <example>https://api.github.com/orgs/octocat</example>
@@ -84,6 +101,15 @@ namespace GitHub
         /// The user's membership type in the organization.<br/>
         /// Example: admin
         /// </param>
+        /// <param name="directMembership">
+        /// Whether the user has direct membership in the organization.<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="enterpriseTeamsProvidingIndirectMembership">
+        /// The slugs of the enterprise teams providing the user with indirect membership in the organization.<br/>
+        /// A limit of 100 enterprise team slugs is returned.<br/>
+        /// Example: [ent:team-one, ent:team-two]
+        /// </param>
         /// <param name="organizationUrl">
         /// Example: https://api.github.com/orgs/octocat
         /// </param>
@@ -104,6 +130,8 @@ namespace GitHub
             string organizationUrl,
             global::GitHub.OrganizationSimple organization,
             global::GitHub.NullableSimpleUser? user,
+            bool? directMembership,
+            global::System.Collections.Generic.IList<string>? enterpriseTeamsProvidingIndirectMembership,
             global::GitHub.OrgMembershipPermissions? permissions)
         {
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
@@ -112,6 +140,8 @@ namespace GitHub
             this.OrganizationUrl = organizationUrl ?? throw new global::System.ArgumentNullException(nameof(organizationUrl));
             this.Organization = organization ?? throw new global::System.ArgumentNullException(nameof(organization));
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.DirectMembership = directMembership;
+            this.EnterpriseTeamsProvidingIndirectMembership = enterpriseTeamsProvidingIndirectMembership;
             this.Permissions = permissions;
         }
 

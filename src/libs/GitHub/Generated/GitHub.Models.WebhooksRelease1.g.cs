@@ -71,6 +71,13 @@ namespace GitHub
         public required int Id { get; set; }
 
         /// <summary>
+        /// Whether or not the release is immutable.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("immutable")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool Immutable { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
@@ -166,6 +173,9 @@ namespace GitHub
         /// </param>
         /// <param name="htmlUrl"></param>
         /// <param name="id"></param>
+        /// <param name="immutable">
+        /// Whether or not the release is immutable.
+        /// </param>
         /// <param name="name"></param>
         /// <param name="nodeId"></param>
         /// <param name="prerelease">
@@ -195,6 +205,7 @@ namespace GitHub
             bool draft,
             string htmlUrl,
             int id,
+            bool immutable,
             string? name,
             string nodeId,
             bool prerelease,
@@ -216,6 +227,7 @@ namespace GitHub
             this.Draft = draft;
             this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
             this.Id = id;
+            this.Immutable = immutable;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
             this.Prerelease = prerelease;

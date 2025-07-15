@@ -114,6 +114,14 @@ namespace GitHub
         public required bool Prerelease { get; set; }
 
         /// <summary>
+        /// Whether or not the release is immutable.<br/>
+        /// Example: false
+        /// </summary>
+        /// <example>false</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("immutable")]
+        public bool? Immutable { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -206,6 +214,10 @@ namespace GitHub
         /// Whether to identify the release as a prerelease or a full release.<br/>
         /// Example: false
         /// </param>
+        /// <param name="immutable">
+        /// Whether or not the release is immutable.<br/>
+        /// Example: false
+        /// </param>
         /// <param name="createdAt"></param>
         /// <param name="publishedAt"></param>
         /// <param name="author">
@@ -241,6 +253,7 @@ namespace GitHub
             global::GitHub.SimpleUser author,
             global::System.Collections.Generic.IList<global::GitHub.ReleaseAsset> assets,
             string? body,
+            bool? immutable,
             string? bodyHtml,
             string? bodyText,
             int? mentionsCount,
@@ -265,6 +278,7 @@ namespace GitHub
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.Assets = assets ?? throw new global::System.ArgumentNullException(nameof(assets));
             this.Body = body;
+            this.Immutable = immutable;
             this.BodyHtml = bodyHtml;
             this.BodyText = bodyText;
             this.MentionsCount = mentionsCount;

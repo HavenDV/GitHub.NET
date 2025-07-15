@@ -21,11 +21,20 @@ namespace GitHub
         public string? Description { get; set; }
 
         /// <summary>
-        /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.
+        /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.<br/>
+        /// &gt; [!WARNING]<br/>
+        /// &gt; `code_security` and `secret_protection` are deprecated values for this field. Prefer the individual `code_security` and `secret_protection` fields to set the status of these features.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("advanced_security")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityUpdateEnterpriseConfigurationRequestAdvancedSecurityJsonConverter))]
         public global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestAdvancedSecurity? AdvancedSecurity { get; set; }
+
+        /// <summary>
+        /// The enablement status of GitHub Code Security features.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code_security")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityUpdateEnterpriseConfigurationRequestCodeSecurityJsonConverter))]
+        public global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestCodeSecurity? CodeSecurity { get; set; }
 
         /// <summary>
         /// The enablement status of Dependency Graph
@@ -81,6 +90,13 @@ namespace GitHub
         [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_delegated_alert_dismissal")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityUpdateEnterpriseConfigurationRequestCodeScanningDelegatedAlertDismissalJsonConverter))]
         public global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestCodeScanningDelegatedAlertDismissal? CodeScanningDelegatedAlertDismissal { get; set; }
+
+        /// <summary>
+        /// The enablement status of GitHub Secret Protection features.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("secret_protection")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.CodeSecurityUpdateEnterpriseConfigurationRequestSecretProtectionJsonConverter))]
+        public global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretProtection? SecretProtection { get; set; }
 
         /// <summary>
         /// The enablement status of secret scanning
@@ -156,7 +172,12 @@ namespace GitHub
         /// A description of the code security configuration
         /// </param>
         /// <param name="advancedSecurity">
-        /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.
+        /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.<br/>
+        /// &gt; [!WARNING]<br/>
+        /// &gt; `code_security` and `secret_protection` are deprecated values for this field. Prefer the individual `code_security` and `secret_protection` fields to set the status of these features.
+        /// </param>
+        /// <param name="codeSecurity">
+        /// The enablement status of GitHub Code Security features.
         /// </param>
         /// <param name="dependencyGraph">
         /// The enablement status of Dependency Graph
@@ -182,6 +203,9 @@ namespace GitHub
         /// <param name="codeScanningDelegatedAlertDismissal">
         /// The enablement status of code scanning delegated alert dismissal<br/>
         /// Default Value: disabled
+        /// </param>
+        /// <param name="secretProtection">
+        /// The enablement status of GitHub Secret Protection features.
         /// </param>
         /// <param name="secretScanning">
         /// The enablement status of secret scanning
@@ -216,6 +240,7 @@ namespace GitHub
             string? name,
             string? description,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestAdvancedSecurity? advancedSecurity,
+            global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestCodeSecurity? codeSecurity,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestDependencyGraph? dependencyGraph,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestDependencyGraphAutosubmitAction? dependencyGraphAutosubmitAction,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestDependencyGraphAutosubmitActionOptions? dependencyGraphAutosubmitActionOptions,
@@ -224,6 +249,7 @@ namespace GitHub
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup,
             global::GitHub.CodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal,
+            global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretProtection? secretProtection,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanning? secretScanning,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningPushProtection? secretScanningPushProtection,
             global::GitHub.CodeSecurityUpdateEnterpriseConfigurationRequestSecretScanningValidityChecks? secretScanningValidityChecks,
@@ -236,6 +262,7 @@ namespace GitHub
             this.Name = name;
             this.Description = description;
             this.AdvancedSecurity = advancedSecurity;
+            this.CodeSecurity = codeSecurity;
             this.DependencyGraph = dependencyGraph;
             this.DependencyGraphAutosubmitAction = dependencyGraphAutosubmitAction;
             this.DependencyGraphAutosubmitActionOptions = dependencyGraphAutosubmitActionOptions;
@@ -244,6 +271,7 @@ namespace GitHub
             this.CodeScanningDefaultSetup = codeScanningDefaultSetup;
             this.CodeScanningDefaultSetupOptions = codeScanningDefaultSetupOptions;
             this.CodeScanningDelegatedAlertDismissal = codeScanningDelegatedAlertDismissal;
+            this.SecretProtection = secretProtection;
             this.SecretScanning = secretScanning;
             this.SecretScanningPushProtection = secretScanningPushProtection;
             this.SecretScanningValidityChecks = secretScanningValidityChecks;
