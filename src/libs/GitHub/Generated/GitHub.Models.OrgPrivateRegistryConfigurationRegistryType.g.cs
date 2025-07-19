@@ -48,6 +48,26 @@ namespace GitHub
         /// 
         /// </summary>
         HelmRegistry,
+        /// <summary>
+        /// 
+        /// </summary>
+        HexOrganization,
+        /// <summary>
+        /// 
+        /// </summary>
+        HexRepository,
+        /// <summary>
+        /// 
+        /// </summary>
+        PubRepository,
+        /// <summary>
+        /// 
+        /// </summary>
+        PythonIndex,
+        /// <summary>
+        /// 
+        /// </summary>
+        TerraformRegistry,
     }
 
     /// <summary>
@@ -72,6 +92,11 @@ namespace GitHub
                 OrgPrivateRegistryConfigurationRegistryType.DockerRegistry => "docker_registry",
                 OrgPrivateRegistryConfigurationRegistryType.GitSource => "git_source",
                 OrgPrivateRegistryConfigurationRegistryType.HelmRegistry => "helm_registry",
+                OrgPrivateRegistryConfigurationRegistryType.HexOrganization => "hex_organization",
+                OrgPrivateRegistryConfigurationRegistryType.HexRepository => "hex_repository",
+                OrgPrivateRegistryConfigurationRegistryType.PubRepository => "pub_repository",
+                OrgPrivateRegistryConfigurationRegistryType.PythonIndex => "python_index",
+                OrgPrivateRegistryConfigurationRegistryType.TerraformRegistry => "terraform_registry",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -92,6 +117,11 @@ namespace GitHub
                 "docker_registry" => OrgPrivateRegistryConfigurationRegistryType.DockerRegistry,
                 "git_source" => OrgPrivateRegistryConfigurationRegistryType.GitSource,
                 "helm_registry" => OrgPrivateRegistryConfigurationRegistryType.HelmRegistry,
+                "hex_organization" => OrgPrivateRegistryConfigurationRegistryType.HexOrganization,
+                "hex_repository" => OrgPrivateRegistryConfigurationRegistryType.HexRepository,
+                "pub_repository" => OrgPrivateRegistryConfigurationRegistryType.PubRepository,
+                "python_index" => OrgPrivateRegistryConfigurationRegistryType.PythonIndex,
+                "terraform_registry" => OrgPrivateRegistryConfigurationRegistryType.TerraformRegistry,
                 _ => null,
             };
         }

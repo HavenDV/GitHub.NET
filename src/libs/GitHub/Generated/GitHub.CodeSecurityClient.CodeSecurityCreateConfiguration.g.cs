@@ -199,6 +199,9 @@ namespace GitHub
         /// The enablement status of Dependabot security updates<br/>
         /// Default Value: disabled
         /// </param>
+        /// <param name="codeScanningOptions">
+        /// Security Configuration feature options for code scanning
+        /// </param>
         /// <param name="codeScanningDefaultSetup">
         /// The enablement status of code scanning default setup<br/>
         /// Default Value: disabled
@@ -264,6 +267,7 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationRequestDependencyGraphAutosubmitActionOptions? dependencyGraphAutosubmitActionOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestDependabotAlerts? dependabotAlerts = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestDependabotSecurityUpdates? dependabotSecurityUpdates = default,
+            global::GitHub.CodeScanningOptions? codeScanningOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDefaultSetup? codeScanningDefaultSetup = default,
             global::GitHub.CodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationRequestCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal = default,
@@ -291,6 +295,7 @@ namespace GitHub
                 DependencyGraphAutosubmitActionOptions = dependencyGraphAutosubmitActionOptions,
                 DependabotAlerts = dependabotAlerts,
                 DependabotSecurityUpdates = dependabotSecurityUpdates,
+                CodeScanningOptions = codeScanningOptions,
                 CodeScanningDefaultSetup = codeScanningDefaultSetup,
                 CodeScanningDefaultSetupOptions = codeScanningDefaultSetupOptions,
                 CodeScanningDelegatedAlertDismissal = codeScanningDelegatedAlertDismissal,

@@ -266,7 +266,7 @@ namespace GitHub
             global::GitHub.ReposCreateOrgRulesetRequestTarget? target = default,
             global::System.Collections.Generic.IList<global::GitHub.RepositoryRulesetBypassActor>? bypassActors = default,
             global::GitHub.OrgRulesetConditions? conditions = default,
-            global::System.Collections.Generic.IList<global::GitHub.RepositoryRule>? rules = default,
+            global::System.Collections.Generic.IList<global::GitHub.OrgRules>? rules = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::GitHub.ReposCreateOrgRulesetRequest
