@@ -60,6 +60,9 @@ namespace GitHub
         /// The enablement status of Dependabot security updates<br/>
         /// Default Value: disabled
         /// </param>
+        /// <param name="codeScanningOptions">
+        /// Security Configuration feature options for code scanning
+        /// </param>
         /// <param name="codeScanningDefaultSetup">
         /// The enablement status of code scanning default setup<br/>
         /// Default Value: disabled
@@ -119,6 +122,7 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestDependencyGraphAutosubmitActionOptions? dependencyGraphAutosubmitActionOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestDependabotAlerts? dependabotAlerts = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestDependabotSecurityUpdates? dependabotSecurityUpdates = default,
+            global::GitHub.CodeScanningOptions? codeScanningOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestCodeScanningDefaultSetup? codeScanningDefaultSetup = default,
             global::GitHub.CodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions = default,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal = default,

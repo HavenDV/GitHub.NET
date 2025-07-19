@@ -78,6 +78,12 @@ namespace GitHub
         public global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestDependabotSecurityUpdates? DependabotSecurityUpdates { get; set; }
 
         /// <summary>
+        /// Security Configuration feature options for code scanning
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_options")]
+        public global::GitHub.CodeScanningOptions? CodeScanningOptions { get; set; }
+
+        /// <summary>
         /// The enablement status of code scanning default setup<br/>
         /// Default Value: disabled
         /// </summary>
@@ -213,6 +219,9 @@ namespace GitHub
         /// The enablement status of Dependabot security updates<br/>
         /// Default Value: disabled
         /// </param>
+        /// <param name="codeScanningOptions">
+        /// Security Configuration feature options for code scanning
+        /// </param>
         /// <param name="codeScanningDefaultSetup">
         /// The enablement status of code scanning default setup<br/>
         /// Default Value: disabled
@@ -272,6 +281,7 @@ namespace GitHub
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestDependencyGraphAutosubmitActionOptions? dependencyGraphAutosubmitActionOptions,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestDependabotAlerts? dependabotAlerts,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestDependabotSecurityUpdates? dependabotSecurityUpdates,
+            global::GitHub.CodeScanningOptions? codeScanningOptions,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestCodeScanningDefaultSetup? codeScanningDefaultSetup,
             global::GitHub.CodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions,
             global::GitHub.CodeSecurityCreateConfigurationForEnterpriseRequestCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal,
@@ -294,6 +304,7 @@ namespace GitHub
             this.DependencyGraphAutosubmitActionOptions = dependencyGraphAutosubmitActionOptions;
             this.DependabotAlerts = dependabotAlerts;
             this.DependabotSecurityUpdates = dependabotSecurityUpdates;
+            this.CodeScanningOptions = codeScanningOptions;
             this.CodeScanningDefaultSetup = codeScanningDefaultSetup;
             this.CodeScanningDefaultSetupOptions = codeScanningDefaultSetupOptions;
             this.CodeScanningDelegatedAlertDismissal = codeScanningDelegatedAlertDismissal;

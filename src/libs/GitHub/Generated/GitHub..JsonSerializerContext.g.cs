@@ -5821,6 +5821,7 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.NullableSecretScanningFirstDetectedLocationJsonConverter),
             typeof(global::GitHub.JsonConverters.OrgRulesetConditionsJsonConverter),
             typeof(global::GitHub.JsonConverters.RepositoryRuleJsonConverter),
+            typeof(global::GitHub.JsonConverters.OrgRulesJsonConverter),
             typeof(global::GitHub.JsonConverters.RulesetVersionWithStateJsonConverter),
             typeof(global::GitHub.JsonConverters.IssueEventForIssueJsonConverter),
             typeof(global::GitHub.JsonConverters.TimelineIssueEventsJsonConverter),

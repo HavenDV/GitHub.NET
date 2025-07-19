@@ -78,7 +78,7 @@ namespace GitHub
         /// Feature options for code scanning
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code_scanning_options")]
-        public object? CodeScanningOptions { get; set; }
+        public global::GitHub.CodeSecurityConfigurationCodeScanningOptions? CodeScanningOptions { get; set; }
 
         /// <summary>
         /// The enablement status of code scanning default setup
@@ -296,7 +296,7 @@ namespace GitHub
             global::GitHub.CodeSecurityConfigurationDependencyGraphAutosubmitActionOptions? dependencyGraphAutosubmitActionOptions,
             global::GitHub.CodeSecurityConfigurationDependabotAlerts? dependabotAlerts,
             global::GitHub.CodeSecurityConfigurationDependabotSecurityUpdates? dependabotSecurityUpdates,
-            object? codeScanningOptions,
+            global::GitHub.CodeSecurityConfigurationCodeScanningOptions? codeScanningOptions,
             global::GitHub.CodeSecurityConfigurationCodeScanningDefaultSetup? codeScanningDefaultSetup,
             global::GitHub.CodeSecurityConfigurationCodeScanningDefaultSetupOptions? codeScanningDefaultSetupOptions,
             global::GitHub.CodeSecurityConfigurationCodeScanningDelegatedAlertDismissal? codeScanningDelegatedAlertDismissal,

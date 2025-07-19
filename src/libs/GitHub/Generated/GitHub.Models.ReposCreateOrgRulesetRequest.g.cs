@@ -51,7 +51,7 @@ namespace GitHub
         /// An array of rules within the ruleset.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rules")]
-        public global::System.Collections.Generic.IList<global::GitHub.RepositoryRule>? Rules { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrgRules>? Rules { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -93,7 +93,7 @@ namespace GitHub
             global::GitHub.ReposCreateOrgRulesetRequestTarget? target,
             global::System.Collections.Generic.IList<global::GitHub.RepositoryRulesetBypassActor>? bypassActors,
             global::GitHub.OrgRulesetConditions? conditions,
-            global::System.Collections.Generic.IList<global::GitHub.RepositoryRule>? rules)
+            global::System.Collections.Generic.IList<global::GitHub.OrgRules>? rules)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Enforcement = enforcement;

@@ -48,6 +48,26 @@ namespace GitHub
         /// 
         /// </summary>
         HelmRegistry,
+        /// <summary>
+        /// 
+        /// </summary>
+        HexOrganization,
+        /// <summary>
+        /// 
+        /// </summary>
+        HexRepository,
+        /// <summary>
+        /// 
+        /// </summary>
+        PubRepository,
+        /// <summary>
+        /// 
+        /// </summary>
+        PythonIndex,
+        /// <summary>
+        /// 
+        /// </summary>
+        TerraformRegistry,
     }
 
     /// <summary>
@@ -72,6 +92,11 @@ namespace GitHub
                 PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.DockerRegistry => "docker_registry",
                 PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.GitSource => "git_source",
                 PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.HelmRegistry => "helm_registry",
+                PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.HexOrganization => "hex_organization",
+                PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.HexRepository => "hex_repository",
+                PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.PubRepository => "pub_repository",
+                PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.PythonIndex => "python_index",
+                PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.TerraformRegistry => "terraform_registry",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -92,6 +117,11 @@ namespace GitHub
                 "docker_registry" => PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.DockerRegistry,
                 "git_source" => PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.GitSource,
                 "helm_registry" => PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.HelmRegistry,
+                "hex_organization" => PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.HexOrganization,
+                "hex_repository" => PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.HexRepository,
+                "pub_repository" => PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.PubRepository,
+                "python_index" => PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.PythonIndex,
+                "terraform_registry" => PrivateRegistriesUpdateOrgPrivateRegistryRequestRegistryType.TerraformRegistry,
                 _ => null,
             };
         }
