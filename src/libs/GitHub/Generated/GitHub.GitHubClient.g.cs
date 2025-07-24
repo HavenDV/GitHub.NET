@@ -236,9 +236,9 @@ namespace GitHub
         };
 
         /// <summary>
-        /// Interact with GitHub Projects.
+        /// Interact with GitHub Projects (classic).
         /// </summary>
-        public ProjectsClient Projects => new ProjectsClient(HttpClient, authorizations: Authorizations)
+        public ProjectsClassicClient ProjectsClassic => new ProjectsClassicClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,

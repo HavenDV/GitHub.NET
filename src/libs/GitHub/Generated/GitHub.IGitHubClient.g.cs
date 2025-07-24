@@ -148,9 +148,9 @@ namespace GitHub
         public PackagesClient Packages { get; }
 
         /// <summary>
-        /// Interact with GitHub Projects.
+        /// Interact with GitHub Projects (classic).
         /// </summary>
-        public ProjectsClient Projects { get; }
+        public ProjectsClassicClient ProjectsClassic { get; }
 
         /// <summary>
         /// Interact with GitHub Pull Requests.

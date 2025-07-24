@@ -23746,7 +23746,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateForOrgRequest? Type5930 { get; set; }
+        public global::GitHub.ProjectsClassicCreateForOrgRequest? Type5930 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -23914,51 +23914,51 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsUpdateCardRequest? Type5972 { get; set; }
+        public global::GitHub.ProjectsClassicUpdateCardRequest? Type5972 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardRequest? Type5973 { get; set; }
+        public global::GitHub.ProjectsClassicMoveCardRequest? Type5973 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsUpdateColumnRequest? Type5974 { get; set; }
+        public global::GitHub.ProjectsClassicUpdateColumnRequest? Type5974 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OneOf<global::GitHub.ProjectsCreateCardRequestVariant1, global::GitHub.ProjectsCreateCardRequestVariant2>? Type5975 { get; set; }
+        public global::GitHub.OneOf<global::GitHub.ProjectsClassicCreateCardRequestVariant1, global::GitHub.ProjectsClassicCreateCardRequestVariant2>? Type5975 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateCardRequestVariant1? Type5976 { get; set; }
+        public global::GitHub.ProjectsClassicCreateCardRequestVariant1? Type5976 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateCardRequestVariant2? Type5977 { get; set; }
+        public global::GitHub.ProjectsClassicCreateCardRequestVariant2? Type5977 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveColumnRequest? Type5978 { get; set; }
+        public global::GitHub.ProjectsClassicMoveColumnRequest? Type5978 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsUpdateRequest? Type5979 { get; set; }
+        public global::GitHub.ProjectsClassicUpdateRequest? Type5979 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsUpdateRequestOrganizationPermission? Type5980 { get; set; }
+        public global::GitHub.ProjectsClassicUpdateRequestOrganizationPermission? Type5980 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsAddCollaboratorRequest? Type5981 { get; set; }
+        public global::GitHub.ProjectsClassicAddCollaboratorRequest? Type5981 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsAddCollaboratorRequestPermission? Type5982 { get; set; }
+        public global::GitHub.ProjectsClassicAddCollaboratorRequestPermission? Type5982 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateColumnRequest? Type5983 { get; set; }
+        public global::GitHub.ProjectsClassicCreateColumnRequest? Type5983 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -24834,7 +24834,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateForRepoRequest? Type6202 { get; set; }
+        public global::GitHub.ProjectsClassicCreateForRepoRequest? Type6202 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -25214,7 +25214,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateForAuthenticatedUserRequest? Type6297 { get; set; }
+        public global::GitHub.ProjectsClassicCreateForAuthenticatedUserRequest? Type6297 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -25550,7 +25550,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsListForOrgState? Type6381 { get; set; }
+        public global::GitHub.ProjectsClassicListForOrgState? Type6381 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -25626,11 +25626,11 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsListCardsArchivedState? Type6400 { get; set; }
+        public global::GitHub.ProjectsClassicListCardsArchivedState? Type6400 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsListCollaboratorsAffiliation? Type6401 { get; set; }
+        public global::GitHub.ProjectsClassicListCollaboratorsAffiliation? Type6401 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -25778,7 +25778,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsListForRepoState? Type6438 { get; set; }
+        public global::GitHub.ProjectsClassicListForRepoState? Type6438 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -26050,7 +26050,7 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsListForUserState? Type6506 { get; set; }
+        public global::GitHub.ProjectsClassicListForUserState? Type6506 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -26634,35 +26634,35 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsDeleteCardResponse? Type6652 { get; set; }
+        public global::GitHub.ProjectsClassicDeleteCardResponse? Type6652 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardResponse? Type6653 { get; set; }
+        public global::GitHub.ProjectsClassicMoveCardResponse? Type6653 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardResponse2? Type6654 { get; set; }
+        public global::GitHub.ProjectsClassicMoveCardResponse2? Type6654 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ProjectsMoveCardResponseError>? Type6655 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ProjectsClassicMoveCardResponseError>? Type6655 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardResponseError? Type6656 { get; set; }
+        public global::GitHub.ProjectsClassicMoveCardResponseError? Type6656 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardResponse3? Type6657 { get; set; }
+        public global::GitHub.ProjectsClassicMoveCardResponse3? Type6657 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ProjectsMoveCardResponseError2>? Type6658 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ProjectsClassicMoveCardResponseError2>? Type6658 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveCardResponseError2? Type6659 { get; set; }
+        public global::GitHub.ProjectsClassicMoveCardResponseError2? Type6659 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -26670,27 +26670,27 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateCardResponse2? Type6661 { get; set; }
+        public global::GitHub.ProjectsClassicCreateCardResponse2? Type6661 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.ProjectsCreateCardResponseError>? Type6662 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.ProjectsClassicCreateCardResponseError>? Type6662 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsCreateCardResponseError? Type6663 { get; set; }
+        public global::GitHub.ProjectsClassicCreateCardResponseError? Type6663 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsMoveColumnResponse? Type6664 { get; set; }
+        public global::GitHub.ProjectsClassicMoveColumnResponse? Type6664 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsUpdateResponse? Type6665 { get; set; }
+        public global::GitHub.ProjectsClassicUpdateResponse? Type6665 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.ProjectsDeleteResponse? Type6666 { get; set; }
+        public global::GitHub.ProjectsClassicDeleteResponse? Type6666 { get; set; }
         /// <summary>
         /// 
         /// </summary>
