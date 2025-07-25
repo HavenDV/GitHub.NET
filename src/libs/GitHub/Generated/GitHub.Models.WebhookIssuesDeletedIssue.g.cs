@@ -169,7 +169,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
-        public global::GitHub.WebhookIssuesDeletedIssueSubIssuesSummary? SubIssuesSummary { get; set; }
+        public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
 
         /// <summary>
         /// State of the issue; either 'open' or 'closed'
@@ -312,7 +312,7 @@ namespace GitHub
             bool? locked,
             global::GitHub.WebhookIssuesDeletedIssuePerformedViaGithubApp? performedViaGithubApp,
             global::GitHub.WebhookIssuesDeletedIssuePullRequest? pullRequest,
-            global::GitHub.WebhookIssuesDeletedIssueSubIssuesSummary? subIssuesSummary,
+            global::GitHub.SubIssuesSummary? subIssuesSummary,
             global::GitHub.WebhookIssuesDeletedIssueState? state,
             string? stateReason,
             string? timelineUrl,
