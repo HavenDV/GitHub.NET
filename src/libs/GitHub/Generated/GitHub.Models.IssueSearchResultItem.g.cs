@@ -115,7 +115,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
-        public global::GitHub.IssueSearchResultItemSubIssuesSummary? SubIssuesSummary { get; set; }
+        public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
 
         /// <summary>
         /// 
@@ -344,7 +344,7 @@ namespace GitHub
             global::GitHub.AuthorAssociation authorAssociation,
             string? activeLockReason,
             global::System.Collections.Generic.IList<global::GitHub.SimpleUser>? assignees,
-            global::GitHub.IssueSearchResultItemSubIssuesSummary? subIssuesSummary,
+            global::GitHub.SubIssuesSummary? subIssuesSummary,
             string? stateReason,
             global::System.Collections.Generic.IList<global::GitHub.SearchResultTextMatche>? textMatches,
             global::GitHub.IssueSearchResultItemPullRequest? pullRequest,

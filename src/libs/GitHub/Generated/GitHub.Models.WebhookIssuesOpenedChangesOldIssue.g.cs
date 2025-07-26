@@ -154,7 +154,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
-        public global::GitHub.WebhookIssuesOpenedChangesOldIssueSubIssuesSummary? SubIssuesSummary { get; set; }
+        public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
 
         /// <summary>
         /// State of the issue; either 'open' or 'closed'
@@ -289,7 +289,7 @@ namespace GitHub
             global::GitHub.WebhookIssuesOpenedChangesOldIssuePullRequest? pullRequest,
             global::GitHub.WebhookIssuesOpenedChangesOldIssueReactions? reactions,
             string? repositoryUrl,
-            global::GitHub.WebhookIssuesOpenedChangesOldIssueSubIssuesSummary? subIssuesSummary,
+            global::GitHub.SubIssuesSummary? subIssuesSummary,
             global::GitHub.WebhookIssuesOpenedChangesOldIssueState? state,
             string? stateReason,
             string? timelineUrl,
