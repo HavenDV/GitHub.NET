@@ -58,6 +58,12 @@ namespace GitHub
         public required bool ReadOnly { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("last_used")]
+        public global::System.DateTime? LastUsed { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -73,6 +79,7 @@ namespace GitHub
         /// <param name="createdAt"></param>
         /// <param name="verified"></param>
         /// <param name="readOnly"></param>
+        /// <param name="lastUsed"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -83,7 +90,8 @@ namespace GitHub
             string title,
             global::System.DateTime createdAt,
             bool verified,
-            bool readOnly)
+            bool readOnly,
+            global::System.DateTime? lastUsed)
         {
             this.Key1 = key1 ?? throw new global::System.ArgumentNullException(nameof(key1));
             this.Id = id;
@@ -92,6 +100,7 @@ namespace GitHub
             this.CreatedAt = createdAt;
             this.Verified = verified;
             this.ReadOnly = readOnly;
+            this.LastUsed = lastUsed;
         }
 
         /// <summary>
