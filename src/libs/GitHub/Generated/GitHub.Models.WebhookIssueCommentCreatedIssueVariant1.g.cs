@@ -169,7 +169,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
-        public global::GitHub.WebhookIssueCommentCreatedIssueVariant1SubIssuesSummary? SubIssuesSummary { get; set; }
+        public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
 
         /// <summary>
         /// State of the issue; either 'open' or 'closed'
@@ -312,7 +312,7 @@ namespace GitHub
             bool? locked,
             global::GitHub.WebhookIssueCommentCreatedIssueVariant1PerformedViaGithubApp? performedViaGithubApp,
             global::GitHub.WebhookIssueCommentCreatedIssueVariant1PullRequest? pullRequest,
-            global::GitHub.WebhookIssueCommentCreatedIssueVariant1SubIssuesSummary? subIssuesSummary,
+            global::GitHub.SubIssuesSummary? subIssuesSummary,
             global::GitHub.WebhookIssueCommentCreatedIssueVariant1State? state,
             string? stateReason,
             string? timelineUrl,
