@@ -115,7 +115,13 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
-        public global::GitHub.IssueSearchResultItemSubIssuesSummary? SubIssuesSummary { get; set; }
+        public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("issue_dependencies_summary")]
+        public global::GitHub.IssueDependenciesSummary? IssueDependenciesSummary { get; set; }
 
         /// <summary>
         /// 
@@ -282,6 +288,7 @@ namespace GitHub
         /// </param>
         /// <param name="labels"></param>
         /// <param name="subIssuesSummary"></param>
+        /// <param name="issueDependenciesSummary"></param>
         /// <param name="state"></param>
         /// <param name="stateReason"></param>
         /// <param name="assignee">
@@ -344,7 +351,8 @@ namespace GitHub
             global::GitHub.AuthorAssociation authorAssociation,
             string? activeLockReason,
             global::System.Collections.Generic.IList<global::GitHub.SimpleUser>? assignees,
-            global::GitHub.IssueSearchResultItemSubIssuesSummary? subIssuesSummary,
+            global::GitHub.SubIssuesSummary? subIssuesSummary,
+            global::GitHub.IssueDependenciesSummary? issueDependenciesSummary,
             string? stateReason,
             global::System.Collections.Generic.IList<global::GitHub.SearchResultTextMatche>? textMatches,
             global::GitHub.IssueSearchResultItemPullRequest? pullRequest,
@@ -383,6 +391,7 @@ namespace GitHub
             this.ActiveLockReason = activeLockReason;
             this.Assignees = assignees;
             this.SubIssuesSummary = subIssuesSummary;
+            this.IssueDependenciesSummary = issueDependenciesSummary;
             this.StateReason = stateReason;
             this.TextMatches = textMatches;
             this.PullRequest = pullRequest;
