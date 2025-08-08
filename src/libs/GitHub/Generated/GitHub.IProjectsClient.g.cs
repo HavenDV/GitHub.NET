@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// Interact with GitHub Projects.<br/>
+    /// Endpoints to manage Projects using the REST API.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
