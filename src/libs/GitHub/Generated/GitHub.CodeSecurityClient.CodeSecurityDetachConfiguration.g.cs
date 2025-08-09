@@ -301,7 +301,7 @@ namespace GitHub
         /// </summary>
         /// <param name="org"></param>
         /// <param name="selectedRepositoryIds">
-        /// An array of repository IDs to detach from configurations. Up to 1000 IDs can be provided.
+        /// An array of repository IDs to detach from configurations. Up to 250 IDs can be provided.
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
