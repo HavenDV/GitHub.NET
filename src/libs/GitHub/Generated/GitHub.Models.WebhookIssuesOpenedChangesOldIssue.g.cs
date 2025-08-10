@@ -154,7 +154,13 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
-        public global::GitHub.WebhookIssuesOpenedChangesOldIssueSubIssuesSummary? SubIssuesSummary { get; set; }
+        public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("issue_dependencies_summary")]
+        public global::GitHub.IssueDependenciesSummary? IssueDependenciesSummary { get; set; }
 
         /// <summary>
         /// State of the issue; either 'open' or 'closed'
@@ -246,6 +252,7 @@ namespace GitHub
         /// <param name="reactions"></param>
         /// <param name="repositoryUrl"></param>
         /// <param name="subIssuesSummary"></param>
+        /// <param name="issueDependenciesSummary"></param>
         /// <param name="state">
         /// State of the issue; either 'open' or 'closed'
         /// </param>
@@ -289,7 +296,8 @@ namespace GitHub
             global::GitHub.WebhookIssuesOpenedChangesOldIssuePullRequest? pullRequest,
             global::GitHub.WebhookIssuesOpenedChangesOldIssueReactions? reactions,
             string? repositoryUrl,
-            global::GitHub.WebhookIssuesOpenedChangesOldIssueSubIssuesSummary? subIssuesSummary,
+            global::GitHub.SubIssuesSummary? subIssuesSummary,
+            global::GitHub.IssueDependenciesSummary? issueDependenciesSummary,
             global::GitHub.WebhookIssuesOpenedChangesOldIssueState? state,
             string? stateReason,
             string? timelineUrl,
@@ -323,6 +331,7 @@ namespace GitHub
             this.Reactions = reactions;
             this.RepositoryUrl = repositoryUrl;
             this.SubIssuesSummary = subIssuesSummary;
+            this.IssueDependenciesSummary = issueDependenciesSummary;
             this.State = state;
             this.StateReason = stateReason;
             this.TimelineUrl = timelineUrl;
