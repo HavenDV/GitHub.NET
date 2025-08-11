@@ -266,6 +266,12 @@ namespace GitHub
         public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("issue_dependencies_summary")]
+        public global::GitHub.IssueDependenciesSummary? IssueDependenciesSummary { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -348,6 +354,7 @@ namespace GitHub
         /// </param>
         /// <param name="reactions"></param>
         /// <param name="subIssuesSummary"></param>
+        /// <param name="issueDependenciesSummary"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -387,7 +394,8 @@ namespace GitHub
             global::GitHub.Repository? repository,
             global::GitHub.NullableIntegration? performedViaGithubApp,
             global::GitHub.ReactionRollup? reactions,
-            global::GitHub.SubIssuesSummary? subIssuesSummary)
+            global::GitHub.SubIssuesSummary? subIssuesSummary,
+            global::GitHub.IssueDependenciesSummary? issueDependenciesSummary)
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
@@ -425,6 +433,7 @@ namespace GitHub
             this.PerformedViaGithubApp = performedViaGithubApp;
             this.Reactions = reactions;
             this.SubIssuesSummary = subIssuesSummary;
+            this.IssueDependenciesSummary = issueDependenciesSummary;
         }
 
         /// <summary>
