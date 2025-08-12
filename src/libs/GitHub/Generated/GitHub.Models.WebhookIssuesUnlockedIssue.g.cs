@@ -170,7 +170,13 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
-        public global::GitHub.WebhookIssuesUnlockedIssueSubIssuesSummary? SubIssuesSummary { get; set; }
+        public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("issue_dependencies_summary")]
+        public global::GitHub.IssueDependenciesSummary? IssueDependenciesSummary { get; set; }
 
         /// <summary>
         /// State of the issue; either 'open' or 'closed'
@@ -266,6 +272,7 @@ namespace GitHub
         /// <param name="reactions"></param>
         /// <param name="repositoryUrl"></param>
         /// <param name="subIssuesSummary"></param>
+        /// <param name="issueDependenciesSummary"></param>
         /// <param name="state">
         /// State of the issue; either 'open' or 'closed'
         /// </param>
@@ -313,7 +320,8 @@ namespace GitHub
             global::System.Collections.Generic.IList<global::GitHub.WebhookIssuesUnlockedIssueLabel>? labels,
             global::GitHub.WebhookIssuesUnlockedIssuePerformedViaGithubApp? performedViaGithubApp,
             global::GitHub.WebhookIssuesUnlockedIssuePullRequest? pullRequest,
-            global::GitHub.WebhookIssuesUnlockedIssueSubIssuesSummary? subIssuesSummary,
+            global::GitHub.SubIssuesSummary? subIssuesSummary,
+            global::GitHub.IssueDependenciesSummary? issueDependenciesSummary,
             global::GitHub.WebhookIssuesUnlockedIssueState? state,
             string? stateReason,
             string? timelineUrl,
@@ -347,6 +355,7 @@ namespace GitHub
             this.PerformedViaGithubApp = performedViaGithubApp;
             this.PullRequest = pullRequest;
             this.SubIssuesSummary = subIssuesSummary;
+            this.IssueDependenciesSummary = issueDependenciesSummary;
             this.State = state;
             this.StateReason = stateReason;
             this.TimelineUrl = timelineUrl;
