@@ -169,7 +169,19 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sub_issues_summary")]
-        public global::GitHub.WebhookIssuesOpenedIssueSubIssuesSummary? SubIssuesSummary { get; set; }
+        public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("issue_dependencies_summary")]
+        public global::GitHub.IssueDependenciesSummary? IssueDependenciesSummary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("issue_field_values")]
+        public global::System.Collections.Generic.IList<global::GitHub.IssueFieldValue>? IssueFieldValues { get; set; }
 
         /// <summary>
         /// State of the issue; either 'open' or 'closed'
@@ -265,6 +277,8 @@ namespace GitHub
         /// <param name="reactions"></param>
         /// <param name="repositoryUrl"></param>
         /// <param name="subIssuesSummary"></param>
+        /// <param name="issueDependenciesSummary"></param>
+        /// <param name="issueFieldValues"></param>
         /// <param name="state">
         /// State of the issue; either 'open' or 'closed'
         /// </param>
@@ -312,7 +326,9 @@ namespace GitHub
             bool? locked,
             global::GitHub.WebhookIssuesOpenedIssuePerformedViaGithubApp? performedViaGithubApp,
             global::GitHub.WebhookIssuesOpenedIssuePullRequest? pullRequest,
-            global::GitHub.WebhookIssuesOpenedIssueSubIssuesSummary? subIssuesSummary,
+            global::GitHub.SubIssuesSummary? subIssuesSummary,
+            global::GitHub.IssueDependenciesSummary? issueDependenciesSummary,
+            global::System.Collections.Generic.IList<global::GitHub.IssueFieldValue>? issueFieldValues,
             global::GitHub.WebhookIssuesOpenedIssueState? state,
             string? stateReason,
             string? timelineUrl,
@@ -346,6 +362,8 @@ namespace GitHub
             this.PerformedViaGithubApp = performedViaGithubApp;
             this.PullRequest = pullRequest;
             this.SubIssuesSummary = subIssuesSummary;
+            this.IssueDependenciesSummary = issueDependenciesSummary;
+            this.IssueFieldValues = issueFieldValues;
             this.State = state;
             this.StateReason = stateReason;
             this.TimelineUrl = timelineUrl;

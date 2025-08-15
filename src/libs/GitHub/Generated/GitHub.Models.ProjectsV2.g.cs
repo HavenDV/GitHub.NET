@@ -107,6 +107,25 @@ namespace GitHub
         public required global::GitHub.NullableSimpleUser? DeletedBy { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("state")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.ProjectsV2StateJsonConverter))]
+        public global::GitHub.ProjectsV2State? State { get; set; }
+
+        /// <summary>
+        /// An status update belonging to a project
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("latest_status_update")]
+        public global::GitHub.NullableProjectsV2StatusUpdate? LatestStatusUpdate { get; set; }
+
+        /// <summary>
+        /// Whether this project is a template
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_template")]
+        public bool? IsTemplate { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -135,6 +154,13 @@ namespace GitHub
         /// <param name="deletedBy">
         /// A GitHub user.
         /// </param>
+        /// <param name="state"></param>
+        /// <param name="latestStatusUpdate">
+        /// An status update belonging to a project
+        /// </param>
+        /// <param name="isTemplate">
+        /// Whether this project is a template
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -152,7 +178,10 @@ namespace GitHub
             int number,
             string? shortDescription,
             global::System.DateTime? deletedAt,
-            global::GitHub.NullableSimpleUser? deletedBy)
+            global::GitHub.NullableSimpleUser? deletedBy,
+            global::GitHub.ProjectsV2State? state,
+            global::GitHub.NullableProjectsV2StatusUpdate? latestStatusUpdate,
+            bool? isTemplate)
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
@@ -168,6 +197,9 @@ namespace GitHub
             this.ShortDescription = shortDescription ?? throw new global::System.ArgumentNullException(nameof(shortDescription));
             this.DeletedAt = deletedAt;
             this.DeletedBy = deletedBy ?? throw new global::System.ArgumentNullException(nameof(deletedBy));
+            this.State = state;
+            this.LatestStatusUpdate = latestStatusUpdate;
+            this.IsTemplate = isTemplate;
         }
 
         /// <summary>
