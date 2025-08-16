@@ -83,6 +83,12 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
+        public global::System.DateTime? UpdatedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::GitHub.WebhookPullRequestReviewDismissedReviewUser? User { get; set; }
@@ -114,6 +120,7 @@ namespace GitHub
         /// <param name="pullRequestUrl"></param>
         /// <param name="state"></param>
         /// <param name="submittedAt"></param>
+        /// <param name="updatedAt"></param>
         /// <param name="user"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -129,7 +136,8 @@ namespace GitHub
             string pullRequestUrl,
             global::GitHub.WebhookPullRequestReviewDismissedReviewState state,
             global::System.DateTime submittedAt,
-            global::GitHub.WebhookPullRequestReviewDismissedReviewUser? user)
+            global::GitHub.WebhookPullRequestReviewDismissedReviewUser? user,
+            global::System.DateTime? updatedAt)
         {
             this.Links = links ?? throw new global::System.ArgumentNullException(nameof(links));
             this.AuthorAssociation = authorAssociation;
@@ -142,6 +150,7 @@ namespace GitHub
             this.State = state;
             this.SubmittedAt = submittedAt;
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>
