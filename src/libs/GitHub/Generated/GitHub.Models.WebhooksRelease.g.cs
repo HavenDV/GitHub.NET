@@ -46,6 +46,13 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime? UpdatedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("discussion_url")]
         public string? DiscussionUrl { get; set; }
 
@@ -167,6 +174,7 @@ namespace GitHub
         /// <param name="author"></param>
         /// <param name="body"></param>
         /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
         /// <param name="discussionUrl"></param>
         /// <param name="draft">
         /// Whether the release is a draft or published
@@ -202,6 +210,7 @@ namespace GitHub
             global::GitHub.WebhooksReleaseAuthor? author,
             string? body,
             global::System.DateTime? createdAt,
+            global::System.DateTime? updatedAt,
             bool draft,
             string htmlUrl,
             int id,
@@ -224,6 +233,7 @@ namespace GitHub
             this.Author = author ?? throw new global::System.ArgumentNullException(nameof(author));
             this.Body = body ?? throw new global::System.ArgumentNullException(nameof(body));
             this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
             this.Draft = draft;
             this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
             this.Id = id;
