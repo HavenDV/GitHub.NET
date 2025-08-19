@@ -33,6 +33,9 @@ namespace GitHub
         /// <param name="allowedActions">
         /// The permissions policy that controls the actions and reusable workflows that are allowed to run.
         /// </param>
+        /// <param name="shaPinningRequired">
+        /// Whether actions must be pinned to a full-length commit SHA.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task ActionsSetGithubActionsPermissionsRepositoryAsync(
@@ -40,6 +43,7 @@ namespace GitHub
             string repo,
             bool enabled,
             global::GitHub.AllowedActions? allowedActions = default,
+            bool? shaPinningRequired = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

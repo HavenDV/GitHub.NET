@@ -136,6 +136,12 @@ namespace GitHub
         public required global::System.DateTime? PublishedAt { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
+        public global::System.DateTime? UpdatedAt { get; set; }
+
+        /// <summary>
         /// A GitHub user.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("author")]
@@ -220,6 +226,7 @@ namespace GitHub
         /// </param>
         /// <param name="createdAt"></param>
         /// <param name="publishedAt"></param>
+        /// <param name="updatedAt"></param>
         /// <param name="author">
         /// A GitHub user.
         /// </param>
@@ -254,6 +261,7 @@ namespace GitHub
             global::System.Collections.Generic.IList<global::GitHub.ReleaseAsset> assets,
             string? body,
             bool? immutable,
+            global::System.DateTime? updatedAt,
             string? bodyHtml,
             string? bodyText,
             int? mentionsCount,
@@ -279,6 +287,7 @@ namespace GitHub
             this.Assets = assets ?? throw new global::System.ArgumentNullException(nameof(assets));
             this.Body = body;
             this.Immutable = immutable;
+            this.UpdatedAt = updatedAt;
             this.BodyHtml = bodyHtml;
             this.BodyText = bodyText;
             this.MentionsCount = mentionsCount;
