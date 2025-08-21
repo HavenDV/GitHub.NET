@@ -25,6 +25,12 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("title_html")]
+        public string? TitleHtml { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("duration")]
         public double? Duration { get; set; }
 
@@ -33,6 +39,12 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("start_date")]
         public string? StartDate { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("completed")]
+        public bool? Completed { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -45,21 +57,27 @@ namespace GitHub
         /// </summary>
         /// <param name="id"></param>
         /// <param name="title"></param>
+        /// <param name="titleHtml"></param>
         /// <param name="duration"></param>
         /// <param name="startDate"></param>
+        /// <param name="completed"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ProjectsV2IterationSetting(
             string id,
             string title,
+            string? titleHtml,
             double? duration,
-            string? startDate)
+            string? startDate,
+            bool? completed)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.TitleHtml = titleHtml;
             this.Duration = duration;
             this.StartDate = startDate;
+            this.Completed = completed;
         }
 
         /// <summary>

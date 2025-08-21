@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class RepositoryRulesetBypassActor
     {
         /// <summary>
-        /// The ID of the actor that can bypass a ruleset. If `actor_type` is `OrganizationAdmin`, this should be `1`. If `actor_type` is `DeployKey`, this should be null. `OrganizationAdmin` is not applicable for personal repositories.
+        /// The ID of the actor that can bypass a ruleset. Required for `Integration`, `RepositoryRole`, and `Team` actor types. If `actor_type` is `OrganizationAdmin`, this should be `1`. If `actor_type` is `DeployKey`, this should be null. `OrganizationAdmin` is not applicable for personal repositories.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("actor_id")]
         public int? ActorId { get; set; }
@@ -40,7 +40,7 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="RepositoryRulesetBypassActor" /> class.
         /// </summary>
         /// <param name="actorId">
-        /// The ID of the actor that can bypass a ruleset. If `actor_type` is `OrganizationAdmin`, this should be `1`. If `actor_type` is `DeployKey`, this should be null. `OrganizationAdmin` is not applicable for personal repositories.
+        /// The ID of the actor that can bypass a ruleset. Required for `Integration`, `RepositoryRole`, and `Team` actor types. If `actor_type` is `OrganizationAdmin`, this should be `1`. If `actor_type` is `DeployKey`, this should be null. `OrganizationAdmin` is not applicable for personal repositories.
         /// </param>
         /// <param name="actorType">
         /// The type of actor that can bypass a ruleset.
