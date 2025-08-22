@@ -20,7 +20,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("images")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.ActionsHostedRunnerImage> Images { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.ActionsHostedRunnerCuratedImage> Images { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -38,7 +38,7 @@ namespace GitHub
 #endif
         public ActionsGetHostedRunnersGithubOwnedImagesForOrgResponse(
             int totalCount,
-            global::System.Collections.Generic.IList<global::GitHub.ActionsHostedRunnerImage> images)
+            global::System.Collections.Generic.IList<global::GitHub.ActionsHostedRunnerCuratedImage> images)
         {
             this.TotalCount = totalCount;
             this.Images = images ?? throw new global::System.ArgumentNullException(nameof(images));
