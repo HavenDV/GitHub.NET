@@ -67,6 +67,12 @@ namespace GitHub
         public required global::GitHub.WebhookPullRequestReviewThreadResolvedThread Thread { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
+        public global::System.DateTime? UpdatedAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -99,6 +105,7 @@ namespace GitHub
         /// A GitHub user.
         /// </param>
         /// <param name="thread"></param>
+        /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -110,7 +117,8 @@ namespace GitHub
             global::GitHub.EnterpriseWebhooks? enterprise,
             global::GitHub.SimpleInstallation? installation,
             global::GitHub.OrganizationSimpleWebhooks? organization,
-            global::GitHub.SimpleUser? sender)
+            global::GitHub.SimpleUser? sender,
+            global::System.DateTime? updatedAt)
         {
             this.PullRequest = pullRequest ?? throw new global::System.ArgumentNullException(nameof(pullRequest));
             this.Repository = repository ?? throw new global::System.ArgumentNullException(nameof(repository));
@@ -120,6 +128,7 @@ namespace GitHub
             this.Installation = installation;
             this.Organization = organization;
             this.Sender = sender;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>

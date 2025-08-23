@@ -44,6 +44,12 @@ namespace GitHub
         public required bool IsAlphanumeric { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
+        public global::System.DateTime? UpdatedAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -67,6 +73,7 @@ namespace GitHub
         /// Whether this autolink reference matches alphanumeric characters. If false, this autolink reference only matches numeric characters.<br/>
         /// Example: true
         /// </param>
+        /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -74,12 +81,14 @@ namespace GitHub
             int id,
             string keyPrefix,
             string urlTemplate,
-            bool isAlphanumeric)
+            bool isAlphanumeric,
+            global::System.DateTime? updatedAt)
         {
             this.Id = id;
             this.KeyPrefix = keyPrefix ?? throw new global::System.ArgumentNullException(nameof(keyPrefix));
             this.UrlTemplate = urlTemplate ?? throw new global::System.ArgumentNullException(nameof(urlTemplate));
             this.IsAlphanumeric = isAlphanumeric;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>
