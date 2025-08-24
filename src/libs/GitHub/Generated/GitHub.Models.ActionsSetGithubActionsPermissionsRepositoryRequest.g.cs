@@ -23,6 +23,12 @@ namespace GitHub
         public global::GitHub.AllowedActions? AllowedActions { get; set; }
 
         /// <summary>
+        /// Whether actions must be pinned to a full-length commit SHA.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sha_pinning_required")]
+        public bool? ShaPinningRequired { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -37,15 +43,20 @@ namespace GitHub
         /// <param name="allowedActions">
         /// The permissions policy that controls the actions and reusable workflows that are allowed to run.
         /// </param>
+        /// <param name="shaPinningRequired">
+        /// Whether actions must be pinned to a full-length commit SHA.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ActionsSetGithubActionsPermissionsRepositoryRequest(
             bool enabled,
-            global::GitHub.AllowedActions? allowedActions)
+            global::GitHub.AllowedActions? allowedActions,
+            bool? shaPinningRequired)
         {
             this.Enabled = enabled;
             this.AllowedActions = allowedActions;
+            this.ShaPinningRequired = shaPinningRequired;
         }
 
         /// <summary>

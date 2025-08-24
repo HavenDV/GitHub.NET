@@ -15,7 +15,7 @@ namespace GitHub
         public global::System.Collections.Generic.IList<global::GitHub.RepositoryRulePullRequestParametersAllowedMergeMethod>? AllowedMergeMethods { get; set; }
 
         /// <summary>
-        /// Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
+        /// Request Copilot code review for new pull requests automatically if the author has access to Copilot code review.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("automatic_copilot_code_review_enabled")]
         public bool? AutomaticCopilotCodeReviewEnabled { get; set; }
@@ -68,7 +68,7 @@ namespace GitHub
         /// Array of allowed merge methods. Allowed values include `merge`, `squash`, and `rebase`. At least one option must be enabled.
         /// </param>
         /// <param name="automaticCopilotCodeReviewEnabled">
-        /// Automatically request review from Copilot for new pull requests, if the author has access to Copilot code review.
+        /// Request Copilot code review for new pull requests automatically if the author has access to Copilot code review.
         /// </param>
         /// <param name="dismissStaleReviewsOnPush">
         /// New, reviewable commits pushed will dismiss previous pull request review approvals.

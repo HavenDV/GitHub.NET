@@ -36,6 +36,12 @@ namespace GitHub
         public string? SelectedActionsUrl { get; set; }
 
         /// <summary>
+        /// Whether actions must be pinned to a full-length commit SHA.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sha_pinning_required")]
+        public bool? ShaPinningRequired { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -56,6 +62,9 @@ namespace GitHub
         /// <param name="selectedActionsUrl">
         /// The API URL to use to get or set the actions and reusable workflows that are allowed to run, when `allowed_actions` is set to `selected`.
         /// </param>
+        /// <param name="shaPinningRequired">
+        /// Whether actions must be pinned to a full-length commit SHA.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -63,12 +72,14 @@ namespace GitHub
             global::GitHub.EnabledRepositories enabledRepositories,
             string? selectedRepositoriesUrl,
             global::GitHub.AllowedActions? allowedActions,
-            string? selectedActionsUrl)
+            string? selectedActionsUrl,
+            bool? shaPinningRequired)
         {
             this.EnabledRepositories = enabledRepositories;
             this.SelectedRepositoriesUrl = selectedRepositoriesUrl;
             this.AllowedActions = allowedActions;
             this.SelectedActionsUrl = selectedActionsUrl;
+            this.ShaPinningRequired = shaPinningRequired;
         }
 
         /// <summary>
