@@ -86,6 +86,12 @@ namespace GitHub
         public global::System.DateTime? SubmittedAt { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
+        public global::System.DateTime? UpdatedAt { get; set; }
+
+        /// <summary>
         /// A commit SHA for the review.<br/>
         /// Example: 54bb654c9e6025347f57900a4a5c2313a96b8035
         /// </summary>
@@ -151,6 +157,7 @@ namespace GitHub
         /// </param>
         /// <param name="links"></param>
         /// <param name="submittedAt"></param>
+        /// <param name="updatedAt"></param>
         /// <param name="commitId">
         /// A commit SHA for the review.<br/>
         /// Example: 54bb654c9e6025347f57900a4a5c2313a96b8035
@@ -177,6 +184,7 @@ namespace GitHub
             string commitId,
             global::GitHub.AuthorAssociation authorAssociation,
             global::System.DateTime? submittedAt,
+            global::System.DateTime? updatedAt,
             string? bodyHtml,
             string? bodyText)
         {
@@ -192,6 +200,7 @@ namespace GitHub
             this.CommitId = commitId ?? throw new global::System.ArgumentNullException(nameof(commitId));
             this.AuthorAssociation = authorAssociation;
             this.SubmittedAt = submittedAt;
+            this.UpdatedAt = updatedAt;
             this.BodyHtml = bodyHtml;
             this.BodyText = bodyText;
         }
