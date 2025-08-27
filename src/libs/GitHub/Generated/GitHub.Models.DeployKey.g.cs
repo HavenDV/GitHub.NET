@@ -67,7 +67,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("last_used")]
-        public string? LastUsed { get; set; }
+        public global::System.DateTime? LastUsed { get; set; }
 
         /// <summary>
         /// 
@@ -106,7 +106,7 @@ namespace GitHub
             string createdAt,
             bool readOnly,
             string? addedBy,
-            string? lastUsed,
+            global::System.DateTime? lastUsed,
             bool? enabled)
         {
             this.Id = id;

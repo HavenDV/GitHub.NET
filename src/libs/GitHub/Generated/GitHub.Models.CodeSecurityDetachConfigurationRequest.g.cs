@@ -9,7 +9,7 @@ namespace GitHub
     public sealed partial class CodeSecurityDetachConfigurationRequest
     {
         /// <summary>
-        /// An array of repository IDs to detach from configurations. Up to 1000 IDs can be provided.
+        /// An array of repository IDs to detach from configurations. Up to 250 IDs can be provided.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("selected_repository_ids")]
         public global::System.Collections.Generic.IList<int>? SelectedRepositoryIds { get; set; }
@@ -24,7 +24,7 @@ namespace GitHub
         /// Initializes a new instance of the <see cref="CodeSecurityDetachConfigurationRequest" /> class.
         /// </summary>
         /// <param name="selectedRepositoryIds">
-        /// An array of repository IDs to detach from configurations. Up to 1000 IDs can be provided.
+        /// An array of repository IDs to detach from configurations. Up to 250 IDs can be provided.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
