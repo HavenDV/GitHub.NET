@@ -142,6 +142,13 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime? UpdatedAt { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Url { get; set; }
@@ -191,6 +198,7 @@ namespace GitHub
         /// Specifies the commitish value that determines where the Git tag is created from.
         /// </param>
         /// <param name="uploadUrl"></param>
+        /// <param name="updatedAt"></param>
         /// <param name="url"></param>
         /// <param name="zipballUrl"></param>
 #if NET7_0_OR_GREATER
@@ -214,6 +222,7 @@ namespace GitHub
             string? tarballUrl,
             string targetCommitish,
             string uploadUrl,
+            global::System.DateTime? updatedAt,
             string url,
             string? zipballUrl,
             string? discussionUrl,
@@ -236,6 +245,7 @@ namespace GitHub
             this.TarballUrl = tarballUrl ?? throw new global::System.ArgumentNullException(nameof(tarballUrl));
             this.TargetCommitish = targetCommitish ?? throw new global::System.ArgumentNullException(nameof(targetCommitish));
             this.UploadUrl = uploadUrl ?? throw new global::System.ArgumentNullException(nameof(uploadUrl));
+            this.UpdatedAt = updatedAt;
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.ZipballUrl = zipballUrl ?? throw new global::System.ArgumentNullException(nameof(zipballUrl));
             this.DiscussionUrl = discussionUrl;

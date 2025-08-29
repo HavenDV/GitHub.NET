@@ -1,0 +1,70 @@
+
+#nullable enable
+
+namespace GitHub
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    public sealed partial class ProjectsClassicMoveCardResponseError
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("code")]
+        public string? Code { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
+        public string? Message { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resource")]
+        public string? Resource { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("field")]
+        public string? Field { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProjectsClassicMoveCardResponseError" /> class.
+        /// </summary>
+        /// <param name="code"></param>
+        /// <param name="message"></param>
+        /// <param name="resource"></param>
+        /// <param name="field"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public ProjectsClassicMoveCardResponseError(
+            string? code,
+            string? message,
+            string? resource,
+            string? field)
+        {
+            this.Code = code;
+            this.Message = message;
+            this.Resource = resource;
+            this.Field = field;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProjectsClassicMoveCardResponseError" /> class.
+        /// </summary>
+        public ProjectsClassicMoveCardResponseError()
+        {
+        }
+    }
+}
