@@ -266,6 +266,24 @@ namespace GitHub
         public global::GitHub.SubIssuesSummary? SubIssuesSummary { get; set; }
 
         /// <summary>
+        /// URL to get the parent issue of this issue, if it is a sub-issue
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("parent_issue_url")]
+        public string? ParentIssueUrl { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("issue_dependencies_summary")]
+        public global::GitHub.IssueDependenciesSummary? IssueDependenciesSummary { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("issue_field_values")]
+        public global::System.Collections.Generic.IList<global::GitHub.IssueFieldValue>? IssueFieldValues { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -348,6 +366,11 @@ namespace GitHub
         /// </param>
         /// <param name="reactions"></param>
         /// <param name="subIssuesSummary"></param>
+        /// <param name="parentIssueUrl">
+        /// URL to get the parent issue of this issue, if it is a sub-issue
+        /// </param>
+        /// <param name="issueDependenciesSummary"></param>
+        /// <param name="issueFieldValues"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -387,7 +410,10 @@ namespace GitHub
             global::GitHub.Repository? repository,
             global::GitHub.NullableIntegration? performedViaGithubApp,
             global::GitHub.ReactionRollup? reactions,
-            global::GitHub.SubIssuesSummary? subIssuesSummary)
+            global::GitHub.SubIssuesSummary? subIssuesSummary,
+            string? parentIssueUrl,
+            global::GitHub.IssueDependenciesSummary? issueDependenciesSummary,
+            global::System.Collections.Generic.IList<global::GitHub.IssueFieldValue>? issueFieldValues)
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
@@ -425,6 +451,9 @@ namespace GitHub
             this.PerformedViaGithubApp = performedViaGithubApp;
             this.Reactions = reactions;
             this.SubIssuesSummary = subIssuesSummary;
+            this.ParentIssueUrl = parentIssueUrl;
+            this.IssueDependenciesSummary = issueDependenciesSummary;
+            this.IssueFieldValues = issueFieldValues;
         }
 
         /// <summary>

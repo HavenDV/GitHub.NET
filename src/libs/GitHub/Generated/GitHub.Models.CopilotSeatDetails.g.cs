@@ -48,6 +48,12 @@ namespace GitHub
         public string? LastActivityEditor { get; set; }
 
         /// <summary>
+        /// Timestamp of the last time the user authenticated with GitHub Copilot, in ISO 8601 format.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("last_authenticated_at")]
+        public global::System.DateTime? LastAuthenticatedAt { get; set; }
+
+        /// <summary>
         /// Timestamp of when the assignee was last granted access to GitHub Copilot, in ISO 8601 format.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
@@ -95,6 +101,9 @@ namespace GitHub
         /// <param name="lastActivityEditor">
         /// Last editor that was used by the user for a GitHub Copilot completion.
         /// </param>
+        /// <param name="lastAuthenticatedAt">
+        /// Timestamp of the last time the user authenticated with GitHub Copilot, in ISO 8601 format.
+        /// </param>
         /// <param name="createdAt">
         /// Timestamp of when the assignee was last granted access to GitHub Copilot, in ISO 8601 format.
         /// </param>
@@ -112,6 +121,7 @@ namespace GitHub
             global::System.DateTime? pendingCancellationDate,
             global::System.DateTime? lastActivityAt,
             string? lastActivityEditor,
+            global::System.DateTime? lastAuthenticatedAt,
             global::GitHub.CopilotSeatDetailsPlanType? planType)
         {
             this.CreatedAt = createdAt;
@@ -121,6 +131,7 @@ namespace GitHub
             this.PendingCancellationDate = pendingCancellationDate;
             this.LastActivityAt = lastActivityAt;
             this.LastActivityEditor = lastActivityEditor;
+            this.LastAuthenticatedAt = lastAuthenticatedAt;
             this.PlanType = planType;
         }
 

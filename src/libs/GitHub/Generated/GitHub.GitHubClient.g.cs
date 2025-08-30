@@ -236,9 +236,9 @@ namespace GitHub
         };
 
         /// <summary>
-        /// Interact with GitHub Projects.
+        /// Interact with GitHub Projects (classic).
         /// </summary>
-        public ProjectsClient Projects => new ProjectsClient(HttpClient, authorizations: Authorizations)
+        public ProjectsClassicClient ProjectsClassic => new ProjectsClassicClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -419,6 +419,15 @@ namespace GitHub
         /// Endpoints to manage campaigns via the REST API.
         /// </summary>
         public CampaignsClient Campaigns => new CampaignsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// Endpoints to manage Projects using the REST API.
+        /// </summary>
+        public ProjectsClient Projects => new ProjectsClient(HttpClient, authorizations: Authorizations)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
