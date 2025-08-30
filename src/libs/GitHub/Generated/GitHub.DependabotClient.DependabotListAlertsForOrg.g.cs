@@ -13,6 +13,8 @@ namespace GitHub
             ref string? ecosystem,
             ref string? package,
             ref string? epssPercentage,
+            ref string? artifactRegistryUrl,
+            ref string? artifactRegistry,
             ref global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForOrgHasVariant2Item>>? has,
             ref global::GitHub.DependabotListAlertsForOrgScope? scope,
             ref global::GitHub.DependabotListAlertsForOrgSort? sort,
@@ -31,6 +33,8 @@ namespace GitHub
             string? ecosystem,
             string? package,
             string? epssPercentage,
+            string? artifactRegistryUrl,
+            string? artifactRegistry,
             global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForOrgHasVariant2Item>>? has,
             global::GitHub.DependabotListAlertsForOrgScope? scope,
             global::GitHub.DependabotListAlertsForOrgSort? sort,
@@ -61,6 +65,8 @@ namespace GitHub
         /// <param name="ecosystem"></param>
         /// <param name="package"></param>
         /// <param name="epssPercentage"></param>
+        /// <param name="artifactRegistryUrl"></param>
+        /// <param name="artifactRegistry"></param>
         /// <param name="has"></param>
         /// <param name="scope"></param>
         /// <param name="sort">
@@ -87,6 +93,8 @@ namespace GitHub
             string? ecosystem = default,
             string? package = default,
             string? epssPercentage = default,
+            string? artifactRegistryUrl = default,
+            string? artifactRegistry = default,
             global::GitHub.OneOf<string, global::System.Collections.Generic.IList<global::GitHub.DependabotListAlertsForOrgHasVariant2Item>>? has = default,
             global::GitHub.DependabotListAlertsForOrgScope? scope = default,
             global::GitHub.DependabotListAlertsForOrgSort? sort = default,
@@ -108,6 +116,8 @@ namespace GitHub
                 ecosystem: ref ecosystem,
                 package: ref package,
                 epssPercentage: ref epssPercentage,
+                artifactRegistryUrl: ref artifactRegistryUrl,
+                artifactRegistry: ref artifactRegistry,
                 has: ref has,
                 scope: ref scope,
                 sort: ref sort,
@@ -127,6 +137,8 @@ namespace GitHub
                 .AddOptionalParameter("ecosystem", ecosystem) 
                 .AddOptionalParameter("package", package) 
                 .AddOptionalParameter("epss_percentage", epssPercentage) 
+                .AddOptionalParameter("artifact_registry_url", artifactRegistryUrl) 
+                .AddOptionalParameter("artifact_registry", artifactRegistry) 
                 .AddOptionalParameter("has", has?.ToString() ?? string.Empty) 
                 .AddOptionalParameter("scope", scope?.ToValueString()) 
                 .AddOptionalParameter("sort", sort?.ToValueString()) 
@@ -158,6 +170,8 @@ namespace GitHub
                 ecosystem: ecosystem,
                 package: package,
                 epssPercentage: epssPercentage,
+                artifactRegistryUrl: artifactRegistryUrl,
+                artifactRegistry: artifactRegistry,
                 has: has,
                 scope: scope,
                 sort: sort,
