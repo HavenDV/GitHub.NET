@@ -250,8 +250,7 @@ namespace GitHub
         /// <example>OWNER</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("author_association")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.AuthorAssociationJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::GitHub.AuthorAssociation AuthorAssociation { get; set; }
+        public global::GitHub.AuthorAssociation? AuthorAssociation { get; set; }
 
         /// <summary>
         /// 
@@ -395,7 +394,6 @@ namespace GitHub
             global::System.DateTime? closedAt,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
-            global::GitHub.AuthorAssociation authorAssociation,
             global::GitHub.NullableIssueStateReason? stateReason,
             string? body,
             global::System.Collections.Generic.IList<global::GitHub.SimpleUser>? assignees,
@@ -409,6 +407,7 @@ namespace GitHub
             global::GitHub.IssueType? type,
             global::GitHub.Repository? repository,
             global::GitHub.NullableIntegration? performedViaGithubApp,
+            global::GitHub.AuthorAssociation? authorAssociation,
             global::GitHub.ReactionRollup? reactions,
             global::GitHub.SubIssuesSummary? subIssuesSummary,
             string? parentIssueUrl,
@@ -435,7 +434,6 @@ namespace GitHub
             this.ClosedAt = closedAt;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.AuthorAssociation = authorAssociation;
             this.StateReason = stateReason;
             this.Body = body;
             this.Assignees = assignees;
@@ -449,6 +447,7 @@ namespace GitHub
             this.Type = type;
             this.Repository = repository;
             this.PerformedViaGithubApp = performedViaGithubApp;
+            this.AuthorAssociation = authorAssociation;
             this.Reactions = reactions;
             this.SubIssuesSummary = subIssuesSummary;
             this.ParentIssueUrl = parentIssueUrl;
