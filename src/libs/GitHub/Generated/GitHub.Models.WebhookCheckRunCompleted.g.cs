@@ -31,6 +31,14 @@ namespace GitHub
         public global::GitHub.SimpleInstallation? Installation { get; set; }
 
         /// <summary>
+        /// An enterprise on GitHub. Webhook payloads contain the `enterprise` property when the webhook is configured<br/>
+        /// on an enterprise account or an organization that's part of an enterprise account. For more information,<br/>
+        /// see "[About enterprise accounts](https://docs.github.com/admin/overview/about-enterprise-accounts)."
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enterprise")]
+        public global::GitHub.EnterpriseWebhooks? Enterprise { get; set; }
+
+        /// <summary>
         /// A GitHub organization. Webhook payloads contain the `organization` property when the webhook is configured for an<br/>
         /// organization, or when the event occurs from activity in a repository owned by an organization.
         /// </summary>
@@ -70,6 +78,11 @@ namespace GitHub
         /// for and sent to a GitHub App. For more information,<br/>
         /// see "[Using webhooks with GitHub Apps](https://docs.github.com/apps/creating-github-apps/registering-a-github-app/using-webhooks-with-github-apps)."
         /// </param>
+        /// <param name="enterprise">
+        /// An enterprise on GitHub. Webhook payloads contain the `enterprise` property when the webhook is configured<br/>
+        /// on an enterprise account or an organization that's part of an enterprise account. For more information,<br/>
+        /// see "[About enterprise accounts](https://docs.github.com/admin/overview/about-enterprise-accounts)."
+        /// </param>
         /// <param name="organization">
         /// A GitHub organization. Webhook payloads contain the `organization` property when the webhook is configured for an<br/>
         /// organization, or when the event occurs from activity in a repository owned by an organization.
@@ -90,6 +103,7 @@ namespace GitHub
             global::GitHub.SimpleUser sender,
             global::GitHub.WebhookCheckRunCompletedAction? action,
             global::GitHub.SimpleInstallation? installation,
+            global::GitHub.EnterpriseWebhooks? enterprise,
             global::GitHub.OrganizationSimpleWebhooks? organization)
         {
             this.CheckRun = checkRun ?? throw new global::System.ArgumentNullException(nameof(checkRun));
@@ -97,6 +111,7 @@ namespace GitHub
             this.Sender = sender ?? throw new global::System.ArgumentNullException(nameof(sender));
             this.Action = action;
             this.Installation = installation;
+            this.Enterprise = enterprise;
             this.Organization = organization;
         }
 
