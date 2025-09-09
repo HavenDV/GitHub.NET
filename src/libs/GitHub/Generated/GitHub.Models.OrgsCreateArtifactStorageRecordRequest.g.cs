@@ -6,7 +6,7 @@ namespace GitHub
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class OrgsCreateArtifactStorageRecordsRequest
+    public sealed partial class OrgsCreateArtifactStorageRecordRequest
     {
         /// <summary>
         /// The name of the artifact.<br/>
@@ -66,8 +66,8 @@ namespace GitHub
         /// </summary>
         /// <example>active</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrgsCreateArtifactStorageRecordsRequestStatusJsonConverter))]
-        public global::GitHub.OrgsCreateArtifactStorageRecordsRequestStatus? Status { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.OrgsCreateArtifactStorageRecordRequestStatusJsonConverter))]
+        public global::GitHub.OrgsCreateArtifactStorageRecordRequestStatus? Status { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -76,7 +76,7 @@ namespace GitHub
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrgsCreateArtifactStorageRecordsRequest" /> class.
+        /// Initializes a new instance of the <see cref="OrgsCreateArtifactStorageRecordRequest" /> class.
         /// </summary>
         /// <param name="name">
         /// The name of the artifact.<br/>
@@ -110,14 +110,14 @@ namespace GitHub
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public OrgsCreateArtifactStorageRecordsRequest(
+        public OrgsCreateArtifactStorageRecordRequest(
             string name,
             string digest,
             string registryUrl,
             string? artifactUrl,
             string? path,
             string? repository,
-            global::GitHub.OrgsCreateArtifactStorageRecordsRequestStatus? status)
+            global::GitHub.OrgsCreateArtifactStorageRecordRequestStatus? status)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Digest = digest ?? throw new global::System.ArgumentNullException(nameof(digest));
@@ -129,9 +129,9 @@ namespace GitHub
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrgsCreateArtifactStorageRecordsRequest" /> class.
+        /// Initializes a new instance of the <see cref="OrgsCreateArtifactStorageRecordRequest" /> class.
         /// </summary>
-        public OrgsCreateArtifactStorageRecordsRequest()
+        public OrgsCreateArtifactStorageRecordRequest()
         {
         }
     }

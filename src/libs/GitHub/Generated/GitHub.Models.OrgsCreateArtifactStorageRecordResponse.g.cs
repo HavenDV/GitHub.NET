@@ -6,7 +6,7 @@ namespace GitHub
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class OrgsCreateArtifactStorageRecordsResponse
+    public sealed partial class OrgsCreateArtifactStorageRecordResponse
     {
         /// <summary>
         /// Example: 1
@@ -19,7 +19,7 @@ namespace GitHub
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("storage_records")]
-        public global::System.Collections.Generic.IList<global::GitHub.OrgsCreateArtifactStorageRecordsResponseStorageRecord>? StorageRecords { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord>? StorageRecords { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -28,7 +28,7 @@ namespace GitHub
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrgsCreateArtifactStorageRecordsResponse" /> class.
+        /// Initializes a new instance of the <see cref="OrgsCreateArtifactStorageRecordResponse" /> class.
         /// </summary>
         /// <param name="totalCount">
         /// Example: 1
@@ -37,18 +37,18 @@ namespace GitHub
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public OrgsCreateArtifactStorageRecordsResponse(
+        public OrgsCreateArtifactStorageRecordResponse(
             int? totalCount,
-            global::System.Collections.Generic.IList<global::GitHub.OrgsCreateArtifactStorageRecordsResponseStorageRecord>? storageRecords)
+            global::System.Collections.Generic.IList<global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord>? storageRecords)
         {
             this.TotalCount = totalCount;
             this.StorageRecords = storageRecords;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrgsCreateArtifactStorageRecordsResponse" /> class.
+        /// Initializes a new instance of the <see cref="OrgsCreateArtifactStorageRecordResponse" /> class.
         /// </summary>
-        public OrgsCreateArtifactStorageRecordsResponse()
+        public OrgsCreateArtifactStorageRecordResponse()
         {
         }
     }

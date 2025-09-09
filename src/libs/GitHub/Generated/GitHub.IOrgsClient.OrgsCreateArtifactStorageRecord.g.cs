@@ -5,7 +5,7 @@ namespace GitHub
     public partial interface IOrgsClient
     {
         /// <summary>
-        /// Create artifact metadata storage records<br/>
+        /// Create artifact metadata storage record<br/>
         /// Create metadata storage records for artifacts associated with an organization.<br/>
         /// This endpoint will create a new artifact storage record on behalf of any artifact matching the provided digest and<br/>
         /// associated with a repository owned by the organization.
@@ -14,13 +14,13 @@ namespace GitHub
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.OrgsCreateArtifactStorageRecordsResponse> OrgsCreateArtifactStorageRecordsAsync(
+        global::System.Threading.Tasks.Task<global::GitHub.OrgsCreateArtifactStorageRecordResponse> OrgsCreateArtifactStorageRecordAsync(
             string org,
-            global::GitHub.OrgsCreateArtifactStorageRecordsRequest request,
+            global::GitHub.OrgsCreateArtifactStorageRecordRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
 
         /// <summary>
-        /// Create artifact metadata storage records<br/>
+        /// Create artifact metadata storage record<br/>
         /// Create metadata storage records for artifacts associated with an organization.<br/>
         /// This endpoint will create a new artifact storage record on behalf of any artifact matching the provided digest and<br/>
         /// associated with a repository owned by the organization.
@@ -57,7 +57,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.OrgsCreateArtifactStorageRecordsResponse> OrgsCreateArtifactStorageRecordsAsync(
+        global::System.Threading.Tasks.Task<global::GitHub.OrgsCreateArtifactStorageRecordResponse> OrgsCreateArtifactStorageRecordAsync(
             string org,
             string name,
             string digest,
@@ -65,7 +65,7 @@ namespace GitHub
             string? artifactUrl = default,
             string? path = default,
             string? repository = default,
-            global::GitHub.OrgsCreateArtifactStorageRecordsRequestStatus? status = default,
+            global::GitHub.OrgsCreateArtifactStorageRecordRequestStatus? status = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

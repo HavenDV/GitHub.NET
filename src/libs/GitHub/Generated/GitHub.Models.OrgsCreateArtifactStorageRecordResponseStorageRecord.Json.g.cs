@@ -2,7 +2,7 @@
 
 namespace GitHub
 {
-    public sealed partial class OrgsCreateArtifactStorageRecordsRequest
+    public sealed partial class OrgsCreateArtifactStorageRecordResponseStorageRecord
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -34,14 +34,14 @@ namespace GitHub
         /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerContext.
         /// </summary>
-        public static global::GitHub.OrgsCreateArtifactStorageRecordsRequest? FromJson(
+        public static global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord? FromJson(
             string json,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
-                typeof(global::GitHub.OrgsCreateArtifactStorageRecordsRequest),
-                jsonSerializerContext) as global::GitHub.OrgsCreateArtifactStorageRecordsRequest;
+                typeof(global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord),
+                jsonSerializerContext) as global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord;
         }
 
         /// <summary>
@@ -51,11 +51,11 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::GitHub.OrgsCreateArtifactStorageRecordsRequest? FromJson(
+        public static global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord? FromJson(
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.OrgsCreateArtifactStorageRecordsRequest>(
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord>(
                 json,
                 jsonSerializerOptions);
         }
@@ -63,14 +63,14 @@ namespace GitHub
         /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerContext.
         /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.OrgsCreateArtifactStorageRecordsRequest?> FromJsonStreamAsync(
+        public static async global::System.Threading.Tasks.ValueTask<global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
-                typeof(global::GitHub.OrgsCreateArtifactStorageRecordsRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.OrgsCreateArtifactStorageRecordsRequest;
+                typeof(global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord),
+                jsonSerializerContext).ConfigureAwait(false)) as global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord;
         }
 
         /// <summary>
@@ -80,11 +80,11 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::System.Threading.Tasks.ValueTask<global::GitHub.OrgsCreateArtifactStorageRecordsRequest?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.OrgsCreateArtifactStorageRecordsRequest?>(
+            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord?>(
                 jsonStream,
                 jsonSerializerOptions);
         }
