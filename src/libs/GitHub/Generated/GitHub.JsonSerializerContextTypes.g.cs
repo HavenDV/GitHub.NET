@@ -23398,11 +23398,11 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsCreateArtifactStorageRecordsRequest? Type5843 { get; set; }
+        public global::GitHub.OrgsCreateArtifactStorageRecordRequest? Type5843 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsCreateArtifactStorageRecordsRequestStatus? Type5844 { get; set; }
+        public global::GitHub.OrgsCreateArtifactStorageRecordRequestStatus? Type5844 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -26438,15 +26438,15 @@ namespace GitHub
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsCreateArtifactStorageRecordsResponse? Type6603 { get; set; }
+        public global::GitHub.OrgsCreateArtifactStorageRecordResponse? Type6603 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::GitHub.OrgsCreateArtifactStorageRecordsResponseStorageRecord>? Type6604 { get; set; }
+        public global::System.Collections.Generic.IList<global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord>? Type6604 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::GitHub.OrgsCreateArtifactStorageRecordsResponseStorageRecord? Type6605 { get; set; }
+        public global::GitHub.OrgsCreateArtifactStorageRecordResponseStorageRecord? Type6605 { get; set; }
         /// <summary>
         /// 
         /// </summary>

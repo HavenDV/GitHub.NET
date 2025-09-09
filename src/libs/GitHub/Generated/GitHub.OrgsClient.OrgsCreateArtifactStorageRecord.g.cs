@@ -5,26 +5,26 @@ namespace GitHub
 {
     public partial class OrgsClient
     {
-        partial void PrepareOrgsCreateArtifactStorageRecordsArguments(
+        partial void PrepareOrgsCreateArtifactStorageRecordArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            global::GitHub.OrgsCreateArtifactStorageRecordsRequest request);
-        partial void PrepareOrgsCreateArtifactStorageRecordsRequest(
+            global::GitHub.OrgsCreateArtifactStorageRecordRequest request);
+        partial void PrepareOrgsCreateArtifactStorageRecordRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            global::GitHub.OrgsCreateArtifactStorageRecordsRequest request);
-        partial void ProcessOrgsCreateArtifactStorageRecordsResponse(
+            global::GitHub.OrgsCreateArtifactStorageRecordRequest request);
+        partial void ProcessOrgsCreateArtifactStorageRecordResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessOrgsCreateArtifactStorageRecordsResponseContent(
+        partial void ProcessOrgsCreateArtifactStorageRecordResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create artifact metadata storage records<br/>
+        /// Create artifact metadata storage record<br/>
         /// Create metadata storage records for artifacts associated with an organization.<br/>
         /// This endpoint will create a new artifact storage record on behalf of any artifact matching the provided digest and<br/>
         /// associated with a repository owned by the organization.
@@ -33,22 +33,22 @@ namespace GitHub
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.OrgsCreateArtifactStorageRecordsResponse> OrgsCreateArtifactStorageRecordsAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.OrgsCreateArtifactStorageRecordResponse> OrgsCreateArtifactStorageRecordAsync(
             string org,
-            global::GitHub.OrgsCreateArtifactStorageRecordsRequest request,
+            global::GitHub.OrgsCreateArtifactStorageRecordRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareOrgsCreateArtifactStorageRecordsArguments(
+            PrepareOrgsCreateArtifactStorageRecordArguments(
                 httpClient: HttpClient,
                 org: ref org,
                 request: request);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/orgs/{org}/artifacts/metadata/storage-records",
+                path: $"/orgs/{org}/artifacts/metadata/storage-record",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -68,7 +68,7 @@ namespace GitHub
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareOrgsCreateArtifactStorageRecordsRequest(
+            PrepareOrgsCreateArtifactStorageRecordRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 org: org,
@@ -82,7 +82,7 @@ namespace GitHub
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessOrgsCreateArtifactStorageRecordsResponse(
+            ProcessOrgsCreateArtifactStorageRecordResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
 
@@ -98,7 +98,7 @@ namespace GitHub
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessOrgsCreateArtifactStorageRecordsResponseContent(
+                ProcessOrgsCreateArtifactStorageRecordResponseContent(
                     httpClient: HttpClient,
                     httpResponseMessage: __response,
                     content: ref __content);
@@ -108,7 +108,7 @@ namespace GitHub
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::GitHub.OrgsCreateArtifactStorageRecordsResponse.FromJson(__content, JsonSerializerContext) ??
+                        global::GitHub.OrgsCreateArtifactStorageRecordResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -139,7 +139,7 @@ namespace GitHub
                     ).ConfigureAwait(false);
 
                     return
-                        await global::GitHub.OrgsCreateArtifactStorageRecordsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::GitHub.OrgsCreateArtifactStorageRecordResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -159,7 +159,7 @@ namespace GitHub
         }
 
         /// <summary>
-        /// Create artifact metadata storage records<br/>
+        /// Create artifact metadata storage record<br/>
         /// Create metadata storage records for artifacts associated with an organization.<br/>
         /// This endpoint will create a new artifact storage record on behalf of any artifact matching the provided digest and<br/>
         /// associated with a repository owned by the organization.
@@ -196,7 +196,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::GitHub.OrgsCreateArtifactStorageRecordsResponse> OrgsCreateArtifactStorageRecordsAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.OrgsCreateArtifactStorageRecordResponse> OrgsCreateArtifactStorageRecordAsync(
             string org,
             string name,
             string digest,
@@ -204,10 +204,10 @@ namespace GitHub
             string? artifactUrl = default,
             string? path = default,
             string? repository = default,
-            global::GitHub.OrgsCreateArtifactStorageRecordsRequestStatus? status = default,
+            global::GitHub.OrgsCreateArtifactStorageRecordRequestStatus? status = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::GitHub.OrgsCreateArtifactStorageRecordsRequest
+            var __request = new global::GitHub.OrgsCreateArtifactStorageRecordRequest
             {
                 Name = name,
                 Digest = digest,
@@ -218,7 +218,7 @@ namespace GitHub
                 Status = status,
             };
 
-            return await OrgsCreateArtifactStorageRecordsAsync(
+            return await OrgsCreateArtifactStorageRecordAsync(
                 org: org,
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
