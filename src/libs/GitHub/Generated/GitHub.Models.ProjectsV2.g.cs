@@ -9,14 +9,14 @@ namespace GitHub
     public sealed partial class ProjectsV2
     {
         /// <summary>
-        /// 
+        /// The unique identifier of the project.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Id { get; set; }
 
         /// <summary>
-        /// 
+        /// The node ID of the project.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -37,63 +37,63 @@ namespace GitHub
         public required global::GitHub.SimpleUser Creator { get; set; }
 
         /// <summary>
-        /// 
+        /// The project title.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("title")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Title { get; set; }
 
         /// <summary>
-        /// 
+        /// A short description of the project.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? Description { get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the project is visible to anyone with access to the owner.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("public")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Public { get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the project was closed.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("closed_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime? ClosedAt { get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the project was created.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the project was last updated.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
-        /// 
+        /// The project number.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("number")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Number { get; set; }
 
         /// <summary>
-        /// 
+        /// A concise summary of the project.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("short_description")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string? ShortDescription { get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the project was deleted.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("deleted_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -107,7 +107,7 @@ namespace GitHub
         public required global::GitHub.NullableSimpleUser? DeletedBy { get; set; }
 
         /// <summary>
-        /// 
+        /// The current state of the project.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("state")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.ProjectsV2StateJsonConverter))]
@@ -134,27 +134,51 @@ namespace GitHub
         /// <summary>
         /// Initializes a new instance of the <see cref="ProjectsV2" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="nodeId"></param>
+        /// <param name="id">
+        /// The unique identifier of the project.
+        /// </param>
+        /// <param name="nodeId">
+        /// The node ID of the project.
+        /// </param>
         /// <param name="owner">
         /// A GitHub user.
         /// </param>
         /// <param name="creator">
         /// A GitHub user.
         /// </param>
-        /// <param name="title"></param>
-        /// <param name="description"></param>
-        /// <param name="public"></param>
-        /// <param name="closedAt"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
-        /// <param name="number"></param>
-        /// <param name="shortDescription"></param>
-        /// <param name="deletedAt"></param>
+        /// <param name="title">
+        /// The project title.
+        /// </param>
+        /// <param name="description">
+        /// A short description of the project.
+        /// </param>
+        /// <param name="public">
+        /// Whether the project is visible to anyone with access to the owner.
+        /// </param>
+        /// <param name="closedAt">
+        /// The time when the project was closed.
+        /// </param>
+        /// <param name="createdAt">
+        /// The time when the project was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// The time when the project was last updated.
+        /// </param>
+        /// <param name="number">
+        /// The project number.
+        /// </param>
+        /// <param name="shortDescription">
+        /// A concise summary of the project.
+        /// </param>
+        /// <param name="deletedAt">
+        /// The time when the project was deleted.
+        /// </param>
         /// <param name="deletedBy">
         /// A GitHub user.
         /// </param>
-        /// <param name="state"></param>
+        /// <param name="state">
+        /// The current state of the project.
+        /// </param>
         /// <param name="latestStatusUpdate">
         /// An status update belonging to a project
         /// </param>

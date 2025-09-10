@@ -9,21 +9,21 @@ namespace GitHub
     public sealed partial class NullableProjectsV2StatusUpdate
     {
         /// <summary>
-        /// 
+        /// The unique identifier of the status update.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Id { get; set; }
 
         /// <summary>
-        /// 
+        /// The node ID of the status update.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string NodeId { get; set; }
 
         /// <summary>
-        /// 
+        /// The node ID of the project that this status update belongs to.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_node_id")]
         public string? ProjectNodeId { get; set; }
@@ -35,34 +35,34 @@ namespace GitHub
         public global::GitHub.SimpleUser? Creator { get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the status update was created.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the status update was last updated.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
-        /// 
+        /// The current status.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.NullableProjectsV2StatusUpdateStatusJsonConverter))]
         public global::GitHub.NullableProjectsV2StatusUpdateStatus? Status { get; set; }
 
         /// <summary>
-        /// 
+        /// The start date of the period covered by the update.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("start_date")]
         public global::System.DateTime? StartDate { get; set; }
 
         /// <summary>
-        /// 
+        /// The target date associated with the update.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("target_date")]
         public global::System.DateTime? TargetDate { get; set; }
@@ -84,17 +84,33 @@ namespace GitHub
         /// <summary>
         /// Initializes a new instance of the <see cref="NullableProjectsV2StatusUpdate" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="nodeId"></param>
-        /// <param name="projectNodeId"></param>
+        /// <param name="id">
+        /// The unique identifier of the status update.
+        /// </param>
+        /// <param name="nodeId">
+        /// The node ID of the status update.
+        /// </param>
+        /// <param name="projectNodeId">
+        /// The node ID of the project that this status update belongs to.
+        /// </param>
         /// <param name="creator">
         /// A GitHub user.
         /// </param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
-        /// <param name="status"></param>
-        /// <param name="startDate"></param>
-        /// <param name="targetDate"></param>
+        /// <param name="createdAt">
+        /// The time when the status update was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// The time when the status update was last updated.
+        /// </param>
+        /// <param name="status">
+        /// The current status.
+        /// </param>
+        /// <param name="startDate">
+        /// The start date of the period covered by the update.
+        /// </param>
+        /// <param name="targetDate">
+        /// The target date associated with the update.
+        /// </param>
         /// <param name="body">
         /// Body of the status update<br/>
         /// Example: The project is off to a great start!

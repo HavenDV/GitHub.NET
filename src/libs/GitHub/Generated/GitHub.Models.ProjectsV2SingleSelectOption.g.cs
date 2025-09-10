@@ -9,27 +9,27 @@ namespace GitHub
     public sealed partial class ProjectsV2SingleSelectOption
     {
         /// <summary>
-        /// 
+        /// The unique identifier of the option.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        /// The display name of the option.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        /// The color associated with the option.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("color")]
         public string? Color { get; set; }
 
         /// <summary>
-        /// 
+        /// A short description of the option.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
@@ -43,10 +43,18 @@ namespace GitHub
         /// <summary>
         /// Initializes a new instance of the <see cref="ProjectsV2SingleSelectOption" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
-        /// <param name="color"></param>
-        /// <param name="description"></param>
+        /// <param name="id">
+        /// The unique identifier of the option.
+        /// </param>
+        /// <param name="name">
+        /// The display name of the option.
+        /// </param>
+        /// <param name="color">
+        /// The color associated with the option.
+        /// </param>
+        /// <param name="description">
+        /// A short description of the option.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif

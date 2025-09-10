@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// 
+    /// The current state of the project.
     /// </summary>
     public enum ProjectsV2State
     {

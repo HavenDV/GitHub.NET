@@ -27,13 +27,13 @@ namespace GitHub
         public string? ActorName { get; set; }
 
         /// <summary>
-        /// The first commit sha before the push evaluation.
+        /// The previous commit SHA of the ref.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("before_sha")]
         public string? BeforeSha { get; set; }
 
         /// <summary>
-        /// The last commit sha in the push evaluation.
+        /// The new commit SHA of the ref.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("after_sha")]
         public string? AfterSha { get; set; }
@@ -101,10 +101,10 @@ namespace GitHub
         /// The handle for the GitHub user account.
         /// </param>
         /// <param name="beforeSha">
-        /// The first commit sha before the push evaluation.
+        /// The previous commit SHA of the ref.
         /// </param>
         /// <param name="afterSha">
-        /// The last commit sha in the push evaluation.
+        /// The new commit SHA of the ref.
         /// </param>
         /// <param name="ref">
         /// The ref name that the evaluation ran on.
