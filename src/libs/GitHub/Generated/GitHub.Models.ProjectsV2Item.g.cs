@@ -9,26 +9,26 @@ namespace GitHub
     public sealed partial class ProjectsV2Item
     {
         /// <summary>
-        /// 
+        /// The unique identifier of the project item.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Id { get; set; }
 
         /// <summary>
-        /// 
+        /// The node ID of the project item.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("node_id")]
         public string? NodeId { get; set; }
 
         /// <summary>
-        /// 
+        /// The node ID of the project that contains this item.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("project_node_id")]
         public string? ProjectNodeId { get; set; }
 
         /// <summary>
-        /// 
+        /// The node ID of the content represented by this item.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content_node_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -49,21 +49,21 @@ namespace GitHub
         public global::GitHub.SimpleUser? Creator { get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the item was created.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the item was last updated.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the item was archived.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("archived_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -78,19 +78,33 @@ namespace GitHub
         /// <summary>
         /// Initializes a new instance of the <see cref="ProjectsV2Item" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="nodeId"></param>
-        /// <param name="projectNodeId"></param>
-        /// <param name="contentNodeId"></param>
+        /// <param name="id">
+        /// The unique identifier of the project item.
+        /// </param>
+        /// <param name="nodeId">
+        /// The node ID of the project item.
+        /// </param>
+        /// <param name="projectNodeId">
+        /// The node ID of the project that contains this item.
+        /// </param>
+        /// <param name="contentNodeId">
+        /// The node ID of the content represented by this item.
+        /// </param>
         /// <param name="contentType">
         /// The type of content tracked in a project item
         /// </param>
         /// <param name="creator">
         /// A GitHub user.
         /// </param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
-        /// <param name="archivedAt"></param>
+        /// <param name="createdAt">
+        /// The time when the item was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// The time when the item was last updated.
+        /// </param>
+        /// <param name="archivedAt">
+        /// The time when the item was archived.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
