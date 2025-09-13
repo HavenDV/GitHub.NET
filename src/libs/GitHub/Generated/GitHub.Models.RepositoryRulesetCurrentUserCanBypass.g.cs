@@ -21,6 +21,10 @@ namespace GitHub
         /// 
         /// </summary>
         Never,
+        /// <summary>
+        /// 
+        /// </summary>
+        Exempt,
     }
 
     /// <summary>
@@ -38,6 +42,7 @@ namespace GitHub
                 RepositoryRulesetCurrentUserCanBypass.Always => "always",
                 RepositoryRulesetCurrentUserCanBypass.PullRequestsOnly => "pull_requests_only",
                 RepositoryRulesetCurrentUserCanBypass.Never => "never",
+                RepositoryRulesetCurrentUserCanBypass.Exempt => "exempt",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -51,6 +56,7 @@ namespace GitHub
                 "always" => RepositoryRulesetCurrentUserCanBypass.Always,
                 "pull_requests_only" => RepositoryRulesetCurrentUserCanBypass.PullRequestsOnly,
                 "never" => RepositoryRulesetCurrentUserCanBypass.Never,
+                "exempt" => RepositoryRulesetCurrentUserCanBypass.Exempt,
                 _ => null,
             };
         }
