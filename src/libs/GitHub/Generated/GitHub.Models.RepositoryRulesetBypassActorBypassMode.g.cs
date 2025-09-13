@@ -4,7 +4,7 @@
 namespace GitHub
 {
     /// <summary>
-    /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets.<br/>
+    /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets. When `bypass_mode` is `exempt`, rules will not be run for that actor and a bypass audit entry will not be created.<br/>
     /// Default Value: always
     /// </summary>
     public enum RepositoryRulesetBypassActorBypassMode
@@ -17,6 +17,10 @@ namespace GitHub
         /// 
         /// </summary>
         PullRequest,
+        /// <summary>
+        /// 
+        /// </summary>
+        Exempt,
     }
 
     /// <summary>
@@ -33,6 +37,7 @@ namespace GitHub
             {
                 RepositoryRulesetBypassActorBypassMode.Always => "always",
                 RepositoryRulesetBypassActorBypassMode.PullRequest => "pull_request",
+                RepositoryRulesetBypassActorBypassMode.Exempt => "exempt",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -45,6 +50,7 @@ namespace GitHub
             {
                 "always" => RepositoryRulesetBypassActorBypassMode.Always,
                 "pull_request" => RepositoryRulesetBypassActorBypassMode.PullRequest,
+                "exempt" => RepositoryRulesetBypassActorBypassMode.Exempt,
                 _ => null,
             };
         }

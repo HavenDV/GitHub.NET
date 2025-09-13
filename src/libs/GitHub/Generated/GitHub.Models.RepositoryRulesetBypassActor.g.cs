@@ -23,7 +23,7 @@ namespace GitHub
         public required global::GitHub.RepositoryRulesetBypassActorActorType ActorType { get; set; }
 
         /// <summary>
-        /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets.<br/>
+        /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets. When `bypass_mode` is `exempt`, rules will not be run for that actor and a bypass audit entry will not be created.<br/>
         /// Default Value: always
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bypass_mode")]
@@ -46,7 +46,7 @@ namespace GitHub
         /// The type of actor that can bypass a ruleset.
         /// </param>
         /// <param name="bypassMode">
-        /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets.<br/>
+        /// When the specified actor can bypass the ruleset. `pull_request` means that an actor can only bypass rules on pull requests. `pull_request` is not applicable for the `DeployKey` actor type. Also, `pull_request` is only applicable to branch rulesets. When `bypass_mode` is `exempt`, rules will not be run for that actor and a bypass audit entry will not be created.<br/>
         /// Default Value: always
         /// </param>
 #if NET7_0_OR_GREATER

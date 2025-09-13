@@ -48,7 +48,7 @@ namespace GitHub
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("teams")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::GitHub.BranchRestrictionPolicyTeam> Teams { get; set; }
+        public required global::System.Collections.Generic.IList<global::GitHub.Team> Teams { get; set; }
 
         /// <summary>
         /// 
@@ -82,7 +82,7 @@ namespace GitHub
             string teamsUrl,
             string appsUrl,
             global::System.Collections.Generic.IList<global::GitHub.BranchRestrictionPolicyUser> users,
-            global::System.Collections.Generic.IList<global::GitHub.BranchRestrictionPolicyTeam> teams,
+            global::System.Collections.Generic.IList<global::GitHub.Team> teams,
             global::System.Collections.Generic.IList<global::GitHub.BranchRestrictionPolicyApp> apps)
         {
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
