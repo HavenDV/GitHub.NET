@@ -14,7 +14,7 @@ namespace GitHub
         /// <example>bbcd538c8e72b8c175046e27cc8f907076331401</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("sha")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Sha { get; set; }
+        public required string? Sha { get; set; }
 
         /// <summary>
         /// Example: file1.txt
@@ -141,7 +141,7 @@ namespace GitHub
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public DiffEntry(
-            string sha,
+            string? sha,
             string filename,
             global::GitHub.DiffEntryStatus status,
             int additions,
