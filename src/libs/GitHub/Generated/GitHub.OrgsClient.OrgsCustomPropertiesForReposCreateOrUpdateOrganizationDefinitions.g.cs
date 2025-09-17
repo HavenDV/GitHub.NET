@@ -1,0 +1,271 @@
+
+#nullable enable
+
+namespace GitHub
+{
+    public partial class OrgsClient
+    {
+        partial void PrepareOrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsArguments(
+            global::System.Net.Http.HttpClient httpClient,
+            ref string org,
+            global::GitHub.OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest request);
+        partial void PrepareOrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string org,
+            global::GitHub.OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest request);
+        partial void ProcessOrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessOrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// Create or update custom properties for an organization<br/>
+        /// Creates new or updates existing custom properties defined for an organization in a batch.<br/>
+        /// If the property already exists, the existing property will be replaced with the new values.<br/>
+        /// Missing optional values will fall back to default values, previous values will be overwritten.<br/>
+        /// E.g. if a property exists with `values_editable_by: org_and_repo_actors` and it's updated without specifying `values_editable_by`, it will be updated to default value `org_actors`.<br/>
+        /// To use this endpoint, the authenticated user must be one of:<br/>
+        ///   - An administrator for the organization.<br/>
+        ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
+        /// </summary>
+        /// <param name="org"></param>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::GitHub.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CustomProperty>> OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsAsync(
+            string org,
+            global::GitHub.OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
+            PrepareArguments(
+                client: HttpClient);
+            PrepareOrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsArguments(
+                httpClient: HttpClient,
+                org: ref org,
+                request: request);
+
+            var __pathBuilder = new global::GitHub.PathBuilder(
+                path: $"/orgs/{org}/properties/schema",
+                baseUri: HttpClient.BaseAddress); 
+            var __path = __pathBuilder.ToString();
+            using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                method: new global::System.Net.Http.HttpMethod("PATCH"),
+                requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+#if NET6_0_OR_GREATER
+            __httpRequest.Version = global::System.Net.HttpVersion.Version11;
+            __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
+#endif
+            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                content: __httpRequestContentBody,
+                encoding: global::System.Text.Encoding.UTF8,
+                mediaType: "application/json");
+            __httpRequest.Content = __httpRequestContent;
+
+            PrepareRequest(
+                client: HttpClient,
+                request: __httpRequest);
+            PrepareOrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest(
+                httpClient: HttpClient,
+                httpRequestMessage: __httpRequest,
+                org: org,
+                request: request);
+
+            using var __response = await HttpClient.SendAsync(
+                request: __httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+
+            ProcessResponse(
+                client: HttpClient,
+                response: __response);
+            ProcessOrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsResponse(
+                httpClient: HttpClient,
+                httpResponseMessage: __response);
+            // Forbidden
+            if ((int)__response.StatusCode == 403)
+            {
+                string? __content_403 = null;
+                global::System.Exception? __exception_403 = null;
+                global::GitHub.BasicError? __value_403 = null;
+                try
+                {
+                    if (ReadResponseAsString)
+                    {
+                        __content_403 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                        __value_403 = global::GitHub.BasicError.FromJson(__content_403, JsonSerializerContext);
+                    }
+                    else
+                    {
+                        var __contentStream_403 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                        __value_403 = await global::GitHub.BasicError.FromJsonStreamAsync(__contentStream_403, JsonSerializerContext).ConfigureAwait(false);
+                    }
+                }
+                catch (global::System.Exception __ex)
+                {
+                    __exception_403 = __ex;
+                }
+
+                throw new global::GitHub.ApiException<global::GitHub.BasicError>(
+                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                    innerException: __exception_403,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_403,
+                    ResponseObject = __value_403,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
+            // Resource not found
+            if ((int)__response.StatusCode == 404)
+            {
+                string? __content_404 = null;
+                global::System.Exception? __exception_404 = null;
+                global::GitHub.BasicError? __value_404 = null;
+                try
+                {
+                    if (ReadResponseAsString)
+                    {
+                        __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
+                        __value_404 = global::GitHub.BasicError.FromJson(__content_404, JsonSerializerContext);
+                    }
+                    else
+                    {
+                        var __contentStream_404 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+                        __value_404 = await global::GitHub.BasicError.FromJsonStreamAsync(__contentStream_404, JsonSerializerContext).ConfigureAwait(false);
+                    }
+                }
+                catch (global::System.Exception __ex)
+                {
+                    __exception_404 = __ex;
+                }
+
+                throw new global::GitHub.ApiException<global::GitHub.BasicError>(
+                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                    innerException: __exception_404,
+                    statusCode: __response.StatusCode)
+                {
+                    ResponseBody = __content_404,
+                    ResponseObject = __value_404,
+                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                        __response.Headers,
+                        h => h.Key,
+                        h => h.Value),
+                };
+            }
+
+            if (ReadResponseAsString)
+            {
+                var __content = await __response.Content.ReadAsStringAsync(
+#if NET5_0_OR_GREATER
+                    cancellationToken
+#endif
+                ).ConfigureAwait(false);
+
+                ProcessResponseContent(
+                    client: HttpClient,
+                    response: __response,
+                    content: ref __content);
+                ProcessOrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsResponseContent(
+                    httpClient: HttpClient,
+                    httpResponseMessage: __response,
+                    content: ref __content);
+
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+
+                    return
+                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CustomProperty>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.CustomProperty> ??
+                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                }
+                catch (global::System.Exception __ex)
+                {
+                    throw new global::GitHub.ApiException(
+                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseBody = __content,
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+            }
+            else
+            {
+                try
+                {
+                    __response.EnsureSuccessStatusCode();
+
+                    using var __content = await __response.Content.ReadAsStreamAsync(
+#if NET5_0_OR_GREATER
+                        cancellationToken
+#endif
+                    ).ConfigureAwait(false);
+
+                    return
+                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CustomProperty>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::GitHub.CustomProperty> ??
+                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                }
+                catch (global::System.Exception __ex)
+                {
+                    throw new global::GitHub.ApiException(
+                        message: __response.ReasonPhrase ?? string.Empty,
+                        innerException: __ex,
+                        statusCode: __response.StatusCode)
+                    {
+                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                            __response.Headers,
+                            h => h.Key,
+                            h => h.Value),
+                    };
+                }
+            }
+        }
+
+        /// <summary>
+        /// Create or update custom properties for an organization<br/>
+        /// Creates new or updates existing custom properties defined for an organization in a batch.<br/>
+        /// If the property already exists, the existing property will be replaced with the new values.<br/>
+        /// Missing optional values will fall back to default values, previous values will be overwritten.<br/>
+        /// E.g. if a property exists with `values_editable_by: org_and_repo_actors` and it's updated without specifying `values_editable_by`, it will be updated to default value `org_actors`.<br/>
+        /// To use this endpoint, the authenticated user must be one of:<br/>
+        ///   - An administrator for the organization.<br/>
+        ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
+        /// </summary>
+        /// <param name="org"></param>
+        /// <param name="properties">
+        /// The array of custom properties to create or update.
+        /// </param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CustomProperty>> OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsAsync(
+            string org,
+            global::System.Collections.Generic.IList<global::GitHub.CustomProperty> properties,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::GitHub.OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest
+            {
+                Properties = properties,
+            };
+
+            return await OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsAsync(
+                org: org,
+                request: __request,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
+        }
+    }
+}

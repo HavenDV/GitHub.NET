@@ -8,7 +8,7 @@ namespace GitHub
         partial void PrepareProjectsListFieldsForUserArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int projectNumber,
-            ref string userId,
+            ref string username,
             ref int? perPage,
             ref string? before,
             ref string? after);
@@ -16,7 +16,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int projectNumber,
-            string userId,
+            string username,
             int? perPage,
             string? before,
             string? after);
@@ -34,7 +34,7 @@ namespace GitHub
         /// List all fields for a specific user-owned project.
         /// </summary>
         /// <param name="projectNumber"></param>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="perPage">
         /// Default Value: 30
         /// </param>
@@ -44,7 +44,7 @@ namespace GitHub
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ProjectsV2Field>> ProjectsListFieldsForUserAsync(
             int projectNumber,
-            string userId,
+            string username,
             int? perPage = default,
             string? before = default,
             string? after = default,
@@ -55,13 +55,13 @@ namespace GitHub
             PrepareProjectsListFieldsForUserArguments(
                 httpClient: HttpClient,
                 projectNumber: ref projectNumber,
-                userId: ref userId,
+                username: ref username,
                 perPage: ref perPage,
                 before: ref before,
                 after: ref after);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/users/{userId}/projectsV2/{projectNumber}/fields",
+                path: $"/users/{username}/projectsV2/{projectNumber}/fields",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
                 .AddOptionalParameter("per_page", perPage?.ToString()) 
@@ -84,7 +84,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 projectNumber: projectNumber,
-                userId: userId,
+                username: username,
                 perPage: perPage,
                 before: before,
                 after: after);

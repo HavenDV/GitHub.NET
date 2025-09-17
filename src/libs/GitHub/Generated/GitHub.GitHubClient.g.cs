@@ -380,6 +380,15 @@ namespace GitHub
         };
 
         /// <summary>
+        /// Endpoints to manage GitHub Enterprise Team memberships.
+        /// </summary>
+        public EnterpriseTeamMembershipsClient EnterpriseTeamMemberships => new EnterpriseTeamMembershipsClient(HttpClient, authorizations: Authorizations)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Endpoints to manage Code security using the REST API.
         /// </summary>
         public CodeSecurityClient CodeSecurity => new CodeSecurityClient(HttpClient, authorizations: Authorizations)

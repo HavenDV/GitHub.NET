@@ -6,7 +6,7 @@ namespace GitHub
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class OrgsCreateOrUpdateCustomPropertiesRequest
+    public sealed partial class OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest
     {
         /// <summary>
         /// The array of custom properties to create or update.
@@ -22,7 +22,7 @@ namespace GitHub
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrgsCreateOrUpdateCustomPropertiesRequest" /> class.
+        /// Initializes a new instance of the <see cref="OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest" /> class.
         /// </summary>
         /// <param name="properties">
         /// The array of custom properties to create or update.
@@ -30,16 +30,16 @@ namespace GitHub
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public OrgsCreateOrUpdateCustomPropertiesRequest(
+        public OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest(
             global::System.Collections.Generic.IList<global::GitHub.CustomProperty> properties)
         {
             this.Properties = properties ?? throw new global::System.ArgumentNullException(nameof(properties));
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OrgsCreateOrUpdateCustomPropertiesRequest" /> class.
+        /// Initializes a new instance of the <see cref="OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest" /> class.
         /// </summary>
-        public OrgsCreateOrUpdateCustomPropertiesRequest()
+        public OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionsRequest()
         {
         }
     }

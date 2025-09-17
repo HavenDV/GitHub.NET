@@ -43,6 +43,7 @@ namespace GitHub
         public required string Url { get; set; }
 
         /// <summary>
+        /// Retired: this field will not be returned with GHEC enterprise teams.<br/>
         /// Example: disabled | all
         /// </summary>
         /// <example>disabled | all</example>
@@ -50,9 +51,9 @@ namespace GitHub
         public string? SyncToOrganizations { get; set; }
 
         /// <summary>
-        /// Example: disabled | all
+        /// Example: disabled | selected | all
         /// </summary>
-        /// <example>disabled | all</example>
+        /// <example>disabled | selected | all</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("organization_selection_type")]
         public string? OrganizationSelectionType { get; set; }
 
@@ -61,9 +62,11 @@ namespace GitHub
         /// </summary>
         /// <example>62ab9291-fae2-468e-974b-7e45096d5021</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("group_id")]
-        public string? GroupId { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string? GroupId { get; set; }
 
         /// <summary>
+        /// Retired: this field will not be returned with GHEC enterprise teams.<br/>
         /// Example: Justice League
         /// </summary>
         /// <example>Justice League</example>
@@ -114,15 +117,17 @@ namespace GitHub
         /// <param name="slug"></param>
         /// <param name="url"></param>
         /// <param name="syncToOrganizations">
+        /// Retired: this field will not be returned with GHEC enterprise teams.<br/>
         /// Example: disabled | all
         /// </param>
         /// <param name="organizationSelectionType">
-        /// Example: disabled | all
+        /// Example: disabled | selected | all
         /// </param>
         /// <param name="groupId">
         /// Example: 62ab9291-fae2-468e-974b-7e45096d5021
         /// </param>
         /// <param name="groupName">
+        /// Retired: this field will not be returned with GHEC enterprise teams.<br/>
         /// Example: Justice League
         /// </param>
         /// <param name="htmlUrl">
@@ -139,6 +144,7 @@ namespace GitHub
             string name,
             string slug,
             string url,
+            string? groupId,
             string htmlUrl,
             string membersUrl,
             global::System.DateTime createdAt,
@@ -146,13 +152,13 @@ namespace GitHub
             string? description,
             string? syncToOrganizations,
             string? organizationSelectionType,
-            string? groupId,
             string? groupName)
         {
             this.Id = id;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.GroupId = groupId ?? throw new global::System.ArgumentNullException(nameof(groupId));
             this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
             this.MembersUrl = membersUrl ?? throw new global::System.ArgumentNullException(nameof(membersUrl));
             this.CreatedAt = createdAt;
@@ -160,7 +166,6 @@ namespace GitHub
             this.Description = description;
             this.SyncToOrganizations = syncToOrganizations;
             this.OrganizationSelectionType = organizationSelectionType;
-            this.GroupId = groupId;
             this.GroupName = groupName;
         }
 

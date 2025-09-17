@@ -5,15 +5,17 @@ namespace GitHub
     public partial interface IOrgsClient
     {
         /// <summary>
-        /// Get a custom property for an organization<br/>
-        /// Gets a custom property that is defined for an organization.<br/>
-        /// Organization members can read these properties.
+        /// Remove a custom property for an organization<br/>
+        /// Removes a custom property that is defined for an organization.<br/>
+        /// To use this endpoint, the authenticated user must be one of:<br/>
+        ///   - An administrator for the organization.<br/>
+        ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
         /// </summary>
         /// <param name="org"></param>
         /// <param name="customPropertyName"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsGetCustomPropertyAsync(
+        global::System.Threading.Tasks.Task OrgsCustomPropertiesForReposDeleteOrganizationDefinitionAsync(
             string org,
             string customPropertyName,
             global::System.Threading.CancellationToken cancellationToken = default);

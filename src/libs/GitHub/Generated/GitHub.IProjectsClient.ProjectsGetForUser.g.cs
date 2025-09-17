@@ -9,12 +9,12 @@ namespace GitHub
         /// Get a specific user-owned project.
         /// </summary>
         /// <param name="projectNumber"></param>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::GitHub.ProjectsV2> ProjectsGetForUserAsync(
             int projectNumber,
-            string userId,
+            string username,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

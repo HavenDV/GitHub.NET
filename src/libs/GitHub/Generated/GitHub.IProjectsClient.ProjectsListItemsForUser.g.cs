@@ -9,7 +9,7 @@ namespace GitHub
         /// List all items for a specific user-owned project accessible by the authenticated user.
         /// </summary>
         /// <param name="projectNumber"></param>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="before"></param>
         /// <param name="after"></param>
         /// <param name="perPage">
@@ -23,7 +23,7 @@ namespace GitHub
         /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ProjectsV2ItemWithContent>> ProjectsListItemsForUserAsync(
             int projectNumber,
-            string userId,
+            string username,
             string? before = default,
             string? after = default,
             int? perPage = default,

@@ -8,14 +8,14 @@ namespace GitHub
         partial void PrepareProjectsUpdateItemForUserArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int projectNumber,
-            ref string userId,
+            ref string username,
             ref int itemId,
             global::GitHub.ProjectsUpdateItemForUserRequest request);
         partial void PrepareProjectsUpdateItemForUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int projectNumber,
-            string userId,
+            string username,
             int itemId,
             global::GitHub.ProjectsUpdateItemForUserRequest request);
         partial void ProcessProjectsUpdateItemForUserResponse(
@@ -32,14 +32,14 @@ namespace GitHub
         /// Update a specific item in a user-owned project.
         /// </summary>
         /// <param name="projectNumber"></param>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="itemId"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ProjectsV2ItemWithContent> ProjectsUpdateItemForUserAsync(
             int projectNumber,
-            string userId,
+            string username,
             int itemId,
             global::GitHub.ProjectsUpdateItemForUserRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -51,12 +51,12 @@ namespace GitHub
             PrepareProjectsUpdateItemForUserArguments(
                 httpClient: HttpClient,
                 projectNumber: ref projectNumber,
-                userId: ref userId,
+                username: ref username,
                 itemId: ref itemId,
                 request: request);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/users/{userId}/projectsV2/{projectNumber}/items/{itemId}",
+                path: $"/users/{username}/projectsV2/{projectNumber}/items/{itemId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -80,7 +80,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 projectNumber: projectNumber,
-                userId: userId,
+                username: username,
                 itemId: itemId,
                 request: request);
 
@@ -321,7 +321,7 @@ namespace GitHub
         /// Update a specific item in a user-owned project.
         /// </summary>
         /// <param name="projectNumber"></param>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="itemId"></param>
         /// <param name="fields">
         /// A list of field updates to apply.
@@ -330,7 +330,7 @@ namespace GitHub
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ProjectsV2ItemWithContent> ProjectsUpdateItemForUserAsync(
             int projectNumber,
-            string userId,
+            string username,
             int itemId,
             global::System.Collections.Generic.IList<global::GitHub.ProjectsUpdateItemForUserRequestField> fields,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -342,7 +342,7 @@ namespace GitHub
 
             return await ProjectsUpdateItemForUserAsync(
                 projectNumber: projectNumber,
-                userId: userId,
+                username: username,
                 itemId: itemId,
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

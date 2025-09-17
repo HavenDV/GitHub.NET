@@ -3,48 +3,52 @@
 
 namespace GitHub
 {
-    public partial class OrgsClient
+    public partial class EnterpriseTeamMembershipsClient
     {
-        partial void PrepareOrgsGetAllCustomPropertiesArguments(
+        partial void PrepareEnterpriseTeamMembershipsRemoveArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string org);
-        partial void PrepareOrgsGetAllCustomPropertiesRequest(
+            ref string enterprise,
+            ref string enterpriseTeam,
+            ref string username);
+        partial void PrepareEnterpriseTeamMembershipsRemoveRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string org);
-        partial void ProcessOrgsGetAllCustomPropertiesResponse(
+            string enterprise,
+            string enterpriseTeam,
+            string username);
+        partial void ProcessEnterpriseTeamMembershipsRemoveResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessOrgsGetAllCustomPropertiesResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Get all custom properties for an organization<br/>
-        /// Gets all custom properties defined for an organization.<br/>
-        /// Organization members can read these properties.
+        /// Remove team membership<br/>
+        /// Remove membership of a specific user from a particular team in an enterprise.
         /// </summary>
-        /// <param name="org"></param>
+        /// <param name="enterprise"></param>
+        /// <param name="enterpriseTeam"></param>
+        /// <param name="username"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CustomProperty>> OrgsGetAllCustomPropertiesAsync(
-            string org,
+        public async global::System.Threading.Tasks.Task EnterpriseTeamMembershipsRemoveAsync(
+            string enterprise,
+            string enterpriseTeam,
+            string username,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareOrgsGetAllCustomPropertiesArguments(
+            PrepareEnterpriseTeamMembershipsRemoveArguments(
                 httpClient: HttpClient,
-                org: ref org);
+                enterprise: ref enterprise,
+                enterpriseTeam: ref enterpriseTeam,
+                username: ref username);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/orgs/{org}/properties/schema",
+                path: $"/enterprises/{enterprise}/teams/{enterpriseTeam}/memberships/{username}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Get,
+                method: global::System.Net.Http.HttpMethod.Delete,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -54,10 +58,12 @@ namespace GitHub
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareOrgsGetAllCustomPropertiesRequest(
+            PrepareEnterpriseTeamMembershipsRemoveRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
-                org: org);
+                enterprise: enterprise,
+                enterpriseTeam: enterpriseTeam,
+                username: username);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
@@ -67,7 +73,7 @@ namespace GitHub
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessOrgsGetAllCustomPropertiesResponse(
+            ProcessEnterpriseTeamMembershipsRemoveResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
             // Forbidden
@@ -107,43 +113,6 @@ namespace GitHub
                         h => h.Value),
                 };
             }
-            // Resource not found
-            if ((int)__response.StatusCode == 404)
-            {
-                string? __content_404 = null;
-                global::System.Exception? __exception_404 = null;
-                global::GitHub.BasicError? __value_404 = null;
-                try
-                {
-                    if (ReadResponseAsString)
-                    {
-                        __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_404 = global::GitHub.BasicError.FromJson(__content_404, JsonSerializerContext);
-                    }
-                    else
-                    {
-                        var __contentStream_404 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
-                        __value_404 = await global::GitHub.BasicError.FromJsonStreamAsync(__contentStream_404, JsonSerializerContext).ConfigureAwait(false);
-                    }
-                }
-                catch (global::System.Exception __ex)
-                {
-                    __exception_404 = __ex;
-                }
-
-                throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
-                    innerException: __exception_404,
-                    statusCode: __response.StatusCode)
-                {
-                    ResponseBody = __content_404,
-                    ResponseObject = __value_404,
-                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                        __response.Headers,
-                        h => h.Key,
-                        h => h.Value),
-                };
-            }
 
             if (ReadResponseAsString)
             {
@@ -157,18 +126,11 @@ namespace GitHub
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessOrgsGetAllCustomPropertiesResponseContent(
-                    httpClient: HttpClient,
-                    httpResponseMessage: __response,
-                    content: ref __content);
 
                 try
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CustomProperty>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.CustomProperty> ??
-                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -197,9 +159,6 @@ namespace GitHub
 #endif
                     ).ConfigureAwait(false);
 
-                    return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CustomProperty>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::GitHub.CustomProperty> ??
-                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
                 {
