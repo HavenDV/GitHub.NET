@@ -8,14 +8,14 @@ namespace GitHub
         partial void PrepareProjectsGetUserItemArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int projectNumber,
-            ref string userId,
+            ref string username,
             ref int itemId,
             global::System.Collections.Generic.IList<string>? fields);
         partial void PrepareProjectsGetUserItemRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int projectNumber,
-            string userId,
+            string username,
             int itemId,
             global::System.Collections.Generic.IList<string>? fields);
         partial void ProcessProjectsGetUserItemResponse(
@@ -32,7 +32,7 @@ namespace GitHub
         /// Get a specific item from a user-owned project.
         /// </summary>
         /// <param name="projectNumber"></param>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="itemId"></param>
         /// <param name="fields">
         /// Example: fields[]=123,fields[]=456,fields[]=789
@@ -41,7 +41,7 @@ namespace GitHub
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ProjectsV2ItemWithContent> ProjectsGetUserItemAsync(
             int projectNumber,
-            string userId,
+            string username,
             int itemId,
             global::System.Collections.Generic.IList<string>? fields = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -51,12 +51,12 @@ namespace GitHub
             PrepareProjectsGetUserItemArguments(
                 httpClient: HttpClient,
                 projectNumber: ref projectNumber,
-                userId: ref userId,
+                username: ref username,
                 itemId: ref itemId,
                 fields: fields);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/users/{userId}/projectsV2/{projectNumber}/items/{itemId}",
+                path: $"/users/{username}/projectsV2/{projectNumber}/items/{itemId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
                 .AddOptionalParameter("fields", fields, delimiter: ",", explode: true) 
@@ -77,7 +77,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 projectNumber: projectNumber,
-                userId: userId,
+                username: username,
                 itemId: itemId,
                 fields: fields);
 

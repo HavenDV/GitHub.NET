@@ -8,7 +8,7 @@ namespace GitHub
         partial void PrepareProjectsListItemsForUserArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int projectNumber,
-            ref string userId,
+            ref string username,
             ref string? before,
             ref string? after,
             ref int? perPage,
@@ -18,7 +18,7 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int projectNumber,
-            string userId,
+            string username,
             string? before,
             string? after,
             int? perPage,
@@ -38,7 +38,7 @@ namespace GitHub
         /// List all items for a specific user-owned project accessible by the authenticated user.
         /// </summary>
         /// <param name="projectNumber"></param>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="before"></param>
         /// <param name="after"></param>
         /// <param name="perPage">
@@ -52,7 +52,7 @@ namespace GitHub
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ProjectsV2ItemWithContent>> ProjectsListItemsForUserAsync(
             int projectNumber,
-            string userId,
+            string username,
             string? before = default,
             string? after = default,
             int? perPage = default,
@@ -65,7 +65,7 @@ namespace GitHub
             PrepareProjectsListItemsForUserArguments(
                 httpClient: HttpClient,
                 projectNumber: ref projectNumber,
-                userId: ref userId,
+                username: ref username,
                 before: ref before,
                 after: ref after,
                 perPage: ref perPage,
@@ -73,7 +73,7 @@ namespace GitHub
                 fields: fields);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/users/{userId}/projectsV2/{projectNumber}/items",
+                path: $"/users/{username}/projectsV2/{projectNumber}/items",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder 
                 .AddOptionalParameter("before", before) 
@@ -98,7 +98,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 projectNumber: projectNumber,
-                userId: userId,
+                username: username,
                 before: before,
                 after: after,
                 perPage: perPage,

@@ -228,6 +228,11 @@ namespace GitHub
         public EnterpriseTeamsClient EnterpriseTeams { get; }
 
         /// <summary>
+        /// Endpoints to manage GitHub Enterprise Team memberships.
+        /// </summary>
+        public EnterpriseTeamMembershipsClient EnterpriseTeamMemberships { get; }
+
+        /// <summary>
         /// Endpoints to manage Code security using the REST API.
         /// </summary>
         public CodeSecurityClient CodeSecurity { get; }

@@ -268,6 +268,18 @@ namespace GitHub.JsonConverters
             {
             }
 
+            readerCopy = reader;
+            global::GitHub.RepositoryRuleCopilotCodeReview? copilotCodeReview = default;
+            try
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCopilotCodeReview), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCopilotCodeReview> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCopilotCodeReview).Name}");
+                copilotCodeReview = global::System.Text.Json.JsonSerializer.Deserialize(ref readerCopy, typeInfo);
+            }
+            catch (global::System.Text.Json.JsonException)
+            {
+            }
+
             var result = new global::GitHub.RepositoryRule(
                 creation,
                 update,
@@ -289,7 +301,8 @@ namespace GitHub.JsonConverters
                 fileExtensionRestriction,
                 maxFileSize,
                 workflows,
-                codeScanning
+                codeScanning,
+                copilotCodeReview
                 );
 
             if (creation != null)
@@ -416,6 +429,12 @@ namespace GitHub.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCodeScanning), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCodeScanning> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCodeScanning).Name}");
+                _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
+            else if (copilotCodeReview != null)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCopilotCodeReview), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCopilotCodeReview> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCopilotCodeReview).Name}");
                 _ = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
 
@@ -556,6 +575,12 @@ namespace GitHub.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCodeScanning), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCodeScanning?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCodeScanning).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.CodeScanning, typeInfo);
+            }
+            else if (value.IsCopilotCodeReview)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::GitHub.RepositoryRuleCopilotCodeReview), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::GitHub.RepositoryRuleCopilotCodeReview?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::GitHub.RepositoryRuleCopilotCodeReview).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CopilotCodeReview, typeInfo);
             }
         }
     }

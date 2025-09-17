@@ -9,13 +9,13 @@ namespace GitHub
             global::System.Net.Http.HttpClient httpClient,
             ref int projectNumber,
             ref int fieldId,
-            ref string userId);
+            ref string username);
         partial void PrepareProjectsGetFieldForUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int projectNumber,
             int fieldId,
-            string userId);
+            string username);
         partial void ProcessProjectsGetFieldForUserResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -31,13 +31,13 @@ namespace GitHub
         /// </summary>
         /// <param name="projectNumber"></param>
         /// <param name="fieldId"></param>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ProjectsV2Field> ProjectsGetFieldForUserAsync(
             int projectNumber,
             int fieldId,
-            string userId,
+            string username,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
@@ -46,10 +46,10 @@ namespace GitHub
                 httpClient: HttpClient,
                 projectNumber: ref projectNumber,
                 fieldId: ref fieldId,
-                userId: ref userId);
+                username: ref username);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/users/{userId}/projectsV2/{projectNumber}/fields/{fieldId}",
+                path: $"/users/{username}/projectsV2/{projectNumber}/fields/{fieldId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -68,7 +68,7 @@ namespace GitHub
                 httpRequestMessage: __httpRequest,
                 projectNumber: projectNumber,
                 fieldId: fieldId,
-                userId: userId);
+                username: username);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,

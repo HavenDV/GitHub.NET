@@ -9,7 +9,7 @@ namespace GitHub
         /// List all fields for a specific user-owned project.
         /// </summary>
         /// <param name="projectNumber"></param>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="perPage">
         /// Default Value: 30
         /// </param>
@@ -19,7 +19,7 @@ namespace GitHub
         /// <exception cref="global::GitHub.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.ProjectsV2Field>> ProjectsListFieldsForUserAsync(
             int projectNumber,
-            string userId,
+            string username,
             int? perPage = default,
             string? before = default,
             string? after = default,

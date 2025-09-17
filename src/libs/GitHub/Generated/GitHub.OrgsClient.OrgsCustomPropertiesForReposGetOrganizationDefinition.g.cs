@@ -5,78 +5,65 @@ namespace GitHub
 {
     public partial class OrgsClient
     {
-        partial void PrepareOrgsCreateOrUpdateCustomPropertiesArguments(
+        partial void PrepareOrgsCustomPropertiesForReposGetOrganizationDefinitionArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string org,
-            global::GitHub.OrgsCreateOrUpdateCustomPropertiesRequest request);
-        partial void PrepareOrgsCreateOrUpdateCustomPropertiesRequest(
+            ref string customPropertyName);
+        partial void PrepareOrgsCustomPropertiesForReposGetOrganizationDefinitionRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string org,
-            global::GitHub.OrgsCreateOrUpdateCustomPropertiesRequest request);
-        partial void ProcessOrgsCreateOrUpdateCustomPropertiesResponse(
+            string customPropertyName);
+        partial void ProcessOrgsCustomPropertiesForReposGetOrganizationDefinitionResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessOrgsCreateOrUpdateCustomPropertiesResponseContent(
+        partial void ProcessOrgsCustomPropertiesForReposGetOrganizationDefinitionResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create or update custom properties for an organization<br/>
-        /// Creates new or updates existing custom properties defined for an organization in a batch.<br/>
-        /// If the property already exists, the existing property will be replaced with the new values.<br/>
-        /// Missing optional values will fall back to default values, previous values will be overwritten.<br/>
-        /// E.g. if a property exists with `values_editable_by: org_and_repo_actors` and it's updated without specifying `values_editable_by`, it will be updated to default value `org_actors`.<br/>
-        /// To use this endpoint, the authenticated user must be one of:<br/>
-        ///   - An administrator for the organization.<br/>
-        ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
+        /// Get a custom property for an organization<br/>
+        /// Gets a custom property that is defined for an organization.<br/>
+        /// Organization members can read these properties.
         /// </summary>
         /// <param name="org"></param>
-        /// <param name="request"></param>
+        /// <param name="customPropertyName"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CustomProperty>> OrgsCreateOrUpdateCustomPropertiesAsync(
+        public async global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsCustomPropertiesForReposGetOrganizationDefinitionAsync(
             string org,
-            global::GitHub.OrgsCreateOrUpdateCustomPropertiesRequest request,
+            string customPropertyName,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareOrgsCreateOrUpdateCustomPropertiesArguments(
+            PrepareOrgsCustomPropertiesForReposGetOrganizationDefinitionArguments(
                 httpClient: HttpClient,
                 org: ref org,
-                request: request);
+                customPropertyName: ref customPropertyName);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/orgs/{org}/properties/schema",
+                path: $"/orgs/{org}/properties/schema/{customPropertyName}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: new global::System.Net.Http.HttpMethod("PATCH"),
+                method: global::System.Net.Http.HttpMethod.Get,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
-            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                content: __httpRequestContentBody,
-                encoding: global::System.Text.Encoding.UTF8,
-                mediaType: "application/json");
-            __httpRequest.Content = __httpRequestContent;
 
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareOrgsCreateOrUpdateCustomPropertiesRequest(
+            PrepareOrgsCustomPropertiesForReposGetOrganizationDefinitionRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 org: org,
-                request: request);
+                customPropertyName: customPropertyName);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
@@ -86,7 +73,7 @@ namespace GitHub
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessOrgsCreateOrUpdateCustomPropertiesResponse(
+            ProcessOrgsCustomPropertiesForReposGetOrganizationDefinitionResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
             // Forbidden
@@ -176,7 +163,7 @@ namespace GitHub
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessOrgsCreateOrUpdateCustomPropertiesResponseContent(
+                ProcessOrgsCustomPropertiesForReposGetOrganizationDefinitionResponseContent(
                     httpClient: HttpClient,
                     httpResponseMessage: __response,
                     content: ref __content);
@@ -186,7 +173,7 @@ namespace GitHub
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CustomProperty>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.CustomProperty> ??
+                        global::GitHub.CustomProperty.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -217,7 +204,7 @@ namespace GitHub
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.CustomProperty>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::GitHub.CustomProperty> ??
+                        await global::GitHub.CustomProperty.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
@@ -234,38 +221,6 @@ namespace GitHub
                     };
                 }
             }
-        }
-
-        /// <summary>
-        /// Create or update custom properties for an organization<br/>
-        /// Creates new or updates existing custom properties defined for an organization in a batch.<br/>
-        /// If the property already exists, the existing property will be replaced with the new values.<br/>
-        /// Missing optional values will fall back to default values, previous values will be overwritten.<br/>
-        /// E.g. if a property exists with `values_editable_by: org_and_repo_actors` and it's updated without specifying `values_editable_by`, it will be updated to default value `org_actors`.<br/>
-        /// To use this endpoint, the authenticated user must be one of:<br/>
-        ///   - An administrator for the organization.<br/>
-        ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
-        /// </summary>
-        /// <param name="org"></param>
-        /// <param name="properties">
-        /// The array of custom properties to create or update.
-        /// </param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.CustomProperty>> OrgsCreateOrUpdateCustomPropertiesAsync(
-            string org,
-            global::System.Collections.Generic.IList<global::GitHub.CustomProperty> properties,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::GitHub.OrgsCreateOrUpdateCustomPropertiesRequest
-            {
-                Properties = properties,
-            };
-
-            return await OrgsCreateOrUpdateCustomPropertiesAsync(
-                org: org,
-                request: __request,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

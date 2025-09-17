@@ -8,13 +8,13 @@ namespace GitHub
         partial void PrepareProjectsDeleteItemForUserArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int projectNumber,
-            ref string userId,
+            ref string username,
             ref int itemId);
         partial void PrepareProjectsDeleteItemForUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int projectNumber,
-            string userId,
+            string username,
             int itemId);
         partial void ProcessProjectsDeleteItemForUserResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -25,13 +25,13 @@ namespace GitHub
         /// Delete a specific item from a user-owned project.
         /// </summary>
         /// <param name="projectNumber"></param>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="itemId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task ProjectsDeleteItemForUserAsync(
             int projectNumber,
-            string userId,
+            string username,
             int itemId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -40,11 +40,11 @@ namespace GitHub
             PrepareProjectsDeleteItemForUserArguments(
                 httpClient: HttpClient,
                 projectNumber: ref projectNumber,
-                userId: ref userId,
+                username: ref username,
                 itemId: ref itemId);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/users/{userId}/projectsV2/{projectNumber}/items/{itemId}",
+                path: $"/users/{username}/projectsV2/{projectNumber}/items/{itemId}",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -62,7 +62,7 @@ namespace GitHub
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 projectNumber: projectNumber,
-                userId: userId,
+                username: username,
                 itemId: itemId);
 
             using var __response = await HttpClient.SendAsync(

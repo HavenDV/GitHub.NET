@@ -3,50 +3,65 @@
 
 namespace GitHub
 {
-    public partial class OrgsClient
+    public partial class EnterpriseTeamsClient
     {
-        partial void PrepareOrgsRemoveCustomPropertyArguments(
+        partial void PrepareEnterpriseTeamsListArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string org,
-            ref string customPropertyName);
-        partial void PrepareOrgsRemoveCustomPropertyRequest(
+            ref string enterprise,
+            ref int? perPage,
+            ref int? page);
+        partial void PrepareEnterpriseTeamsListRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string org,
-            string customPropertyName);
-        partial void ProcessOrgsRemoveCustomPropertyResponse(
+            string enterprise,
+            int? perPage,
+            int? page);
+        partial void ProcessEnterpriseTeamsListResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
+        partial void ProcessEnterpriseTeamsListResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
         /// <summary>
-        /// Remove a custom property for an organization<br/>
-        /// Removes a custom property that is defined for an organization.<br/>
-        /// To use this endpoint, the authenticated user must be one of:<br/>
-        ///   - An administrator for the organization.<br/>
-        ///   - A user, or a user on a team, with the fine-grained permission of `custom_properties_org_definitions_manager` in the organization.
+        /// List enterprise teams<br/>
+        /// List all teams in the enterprise for the authenticated user
         /// </summary>
-        /// <param name="org"></param>
-        /// <param name="customPropertyName"></param>
+        /// <param name="enterprise"></param>
+        /// <param name="perPage">
+        /// Default Value: 30
+        /// </param>
+        /// <param name="page">
+        /// Default Value: 1
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task OrgsRemoveCustomPropertyAsync(
-            string org,
-            string customPropertyName,
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::GitHub.EnterpriseTeam>> EnterpriseTeamsListAsync(
+            string enterprise,
+            int? perPage = default,
+            int? page = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareOrgsRemoveCustomPropertyArguments(
+            PrepareEnterpriseTeamsListArguments(
                 httpClient: HttpClient,
-                org: ref org,
-                customPropertyName: ref customPropertyName);
+                enterprise: ref enterprise,
+                perPage: ref perPage,
+                page: ref page);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/orgs/{org}/properties/schema/{customPropertyName}",
+                path: $"/enterprises/{enterprise}/teams",
                 baseUri: HttpClient.BaseAddress); 
+            __pathBuilder 
+                .AddOptionalParameter("per_page", perPage?.ToString()) 
+                .AddOptionalParameter("page", page?.ToString()) 
+                ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Delete,
+                method: global::System.Net.Http.HttpMethod.Get,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -56,11 +71,12 @@ namespace GitHub
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareOrgsRemoveCustomPropertyRequest(
+            PrepareEnterpriseTeamsListRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
-                org: org,
-                customPropertyName: customPropertyName);
+                enterprise: enterprise,
+                perPage: perPage,
+                page: page);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
@@ -70,7 +86,7 @@ namespace GitHub
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessOrgsRemoveCustomPropertyResponse(
+            ProcessEnterpriseTeamsListResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
             // Forbidden
@@ -110,43 +126,6 @@ namespace GitHub
                         h => h.Value),
                 };
             }
-            // Resource not found
-            if ((int)__response.StatusCode == 404)
-            {
-                string? __content_404 = null;
-                global::System.Exception? __exception_404 = null;
-                global::GitHub.BasicError? __value_404 = null;
-                try
-                {
-                    if (ReadResponseAsString)
-                    {
-                        __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_404 = global::GitHub.BasicError.FromJson(__content_404, JsonSerializerContext);
-                    }
-                    else
-                    {
-                        var __contentStream_404 = await __response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
-                        __value_404 = await global::GitHub.BasicError.FromJsonStreamAsync(__contentStream_404, JsonSerializerContext).ConfigureAwait(false);
-                    }
-                }
-                catch (global::System.Exception __ex)
-                {
-                    __exception_404 = __ex;
-                }
-
-                throw new global::GitHub.ApiException<global::GitHub.BasicError>(
-                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
-                    innerException: __exception_404,
-                    statusCode: __response.StatusCode)
-                {
-                    ResponseBody = __content_404,
-                    ResponseObject = __value_404,
-                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                        __response.Headers,
-                        h => h.Key,
-                        h => h.Value),
-                };
-            }
 
             if (ReadResponseAsString)
             {
@@ -160,11 +139,18 @@ namespace GitHub
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
+                ProcessEnterpriseTeamsListResponseContent(
+                    httpClient: HttpClient,
+                    httpResponseMessage: __response,
+                    content: ref __content);
 
                 try
                 {
                     __response.EnsureSuccessStatusCode();
 
+                    return
+                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.EnterpriseTeam>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::GitHub.EnterpriseTeam> ??
+                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -193,6 +179,9 @@ namespace GitHub
 #endif
                     ).ConfigureAwait(false);
 
+                    return
+                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::GitHub.EnterpriseTeam>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::GitHub.EnterpriseTeam> ??
+                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
                 {

@@ -16,7 +16,7 @@ namespace GitHub
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsCreateOrUpdateCustomPropertyAsync(
+        global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionAsync(
             string org,
             string customPropertyName,
             global::GitHub.CustomPropertySetPayload request,
@@ -54,7 +54,7 @@ namespace GitHub
         /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsCreateOrUpdateCustomPropertyAsync(
+        global::System.Threading.Tasks.Task<global::GitHub.CustomProperty> OrgsCustomPropertiesForReposCreateOrUpdateOrganizationDefinitionAsync(
             string org,
             string customPropertyName,
             global::GitHub.CustomPropertySetPayloadValueType valueType,

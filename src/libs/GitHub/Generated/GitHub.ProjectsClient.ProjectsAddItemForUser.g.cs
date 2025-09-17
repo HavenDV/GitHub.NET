@@ -7,13 +7,13 @@ namespace GitHub
     {
         partial void PrepareProjectsAddItemForUserArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string userId,
+            ref string username,
             ref int projectNumber,
             global::GitHub.ProjectsAddItemForUserRequest request);
         partial void PrepareProjectsAddItemForUserRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string userId,
+            string username,
             int projectNumber,
             global::GitHub.ProjectsAddItemForUserRequest request);
         partial void ProcessProjectsAddItemForUserResponse(
@@ -29,13 +29,13 @@ namespace GitHub
         /// Add item to user owned project<br/>
         /// Add an issue or pull request item to the specified user owned project.
         /// </summary>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="projectNumber"></param>
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::GitHub.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ProjectsV2ItemSimple> ProjectsAddItemForUserAsync(
-            string userId,
+            string username,
             int projectNumber,
             global::GitHub.ProjectsAddItemForUserRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -46,12 +46,12 @@ namespace GitHub
                 client: HttpClient);
             PrepareProjectsAddItemForUserArguments(
                 httpClient: HttpClient,
-                userId: ref userId,
+                username: ref username,
                 projectNumber: ref projectNumber,
                 request: request);
 
             var __pathBuilder = new global::GitHub.PathBuilder(
-                path: $"/users/{userId}/projectsV2/{projectNumber}/items",
+                path: $"/users/{username}/projectsV2/{projectNumber}/items",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -74,7 +74,7 @@ namespace GitHub
             PrepareProjectsAddItemForUserRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
-                userId: userId,
+                username: username,
                 projectNumber: projectNumber,
                 request: request);
 
@@ -273,7 +273,7 @@ namespace GitHub
         /// Add item to user owned project<br/>
         /// Add an issue or pull request item to the specified user owned project.
         /// </summary>
-        /// <param name="userId"></param>
+        /// <param name="username"></param>
         /// <param name="projectNumber"></param>
         /// <param name="type">
         /// The type of item to add to the project. Must be either Issue or PullRequest.
@@ -284,7 +284,7 @@ namespace GitHub
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::GitHub.ProjectsV2ItemSimple> ProjectsAddItemForUserAsync(
-            string userId,
+            string username,
             int projectNumber,
             global::GitHub.ProjectsAddItemForUserRequestType type,
             int id,
@@ -297,7 +297,7 @@ namespace GitHub
             };
 
             return await ProjectsAddItemForUserAsync(
-                userId: userId,
+                username: username,
                 projectNumber: projectNumber,
                 request: __request,
                 cancellationToken: cancellationToken).ConfigureAwait(false);
