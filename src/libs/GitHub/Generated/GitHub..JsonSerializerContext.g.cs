@@ -5751,6 +5751,8 @@ namespace GitHub
             typeof(global::GitHub.JsonConverters.SearchIssuesAndPullRequestsSortNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.SearchIssuesAndPullRequestsOrderJsonConverter),
             typeof(global::GitHub.JsonConverters.SearchIssuesAndPullRequestsOrderNullableJsonConverter),
+            typeof(global::GitHub.JsonConverters.SearchIssuesAndPullRequestsSearchTypeJsonConverter),
+            typeof(global::GitHub.JsonConverters.SearchIssuesAndPullRequestsSearchTypeNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.SearchLabelsSortJsonConverter),
             typeof(global::GitHub.JsonConverters.SearchLabelsSortNullableJsonConverter),
             typeof(global::GitHub.JsonConverters.SearchLabelsOrderJsonConverter),
