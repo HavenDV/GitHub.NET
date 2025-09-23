@@ -98,6 +98,30 @@ namespace GitHub
         public required string RepositoriesUrl { get; set; }
 
         /// <summary>
+        /// The ownership type of the team
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.TeamTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::GitHub.TeamType Type { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </summary>
+        /// <example>37</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("organization_id")]
+        public int? OrganizationId { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </summary>
+        /// <example>42</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enterprise_id")]
+        public int? EnterpriseId { get; set; }
+
+        /// <summary>
         /// Groups of organization members that gives permissions on specified repositories.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parent")]
@@ -128,6 +152,17 @@ namespace GitHub
         /// </param>
         /// <param name="membersUrl"></param>
         /// <param name="repositoriesUrl"></param>
+        /// <param name="type">
+        /// The ownership type of the team
+        /// </param>
+        /// <param name="organizationId">
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </param>
+        /// <param name="enterpriseId">
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </param>
         /// <param name="parent">
         /// Groups of organization members that gives permissions on specified repositories.
         /// </param>
@@ -145,10 +180,13 @@ namespace GitHub
             string htmlUrl,
             string membersUrl,
             string repositoriesUrl,
+            global::GitHub.TeamType type,
             global::GitHub.NullableTeamSimple? parent,
             string? privacy,
             string? notificationSetting,
-            global::GitHub.TeamPermissions? permissions)
+            global::GitHub.TeamPermissions? permissions,
+            int? organizationId,
+            int? enterpriseId)
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
@@ -160,10 +198,13 @@ namespace GitHub
             this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
             this.MembersUrl = membersUrl ?? throw new global::System.ArgumentNullException(nameof(membersUrl));
             this.RepositoriesUrl = repositoriesUrl ?? throw new global::System.ArgumentNullException(nameof(repositoriesUrl));
+            this.Type = type;
             this.Parent = parent ?? throw new global::System.ArgumentNullException(nameof(parent));
             this.Privacy = privacy;
             this.NotificationSetting = notificationSetting;
             this.Permissions = permissions;
+            this.OrganizationId = organizationId;
+            this.EnterpriseId = enterpriseId;
         }
 
         /// <summary>

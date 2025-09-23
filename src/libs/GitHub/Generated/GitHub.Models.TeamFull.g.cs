@@ -154,12 +154,36 @@ namespace GitHub
         public required global::GitHub.TeamOrganization Organization { get; set; }
 
         /// <summary>
-        /// Distinguished Name (DN) that team maps to within LDAP environment<br/>
-        /// Example: uid=example,ou=users,dc=github,dc=com
+        /// The [distinguished name](https://www.ldap.com/ldap-dns-and-rdns) (DN) of the LDAP entry to map to a team.<br/>
+        /// Example: cn=Enterprise Ops,ou=teams,dc=github,dc=com
         /// </summary>
-        /// <example>uid=example,ou=users,dc=github,dc=com</example>
+        /// <example>cn=Enterprise Ops,ou=teams,dc=github,dc=com</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("ldap_dn")]
         public string? LdapDn { get; set; }
+
+        /// <summary>
+        /// The ownership type of the team
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.TeamFullTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::GitHub.TeamFullType Type { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </summary>
+        /// <example>37</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("organization_id")]
+        public int? OrganizationId { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </summary>
+        /// <example>42</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enterprise_id")]
+        public int? EnterpriseId { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -227,8 +251,19 @@ namespace GitHub
         /// Team Organization
         /// </param>
         /// <param name="ldapDn">
-        /// Distinguished Name (DN) that team maps to within LDAP environment<br/>
-        /// Example: uid=example,ou=users,dc=github,dc=com
+        /// The [distinguished name](https://www.ldap.com/ldap-dns-and-rdns) (DN) of the LDAP entry to map to a team.<br/>
+        /// Example: cn=Enterprise Ops,ou=teams,dc=github,dc=com
+        /// </param>
+        /// <param name="type">
+        /// The ownership type of the team
+        /// </param>
+        /// <param name="organizationId">
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </param>
+        /// <param name="enterpriseId">
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -249,10 +284,13 @@ namespace GitHub
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             global::GitHub.TeamOrganization organization,
+            global::GitHub.TeamFullType type,
             global::GitHub.TeamFullPrivacy? privacy,
             global::GitHub.TeamFullNotificationSetting? notificationSetting,
             global::GitHub.NullableTeamSimple? parent,
-            string? ldapDn)
+            string? ldapDn,
+            int? organizationId,
+            int? enterpriseId)
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
@@ -269,10 +307,13 @@ namespace GitHub
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Organization = organization ?? throw new global::System.ArgumentNullException(nameof(organization));
+            this.Type = type;
             this.Privacy = privacy;
             this.NotificationSetting = notificationSetting;
             this.Parent = parent;
             this.LdapDn = ldapDn;
+            this.OrganizationId = organizationId;
+            this.EnterpriseId = enterpriseId;
         }
 
         /// <summary>

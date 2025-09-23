@@ -118,6 +118,30 @@ namespace GitHub
         public string? LdapDn { get; set; }
 
         /// <summary>
+        /// The ownership type of the team
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.TeamSimpleTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::GitHub.TeamSimpleType Type { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </summary>
+        /// <example>37</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("organization_id")]
+        public int? OrganizationId { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </summary>
+        /// <example>42</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enterprise_id")]
+        public int? EnterpriseId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -173,6 +197,17 @@ namespace GitHub
         /// Distinguished Name (DN) that team maps to within LDAP environment<br/>
         /// Example: uid=example,ou=users,dc=github,dc=com
         /// </param>
+        /// <param name="type">
+        /// The ownership type of the team
+        /// </param>
+        /// <param name="organizationId">
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </param>
+        /// <param name="enterpriseId">
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -187,9 +222,12 @@ namespace GitHub
             string htmlUrl,
             string repositoriesUrl,
             string slug,
+            global::GitHub.TeamSimpleType type,
             string? privacy,
             string? notificationSetting,
-            string? ldapDn)
+            string? ldapDn,
+            int? organizationId,
+            int? enterpriseId)
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
@@ -201,9 +239,12 @@ namespace GitHub
             this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
             this.RepositoriesUrl = repositoriesUrl ?? throw new global::System.ArgumentNullException(nameof(repositoriesUrl));
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
+            this.Type = type;
             this.Privacy = privacy;
             this.NotificationSetting = notificationSetting;
             this.LdapDn = ldapDn;
+            this.OrganizationId = organizationId;
+            this.EnterpriseId = enterpriseId;
         }
 
         /// <summary>

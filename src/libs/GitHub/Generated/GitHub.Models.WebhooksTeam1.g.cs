@@ -97,6 +97,29 @@ namespace GitHub
         public string? Url { get; set; }
 
         /// <summary>
+        /// The ownership type of the team
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksTeam1TypeJsonConverter))]
+        public global::GitHub.WebhooksTeam1Type? Type { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </summary>
+        /// <example>37</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("organization_id")]
+        public int? OrganizationId { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </summary>
+        /// <example>42</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enterprise_id")]
+        public int? EnterpriseId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -131,6 +154,17 @@ namespace GitHub
         /// <param name="url">
         /// URL for the team
         /// </param>
+        /// <param name="type">
+        /// The ownership type of the team
+        /// </param>
+        /// <param name="organizationId">
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </param>
+        /// <param name="enterpriseId">
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -148,7 +182,10 @@ namespace GitHub
             global::GitHub.WebhooksTeam1NotificationSetting? notificationSetting,
             string? repositoriesUrl,
             string? slug,
-            string? url)
+            string? url,
+            global::GitHub.WebhooksTeam1Type? type,
+            int? organizationId,
+            int? enterpriseId)
         {
             this.Id = id;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -164,6 +201,9 @@ namespace GitHub
             this.RepositoriesUrl = repositoriesUrl;
             this.Slug = slug;
             this.Url = url;
+            this.Type = type;
+            this.OrganizationId = organizationId;
+            this.EnterpriseId = enterpriseId;
         }
 
         /// <summary>

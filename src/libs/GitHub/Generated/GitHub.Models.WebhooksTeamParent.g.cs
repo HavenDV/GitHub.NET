@@ -95,6 +95,30 @@ namespace GitHub
         public required string Url { get; set; }
 
         /// <summary>
+        /// The ownership type of the team
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.WebhooksTeamParentTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::GitHub.WebhooksTeamParentType Type { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </summary>
+        /// <example>37</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("organization_id")]
+        public int? OrganizationId { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </summary>
+        /// <example>42</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enterprise_id")]
+        public int? EnterpriseId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -127,6 +151,17 @@ namespace GitHub
         /// <param name="url">
         /// URL for the team
         /// </param>
+        /// <param name="type">
+        /// The ownership type of the team
+        /// </param>
+        /// <param name="organizationId">
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </param>
+        /// <param name="enterpriseId">
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -142,7 +177,10 @@ namespace GitHub
             global::GitHub.WebhooksTeamParentNotificationSetting notificationSetting,
             string repositoriesUrl,
             string slug,
-            string url)
+            string url,
+            global::GitHub.WebhooksTeamParentType type,
+            int? organizationId,
+            int? enterpriseId)
         {
             this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
             this.HtmlUrl = htmlUrl ?? throw new global::System.ArgumentNullException(nameof(htmlUrl));
@@ -156,6 +194,9 @@ namespace GitHub
             this.RepositoriesUrl = repositoriesUrl ?? throw new global::System.ArgumentNullException(nameof(repositoriesUrl));
             this.Slug = slug ?? throw new global::System.ArgumentNullException(nameof(slug));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
+            this.Type = type;
+            this.OrganizationId = organizationId;
+            this.EnterpriseId = enterpriseId;
         }
 
         /// <summary>
