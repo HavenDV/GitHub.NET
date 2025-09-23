@@ -114,6 +114,30 @@ namespace GitHub
         public required global::GitHub.NullableTeamSimple? Parent { get; set; }
 
         /// <summary>
+        /// The ownership type of the team
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::GitHub.JsonConverters.TeamRoleAssignmentTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::GitHub.TeamRoleAssignmentType Type { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </summary>
+        /// <example>37</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("organization_id")]
+        public int? OrganizationId { get; set; }
+
+        /// <summary>
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </summary>
+        /// <example>42</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enterprise_id")]
+        public int? EnterpriseId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -144,6 +168,17 @@ namespace GitHub
         /// <param name="parent">
         /// Groups of organization members that gives permissions on specified repositories.
         /// </param>
+        /// <param name="type">
+        /// The ownership type of the team
+        /// </param>
+        /// <param name="organizationId">
+        /// Unique identifier of the organization to which this team belongs<br/>
+        /// Example: 37
+        /// </param>
+        /// <param name="enterpriseId">
+        /// Unique identifier of the enterprise to which this team belongs<br/>
+        /// Example: 42
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -159,10 +194,13 @@ namespace GitHub
             string membersUrl,
             string repositoriesUrl,
             global::GitHub.NullableTeamSimple? parent,
+            global::GitHub.TeamRoleAssignmentType type,
             global::GitHub.TeamRoleAssignmentAssignment? assignment,
             string? privacy,
             string? notificationSetting,
-            global::GitHub.TeamRoleAssignmentPermissions? permissions)
+            global::GitHub.TeamRoleAssignmentPermissions? permissions,
+            int? organizationId,
+            int? enterpriseId)
         {
             this.Id = id;
             this.NodeId = nodeId ?? throw new global::System.ArgumentNullException(nameof(nodeId));
@@ -175,10 +213,13 @@ namespace GitHub
             this.MembersUrl = membersUrl ?? throw new global::System.ArgumentNullException(nameof(membersUrl));
             this.RepositoriesUrl = repositoriesUrl ?? throw new global::System.ArgumentNullException(nameof(repositoriesUrl));
             this.Parent = parent ?? throw new global::System.ArgumentNullException(nameof(parent));
+            this.Type = type;
             this.Assignment = assignment;
             this.Privacy = privacy;
             this.NotificationSetting = notificationSetting;
             this.Permissions = permissions;
+            this.OrganizationId = organizationId;
+            this.EnterpriseId = enterpriseId;
         }
 
         /// <summary>
